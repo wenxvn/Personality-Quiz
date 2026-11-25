@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8e3e5e">
+<meta name="description" content="你的隐藏恋爱人格 · 原创高质感趣味探索测试，无需登录，数据仅在本地浏览器处理。">
+<title>你的隐藏恋爱人格</title>
+<style>
+:root{
+  --ink:#3f2532;--accent:#8e3e5e;--accent2:#c9876b;--paper:#faf0f2;
+  --soft:#f3dde6;--line:#e6ced9;--card:#fffbfd;--muted:#785a68;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse at 92% 0%,var(--soft),transparent 58%),
+  radial-gradient(ellipse at 8% 100%,color-mix(in srgb,var(--accent2) 13%,transparent),transparent 52%);z-index:-1}
+main{width:min(100%,660px);padding:18px 16px max(32px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.brand{font-size:11px;letter-spacing:2.4px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
+.brand::before{content:"✦";color:var(--accent2);font-size:13px}
+.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.05em}
+section.panel{border:1px solid var(--line);border-radius:26px;background:var(--card);padding:clamp(18px,4.2vw,30px);box-shadow:0 22px 54px rgba(32,24,20,.08);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
+@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1,h2,h3,p{margin:0}
+h1{font-family:var(--serif);font-size:clamp(30px,7.8vw,46px);font-weight:800;line-height:1.26;letter-spacing:.03em}
+h2{font-family:var(--serif);font-size:clamp(21px,5.2vw,27px);line-height:1.48;font-weight:700}
+h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700}
+.eyebrow{color:var(--accent);font-size:11px;letter-spacing:2.2px;font-weight:800;margin:16px 0 8px;text-transform:uppercase}
+.lead{font-size:15px;line-height:1.85;margin:12px 0 18px;color:color-mix(in srgb,var(--ink) 86%,var(--muted))}
+.muted{font-size:12px;color:var(--muted)}
+.hero{position:relative;isolation:isolate;height:clamp(176px,46vw,230px);background:var(--accent);border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.42) 100%);z-index:-1}
+.hero-badge{position:absolute;top:14px;right:14px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.22);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.6px;font-weight:700;color:#fff}
+.hero-copy{position:absolute;bottom:16px;left:18px;right:16px}
+.hero-copy small{font-size:10px;letter-spacing:3px;opacity:.92;display:block;margin-bottom:2px}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,34px);letter-spacing:3px;line-height:1.25}
+.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:500}
+.pill.accent{border-color:color-mix(in srgb,var(--accent) 32%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
+.teaser-wrap{margin:20px 0 22px;padding-top:16px;border-top:1px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.teaser-head span{font-size:11px;letter-spacing:1.4px;color:var(--accent);font-weight:800}
+.teaser-head small{font-size:11px;color:var(--muted)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.teaser{padding:12px 10px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.teaser b{font-family:var(--serif);font-size:15px;color:var(--ink)}
+.teaser span{font-size:11px;color:var(--accent);font-weight:600}
+.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.988)}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+button:hover:not(:disabled){border-color:var(--accent)}
+button:disabled{opacity:.4;cursor:not-allowed}
+.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 26%,transparent)}
+.primary:hover:not(:disabled){filter:brightness(1.06)}
+.secondary{width:100%;text-align:center;background:var(--paper)}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.subtle:hover{color:var(--accent)}
+.stack{display:grid;gap:10px}
+.actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
+.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:16px}
+.question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--accent);font-weight:750;letter-spacing:.06em}
+.auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:11px;font-weight:600;min-height:28px;cursor:pointer}
+.auto-toggle.on{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));color:var(--accent);background:var(--soft)}
+.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line);margin-bottom:20px}
+.chapter-num{font-family:var(--serif);font-size:20px;font-weight:800;color:var(--accent2);line-height:1}
+.chapter-bar strong{display:block;font-size:13px;color:var(--ink)}
+.chapter-bar span{display:block;font-size:11px;color:var(--muted);line-height:1.45}
+.options{display:grid;gap:10px;margin:20px 0 22px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--card)}
+.option .letter{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:10px;background:var(--paper);color:var(--accent);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .18s}
+.option.selected{border-color:var(--accent);box-shadow:0 4px 14px color-mix(in srgb,var(--accent) 16%,transparent),inset 0 0 0 1px var(--accent);background:var(--soft)}
+.option.selected .letter{background:var(--accent);color:#fff;border-color:var(--accent)}
+.option .check{margin-left:auto;color:var(--accent);font-weight:800;font-size:15px}
+.nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
+/* Calculating ritual screen */
+.calc-box{text-align:center;padding:34px 10px 26px}
+.calc-ring{width:66px;height:66px;margin:0 auto 20px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.calc-step{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:8px;min-height:1.6em}
+.calc-sub{font-size:12px;color:var(--muted)}
+/* Result Cover */
+.result-cover{border:1px solid var(--line);border-radius:20px;padding:14px;background:var(--paper);position:relative}
+.result-cover .hero{height:168px}
+.result-stamp{position:absolute;top:24px;right:24px;padding:5px 11px;border:1.5px solid rgba(255,255,255,.78);border-radius:8px;font-family:var(--serif);font-size:11px;letter-spacing:2px;color:#fff;background:rgba(0,0,0,.22);backdrop-filter:blur(4px);transform:rotate(3deg)}
+.result-name-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:6px 0 8px}
+.result-name{font-family:var(--serif);font-size:clamp(34px,8.8vw,50px);line-height:1.22;letter-spacing:.03em}
+.fit-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:99px;background:var(--accent);color:#fff;font-size:12px;font-weight:750;white-space:nowrap}
+.quote-box{position:relative;margin:12px 0 8px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0}
+.quote{font-family:var(--serif);font-size:17px;color:var(--accent);line-height:1.62;font-weight:600}
+.result-cover .intro{padding:8px 6px 6px}
+.block{padding:22px 0;border-bottom:1px solid var(--line)}
+.block:last-of-type{border:0;padding-bottom:14px}
+.block p{font-size:14.5px;line-height:1.88;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
+.kicker{font-size:10px;letter-spacing:2.2px;color:var(--accent2);font-weight:800;margin-bottom:5px;text-transform:uppercase}
+.contrast-card{margin-top:13px;padding:13px 15px;border-radius:14px;background:linear-gradient(135deg,var(--soft),var(--paper));border:1px solid var(--line)}
+.contrast-card b{display:block;font-size:12px;color:var(--accent);margin-bottom:4px;letter-spacing:.04em}
+.contrast-card p{font-size:13.5px;line-height:1.75}
+.axis{margin:15px 0}
+.axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
+.axis-head strong{font-size:13px}
+.axis-head span{color:var(--accent);font-weight:700}
+.axis-labels{color:var(--muted)}
+.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:8px 0}
+.track::before{content:"";position:absolute;left:50%;width:1px;height:9px;background:var(--line)}
+.track i{position:absolute;width:16px;height:16px;top:-3.5px;border-radius:50%;background:var(--accent);border:2.5px solid var(--card);box-shadow:0 0 0 1.5px var(--accent);transform:translateX(-50%)}
+.rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.rank:last-child{border:0}
+.rank small{display:block;font-size:11px;color:var(--muted)}
+.rank .pct{font-size:12px;font-weight:700;color:var(--accent);background:var(--soft);padding:3px 9px;border-radius:99px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.mini{padding:14px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
+.mini b{display:block;color:var(--accent);font-size:12px;margin-bottom:5px}
+.mini .partner-name{font-family:var(--serif);font-size:18px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.mini p{font-size:13px;line-height:1.68}
+.egg-box{padding:14px 16px;border-radius:14px;background:var(--paper);border:1px dashed var(--accent2);margin-top:10px}
+.egg-box b{display:block;font-size:12px;color:var(--accent2);margin-bottom:4px;letter-spacing:.05em}
+.egg-box p{font-size:14px}
+.status-bar{font-size:12px;color:var(--accent);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:600}
+.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
+.poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:1px solid var(--line);border-radius:22px;padding:20px;background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.25)}
+dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
+.copy-area{width:100%;min-height:150px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+@media(max-width:440px){
+  main{padding:14px 12px 28px}
+  .teasers{grid-template-columns:1fr}
+  .duo,.actions-row{grid-template-columns:1fr}
+  .option{font-size:14px}
+  .brand{letter-spacing:1.4px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="brand">LOVE ATLAS</span>
+    <span class="issue">VOL. 02 · 心动档案室</span>
+  </header>
+  <div id="app"></div>
+  <footer class="footer">原创趣味自我探索 · 仅供娱乐参考，非专业心理测评<br>无需登录 · 所有答题记录仅保存在你的本地浏览器</footer>
+</main>
+
+<dialog id="posterDialog" aria-labelledby="posterTitle">
+  <div class="dialog-head">
+    <h3 id="posterTitle">你的小红书专属海报</h3>
+    <button id="closePoster" type="button">关闭</button>
+  </div>
+  <p class="muted">3:4 高清收藏卡 · 手机直接长按图片保存，或点击下方下载。</p>
+  <div id="posterArea"></div>
+  <div class="stack" style="margin-top:12px">
+    <button class="primary" id="downloadPoster">下载高清 PNG 海报</button>
+  </div>
+  <p class="status-bar" id="posterStatus" role="status"></p>
+</dialog>
+
+<dialog id="copyDialog" aria-labelledby="copyTitle">
+  <div class="dialog-head">
+    <h3 id="copyTitle">复制小红书分享文案</h3>
+    <button id="closeCopy" type="button">关闭</button>
+  </div>
+  <p class="muted">长按或全选下方文案复制，搭配结果海报发笔记更容易引发评论互动。</p>
+  <textarea id="copyTextarea" class="copy-area" readonly></textarea>
+  <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
+</dialog>
+
+<script>
+const D={"title":"你的隐藏恋爱人格","subtitle":"情感探索 · 关系偏好","kind":"恋爱","axes":[["亲密需求","空间","陪伴"],["表达方式","含蓄","直接"],["关系节奏","谨慎","主动"],["冲突处理","冷静","沟通"]],"questions":[{"axis":0,"text":"忙完一天，你更期待怎样的相处？","options":[{"text":"先享受自己的安静时间","score":0},{"text":"希望大部分空闲时间一起度过","score":3},{"text":"和对方一起做些轻松的事","score":2},{"text":"独处充电后再联系","score":1}]},{"axis":1,"text":"收到喜欢的礼物，你通常如何回应？","options":[{"text":"轻声道谢，慢慢表达","score":1},{"text":"明确说出喜欢哪里","score":2},{"text":"记在心里，用行动回馈","score":0},{"text":"直接分享自己的惊喜和感动","score":3}]},{"axis":2,"text":"第一次见到心动的人，你倾向于？","options":[{"text":"主动邀请下一次见面","score":3},{"text":"等合适时机再认识","score":1},{"text":"先观察，不急着联系","score":0},{"text":"主动找一个自然的话题","score":2}]},{"axis":3,"text":"两个人意见不合时，你希望？","options":[{"text":"先各自冷静，之后再谈","score":0},{"text":"在双方愿意时尽快说开","score":3},{"text":"简短缓和情绪后交流","score":2},{"text":"留一点时间整理思路再谈","score":1}]},{"axis":1,"text":"突然很想念对方，你会？","options":[{"text":"说今天有些想念","score":2},{"text":"发一条日常消息","score":1},{"text":"直接告诉对方此刻的感受","score":3},{"text":"默默想念，等见面再说","score":0}]},{"axis":2,"text":"刚认识的人发来约会邀请，你会？","options":[{"text":"有好感就约见面","score":2},{"text":"先聊聊再约一个简单场合","score":1},{"text":"了解一段时间再决定","score":0},{"text":"积极提出自己也想去的活动","score":3}]},{"axis":3,"text":"共同计划突然取消，你更希望？","options":[{"text":"自己平复失落后再交流","score":0},{"text":"先说明感受再找替代安排","score":2},{"text":"过一会儿再聊发生了什么","score":1},{"text":"马上一起讨论原因与新计划","score":3}]},{"axis":0,"text":"周末没有安排，你最喜欢？","options":[{"text":"大部分时间一起安排","score":2},{"text":"一天独处、一天相聚","score":1},{"text":"一起度过整个周末","score":3},{"text":"各自享受自己的爱好","score":0}]},{"axis":3,"text":"对方迟到导致计划受影响，你会？","options":[{"text":"及时说明影响并共同调整安排","score":3},{"text":"询问原因并适时说出感受","score":2},{"text":"先调整情绪，晚点谈","score":0},{"text":"等见面后找平静时机交流","score":1}]},{"axis":2,"text":"关系逐渐升温，你更想？","options":[{"text":"主动聊彼此是否愿意进一步发展","score":3},{"text":"慢慢相处，不急着定义","score":0},{"text":"确认彼此了解后再推进","score":1},{"text":"主动创造更多相处机会","score":2}]},{"axis":1,"text":"对方误解了你的好意，你会？","options":[{"text":"直接说清感受与期待","score":3},{"text":"先用行动慢慢化解","score":0},{"text":"明确说明本意","score":2},{"text":"找合适的时机含蓄解释","score":1}]},{"axis":0,"text":"异地时，你理想的联系频率是？","options":[{"text":"希望在方便时频繁分享日常","score":3},{"text":"各自生活，偶尔认真通话","score":0},{"text":"每天分享几件重要小事","score":2},{"text":"固定时间联系，平时自由","score":1}]},{"axis":1,"text":"纪念日，你最自然的表达方式是？","options":[{"text":"认真表达感情并准备惊喜","score":3},{"text":"做一件对方喜欢的小事","score":0},{"text":"写简短的卡片","score":1},{"text":"说出值得纪念的回忆","score":2}]},{"axis":2,"text":"讨论关系未来，你更喜欢？","options":[{"text":"相处足够久再提","score":0},{"text":"尽早确认彼此的想法和期待","score":3},{"text":"主动找合适机会讨论","score":2},{"text":"等条件成熟后认真聊","score":1}]},{"axis":3,"text":"生活习惯发生分歧，你会？","options":[{"text":"及时共同制定双方都能接受的办法","score":3},{"text":"先自己想清楚可接受范围","score":0},{"text":"在平静时一起商量","score":2},{"text":"稍后找时机谈清边界","score":1}]},{"axis":0,"text":"你有机会独自去向往的地方旅行，你会？","options":[{"text":"倾向自己去，也愿意分享经历","score":1},{"text":"希望对方能一起去，不能也接受","score":2},{"text":"很享受独自旅行","score":0},{"text":"优先协商安排一次共同旅行","score":3}]},{"axis":0,"text":"忙碌的一周里，你希望彼此？","options":[{"text":"各自专注，忙完再相聚","score":0},{"text":"有空就一起吃饭或通话","score":2},{"text":"保留独立时间，定期联系","score":1},{"text":"尽量共享空闲和日常片段","score":3}]},{"axis":1,"text":"对方为你做了件贴心的事，你会？","options":[{"text":"主动表达感激和爱意","score":3},{"text":"记住并用类似的行动回报","score":0},{"text":"说清楚自己为什么感动","score":2},{"text":"微笑道谢","score":1}]},{"axis":2,"text":"喜欢的人也表现出好感，你会？","options":[{"text":"主动多约几次","score":2},{"text":"再观察一阵，确认感觉","score":0},{"text":"直接表达想进一步了解","score":3},{"text":"回应一些信号，慢慢熟悉","score":1}]},{"axis":3,"text":"一条消息迟迟没有回复，你会？","options":[{"text":"若影响约定，及时沟通并了解情况","score":3},{"text":"有实际需要时发消息确认","score":2},{"text":"等一会再考虑是否询问","score":1},{"text":"先去做自己的事","score":0}]},{"axis":0,"text":"理想的日常联系是？","options":[{"text":"有自己的生活，不必常报备","score":0},{"text":"有空就愿意保持丰富互动","score":3},{"text":"每天有一段固定交流","score":1},{"text":"随时分享有趣片段","score":2}]},{"axis":3,"text":"争执结束后，你希望？","options":[{"text":"约定稍后复盘","score":1},{"text":"休息一下后聊清关键问题","score":2},{"text":"先安静恢复情绪","score":0},{"text":"尽快一起澄清并约定改进方式","score":3}]},{"axis":2,"text":"想把喜欢的人介绍给朋友，你会？","options":[{"text":"等关系稳定很久再介绍","score":0},{"text":"在熟悉彼此后自然安排","score":1},{"text":"在双方舒适的前提下早些分享社交圈","score":3},{"text":"关系明朗时主动安排","score":2}]},{"axis":1,"text":"感到委屈时，你更自然的反应是？","options":[{"text":"用简短提示让对方知道","score":1},{"text":"明确表达感受与需要","score":3},{"text":"先写日记或独自消化","score":0},{"text":"说明让自己难过的事情","score":2}]},{"axis":0,"text":"理想约会结束后的空余时间，你希望？","options":[{"text":"希望剩余时间也能一起度过","score":3},{"text":"再一起散步或聊一会儿","score":2},{"text":"一起休息片刻再各自安排","score":1},{"text":"回到自己的兴趣里","score":0}]},{"axis":1,"text":"发现对方一个很棒的优点，你会？","options":[{"text":"用小行动表示认可","score":1},{"text":"当面夸赞这个优点","score":2},{"text":"默默欣赏并记住","score":0},{"text":"具体说出自己为何欣赏对方","score":3}]},{"axis":2,"text":"确认关系之前，你偏好？","options":[{"text":"经过长期观察再决定","score":0},{"text":"在足够了解后水到渠成","score":1},{"text":"有明确好感便提出讨论","score":2},{"text":"主动开启双方都愿意的确认对话","score":3}]},{"axis":3,"text":"压力很大且影响相处时，你希望？","options":[{"text":"先独处整理，再说明情况","score":0},{"text":"及时说出状态和需要，共同协调","score":3},{"text":"缓过来后告诉对方","score":1},{"text":"简短说明压力，约时间聊","score":2}]}],"profiles":[{"name":"慢热守护者","vector":[2.0,0.2,0.2,1.0],"tag":"恋爱人格","quote":"爱藏在每一个没有忘记的细节里。","insight":"你的爱从来不是烟花式的刹那喧哗，而是记在备忘录里的喜好、下雨天多带的一把伞。你慢热是因为太认真，一旦认定一个人，就会用极其稳定的细节和长久陪伴把对方稳稳接住。","strength":"可靠、愿意长期投入","caution":"对方可能读不出你没有说出口的心意","action":"试着把一件贴心行动背后的感受说出来","motif":"慢热与长情","no":"01","tags":["日久生情","行动派深情","长情靠谱"],"contrast":"嘴上说不出肉麻情话，甚至看起来有点木讷，其实早就把对方放进了未来十年的规划里。","match":["温柔陪伴者","一个用细节守护，一个懂珍惜日常，越处越甜的安全感顶配。"],"clash":["直球行动派","对方刚心动就百米冲刺，你还在慢慢确认心意，容易错拍。"],"vibe":"心动开关：被记住无意间提过的小习惯，且从不被催促进度"},{"name":"自由旅人","vector":[0,1,2,0],"tag":"恋爱人格","quote":"相爱不是失去自己的地图。","insight":"对你而言，最好的爱情是两棵各自生长、又在风里轻触枝叶的树。你珍惜独立空间与自我世界，但这绝不代表不够爱——恰恰相反，保持彼此的自由，才能让你长久保持心动。","strength":"尊重边界、保持自我","caution":"过多独处可能让期待不同的伴侣感到距离","action":"提前说明需要独处的时间，并约定重聚时刻","motif":"自由与同行","no":"02","tags":["并肩同行","边界感美学","清爽不黏腻"],"contrast":"看似潇洒洒脱、好像一个人也能过得很好，其实内心极渴望一个“不用解释就能懂你留白”的灵魂。","match":["独立探索者","势均力敌、各有光芒，在一起玩得尽兴，分开也能各自精彩。"],"clash":["温柔陪伴者","你需要空气感，对方需要高浓度陪伴，不沟通容易互相委屈。"],"vibe":"心动开关：各自专注喜欢的事后，默契抬头分享同一片晚霞"},{"name":"温柔陪伴者","vector":[3,1,1,2],"tag":"恋爱人格","quote":"最动人的浪漫，是有人一起过日常。","insight":"你相信最顶级的浪漫藏在“一起吃很多顿饭、聊很多句废话”里。你擅长营造温暖妥帖的相处氛围，愿意把耐心与温柔倾注在日常点滴中，是伴侣疲惫时最想奔赴的港湾。","strength":"持续关心、善于陪伴","caution":"别将陪伴频率自动等同于爱意","action":"与对方商量各自喜欢的独处及共处比例","motif":"温柔与日常","no":"03","tags":["烟火浪漫","情绪港湾","细水长流"],"contrast":"平时总在迁就和照顾别人，其实自己心里也住着一个渴望被偏爱、被主动抱紧的小孩。","match":["慢热守护者","同样追求细水长流的踏实爱意，互相滋养不内耗。"],"clash":["理性观察者","你渴望温暖回应，对方习惯先冷静分析，偶尔会让你觉得有点冷。"],"vibe":"心动开关：下班后一起逛超市买菜，并肩散步不用看手机"},{"name":"直球行动派","vector":[2.0,3.0,3.0,3.0],"tag":"恋爱人格","quote":"喜欢就说，想见就约。","insight":"喜欢就要大声说，想见就立刻出发，有误会绝不留过夜！你在感情里坦荡滚烫，讨厌弯弯绕绕的猜忌游戏。和你谈恋爱几乎没有内耗，因为你的偏爱永远光明正大、有迹可循。","strength":"坦率、行动力强","caution":"给对方时间和选择空间","action":"发出邀请后留出对方自主回答的余地","motif":"热烈与坦率","no":"04","tags":["明目张胆偏爱","高能直球","绝不冷战"],"contrast":"外表勇敢热烈、好像永远充满能量，其实最怕一片真心砸出去只收到模棱两可的敷衍。","match":["热情分享家","双向直球、热烈明媚，每天都像在演高甜偶像剧。"],"clash":["细腻理想家","你想立刻说开解决，对方需要安静消化情绪，节奏容易撞车。"],"vibe":"心动开关：对方同样坦荡接住你的热情，从不玩欲擒故纵"},{"name":"理性观察者","vector":[0,0,0,0],"tag":"恋爱人格","quote":"先读懂彼此，再写下一页。","insight":"你不会轻易被荷尔蒙冲昏头脑，习惯先静静观察彼此的三观、人品与相处舒适度。不是你冷漠，而是你对感情极其慎重——经过理性筛选后依然选择的人，往往能得到你最深沉笃定的信任。","strength":"审慎、尊重自己的节奏","caution":"过久的观察可能让心意显得不明确","action":"用一句具体的话告诉对方你正在认真了解这段关系","motif":"理性与留白","no":"05","tags":["清醒深情","慢火甄别","极低内耗"],"contrast":"前期冷静克制像在做尽职调查，一旦真正交付真心，反而比谁都专一护短。","match":["坦诚沟通者","同样重逻辑与边界，有话直说不翻旧账，相处极度舒服。"],"clash":["浪漫幻想家","你重现实契合，对方重情绪浓度，偶尔会觉得彼此不在一个频道。"],"vibe":"心动开关：情绪稳定、逻辑清晰，且能进行深度灵魂对话"},{"name":"浪漫幻想家","vector":[3,2,2,1],"tag":"恋爱人格","quote":"把普通的一天，也过成值得记住的故事。","insight":"你天生拥有把普通周二过成纪念日的能力。你看重眼神里的星光、藏在细节里的仪式感，以及两个人心照不宣的独家记忆。和你相爱，世界会自动蒙上一层温柔的电影滤镜。","strength":"善于制造共同回忆","caution":"别让理想化期待遮住真实差异","action":"一起选择一个双方都喜欢的简单仪式","motif":"浪漫与星光","no":"06","tags":["仪式感天花板","情绪浓度高","故事感恋人"],"contrast":"外表浪漫感性、像个理想主义诗人，其实对对方是不是真心投入，直觉敏锐得可怕。","match":["热情分享家","一个擅长制造浪漫，一个擅长给出满格回应，情绪价值拉满。"],"clash":["理性观察者","你期待惊喜与共振，对方习惯务实冷静，容易让你觉得少点火花。"],"vibe":"心动开关：突然递来的一支花、手写卡片和记得你的每句梦话"},{"name":"安静倾听者","vector":[2,0,1,2],"tag":"恋爱人格","quote":"有些爱，不必喧哗也能听见。","insight":"你是感情里最稀缺的“情绪承托者”。你不一定说最多的话，但总能敏锐察觉伴侣没说出口的委屈与疲惫。在你身边，对方不需要伪装坚强，可以放心卸下所有防备。","strength":"耐心、体察细节","caution":"不要只听对方而忽略自己的需要","action":"在倾听后也分享自己的感受和想法","motif":"倾听与柔光","no":"07","tags":["共情力满格","温柔接住","静默深情"],"contrast":"总能把别人的心事听得明明白白，轮到自己受委屈时却习惯悄悄咽下，怕给对方添麻烦。","match":["坦诚沟通者","对方会主动问你的感受，引导你把心事说出来，双向治愈。"],"clash":["自由旅人","你习惯默默守候，对方习惯各自精彩，容易让你悄悄积攒失落。"],"vibe":"心动开关：对方突然停下来认真问你“那你今天开心吗”"},{"name":"热情分享家","vector":[3.0,2.8,2.8,1.8],"tag":"恋爱人格","quote":"我想把今天的每一点快乐，都分享给你。","insight":"路上看见一只可爱的猫、中午吃到一碗好吃的面，你第一反应就是拍给喜欢的人。对你来说，分享欲就是最高级的浪漫——你渴望把鲜活的日常一点点织进两个人的共同世界里。","strength":"热情、善于创造互动","caution":"双方不一定总有同样的社交能量","action":"先询问对方什么时候有空，再分享一件趣事","motif":"分享与晴天","no":"08","tags":["分享欲=爱意","小太阳体质","高频互动"],"contrast":"看起来元气满满、永远秒回，其实内心特别在意“碎碎念有没有被认真接住”。","match":["直球行动派","分享欲遇上行动力，句句有回应、件件有着落。"],"clash":["理性观察者","你兴致勃勃发十条消息，对方回一个“嗯不错”，瞬间浇灭热情。"],"vibe":"心动开关：每一条奇奇怪怪的废话，都能收到认真的接梗和回应"},{"name":"稳健同行者","vector":[2,2,1,1],"tag":"恋爱人格","quote":"不必跑得太快，只要一起走得稳。","insight":"你在亲密与空间、感性与理性之间有着难得的成熟平衡。你不追求大起大落的虐恋，更相信细水长流的协作与共同成长——把爱落到柴米油盐和共同目标里，走得稳比跑得快更重要。","strength":"平衡承诺和日常协作","caution":"别因追求稳定而推迟必要的谈话","action":"每隔一段时间交流双方近期的相处感受","motif":"稳定与同行","no":"09","tags":["长期伴侣顶配","情绪稳压器","双向奔赴"],"contrast":"看似淡定务实、像个情绪稳定的大人，其实在信任的人面前也会露出柔软撒娇的一面。","match":["温柔陪伴者","步调一致、三观契合，是能把日子越过越踏实的模范搭档。"],"clash":["独立探索者","你偏爱安稳确定的规划，对方热爱随时出发的新鲜感，需要磨合。"],"vibe":"心动开关：遇到分歧时不逃避不指责，而是说“我们一起想办法”"},{"name":"独立探索者","vector":[0,2,3,1],"tag":"恋爱人格","quote":"我有自己的远方，也愿与你相遇。","insight":"你需要一个能一起看世界、而不是把彼此困在原地的人。你有自己的热爱与野心，在心动时也会大方主动出击；最好的关系不是彼此捆绑，而是牵着手去解锁更辽阔的人生副本。","strength":"独立、探索力强","caution":"新鲜感和长期投入需要兼顾","action":"在个人计划之外安排可持续的共同活动","motif":"独立与探索","no":"10","tags":["鲜活有趣","成长型恋爱","灵魂共振"],"contrast":"平时独立飒爽、看起来百毒不侵，其实只要遇到真正欣赏你野心的人，瞬间变得温柔。","match":["自由旅人","同样热爱探索与独立，既是恋人也是最默契的冒险搭子。"],"clash":["细腻理想家","你向前奔跑看风景，对方渴望停下来深情凝视，容易产生落差。"],"vibe":"心动开关：支持你的奇思妙想，并愿意一起尝试人生新体验"},{"name":"坦诚沟通者","vector":[1,3,2,3],"tag":"恋爱人格","quote":"真正的靠近，从说清楚开始。","insight":"你坚信“猜来猜去消耗爱，说清楚才能真正靠近”。你愿意坦率表达需求，也尊重对方的底线；发生矛盾时不冷暴力、不翻旧账，只对事不对人地一起找到让两个人都舒服的解法。","strength":"善于提出需求、共同解决问题","caution":"避免把沟通变成急于得出结论","action":"讨论前确认双方是否有精力进行对话","motif":"坦诚与边界","no":"11","tags":["反内耗专家","清晰边界","高质量亲密"],"contrast":"表面理性通透、像个情感导师，其实内心极其柔软，只是习惯用清晰表达来保护关系。","match":["理性观察者","沟通零障碍、尊重彼此节奏，把亲密关系处得清澈又长久。"],"clash":["慢热守护者","你希望有问题当面摊开聊，对方需要躲起来慢慢消化，容易着急。"],"vibe":"心动开关：吵架也能好好说话，把“我需要什么”坦诚摆在桌面上"},{"name":"细腻理想家","vector":[3,0,0,0],"tag":"恋爱人格","quote":"温柔不是猜中所有心事，而是愿意认真感受。","insight":"你对情感的纯度与精神契合有着极高的向往。你不会轻易敞开心扉，但一旦确认眼前人值得托付，你会释放出如月光般温柔绵长的深情，连空气里最细微的情绪波动都能温柔接住。","strength":"细腻、珍惜连接","caution":"不要期待对方自动察觉所有感受","action":"把一个尚未说出口的期待转成具体请求","motif":"细腻与月光","no":"12","tags":["灵魂共鸣控","月光般深情","极度敏感温柔"],"contrast":"外壳安静清冷、自带一层保护色，内心却藏着一片只为懂你的人开放的星空。","match":["安静倾听者","无须多言就能读懂你的细腻心事，给你最深层的精神安抚。"],"clash":["直球行动派","对方节奏太快太直白，偶尔会让你来不及做好心理准备。"],"vibe":"心动开关：在人群里悄悄递来的一个懂你的眼神"}],"brand":"LOVE ATLAS","heroTitle":"心动档案","heroSub":"THE WAY YOU LOVE","intro":"你习惯如何靠近一个人，又怎样守护自己的空间？从日常相处的选择中，发现自己的关系偏好。单身也可以按理想情境作答。","disclaimer":"结果不诊断依恋类型、心理状态或关系质量，不决定你适合谁。","labels":["你的隐藏恋爱人格画像","一个可以尝试的相处小练习","宿命恋人匹配 & 反差CP"],"art":"<svg viewBox=\"0 0 600 240\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"rose\" x2=\"1\" y2=\"1\"><stop stop-color=\"#73374f\"/><stop offset=\"1\" stop-color=\"#c87691\"/></linearGradient></defs><rect width=\"600\" height=\"240\" fill=\"url(#rose)\"/><g fill=\"none\" stroke=\"#fff1e5\" opacity=\".35\"><circle cx=\"460\" cy=\"104\" r=\"91\"/><circle cx=\"460\" cy=\"104\" r=\"75\"/><ellipse cx=\"460\" cy=\"104\" rx=\"120\" ry=\"53\" transform=\"rotate(-25 460 104)\"/></g><path d=\"M460 151C424 124 392 104 409 77 425 52 452 69 460 85 468 69 496 52 511 77 529 104 496 124 460 151Z\" fill=\"#f8d9cd\"/><g fill=\"#ffe9cd\"><circle cx=\"345\" cy=\"40\" r=\"3\"/><circle cx=\"543\" cy=\"45\" r=\"4\"/><circle cx=\"565\" cy=\"172\" r=\"3\"/><circle cx=\"337\" cy=\"174\" r=\"2\"/></g><path d=\"M0 210Q150 130 310 210T600 195V240H0Z\" fill=\"#602e45\" opacity=\".38\"/></svg>","palette":{"ink":"#3f2532","accent":"#8e3e5e","accent2":"#c9876b","paper":"#faf0f2","soft":"#f3dde6","line":"#e6ced9","card":"#fffbfd","muted":"#785a68"},"vol":"VOL. 02 · 心动档案室","teasers":["慢热守护者","直球行动派","自由旅人"],"chapters":[{"title":"心动初遇","intro":"当好感悄悄降临，你是先迈出一步，还是静静观察？"},{"title":"亲密距离","intro":"相爱的两个人，需要多少黏在一起的时光与各自呼吸的空间？"},{"title":"爱意表达","intro":"藏在心里还是大声说出来？看看你最自然的浪漫语言。"},{"title":"情绪与磨合","intro":"当分歧和疲惫出现，你习惯怎样守护一段关系的温度？"}],"calcSteps":["正在读取你的心动频率…","解析亲密边界与情绪表达偏好…","封缄你的专属恋爱人格档案…"],"eggLabel":"你的隐藏心动开关","shareTags":"#你的隐藏恋爱人格 #恋爱人格测试 #情侣必测","shareHook":"测完才发现，我的隐藏恋爱人格竟然是「{name}」💗"};
+const app=document.getElementById('app'),
+      posterDialog=document.getElementById('posterDialog'),
+      copyDialog=document.getElementById('copyDialog');
+const N=D.questions.length, STORAGE='personal-atlas-v3:'+D.kind;
+let idx=0, answers=Array(N).fill(null), report=null, posterURL=null, screen='home', autoNext=true, autoTimer=null;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function stash(){try{localStorage.setItem(STORAGE,JSON.stringify({idx,answers,autoNext}))}catch{}}
+function restore(){
+  try{
+    const s=JSON.parse(localStorage.getItem(STORAGE));
+    if(s&&Array.isArray(s.answers)&&s.answers.length===N&&s.answers.every(x=>x===null||Number.isInteger(x)&&x>=0&&x<=3)&&Number.isInteger(s.idx)&&s.idx>=0&&s.idx<N){
+      if(typeof s.autoNext==='boolean') autoNext=s.autoNext;
+      return s;
+    }
+  }catch{}
+  return null;
+}
+function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
+function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
+function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
+function hero(text,sub=D.heroSub,badge=''){
+  return `<div class="hero" aria-hidden="true">${D.art}${badge?`<span class="hero-badge">${esc(badge)}</span>`:''}<div class="hero-copy"><small>${esc(sub)}</small><strong>${esc(text)}</strong></div></div>`;
+}
+
+function home(){
+  if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
+  screen='home';
+  const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const teaserCards=D.teasers.map(name=>D.profiles.find(p=>p.name===name)).filter(Boolean);
+  app.innerHTML=`<section class="panel">
+    ${hero(D.heroTitle,D.heroSub,D.profiles.length+' 种档案')}
+    <p class="eyebrow">${esc(D.subtitle)}</p>
+    <h1>${esc(D.title)}</h1>
+    <p class="lead">${esc(D.intro)}</p>
+    <div class="pills">
+      <span class="pill accent">${N} 道情境探索</span>
+      <span class="pill">${D.profiles.length} 种专属档案</span>
+      <span class="pill">约 ${Math.max(2,Math.ceil(N/8))} 分钟 · 含3:4海报</span>
+    </div>
+    <div class="stack">
+      ${count===N
+        ? `<button class="primary" onclick="resume()">查看我已生成的专属档案　✦</button><button class="secondary" onclick="start()">重新测一次</button>`
+        : count
+        ? `<button class="primary" onclick="resume()">继续上次探索（${count}/${N}）　→</button><button class="secondary" onclick="start()">重新开始测试</button>`
+        : `<button class="primary" onclick="start()">开启我的探索　→</button>`}
+    </div>
+    <div class="teaser-wrap">
+      <div class="teaser-head"><span>档案抢先看</span><small>共收录 ${D.profiles.length} 种结果</small></div>
+      <div class="teasers">
+        ${teaserCards.map(p=>`<div class="teaser"><b>${esc(p.name)}</b><span>${esc(p.tags[0])}</span><small>「${esc(p.quote)}」</small></div>`).join('')}
+      </div>
+    </div>
+    <p class="notice">跟随第一直觉选择即可，没有标准答案。${esc(D.disclaimer)}</p>
+  </section>`;
+  scrollTop();
+}
+
+function start(){
+  if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('开始新测试将清除上次进度，继续吗？')) return;
+  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+}
+
+function resume(){
+  const saved=restore();if(!saved)return start();
+  idx=saved.idx;answers=saved.answers;
+  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  question(true);
+}
+
+function toggleAuto(){
+  autoNext=!autoNext;stash();question(false);
+}
+
+function getChapter(qIdx){
+  const chs=D.chapters;
+  const per=Math.ceil(N/chs.length);
+  const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
+  return {num:String(ci+1).padStart(2,'0'),...chs[ci]};
+}
+
+function question(move=false){
+  if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
+  screen='question';
+  const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  const pct=Math.round((count/N)*100);
+  app.innerHTML=`<section class="panel">
+    <div class="question-top">
+      <span>Q${String(idx+1).padStart(2,'0')} / ${N} · ${pct}%</span>
+      <button type="button" class="auto-toggle ${autoNext?'on':''}" onclick="toggleAuto()" aria-pressed="${autoNext}">自动切题：${autoNext?'开':'关'}</button>
+    </div>
+    <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
+      <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-bar">
+      <span class="chapter-num">${ch.num}</span>
+      <div><strong>${esc(ch.title)}</strong><span>${esc(ch.intro)}</span></div>
+    </div>
+    <h2>${esc(q.text)}</h2>
+    <div class="options" role="group" aria-label="选择答案">
+      ${q.options.map((o,i)=>`<button type="button" class="option ${answers[idx]===i?'selected':''}" aria-pressed="${answers[idx]===i}" onclick="choose(${i})"><span class="letter">${'ABCD'[i]}</span><span>${esc(o.text)}</span>${answers[idx]===i?'<span class="check" aria-hidden="true">✓</span>':''}</button>`).join('')}
+    </div>
+    <div class="nav">
+      <button type="button" onclick="back()" ${idx===0?'disabled':''}>← 上一题</button>
+      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'生成专属档案 ✦':'下一题 →'}</button>
+    </div>
+    <div style="text-align:center;margin-top:10px">
+      <button type="button" class="subtle" onclick="home()">保存进度，返回首页</button>
+    </div>
+  </section>`;
+  if(move){scrollTop();focusTitle();}
+}
+
+function choose(i){
+  if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  answers[idx]=i;stash();
+  // Immediate visual feedback without losing smooth flow
+  const btns=app.querySelectorAll('.option');
+  btns.forEach((b,k)=>{
+    const sel=k===i;
+    b.classList.toggle('selected',sel);
+    b.setAttribute('aria-pressed',String(sel));
+    let ck=b.querySelector('.check');
+    if(sel&&!ck){ck=document.createElement('span');ck.className='check';ck.setAttribute('aria-hidden','true');ck.textContent='✓';b.append(ck);}
+    if(!sel&&ck) ck.remove();
+  });
+  const nextBtn=app.querySelector('.nav .primary');
+  if(nextBtn) nextBtn.disabled=false;
+  const count=answers.filter(v=>v!==null).length;
+  const pct=Math.round((count/N)*100);
+  const bar=app.querySelector('.progress i');
+  if(bar) bar.style.width=Math.max(4,pct)+'%';
+  if(autoNext){
+    if(autoTimer) clearTimeout(autoTimer);
+    autoTimer=setTimeout(()=>{
+      autoTimer=null;
+      if(idx<N-1){idx++;stash();question(true);}
+      else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
+      else calculateRitual();
+    }, 300);
+  }
+}
+
+function back(){if(idx>0){idx--;stash();question(true);}}
+function next(){
+  if(answers[idx]===null) return;
+  if(idx<N-1){idx++;stash();question(true);}
+  else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
+  else calculateRitual();
+}
+
+function calculateRitual(){
+  screen='calc';
+  const steps=D.calcSteps;
+  app.innerHTML=`<section class="panel"><div class="calc-box">
+    <div class="calc-ring" aria-hidden="true"></div>
+    <p class="calc-step" id="calcText">${esc(steps[0])}</p>
+    <p class="calc-sub">正在为你生成完整画像与 3:4 收藏海报</p>
+  </div></section>`;
+  scrollTop();
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},460);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},920);
+  setTimeout(()=>result(),1360);
+}
+
+function compute(input){
+  if(input.length!==N||input.some(v=>!Number.isInteger(v)||v<0||v>3)) throw Error('Incomplete answers');
+  const sums=D.axes.map(()=>0), counts=D.axes.map(()=>0);
+  D.questions.forEach((q,i)=>{sums[q.axis]+=q.options[input[i]].score;counts[q.axis]++;});
+  const v=sums.map((s,i)=>s/counts[i]);
+  const ranked=D.profiles.map((p,i)=>{
+    const center=p.vector.map(x=>x-1.5);
+    const norm=Math.hypot(...center)||1;
+    const radius=Math.sqrt(v.length)*0.5+0.15*(norm-Math.sqrt(v.length));
+    const calibrated=center.map(x=>1.5+x*radius/norm);
+    const d=calibrated.reduce((s,x,j)=>s+(x-v[j])**2,0);
+    // Smooth intuitive affinity score (high contrast & realistic 72%~98% range for top matches)
+    const rawSim=Math.max(0,1-Math.sqrt(d/(4.2*v.length)));
+    const fit=Math.round(Math.max(62,Math.min(98,66+rawSim*32)));
+    return {p,i,d,fit};
+  });
+  ranked.sort((a,b)=>a.d-b.d||a.i-b.i);
+  // Ensure strict monotonic visual display for top 4
+  for(let k=1;k<Math.min(4,ranked.length);k++){
+    if(ranked[k].fit>=ranked[k-1].fit) ranked[k].fit=Math.max(60,ranked[k-1].fit-2);
+  }
+  return {v,ranked,p:ranked[0].p};
+}
+
+function tendency(a,v){return v<1.15?a[1]:v>1.85?a[2]:'两者兼顾'}
+
+function result(){
+  if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
+  report=compute(answers);screen='result';stash();
+  const {p,v,ranked}=report;
+  const cues=D.axes.map((a,i)=>({a,val:v[i],gap:Math.abs(v[i]-1.5)})).sort((x,y)=>y.gap-x.gap).slice(0,2);
+  const why=cues.every(x=>x.gap<0.28)
+    ? '你在多个维度上都保持着难得的松弛与平衡，既不被单一标签框住，又能自由切换状态。'
+    : `从你的直觉选择来看，你在「${cues[0].a[0]}」上偏向${tendency(cues[0].a,cues[0].val)}，在「${cues[1].a[0]}」上偏向${tendency(cues[1].a,cues[1].val)}，这些特质恰好与「${p.name}」的气质高度同频。`;
+  const stampText=p.stamp||`NO.${p.no} · 专属档案`;
+
+  app.innerHTML=`<section class="panel">
+    <div class="result-cover">
+      ${hero(p.motif,D.heroSub)}
+      <span class="result-stamp" aria-hidden="true">${esc(stampText)}</span>
+      <div class="intro">
+        <p class="eyebrow">ARCHIVE NO.${p.no} · ${esc(p.tag)}</p>
+        <div class="result-name-row">
+          <h1 class="result-name">${esc(p.name)}</h1>
+          <span class="fit-badge">✦ 契合度 ${ranked[0].fit}%</span>
+        </div>
+        <div class="pills" style="margin:8px 0 10px">
+          ${p.tags.map(t=>`<span class="pill accent"># ${esc(t)}</span>`).join('')}
+        </div>
+        <div class="quote-box"><p class="quote">「${esc(p.quote)}」</p></div>
+      </div>
+    </div>
+
+    <div class="stack" style="margin-top:16px">
+      <div class="actions-row">
+        <button type="button" class="primary" onclick="showPoster()">生成 3:4 小红书海报 ↗</button>
+        <button type="button" class="secondary" onclick="copyShare()">复制小红书文案</button>
+      </div>
+      <div id="copyStatus" class="status-bar" role="status"></div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">01 / SOUL PORTRAIT</p>
+      <h3>${esc(D.labels[0])}</h3>
+      <p>${esc(p.insight)}</p>
+      <div class="contrast-card">
+        <b>✦ 别人没发现的隐藏反差面</b>
+        <p>${esc(p.contrast)}</p>
+      </div>
+      <div class="duo">
+        <div class="mini"><b>你的闪光亮点</b><p>${esc(p.strength)}</p></div>
+        <div class="mini"><b>给你的温柔提醒</b><p>${esc(p.caution)}</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">02 / DIMENSION MAP</p>
+      <h3>你的专属偏好图谱</h3>
+      ${D.axes.map((a,i)=>`<div class="axis">
+        <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
+        <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
+        <div class="axis-labels"><span>${esc(a[1])}</span><span>${esc(a[2])}</span></div>
+      </div>`).join('')}
+      <p style="margin-top:14px">${esc(why)}</p>
+    </div>
+
+    <div class="block">
+      <p class="kicker">03 / CHEMISTRY &amp; CONTRAST</p>
+      <h3>${esc(D.labels[2])}</h3>
+      <p class="muted" style="margin-bottom:6px">发给你的朋友或另一半测测，看看你们是不是天选同频！</p>
+      <div class="duo">
+        <div class="mini">
+          <b>♥ 天选合拍搭子</b>
+          <div class="partner-name">${esc(p.match[0])}</div>
+          <p>${esc(p.match[1])}</p>
+        </div>
+        <div class="mini">
+          <b>⚡ 奇妙反差碰撞</b>
+          <div class="partner-name">${esc(p.clash[0])}</div>
+          <p>${esc(p.clash[1])}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">04 / EXCLUSIVE EASTER EGG</p>
+      <h3>${esc(D.labels[1])}</h3>
+      <p>${esc(p.quest ? '人生主线：'+p.quest : p.action)}</p>
+      <div class="egg-box">
+        <b>✦ ${esc(D.eggLabel)}</b>
+        <p>${esc(p.egg || p.vibe)}</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">05 / NEARBY ARCHIVES</p>
+      <h3>与你气场相近的备选档案</h3>
+      ${ranked.slice(1,4).map(x=>`<div class="rank">
+        <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.tags.slice(0,2).join(' · '))}</small></div>
+        <span class="pct">${x.fit}% 契合</span>
+      </div>`).join('')}
+      <p class="notice">${esc(D.disclaimer)}</p>
+    </div>
+
+    <div class="stack">
+      <button type="button" class="primary" onclick="showPoster()">保存我的专属结果海报 ↗</button>
+      <div class="actions-row">
+        <button type="button" class="secondary" onclick="editAnswers()">修改部分答案</button>
+        <button type="button" class="secondary" onclick="restart()">重新测试</button>
+      </div>
+    </div>
+  </section>`;
+  scrollTop();focusTitle();
+}
+
+function editAnswers(){idx=N-1;question(true);}
+function restart(){if(confirm('清除当前答案并重新开始探索？')){clearSaved();start();}}
+
+async function copyShare(){
+  if(!report) return;
+  const {p,ranked}=report;
+  const hook=D.shareHook.replace('{name}',p.name);
+  const text=`${hook}\n契合度 ${ranked[0].fit}% | ${p.tags.map(t=>'#'+t).join(' ')}\n「${p.quote}」\n\n♥ 我的天选合拍搭子是【${p.match[0]}】，快来测测你是什么结果，评论区找搭子👇\n${D.shareTags}`;
+  const st=document.getElementById('copyStatus');
+  try{
+    await navigator.clipboard.writeText(text);
+    if(st) st.textContent='✓ 小红书分享文案已复制到剪贴板！';
+  }catch{
+    document.getElementById('copyTextarea').value=text;
+    copyDialog.showModal();
+  }
+}
+
+function wrap(ctx,text,max){
+  const out=[];let line='';
+  for(const ch of text){
+    if(line&&ctx.measureText(line+ch).width>max){out.push(line);line=ch;}
+    else line+=ch;
+  }
+  if(line) out.push(line);
+  return out;
+}
+function roundedPath(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  if(typeof ctx.roundRect==='function') ctx.roundRect(x,y,w,h,r);
+  else{r=Math.min(r,w/2,h/2);ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+}
+function fillRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.fill();}
+function strokeRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.stroke();}
+
+function makePoster(){
+  const c=document.createElement('canvas');c.width=1080;c.height=1440;
+  const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
+  const {p,v,ranked}=report, P=D.palette;
+  const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif';
+
+  // Paper backdrop & elegant outer double frame
+  ctx.fillStyle=P.paper;ctx.fillRect(0,0,1080,1440);
+  ctx.strokeStyle=P.line;ctx.lineWidth=2;strokeRound(ctx,26,26,1028,1388,30);
+
+  // Header card (editorial rich banner)
+  const grad=ctx.createLinearGradient(52,52,1028,372);
+  grad.addColorStop(0,P.accent);grad.addColorStop(1,P.ink);
+  ctx.fillStyle=grad;fillRound(ctx,52,52,976,316,26);
+  ctx.save();roundedPath(ctx,52,52,976,316,26);ctx.clip();
+  ctx.strokeStyle='rgba(255,255,255,0.16)';ctx.lineWidth=2;
+  for(let i=0;i<7;i++){ctx.beginPath();ctx.ellipse(905,120,85+i*38,52+i*22,-0.35,0,Math.PI*2);ctx.stroke();}
+  ctx.fillStyle=P.accent2;ctx.globalAlpha=0.22;ctx.beginPath();ctx.arc(920,310,130,0,Math.PI*2);ctx.fill();
+  ctx.restore();
+
+  // Header typography + collectible stamp
+  ctx.fillStyle='rgba(255,255,255,0.85)';ctx.font=`700 22px ${sans}`;
+  ctx.fillText(`${D.brand}  ·  ARCHIVE NO.${p.no}`,92,108);
+  ctx.fillStyle='#ffffff';ctx.font=`800 72px ${serif}`;
+  ctx.fillText(p.name,90,214);
+  ctx.fillStyle='rgba(255,255,255,0.92)';ctx.font=`500 28px ${sans}`;
+  ctx.fillText(`${p.motif}  ·  灵魂契合度 ${ranked[0].fit}%`,92,276);
+
+  // Stamp badge top right
+  const stamp=p.stamp||`NO.${p.no}`;
+  ctx.save();ctx.translate(925,112);ctx.rotate(0.06);
+  ctx.strokeStyle='rgba(255,255,255,0.75)';ctx.lineWidth=2;strokeRound(ctx,-92,-24,184,48,10);
+  ctx.fillStyle='#ffffff';ctx.font=`700 22px ${serif}`;ctx.textAlign='center';
+  ctx.fillText(stamp,0,8);ctx.restore();ctx.textAlign='left';
+
+  // Tag pills inside header bottom
+  let tx=92;
+  p.tags.forEach(t=>{
+    const label='# '+t;
+    ctx.font=`600 22px ${sans}`;
+    const w=ctx.measureText(label).width+34;
+    ctx.fillStyle='rgba(255,255,255,0.18)';fillRound(ctx,tx,306,w,40,20);
+    ctx.fillStyle='#fff';ctx.fillText(label,tx+17,333);
+    tx+=w+14;
+  });
+
+  // Quote callout card
+  ctx.fillStyle=P.card;fillRound(ctx,52,394,976,120,20);
+  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,394,976,120,20);
+  ctx.fillStyle=P.accent2;fillRound(ctx,52,394,10,120,5);
+  ctx.fillStyle=P.accent;ctx.font=`700 34px ${serif}`;
+  const qLines=wrap(ctx,`「${p.quote}」`,900).slice(0,2);
+  const qStart=qLines.length===1?466:444;
+  qLines.forEach((l,i)=>ctx.fillText(l,86,qStart+i*44));
+
+  // Insight paragraph
+  let y=566;
+  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;
+  ctx.fillText('SOUL PORTRAIT  ·  专属解读',70,y);y+=40;
+  ctx.fillStyle=P.ink;ctx.font=`400 27px ${sans}`;
+  const iLines=wrap(ctx,p.insight,936).slice(0,3);
+  iLines.forEach(l=>{ctx.fillText(l,70,y);y+=41;});
+
+  // Axes visualization block
+  y+=16;
+  ctx.fillStyle=P.card;
+  const axisStep=D.axes.length>4?56:72;
+  const axisBoxH=56+D.axes.length*axisStep;
+  fillRound(ctx,52,y,976,axisBoxH,20);
+  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,y,976,axisBoxH,20);
+  ctx.fillStyle=P.accent;ctx.font=`800 22px ${sans}`;
+  ctx.fillText('偏好维度图谱',82,y+40);
+  let ay=y+78;
+  D.axes.forEach((a,i)=>{
+    ctx.font=`600 21px ${sans}`;ctx.fillStyle=P.ink;ctx.textAlign='left';
+    ctx.fillText(`${a[0]} · ${a[1]}`,82,ay);
+    ctx.textAlign='right';ctx.fillStyle=P.muted;ctx.fillText(a[2],998,ay);
+    ctx.textAlign='left';
+    ctx.fillStyle=P.soft;fillRound(ctx,82,ay+13,916,10,5);
+    const px=82+916*Math.max(0.03,Math.min(0.97,v[i]/3));
+    ctx.fillStyle=P.accent;ctx.beginPath();ctx.arc(px,ay+18,11,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();
+    ay+=axisStep;
+  });
+
+  // Bottom Duo Cards: Soulmate + Strength
+  const duoY=Math.min(1148, y+axisBoxH+22);
+  const duoH=186;
+  // Left card: Soulmate
+  ctx.fillStyle=P.soft;fillRound(ctx,52,duoY,476,duoH,20);
+  ctx.fillStyle=P.accent;ctx.font=`800 21px ${sans}`;ctx.fillText('♥ 天选合拍搭子',80,duoY+40);
+  ctx.fillStyle=P.ink;ctx.font=`800 34px ${serif}`;ctx.fillText(p.match[0],80,duoY+86);
+  ctx.fillStyle=P.muted;ctx.font=`400 21px ${sans}`;
+  wrap(ctx,p.match[1],420).slice(0,2).forEach((l,i)=>ctx.fillText(l,80,duoY+124+i*30));
+
+  // Right card: Hidden contrast or highlight
+  ctx.fillStyle=P.card;fillRound(ctx,552,duoY,476,duoH,20);
+  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,552,duoY,476,duoH,20);
+  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;ctx.fillText('✦ 你的闪光亮点',580,duoY+40);
+  ctx.fillStyle=P.ink;ctx.font=`600 25px ${serif}`;
+  wrap(ctx,p.strength,420).slice(0,2).forEach((l,i)=>ctx.fillText(l,580,duoY+84+i*34));
+  ctx.fillStyle=P.muted;ctx.font=`400 20px ${sans}`;
+  const eggShort=p.egg||p.vibe||'';
+  wrap(ctx,eggShort,420).slice(0,1).forEach(l=>ctx.fillText('· '+l,580,duoY+158));
+
+  // Footer strip
+  ctx.fillStyle=P.muted;ctx.font=`500 22px ${sans}`;
+  ctx.fillText(`${D.title}  ·  长按保存分享`,60,1388);
+  ctx.textAlign='right';ctx.fillText('原创趣味探索 · 非专业心理测评',1020,1388);
+  ctx.textAlign='left';
+  return c;
+}
+
+function showPoster(){
+  if(!report) return;
+  const status=document.getElementById('posterStatus'),
+        area=document.getElementById('posterArea'),
+        download=document.getElementById('downloadPoster');
+  status.textContent='';area.innerHTML='';download.disabled=true;
+  try{
+    if(posterURL) URL.revokeObjectURL(posterURL);
+    posterURL=null;
+    const canvas=makePoster();
+    const img=document.createElement('img');
+    img.className='poster';img.alt='可保存的专属结果海报';
+    img.src=canvas.toDataURL('image/png');
+    area.append(img);
+    canvas.toBlob(blob=>{
+      posterURL=blob?URL.createObjectURL(blob):img.src;
+      download.disabled=false;
+    },'image/png');
+    if(!posterDialog.open) posterDialog.showModal();
+  }catch(e){
+    status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
+    if(!posterDialog.open) posterDialog.showModal();
+  }
+}
+
+document.getElementById('closePoster').onclick=()=>posterDialog.close();
+document.getElementById('downloadPoster').onclick=()=>{
+  if(!posterURL||!report) return;
+  const a=document.createElement('a');a.href=posterURL;a.download=D.kind+'-'+report.p.name+'.png';
+  document.body.append(a);a.click();a.remove();
+  document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方图片保存。';
+};
+document.getElementById('closeCopy').onclick=()=>copyDialog.close();
+document.getElementById('selectCopyBtn').onclick=()=>{
+  const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
+};
+home();
+</script>
+</body>
+</html>

@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111316">
+<meta name="description" content="如果把你放进博物馆，你是哪件「镇馆之宝」 · 24道馆藏情境探索，点亮你的16件原创器物展柜与3:4高级博物馆铭牌海报。">
+<title>如果把你放进博物馆，你是哪件「镇馆之宝」 · SOUL MUSEUM</title>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#111316;--panel:#181b20;--panel2:#20242b;--ink:#f4efe6;--muted:#b4aea3;
+  --brass:#d5b374;--brass-soft:rgba(213,179,116,.15);--line:rgba(213,179,116,.24);
+  --line-dim:rgba(255,255,255,.10);--crimson:#c95c4b;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --mono:"SF Mono","Menlo","Monaco","Consolas",monospace;
+  --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-tap-highlight-color:transparent;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse at 50% -10%,rgba(213,179,116,.16),transparent 58%),
+  radial-gradient(ellipse at 85% 105%,rgba(125,168,158,.10),transparent 48%);z-index:-1}
+main{width:min(100%,660px);padding:18px 16px max(34px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--mono);font-size:11px;letter-spacing:2.4px;font-weight:800;color:var(--brass);display:flex;align-items:center;gap:7px}
+.brand::before{content:"❖";font-size:13px;color:var(--brass)}
+.issue{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;letter-spacing:.08em}
+section.panel{border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,var(--panel),#14171c);padding:clamp(18px,4.2vw,30px);box-shadow:0 26px 64px rgba(0,0,0,.48);overflow:hidden;animation:enter .3s cubic-bezier(.22,1,.36,1)}
+@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1,h2,h3,p{margin:0}
+h1{font-family:var(--serif);font-size:clamp(28px,7.2vw,42px);font-weight:700;line-height:1.28;letter-spacing:.03em;color:var(--ink)}
+h2{font-family:var(--serif);font-size:clamp(20px,5vw,26px);line-height:1.5;font-weight:700;color:var(--ink)}
+h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700;color:var(--ink)}
+.eyebrow{font-family:var(--mono);color:var(--brass);font-size:10.5px;letter-spacing:2.2px;font-weight:700;margin:16px 0 7px;text-transform:uppercase}
+.lead{font-size:14.5px;line-height:1.86;margin:12px 0 18px;color:var(--muted)}
+.muted{font-size:12px;color:var(--muted)}
+/* Museum Hero Showcase */
+.hero{position:relative;isolation:isolate;height:clamp(198px,48vw,252px);background:#101216;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,20,.04) 0%,rgba(14,16,20,.68) 100%);z-index:-1}
+.hero-badge{position:absolute;top:14px;right:14px;padding:4px 11px;border-radius:99px;border:1px solid rgba(213,179,116,.52);background:rgba(17,19,22,.62);backdrop-filter:blur(6px);font-family:var(--mono);font-size:10px;letter-spacing:1.4px;font-weight:700;color:var(--brass)}
+.hero-copy{position:absolute;bottom:16px;left:18px;right:16px}
+.hero-copy small{font-family:var(--mono);font-size:10px;letter-spacing:2.8px;color:var(--brass);display:block;margin-bottom:3px}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,33px);letter-spacing:3px;line-height:1.25;color:#fff}
+.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line-dim);border-radius:99px;background:rgba(255,255,255,.04);color:var(--muted);font-weight:500}
+.pill.brass{border-color:rgba(213,179,116,.44);background:var(--brass-soft);color:var(--brass);font-weight:700}
+.teaser-wrap{margin:22px 0 20px;padding-top:16px;border-top:1px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.teaser-head span{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;color:var(--brass);font-weight:700}
+.teaser-head small{font-size:11px;color:var(--muted)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.teaser{padding:12px 10px;border-radius:12px;background:var(--panel2);border:1px solid var(--line-dim);display:flex;flex-direction:column;gap:4px}
+.teaser-bar{width:24px;height:4px;border-radius:99px;margin-bottom:3px}
+.teaser b{font-family:var(--serif);font-size:13.5px;color:var(--ink);line-height:1.35}
+.teaser span{font-size:10.5px;color:var(--brass)}
+.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--panel2);border:1px solid var(--line-dim);border-radius:13px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.988)}
+button:focus-visible{outline:2.5px solid var(--brass);outline-offset:3px}
+button:hover:not(:disabled){border-color:var(--brass)}
+button:disabled{opacity:.36;cursor:not-allowed}
+.primary{background:linear-gradient(135deg,#e1c387,#c39c58);color:#181410;border-color:transparent;font-weight:800;width:100%;text-align:center;box-shadow:0 8px 24px rgba(213,179,116,.22)}
+.primary:hover:not(:disabled){filter:brightness(1.06)}
+.secondary{width:100%;text-align:center;background:rgba(255,255,255,.04);border-color:var(--line)}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.subtle:hover{color:var(--brass)}
+.stack{display:grid;gap:10px}
+.actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
+.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:14px}
+/* Quiz Screen */
+.question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--brass);font-weight:700}
+.auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line-dim);background:rgba(255,255,255,.04);color:var(--muted);font-family:var(--sans);font-size:11px;font-weight:600;min-height:28px}
+.auto-toggle.on{border-color:rgba(213,179,116,.5);color:var(--brass);background:var(--brass-soft)}
+.progress{height:5px;background:rgba(255,255,255,.08);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,#95b8ae,var(--brass));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line-dim);border-left:3px solid var(--brass);margin-bottom:20px}
+.chapter-num{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--brass);line-height:1}
+.chapter-bar strong{display:block;font-size:13px;color:var(--ink)}
+.chapter-bar span{display:block;font-size:11.5px;color:var(--muted);line-height:1.45}
+.options{display:grid;gap:10px;margin:20px 0 22px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--panel2);color:var(--ink)}
+.option .letter{display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:50%;background:rgba(255,255,255,.05);color:var(--brass);font-family:var(--mono);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .16s}
+.option.selected{border-color:var(--brass);background:rgba(213,179,116,.13);box-shadow:0 6px 20px rgba(213,179,116,.12)}
+.option.selected .letter{background:var(--brass);color:#181410;border-color:var(--brass)}
+.option .check{margin-left:auto;color:var(--brass);font-weight:800;font-size:15px}
+.nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
+/* Spotlight Appraisal Ritual */
+.calc-box{text-align:center;padding:40px 10px 30px}
+.beam-wrap{width:110px;height:96px;margin:0 auto 20px;position:relative}
+.beam{position:absolute;inset:0;background:conic-gradient(from 160deg at 50% 0%,rgba(213,179,116,.38),rgba(213,179,116,.04) 40deg,transparent 42deg);clip-path:polygon(44% 0,56% 0,100% 100%,0 100%);animation:pulse 1.2s ease-in-out infinite alternate}
+.pedestal{position:absolute;bottom:0;left:22px;right:22px;height:14px;border:1.5px solid var(--brass);border-radius:3px;background:var(--panel2)}
+.relic-gem{position:absolute;bottom:22px;left:50%;width:28px;height:28px;margin-left:-14px;border:2px solid var(--brass);transform:rotate(45deg);background:rgba(213,179,116,.18);animation:floatGem 1.2s ease-in-out infinite alternate}
+@keyframes pulse{from{opacity:.45}to{opacity:1}}
+@keyframes floatGem{from{transform:rotate(45deg) translateY(2px)}to{transform:rotate(45deg) translateY(-5px)}}
+.calc-step{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:8px;min-height:1.6em}
+.calc-sub{font-size:12px;color:var(--muted)}
+/* Result Glass Vitrine & Brass Plaque */
+.vitrine-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,color-mix(in srgb,var(--relic-glow,var(--brass)) 26%,transparent),transparent 62%),#12151a}
+.vitrine-head{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.07);font-family:var(--mono);font-size:10.5px;color:var(--brass);letter-spacing:1.2px}
+.fit-pill{padding:3px 10px;border-radius:99px;background:rgba(213,179,116,.16);border:1px solid rgba(213,179,116,.46);color:var(--brass);font-weight:800}
+.vitrine-stage{position:relative;padding:18px 16px 12px;text-align:center}
+.vitrine-stage svg{width:176px;height:186px;display:block;margin:0 auto;filter:drop-shadow(0 16px 26px rgba(0,0,0,.6))}
+.plinth{width:146px;height:10px;margin:-4px auto 0;border-radius:3px;background:linear-gradient(90deg,#292d35,#3e434d,#292d35);border:1px solid rgba(213,179,116,.38)}
+.plaque{margin:14px 16px 16px;padding:16px 16px 14px;border:1px solid rgba(213,179,116,.42);border-radius:12px;background:linear-gradient(160deg,rgba(213,179,116,.10),rgba(24,27,32,.92));position:relative}
+.plaque::before,.plaque::after{content:"•";position:absolute;top:6px;color:rgba(213,179,116,.55);font-size:12px}
+.plaque::before{left:10px}.plaque::after{right:10px}
+.plaque-era{font-family:var(--mono);font-size:11px;letter-spacing:1.8px;color:var(--brass);text-align:center;margin-bottom:5px}
+.relic-name{font-family:var(--serif);font-size:clamp(24px,6.4vw,34px);line-height:1.3;text-align:center;color:#fff;margin:2px 0 10px}
+.plaque .pills{justify-content:center;margin:0 0 12px}
+.quote-box{padding:11px 14px;border-top:1px solid rgba(213,179,116,.24);text-align:center}
+.quote{font-family:var(--serif);font-size:16px;color:var(--brass);line-height:1.68}
+/* Sections */
+.block{padding:21px 0;border-bottom:1px solid var(--line-dim)}
+.block:last-of-type{border:0;padding-bottom:10px}
+.block p{font-size:14.5px;line-height:1.88;color:#dcd6cc}
+.kicker{font-family:var(--mono);font-size:10px;letter-spacing:2.2px;color:var(--brass);font-weight:700;margin-bottom:5px;text-transform:uppercase}
+.repair-card{margin-top:13px;padding:14px 15px;border-radius:12px;background:rgba(213,179,116,.08);border:1px solid rgba(213,179,116,.34)}
+.repair-card b{display:block;font-family:var(--mono);font-size:11.5px;color:var(--brass);margin-bottom:5px;letter-spacing:.06em}
+.repair-card p{font-size:13.5px;line-height:1.78;color:#efe9df}
+.notice-plaque{margin-top:12px;padding:13px 15px;border-radius:12px;background:rgba(201,92,75,.11);border:1px dashed rgba(201,92,75,.52)}
+.notice-plaque b{display:block;font-family:var(--mono);font-size:11px;color:#eb8978;margin-bottom:4px;letter-spacing:.08em}
+.notice-plaque p{font-size:13.5px;color:#f4dfd9;line-height:1.72}
+.axis{margin:15px 0}
+.axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
+.axis-head strong{font-size:13px;color:var(--ink)}
+.axis-head span{font-family:var(--mono);color:var(--brass);font-weight:700}
+.axis-labels{color:var(--muted);font-size:11.5px}
+.track{position:relative;height:8px;border-radius:9px;background:rgba(255,255,255,.08);margin:8px 0}
+.track::before{content:"";position:absolute;left:50%;width:1px;height:8px;background:rgba(255,255,255,.2)}
+.track i{position:absolute;width:15px;height:15px;top:-3.5px;border-radius:50%;background:var(--brass);border:2.5px solid var(--panel);box-shadow:0 0 0 1.5px var(--brass);transform:translateX(-50%)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.mini{padding:14px;border-radius:13px;background:var(--panel2);border:1px solid var(--line-dim)}
+.mini b{display:block;font-family:var(--mono);color:var(--brass);font-size:11px;margin-bottom:6px}
+.mini .partner-name{font-family:var(--serif);font-size:15.5px;font-weight:700;color:#fff;margin-bottom:5px;line-height:1.38}
+.mini p{font-size:13px;line-height:1.68;color:var(--muted)}
+.rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line-dim);font-size:14px}
+.rank:last-child{border:0}
+.rank-left{display:flex;align-items:center;gap:10px}
+.swatch{width:12px;height:12px;border-radius:50%;border:1px solid rgba(255,255,255,.3);flex:none}
+.rank small{display:block;font-size:11px;color:var(--muted)}
+.rank .pct{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--brass);background:var(--brass-soft);padding:3px 9px;border-radius:99px}
+.status-bar{font-family:var(--mono);font-size:12px;color:var(--brass);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:700}
+.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
+.poster{width:100%;max-width:360px;margin:10px auto;border-radius:12px;display:block;border:1px solid var(--line);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:1px solid var(--line);border-radius:20px;padding:20px;background:var(--panel);color:var(--ink);box-shadow:0 26px 70px rgba(0,0,0,.7)}
+dialog::backdrop{background:rgba(6,7,10,.78);backdrop-filter:blur(4px)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
+.copy-area{width:100%;min-height:155px;border-radius:10px;border:1px solid var(--line);background:#12151a;color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+@media(max-width:460px){
+  main{padding:14px 12px 28px}
+  .teasers,.duo,.actions-row{grid-template-columns:1fr}
+  .option{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="brand">SOUL MUSEUM</span>
+    <span class="issue">HALL 03 · 镇馆之宝特展</span>
+  </header>
+  <div id="app"></div>
+  <footer class="footer">SOUL MUSEUM ARCHIVE · 原创东方美学趣味测试，非专业心理测评<br>无需登录 · 所有答题记录仅保存在你的本地浏览器</footer>
+</main>
+
+<dialog id="posterDialog" aria-labelledby="posterTitle">
+  <div class="dialog-head">
+    <h3 id="posterTitle">你的 3:4 镇馆之宝展柜海报</h3>
+    <button id="closePoster" type="button">关闭</button>
+  </div>
+  <p class="muted">1080 × 1440 暗调美术馆珍藏卡 · 手机长按图片保存，电脑点击下方下载。</p>
+  <div id="posterArea"></div>
+  <div class="stack" style="margin-top:12px">
+    <button class="primary" id="downloadPoster">下载高清 PNG 展柜海报</button>
+  </div>
+  <p class="status-bar" id="posterStatus" role="status"></p>
+</dialog>
+
+<dialog id="copyDialog" aria-labelledby="copyTitle">
+  <div class="dialog-head">
+    <h3 id="copyTitle">复制小红书分享文案</h3>
+    <button id="closeCopy" type="button">关闭</button>
+  </div>
+  <p class="muted">长按或全选下方文案复制，搭配暗调展柜海报发笔记更容易引发围观晒馆藏。</p>
+  <textarea id="copyTextarea" class="copy-area" readonly></textarea>
+  <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
+</dialog>
+
+<script>
+const D = {"title":"如果把你放进博物馆，你是哪件「镇馆之宝」","subtitle":"CURATOR ARCHIVE · 灵魂馆藏图录","brand":"SOUL MUSEUM","vol":"HALL 03 · 镇馆之宝特展","heroTitle":"灵魂博物馆","heroSub":"IF YOU WERE A MUSEUM TREASURE","intro":"假如时光把你烧制成一件器物，陈列在聚光灯下的玻璃展柜里——你会是温润青瓷、带裂纹的盛唐铜镜，还是藏着冷笑话的机关木匣？走过四座展厅，点亮属于你的馆藏铭牌。","disclaimer":"所有文物意象、馆藏编号与策展评语均为原创虚构艺术设定，不对应真实历史文物，仅供娱乐探索。","kind":"镇馆之宝","axes":[["器物脾性","温润含蓄","锋芒刚烈"],["陈列气场","孤品独展","聚光主场"],["时间偏好","念旧沉淀","破格先锋"],["内里暗纹","冷面藏梗","炽热浪漫"]],"chapters":[{"title":"第一展厅 · 器物初见","intro":"隔着玻璃展柜，陌生人第一眼会被你身上的什么气场定住？"},{"title":"第二展厅 · 窑火与抗压","intro":"面对高温、磕碰与突发状况，你骨子里的质地开始显露。"},{"title":"第三展厅 · 暗纹与机关","intro":"只有凑近细看，才能读懂你藏在釉面之下的秘密与幽默。"},{"title":"第四展厅 · 千年共鸣","intro":"历经岁月流转，什么才值得被你永久留存、传给下一个时代？"}],"calcSteps":["正在核对你的馆藏年代与材质气场…","开启紫外灯光，扫描釉下暗纹与修复记录…","点亮主展柜射灯，镌刻你的专属铜牌…"],"teasers":["釉下刻冷笑话的天青梅瓶","带金缮裂纹的盛唐铜镜","藏满秘密的九连环机关木匣"],"shareTags":"#如果把你放进博物馆 #镇馆之宝测试 #博物馆人格测试 #东方美学测试","shareHook":"测完笑出声，原来我放进博物馆竟然是「{name}」🏛️","questions":[{"axis":0,"text":"如果遇到一件明明不合理、却没人敢第一个开口反对的事，你更倾向？","options":[{"text":"先温和观察局势，找个不伤和气的时机委婉化解","score":0},{"text":"心里有清晰底线，私下用柔软但坚定的方式表明立场","score":1},{"text":"礼貌但清楚地摆出事实，该争取的绝不轻易退让","score":2},{"text":"直接拍案挑明问题，宁可得罪人也不愿委屈原则","score":3}]},{"axis":1,"text":"周末去逛一座很大的美术馆或市集，你最享受哪种参观姿态？","options":[{"text":"挑冷门时段一个人慢慢逛，最好整间展厅只有我","score":0},{"text":"和一位懂彼此沉默的好友结伴，各自看展偶尔碰头","score":1},{"text":"和三五好友边逛边聊，在喜欢的展品前互相拍大片","score":2},{"text":"越是人气爆棚的特展越兴奋，享受和大家一起惊叹的热闹","score":3}]},{"axis":2,"text":"推开一扇神秘旧木门，里面有四件静静发光的物件，你最先伸手碰哪件？","options":[{"text":"一卷被摩挲得发亮、带着百年墨香的旧手札","score":0},{"text":"一只温润古朴、留着前人修补痕迹的瓷杯","score":1},{"text":"一件把古典纹样与现代奇思结合的跨界工艺品","score":2},{"text":"一台结构精巧、从未见过运作原理的未知机关仪","score":3}]},{"axis":3,"text":"当你特别喜欢一个朋友或一件事时，你的真实表达方式更像？","options":[{"text":"表面云淡风轻甚至爱开冷玩笑，其实心里早就偏爱到不行","score":0},{"text":"习惯用克制的小细节和冷幽默暗戳戳表达在意","score":1},{"text":"语气自然柔和，会在恰当的时候认真说出自己的喜欢","score":2},{"text":"眼里藏不住星光，夸奖和热情像烟花一样大方绽放","score":3}]},{"axis":0,"text":"别人无意间踩到了你的雷区或开了个不太好笑的玩笑，你会？","options":[{"text":"先微笑带过免得冷场，回家自己在心里记个小本本","score":0},{"text":"瞬间收起笑容变安静，用淡淡的降温气场让对方自己悟","score":1},{"text":"笑着但很明确地划清界限，告诉对方这个玩笑不好笑","score":2},{"text":"当场反手一个精准回怼，绝不把委屈留到下一秒","score":3}]},{"axis":1,"text":"假如你真的成了一件展品，你希望自己的展柜摆在博物馆哪里？","options":[{"text":"光线幽静的小侧厅，只有真正有缘的观众才会绕进来发现我","score":0},{"text":"主展厅转角处，不必最显眼，但停下来细看的人都会惊艳","score":1},{"text":"展厅视野开阔的显眼位置，大方迎接入场的所有目光","score":2},{"text":"正中央最高展台，四面聚光灯打满，进门第一眼就必须看见我","score":3}]},{"axis":2,"text":"面对一件已经用了很久、但稍微有点旧的随身物品，你通常会？","options":[{"text":"舍不得换，磨损的痕迹恰恰是它陪我走过岁月的勋章","score":0},{"text":"只要还能用就继续留着，顺手给它做点小修补","score":1},{"text":"保留旧物纪念，同时愉快入手设计更棒的新升级款","score":2},{"text":"立刻换新体验前沿设计，生活就该不断刷新版本","score":3}]},{"axis":3,"text":"深夜突然情绪涌上来，或者心里装着一个大秘密，你会怎么安放它？","options":[{"text":"默默把它酿成一句自嘲段子，笑完就当无事发生","score":0},{"text":"冷静拆解情绪来源，理智地给它贴好标签存进抽屉","score":1},{"text":"写进私密日记或听一首老歌，温柔允许自己难过一会儿","score":2},{"text":"彻底沉浸在这份浓烈感受里，甚至想拍张照片或找人痛快倾诉","score":3}]},{"axis":0,"text":"在团队合作里出现意见僵局，两边吵得不可开交，你通常扮演？","options":[{"text":"润物细无声的调和者，帮大家把情绪捋顺再找共识","score":0},{"text":"耐心倾听各方想法，轻轻抛出一个兼顾两头的折中解法","score":1},{"text":"直接打断无效拉扯，把核心利弊摊开请大家快速投票","score":2},{"text":"果断拍板定方向，扛起责任带大家立刻往前冲","score":3}]},{"axis":1,"text":"当你历尽辛苦完成了一件极其满意的作品或目标，你最想？","options":[{"text":"自己静静欣赏半小时，满足感留给自己一个人就够了","score":0},{"text":"只发给最懂行的两三个知己看看，听一句走心评价","score":1},{"text":"精心排版发个动态，和朋友们大方分享这份成就感","score":2},{"text":"拉上大家一起庆祝，把高光时刻过得热热闹闹","score":3}]},{"axis":2,"text":"选一门完全出于兴趣的周末手作课，下面哪项最让你心动？","options":[{"text":"古籍线装修复或传统金缮修瓷，感受老手艺的温度","score":0},{"text":"拉坯烧青瓷或植物拓染，慢慢打磨一件耐看器物","score":1},{"text":"国风元素融合现代首饰设计，玩出独一无二的新花样","score":2},{"text":"3D 打印发光装置或赛博机械微缩模型，越奇特越上头","score":3}]},{"axis":3,"text":"下面哪句形容词，最像你熟人私下里对你的真实评价？","options":[{"text":"表面高冷严肃，结果一张嘴全是冷笑话和神吐槽","score":0},{"text":"看着很冷静理智，其实内心藏着不少奇奇怪怪的小俏皮","score":1},{"text":"温柔细腻、情绪丰富，总能注意到别人忽略的美好瞬间","score":2},{"text":"热烈浪漫、爱憎分明，活得像一部高饱和度电影主角","score":3}]},{"axis":1,"text":"进入一个全新的环境或社群，你通常会花多久和大家混熟？","options":[{"text":"很久，我享受作为安静观察者的安全距离，不急着融入","score":0},{"text":"先默默锁定一两个同频的人，小范围熟起来就很舒服","score":1},{"text":"只要有共同话题很快就能打成一片，相处自然松弛","score":2},{"text":"第一天就能记住半屋子人的名字，顺便成了群聊活跃担当","score":3}]},{"axis":0,"text":"如果人生是一场烧制瓷器的窑火，你觉得自己承受压力的方式更像？","options":[{"text":"以柔克刚，遇到硬碰硬的压力会自动卸力，慢慢熬过去","score":0},{"text":"表面温和不动声色，其实内里韧性极强，轻易压不垮","score":1},{"text":"越有挑战越清醒，迅速把压力转化成清晰的反击清单","score":2},{"text":"遇强则强、绝不认怂，高温越猛烧出来的成色越锋利耀眼","score":3}]},{"axis":3,"text":"旅行中看到一场美到窒息的落日，你的第一反应是？","options":[{"text":"拍完照心里默默感叹“今天这渲染帧率不错”，顺手配个搞笑文案","score":0},{"text":"安静站着看很久，嘴上只淡淡说一句“今天天色挺好看”","score":1},{"text":"内心瞬间被温柔填满，认真记下此刻吹过的风和身边的人","score":2},{"text":"激动到立刻发给重要的人，恨不得把整片晚霞打包送给世界","score":3}]},{"axis":2,"text":"看一部历史剧或科幻片时，你最容易被什么元素吸引？","options":[{"text":"考究的服化道、古人风骨与绵长厚重的岁月情怀","score":0},{"text":"藏在日常细节里的东方美学与克制留白的叙事","score":1},{"text":"古典世界观里突然冒出反套路的现代脑洞与反转","score":2},{"text":"天马行空的未来设想、黑科技机关与颠覆常规的设定","score":3}]},{"axis":0,"text":"挑一件代表你性格的古代护身小物，你会把哪件带在身上？","options":[{"text":"一块被摩挲得温润柔和的羊脂玉佩","score":0},{"text":"一把折扇，合上是文雅君子，展开可挡风雨","score":1},{"text":"一枚分量扎实、纹理凌厉的青铜印章","score":2},{"text":"一柄寒光凛冽、出鞘必见分晓的短剑","score":3}]},{"axis":1,"text":"聚餐时有人提议大家轮流分享一件最近的趣事，轮到你时你会？","options":[{"text":"微微一笑快速三句话带过，赶紧把麦克风递给下一位","score":0},{"text":"挑一件简短但有点回味的小事讲完，点到为止","score":1},{"text":"绘声绘色把细节讲生动，逗得大家一起哈哈大笑","score":2},{"text":"直接开启单口专场，连表情带动作把气氛推到最高潮","score":3}]},{"axis":3,"text":"如果要在你的器物底部刻一行「只有你自己懂的落款」，你会刻？","options":[{"text":"一句自带冷幽默的吐槽（比如“别看了，我也没想明白”）","score":0},{"text":"一个只有极少数知己能破译的暗语或日期","score":1},{"text":"一句温柔治愈自己的诗行，留作漫长岁月的慰藉","score":2},{"text":"一句滚烫炽热的宣言，证明自己曾热烈爱过这人间","score":3}]},{"axis":2,"text":"假如你能拥有一间私人收藏室，里面最可能摆满？","options":[{"text":"旧电影票根、绝版书、老唱片和充满回忆的旧物","score":0},{"text":"来自不同城市的特色手作、茶具与自然石头","score":1},{"text":"设计奇巧的盲盒手办、跨界联名与先锋艺术画册","score":2},{"text":"稀奇古怪的新奇发明、科技玩意和脑洞大开的灵感草图","score":3}]},{"axis":1,"text":"关于「被别人彻底读懂」这件事，你的真实感受更接近？","options":[{"text":"不强求被所有人理解，保留一点神秘感反而更自在","score":0},{"text":"有一两个真正懂我的灵魂知音，就胜过千人喝彩","score":1},{"text":"很开心能和志同道合的一群人互相欣赏、彼此照亮","score":2},{"text":"我喜欢大方展现自己的光芒，也乐于成为人群里的灯塔","score":3}]},{"axis":0,"text":"做完一个重大决定后，万一旁人纷纷提出质疑，你的反应是？","options":[{"text":"会耐心听完大家的好意提醒，温和地再次权衡调整","score":0},{"text":"嘴上客气说“我会考虑”，心里其实依然稳稳按自己步调走","score":1},{"text":"礼貌但有条理地列出理由，用逻辑说服质疑的声音","score":2},{"text":"越被质疑越燃，直接用实打实的结果让全场闭嘴惊艳","score":3}]},{"axis":2,"text":"一千年后，考古学家挖出你的「个人时间胶囊」，你最希望里面有什么？","options":[{"text":"一封手写长信，记录某个普通午后的阳光和微风","score":0},{"text":"一本写满人生感悟、美食地图和朋友合照的厚手账","score":1},{"text":"一份把古老智慧和当下奇思揉在一起的趣味指南","score":2},{"text":"一个我亲手设计的超前概念作品，让未来人惊叹“太酷了”","score":3}]},{"axis":3,"text":"闭馆前最后一束射灯打在你身上，你希望观众离开展厅前对你留下什么印象？","options":[{"text":"“天哪，这件文物外表这么高冷，底款居然这么搞笑！”","score":0},{"text":"“越琢磨越有味道，表面克制，内里全是巧思。”","score":1},{"text":"“看着它心里突然安静下来，好像被温柔抱了一下。”","score":2},{"text":"“太耀眼了！隔着玻璃都能感受到穿越千年的炽热生命力！”","score":3}]}],"profiles":[{"no":"01","acc":"HALL A-01 · 宋瓷静室","name":"釉下刻冷笑话的天青梅瓶","era":"宋韵烟雨 · 清雅暗梗","shape":"vase","color1":"#8bb8ae","color2":"#d7e8e3","glow":"#79b3a7","vector":[0.2,0.2,0.2,0.2],"tags":["清冷颜控","冷幽默王者","安静耐品"],"quote":"远看是高岭之花天青瓷，凑近才发现釉下藏着两行冷笑话。","insight":"你是博物馆里最让策展人会心一笑的孤品。外人远远望去，只觉得你清雅温润、分寸感极佳、自带“请勿喧哗”的高级气场；只有真正俯下身细看的人，才会发现你骨子里藏着极高明的冷幽默与人间清醒。","repair":"【修复记录】瓶肩曾有一道极细的开片冰裂纹——并非脆弱，而是你在深夜独自消化完委屈后，悄悄给自己烧出的高级纹路。","notice":"参观须知：请保持一米安静距离；禁止强行搭讪，但欢迎用高级冷笑话隔空破冰。","strength":"情绪极其稳定，既能守住独处秩序，又自带清冷高级审美","caution":"偶尔也可以把心里的梗大方说出来，不必只留给显微镜观众","match":["被摸到发亮的温润羊脂玉璧","同属静室清雅派，摆在隔壁展柜连沉默都是顶配宋代美学。"],"clash":["越敲越响的盛唐鎏金编钟","你刚进入静心冥想，隔壁展柜已经在敲锣打鼓开大唐派对。"]},{"no":"02","acc":"HALL A-02 · 玉器珍藏阁","name":"被摸到发亮的温润羊脂玉璧","era":"温润古玉 · 岁月留温","shape":"jade","color1":"#e5dec9","color2":"#b7c9b8","glow":"#ded4b8","vector":[0.2,0.2,0.2,2.8],"tags":["温柔长情","治愈系孤品","细腻共情"],"quote":"历经千年风霜依然温润，是留给懂珍惜之人的满怀柔光。","insight":"你就像一块被岁月温柔摩挲过的羊脂古玉——不靠尖锐棱角抢戏，却拥有让人一眼就心安的恒温质感。你念旧、深情、感受力极强，在喧嚣世界里固执地守着一片干净柔软的精神净土。","repair":"【修复记录】边缘保留着几处早年留下的柔和沁色，那是你曾用心爱过、认真哭过、却依然选择保持善良的珍贵证据。","notice":"参观须知：建议放慢脚步细细凝视；严禁大声喧哗或粗暴拍打玻璃。","strength":"润物细无声的治愈磁场与长情底色，是亲密关系里的无价之宝","caution":"太柔软容易被贪心的人反复索取，记得给自己的玻璃罩加厚一层","match":["釉下刻冷笑话的天青梅瓶","一温一清、彼此懂得留白，共同撑起整座博物馆最治愈的角落。"],"clash":["刻满战术暗语的战国青铜短剑","你讲温柔与情怀，对方讲效率和锋芒，同框反差拉满。"]},{"no":"03","acc":"HALL B-03 · 奇巧工艺厅","name":"藏满秘密的九连环机关木匣","era":"墨家巧思 · 暗藏乾坤","shape":"box","color1":"#b38354","color2":"#e2c38f","glow":"#c4945e","vector":[0.2,0.2,2.8,0.2],"tags":["脑洞机关师","低调极客","反差萌"],"quote":"表面只是一只平平无奇的木盒，拨动第三颗铆钉才会弹出新世界。","insight":"你是博物馆里最让考古学者抓耳挠腮的奇珍！外表温和平静、绝不张扬，脑子里却装着一整套精密运转的奇思妙想和冷门知识库。你不爱走寻常路，总能用温和却出人意料的解法惊艳众人。","repair":"【修复记录】内部第三层暗格至今无人完全破解——因为你自己也常把突然冒出来的绝妙脑洞藏得太深，偶尔连自己都忘在哪个抽屉里。","notice":"参观须知：严禁暴力拆解，请用足够有趣的奇思妙想作为解锁密码。","strength":"独一无二的跨界创造力与冷静思考力，越了解越让人上头","caution":"别把所有精彩点子都锁在暗格里，偶尔打开展示给世界看看","match":["会自己画星图的黄铜浑天仪","两大脑洞奇才双向奔赴，凑一起能连夜发明出新物种。"],"clash":["写满人间烟火的清明市井长卷","你沉迷拆解精密暗格，对方拉着你去街头看杂耍吃糖葫芦。"]},{"no":"04","acc":"HALL B-04 · 光影琉璃厅","name":"会折射彩虹的西域幻彩琉璃盏","era":"丝路梦境 · 流动微光","shape":"cup","color1":"#b096d6","color2":"#f0c8a8","glow":"#b596db","vector":[0.2,0.2,2.8,2.8],"tags":["奇幻审美控","浪漫独行者","内心万花筒"],"quote":"不必站在太阳正中央，给我一缕微光，我就能折出整片银河。","insight":"你是博物馆里最具梦幻色彩的私藏珍品。外表安静温柔、自带一丝疏离感，内心却住着一座色彩斑斓的浪漫万花筒。你对先锋美学、奇幻想象和细腻情感有着天然敏锐度，绝不被世俗模板框住。","repair":"【修复记录】盏壁有一缕手工吹制时留下的微气泡——不是瑕疵，那是你在梦境和现实之间悄悄留下的呼吸口。","notice":"参观须知：建议开启手机柔光模式观赏；切勿用无趣的世俗标准对其估价。","strength":"顶级的审美感受力与独特气质，能把平凡瞬间变成艺术画面","caution":"偶尔也从梦幻琉璃光里走出来，踩踩坚实的现实地面会更有底气","match":["盛满星河颜料的敦煌飞天漆盒","同样是色彩与浪漫的信徒，同厅展出直接美到让人失语。"],"clash":["镇压全场的商周饕餮青铜鼎","你轻盈通透爱做梦，对方厚重威严讲规矩，气场差了十万八千里。"]},{"no":"05","acc":"HALL C-05 · 市井风华厅","name":"写满人间烟火的清明市井长卷","era":"汴京烟火 · 鲜活百态","shape":"scroll","color1":"#c9a86a","color2":"#8fb59a","glow":"#d4b475","vector":[0.2,2.8,0.2,0.2],"tags":["烟火观察家","自带笑点","极好相处"],"quote":"卷轴展开三米，全是热气腾腾的好吃小摊和让人笑出声的人间百态。","insight":"你是博物馆里人气最高、最让人舍不得挪步的国民级展品！你温和松弛、接地气又极有梗，眼里装得下柴米油盐的鲜活细节，也接得住朋友聚会时的欢声笑语，走到哪都能把气氛变得舒服明亮。","repair":"【修复记录】卷尾边缘略微卷起，是历代观众凑得太近、一边指指点点一边笑出声留下的“超高人气认证”。","notice":"参观须知：本展品极易引发围观讨论，建议携带一位爱吃又爱聊的搭子同行。","strength":"极佳的人缘与生活感知力，能把最普通的日常讲得活色生香","caution":"照顾大家开心时，别忘了给自己留一段完全安静发呆的留白时间","match":["一碰就讲段子的鎏金戏台八音盒","一个负责铺开热闹画卷，一个负责配音整活，整间展厅笑声不断。"],"clash":["藏满秘密的九连环机关木匣","你恨不得把卷轴摊开请全城来看，对方把心思藏进了九道锁里。"]},{"no":"06","acc":"HALL C-06 · 盛世诗画厅","name":"蘸着月光写成的盛唐狂草诗卷","era":"长安明月 · 浪漫深情","shape":"scroll","color1":"#d99b66","color2":"#f2d6a7","glow":"#e0a570","vector":[0.2,2.8,0.2,2.8],"tags":["情绪饱满","浪漫暖阳","重情重义"],"quote":"人生得意须尽欢，连落款处的墨渍都是滚烫的真心。","insight":"你是整座博物馆里最有温度、最能把观众看红眼眶的传世名作！你既有怀旧深情的文艺底色，又从不吝啬把爱、感动与热忱大方洒向人间。和你相处，连阴雨天都会多出一层温柔滤镜。","repair":"【修复记录】第三段诗句旁留有一滴淡淡的酒渍与泪痕——策展人鉴定后批注：“无需清洗，那是灵魂最动人的原装高光。”","notice":"参观须知：容易触发情感共鸣，请自备纸巾，看完记得给想念的人发条消息。","strength":"极强的情感号召力与赤诚温柔，总能让人记住生命中最美好的片段","caution":"真心太炽热时容易受伤，学会把深情留给同样愿意接住你的人","match":["永远对准远方的鎏金航海罗盘","一个负责写下动人诗篇，一个负责带你奔赴山海，绝美灵魂伴侣。"],"clash":["只映真话的冰裂纹玄铁古镜","你沉浸在月光诗意里感怀，对方一秒把滤镜关掉开始讲大实话。"]},{"no":"07","acc":"HALL C-07 · 奇趣博物厅","name":"一碰就讲段子的鎏金戏台八音盒","era":"广作奇巧 · 摩登鲜活","shape":"box","color1":"#e0b45c","color2":"#74b5b0","glow":"#e3ba68","vector":[0.2,2.8,2.8,0.2],"tags":["快乐制造机","脑洞清奇","时髦玩咖"],"quote":"别人进博物馆屏住呼吸，只有我的展柜前天天传出憋不住的笑声。","insight":"你是博物馆里最反套路的宝藏明星！你既有温和好相处的亲和力，又永远对新奇事物和抽象幽默保持满格好奇。你讨厌沉闷说教，总能用灵光一闪的创意把无聊规则变成好玩的游戏。","repair":"【修复记录】发条齿轮曾因连续讲了三小时笑话轻微卡顿，经检测只需投喂一杯冰奶茶和一场新奇展览即可满血复活。","notice":"参观须知：小心被其幽默气场传染；严禁板着脸在展柜前念经。","strength":"超高社交松弛感与先锋幽默感，天生自带让人快乐的磁场","caution":"好玩的新点子层出不穷，挑一件最喜欢的坚持做完会超级出彩","match":["写满人间烟火的清明市井长卷","快乐双核联动，同展即爆款，排队长度直接绕博物馆三圈。"],"clash":["刻满战术暗语的战国青铜短剑","你在展柜里循环播放开心神曲，隔壁短剑正严肃准备出征。"]},{"no":"08","acc":"HALL C-08 · 敦煌幻色厅","name":"盛满星河颜料的敦煌飞天漆盒","era":"大漠霓裳 · 炽烈绝美","shape":"cup","color1":"#e38c6e","color2":"#6da7c9","glow":"#e69478","vector":[0.2,2.8,2.8,2.8],"tags":["明媚氛围王","高饱和浪漫","审美顶流"],"quote":"千年过去，我盒中的青金石与朱砂，依然鲜艳得像昨天刚落笔。","insight":"你是那种走到哪里都能瞬间拉高环境颜值的天生发光体！你热爱美、热爱新鲜体验、也热爱把这份炽热的生命力大方分享给世界。温和不带攻击性，却明艳舒展得让人完全移不开眼。","repair":"【修复记录】盒盖边缘沾着一点从未擦净的星砂金粉——因为你总忍不住把平凡日子也点缀出闪闪发光的仪式感。","notice":"参观须知：拍照极度出片，建议站在 45 度角合影沾沾明媚好运。","strength":"极具感染力的审美直觉与热情活力，自带吸引美好事物的磁场","caution":"不必时刻保持完美灿烂，偶尔素颜休息片刻依然迷人","match":["会折射彩虹的西域幻彩琉璃盏","一个明艳外放，一个幽微通透，双绝审美堪称全馆颜值巅峰。"],"clash":["釉下刻冷笑话的天青梅瓶","你像盛装起舞的敦煌飞天，对方像静坐喝茶的宋代冷面诗人。"]},{"no":"09","acc":"HALL D-09 · 玄铁冷光厅","name":"只映真话的冰裂纹玄铁古镜","era":"魏晋风骨 · 犀利通透","shape":"mirror","color1":"#7e95a8","color2":"#cfd9e2","glow":"#8da4b8","vector":[2.8,0.2,0.2,0.2],"tags":["人间清醒镜","外冷内硬","一针见血"],"quote":"虚伪和画饼照过来会自动马赛克，我只负责映出最干净的真相。","insight":"你是博物馆里气场最冷静锋利的稀世孤品。你拒绝一切无意义的客套和滤镜，看人看事极其毒辣精准。你不喜欢凑热闹，但在少数真正认可的朋友眼里，你的一句大实话胜过一百句廉价安慰。","repair":"【修复记录】镜背铸有几道凌厉的冰裂暗纹，那是你在无数次“算了不争了”与“不行这事得讲理”之间炼出的钢铁原则。","notice":"参观须知：玻璃心观众请谨慎对视；接受真诚提问，拒绝虚伪寒暄。","strength":"极强的洞察力、抗洗脑能力与独立风骨，绝不随波逐流","caution":"真相很锋利，对在乎的人说出大实话时，顺手裹一层薄绒会更动人","match":["刻满战术暗语的战国青铜短剑","同样清醒果断、不废话不内耗，堪称高智商孤品联盟。"],"clash":["蘸着月光写成的盛唐狂草诗卷","你冷静拆解现实逻辑，对方正对着月亮感叹人生如梦。"]},{"no":"10","acc":"HALL D-10 · 盛唐金缮厅","name":"带金缮裂纹的盛唐铜镜","era":"大唐遗韵 · 破碎重生","shape":"mirror","color1":"#d6a45c","color2":"#995c48","glow":"#deb06b","vector":[2.8,0.2,0.2,2.8],"tags":["外刚内柔","宿命故事感","金缮美学"],"quote":"裂纹从来不是我的耻辱，我用真金把它修成了最耀眼的勋章。","insight":"你身上有种极其动人的“强悍又深情”的史诗质感。面对风浪你从不低头退缩，骨子里极其硬核有原则；但只有最亲近的人知道，你强悍的外壳下藏着一颗极其滚烫、重情重义、甚至有点容易心软的心。","repair":"【修复记录】镜面一道贯穿岁月的裂痕被工匠用纯金细细填平——你经历过的所有磕碰，最终都成了你最迷人的底气。","notice":"参观须知：严禁小看其温柔底色，也禁止触碰其保护珍视之人的逆鳞。","strength":"超强的心理韧性与深沉爱意，越经打磨越散发出惊人光芒","caution":"不必总靠自己硬扛所有风雨，允许可靠的人分担一点重量","match":["烈火烧出的霁红釉暗纹将军罐","一刚一烈、彼此懂得伤痕与荣光的分量，顶级宿命感组合。"],"clash":["一碰就讲段子的鎏金戏台八音盒","你浑身散发史诗电影感，对方一靠近就开始放喜剧BGM。"]},{"no":"11","acc":"HALL D-11 · 兵法谋略厅","name":"刻满战术暗语的战国青铜短剑","era":"列国锋芒 · 破局利刃","shape":"ding","color1":"#669c8e","color2":"#d4b777","glow":"#6da898","vector":[2.8,0.2,2.8,0.2],"tags":["硬核破局者","先锋策略家","静音狠人"],"quote":"不出鞘则已，一旦亮剑，三步之内必见胜负。","insight":"你是博物馆里最让对手忌惮、让队友安心的硬核神兵。你讨厌低效内耗和陈旧套路，习惯独自在安静中推演全局、打破常规。平时低调收锋，真遇到硬骨头时出手极其干脆利落。","repair":"【修复记录】剑格处刻着几行工匠偷懒时留下的极小冷幽默暗码——证明再锋利的狠人，私底下也有极其松弛可爱的一面。","notice":"参观须知：请勿在展柜前画大饼或拖延时间，可能触发激光防御模式。","strength":"惊人的破局执行力、创新思维与冷静定力，专治各种疑难杂症","caution":"锋芒收放自如才是最高境界，休闲时光记得把自己调回居家模式","match":["只映真话的冰裂纹玄铁古镜","一个看穿局势，一个一剑破局，冷静实干派的梦幻联动。"],"clash":["被摸到发亮的温润羊脂玉璧","你讲速度与突破，对方讲温润与慢品，节奏天然错拍。"]},{"no":"12","acc":"HALL D-12 · 观星天机厅","name":"会自己画星图的黄铜浑天仪","era":"观星造梦 · 孤勇先锋","shape":"astrolabe","color1":"#d9b36c","color2":"#7c94d4","glow":"#cfa961","vector":[2.8,0.2,2.8,2.8],"tags":["硬核理想主义","孤独造梦师","先锋浪漫"],"quote":"当世人都在低头看路时，我宁愿独自校准属于自己的星轨。","insight":"你是罕见的“硬核浪漫理想主义者”。你不随波逐流，也不愿为了合群降低标准；你的大脑里同时装着冰冷精密的逻辑齿轮和炽热滚烫的星辰大海，一旦认准方向，哪怕独行也会死磕到底。","repair":"【修复记录】黄铜环轴略有高温灼痕，那是你在无数个深夜为热爱之物全速运转留下的专属浪漫印记。","notice":"参观须知：严禁对其说出“大家都这样，别折腾了”，否则当场开启逆向自转。","strength":"兼具先锋创造力与坚定意志，是能把疯狂想象拉进现实的稀缺灵魂","caution":"仰望星空和死磕理想很酷，也记得偶尔停下来抱抱疲惫的自己","match":["藏满秘密的九连环机关木匣","同样痴迷结构与未知世界的极客灵魂，聊天直接聊到外太空。"],"clash":["写满人间烟火的清明市井长卷","你在推导百年星轨，对方拉着你讨论今天晚饭吃甜咸豆腐脑。"]},{"no":"13","acc":"HALL E-13 · 国之重器厅","name":"镇压全场的商周饕餮青铜鼎","era":"钟鸣鼎食 · 定海神针","shape":"ding","color1":"#5b8c7c","color2":"#cfa763","glow":"#649c8a","vector":[2.8,2.8,0.2,0.2],"tags":["定海神针","天然主心骨","反差冷幽默"],"quote":"天塌下来有我顶着，顺便还能腾出一只手给大家煮壶茶。","insight":"你是整座博物馆里分量最重、最让人踏实的绝对主力！不管场面多混乱，只要你在场，大家心里瞬间就有底了。你行事稳健、讲原则、重担当，而且越熟越会发现你严肃外表下藏着极其通透的冷幽默。","repair":"【修复记录】鼎耳处有一处微小的磕碰痕，是多年来默默替身边所有人扛事兜底留下的荣誉徽章。","notice":"参观须知：靠近可自动获得 +100 安全感；严禁把所有杂事都丢进鼎里让它一个人炖。","strength":"无与伦比的扛事能力、全局视野与强大公信力，天生团队领袖","caution":"你不是真的青铜做的，累的时候完全可以大方喊队友一起搭把手","match":["越敲越响的盛唐鎏金编钟","一稳一燃、气场全开，堪称博物馆大厅里最震撼的王者双展柜。"],"clash":["会折射彩虹的西域幻彩琉璃盏","你讲究稳重厚实经得起考验，对方讲究轻盈梦幻随风摇曳。"]},{"no":"14","acc":"HALL E-14 · 朱红大殿厅","name":"烈火烧出的霁红釉暗纹将军罐","era":"窑变炽红 · 赤诚烈马","shape":"vase","color1":"#c4493b","color2":"#f0c886","glow":"#d45546","vector":[2.8,2.8,0.2,2.8],"tags":["炽热大女主/主","爱憎分明","千窑难得"],"quote":"千窑方得一抹绝世霁红，我的热烈从来不怕高温淬炼。","insight":"你是博物馆里一眼就能燃爆全场的炽烈孤品！你骨子里流淌着侠气、深情与绝不妥协的生命力，对认可的人和热爱的事倾注满格真心，敢爱敢恨、光明磊落，活得极其痛快耀眼。","repair":"【修复记录】釉面在 1300 度窑火里天然形成了独一无二的流光暗纹——别人怕火，你偏偏越烧越惊艳。","notice":"参观须知：自带高温气场，冷场体质者靠近 3 秒即可自动回暖。","strength":"滚烫赤诚的人格魅力与极强感染力，走到哪里都是人群的灵魂火焰","caution":"真心最怕遇上敷衍，把滚烫的热忱留给同样接得住你分量的同行者","match":["带金缮裂纹的盛唐铜镜","双强碰撞、赤诚共鸣，既有并肩扛事的底气，也有读懂彼此的深情。"],"clash":["釉下刻冷笑话的天青梅瓶","你像 1300 度烈焰红瓷，对方像细雨微凉天青瓷，冷热极致对撞。"]},{"no":"15","acc":"HALL E-15 · 远航奇珍厅","name":"永远对准远方的鎏金航海罗盘","era":"星海开拓 · 无畏玩家","shape":"astrolabe","color1":"#5d96c4","color2":"#e6c373","glow":"#6aa4d4","vector":[2.8,2.8,2.8,0.2],"tags":["破冰开拓者","清醒冒险家","带飞全队"],"quote":"旧地图找不到新大陆，把指针交给我，现在就出发。","insight":"你是博物馆里唯一一件“看起来随时准备打破玻璃去环游世界”的奇珍！你兼具先锋探索欲、果断行动力与超强号召力，从不被陈规困住，遇到新鲜未知的领域反而两眼放光，总能带着大家闯出新航道。","repair":"【修复记录】表盘边缘沾着几粒未知海域的细沙与笑谈刻痕——对你来说，走过的弯路全都是以后吹牛的绝佳素材。","notice":"参观须知：禁止用“太冒险了”“还是稳妥点吧”将其关在原地。","strength":"超强开拓魄力、清醒幽默感与团队动员力，自带主角开图 buff","caution":"全速启航之前，顺手检查一下补给箱和休息日历会让你飞得更远","match":["蘸着月光写成的盛唐狂草诗卷","你负责破浪开路，对方负责把沿途风景酿成最美的浪漫回忆。"],"clash":["被摸到发亮的温润羊脂玉璧","你总想连夜扬帆去未知海域，对方只想在安静老宅里慢慢喝茶。"]},{"no":"16","acc":"HALL E-16 · 盛世正殿厅","name":"越敲越响的盛唐鎏金编钟","era":"万国来朝 · 耀世华彩","shape":"cup","color1":"#e6bd63","color2":"#d96b52","glow":"#ebb852","vector":[2.8,2.8,2.8,2.8],"tags":["全场焦点","高能传奇","自带交响乐"],"quote":"既然来到了聚光灯下，就要敲出响彻千年的盛世华章！","insight":"你是整座博物馆当之无愧的 C 位大明星！你把锋芒、热情、创造力与舞台掌控力拉到了满格——不惧怕任何质疑，反而越被注视越能绽放出惊人能量。有你在的地方，空气都在发光发亮。","repair":"【修复记录】正中主钟表面留有无数次热烈共鸣后的闪亮包浆——你从来不是易碎品，而是越历经大场面越震撼人心的绝世重器。","notice":"参观须知：自带立体环绕高光气场；严禁冷落，请给予足够热烈的掌声。","strength":"核级个人魅力、破格创新力与满格行动力，天生就是造梦与领跑者","caution":"大场面演奏完后，闭馆时间记得给自己按下静音休眠键好好充能","match":["镇压全场的商周饕餮青铜鼎","一个奏响盛世先锋乐章，一个稳稳托住江山格局，全馆最强王炸。"],"clash":["釉下刻冷笑话的天青梅瓶","你是盛唐万国大典的鎏金礼乐，对方是江南独坐听雨的宋代静瓷。"]}]};
+const app = document.getElementById('app'),
+      posterDialog = document.getElementById('posterDialog'),
+      copyDialog = document.getElementById('copyDialog');
+const N = D.questions.length, STORAGE = 'soul-museum-v1';
+let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const byName = Object.fromEntries(D.profiles.map(p => [p.name, p]));
+
+const HERO_ART = `<svg viewBox="0 0 640 260" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#191d24"/><stop offset="1" stop-color="#0e1014"/></linearGradient>
+    <radialGradient id="spot" cx="72%" cy="10%" r="72%"><stop stop-color="#e5c486" stop-opacity=".35"/><stop offset="1" stop-color="#e5c486" stop-opacity="0"/></radialGradient>
+    <linearGradient id="celadon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8d1c7"/><stop offset="1" stop-color="#537c73"/></linearGradient>
+  </defs>
+  <rect width="640" height="260" fill="url(#wall)"/>
+  <polygon points="415,0 515,0 605,240 325,240" fill="url(#spot)"/>
+  <!-- Architectural arches -->
+  <g stroke="#d5b374" stroke-opacity=".20" fill="none" stroke-width="1.2">
+    <path d="M350 245 V110 A115 115 0 0 1 580 110 V245"/>
+    <path d="M372 245 V116 A93 93 0 0 1 558 116 V245"/>
+    <line x1="0" y1="224" x2="640" y2="224"/>
+  </g>
+  <!-- Illuminated Glass Case + Meiping Vase -->
+  <g transform="translate(418,46)">
+    <rect x="6" y="0" width="88" height="150" rx="6" fill="rgba(255,255,255,.04)" stroke="#d5b374" stroke-opacity=".42" stroke-width="1.2"/>
+    <path d="M40 26 H60 L57 38 C76 46 80 72 72 102 L64 134 H36 L28 102 C20 72 24 46 43 38 Z" fill="url(#celadon)" stroke="#e6f3ef" stroke-opacity=".55" stroke-width="1"/>
+    <path d="M36 52 Q50 58 64 52" stroke="#e6f3ef" stroke-opacity=".4" fill="none" stroke-width="1"/>
+    <path d="M44 74 L52 88 L46 102" stroke="#e5c486" stroke-width="1.2" fill="none" opacity=".85"/>
+    <rect x="0" y="150" width="100" height="28" rx="3" fill="#20252e" stroke="#d5b374" stroke-opacity=".5"/>
+    <rect x="24" y="158" width="52" height="12" rx="2" fill="#d5b374" opacity=".88"/>
+  </g>
+  <g fill="#ebd19d" opacity=".6">
+    <circle cx="348" cy="54" r="1.8"/><circle cx="578" cy="64" r="2"/><circle cx="388" cy="144" r="1.4"/>
+  </g>
+</svg>`;
+
+function artifactSVG(p){
+  const c1 = p.color1, c2 = p.color2, uid = 'ag_' + p.no;
+  let body = '';
+  if(p.shape === 'vase'){
+    body = `
+      <ellipse cx="100" cy="176" rx="46" ry="8" fill="#000" opacity=".45"/>
+      <path d="M84 30 H116 L112 46 C144 58 152 94 138 134 L124 174 H76 L62 134 C48 94 56 58 88 46 Z" fill="url(#${uid})" stroke="${c2}" stroke-width="1.8"/>
+      <ellipse cx="100" cy="30" rx="16" ry="4" fill="${c2}" opacity=".85"/>
+      <path d="M68 78 Q100 90 132 78 M72 132 Q100 140 128 132" stroke="${c2}" stroke-opacity=".45" fill="none" stroke-width="1.4"/>
+      <path d="M88 64 L106 86 L94 112 L110 138" stroke="#f0d394" stroke-width="1.5" fill="none" opacity=".8"/>
+      <path d="M74 62 Q66 96 76 130" stroke="#fff" stroke-opacity=".32" stroke-width="4" stroke-linecap="round" fill="none"/>`;
+  } else if(p.shape === 'jade'){
+    body = `
+      <ellipse cx="100" cy="176" rx="46" ry="8" fill="#000" opacity=".45"/>
+      <circle cx="100" cy="100" r="64" fill="url(#${uid})" stroke="${c2}" stroke-width="2.2"/>
+      <circle cx="100" cy="100" r="48" fill="none" stroke="${c2}" stroke-opacity=".5" stroke-width="1.2" stroke-dasharray="6 5"/>
+      <circle cx="100" cy="100" r="22" fill="#13161c" stroke="${c2}" stroke-width="2"/>
+      <path d="M100 22 V36 M100 164 V174" stroke="#d5b374" stroke-width="2.2"/>
+      <circle cx="100" cy="18" r="5" fill="#d5b374"/>
+      <path d="M60 72 A52 52 0 0 1 124 54" stroke="#fff" stroke-opacity=".35" stroke-width="4" stroke-linecap="round" fill="none"/>`;
+  } else if(p.shape === 'box'){
+    body = `
+      <ellipse cx="100" cy="174" rx="64" ry="9" fill="#000" opacity=".45"/>
+      <rect x="34" y="64" width="132" height="104" rx="10" fill="url(#${uid})" stroke="${c2}" stroke-width="2"/>
+      <path d="M34 98 H166" stroke="#181b20" stroke-width="3"/>
+      <path d="M34 95 H166" stroke="${c2}" stroke-width="1.4" opacity=".8"/>
+      <rect x="46" y="74" width="108" height="84" rx="4" fill="none" stroke="${c2}" stroke-opacity=".42" stroke-width="1.2"/>
+      <circle cx="100" cy="98" r="14" fill="#d5b374" stroke="#181b20" stroke-width="2"/>
+      <circle cx="100" cy="98" r="5" fill="#181b20"/>
+      <path d="M44 64 L54 50 H146 L156 64 Z" fill="${c1}" stroke="${c2}" stroke-width="1.6"/>
+      <circle cx="52" cy="78" r="3" fill="${c2}"/><circle cx="148" cy="78" r="3" fill="${c2}"/><circle cx="52" cy="154" r="3" fill="${c2}"/><circle cx="148" cy="154" r="3" fill="${c2}"/>`;
+  } else if(p.shape === 'cup'){
+    body = `
+      <ellipse cx="100" cy="176" rx="44" ry="8" fill="#000" opacity=".45"/>
+      <path d="M48 48 H152 L138 112 Q132 134 100 134 Q68 134 62 112 Z" fill="url(#${uid})" stroke="${c2}" stroke-width="2"/>
+      <ellipse cx="100" cy="48" rx="52" ry="9" fill="${c2}" opacity=".55" stroke="${c2}" stroke-width="1.5"/>
+      <path d="M90 134 H110 L114 166 H86 Z" fill="${c2}" opacity=".9"/>
+      <ellipse cx="100" cy="168" rx="34" ry="8" fill="${c1}" stroke="${c2}" stroke-width="1.8"/>
+      <path d="M62 72 Q100 84 138 72 M68 98 Q100 108 132 98" stroke="#fff" stroke-opacity=".35" fill="none" stroke-width="1.4"/>
+      <path d="M64 60 L72 114" stroke="#fff" stroke-opacity=".4" stroke-width="4" stroke-linecap="round"/>`;
+  } else if(p.shape === 'scroll'){
+    body = `
+      <ellipse cx="100" cy="174" rx="68" ry="8" fill="#000" opacity=".45"/>
+      <rect x="44" y="42" width="112" height="122" rx="4" fill="url(#${uid})" stroke="${c2}" stroke-width="1.8"/>
+      <rect x="30" y="34" width="16" height="138" rx="6" fill="#2d2621" stroke="#d5b374" stroke-width="1.8"/>
+      <rect x="154" y="34" width="16" height="138" rx="6" fill="#2d2621" stroke="#d5b374" stroke-width="1.8"/>
+      <g stroke="#241c17" stroke-opacity=".55" stroke-width="2" stroke-linecap="round">
+        <line x1="132" y1="62" x2="132" y2="140"/><line x1="116" y1="62" x2="116" y2="134"/>
+        <line x1="100" y1="62" x2="100" y2="144"/><line x1="84" y1="62" x2="84" y2="122"/>
+      </g>
+      <rect x="60" y="124" width="16" height="16" rx="2" fill="#c9493b" opacity=".9"/>`;
+  } else if(p.shape === 'mirror'){
+    body = `
+      <ellipse cx="100" cy="176" rx="48" ry="8" fill="#000" opacity=".45"/>
+      <circle cx="100" cy="98" r="66" fill="url(#${uid})" stroke="${c2}" stroke-width="2.4"/>
+      <circle cx="100" cy="98" r="54" fill="none" stroke="#181b20" stroke-opacity=".45" stroke-width="2"/>
+      <circle cx="100" cy="98" r="42" fill="none" stroke="${c2}" stroke-opacity=".7" stroke-width="1.4" stroke-dasharray="4 4"/>
+      <circle cx="100" cy="98" r="14" fill="${c2}" stroke="#181b20" stroke-width="1.8"/>
+      <path d="M58 62 L88 86 L78 112 L116 126 L138 144" stroke="#f5d58c" stroke-width="2.2" fill="none"/>
+      <path d="M62 56 A54 54 0 0 1 134 52" stroke="#fff" stroke-opacity=".32" stroke-width="3.5" stroke-linecap="round" fill="none"/>`;
+  } else if(p.shape === 'ding'){
+    body = `
+      <ellipse cx="100" cy="176" rx="54" ry="8" fill="#000" opacity=".45"/>
+      <!-- Handles -->
+      <path d="M54 68 V42 Q54 32 66 32 Q76 32 76 42 V62" fill="none" stroke="${c2}" stroke-width="5"/>
+      <path d="M124 62 V42 Q124 32 134 32 Q146 32 146 42 V68" fill="none" stroke="${c2}" stroke-width="5"/>
+      <!-- Legs -->
+      <path d="M64 132 L58 172 H72 L78 134 Z M136 132 L142 172 H128 L122 134 Z M94 138 L92 168 H108 L106 138 Z" fill="${c1}" stroke="${c2}" stroke-width="1.5"/>
+      <!-- Vessel body -->
+      <path d="M44 64 H156 V104 Q156 142 100 142 Q44 142 44 104 Z" fill="url(#${uid})" stroke="${c2}" stroke-width="2"/>
+      <rect x="52" y="76" width="96" height="24" rx="3" fill="none" stroke="${c2}" stroke-opacity=".65" stroke-width="1.4"/>
+      <circle cx="82" cy="88" r="5" fill="${c2}"/><circle cx="118" cy="88" r="5" fill="${c2}"/>
+      <path d="M92 88 H108 M76 116 Q100 126 124 116" stroke="${c2}" stroke-width="1.8" fill="none"/>`;
+  } else {
+    // astrolabe
+    body = `
+      <ellipse cx="100" cy="176" rx="48" ry="8" fill="#000" opacity=".45"/>
+      <path d="M74 172 H126 L112 152 H88 Z" fill="${c2}" opacity=".85"/>
+      <line x1="100" y1="152" x2="100" y2="162" stroke="${c2}" stroke-width="4"/>
+      <circle cx="100" cy="96" r="60" fill="none" stroke="${c1}" stroke-width="5"/>
+      <circle cx="100" cy="96" r="50" fill="none" stroke="${c2}" stroke-width="2"/>
+      <ellipse cx="100" cy="96" rx="58" ry="22" transform="rotate(-28 100 96)" fill="none" stroke="${c2}" stroke-width="2.2"/>
+      <ellipse cx="100" cy="96" rx="58" ry="22" transform="rotate(28 100 96)" fill="none" stroke="${c1}" stroke-width="2.2"/>
+      <line x1="50" y1="146" x2="150" y2="46" stroke="#f6e0aa" stroke-width="2"/>
+      <circle cx="100" cy="96" r="11" fill="url(#${uid})" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="144" cy="52" r="4" fill="#f6e0aa"/>`;
+  }
+  return `<svg viewBox="0 0 200 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(p.name)}展柜插画">
+    <defs>
+      <linearGradient id="${uid}" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="${c2}"/>
+        <stop offset="55%" stop-color="${c1}"/>
+        <stop offset="100%" stop-color="#1b2028"/>
+      </linearGradient>
+    </defs>
+    ${body}
+  </svg>`;
+}
+
+function stash(){try{localStorage.setItem(STORAGE,JSON.stringify({idx,answers,autoNext}))}catch{}}
+function restore(){
+  try{
+    const s=JSON.parse(localStorage.getItem(STORAGE));
+    if(s&&Array.isArray(s.answers)&&s.answers.length===N&&s.answers.every(x=>x===null||Number.isInteger(x)&&x>=0&&x<=3)&&Number.isInteger(s.idx)&&s.idx>=0&&s.idx<N){
+      if(typeof s.autoNext==='boolean') autoNext=s.autoNext;
+      return s;
+    }
+  }catch{}
+  return null;
+}
+function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
+function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
+function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
+
+function home(){
+  if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
+  screen='home';
+  const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const teaserCards=D.teasers.map(name=>byName[name]).filter(Boolean);
+  app.innerHTML=`<section class="panel">
+    <div class="hero" aria-hidden="true">${HERO_ART}<span class="hero-badge">16 件镇馆之宝</span><div class="hero-copy"><small>${esc(D.heroSub)}</small><strong>${esc(D.heroTitle)}</strong></div></div>
+    <p class="eyebrow">${esc(D.subtitle)}</p>
+    <h1>${esc(D.title)}</h1>
+    <p class="lead">${esc(D.intro)}</p>
+    <div class="pills">
+      <span class="pill brass">${N} 道展厅情境</span>
+      <span class="pill">16 件原创馆藏</span>
+      <span class="pill">约 3 分钟 · 含 3:4 展柜海报</span>
+    </div>
+    <div class="stack">
+      ${count===N
+        ? `<button class="primary" onclick="resume()">点亮我已解锁的镇馆之宝　✦</button><button class="secondary" onclick="start()">重新入馆鉴定</button>`
+        : count
+        ? `<button class="primary" onclick="resume()">继续上次参观（${count}/${N}）　→</button><button class="secondary" onclick="start()">重新开始测试</button>`
+        : `<button class="primary" onclick="start()">步入展厅，开启鉴定　→</button>`}
+    </div>
+    <div class="teaser-wrap">
+      <div class="teaser-head"><span>FEATURED COLLECTION / 热门馆藏预览</span><small>共收录 16 件</small></div>
+      <div class="teasers">
+        ${teaserCards.map(p=>`<div class="teaser"><span class="teaser-bar" style="background:${p.color1}"></span><b>${esc(p.name)}</b><span>${esc(p.era)}</span><small>「${esc(p.quote)}」</small></div>`).join('')}
+      </div>
+    </div>
+    <p class="notice">不用懂文物鉴宝知识，跟随你的性格直觉作答即可。${esc(D.disclaimer)}</p>
+  </section>`;
+  scrollTop();
+}
+
+function start(){
+  if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('重新入馆鉴定将清除上次进度，继续吗？')) return;
+  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+}
+
+function resume(){
+  const saved=restore();if(!saved)return start();
+  idx=saved.idx;answers=saved.answers;
+  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  question(true);
+}
+
+function toggleAuto(){autoNext=!autoNext;stash();question(false);}
+
+function getChapter(qIdx){
+  const chs=D.chapters, per=Math.ceil(N/chs.length);
+  const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
+  return {num:String(ci+1).padStart(2,'0'),...chs[ci]};
+}
+
+function question(move=false){
+  if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
+  screen='question';
+  const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  const pct=Math.round((count/N)*100);
+  app.innerHTML=`<section class="panel">
+    <div class="question-top">
+      <span>EXHIBIT ${String(idx+1).padStart(2,'0')} / ${N} · ${pct}%</span>
+      <button type="button" class="auto-toggle ${autoNext?'on':''}" onclick="toggleAuto()" aria-pressed="${autoNext}">自动切题：${autoNext?'开':'关'}</button>
+    </div>
+    <div class="progress" role="progressbar" aria-label="参观进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
+      <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-bar">
+      <span class="chapter-num">${ch.num}</span>
+      <div><strong>${esc(ch.title)}</strong><span>${esc(ch.intro)}</span></div>
+    </div>
+    <h2>${esc(q.text)}</h2>
+    <div class="options" role="group" aria-label="选择答案">
+      ${q.options.map((o,i)=>`<button type="button" class="option ${answers[idx]===i?'selected':''}" aria-pressed="${answers[idx]===i}" onclick="choose(${i})"><span class="letter">${'ABCD'[i]}</span><span>${esc(o.text)}</span>${answers[idx]===i?'<span class="check" aria-hidden="true">✓</span>':''}</button>`).join('')}
+    </div>
+    <div class="nav">
+      <button type="button" class="secondary" onclick="back()" ${idx===0?'disabled':''}>← 上一题</button>
+      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'点亮我的展柜 ✦':'下一题 →'}</button>
+    </div>
+    <div style="text-align:center;margin-top:10px">
+      <button type="button" class="subtle" onclick="home()">暂存进度，返回展馆大厅</button>
+    </div>
+  </section>`;
+  if(move){scrollTop();focusTitle();}
+}
+
+function choose(i){
+  if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  answers[idx]=i;stash();
+  const btns=app.querySelectorAll('.option');
+  btns.forEach((b,k)=>{
+    const sel=k===i;
+    b.classList.toggle('selected',sel);
+    b.setAttribute('aria-pressed',String(sel));
+    let ck=b.querySelector('.check');
+    if(sel&&!ck){ck=document.createElement('span');ck.className='check';ck.setAttribute('aria-hidden','true');ck.textContent='✓';b.append(ck);}
+    if(!sel&&ck) ck.remove();
+  });
+  const nextBtn=app.querySelector('.nav .primary');
+  if(nextBtn) nextBtn.disabled=false;
+  const count=answers.filter(v=>v!==null).length;
+  const pct=Math.round((count/N)*100);
+  const bar=app.querySelector('.progress i');
+  if(bar) bar.style.width=Math.max(4,pct)+'%';
+  if(autoNext){
+    if(autoTimer) clearTimeout(autoTimer);
+    autoTimer=setTimeout(()=>{
+      autoTimer=null;
+      if(idx<N-1){idx++;stash();question(true);}
+      else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
+      else calculateRitual();
+    }, 300);
+  }
+}
+
+function back(){if(idx>0){idx--;stash();question(true);}}
+function next(){
+  if(answers[idx]===null) return;
+  if(idx<N-1){idx++;stash();question(true);}
+  else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
+  else calculateRitual();
+}
+
+function calculateRitual(){
+  screen='calc';
+  const steps=D.calcSteps;
+  app.innerHTML=`<section class="panel"><div class="calc-box">
+    <div class="beam-wrap" aria-hidden="true"><div class="beam"></div><div class="relic-gem"></div><div class="pedestal"></div></div>
+    <p class="calc-step" id="calcText">${esc(steps[0])}</p>
+    <p class="calc-sub">正在镌刻你的展柜铭牌与 3:4 美术馆海报</p>
+  </div></section>`;
+  scrollTop();
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},470);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},940);
+  setTimeout(()=>result(),1380);
+}
+
+function compute(input){
+  if(input.length!==N||input.some(v=>!Number.isInteger(v)||v<0||v>3)) throw Error('Incomplete answers');
+  const sums=D.axes.map(()=>0), cnts=D.axes.map(()=>0);
+  const wSums=D.axes.map(()=>0), wCnts=D.axes.map(()=>0);
+  D.questions.forEach((q,i)=>{
+    const sc=q.options[input[i]].score;
+    sums[q.axis]+=sc; cnts[q.axis]++;
+    const w=1+i*0.012;
+    wSums[q.axis]+=sc*w; wCnts[q.axis]+=w;
+  });
+  const v=sums.map((s,i)=>s/cnts[i]);
+  const vw=wSums.map((s,i)=>s/wCnts[i]);
+  const ranked=D.profiles.map((p,i)=>{
+    const center=p.vector.map(x=>x-1.5);
+    const norm=Math.hypot(...center)||1;
+    const radius=Math.sqrt(vw.length)*0.52+0.12*(norm-Math.sqrt(vw.length));
+    const cal=center.map(x=>1.5+x*radius/norm);
+    const d=cal.reduce((s,x,j)=>s+(x-vw[j])**2,0);
+    const rawSim=Math.max(0,1-Math.sqrt(d/(4.2*vw.length)));
+    const fit=Math.round(Math.max(68,Math.min(98,68+rawSim*30)));
+    return {p,i,d,fit};
+  });
+  ranked.sort((a,b)=>a.d-b.d||a.i-b.i);
+  for(let k=1;k<Math.min(4,ranked.length);k++){
+    if(ranked[k].fit>=ranked[k-1].fit) ranked[k].fit=Math.max(62,ranked[k-1].fit-2);
+  }
+  return {v,ranked,p:ranked[0].p};
+}
+
+function tendency(a,v){return v<1.18?a[1]:v>1.82?a[2]:'刚柔并济'}
+
+function result(){
+  if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
+  report=compute(answers);screen='result';stash();
+  const {p,v,ranked}=report;
+  const cues=D.axes.map((a,i)=>({a,val:v[i],gap:Math.abs(v[i]-1.5)})).sort((x,y)=>y.gap-x.gap).slice(0,2);
+  const why=cues.every(x=>x.gap<0.25)
+    ? `你在四项器物维度上都保持着极为难得的均衡火候，既有分寸又不失锋芒，因此「${p.name}」最契合你的珍稀气场。`
+    : `从你的选择脉络来看，你的「${cues[0].a[0]}」偏向${tendency(cues[0].a,cues[0].val)}，「${cues[1].a[0]}」偏向${tendency(cues[1].a,cues[1].val)}，与这件馆藏珍品高度共振。`;
+
+  app.innerHTML=`<section class="panel" style="--relic-glow:${p.glow}">
+    <div class="vitrine-card">
+      <div class="vitrine-head">
+        <span>${esc(p.acc)}</span>
+        <span class="fit-pill">✦ 馆藏契合 ${ranked[0].fit}%</span>
+      </div>
+      <div class="vitrine-stage">
+        ${artifactSVG(p)}
+        <div class="plinth" aria-hidden="true"></div>
+      </div>
+      <div class="plaque">
+        <div class="plaque-era">${esc(p.era)}</div>
+        <h1 class="relic-name">${esc(p.name)}</h1>
+        <div class="pills">
+          ${p.tags.map(t=>`<span class="pill brass"># ${esc(t)}</span>`).join('')}
+        </div>
+        <div class="quote-box"><p class="quote">「${esc(p.quote)}」</p></div>
+      </div>
+    </div>
+
+    <div class="stack" style="margin-top:16px">
+      <div class="actions-row">
+        <button type="button" class="primary" onclick="showPoster()">生成 3:4 展柜海报 ↗</button>
+        <button type="button" class="secondary" onclick="copyShare()">复制小红书文案</button>
+      </div>
+      <div id="copyStatus" class="status-bar" role="status"></div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">01 / CURATOR'S NOTE</p>
+      <h3>策展人私藏评语</h3>
+      <p>${esc(p.insight)}</p>
+      <div class="repair-card">
+        <b>❖ ARCHIVE RESTORATION LOG · 修复与隐藏暗纹</b>
+        <p>${esc(p.repair)}</p>
+      </div>
+      <div class="notice-plaque">
+        <b>⚠ VISITOR NOTICE · 展柜趣味参观须知</b>
+        <p>${esc(p.notice)}</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">02 / APPRAISAL DIMENSIONS</p>
+      <h3>四维馆藏鉴定图谱</h3>
+      ${D.axes.map((a,i)=>`<div class="axis">
+        <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
+        <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
+        <div class="axis-labels"><span>${esc(a[1])}</span><span>${esc(a[2])}</span></div>
+      </div>`).join('')}
+      <p style="margin-top:14px">${esc(why)}</p>
+      <div class="duo">
+        <div class="mini"><b>✦ 镇馆高光特质</b><p>${esc(p.strength)}</p></div>
+        <div class="mini"><b>❖ 策展人温柔提醒</b><p>${esc(p.caution)}</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">03 / GALLERY CO-EXHIBITION</p>
+      <h3>最佳同厅展出搭档 &amp; 严禁相邻展柜</h3>
+      <p class="muted" style="margin-bottom:4px">发给你的朋友或对象测测，看你们适合合展还是分馆隔离！</p>
+      <div class="duo">
+        <div class="mini">
+          <b>♥ 最佳联展搭档</b>
+          <div class="partner-name">${esc(p.match[0])}</div>
+          <p>${esc(p.match[1])}</p>
+        </div>
+        <div class="mini">
+          <b>⚡ 严禁相邻展柜</b>
+          <div class="partner-name">${esc(p.clash[0])}</div>
+          <p>${esc(p.clash[1])}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">04 / NEARBY TREASURES</p>
+      <h3>与你气场相近的其他馆藏</h3>
+      ${ranked.slice(1,4).map(x=>`<div class="rank">
+        <div class="rank-left">
+          <span class="swatch" style="background:${x.p.color1}"></span>
+          <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.era)}</small></div>
+        </div>
+        <span class="pct">${x.fit}% 契合</span>
+      </div>`).join('')}
+      <p class="notice">${esc(D.disclaimer)}</p>
+    </div>
+
+    <div class="stack">
+      <button type="button" class="primary" onclick="showPoster()">保存 3:4 美术馆收藏海报 ↗</button>
+      <div class="actions-row">
+        <button type="button" class="secondary" onclick="editAnswers()">修改部分答案</button>
+        <button type="button" class="secondary" onclick="restart()">重新鉴定</button>
+      </div>
+    </div>
+  </section>`;
+  scrollTop();focusTitle();
+}
+
+function editAnswers(){idx=N-1;question(true);}
+function restart(){if(confirm('清除当前答题记录并重新入馆鉴定？')){clearSaved();start();}}
+
+async function copyShare(){
+  if(!report) return;
+  const {p,ranked}=report;
+  const hook=D.shareHook.replace('{name}',p.name);
+  const text=`${hook}\n${p.acc} | ${p.era} | 契合度 ${ranked[0].fit}%\n「${p.quote}」\n${p.notice}\n\n♥ 我的最佳联展搭档是【${p.match[0]}】，快来测测你是哪件镇馆之宝，评论区组个特展👇\n${D.shareTags}`;
+  const st=document.getElementById('copyStatus');
+  try{
+    await navigator.clipboard.writeText(text);
+    if(st) st.textContent='✓ 小红书分享文案已复制到剪贴板！';
+  }catch{
+    document.getElementById('copyTextarea').value=text;
+    copyDialog.showModal();
+  }
+}
+
+function wrap(ctx,text,max){
+  const out=[];let line='';
+  for(const ch of text){
+    if(line&&ctx.measureText(line+ch).width>max){out.push(line);line=ch;}
+    else line+=ch;
+  }
+  if(line) out.push(line);
+  return out;
+}
+function rPath(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  if(typeof ctx.roundRect==='function') ctx.roundRect(x,y,w,h,r);
+  else{r=Math.min(r,w/2,h/2);ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+}
+function fillR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.fill();}
+function strokeR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.stroke();}
+
+// Native Canvas renderer for all 8 artifact silhouettes (100% reliable in WeChat/XHS WebViews)
+function drawCanvasArtifact(ctx, cx, cy, scale, p){
+  ctx.save();
+  ctx.translate(cx, cy);
+  ctx.scale(scale, scale);
+  const grad=ctx.createLinearGradient(-70,-70,70,80);
+  grad.addColorStop(0,p.color2);grad.addColorStop(0.55,p.color1);grad.addColorStop(1,'#181c24');
+
+  // Plinth shadow
+  ctx.fillStyle='rgba(0,0,0,0.48)';ctx.beginPath();ctx.ellipse(0,82,58,10,0,0,Math.PI*2);ctx.fill();
+
+  ctx.strokeStyle=p.color2;ctx.lineWidth=2.4;ctx.lineJoin='round';ctx.lineCap='round';
+  if(p.shape==='vase'){
+    ctx.fillStyle=grad;ctx.beginPath();
+    ctx.moveTo(-18,-74);ctx.lineTo(18,-74);ctx.lineTo(14,-56);
+    ctx.bezierCurveTo(50,-42,56,-2,40,42);ctx.lineTo(26,78);ctx.lineTo(-26,78);ctx.lineTo(-40,42);
+    ctx.bezierCurveTo(-56,-2,-50,-42,-14,-56);ctx.closePath();ctx.fill();ctx.stroke();
+    ctx.fillStyle=p.color2;ctx.beginPath();ctx.ellipse(0,-74,18,4.5,0,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#f2d594';ctx.lineWidth=1.8;ctx.beginPath();
+    ctx.moveTo(-12,-34);ctx.lineTo(8,-10);ctx.lineTo(-6,18);ctx.lineTo(12,44);ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,0.36)';ctx.lineWidth=4.5;ctx.beginPath();
+    ctx.moveTo(-28,-38);ctx.quadraticCurveTo(-38,0,-26,38);ctx.stroke();
+  } else if(p.shape==='jade'){
+    ctx.fillStyle=grad;ctx.beginPath();ctx.arc(0,0,68,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.save();ctx.setLineDash([7,6]);ctx.strokeStyle=p.color2;ctx.globalAlpha=0.55;ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.arc(0,0,50,0,Math.PI*2);ctx.stroke();ctx.restore();
+    ctx.fillStyle='#13161c';ctx.beginPath();ctx.arc(0,0,22,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#d5b374';ctx.beginPath();ctx.arc(0,-80,6,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#d5b374';ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(0,-74);ctx.lineTo(0,-66);ctx.stroke();
+  } else if(p.shape==='box'){
+    ctx.fillStyle=p.color1;ctx.beginPath();ctx.moveTo(-58,-36);ctx.lineTo(-46,-52);ctx.lineTo(46,-52);ctx.lineTo(58,-36);ctx.closePath();ctx.fill();ctx.stroke();
+    ctx.fillStyle=grad;fillR(ctx,-68,-36,136,108,10);strokeR(ctx,-68,-36,136,108,10);
+    ctx.strokeStyle='#15181e';ctx.lineWidth=3.5;ctx.beginPath();ctx.moveTo(-68,0);ctx.lineTo(68,0);ctx.stroke();
+    ctx.strokeStyle=p.color2;ctx.lineWidth=1.4;strokeR(ctx,-55,-24,110,84,4);
+    ctx.fillStyle='#d5b374';ctx.beginPath();ctx.arc(0,0,15,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#15181e';ctx.lineWidth=2;ctx.stroke();
+    ctx.fillStyle='#15181e';ctx.beginPath();ctx.arc(0,0,5.5,0,Math.PI*2);ctx.fill();
+  } else if(p.shape==='cup'){
+    ctx.fillStyle=grad;ctx.beginPath();
+    ctx.moveTo(-54,-56);ctx.lineTo(54,-56);ctx.lineTo(40,14);ctx.quadraticCurveTo(32,36,0,36);ctx.quadraticCurveTo(-32,36,-40,14);ctx.closePath();ctx.fill();ctx.stroke();
+    ctx.fillStyle=p.color2;ctx.globalAlpha=0.55;ctx.beginPath();ctx.ellipse(0,-56,54,10,0,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;ctx.stroke();
+    ctx.fillStyle=p.color2;ctx.beginPath();ctx.moveTo(-10,36);ctx.lineTo(10,36);ctx.lineTo(15,70);ctx.lineTo(-15,70);ctx.closePath();ctx.fill();
+    ctx.fillStyle=p.color1;ctx.beginPath();ctx.ellipse(0,72,36,9,0,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,0.38)';ctx.lineWidth=4.5;ctx.beginPath();ctx.moveTo(-36,-42);ctx.lineTo(-28,12);ctx.stroke();
+  } else if(p.shape==='scroll'){
+    ctx.fillStyle=grad;fillR(ctx,-58,-58,116,124,4);strokeR(ctx,-58,-58,116,124,4);
+    ctx.fillStyle='#2c241e';ctx.strokeStyle='#d5b374';ctx.lineWidth=2;
+    fillR(ctx,-72,-66,17,140,6);strokeR(ctx,-72,-66,17,140,6);
+    fillR(ctx,55,-66,17,140,6);strokeR(ctx,55,-66,17,140,6);
+    ctx.strokeStyle='rgba(24,20,16,0.58)';ctx.lineWidth=2.5;
+    [32,16,0,-16].forEach((lx,k)=>{ctx.beginPath();ctx.moveTo(lx,-38);ctx.lineTo(lx,38-k*5);ctx.stroke();});
+    ctx.fillStyle='#c9493b';fillR(ctx,-40,24,18,18,2);
+  } else if(p.shape==='mirror'){
+    ctx.fillStyle=grad;ctx.beginPath();ctx.arc(0,0,68,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.strokeStyle='rgba(20,22,28,0.5)';ctx.lineWidth=2.5;ctx.beginPath();ctx.arc(0,0,54,0,Math.PI*2);ctx.stroke();
+    ctx.save();ctx.setLineDash([5,5]);ctx.strokeStyle=p.color2;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(0,0,42,0,Math.PI*2);ctx.stroke();ctx.restore();
+    ctx.fillStyle=p.color2;ctx.beginPath();ctx.arc(0,0,14,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#f5d58c';ctx.lineWidth=2.6;ctx.beginPath();ctx.moveTo(-42,-36);ctx.lineTo(-10,-12);ctx.lineTo(-20,16);ctx.lineTo(18,28);ctx.lineTo(42,46);ctx.stroke();
+  } else if(p.shape==='ding'){
+    ctx.strokeStyle=p.color2;ctx.lineWidth=5.5;
+    ctx.beginPath();ctx.moveTo(-46,-30);ctx.lineTo(-46,-58);ctx.quadraticCurveTo(-46,-70,-34,-70);ctx.quadraticCurveTo(-24,-70,-24,-58);ctx.lineTo(-24,-34);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(24,-34);ctx.lineTo(24,-58);ctx.quadraticCurveTo(24,-70,34,-70);ctx.quadraticCurveTo(46,-70,46,-58);ctx.lineTo(46,-30);ctx.stroke();
+    ctx.fillStyle=p.color1;ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(-38,34);ctx.lineTo(-44,76);ctx.lineTo(-28,76);ctx.lineTo(-22,36);ctx.closePath();ctx.fill();ctx.stroke();
+    ctx.beginPath();ctx.moveTo(38,34);ctx.lineTo(44,76);ctx.lineTo(28,76);ctx.lineTo(22,36);ctx.closePath();ctx.fill();ctx.stroke();
+    ctx.fillStyle=grad;ctx.beginPath();ctx.moveTo(-58,-34);ctx.lineTo(58,-34);ctx.lineTo(58,8);ctx.quadraticCurveTo(58,46,0,46);ctx.quadraticCurveTo(-58,46,-58,8);ctx.closePath();ctx.fill();ctx.stroke();
+    strokeR(ctx,-48,-22,96,26,3);
+    ctx.fillStyle=p.color2;ctx.beginPath();ctx.arc(-18,-9,5.5,0,Math.PI*2);ctx.arc(18,-9,5.5,0,Math.PI*2);ctx.fill();
+  } else {
+    // astrolabe
+    ctx.fillStyle=p.color2;ctx.beginPath();ctx.moveTo(-28,76);ctx.lineTo(28,76);ctx.lineTo(14,56);ctx.lineTo(-14,56);ctx.closePath();ctx.fill();
+    ctx.strokeStyle=p.color1;ctx.lineWidth=5.5;ctx.beginPath();ctx.arc(0,-4,62,0,Math.PI*2);ctx.stroke();
+    ctx.strokeStyle=p.color2;ctx.lineWidth=2.2;ctx.beginPath();ctx.arc(0,-4,50,0,Math.PI*2);ctx.stroke();
+    ctx.save();ctx.translate(0,-4);ctx.rotate(-0.48);ctx.beginPath();ctx.ellipse(0,0,60,22,0,0,Math.PI*2);ctx.stroke();ctx.restore();
+    ctx.save();ctx.translate(0,-4);ctx.rotate(0.48);ctx.strokeStyle=p.color1;ctx.beginPath();ctx.ellipse(0,0,60,22,0,0,Math.PI*2);ctx.stroke();ctx.restore();
+    ctx.strokeStyle='#f6e0aa';ctx.lineWidth=2.2;ctx.beginPath();ctx.moveTo(-52,48);ctx.lineTo(52,-56);ctx.stroke();
+    ctx.fillStyle=grad;ctx.beginPath();ctx.arc(0,-4,12,0,Math.PI*2);ctx.fill();ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function makePoster(){
+  const c=document.createElement('canvas');c.width=1080;c.height=1440;
+  const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
+  const {p,v,ranked}=report;
+  const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif', mono='"SF Mono","Menlo","Consolas",monospace';
+
+  // Deep obsidian gallery backdrop
+  const bg=ctx.createLinearGradient(0,0,0,1440);
+  bg.addColorStop(0,'#171a20');bg.addColorStop(0.55,'#111317');bg.addColorStop(1,'#0c0d10');
+  ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1440);
+
+  // Subtle brass museum outer frame
+  ctx.strokeStyle='rgba(213,179,116,0.42)';ctx.lineWidth=2;strokeR(ctx,28,28,1024,1384,26);
+  ctx.strokeStyle='rgba(213,179,116,0.16)';ctx.lineWidth=1;strokeR(ctx,40,40,1000,1360,20);
+
+  // Top Header Metadata
+  ctx.fillStyle='#d5b374';ctx.font=`700 22px ${mono}`;
+  ctx.fillText('❖ SOUL MUSEUM  ·  镇馆之宝特展', 72, 92);
+  ctx.textAlign='right';ctx.fillStyle='#b8b0a2';ctx.font=`700 20px ${mono}`;
+  ctx.fillText(`${p.acc}  |  契合 ${ranked[0].fit}%`, 1008, 92);
+  ctx.textAlign='left';
+
+  // Illuminated Vitrine Hero Container
+  const vy=122, vh=388;
+  ctx.save();rPath(ctx,64,vy,952,vh,22);ctx.clip();
+  ctx.fillStyle='#101216';ctx.fillRect(64,vy,952,vh);
+  // Museum spotlight cone from ceiling
+  const cone=ctx.createRadialGradient(255,vy+10,20,255,vy+190,280);
+  cone.addColorStop(0,p.glow+'55');cone.addColorStop(0.65,p.glow+'18');cone.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=cone;ctx.fillRect(64,vy,952,vh);
+  // Arch silhouette behind artifact
+  ctx.strokeStyle='rgba(213,179,116,0.22)';ctx.lineWidth=1.6;
+  ctx.beginPath();ctx.moveTo(125,vy+vh);ctx.lineTo(125,vy+140);ctx.arc(255,vy+140,130,Math.PI,0);ctx.lineTo(385,vy+vh);ctx.stroke();
+  ctx.restore();
+  ctx.strokeStyle='rgba(213,179,116,0.36)';ctx.lineWidth=1.6;strokeR(ctx,64,vy,952,vh,22);
+
+  // Draw bespoke artifact inside left vitrine zone + plinth
+  drawCanvasArtifact(ctx, 255, vy+182, 1.48, p);
+  ctx.fillStyle='#232832';fillR(ctx,160,vy+316,190,18,4);
+  ctx.strokeStyle='rgba(213,179,116,0.45)';ctx.lineWidth=1.5;strokeR(ctx,160,vy+316,190,18,4);
+
+  // Right Brass Plaque Text inside Hero Vitrine
+  const rx=428, rw=552;
+  ctx.fillStyle='#d5b374';ctx.font=`700 22px ${mono}`;
+  ctx.fillText(`ARCHIVE NO.${p.no}  ·  ${p.era}`, rx, vy+70);
+
+  // Auto-wrapped artifact name (never clips!)
+  const nameLines=wrap(ctx, p.name, rw);
+  const nameSize=nameLines.length>1?46:52;
+  ctx.fillStyle='#ffffff';ctx.font=`700 ${nameSize}px ${serif}`;
+  nameLines.slice(0,2).forEach((l,i)=>ctx.fillText(l, rx, vy+138+i*60));
+
+  // Hashtag pills
+  const tagY = vy + (nameLines.length>1?232:186);
+  let tx=rx;
+  p.tags.forEach(t=>{
+    const lbl='# '+t;ctx.font=`600 20px ${sans}`;
+    const w=ctx.measureText(lbl).width+28;
+    if(tx+w<995){
+      ctx.fillStyle='rgba(213,179,116,0.14)';fillR(ctx,tx,tagY,w,38,19);
+      ctx.strokeStyle='rgba(213,179,116,0.45)';ctx.lineWidth=1;strokeR(ctx,tx,tagY,w,38,19);
+      ctx.fillStyle='#e8cfa0';ctx.fillText(lbl,tx+14,tagY+26);
+      tx+=w+10;
+    }
+  });
+
+  // Brass Quote inside vitrine bottom right
+  const qy = tagY + 62;
+  ctx.strokeStyle='rgba(213,179,116,0.32)';ctx.lineWidth=1.2;
+  ctx.beginPath();ctx.moveTo(rx,qy-16);ctx.lineTo(980,qy-16);ctx.stroke();
+  ctx.fillStyle='#f0d6a2';ctx.font=`600 26px ${serif}`;
+  wrap(ctx,`「${p.quote}」`,rw).slice(0,2).forEach((l,i)=>ctx.fillText(l, rx, qy+18+i*38));
+
+  // Section 1: Curator's Commentary & Restoration Log Card
+  const c1y=536;
+  ctx.fillStyle='#181b21';fillR(ctx,64,c1y,952,320,20);
+  ctx.strokeStyle='rgba(213,179,116,0.26)';ctx.lineWidth=1.5;strokeR(ctx,64,c1y,952,320,20);
+  ctx.fillStyle='#d5b374';ctx.font=`700 20px ${mono}`;
+  ctx.fillText("CURATOR'S NOTE  ·  策展人私藏评语与修复记录", 96, c1y+42);
+  ctx.fillStyle='#e8e2d8';ctx.font=`400 24px ${sans}`;
+  wrap(ctx, p.insight, 888).slice(0,3).forEach((l,i)=>ctx.fillText(l, 96, c1y+84+i*37));
+
+  // Repair log highlighted strip
+  ctx.fillStyle='rgba(213,179,116,0.10)';fillR(ctx,92,c1y+198,896,98,12);
+  ctx.strokeStyle='rgba(213,179,116,0.38)';ctx.lineWidth=1.2;strokeR(ctx,92,c1y+198,896,98,12);
+  ctx.fillStyle='#f0d9ab';ctx.font=`500 22px ${sans}`;
+  wrap(ctx, p.repair, 852).slice(0,2).forEach((l,i)=>ctx.fillText(l, 114, c1y+236+i*35));
+
+  // Section 2: 4-Axis Appraisal Spectrum + Visitor Notice
+  const c2y=878;
+  ctx.fillStyle='#181b21';fillR(ctx,64,c2y,952,254,20);
+  ctx.strokeStyle='rgba(255,255,255,0.10)';ctx.lineWidth=1.5;strokeR(ctx,64,c2y,952,254,20);
+  ctx.fillStyle='#d5b374';ctx.font=`700 20px ${mono}`;
+  ctx.fillText('APPRAISAL SPECTRUM  ·  四维器物鉴定', 96, c2y+40);
+
+  D.axes.forEach((a,i)=>{
+    const col=i%2, row=Math.floor(i/2);
+    const ax=96+col*456, ay=c2y+82+row*64, aw=410;
+    ctx.font=`600 19px ${sans}`;ctx.fillStyle='#f4efe6';ctx.textAlign='left';
+    ctx.fillText(`${a[0]} · ${a[1]}`, ax, ay);
+    ctx.textAlign='right';ctx.fillStyle='#a8a196';ctx.fillText(a[2], ax+aw, ay);
+    ctx.textAlign='left';
+    ctx.fillStyle='rgba(255,255,255,0.10)';fillR(ctx,ax,ay+12,aw,8,4);
+    const px=ax+aw*Math.max(0.05,Math.min(0.95,v[i]/3));
+    ctx.fillStyle='#d5b374';ctx.beginPath();ctx.arc(px,ay+16,9.5,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#181b21';ctx.lineWidth=2.5;ctx.stroke();
+  });
+
+  // Visitor Notice Ribbon inside bottom of c2
+  ctx.fillStyle='rgba(201,92,75,0.16)';fillR(ctx,92,c2y+192,896,42,8);
+  ctx.strokeStyle='rgba(201,92,75,0.48)';ctx.lineWidth=1;strokeR(ctx,92,c2y+192,896,42,8);
+  ctx.fillStyle='#f4b4a8';ctx.font=`600 20px ${sans}`;
+  ctx.fillText('⚠ ' + wrap(ctx, p.notice, 850)[0], 110, c2y+220);
+
+  // Section 3: Co-Exhibition Duo Cards
+  const c3y=1154, c3h=188;
+  ctx.fillStyle='#1c2028';fillR(ctx,64,c3y,464,c3h,18);
+  ctx.strokeStyle='rgba(213,179,116,0.34)';ctx.lineWidth=1.5;strokeR(ctx,64,c3y,464,c3h,18);
+  ctx.fillStyle='#d5b374';ctx.font=`700 19px ${mono}`;ctx.fillText('♥ 最佳联展搭档', 92, c3y+38);
+  ctx.fillStyle='#ffffff';ctx.font=`700 25px ${serif}`;
+  wrap(ctx, p.match[0], 410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 92, c3y+78+i*32));
+  ctx.fillStyle='#b8b0a2';ctx.font=`400 19px ${sans}`;
+  wrap(ctx, p.match[1], 410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 92, c3y+138+i*26));
+
+  ctx.fillStyle='#1c2028';fillR(ctx,552,c3y,464,c3h,18);
+  ctx.strokeStyle='rgba(255,255,255,0.12)';ctx.lineWidth=1.5;strokeR(ctx,552,c3y,464,c3h,18);
+  ctx.fillStyle='#eb8978';ctx.font=`700 19px ${mono}`;ctx.fillText('⚡ 严禁相邻展柜', 580, c3y+38);
+  ctx.fillStyle='#ffffff';ctx.font=`700 25px ${serif}`;
+  wrap(ctx, p.clash[0], 410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 580, c3y+78+i*32));
+  ctx.fillStyle='#b8b0a2';ctx.font=`400 19px ${sans}`;
+  wrap(ctx, p.clash[1], 410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 580, c3y+138+i*26));
+
+  // Footer
+  ctx.fillStyle='#968f83';ctx.font=`500 20px ${sans}`;
+  ctx.fillText('如果把你放进博物馆，你是哪件「镇馆之宝」  ·  长按保存分享', 66, 1384);
+  ctx.textAlign='right';ctx.fillText('SOUL MUSEUM · 原创趣味探索', 1014, 1384);
+  ctx.textAlign='left';
+  return c;
+}
+
+function showPoster(){
+  if(!report) return;
+  const status=document.getElementById('posterStatus'),
+        area=document.getElementById('posterArea'),
+        download=document.getElementById('downloadPoster');
+  status.textContent='';area.innerHTML='';download.disabled=true;
+  try{
+    if(posterURL) URL.revokeObjectURL(posterURL);
+    posterURL=null;
+    const canvas=makePoster();
+    const img=document.createElement('img');
+    img.className='poster';img.alt='可保存的3:4镇馆之宝展柜海报';
+    img.src=canvas.toDataURL('image/png');
+    area.append(img);
+    canvas.toBlob(blob=>{
+      posterURL=blob?URL.createObjectURL(blob):img.src;
+      download.disabled=false;
+    },'image/png');
+    if(!posterDialog.open) posterDialog.showModal();
+  }catch(e){
+    status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
+    if(!posterDialog.open) posterDialog.showModal();
+  }
+}
+
+document.getElementById('closePoster').onclick=()=>posterDialog.close();
+document.getElementById('downloadPoster').onclick=()=>{
+  if(!posterURL||!report) return;
+  const a=document.createElement('a');a.href=posterURL;a.download='镇馆之宝-'+report.p.name+'.png';
+  document.body.append(a);a.click();a.remove();
+  document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方展柜海报保存。';
+};
+document.getElementById('closeCopy').onclick=()=>copyDialog.close();
+document.getElementById('selectCopyBtn').onclick=()=>{
+  const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
+};
+home();
+</script>
+</body>
+</html>
