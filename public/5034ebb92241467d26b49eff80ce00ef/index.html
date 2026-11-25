@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#82382b">
+<meta name="theme-color" content="#8c2d23">
 <meta name="description" content="你在古代拿的是什么人生剧本 · 原创高质感趣味探索测试，无需登录，数据仅在本地浏览器处理。">
 <title>你在古代拿的是什么人生剧本</title>
 <style>
 :root{
-  --ink:#342420;--accent:#82382b;--accent2:#b88746;--paper:#f5ece0;
-  --soft:#ebdccc;--line:#dcc7ae;--card:#fffbf2;--muted:#756056;
+  
+      --ink:#2c1e18;--accent:#8a2c22;--accent2:#b8863d;--paper:#f4ebd9;
+      --soft:#eaddc7;--line:#d6c0a2;--card:#fdf8ec;--muted:#6e5a4d;
   --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
   --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
 }
@@ -17,98 +18,105 @@
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
   radial-gradient(ellipse at 92% 0%,var(--soft),transparent 58%),
-  radial-gradient(ellipse at 8% 100%,color-mix(in srgb,var(--accent2) 13%,transparent),transparent 52%);z-index:-1}
-main{width:min(100%,660px);padding:18px 16px max(32px,env(safe-area-inset-bottom));margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.brand{font-size:11px;letter-spacing:2.4px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
+  radial-gradient(ellipse at 8% 100%,color-mix(in srgb,var(--accent2) 15%,transparent),transparent 54%);z-index:-1}
+main{width:min(100%,660px);padding:14px 14px max(28px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.brand{font-size:11px;letter-spacing:2.2px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
 .brand::before{content:"✦";color:var(--accent2);font-size:13px}
-.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.05em}
-section.panel{border:1px solid var(--line);border-radius:26px;background:var(--card);padding:clamp(18px,4.2vw,30px);box-shadow:0 22px 54px rgba(32,24,20,.08);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
+.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.04em}
+.sound-btn{background:var(--card);border:1px solid var(--line);color:var(--accent)}
+section.panel{border:1px solid var(--line);border-radius:24px;background:var(--card);padding:clamp(16px,4vw,28px);box-shadow:0 22px 54px rgba(32,24,20,.09);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
 @keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 h1,h2,h3,p{margin:0}
-h1{font-family:var(--serif);font-size:clamp(30px,7.8vw,46px);font-weight:800;line-height:1.26;letter-spacing:.03em}
-h2{font-family:var(--serif);font-size:clamp(21px,5.2vw,27px);line-height:1.48;font-weight:700}
+h1{font-family:var(--serif);font-size:clamp(28px,7.2vw,42px);font-weight:800;line-height:1.24;letter-spacing:.03em;text-wrap:balance}
+h2{font-family:var(--serif);font-size:clamp(20px,5vw,26px);line-height:1.46;font-weight:700}
 h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700}
-.eyebrow{color:var(--accent);font-size:11px;letter-spacing:2.2px;font-weight:800;margin:16px 0 8px;text-transform:uppercase}
-.lead{font-size:15px;line-height:1.85;margin:12px 0 18px;color:color-mix(in srgb,var(--ink) 86%,var(--muted))}
+.eyebrow{color:var(--accent);font-size:10.5px;letter-spacing:2.2px;font-weight:800;margin:13px 0 6px;text-transform:uppercase}
+.lead{font-size:14px;line-height:1.78;margin:9px 0 14px;color:color-mix(in srgb,var(--ink) 86%,var(--muted));text-wrap:pretty}
 .muted{font-size:12px;color:var(--muted)}
-.hero{position:relative;isolation:isolate;height:clamp(176px,46vw,230px);background:var(--accent);border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.hero{position:relative;isolation:isolate;height:clamp(164px,42vw,224px);background:var(--accent);border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
 .hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.42) 100%);z-index:-1}
-.hero-badge{position:absolute;top:14px;right:14px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.22);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.6px;font-weight:700;color:#fff}
-.hero-copy{position:absolute;bottom:16px;left:18px;right:16px}
-.hero-copy small{font-size:10px;letter-spacing:3px;opacity:.92;display:block;margin-bottom:2px}
-.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,34px);letter-spacing:3px;line-height:1.25}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
-.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:500}
-.pill.accent{border-color:color-mix(in srgb,var(--accent) 32%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
-.teaser-wrap{margin:20px 0 22px;padding-top:16px;border-top:1px dashed var(--line)}
-.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.46) 100%);z-index:-1}
+.hero-badge{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.26);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.4px;font-weight:700;color:#fff}
+.hero-copy{position:absolute;bottom:14px;left:16px;right:16px}
+.hero-copy small{font-size:9.5px;letter-spacing:2.8px;opacity:.9;display:block;margin-bottom:2px}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(22px,5.6vw,32px);letter-spacing:3px;line-height:1.22}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 15px}
+.pill{font-size:11.5px;padding:4px 11px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:600}
+.pill.accent{border-color:color-mix(in srgb,var(--accent) 34%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
+.teaser-wrap{margin:15px 0 12px;padding-top:13px;border-top:1px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
 .teaser-head span{font-size:11px;letter-spacing:1.4px;color:var(--accent);font-weight:800}
 .teaser-head small{font-size:11px;color:var(--muted)}
-.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.teaser{padding:12px 10px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
-.teaser b{font-family:var(--serif);font-size:15px;color:var(--ink)}
-.teaser span{font-size:11px;color:var(--accent);font-weight:600}
-.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
-button:active:not(:disabled){transform:scale(.988)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.teaser{padding:10px 9px;border-radius:13px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:3px;text-align:left}
+.teaser:hover{border-color:var(--accent);box-shadow:0 6px 16px rgba(32,24,20,.07)}
+.teaser b{font-family:var(--serif);font-size:14px;color:var(--ink);line-height:1.28}
+.teaser span{font-size:10.5px;color:var(--accent);font-weight:700}
+.teaser small{font-size:10.5px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 15px;min-height:46px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.985)}
 button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 button:hover:not(:disabled){border-color:var(--accent)}
 button:disabled{opacity:.4;cursor:not-allowed}
-.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 26%,transparent)}
+.primary{background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 82%,#000));color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 28%,transparent)}
 .primary:hover:not(:disabled){filter:brightness(1.06)}
-.secondary{width:100%;text-align:center;background:var(--paper)}
-.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.secondary{width:100%;text-align:center;background:var(--paper);font-weight:600}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:7px;min-height:34px}
 .subtle:hover{color:var(--accent)}
-.stack{display:grid;gap:10px}
+.stack{display:grid;gap:9px}
 .actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
-.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:16px}
+.notice{font-size:11.5px;color:var(--muted);line-height:1.66;margin-top:12px}
+/* Quiz screen */
 .question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--accent);font-weight:750;letter-spacing:.06em}
 .auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:11px;font-weight:600;min-height:28px;cursor:pointer}
 .auto-toggle.on{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));color:var(--accent);background:var(--soft)}
-.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:9px 0 8px}
 .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
-.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line);margin-bottom:20px}
+.chapter-dots span{background:var(--accent)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:13px;background:var(--paper);border:1px solid var(--line);margin:10px 0 18px}
 .chapter-num{font-family:var(--serif);font-size:20px;font-weight:800;color:var(--accent2);line-height:1}
 .chapter-bar strong{display:block;font-size:13px;color:var(--ink)}
 .chapter-bar span{display:block;font-size:11px;color:var(--muted);line-height:1.45}
-.options{display:grid;gap:10px;margin:20px 0 22px}
-.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--card)}
+.options{display:grid;gap:10px;margin:18px 0 20px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:58px;width:100%;padding:12px 14px;line-height:1.52;background:var(--card)}
 .option .letter{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:10px;background:var(--paper);color:var(--accent);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .18s}
-.option.selected{border-color:var(--accent);box-shadow:0 4px 14px color-mix(in srgb,var(--accent) 16%,transparent),inset 0 0 0 1px var(--accent);background:var(--soft)}
+.option.selected{border-color:var(--accent);box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 18%,transparent),inset 0 0 0 1px var(--accent);background:var(--soft);transform:translateX(2px)}
 .option.selected .letter{background:var(--accent);color:#fff;border-color:var(--accent)}
 .option .check{margin-left:auto;color:var(--accent);font-weight:800;font-size:15px}
 .nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
 /* Calculating ritual screen */
-.calc-box{text-align:center;padding:34px 10px 26px}
-.calc-ring{width:66px;height:66px;margin:0 auto 20px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite}
+.calc-box{text-align:center;padding:38px 10px 30px}
+.calc-ring{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite;position:relative}
+.calc-ring::after{content:"🏮";position:absolute;inset:0;display:grid;place-items:center;font-size:22px;animation:spinRev 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinRev{to{transform:rotate(-360deg)}}
 .calc-step{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:8px;min-height:1.6em}
 .calc-sub{font-size:12px;color:var(--muted)}
 /* Result Cover */
 .result-cover{border:1px solid var(--line);border-radius:20px;padding:14px;background:var(--paper);position:relative}
-.result-cover .hero{height:168px}
-.result-stamp{position:absolute;top:24px;right:24px;padding:5px 11px;border:1.5px solid rgba(255,255,255,.78);border-radius:8px;font-family:var(--serif);font-size:11px;letter-spacing:2px;color:#fff;background:rgba(0,0,0,.22);backdrop-filter:blur(4px);transform:rotate(3deg)}
+.result-cover .hero{height:164px}
+.result-stamp{position:absolute;top:24px;right:24px;padding:5px 11px;border:1.5px solid rgba(255,255,255,.78);border-radius:8px;font-family:var(--serif);font-size:11px;letter-spacing:2px;color:#fff;background:rgba(0,0,0,.28);backdrop-filter:blur(4px);transform:rotate(3deg)}
 .result-name-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:6px 0 8px}
-.result-name{font-family:var(--serif);font-size:clamp(34px,8.8vw,50px);line-height:1.22;letter-spacing:.03em}
+.result-name{font-family:var(--serif);font-size:clamp(32px,8.2vw,48px);line-height:1.2;letter-spacing:.03em}
 .fit-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:99px;background:var(--accent);color:#fff;font-size:12px;font-weight:750;white-space:nowrap}
-.quote-box{position:relative;margin:12px 0 8px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0}
-.quote{font-family:var(--serif);font-size:17px;color:var(--accent);line-height:1.62;font-weight:600}
-.result-cover .intro{padding:8px 6px 6px}
-.block{padding:22px 0;border-bottom:1px solid var(--line)}
-.block:last-of-type{border:0;padding-bottom:14px}
-.block p{font-size:14.5px;line-height:1.88;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
+.quote-box{position:relative;margin:12px 0 6px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0}
+.quote{font-family:var(--serif);font-size:16.5px;color:var(--accent);line-height:1.62;font-weight:600}
+.result-cover .intro{padding:8px 6px 4px}
+.block{padding:20px 0;border-bottom:1px solid var(--line)}
+.block:last-of-type{border:0;padding-bottom:12px}
+.block p{font-size:14.5px;line-height:1.86;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
 .kicker{font-size:10px;letter-spacing:2.2px;color:var(--accent2);font-weight:800;margin-bottom:5px;text-transform:uppercase}
 .contrast-card{margin-top:13px;padding:13px 15px;border-radius:14px;background:linear-gradient(135deg,var(--soft),var(--paper));border:1px solid var(--line)}
 .contrast-card b{display:block;font-size:12px;color:var(--accent);margin-bottom:4px;letter-spacing:.04em}
 .contrast-card p{font-size:13.5px;line-height:1.75}
-.axis{margin:15px 0}
+.radar-wrap{background:var(--paper);border:1px solid var(--line)}
+.axis{margin:14px 0}
 .axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
 .axis-head strong{font-size:13px}
 .axis-head span{color:var(--accent);font-weight:700}
 .axis-labels{color:var(--muted)}
-.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:8px 0}
+.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:7px 0}
 .track::before{content:"";position:absolute;left:50%;width:1px;height:9px;background:var(--line)}
 .track i{position:absolute;width:16px;height:16px;top:-3.5px;border-radius:50%;background:var(--accent);border:2.5px solid var(--card);box-shadow:0 0 0 1.5px var(--accent);transform:translateX(-50%)}
 .rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -120,23 +128,130 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .mini b{display:block;color:var(--accent);font-size:12px;margin-bottom:5px}
 .mini .partner-name{font-family:var(--serif);font-size:18px;font-weight:800;color:var(--ink);margin-bottom:4px}
 .mini p{font-size:13px;line-height:1.68}
+.chem-box{background:var(--paper);border:1px solid var(--line)}
+.chem-select{border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.chem-out{background:var(--card);border:1px solid var(--line)}
+.chem-pct{color:var(--accent)}
+.chem-bar{background:var(--soft)}
+.chem-bar i{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.chem-copy-btn{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 32%,var(--line));color:var(--accent)}
+.dex-bar{background:var(--paper);border:1px dashed var(--accent2)}
+.dex-open-btn{background:var(--card);border-color:var(--accent);color:var(--accent)}
+.dex-card{background:var(--paper);border:1px solid var(--line)}
+.dex-card.unlocked{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
 .egg-box{padding:14px 16px;border-radius:14px;background:var(--paper);border:1px dashed var(--accent2);margin-top:10px}
 .egg-box b{display:block;font-size:12px;color:var(--accent2);margin-bottom:4px;letter-spacing:.05em}
 .egg-box p{font-size:14px}
 .status-bar{font-size:12px;color:var(--accent);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:600}
-.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
-.poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.footer{text-align:center;margin:16px 0 0;font-size:11px;color:var(--muted);line-height:1.75}
+.poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.theme-chip{background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+.theme-chip.active{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+.sig-input{border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.sig-apply{background:var(--soft);border-color:var(--accent);color:var(--accent)}
 dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:1px solid var(--line);border-radius:22px;padding:20px;background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.25)}
-dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
+dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(4px)}
 .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
 .copy-area{width:100%;min-height:150px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+
+/* === Header Controls & Sound Button === */
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sound-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:99px;font-size:11px;font-weight:700;min-height:28px;line-height:1;letter-spacing:.04em}
+.sound-btn.muted{opacity:.62}
+/* === CTA Shimmer & Interactive Foil Tilt === */
+.primary{position:relative;overflow:hidden}
+.primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.26),transparent);transform:skewX(-18deg);animation:btnSheen 4.4s ease-in-out infinite;pointer-events:none}
+@keyframes btnSheen{0%,68%{left:-120%}100%{left:165%}}
+.foil-tilt{transition:transform .22s ease-out;position:relative}
+.foil-tilt::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,20%),rgba(255,255,255,.16),transparent 54%);opacity:0;transition:opacity .25s}
+.foil-tilt:hover::after{opacity:1}
+/* === Interactive Teaser Cards === */
+.teaser{cursor:pointer;transition:transform .16s ease,border-color .18s ease,box-shadow .18s ease}
+.teaser:hover{transform:translateY(-2px)}
+.teaser:active{transform:scale(.98)}
+/* === Chapter Dots & Keyboard Hint === */
+.chapter-dots{display:flex;gap:5px;margin:8px 0 4px}
+.chapter-dots span{flex:1;height:4px;border-radius:99px;opacity:.22;transition:opacity .25s,transform .25s}
+.chapter-dots span.done{opacity:.72}
+.chapter-dots span.now{opacity:1;transform:scaleY(1.35)}
+.kbd-hint{display:none;text-align:center;font-size:11px;opacity:.65;margin-top:8px}
+@media(hover:hover) and (pointer:fine){.kbd-hint{display:block}}
+/* === Radar Box === */
+.radar-wrap{display:flex;justify-content:center;align-items:center;margin:10px 0 14px;padding:10px;border-radius:16px}
+.radar-svg{width:min(280px,100%);height:auto;display:block}
+.radar-poly{transform-origin:140px 122px;animation:radarPop .55s cubic-bezier(.22,1,.36,1)}
+@keyframes radarPop{from{opacity:0;transform:scale(.45)}to{opacity:1;transform:scale(1)}}
+/* === Friend Compatibility Checker Widget === */
+.chem-box{margin-top:14px;padding:15px;border-radius:15px}
+.chem-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+.chem-head strong{font-size:13.5px}
+.chem-head span{font-size:11px;opacity:.75}
+.chem-select{width:100%;min-height:44px;padding:9px 12px;border-radius:11px;font:inherit;font-size:13.5px;cursor:pointer}
+.chem-out{margin-top:12px;padding:13px 14px;border-radius:12px;animation:enter .24s ease-out}
+.chem-score-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.chem-verdict{font-weight:800;font-size:14px}
+.chem-pct{font-weight:900;font-size:20px;line-height:1}
+.chem-bar{height:7px;border-radius:99px;overflow:hidden;margin:6px 0 9px}
+.chem-bar i{display:block;height:100%;border-radius:99px;transition:width .4s cubic-bezier(.22,1,.36,1)}
+.chem-copy-btn{margin-top:10px;width:100%;min-height:38px;padding:7px 12px;font-size:12.5px;font-weight:700;border-radius:10px}
+/* === Collection Dex Button & Grid === */
+.dex-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;margin-top:12px}
+.dex-bar-info strong{display:block;font-size:13px}
+.dex-bar-info span{display:block;font-size:11.5px;opacity:.75}
+.dex-open-btn{min-height:36px;padding:6px 14px;font-size:12px;font-weight:700;border-radius:99px;flex-shrink:0}
+.dex-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.dex-card{padding:11px 10px;border-radius:12px;display:flex;flex-direction:column;gap:4px}
+.dex-card.locked{opacity:.58;border-style:dashed!important}
+.dex-card b{font-size:13px;line-height:1.35}
+.dex-card small{font-size:11px;line-height:1.45;opacity:.8}
+/* === Poster Customization Controls === */
+.poster-tools{display:grid;gap:9px;margin:10px 0 8px}
+.poster-themes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.theme-chip{min-height:36px;padding:6px 10px;font-size:12px;font-weight:700;border-radius:10px;text-align:center}
+.sig-row{display:flex;gap:8px;align-items:center}
+.sig-input{flex:1;min-height:38px;padding:6px 11px;border-radius:10px;font:inherit;font-size:13px}
+.sig-apply{min-height:38px;padding:6px 13px;font-size:12px;font-weight:700;border-radius:10px;flex-shrink:0}
+/* === Chapter Toast === */
+.quiz-toast{position:fixed;top:16px;left:50%;transform:translate(-50%,-18px);opacity:0;pointer-events:none;z-index:999;padding:8px 16px;border-radius:99px;font-size:12.5px;font-weight:700;box-shadow:0 10px 28px rgba(0,0,0,.22);transition:opacity .25s,transform .25s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.quiz-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:440px){.dex-grid{grid-template-columns:1fr}}
+
+
+      body{background-image:radial-gradient(rgba(138,44,34,.045) 1px,transparent 1px);background-size:26px 26px}
+      section.panel{position:relative;border:1.5px solid var(--line);border-radius:18px;box-shadow:0 24px 56px rgba(52,32,20,.12)}
+      section.panel::before,section.panel::after{content:"";display:block;height:6px;margin:calc(clamp(18px,4.2vw,30px) * -1) calc(clamp(18px,4.2vw,30px) * -1) 18px;background:linear-gradient(90deg,#59251d,#b8863d 20%,#8a2c22 50%,#b8863d 80%,#59251d);opacity:.88}
+      section.panel::after{margin:18px calc(clamp(18px,4.2vw,30px) * -1) calc(clamp(18px,4.2vw,30px) * -1)}
+      .hero{border-radius:12px;background:linear-gradient(160deg,#3d1a16,#6e2820 52%,#2a1814);border:1px solid rgba(212,161,82,.42)}
+      .chop-seal{position:absolute;top:14px;left:14px;width:44px;height:44px;border:2px solid #f0c27b;border-radius:5px;background:rgba(168,42,30,.92);color:#fff5e0;font-family:var(--serif);font-size:15px;font-weight:900;line-height:1.1;display:grid;place-items:center;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.35);letter-spacing:1px}
+      .lantern-sway{transform-origin:540px 140px;animation:lantern 3.6s ease-in-out infinite alternate}
+      @keyframes lantern{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+      .mist-flow{animation:mist 14s ease-in-out infinite alternate}
+      @keyframes mist{from{transform:translateX(-12px)}to{transform:translateX(14px)}}
+      .result-cover{border:1.5px solid color-mix(in srgb,var(--accent2) 55%,var(--line));border-radius:14px;background:linear-gradient(180deg,#fdf9ef,#f3e8d2)}
+      .quiz-toast{background:#8a2c22;color:#fdf8ec}
+    
 @media(max-width:440px){
-  main{padding:14px 12px 28px}
-  .teasers{grid-template-columns:1fr}
+  main{padding:10px 11px 18px}
+  header{margin-bottom:9px;padding-bottom:8px}
+  .brand{letter-spacing:1.1px;font-size:10px;white-space:nowrap}
+  .issue{font-size:10px}
+  section.panel{padding:14px 14px 16px}
+  .hero{height:142px}
+  .eyebrow{margin:10px 0 4px;font-size:10px}
+  h1{font-size:26px;line-height:1.2}
+  .lead{font-size:13px;line-height:1.62;margin:7px 0 10px}
+  .pills{gap:5px;margin:0 0 11px}
+  .pill{font-size:10.5px;padding:3px 9px}
+  button.primary{min-height:42px;padding:10px 14px;font-size:14.5px}
+  .teaser-wrap{margin:11px 0 6px;padding-top:10px}
+  .teaser-head{margin-bottom:7px}
   .duo,.actions-row{grid-template-columns:1fr}
   .option{font-size:14px}
-  .brand{letter-spacing:1.4px}
+  .teaser{padding:8px 7px}
+  .teaser b{font-size:12.5px}
+  .teaser span{font-size:9.5px}
+  .teaser small{font-size:9.5px;-webkit-line-clamp:1}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -145,7 +260,10 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
 <main>
   <header>
     <span class="brand">STORY ATLAS</span>
-    <span class="issue">VOL. 03 · 东方梦华录</span>
+    <div class="header-right">
+      <span class="issue">VOL. 03 · 东方梦华录</span>
+      <button type="button" id="soundBtn" class="sound-btn" aria-label="切换音效">🔊 音效</button>
+    </div>
   </header>
   <div id="app"></div>
   <footer class="footer">原创趣味自我探索 · 仅供娱乐参考，非专业心理测评<br>无需登录 · 所有答题记录仅保存在你的本地浏览器</footer>
@@ -153,10 +271,20 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
 
 <dialog id="posterDialog" aria-labelledby="posterTitle">
   <div class="dialog-head">
-    <h3 id="posterTitle">你的小红书专属海报</h3>
+    <h3 id="posterTitle">你的 3:4 东方古卷人生海报</h3>
     <button id="closePoster" type="button">关闭</button>
   </div>
-  <p class="muted">3:4 高清收藏卡 · 手机直接长按图片保存，或点击下方下载。</p>
+  <p class="muted">1080 × 1440 收藏卡 · 可切换画风与自定义署名，手机长按保存。</p>
+  <div class="poster-tools">
+    <div class="poster-themes" role="group" aria-label="切换海报风格">
+      <button type="button" class="theme-chip active" data-ptheme="0">宣纸丹青古卷</button>
+      <button type="button" class="theme-chip" data-ptheme="1">墨金夜宴御册</button>
+    </div>
+    <div class="sig-row">
+      <input id="sigInput" class="sig-input" type="text" maxlength="12" placeholder="选填雅号（如：青衫客）" aria-label="海报自定义署名">
+      <button type="button" id="sigApply" class="sig-apply">印上署名</button>
+    </div>
+  </div>
   <div id="posterArea"></div>
   <div class="stack" style="margin-top:12px">
     <button class="primary" id="downloadPoster">下载高清 PNG 海报</button>
@@ -174,14 +302,360 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
   <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
 </dialog>
 
+<dialog id="peekDialog" aria-labelledby="peekTitle">
+  <div class="dialog-head">
+    <h3 id="peekTitle">档案预览</h3>
+    <button id="closePeek" type="button">关闭</button>
+  </div>
+  <div id="peekBody"></div>
+</dialog>
+
+<dialog id="dexDialog" aria-labelledby="dexTitle">
+  <div class="dialog-head">
+    <h3 id="dexTitle">16 卷古代人生剧本图录</h3>
+    <button id="closeDex" type="button">关闭</button>
+  </div>
+  <p class="muted" id="dexSub">完成测试自动点亮档案，发给朋友一起集齐全部隐藏结果！</p>
+  <div id="dexGrid" class="dex-grid"></div>
+</dialog>
+
 <script>
-const D={"title":"你在古代拿的是什么人生剧本","subtitle":"古风人格 · 虚构人生","kind":"古风","axes":[["行动方式","谋划","行动"],["人生追求","自由","责任"],["处世方式","独行","协作"],["价值取向","理想","务实"],["表达方式","含蓄","直率"],["探索倾向","守成","创新"]],"questions":[{"axis":0,"text":"一封急信请你解决城中难题，你会？","options":[{"text":"带着初步方案赶去","score":2},{"text":"列出风险再决定","score":1},{"text":"立刻赶往现场处理","score":3},{"text":"先调查来龙去脉","score":0}]},{"axis":1,"text":"朝廷邀你入仕，但你已有心爱的生活。你会？","options":[{"text":"拒绝，守住自在生活","score":0},{"text":"先谈能否保留自由","score":1},{"text":"接受任命，尽力履职","score":3},{"text":"愿意承担部分职责","score":2}]},{"axis":2,"text":"远行时要穿过险峻山路，你选择？","options":[{"text":"独自摸索路线","score":0},{"text":"找一位可靠伙伴同行","score":2},{"text":"自己准备，请人提供线索","score":1},{"text":"组建队伍，明确各人分工","score":3}]},{"axis":3,"text":"挑选师父时，你更看重？","options":[{"text":"实用本领兼顾价值观","score":2},{"text":"能解决现实难题的经验","score":3},{"text":"志趣相投与精神境界","score":0},{"text":"理念吸引，也能学习技艺","score":1}]},{"axis":4,"text":"知己送你一份珍贵礼物，你如何回应？","options":[{"text":"默默珍藏","score":0},{"text":"当面认真道谢","score":2},{"text":"写一封含蓄的谢信","score":1},{"text":"直接说出自己有多感动","score":3}]},{"axis":5,"text":"接手一家经营多年的铺子，你会？","options":[{"text":"保留原来的规矩","score":0},{"text":"先做小幅改良","score":1},{"text":"重新设计整套经营方法","score":3},{"text":"尝试新货品和经营方式","score":2}]},{"axis":1,"text":"可以选择一处长期居所，你偏好？","options":[{"text":"远离牵挂的山林","score":0},{"text":"便于承担公共职责的地方","score":3},{"text":"能兼顾家庭与职责的街区","score":2},{"text":"自由往来的小镇","score":1}]},{"axis":2,"text":"遇到难解的机关谜题，你会？","options":[{"text":"自己反复研究","score":0},{"text":"找伙伴一起分析","score":2},{"text":"独立推演后请教高手","score":1},{"text":"召集不同专长的人合力破解","score":3}]},{"axis":3,"text":"物资有限，如何选择分配原则？","options":[{"text":"参考实际需要调整分配","score":2},{"text":"优先保障最紧迫的现实需求","score":3},{"text":"坚持原则，同时考虑困难","score":1},{"text":"优先维护自己相信的公平原则","score":0}]},{"axis":4,"text":"即将与好友远别，你会？","options":[{"text":"留一首含蓄的赠别诗","score":1},{"text":"坦率告诉对方所有想说的话","score":3},{"text":"把情意藏在一件纪念物里","score":0},{"text":"认真说出不舍","score":2}]},{"axis":5,"text":"学到一门传统技艺之后，你会？","options":[{"text":"创造全新的作品与方法","score":3},{"text":"融合其他技法试验","score":2},{"text":"在细节上做改进","score":1},{"text":"忠实练习祖传方法","score":0}]},{"axis":0,"text":"山路被落石堵住，你会？","options":[{"text":"尝试一条安全的绕路","score":2},{"text":"评估危险再行动","score":1},{"text":"立即组织清障或绕行","score":3},{"text":"查看地形寻找稳妥路线","score":0}]},{"axis":5,"text":"整理旧书时，你会？","options":[{"text":"重新编排并加注解","score":2},{"text":"创造新的分类和检索方式","score":3},{"text":"补齐缺页，改善整理","score":1},{"text":"按原样保存内容与分类","score":0}]},{"axis":4,"text":"被人误会时，你会？","options":[{"text":"不解释，等待时间证明","score":0},{"text":"私下委婉说明","score":1},{"text":"立即直接澄清事实","score":3},{"text":"找合适时机讲清楚","score":2}]},{"axis":3,"text":"遇到一笔不公平的交易，你会？","options":[{"text":"即使吃亏也不违背信念","score":0},{"text":"优先谈出可落实的解决方案","score":3},{"text":"尽力守原则又保护自己","score":1},{"text":"依据实际后果寻找折中","score":2}]},{"axis":2,"text":"参加诗酒宴，你会？","options":[{"text":"与几位宾客交流作品","score":2},{"text":"只与熟人交流","score":1},{"text":"坐在角落独自赏诗","score":0},{"text":"主动组织众人吟诗互动","score":3}]},{"axis":1,"text":"家族希望你继承事业，你更倾向？","options":[{"text":"在责任与兴趣间找平衡","score":2},{"text":"接下责任并尽力经营","score":3},{"text":"协商保留选择权","score":1},{"text":"走自己的道路","score":0}]},{"axis":0,"text":"陌生人请你协助寻物，你会？","options":[{"text":"先核实他的说法","score":0},{"text":"沿途边问边找","score":2},{"text":"直接着手查找再调整","score":3},{"text":"了解关键线索后出发","score":1}]},{"axis":1,"text":"一段漫长旅程结束后，你想？","options":[{"text":"自由选择下一处停留地","score":1},{"text":"回到需要你的地方承担职责","score":3},{"text":"寻找既有自由又有承诺的生活","score":2},{"text":"继续漫游，不被身份绑定","score":0}]},{"axis":2,"text":"街巷出现流言，你会？","options":[{"text":"独自核实并保持距离","score":0},{"text":"向一位知情者请教","score":1},{"text":"联合各方澄清并解决问题","score":3},{"text":"约相关的人一起核实","score":2}]},{"axis":3,"text":"远行机会与你的理想冲突，你会？","options":[{"text":"依据风险与可行性决定","score":3},{"text":"选择心中坚信的方向","score":0},{"text":"优先信念但考虑代价","score":1},{"text":"比较理想与实际收益","score":2}]},{"axis":4,"text":"在议事会上有不同意见，你会？","options":[{"text":"公开清楚地表达","score":2},{"text":"用暗示表达保留","score":0},{"text":"私下委婉提出","score":1},{"text":"当场直言并说明理由","score":3}]},{"axis":5,"text":"制定新的工坊规矩时，你会？","options":[{"text":"沿用历代验证的制度","score":0},{"text":"借鉴新办法逐步试行","score":2},{"text":"设计一套完全不同的制度","score":3},{"text":"只改明显不便的部分","score":1}]},{"axis":0,"text":"同伴争论如何处理紧急状况，你会？","options":[{"text":"先推动行动，再随时调整","score":3},{"text":"选可行方案马上试行","score":2},{"text":"分析两种做法的风险","score":1},{"text":"先梳理方案再表态","score":0}]},{"axis":0,"text":"听说附近发现新商路，你会？","options":[{"text":"带少量物资先行探索","score":2},{"text":"先研究地图和过往记录","score":0},{"text":"马上动身探路","score":3},{"text":"找人确认路线再出发","score":1}]},{"axis":1,"text":"得到一笔足够生活的财富，你想？","options":[{"text":"换来自由自在的日子","score":0},{"text":"兼顾自己与家人的需要","score":2},{"text":"优先投入长期承担的事业","score":3},{"text":"保留大部分用于个人选择","score":1}]},{"axis":2,"text":"筹备一年一度的庆典，你愿意？","options":[{"text":"负责一块，必要时请人帮忙","score":1},{"text":"和小组合作完成筹备","score":2},{"text":"组织整个团队统筹分工","score":3},{"text":"独自完成一项任务","score":0}]},{"axis":3,"text":"只能留下一件传家之物，你选？","options":[{"text":"能改善后代生活的实用资源","score":3},{"text":"有故事又能长期保存的物件","score":1},{"text":"承载理想与信念的信物","score":0},{"text":"既有意义又实用的工具","score":2}]},{"axis":4,"text":"遇见心仪之人，你会？","options":[{"text":"以诗文或小事传达心意","score":1},{"text":"默默欣赏，暂不表露","score":0},{"text":"坦率告诉对方自己的心意","score":3},{"text":"找机会明确表达","score":2}]},{"axis":5,"text":"异域来客带来一种新工具，你会？","options":[{"text":"与旧工具结合做实验","score":2},{"text":"继续使用熟悉的方法","score":0},{"text":"了解原理后谨慎尝试","score":1},{"text":"大胆试用并改造新工具","score":3}]}],"profiles":[{"name":"山野隐士","vector":[0,0,0,0,0,0],"tag":"古风人生剧本","quote":"山中无官印，自有天地宽。","insight":"世人皆逐功名利禄，唯有你一眼看穿浮华背后的虚耗。你习惯先静观天地再落步，把自由与内心清明放在最高处，哪怕身居茅舍，心中也自有辽阔山河。","strength":"独立判断、守住初心","caution":"别把退让变成回避","action":"主线：经营山间居所，记录四季与见闻；彩蛋：一卷未署名的游记","motif":"松风归隐","no":"01","tags":["松风傲骨","清醒避世","自在逍遥"],"contrast":"看似不问世事、淡泊如云，实则眼光毒辣通透，真出手时往往一语道破天机。","match":["田园诗人","煮茶论诗、同赏烟霞，是最懂你留白的山中知己。"],"clash":["边关将军","一个想归隐听松，一个想建功沙场，志向南辕北辙。"],"quest":"经营一处竹林山居，记录四季草木与江湖奇闻","egg":"一卷未署名却流传千里的绝世游记"},{"name":"江湖侠客","vector":[3,0,0,0,3,3],"tag":"古风人生剧本","quote":"一剑一诺，四海为家。","insight":"你生来不属于规矩森严的庙堂，一袭青衫、一柄长剑、一句承诺便是你的全部底气。你厌恶虚伪算计，习惯用最直接的行动守护心中道义，四海为家反倒最自在。","strength":"果断、独立、敢于尝试","caution":"行动前多核实风险","action":"主线：护送远行商队，解开江湖旧案；彩蛋：一枚旧剑穗","motif":"行侠四方","no":"02","tags":["快意恩仇","赤子侠心","不被驯服"],"contrast":"外表孤傲飒爽、说走就走，其实重情重义到骨子里，为了知己能千里奔袭。","match":["远航使者","都向往无拘无束的远方，一拍即合闯遍山海。"],"clash":["古籍编修","你爱仗剑闯天涯，对方爱闭门校典籍，半天能把你闷坏。"],"quest":"护送神秘商队穿越险峰，顺手揭开十年前江湖旧案","egg":"一枚救命恩人留下的褪色旧剑穗"},{"name":"青衣谋士","vector":[0,3,2,2,0,2],"tag":"古风人生剧本","quote":"不必立于台前，也能定下棋局。","insight":"你从不争台前的聚光灯，却总能悄无声息地左右整盘棋局的走向。面对乱局你愈发冷静，擅长从细枝末节里推演人心与大势，一纸书信便能定下乾坤。","strength":"谋划与协调","caution":"别因反复推演错过时机","action":"主线：为一座城设计解围之策；彩蛋：一盘未下完的棋","motif":"灯下筹谋","no":"03","tags":["运筹帷幄","全局视野","静默破局"],"contrast":"外人以为你冷静无情、满腹算计，其实你比谁都珍视托付真心的盟友。","match":["边关将军","一文一武、一谋一断，堪称乱世横扫千军的王炸组合。"],"clash":["江湖侠客","你刚布好三层连环计，对方已经提剑直接冲进去了。"],"quest":"孤身入局，为危城设计一场兵不血刃的解围奇策","egg":"一盘留给知己续下的残局棋谱"},{"name":"边关将军","vector":[3,3,3,3,3,0],"tag":"古风人生剧本","quote":"风起边关，与你并肩。","insight":"风雪越紧，你站得越直。你天生自带领袖气场与极强责任感，从不推诿逃避，习惯在关键时刻挺身而出、定下军心。有你在的地方，伙伴永远觉得背后有靠山。","strength":"组织与执行","caution":"给伙伴留出表达不同意见的空间","action":"主线：带领边关守军修整防线；彩蛋：一封平安家书","motif":"长风守城","no":"04","tags":["铁血担当","一诺千金","团队主心骨"],"contrast":"沙场上雷厉风行、令行禁止，深夜灯下写家书时却温柔得判若两人。","match":["青衣谋士","你负责冲锋破阵，对方负责运筹后方，生死可托。"],"clash":["山野隐士","你心系家国苍生，实在看不得对方整天晒太阳钓鱼。"],"quest":"率领铁骑修筑关隘防线，守护边境十年太平","egg":"一封压在铠甲内侧、折痕泛白的平安家书"},{"name":"游方医师","vector":[2,3,1,0,1,2],"tag":"古风人生剧本","quote":"行千里路，解一处忧。","insight":"你把温柔与责任炼成了实打实的本事，背着药箱走过千山万水，只为解人间一处疾苦。你不爱空谈大道理，更相信每一贴对症的良药、每一次耐心的倾听，才是真修行。","strength":"关怀与动手能力","caution":"帮助他人时也保护自己的精力","action":"主线：行走乡野，整理草木见闻；彩蛋：一本手绘药草册","motif":"杏林行旅","no":"05","tags":["仁心妙手","行走人间","外柔内韧"],"contrast":"眉眼温和慈悲、像春风拂面，实则见过太多生死，内心比常人更笃定强悍。","match":["书院先生","一个医身一个医心，同怀悲悯，相谈甚欢。"],"clash":["商路掌柜","你重济世情怀，对方先算投入产出，理念时常交锋。"],"quest":"行走九州乡野，破解奇症并写就传世草木医典","egg":"一本画满山野花草的彩绘手札"},{"name":"宫廷画师","vector":[1,0,0,0,1,3],"tag":"古风人生剧本","quote":"以一笔春山，留住人间。","insight":"世人看江山看权力，你却只看见光影流转、色彩浓淡与人间一瞬的动人。你痴迷于打破陈规的艺术表达，哪怕身处规矩重重之地，笔下依然守着一片完全自由的天地。","strength":"观察与创造","caution":"让灵感落到可完成的小作品","action":"主线：绘制一幅四时长卷；彩蛋：一盒亲制颜料","motif":"画里山河","no":"06","tags":["丹青妙笔","极致审美","藏锋于画"],"contrast":"平时安静沉醉在自己的世界里，一旦涉及作品与审美原则，寸步不让。","match":["乐坊琴师","一画一音、灵魂共振，连呼吸都踩在同一拍美感上。"],"clash":["巡城捕快","你忙着捕捉晚霞色调，对方满脑子都是线索和规矩。"],"quest":"历时三年绘制一幅惊艳朝野的《四时山河长卷》","egg":"一盒用西域矿石亲手研磨的秘制天青颜料"},{"name":"书院先生","vector":[0,3,2,0,2,0],"tag":"古风人生剧本","quote":"一盏书灯，照亮后来人。","insight":"你有着清晰的思辨力与持久的耐心，享受把繁杂道理拆解得清澈明白的过程。你深信思想比刀剑流传更远，愿做那一盏长明书灯，照亮后来人的前路。","strength":"耐心与清晰表达","caution":"也为不同见解留出位置","action":"主线：开设一间面向乡里的书院；彩蛋：学生送来的书签","motif":"书院灯火","no":"07","tags":["温润如玉","春风化雨","守道传灯"],"contrast":"看似温文尔雅、满腹经纶，辩论起是非曲直时逻辑锋利、字字珠玑。","match":["古籍编修","灯下共读、切磋学问，精神世界富足到极点。"],"clash":["江湖侠客","你刚讲完“以理服人”，对方已经拔剑说“废话少说”。"],"quest":"在青山脚下创办一间有教无类的民间书院","egg":"学生们偷偷夹在教案里的手绘银杏书签"},{"name":"商路掌柜","vector":[2,2,3,3,2,3],"tag":"古风人生剧本","quote":"路远不惧，万物可通。","insight":"别人看见的是荒漠险滩，你看见的却是贯通南北的黄金商路！你敏锐通透、擅长整合资源与凝聚人心，从不拘泥旧规，总能在变动里率先嗅到机会、把盘子做大做活。","strength":"协作与机会识别","caution":"避免忽视长期信用","action":"主线：开辟跨城商路，建立可靠伙伴网络；彩蛋：一张手绘商路图","motif":"万里商途","no":"08","tags":["生财有道","八面玲珑","务实破局"],"contrast":"算盘打得噼啪响像个精明商人，暗地里却常悄悄资助乡里、最讲长期信义。","match":["开拓领主","一个打通商路，一个建设新城，强强联手富甲一方。"],"clash":["山野隐士","你满眼都是商机，对方只想躺平看云，聊三句就分道扬镳。"],"quest":"打通跨越千里的丝绸商道，建立遍布九州的联号网络","egg":"一张标注着秘密驿站与美食摊的手绘商路图"},{"name":"巡城捕快","vector":[3,3,1,3,3,0],"tag":"古风人生剧本","quote":"拨开迷雾，自有清明。","insight":"你眼里揉不得沙子，最讨厌含糊敷衍与不公。你脚踏实地、行动力极强，擅长在鱼龙混杂的市井里抽丝剥茧、还原真相，是百姓夜里敢安心睡觉的底气。","strength":"执行与事实核查","caution":"结论前多听不同说法","action":"主线：调查市井失物案；彩蛋：一本记满线索的簿子","motif":"街巷明察","no":"09","tags":["明察秋毫","正义行动派","市井守护者"],"contrast":"白天板着脸查案一丝不苟，收工后在夜市吃碗馄饨就能笑得像个大男孩/女孩。","match":["治水官员","都是实干为民、不玩虚的靠谱派，搭档办事效率翻倍。"],"clash":["乐坊琴师","你习惯追问确凿证据，对方偏爱含蓄意境，常常鸡同鸭讲。"],"quest":"三日连破城中奇案，顺藤摸瓜揪出幕后黑手","egg":"一本写满街巷暗语与线索的泛黄随身簿"},{"name":"远航使者","vector":[3,0,3,2,2,3],"tag":"古风人生剧本","quote":"风帆所至，皆是新篇。","insight":"你的心永远装不下高墙以内的方寸天地。陌生海域的风浪、异域的语言与未知的故事，对你而言不是风险而是召唤。你天生懂得如何在新世界里破冰联结、开疆拓土。","strength":"适应力与开拓","caution":"出发前准备安全退路","action":"主线：随船远航，带回异地故事；彩蛋：一枚远方贝壳","motif":"远海风帆","no":"10","tags":["星辰大海","开放无畏","跨界桥梁"],"contrast":"看着洒脱不羁、四海皆可为家，其实每到一处都会悄悄收藏给故人的小礼物。","match":["江湖侠客","一样的自由灵魂，一个闯陆地江湖，一个渡万里沧海。"],"clash":["古籍编修","你想扬帆冲向未知海域，对方劝你先把旧海图校对三年。"],"quest":"率宝船穿越迷雾海域，绘出第一幅新世界航海志","egg":"一枚在极南海岸拾得的发光螺壳"},{"name":"古籍编修","vector":[0,2,0,2,0,0],"tag":"古风人生剧本","quote":"纸墨无声，岁月有痕。","insight":"喧嚣世界里，你能稳稳守住一张书桌、一卷残简。你迷恋精准、可靠与经得起岁月考验的成果，不追逐一夜爆红，更愿意用日复一日的打磨，把文明的火种妥帖留给后人。","strength":"细致与长期积累","caution":"偶尔试试新工具与新视角","action":"主线：校订散落典籍；彩蛋：藏在书页里的前人批注","motif":"典籍微光","no":"11","tags":["静心守艺","严谨沉淀","时间盟友"],"contrast":"看似沉默寡言、一板一眼，其实内心藏着一座波澜壮阔的百科宝库。","match":["书院先生","志趣相投、静默相伴，共同守住一方清净的精神桃源。"],"clash":["开拓领主","你讲究考据稳妥，对方讲究先干再说，合作时互相抓狂。"],"quest":"寻回散落民间的孤本残卷，完成传世大典校订","egg":"夹在百年前书页里的一句前人幽默批注"},{"name":"工坊匠人","vector":[1,1,0,3,0,3],"tag":"古风人生剧本","quote":"一凿一刻，皆有新意。","insight":"你是古代版的硬核发明家！比起唇枪舌剑的社交场，你更享受独自钻研结构、改良器物的心流时刻。一件看似寻常的物件落到你手里，总能被赋予惊艳世人的新巧思。","strength":"实践创造与耐心","caution":"避免陷在无止境的打磨里","action":"主线：造一件便利百姓生活的新器具；彩蛋：刻着日期的小木尺","motif":"巧手造物","no":"12","tags":["巧夺天工","硬核极客","器物灵魂"],"contrast":"平时沉浸在木屑与图纸里话不多，一聊起机关原理瞬间两眼放光。","match":["商路掌柜","你负责造出惊艳天下的神器，对方负责卖遍四海九州。"],"clash":["田园诗人","你忙着算齿轮咬合精度，对方正对着落叶吟诗感怀。"],"quest":"发明一件省力十倍的奇巧农具与精妙机关锁","egg":"一把刻着每次失败与成功日期的随身小木尺"},{"name":"田园诗人","vector":[0,0,1,0,2,1],"tag":"古风人生剧本","quote":"闲看云起，提笔成诗。","insight":"你拥有把一缕清风、半盏残月写成千古名句的天赋。你不愿被名利场消耗灵气，更珍视自由抒发与审美的丰盈——只要笔墨在手、心境自由，处处皆是桃花源。","strength":"感受力与表达","caution":"给创作安排稳定的节奏","action":"主线：写一册四季田园诗；彩蛋：落在纸上的一片叶","motif":"田园诗笺","no":"13","tags":["浪漫感知力","文字炼金术","灵魂松弛"],"contrast":"看似柔情似水、多愁善感，其实对世俗虚伪有着极其清醒的讽刺与傲骨。","match":["山野隐士","一壶薄酒、半窗明月，无需多言便是旷世知音。"],"clash":["巡城捕快","你在意风花雪月的情绪，对方只关心案发现场的物证。"],"quest":"游历山川写就一册令京城洛阳纸贵的《四季田园诗集》","egg":"一片恰好落在绝句墨迹上的红枫叶"},{"name":"治水官员","vector":[1,3,3,3,1,2],"tag":"古风人生剧本","quote":"让奔流之水，归于安宁。","insight":"你是最令人安心的“大局实干家”。面对千头万绪的复杂工程，你既不慌乱也不冒进，擅长实地勘察、统筹资源、协调各方利益，把一场场洪流驯服为滋养万顷良田的安宁江河。","strength":"系统规划与团队配合","caution":"给复杂任务预留调整余地","action":"主线：勘察河道，组织乡民修缮水渠；彩蛋：一张水系图","motif":"江河有序","no":"14","tags":["系统谋划","泽被苍生","定海神针"],"contrast":"平时沉稳克制、事必躬亲，看到万家灯火亮起的那一刻内心会涌起滚烫骄傲。","match":["工坊匠人","一个统筹全局，一个攻克技术难关，基建狂魔天花板。"],"clash":["江湖侠客","你需要按章程协同推进，最怕有人单枪匹马把计划打乱。"],"quest":"亲赴下游勘察水脉，率十万军民修成造福百年的水利奇观","egg":"一卷画满沿途风土与堤坝记号的手绘水系长图"},{"name":"乐坊琴师","vector":[1,0,2,0,0,2],"tag":"古风人生剧本","quote":"弦音未落，心事已明。","insight":"你天生对情绪、声音与氛围有着超乎常人的敏感。说不出口的心事，你全揉进了高低起伏的弦音里。你不需要大声喧哗，轻轻拨动琴弦，便能让懂你的人瞬间红了眼眶。","strength":"审美与共情","caution":"重要的话也可以直接说出来","action":"主线：谱写一支记录重逢的曲子；彩蛋：一段未写完的乐谱","motif":"琴音如水","no":"15","tags":["弦外知音","氛围感大师","以情动人"],"contrast":"看起来温婉神秘、若即若离，实则敢爱敢恨，内心藏着惊涛骇浪般的深情。","match":["宫廷画师","高山流水遇知音，共同创造极致东方美学的神仙搭档。"],"clash":["边关将军","你讲究留白余韵，对方嗓门洪亮直白，画风反差拉满。"],"quest":"谱写一曲轰动长安、令人闻之落泪的《重逢引》","egg":"一段留白待知音续写的未完古琴残谱"},{"name":"开拓领主","vector":[3,3,3,2,3,3],"tag":"古风人生剧本","quote":"荒地之上，亦能生出灯火。","insight":"荒原在别人眼里是绝境，在你眼里却是可以亲手点亮灯火的白纸！你兼具远见、魄力与行动力，既敢于打破旧世界，又愿意扛起责任，凝聚一群志同道合的伙伴共筑理想之城。","strength":"开拓与动员","caution":"别把自己的节奏强加给所有人","action":"主线：与伙伴建立一处新村落；彩蛋：第一盏村口灯笼","motif":"拓土筑梦","no":"16","tags":["从0到1先锋","感召力拉满","造梦实干家"],"contrast":"白天带着众人开山辟路气势如虹，夜深人静时也会偷偷复盘怕辜负大家的信任。","match":["商路掌柜","双核驱动，把一片荒土打造成万商云集的传奇之城。"],"clash":["古籍编修","你要大刀阔斧开创新纪元，对方总提醒你“祖制不可轻废”。"],"quest":"带领志同道合的伙伴在荒野之上建起一座灯火长明的新城","egg":"亲手点亮的第一盏城门铜灯"}],"brand":"STORY ATLAS","heroTitle":"入梦山河","heroSub":"A TALE OF ANOTHER LIFE","intro":"假如故事发生在古代，你会如何选择自由、责任、技艺与人情？走过三十个虚构情境，开启属于你的古风人生篇章。","disclaimer":"身份、情节和彩蛋均为虚构娱乐内容，不是前世或命运预测。","labels":["你的古风人格画卷","人生主线与隐藏奇遇","宿命知己 & 江湖反差搭档"],"art":"<svg viewBox=\"0 0 600 240\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"600\" height=\"240\" fill=\"#773c30\"/><circle cx=\"465\" cy=\"65\" r=\"45\" fill=\"#dcb47b\"/><path d=\"M0 170 115 47 196 153 278 82 360 161 450 94 600 173V240H0Z\" fill=\"#d8b190\" opacity=\".45\"/><path d=\"M0 179Q150 123 280 191T600 180V240H0Z\" fill=\"#4d302c\" opacity=\".6\"/><g stroke=\"#f4d7ac\" fill=\"none\" stroke-width=\"3\"><path d=\"M395 171H560M410 169V140H545V169M400 140Q478 112 555 140M430 140V113H523V140M420 112Q476 91 533 112M450 113V91H505V113M440 91Q478 70 515 91\"/></g><g stroke=\"#d3a97d\" opacity=\".7\"><path d=\"M30 8Q100 80 30 145M55 12Q120 67 75 124M20 15Q70 45 88 68\" fill=\"none\"/></g></svg>","palette":{"ink":"#342420","accent":"#82382b","accent2":"#b88746","paper":"#f5ece0","soft":"#ebdccc","line":"#dcc7ae","card":"#fffbf2","muted":"#756056"},"vol":"VOL. 03 · 东方梦华录","teasers":["青衣谋士","江湖侠客","山野隐士"],"chapters":[{"title":"初入江湖","intro":"一纸飞书打破平静，你的古风人生从第一次抉择开启。"},{"title":"庙堂与山林","intro":"自由还是担当，独行还是结伴？每一步都在书写命运。"},{"title":"人心与道义","intro":"面对情义、利弊与误解，你骨子里的风骨会如何作答？"},{"title":"技艺与风华","intro":"守住传承还是开创新章，你准备在这卷山河留下何种印记？"},{"title":"终章落笔","intro":"行至故事高潮，属于你的古风人生剧本即将揭晓。"}],"calcSteps":["正在展开你的古风命运画卷…","推演六维风骨与处世抉择…","钤印你的专属古代人生剧本…"],"eggLabel":"隐藏奇遇彩蛋","shareTags":"#你在古代拿的是什么人生剧本 #古风人格测试 #国风测试","shareHook":"笑死，原来我在古代拿的竟然是「{name}」剧本📜"};
+const D={"title":"你在古代拿的是什么人生剧本","subtitle":"古风人格 · 虚构人生","kind":"古风","axes":[["行动方式","谋划","行动"],["人生追求","自由","责任"],["处世方式","独行","协作"],["价值取向","理想","务实"],["表达方式","含蓄","直率"],["探索倾向","守成","创新"]],"questions":[{"axis":0,"text":"一封急信请你解决城中难题，你会？","options":[{"text":"带着初步方案赶去","score":2},{"text":"列出风险再决定","score":1},{"text":"立刻赶往现场处理","score":3},{"text":"先调查来龙去脉","score":0}]},{"axis":1,"text":"朝廷邀你入仕，但你已有心爱的生活。你会？","options":[{"text":"拒绝，守住自在生活","score":0},{"text":"先谈能否保留自由","score":1},{"text":"接受任命，尽力履职","score":3},{"text":"愿意承担部分职责","score":2}]},{"axis":2,"text":"远行时要穿过险峻山路，你选择？","options":[{"text":"独自摸索路线","score":0},{"text":"找一位可靠伙伴同行","score":2},{"text":"自己准备，请人提供线索","score":1},{"text":"组建队伍，明确各人分工","score":3}]},{"axis":3,"text":"挑选师父时，你更看重？","options":[{"text":"实用本领兼顾价值观","score":2},{"text":"能解决现实难题的经验","score":3},{"text":"志趣相投与精神境界","score":0},{"text":"理念吸引，也能学习技艺","score":1}]},{"axis":4,"text":"知己送你一份珍贵礼物，你如何回应？","options":[{"text":"默默珍藏","score":0},{"text":"当面认真道谢","score":2},{"text":"写一封含蓄的谢信","score":1},{"text":"直接说出自己有多感动","score":3}]},{"axis":5,"text":"接手一家经营多年的铺子，你会？","options":[{"text":"保留原来的规矩","score":0},{"text":"先做小幅改良","score":1},{"text":"重新设计整套经营方法","score":3},{"text":"尝试新货品和经营方式","score":2}]},{"axis":1,"text":"可以选择一处长期居所，你偏好？","options":[{"text":"远离牵挂的山林","score":0},{"text":"便于承担公共职责的地方","score":3},{"text":"能兼顾家庭与职责的街区","score":2},{"text":"自由往来的小镇","score":1}]},{"axis":2,"text":"遇到难解的机关谜题，你会？","options":[{"text":"自己反复研究","score":0},{"text":"找伙伴一起分析","score":2},{"text":"独立推演后请教高手","score":1},{"text":"召集不同专长的人合力破解","score":3}]},{"axis":3,"text":"物资有限，如何选择分配原则？","options":[{"text":"参考实际需要调整分配","score":2},{"text":"优先保障最紧迫的现实需求","score":3},{"text":"坚持原则，同时考虑困难","score":1},{"text":"优先维护自己相信的公平原则","score":0}]},{"axis":4,"text":"即将与好友远别，你会？","options":[{"text":"留一首含蓄的赠别诗","score":1},{"text":"坦率告诉对方所有想说的话","score":3},{"text":"把情意藏在一件纪念物里","score":0},{"text":"认真说出不舍","score":2}]},{"axis":5,"text":"学到一门传统技艺之后，你会？","options":[{"text":"创造全新的作品与方法","score":3},{"text":"融合其他技法试验","score":2},{"text":"在细节上做改进","score":1},{"text":"忠实练习祖传方法","score":0}]},{"axis":0,"text":"山路被落石堵住，你会？","options":[{"text":"尝试一条安全的绕路","score":2},{"text":"评估危险再行动","score":1},{"text":"立即组织清障或绕行","score":3},{"text":"查看地形寻找稳妥路线","score":0}]},{"axis":5,"text":"整理旧书时，你会？","options":[{"text":"重新编排并加注解","score":2},{"text":"创造新的分类和检索方式","score":3},{"text":"补齐缺页，改善整理","score":1},{"text":"按原样保存内容与分类","score":0}]},{"axis":4,"text":"被人误会时，你会？","options":[{"text":"不解释，等待时间证明","score":0},{"text":"私下委婉说明","score":1},{"text":"立即直接澄清事实","score":3},{"text":"找合适时机讲清楚","score":2}]},{"axis":3,"text":"遇到一笔不公平的交易，你会？","options":[{"text":"即使吃亏也不违背信念","score":0},{"text":"优先谈出可落实的解决方案","score":3},{"text":"尽力守原则又保护自己","score":1},{"text":"依据实际后果寻找折中","score":2}]},{"axis":2,"text":"参加诗酒宴，你会？","options":[{"text":"与几位宾客交流作品","score":2},{"text":"只与熟人交流","score":1},{"text":"坐在角落独自赏诗","score":0},{"text":"主动组织众人吟诗互动","score":3}]},{"axis":1,"text":"家族希望你继承事业，你更倾向？","options":[{"text":"在责任与兴趣间找平衡","score":2},{"text":"接下责任并尽力经营","score":3},{"text":"协商保留选择权","score":1},{"text":"走自己的道路","score":0}]},{"axis":0,"text":"陌生人请你协助寻物，你会？","options":[{"text":"先核实他的说法","score":0},{"text":"沿途边问边找","score":2},{"text":"直接着手查找再调整","score":3},{"text":"了解关键线索后出发","score":1}]},{"axis":1,"text":"一段漫长旅程结束后，你想？","options":[{"text":"自由选择下一处停留地","score":1},{"text":"回到需要你的地方承担职责","score":3},{"text":"寻找既有自由又有承诺的生活","score":2},{"text":"继续漫游，不被身份绑定","score":0}]},{"axis":2,"text":"街巷出现流言，你会？","options":[{"text":"独自核实并保持距离","score":0},{"text":"向一位知情者请教","score":1},{"text":"联合各方澄清并解决问题","score":3},{"text":"约相关的人一起核实","score":2}]},{"axis":3,"text":"远行机会与你的理想冲突，你会？","options":[{"text":"依据风险与可行性决定","score":3},{"text":"选择心中坚信的方向","score":0},{"text":"优先信念但考虑代价","score":1},{"text":"比较理想与实际收益","score":2}]},{"axis":4,"text":"在议事会上有不同意见，你会？","options":[{"text":"公开清楚地表达","score":2},{"text":"用暗示表达保留","score":0},{"text":"私下委婉提出","score":1},{"text":"当场直言并说明理由","score":3}]},{"axis":5,"text":"制定新的工坊规矩时，你会？","options":[{"text":"沿用历代验证的制度","score":0},{"text":"借鉴新办法逐步试行","score":2},{"text":"设计一套完全不同的制度","score":3},{"text":"只改明显不便的部分","score":1}]},{"axis":0,"text":"同伴争论如何处理紧急状况，你会？","options":[{"text":"先推动行动，再随时调整","score":3},{"text":"选可行方案马上试行","score":2},{"text":"分析两种做法的风险","score":1},{"text":"先梳理方案再表态","score":0}]},{"axis":0,"text":"听说附近发现新商路，你会？","options":[{"text":"带少量物资先行探索","score":2},{"text":"先研究地图和过往记录","score":0},{"text":"马上动身探路","score":3},{"text":"找人确认路线再出发","score":1}]},{"axis":1,"text":"得到一笔足够生活的财富，你想？","options":[{"text":"换来自由自在的日子","score":0},{"text":"兼顾自己与家人的需要","score":2},{"text":"优先投入长期承担的事业","score":3},{"text":"保留大部分用于个人选择","score":1}]},{"axis":2,"text":"筹备一年一度的庆典，你愿意？","options":[{"text":"负责一块，必要时请人帮忙","score":1},{"text":"和小组合作完成筹备","score":2},{"text":"组织整个团队统筹分工","score":3},{"text":"独自完成一项任务","score":0}]},{"axis":3,"text":"只能留下一件传家之物，你选？","options":[{"text":"能改善后代生活的实用资源","score":3},{"text":"有故事又能长期保存的物件","score":1},{"text":"承载理想与信念的信物","score":0},{"text":"既有意义又实用的工具","score":2}]},{"axis":4,"text":"遇见心仪之人，你会？","options":[{"text":"以诗文或小事传达心意","score":1},{"text":"默默欣赏，暂不表露","score":0},{"text":"坦率告诉对方自己的心意","score":3},{"text":"找机会明确表达","score":2}]},{"axis":5,"text":"异域来客带来一种新工具，你会？","options":[{"text":"与旧工具结合做实验","score":2},{"text":"继续使用熟悉的方法","score":0},{"text":"了解原理后谨慎尝试","score":1},{"text":"大胆试用并改造新工具","score":3}]}],"profiles":[{"name":"山野隐士","vector":[0,0,0,0,0,0],"tag":"古风人生剧本","quote":"山中无官印，自有天地宽。","insight":"世人皆逐功名利禄，唯有你一眼看穿浮华背后的虚耗。你习惯先静观天地再落步，把自由与内心清明放在最高处，哪怕身居茅舍，心中也自有辽阔山河。","strength":"独立判断、守住初心","caution":"别把退让变成回避","action":"主线：经营山间居所，记录四季与见闻；彩蛋：一卷未署名的游记","motif":"松风归隐","no":"01","tags":["松风傲骨","清醒避世","自在逍遥"],"contrast":"看似不问世事、淡泊如云，实则眼光毒辣通透，真出手时往往一语道破天机。","match":["田园诗人","煮茶论诗、同赏烟霞，是最懂你留白的山中知己。"],"clash":["边关将军","一个想归隐听松，一个想建功沙场，志向南辕北辙。"],"quest":"经营一处竹林山居，记录四季草木与江湖奇闻","egg":"一卷未署名却流传千里的绝世游记"},{"name":"江湖侠客","vector":[3,0,0,0,3,3],"tag":"古风人生剧本","quote":"一剑一诺，四海为家。","insight":"你生来不属于规矩森严的庙堂，一袭青衫、一柄长剑、一句承诺便是你的全部底气。你厌恶虚伪算计，习惯用最直接的行动守护心中道义，四海为家反倒最自在。","strength":"果断、独立、敢于尝试","caution":"行动前多核实风险","action":"主线：护送远行商队，解开江湖旧案；彩蛋：一枚旧剑穗","motif":"行侠四方","no":"02","tags":["快意恩仇","赤子侠心","不被驯服"],"contrast":"外表孤傲飒爽、说走就走，其实重情重义到骨子里，为了知己能千里奔袭。","match":["远航使者","都向往无拘无束的远方，一拍即合闯遍山海。"],"clash":["古籍编修","你爱仗剑闯天涯，对方爱闭门校典籍，半天能把你闷坏。"],"quest":"护送神秘商队穿越险峰，顺手揭开十年前江湖旧案","egg":"一枚救命恩人留下的褪色旧剑穗"},{"name":"青衣谋士","vector":[0,3,2,2,0,2],"tag":"古风人生剧本","quote":"不必立于台前，也能定下棋局。","insight":"你从不争台前的聚光灯，却总能悄无声息地左右整盘棋局的走向。面对乱局你愈发冷静，擅长从细枝末节里推演人心与大势，一纸书信便能定下乾坤。","strength":"谋划与协调","caution":"别因反复推演错过时机","action":"主线：为一座城设计解围之策；彩蛋：一盘未下完的棋","motif":"灯下筹谋","no":"03","tags":["运筹帷幄","全局视野","静默破局"],"contrast":"外人以为你冷静无情、满腹算计，其实你比谁都珍视托付真心的盟友。","match":["边关将军","一文一武、一谋一断，堪称乱世横扫千军的王炸组合。"],"clash":["江湖侠客","你刚布好三层连环计，对方已经提剑直接冲进去了。"],"quest":"孤身入局，为危城设计一场兵不血刃的解围奇策","egg":"一盘留给知己续下的残局棋谱"},{"name":"边关将军","vector":[3,3,3,3,3,0],"tag":"古风人生剧本","quote":"风起边关，与你并肩。","insight":"风雪越紧，你站得越直。你天生自带领袖气场与极强责任感，从不推诿逃避，习惯在关键时刻挺身而出、定下军心。有你在的地方，伙伴永远觉得背后有靠山。","strength":"组织与执行","caution":"给伙伴留出表达不同意见的空间","action":"主线：带领边关守军修整防线；彩蛋：一封平安家书","motif":"长风守城","no":"04","tags":["铁血担当","一诺千金","团队主心骨"],"contrast":"沙场上雷厉风行、令行禁止，深夜灯下写家书时却温柔得判若两人。","match":["青衣谋士","你负责冲锋破阵，对方负责运筹后方，生死可托。"],"clash":["山野隐士","你心系家国苍生，实在看不得对方整天晒太阳钓鱼。"],"quest":"率领铁骑修筑关隘防线，守护边境十年太平","egg":"一封压在铠甲内侧、折痕泛白的平安家书"},{"name":"游方医师","vector":[2,3,1,0,1,2],"tag":"古风人生剧本","quote":"行千里路，解一处忧。","insight":"你把温柔与责任炼成了实打实的本事，背着药箱走过千山万水，只为解人间一处疾苦。你不爱空谈大道理，更相信每一贴对症的良药、每一次耐心的倾听，才是真修行。","strength":"关怀与动手能力","caution":"帮助他人时也保护自己的精力","action":"主线：行走乡野，整理草木见闻；彩蛋：一本手绘药草册","motif":"杏林行旅","no":"05","tags":["仁心妙手","行走人间","外柔内韧"],"contrast":"眉眼温和慈悲、像春风拂面，实则见过太多生死，内心比常人更笃定强悍。","match":["书院先生","一个医身一个医心，同怀悲悯，相谈甚欢。"],"clash":["商路掌柜","你重济世情怀，对方先算投入产出，理念时常交锋。"],"quest":"行走九州乡野，破解奇症并写就传世草木医典","egg":"一本画满山野花草的彩绘手札"},{"name":"宫廷画师","vector":[1,0,0,0,1,3],"tag":"古风人生剧本","quote":"以一笔春山，留住人间。","insight":"世人看江山看权力，你却只看见光影流转、色彩浓淡与人间一瞬的动人。你痴迷于打破陈规的艺术表达，哪怕身处规矩重重之地，笔下依然守着一片完全自由的天地。","strength":"观察与创造","caution":"让灵感落到可完成的小作品","action":"主线：绘制一幅四时长卷；彩蛋：一盒亲制颜料","motif":"画里山河","no":"06","tags":["丹青妙笔","极致审美","藏锋于画"],"contrast":"平时安静沉醉在自己的世界里，一旦涉及作品与审美原则，寸步不让。","match":["乐坊琴师","一画一音、灵魂共振，连呼吸都踩在同一拍美感上。"],"clash":["巡城捕快","你忙着捕捉晚霞色调，对方满脑子都是线索和规矩。"],"quest":"历时三年绘制一幅惊艳朝野的《四时山河长卷》","egg":"一盒用西域矿石亲手研磨的秘制天青颜料"},{"name":"书院先生","vector":[0,3,2,0,2,0],"tag":"古风人生剧本","quote":"一盏书灯，照亮后来人。","insight":"你有着清晰的思辨力与持久的耐心，享受把繁杂道理拆解得清澈明白的过程。你深信思想比刀剑流传更远，愿做那一盏长明书灯，照亮后来人的前路。","strength":"耐心与清晰表达","caution":"也为不同见解留出位置","action":"主线：开设一间面向乡里的书院；彩蛋：学生送来的书签","motif":"书院灯火","no":"07","tags":["温润如玉","春风化雨","守道传灯"],"contrast":"看似温文尔雅、满腹经纶，辩论起是非曲直时逻辑锋利、字字珠玑。","match":["古籍编修","灯下共读、切磋学问，精神世界富足到极点。"],"clash":["江湖侠客","你刚讲完“以理服人”，对方已经拔剑说“废话少说”。"],"quest":"在青山脚下创办一间有教无类的民间书院","egg":"学生们偷偷夹在教案里的手绘银杏书签"},{"name":"商路掌柜","vector":[2,2,3,3,2,3],"tag":"古风人生剧本","quote":"路远不惧，万物可通。","insight":"别人看见的是荒漠险滩，你看见的却是贯通南北的黄金商路！你敏锐通透、擅长整合资源与凝聚人心，从不拘泥旧规，总能在变动里率先嗅到机会、把盘子做大做活。","strength":"协作与机会识别","caution":"避免忽视长期信用","action":"主线：开辟跨城商路，建立可靠伙伴网络；彩蛋：一张手绘商路图","motif":"万里商途","no":"08","tags":["生财有道","八面玲珑","务实破局"],"contrast":"算盘打得噼啪响像个精明商人，暗地里却常悄悄资助乡里、最讲长期信义。","match":["开拓领主","一个打通商路，一个建设新城，强强联手富甲一方。"],"clash":["山野隐士","你满眼都是商机，对方只想躺平看云，聊三句就分道扬镳。"],"quest":"打通跨越千里的丝绸商道，建立遍布九州的联号网络","egg":"一张标注着秘密驿站与美食摊的手绘商路图"},{"name":"巡城捕快","vector":[3,3,1,3,3,0],"tag":"古风人生剧本","quote":"拨开迷雾，自有清明。","insight":"你眼里揉不得沙子，最讨厌含糊敷衍与不公。你脚踏实地、行动力极强，擅长在鱼龙混杂的市井里抽丝剥茧、还原真相，是百姓夜里敢安心睡觉的底气。","strength":"执行与事实核查","caution":"结论前多听不同说法","action":"主线：调查市井失物案；彩蛋：一本记满线索的簿子","motif":"街巷明察","no":"09","tags":["明察秋毫","正义行动派","市井守护者"],"contrast":"白天板着脸查案一丝不苟，收工后在夜市吃碗馄饨就能笑得像个大男孩/女孩。","match":["治水官员","都是实干为民、不玩虚的靠谱派，搭档办事效率翻倍。"],"clash":["乐坊琴师","你习惯追问确凿证据，对方偏爱含蓄意境，常常鸡同鸭讲。"],"quest":"三日连破城中奇案，顺藤摸瓜揪出幕后黑手","egg":"一本写满街巷暗语与线索的泛黄随身簿"},{"name":"远航使者","vector":[3,0,3,2,2,3],"tag":"古风人生剧本","quote":"风帆所至，皆是新篇。","insight":"你的心永远装不下高墙以内的方寸天地。陌生海域的风浪、异域的语言与未知的故事，对你而言不是风险而是召唤。你天生懂得如何在新世界里破冰联结、开疆拓土。","strength":"适应力与开拓","caution":"出发前准备安全退路","action":"主线：随船远航，带回异地故事；彩蛋：一枚远方贝壳","motif":"远海风帆","no":"10","tags":["星辰大海","开放无畏","跨界桥梁"],"contrast":"看着洒脱不羁、四海皆可为家，其实每到一处都会悄悄收藏给故人的小礼物。","match":["江湖侠客","一样的自由灵魂，一个闯陆地江湖，一个渡万里沧海。"],"clash":["古籍编修","你想扬帆冲向未知海域，对方劝你先把旧海图校对三年。"],"quest":"率宝船穿越迷雾海域，绘出第一幅新世界航海志","egg":"一枚在极南海岸拾得的发光螺壳"},{"name":"古籍编修","vector":[0,2,0,2,0,0],"tag":"古风人生剧本","quote":"纸墨无声，岁月有痕。","insight":"喧嚣世界里，你能稳稳守住一张书桌、一卷残简。你迷恋精准、可靠与经得起岁月考验的成果，不追逐一夜爆红，更愿意用日复一日的打磨，把文明的火种妥帖留给后人。","strength":"细致与长期积累","caution":"偶尔试试新工具与新视角","action":"主线：校订散落典籍；彩蛋：藏在书页里的前人批注","motif":"典籍微光","no":"11","tags":["静心守艺","严谨沉淀","时间盟友"],"contrast":"看似沉默寡言、一板一眼，其实内心藏着一座波澜壮阔的百科宝库。","match":["书院先生","志趣相投、静默相伴，共同守住一方清净的精神桃源。"],"clash":["开拓领主","你讲究考据稳妥，对方讲究先干再说，合作时互相抓狂。"],"quest":"寻回散落民间的孤本残卷，完成传世大典校订","egg":"夹在百年前书页里的一句前人幽默批注"},{"name":"工坊匠人","vector":[1,1,0,3,0,3],"tag":"古风人生剧本","quote":"一凿一刻，皆有新意。","insight":"你是古代版的硬核发明家！比起唇枪舌剑的社交场，你更享受独自钻研结构、改良器物的心流时刻。一件看似寻常的物件落到你手里，总能被赋予惊艳世人的新巧思。","strength":"实践创造与耐心","caution":"避免陷在无止境的打磨里","action":"主线：造一件便利百姓生活的新器具；彩蛋：刻着日期的小木尺","motif":"巧手造物","no":"12","tags":["巧夺天工","硬核极客","器物灵魂"],"contrast":"平时沉浸在木屑与图纸里话不多，一聊起机关原理瞬间两眼放光。","match":["商路掌柜","你负责造出惊艳天下的神器，对方负责卖遍四海九州。"],"clash":["田园诗人","你忙着算齿轮咬合精度，对方正对着落叶吟诗感怀。"],"quest":"发明一件省力十倍的奇巧农具与精妙机关锁","egg":"一把刻着每次失败与成功日期的随身小木尺"},{"name":"田园诗人","vector":[0,0,1,0,2,1],"tag":"古风人生剧本","quote":"闲看云起，提笔成诗。","insight":"你拥有把一缕清风、半盏残月写成千古名句的天赋。你不愿被名利场消耗灵气，更珍视自由抒发与审美的丰盈——只要笔墨在手、心境自由，处处皆是桃花源。","strength":"感受力与表达","caution":"给创作安排稳定的节奏","action":"主线：写一册四季田园诗；彩蛋：落在纸上的一片叶","motif":"田园诗笺","no":"13","tags":["浪漫感知力","文字炼金术","灵魂松弛"],"contrast":"看似柔情似水、多愁善感，其实对世俗虚伪有着极其清醒的讽刺与傲骨。","match":["山野隐士","一壶薄酒、半窗明月，无需多言便是旷世知音。"],"clash":["巡城捕快","你在意风花雪月的情绪，对方只关心案发现场的物证。"],"quest":"游历山川写就一册令京城洛阳纸贵的《四季田园诗集》","egg":"一片恰好落在绝句墨迹上的红枫叶"},{"name":"治水官员","vector":[1,3,3,3,1,2],"tag":"古风人生剧本","quote":"让奔流之水，归于安宁。","insight":"你是最令人安心的“大局实干家”。面对千头万绪的复杂工程，你既不慌乱也不冒进，擅长实地勘察、统筹资源、协调各方利益，把一场场洪流驯服为滋养万顷良田的安宁江河。","strength":"系统规划与团队配合","caution":"给复杂任务预留调整余地","action":"主线：勘察河道，组织乡民修缮水渠；彩蛋：一张水系图","motif":"江河有序","no":"14","tags":["系统谋划","泽被苍生","定海神针"],"contrast":"平时沉稳克制、事必躬亲，看到万家灯火亮起的那一刻内心会涌起滚烫骄傲。","match":["工坊匠人","一个统筹全局，一个攻克技术难关，基建狂魔天花板。"],"clash":["江湖侠客","你需要按章程协同推进，最怕有人单枪匹马把计划打乱。"],"quest":"亲赴下游勘察水脉，率十万军民修成造福百年的水利奇观","egg":"一卷画满沿途风土与堤坝记号的手绘水系长图"},{"name":"乐坊琴师","vector":[1,0,2,0,0,2],"tag":"古风人生剧本","quote":"弦音未落，心事已明。","insight":"你天生对情绪、声音与氛围有着超乎常人的敏感。说不出口的心事，你全揉进了高低起伏的弦音里。你不需要大声喧哗，轻轻拨动琴弦，便能让懂你的人瞬间红了眼眶。","strength":"审美与共情","caution":"重要的话也可以直接说出来","action":"主线：谱写一支记录重逢的曲子；彩蛋：一段未写完的乐谱","motif":"琴音如水","no":"15","tags":["弦外知音","氛围感大师","以情动人"],"contrast":"看起来温婉神秘、若即若离，实则敢爱敢恨，内心藏着惊涛骇浪般的深情。","match":["宫廷画师","高山流水遇知音，共同创造极致东方美学的神仙搭档。"],"clash":["边关将军","你讲究留白余韵，对方嗓门洪亮直白，画风反差拉满。"],"quest":"谱写一曲轰动长安、令人闻之落泪的《重逢引》","egg":"一段留白待知音续写的未完古琴残谱"},{"name":"开拓领主","vector":[3,3,3,2,3,3],"tag":"古风人生剧本","quote":"荒地之上，亦能生出灯火。","insight":"荒原在别人眼里是绝境，在你眼里却是可以亲手点亮灯火的白纸！你兼具远见、魄力与行动力，既敢于打破旧世界，又愿意扛起责任，凝聚一群志同道合的伙伴共筑理想之城。","strength":"开拓与动员","caution":"别把自己的节奏强加给所有人","action":"主线：与伙伴建立一处新村落；彩蛋：第一盏村口灯笼","motif":"拓土筑梦","no":"16","tags":["从0到1先锋","感召力拉满","造梦实干家"],"contrast":"白天带着众人开山辟路气势如虹，夜深人静时也会偷偷复盘怕辜负大家的信任。","match":["商路掌柜","双核驱动，把一片荒土打造成万商云集的传奇之城。"],"clash":["古籍编修","你要大刀阔斧开创新纪元，对方总提醒你“祖制不可轻废”。"],"quest":"带领志同道合的伙伴在荒野之上建起一座灯火长明的新城","egg":"亲手点亮的第一盏城门铜灯"}],"brand":"STORY ATLAS","heroTitle":"入梦山河","heroSub":"A TALE OF ANOTHER LIFE","intro":"假如故事发生在古代，你会如何选择自由、责任、技艺与人情？走过三十个虚构情境，开启属于你的古风人生篇章。","disclaimer":"身份、情节和彩蛋均为虚构娱乐内容，不是前世或命运预测。","labels":["你的古风人格画卷","人生主线与隐藏奇遇","宿命知己 & 江湖反差搭档"],"art":"<svg viewBox=\"0 0 640 260\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n      <defs>\n        <linearGradient id=\"aSky\" x1=\"0\" y1=\"0\" x2=\".6\" y2=\"1\"><stop stop-color=\"#4e1d18\"/><stop offset=\".55\" stop-color=\"#7c3326\"/><stop offset=\"1\" stop-color=\"#281613\"/></linearGradient>\n        <radialGradient id=\"aMoon\" cx=\"76%\" cy=\"32%\" r=\"46%\"><stop stop-color=\"#f7d594\" stop-opacity=\".55\"/><stop offset=\"1\" stop-color=\"#f7d594\" stop-opacity=\"0\"/></radialGradient>\n      </defs>\n      <rect width=\"640\" height=\"260\" fill=\"url(#aSky)\"/>\n      <circle cx=\"378\" cy=\"76\" r=\"144\" fill=\"url(#aMoon)\"/>\n      <circle cx=\"378\" cy=\"74\" r=\"32\" fill=\"#f2cf8c\"/>\n      <!-- Flying Cranes across moon -->\n      <g stroke=\"#4e1d18\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\">\n        <path d=\"M342 68 Q350 60 358 68 Q366 60 374 68\"/>\n        <path d=\"M312 84 Q318 78 324 84 Q330 78 336 84\"/>\n      </g>\n      <!-- Ink-wash mountain layers -->\n      <path d=\"M0 178 L92 78 L188 156 L282 96 L388 172 L478 118 L576 168 L640 132 V260 H0 Z\" fill=\"#632920\" opacity=\".68\"/>\n      <g class=\"mist-flow\" opacity=\".28\" fill=\"#f5dfb6\">\n        <path d=\"M40 166 Q140 148 240 164 Q330 152 430 168 Q280 182 90 178 Z\"/>\n      </g>\n      <path d=\"M0 202 Q170 154 340 194 T640 182 V260 H0 Z\" fill=\"#2d1714\"/>\n      <!-- Ornate Song/Tang Pavilion -->\n      <g transform=\"translate(418,108)\" fill=\"none\" stroke=\"#ebca8d\" stroke-width=\"1.8\" stroke-linejoin=\"round\">\n        <path d=\"M36 22 Q70 2 104 22 H36 Z\" fill=\"#3a1915\"/>\n        <path d=\"M22 44 Q70 26 118 44 H22 Z\" fill=\"#3a1915\"/>\n        <path d=\"M8 70 Q70 50 132 70 H8 Z\" fill=\"#3a1915\"/>\n        <rect x=\"44\" y=\"22\" width=\"52\" height=\"16\" fill=\"#26110e\"/>\n        <rect x=\"30\" y=\"44\" width=\"80\" height=\"20\" fill=\"#26110e\"/>\n        <rect x=\"18\" y=\"70\" width=\"104\" height=\"36\" fill=\"#210f0d\"/>\n        <rect x=\"54\" y=\"78\" width=\"32\" height=\"26\" fill=\"#e8b86d\" opacity=\".42\"/>\n      </g>\n      <!-- Hanging Glowing Lantern -->\n      <g class=\"lantern-sway\">\n        <line x1=\"540\" y1=\"138\" x2=\"540\" y2=\"152\" stroke=\"#f0c87e\" stroke-width=\"1.5\"/>\n        <ellipse cx=\"540\" cy=\"162\" rx=\"8\" ry=\"11\" fill=\"#e85838\" stroke=\"#f5d18c\" stroke-width=\"1.3\"/>\n        <circle cx=\"540\" cy=\"162\" r=\"16\" fill=\"#f7c46c\" opacity=\".25\"/>\n      </g>\n    </svg>","palette":{"ink":"#342420","accent":"#82382b","accent2":"#b88746","paper":"#f5ece0","soft":"#ebdccc","line":"#dcc7ae","card":"#fffbf2","muted":"#756056"},"vol":"VOL. 03 · 东方梦华录","teasers":["青衣谋士","江湖侠客","山野隐士"],"chapters":[{"title":"初入江湖","intro":"一纸飞书打破平静，你的古风人生从第一次抉择开启。"},{"title":"庙堂与山林","intro":"自由还是担当，独行还是结伴？每一步都在书写命运。"},{"title":"人心与道义","intro":"面对情义、利弊与误解，你骨子里的风骨会如何作答？"},{"title":"技艺与风华","intro":"守住传承还是开创新章，你准备在这卷山河留下何种印记？"},{"title":"终章落笔","intro":"行至故事高潮，属于你的古风人生剧本即将揭晓。"}],"calcSteps":["正在展开你的古风命运画卷…","推演六维风骨与处世抉择…","钤印你的专属古代人生剧本…"],"eggLabel":"隐藏奇遇彩蛋","shareTags":"#你在古代拿的是什么人生剧本 #古风人格测试 #国风测试","shareHook":"笑死，原来我在古代拿的竟然是「{name}」剧本📜"};
 const app=document.getElementById('app'),
       posterDialog=document.getElementById('posterDialog'),
-      copyDialog=document.getElementById('copyDialog');
+      copyDialog=document.getElementById('copyDialog'),
+      peekDialog=document.getElementById('peekDialog'),
+      dexDialog=document.getElementById('dexDialog');
 const N=D.questions.length, STORAGE='personal-atlas-v3:'+D.kind;
-let idx=0, answers=Array(N).fill(null), report=null, posterURL=null, screen='home', autoNext=true, autoTimer=null;
+let idx=0, answers=Array(N).fill(null), report=null, posterURL=null, screen='home', autoNext=true, autoTimer=null, lastChapter=-1, posterTheme=0;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* === Thematic Web Audio Sound Engine (Pure Offline Synth) === */
+const SFX = (() => {
+  let ctx = null, muted = false;
+  try { muted = localStorage.getItem(STORAGE + ':mute') === '1'; } catch {}
+  function ac() {
+    if (muted) return null;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      if (!ctx) ctx = new AC();
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+      return ctx;
+    } catch { return null; }
+  }
+  function tone(freq, dur, type = 'sine', gainVal = 0.055, delay = 0, endFreq = null) {
+    const c = ac(); if (!c) return;
+    try {
+      const t = c.currentTime + delay;
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = type;
+      o.frequency.setValueAtTime(freq, t);
+      if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, t + dur);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(gainVal, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + dur + 0.02);
+    } catch {}
+  }
+  const PRESETS = {
+    city:    { notes: [523.25, 587.33, 659.25, 783.99], wave: 'triangle', gain: 0.05 },
+    love:    { notes: [587.33, 659.25, 739.99, 880.00], wave: 'sine',     gain: 0.048 },
+    ancient: { notes: [440.00, 493.88, 587.33, 659.25], wave: 'triangle', gain: 0.052 },
+    scent:   { notes: [659.25, 739.99, 880.00, 987.77], wave: 'sine',     gain: 0.042 },
+    qc:      { notes: [620, 740, 860, 980],             wave: 'square',   gain: 0.024 },
+    shop:    { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.046 },
+    museum:  { notes: [392.00, 440.00, 523.25, 587.33], wave: 'sine',     gain: 0.052 },
+    rpg:     { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.045 },
+    cosmos:  { notes: [587.33, 739.99, 880.00, 1174.6], wave: 'sine',     gain: 0.042 }
+  };
+  const P = PRESETS["ancient"] || PRESETS.city;
+  return {
+    isMuted: () => muted,
+    toggle() {
+      muted = !muted;
+      try { localStorage.setItem(STORAGE + ':mute', muted ? '1' : '0'); } catch {}
+      if (!muted) this.click(1);
+      return muted;
+    },
+    click(i = 0) {
+      const f = P.notes[Math.abs(i) % P.notes.length];
+      tone(f, 0.16, P.wave, P.gain);
+      if (true) {
+        tone(f * 2, 0.22, 'sine', P.gain * 0.35, 0.015);
+      }
+    },
+    start() {
+      tone(P.notes[0], 0.14, P.wave, P.gain, 0);
+      tone(P.notes[2], 0.22, 'sine', P.gain * 0.9, 0.07);
+    },
+    back() {
+      tone(P.notes[0] * 0.85, 0.11, 'sine', P.gain * 0.7);
+    },
+    chapter() {
+      tone(P.notes[1], 0.16, 'sine', P.gain * 0.8, 0);
+      tone(P.notes[3], 0.28, 'sine', P.gain * 0.75, 0.09);
+    },
+    reveal() {
+      P.notes.forEach((f, k) => tone(f, 0.32, k === 3 ? 'sine' : P.wave, P.gain * 0.9, k * 0.08));
+    }
+  };
+})();
+
+function renderSoundBtn() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  const m = SFX.isMuted();
+  btn.textContent = m ? '🔇 静音' : '🔊 音效';
+  btn.setAttribute('aria-pressed', String(!m));
+  btn.classList.toggle('muted', m);
+}
+function initSoundToggle() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  renderSoundBtn();
+  btn.onclick = () => { SFX.toggle(); renderSoundBtn(); };
+}
+
+/* === Celebratory Particle Burst (Respects Reduced Motion) === */
+function celebrateBurst(colors, style = 'spark') {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    const cv = document.createElement('canvas');
+    cv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999';
+    cv.width = window.innerWidth; cv.height = window.innerHeight;
+    document.body.append(cv);
+    const ctx = cv.getContext('2d');
+    const parts = [];
+    const cx = cv.width / 2, cy = Math.min(cv.height * 0.36, 280);
+    for (let i = 0; i < 42; i++) {
+      const ang = (Math.PI * 2 * i) / 42 + (Math.random() - 0.5) * 0.35;
+      const spd = 2.6 + Math.random() * 5.8;
+      parts.push({
+        x: cx + (Math.random() - 0.5) * 40,
+        y: cy + (Math.random() - 0.5) * 20,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 2.4,
+        r: 3 + Math.random() * 4.5,
+        rot: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.2,
+        color: colors[i % colors.length],
+        life: 1,
+        decay: 0.015 + Math.random() * 0.012
+      });
+    }
+    let raf;
+    function tick() {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      let alive = 0;
+      for (const p of parts) {
+        if (p.life <= 0) continue;
+        alive++;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.13; p.vx *= 0.985; p.rot += p.vr; p.life -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        if (style === 'petal') {
+          ctx.beginPath(); ctx.ellipse(0, 0, p.r * 1.4, p.r * 0.72, 0, 0, Math.PI * 2); ctx.fill();
+        } else if (style === 'star') {
+          ctx.beginPath();
+          for (let s = 0; s < 4; s++) {
+            const a = s * Math.PI / 2;
+            ctx.lineTo(Math.cos(a) * p.r * 1.5, Math.sin(a) * p.r * 1.5);
+            ctx.lineTo(Math.cos(a + Math.PI / 4) * p.r * 0.45, Math.sin(a + Math.PI / 4) * p.r * 0.45);
+          }
+          ctx.closePath(); ctx.fill();
+        } else if (style === 'bubble') {
+          ctx.strokeStyle = p.color; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.arc(0, 0, p.r * 1.15, 0, Math.PI * 2); ctx.stroke();
+        } else {
+          ctx.fillRect(-p.r, -p.r * 0.55, p.r * 2, p.r * 1.1);
+        }
+        ctx.restore();
+      }
+      if (alive > 0) raf = requestAnimationFrame(tick);
+      else cv.remove();
+    }
+    raf = requestAnimationFrame(tick);
+    setTimeout(() => { cancelAnimationFrame(raf); cv.remove(); }, 2200);
+  } catch {}
+}
+
+/* === Subtle 3D Foil Tilt on Result Hero Card === */
+function bindCardTilt(el) {
+  if (!el || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  el.classList.add('foil-tilt');
+  const onMove = e => {
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - py) * 5.5, ry = (px - 0.5) * 6.5;
+    el.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+    el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+  };
+  const onLeave = () => {
+    el.style.transform = '';
+    el.style.setProperty('--mx', '50%');
+    el.style.setProperty('--my', '20%');
+  };
+  el.addEventListener('pointermove', onMove);
+  el.addEventListener('pointerleave', onLeave);
+}
+
+/* === Dynamic Multi-Axis SVG Radar Chart (4 or 6 Axes) === */
+function buildRadarSVG(labels, ratios, opts = {}) {
+  const n = labels.length, cx = 140, cy = 122, R = 74;
+  const stroke = opts.stroke || 'var(--accent)';
+  const fill = opts.fill || 'var(--accent)';
+  const grid = opts.grid || 'rgba(128,128,128,0.22)';
+  const labelColor = opts.labelColor || 'currentColor';
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  let rings = '';
+  [0.34, 0.67, 1].forEach(f => {
+    const pts = Array.from({ length: n }, (_, i) => pt(i, R * f).map(x => x.toFixed(1)).join(',')).join(' ');
+    rings += `<polygon points="${pts}" fill="none" stroke="${grid}" stroke-width="1"/>`;
+  });
+  let spokes = '';
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${grid}" stroke-width="1"/>`;
+  }
+  const clamped = ratios.map(r => Math.max(0.18, Math.min(1, r)));
+  const polyPts = clamped.map((r, i) => pt(i, R * r).map(x => x.toFixed(1)).join(',')).join(' ');
+  const dots = clamped.map((r, i) => {
+    const [x, y] = pt(i, R * r);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.2" fill="${stroke}" stroke="${opts.dotRing || '#fff'}" stroke-width="1.8"/>`;
+  }).join('');
+  const texts = labels.map((lb, i) => {
+    const [x, y] = pt(i, R + 22);
+    const anchor = Math.abs(x - cx) < 10 ? 'middle' : x < cx ? 'end' : 'start';
+    const dy = y < cy - 30 ? -2 : y > cy + 30 ? 8 : 4;
+    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="700" fill="${labelColor}">${esc(lb)}</text>`;
+  }).join('');
+  return `<svg class="radar-svg" viewBox="0 0 280 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多维人格雷达图">
+    ${rings}${spokes}
+    <polygon class="radar-poly" points="${polyPts}" fill="${fill}" fill-opacity="0.24" stroke="${stroke}" stroke-width="2.2" stroke-linejoin="round"/>
+    ${dots}${texts}
+  </svg>`;
+}
+
+/* === Canvas Mini Radar Drawing Helper (for 3:4 Posters) === */
+function drawCanvasRadar(ctx, cx, cy, R, labels, ratios, stroke, fill, grid, textCol) {
+  const n = labels.length;
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  ctx.save();
+  [0.35, 0.68, 1].forEach(f => {
+    ctx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const [x, y] = pt(i, R * f);
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.closePath(); ctx.strokeStyle = grid; ctx.lineWidth = 1.4; ctx.stroke();
+  });
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.strokeStyle = grid; ctx.lineWidth = 1.2; ctx.stroke();
+  }
+  ctx.beginPath();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = fill; ctx.fill();
+  ctx.strokeStyle = stroke; ctx.lineWidth = 3; ctx.stroke();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    ctx.beginPath(); ctx.arc(x, y, 5.5, 0, Math.PI * 2); ctx.fillStyle = stroke; ctx.fill();
+  });
+  ctx.fillStyle = textCol; ctx.font = '700 18px "PingFang SC","Microsoft YaHei",sans-serif';
+  labels.forEach((lb, i) => {
+    const [x, y] = pt(i, R + 24);
+    ctx.textAlign = Math.abs(x - cx) < 12 ? 'center' : x < cx ? 'right' : 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(lb, x, y);
+  });
+  ctx.restore();
+}
+
+/* === Isolated Local Collection Dex Helpers === */
+function getUnlocked() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORAGE + ':dex') || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch { return []; }
+}
+function recordUnlock(name) {
+  try {
+    const list = getUnlocked();
+    if (!list.includes(name)) { list.push(name); localStorage.setItem(STORAGE + ':dex', JSON.stringify(list)); }
+    return list;
+  } catch { return [name]; }
+}
+
+/* === Vector Pair Compatibility Calculator === */
+function calcVectorChem(pA, pB, axes, labelsCfg = {}) {
+  if (pA.name === pB.name) {
+    return {
+      score: 94,
+      verdict: labelsCfg.same || '✦ 镜像双生 · 灵魂复刻',
+      desc: `两个「${pA.name}」相遇就像照镜子——不用多余解释就能一秒接住彼此的梗与节奏，连沉默的频率都惊人一致！`
+    };
+  }
+  if (pA.match && pA.match[0] === pB.name) {
+    return { score: 99, verdict: labelsCfg.match || '♥ 天选官配 · 满分同频', desc: pA.match[1] };
+  }
+  if (pB.match && pB.match[0] === pA.name) {
+    return { score: 97, verdict: labelsCfg.match || '♥ 双向奔赴 · 绝佳搭子', desc: pB.match[1] };
+  }
+  if (pA.clash && pA.clash[0] === pB.name) {
+    return { score: 54, verdict: labelsCfg.clash || '⚡ 宿命反差 · 欢喜冤家', desc: pA.clash[1] };
+  }
+  if (pB.clash && pB.clash[0] === pA.name) {
+    return { score: 56, verdict: labelsCfg.clash || '⚡ 高能反差 · 奇妙碰撞', desc: pB.clash[1] };
+  }
+  const vecA = pA.vector, vecB = pB.vector;
+  const diffs = vecA.map((x, i) => ({ i, d: Math.abs(x - vecB[i]) }));
+  const avgDiff = diffs.reduce((s, x) => s + x.d, 0) / diffs.length;
+  const sim = Math.max(0, 1 - avgDiff / 3);
+  const hashSeed = [...(pA.name + pB.name)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 997, 7);
+  const score = Math.round(Math.max(62, Math.min(95, 65 + sim * 27 + (hashSeed % 5))));
+  const closest = diffs.slice().sort((a, b) => a.d - b.d)[0];
+  const farthest = diffs.slice().sort((a, b) => b.d - a.d)[0];
+  let verdict = '🌿 舒服同频 · 轻松相处';
+  if (score >= 88) verdict = '✦ 默契神搭 · 能量共振';
+  else if (score >= 78) verdict = '♥ 互补合拍 · 越处越甜';
+  else if (score < 70) verdict = '🔥 跨频火花 · 新鲜感拉满';
+  const desc = `你们在「${axes[closest.i][0]}」维度上天然同频，很容易快速聊到一块；而在「${axes[farthest.i][0]}」上的不同视角，正好能给彼此带来意想不到的新鲜灵感。`;
+  return { score, verdict, desc };
+}
+
+/* === Toast Notification === */
+let toastTimer = null;
+function showToast(msg) {
+  let el = document.getElementById('quizToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'quizToast';
+    el.className = 'quiz-toast';
+    el.setAttribute('role', 'status');
+    document.body.append(el);
+  }
+  el.textContent = msg;
+  el.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2100);
+}
+
 
 function stash(){try{localStorage.setItem(STORAGE,JSON.stringify({idx,answers,autoNext}))}catch{}}
 function restore(){
@@ -198,35 +672,61 @@ function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
 function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
 function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
 function hero(text,sub=D.heroSub,badge=''){
-  return `<div class="hero" aria-hidden="true">${D.art}${badge?`<span class="hero-badge">${esc(badge)}</span>`:''}<div class="hero-copy"><small>${esc(sub)}</small><strong>${esc(text)}</strong></div></div>`;
+  return `<div class="hero" aria-hidden="true">${D.art}<span class="chop-seal" aria-hidden="true">入梦<br>山河</span>${badge?`<span class="hero-badge">${esc(badge)}</span>`:''}<div class="hero-copy"><small>${esc(sub)}</small><strong>${esc(text)}</strong></div></div>`;
+}
+
+function peekProfile(name){
+  const p=D.profiles.find(x=>x.name===name); if(!p) return;
+  SFX.click(2);
+  document.getElementById('peekTitle').textContent=`ARCHIVE NO.${p.no} · ${p.name}`;
+  document.getElementById('peekBody').innerHTML=`
+    <div class="pills" style="margin:6px 0 12px">${p.tags.map(t=>`<span class="pill accent"># ${esc(t)}</span>`).join('')}</div>
+    <div class="quote-box"><p class="quote">「${esc(p.quote)}」</p></div>
+    <p class="lead" style="margin:12px 0">✦ 专属亮点：${esc(p.strength)}。想知道这是不是你的本命结果，还是藏着另一份惊喜档案？</p>
+    <button type="button" class="primary" onclick="peekDialog.close();start()">立刻开测，揭晓我的专属结果 →</button>`;
+  if(!peekDialog.open) peekDialog.showModal();
+}
+
+function openDex(){
+  SFX.click(1);
+  const unlocked=getUnlocked();
+  document.getElementById('dexSub').textContent=`已点亮 ${unlocked.length} / ${D.profiles.length} 种档案 · 仅保存在当前浏览器，快邀请朋友测出更多图鉴！`;
+  document.getElementById('dexGrid').innerHTML=D.profiles.map(p=>{
+    const ok=unlocked.includes(p.name);
+    return ok
+      ? `<div class="dex-card unlocked"><span class="muted">NO.${p.no} · 已点亮 ✦</span><b>${esc(p.name)}</b><small># ${esc(p.tags[0])} · 「${esc(p.quote)}」</small></div>`
+      : `<div class="dex-card locked"><span class="muted">NO.${p.no} · 尚未解锁</span><b>？？？</b><small>线索：${esc(p.motif)} · ${esc(p.tags[0])}</small></div>`;
+  }).join('');
+  if(!dexDialog.open) dexDialog.showModal();
 }
 
 function home(){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
-  screen='home';
+  screen='home'; lastChapter=-1;
   const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const unlocked=getUnlocked();
   const teaserCards=D.teasers.map(name=>D.profiles.find(p=>p.name===name)).filter(Boolean);
   app.innerHTML=`<section class="panel">
     ${hero(D.heroTitle,D.heroSub,D.profiles.length+' 种档案')}
     <p class="eyebrow">${esc(D.subtitle)}</p>
-    <h1>${esc(D.title)}</h1>
+    <h1>你在古代拿的是<br>什么人生剧本</h1>
     <p class="lead">${esc(D.intro)}</p>
     <div class="pills">
       <span class="pill accent">${N} 道情境探索</span>
       <span class="pill">${D.profiles.length} 种专属档案</span>
-      <span class="pill">约 ${Math.max(2,Math.ceil(N/8))} 分钟 · 含3:4海报</span>
+      <span class="pill">含雷达图 &amp; 3:4 双画风海报</span>
     </div>
     <div class="stack">
       ${count===N
         ? `<button class="primary" onclick="resume()">查看我已生成的专属档案　✦</button><button class="secondary" onclick="start()">重新测一次</button>`
         : count
         ? `<button class="primary" onclick="resume()">继续上次探索（${count}/${N}）　→</button><button class="secondary" onclick="start()">重新开始测试</button>`
-        : `<button class="primary" onclick="start()">开启我的探索　→</button>`}
+        : `<button class="primary" onclick="start()">展开古卷，入梦山河　→</button>`}
     </div>
     <div class="teaser-wrap">
-      <div class="teaser-head"><span>档案抢先看</span><small>共收录 ${D.profiles.length} 种结果</small></div>
+      <div class="teaser-head"><span>档案抢先看 · 点击偷看线索</span><small>收录 ${D.profiles.length} 种${unlocked.length?' · 已点亮 '+unlocked.length:''}</small></div>
       <div class="teasers">
-        ${teaserCards.map(p=>`<div class="teaser"><b>${esc(p.name)}</b><span>${esc(p.tags[0])}</span><small>「${esc(p.quote)}」</small></div>`).join('')}
+        ${teaserCards.map(p=>`<button type="button" class="teaser" onclick="peekProfile('${esc(p.name)}')"><b>${esc(p.name)}</b><span>${esc(p.tags[0])}</span><small>「${esc(p.quote)}」</small></button>`).join('')}
       </div>
     </div>
     <p class="notice">跟随第一直觉选择即可，没有标准答案。${esc(D.disclaimer)}</p>
@@ -236,32 +736,38 @@ function home(){
 
 function start(){
   if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('开始新测试将清除上次进度，继续吗？')) return;
-  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+  SFX.start();
+  idx=0;answers=Array(N).fill(null);report=null;lastChapter=0;stash();question(true);
 }
 
 function resume(){
+  SFX.start();
   const saved=restore();if(!saved)return start();
   idx=saved.idx;answers=saved.answers;
-  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.every(v=>v!==null)){result(false);return;}
   if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  lastChapter=getChapter(idx).ci;
   question(true);
 }
 
-function toggleAuto(){
-  autoNext=!autoNext;stash();question(false);
-}
+function toggleAuto(){SFX.click(0);autoNext=!autoNext;stash();question(false);}
 
 function getChapter(qIdx){
   const chs=D.chapters;
   const per=Math.ceil(N/chs.length);
   const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
-  return {num:String(ci+1).padStart(2,'0'),...chs[ci]};
+  return {ci,num:String(ci+1).padStart(2,'0'),...chs[ci]};
 }
 
 function question(move=false){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
   screen='question';
   const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  if(lastChapter>=0 && ch.ci>lastChapter){
+    SFX.chapter();
+    showToast(`✦ 进入第 ${ch.ci+1} 章 · ${ch.title}`);
+  }
+  lastChapter=ch.ci;
   const pct=Math.round((count/N)*100);
   app.innerHTML=`<section class="panel">
     <div class="question-top">
@@ -270,6 +776,9 @@ function question(move=false){
     </div>
     <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
       <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-dots" aria-hidden="true">
+      ${D.chapters.map((_,k)=>`<span class="${k<ch.ci?'done':k===ch.ci?'now':''}"></span>`).join('')}
     </div>
     <div class="chapter-bar">
       <span class="chapter-num">${ch.num}</span>
@@ -281,9 +790,10 @@ function question(move=false){
     </div>
     <div class="nav">
       <button type="button" onclick="back()" ${idx===0?'disabled':''}>← 上一题</button>
-      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'生成专属档案 ✦':'下一题 →'}</button>
+      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'御批封存人生剧本 ✦':'下一题 →'}</button>
     </div>
-    <div style="text-align:center;margin-top:10px">
+    <p class="kbd-hint">快捷键：数字 1-4 / 字母 A-D 作答，← 返回上一题</p>
+    <div style="text-align:center;margin-top:8px">
       <button type="button" class="subtle" onclick="home()">保存进度，返回首页</button>
     </div>
   </section>`;
@@ -292,8 +802,8 @@ function question(move=false){
 
 function choose(i){
   if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  SFX.click(i);
   answers[idx]=i;stash();
-  // Immediate visual feedback without losing smooth flow
   const btns=app.querySelectorAll('.option');
   btns.forEach((b,k)=>{
     const sel=k===i;
@@ -316,11 +826,11 @@ function choose(i){
       if(idx<N-1){idx++;stash();question(true);}
       else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
       else calculateRitual();
-    }, 300);
+    }, 280);
   }
 }
 
-function back(){if(idx>0){idx--;stash();question(true);}}
+function back(){if(idx>0){SFX.back();idx--;stash();question(true);}}
 function next(){
   if(answers[idx]===null) return;
   if(idx<N-1){idx++;stash();question(true);}
@@ -334,12 +844,12 @@ function calculateRitual(){
   app.innerHTML=`<section class="panel"><div class="calc-box">
     <div class="calc-ring" aria-hidden="true"></div>
     <p class="calc-step" id="calcText">${esc(steps[0])}</p>
-    <p class="calc-sub">正在为你生成完整画像与 3:4 收藏海报</p>
+    <p class="calc-sub">正在绘制多维雷达图与 3:4 收藏级双画风海报</p>
   </div></section>`;
   scrollTop();
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},460);
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},920);
-  setTimeout(()=>result(),1360);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},440);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},880);
+  setTimeout(()=>result(true),1320);
 }
 
 function compute(input){
@@ -353,13 +863,11 @@ function compute(input){
     const radius=Math.sqrt(v.length)*0.5+0.15*(norm-Math.sqrt(v.length));
     const calibrated=center.map(x=>1.5+x*radius/norm);
     const d=calibrated.reduce((s,x,j)=>s+(x-v[j])**2,0);
-    // Smooth intuitive affinity score (high contrast & realistic 72%~98% range for top matches)
     const rawSim=Math.max(0,1-Math.sqrt(d/(4.2*v.length)));
     const fit=Math.round(Math.max(62,Math.min(98,66+rawSim*32)));
     return {p,i,d,fit};
   });
   ranked.sort((a,b)=>a.d-b.d||a.i-b.i);
-  // Ensure strict monotonic visual display for top 4
   for(let k=1;k<Math.min(4,ranked.length);k++){
     if(ranked[k].fit>=ranked[k-1].fit) ranked[k].fit=Math.max(60,ranked[k-1].fit-2);
   }
@@ -368,10 +876,33 @@ function compute(input){
 
 function tendency(a,v){return v<1.15?a[1]:v>1.85?a[2]:'两者兼顾'}
 
-function result(){
+function runChemCheck(otherName){
+  const out=document.getElementById('chemOut');
+  if(!out||!report) return;
+  if(!otherName){out.innerHTML='';return;}
+  const other=D.profiles.find(x=>x.name===otherName); if(!other) return;
+  SFX.click(2);
+  const res=calcVectorChem(report.p,other,D.axes);
+  out.innerHTML=`<div class="chem-out">
+    <div class="chem-score-row"><span class="chem-verdict">${esc(res.verdict)}</span><span class="chem-pct">${res.score}%</span></div>
+    <div class="chem-bar"><i style="width:${res.score}%"></i></div>
+    <p style="font-size:13px;line-height:1.72">${esc(res.desc)}</p>
+    <button type="button" class="chem-copy-btn" onclick="copyChem('${esc(other.name)}',${res.score},'${esc(res.verdict)}')">复制双人契合战报，发去评论区晒分 ↗</button>
+  </div>`;
+}
+
+async function copyChem(otherName,score,verdict){
+  if(!report) return;
+  const txt=`【${D.title} · 双人契合度】\n我是「${report.p.name}」× TA是「${otherName}」\n化学反应指数：${score}%（${verdict}）\n快来测测咱俩合不合拍👇 ${D.shareTags}`;
+  try{await navigator.clipboard.writeText(txt);showToast('✓ 双人契合战报已复制！');}
+  catch{document.getElementById('copyTextarea').value=txt;copyDialog.showModal();}
+}
+
+function result(celebrate=false){
   if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
   report=compute(answers);screen='result';stash();
   const {p,v,ranked}=report;
+  const unlocked=recordUnlock(p.name);
   const cues=D.axes.map((a,i)=>({a,val:v[i],gap:Math.abs(v[i]-1.5)})).sort((x,y)=>y.gap-x.gap).slice(0,2);
   const why=cues.every(x=>x.gap<0.28)
     ? '你在多个维度上都保持着难得的松弛与平衡，既不被单一标签框住，又能自由切换状态。'
@@ -379,7 +910,7 @@ function result(){
   const stampText=p.stamp||`NO.${p.no} · 专属档案`;
 
   app.innerHTML=`<section class="panel">
-    <div class="result-cover">
+    <div class="result-cover" id="heroCard">
       ${hero(p.motif,D.heroSub)}
       <span class="result-stamp" aria-hidden="true">${esc(stampText)}</span>
       <div class="intro">
@@ -418,8 +949,9 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">02 / DIMENSION MAP</p>
-      <h3>你的专属偏好图谱</h3>
+      <p class="kicker">02 / DIMENSION RADAR &amp; SPECTRUM</p>
+      <h3>你的专属多维雷达图谱</h3>
+      <div class="radar-wrap">${buildRadarSVG(D.axes.map(a=>a[0]), v.map(x=>x/3), {stroke:'var(--accent)',fill:'var(--accent)',grid:'var(--line)',labelColor:'var(--ink)',dotRing:'var(--card)'})}</div>
       ${D.axes.map((a,i)=>`<div class="axis">
         <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
         <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
@@ -429,7 +961,7 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">03 / CHEMISTRY &amp; CONTRAST</p>
+      <p class="kicker">03 / CHEMISTRY &amp; MATCH CHECKER</p>
       <h3>${esc(D.labels[2])}</h3>
       <p class="muted" style="margin-bottom:6px">发给你的朋友或另一半测测，看看你们是不是天选同频！</p>
       <div class="duo">
@@ -444,6 +976,14 @@ function result(){
           <p>${esc(p.clash[1])}</p>
         </div>
       </div>
+      <div class="chem-box">
+        <div class="chem-head"><strong>✦ 前世今生羁绊速测</strong><span>选好友测出的古代身份，看你们同朝为官还是江湖知己</span></div>
+        <select class="chem-select" id="chemSelect" aria-label="选择朋友的结果测算契合度" onchange="runChemCheck(this.value)">
+          <option value="">— 选择朋友/对象测出的结果 —</option>
+          ${D.profiles.map(x=>`<option value="${esc(x.name)}">NO.${x.no} · ${esc(x.name)}（${esc(x.tags[0])}）</option>`).join('')}
+        </select>
+        <div id="chemOut"></div>
+      </div>
     </div>
 
     <div class="block">
@@ -457,12 +997,16 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">05 / NEARBY ARCHIVES</p>
+      <p class="kicker">05 / NEARBY ARCHIVES &amp; COLLECTION</p>
       <h3>与你气场相近的备选档案</h3>
       ${ranked.slice(1,4).map(x=>`<div class="rank">
         <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.tags.slice(0,2).join(' · '))}</small></div>
         <span class="pct">${x.fit}% 契合</span>
       </div>`).join('')}
+      <div class="dex-bar">
+        <div class="dex-bar-info"><strong>16 卷古代人生剧本图录</strong><span>当前已点亮 ${unlocked.length} / ${D.profiles.length} 种本地收藏</span></div>
+        <button type="button" class="dex-open-btn" onclick="openDex()">查看全图鉴</button>
+      </div>
       <p class="notice">${esc(D.disclaimer)}</p>
     </div>
 
@@ -474,14 +1018,17 @@ function result(){
       </div>
     </div>
   </section>`;
+  bindCardTilt(document.getElementById('heroCard'));
   scrollTop();focusTitle();
+  if(celebrate){SFX.reveal();celebrateBurst(["#a83226","#d4a152","#e8c98a","#63211a","#fff6e0"],'star');}
 }
 
-function editAnswers(){idx=N-1;question(true);}
+function editAnswers(){SFX.back();idx=N-1;question(true);}
 function restart(){if(confirm('清除当前答案并重新开始探索？')){clearSaved();start();}}
 
 async function copyShare(){
   if(!report) return;
+  SFX.click(1);
   const {p,ranked}=report;
   const hook=D.shareHook.replace('{name}',p.name);
   const text=`${hook}\n契合度 ${ranked[0].fit}% | ${p.tags.map(t=>'#'+t).join(' ')}\n「${p.quote}」\n\n♥ 我的天选合拍搭子是【${p.match[0]}】，快来测测你是什么结果，评论区找搭子👇\n${D.shareTags}`;
@@ -512,129 +1059,122 @@ function roundedPath(ctx,x,y,w,h,r){
 function fillRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.fill();}
 function strokeRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.stroke();}
 
-function makePoster(){
-  const c=document.createElement('canvas');c.width=1080;c.height=1440;
-  const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
-  const {p,v,ranked}=report, P=D.palette;
-  const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif';
 
-  // Paper backdrop & elegant outer double frame
-  ctx.fillStyle=P.paper;ctx.fillRect(0,0,1080,1440);
-  ctx.strokeStyle=P.line;ctx.lineWidth=2;strokeRound(ctx,26,26,1028,1388,30);
+function makePoster(themeIdx = 0, sig = '') {
+  const c = document.createElement('canvas'); c.width = 1080; c.height = 1440;
+  const ctx = c.getContext('2d'); if (!ctx) throw Error('Canvas unavailable');
+  const { p, v, ranked } = report;
+  const sans = '"PingFang SC","Microsoft YaHei",sans-serif', serif = '"Noto Serif SC","Songti SC","SimSun",serif';
+  const dark = themeIdx === 1;
+  const BG = dark ? '#1a1210' : '#f4ebd9';
+  const CARD = dark ? '#261a17' : '#fdf8ec';
+  const INK = dark ? '#f6ebd8' : '#2c1e18';
+  const MUTED = dark ? '#c2ad96' : '#6e5a4d';
+  const ACC = dark ? '#e5b363' : '#8a2c22';
+  const GOLD = '#c99648';
+  const LINE = dark ? 'rgba(201,150,72,0.34)' : '#d6c0a2';
 
-  // Header card (editorial rich banner)
-  const grad=ctx.createLinearGradient(52,52,1028,372);
-  grad.addColorStop(0,P.accent);grad.addColorStop(1,P.ink);
-  ctx.fillStyle=grad;fillRound(ctx,52,52,976,316,26);
-  ctx.save();roundedPath(ctx,52,52,976,316,26);ctx.clip();
-  ctx.strokeStyle='rgba(255,255,255,0.16)';ctx.lineWidth=2;
-  for(let i=0;i<7;i++){ctx.beginPath();ctx.ellipse(905,120,85+i*38,52+i*22,-0.35,0,Math.PI*2);ctx.stroke();}
-  ctx.fillStyle=P.accent2;ctx.globalAlpha=0.22;ctx.beginPath();ctx.arc(920,310,130,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle = BG; ctx.fillRect(0, 0, 1080, 1440);
+  // Classical Scroll Top & Bottom Rollers
+  const roller = ctx.createLinearGradient(0, 0, 1080, 0);
+  roller.addColorStop(0, '#4f2019'); roller.addColorStop(0.5, '#b8863d'); roller.addColorStop(1, '#4f2019');
+  ctx.fillStyle = roller; ctx.fillRect(0, 0, 1080, 18); ctx.fillRect(0, 1422, 1080, 18);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 2; strokeRound(ctx, 28, 36, 1024, 1368, 18);
+  ctx.strokeStyle = dark ? 'rgba(201,150,72,0.18)' : 'rgba(138,44,34,0.2)'; ctx.lineWidth = 1.2; strokeRound(ctx, 40, 48, 1000, 1344, 14);
+
+  // Imperial Ink-Wash Banner
+  const bx = 58, by = 66, bw = 964, bh = 334;
+  ctx.save(); roundedPath(ctx, bx, by, bw, bh, 18); ctx.clip();
+  const hg = ctx.createLinearGradient(bx, by, bx + bw, by + bh);
+  hg.addColorStop(0, '#471a16'); hg.addColorStop(0.55, '#7c3024'); hg.addColorStop(1, '#261512');
+  ctx.fillStyle = hg; ctx.fillRect(bx, by, bw, bh);
+  ctx.fillStyle = '#f2cf8c'; ctx.beginPath(); ctx.arc(846, 152, 54, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = 'rgba(42,20,17,0.72)';
+  ctx.beginPath(); ctx.moveTo(bx, by+272); ctx.lineTo(bx+200, by+166); ctx.lineTo(bx+380, by+244); ctx.lineTo(bx+560, by+152); ctx.lineTo(bx+740, by+250); ctx.lineTo(bx+bw, by+186); ctx.lineTo(bx+bw, by+bh); ctx.lineTo(bx, by+bh); ctx.closePath(); ctx.fill();
   ctx.restore();
 
-  // Header typography + collectible stamp
-  ctx.fillStyle='rgba(255,255,255,0.85)';ctx.font=`700 22px ${sans}`;
-  ctx.fillText(`${D.brand}  ·  ARCHIVE NO.${p.no}`,92,108);
-  ctx.fillStyle='#ffffff';ctx.font=`800 72px ${serif}`;
-  ctx.fillText(p.name,90,214);
-  ctx.fillStyle='rgba(255,255,255,0.92)';ctx.font=`500 28px ${sans}`;
-  ctx.fillText(`${p.motif}  ·  灵魂契合度 ${ranked[0].fit}%`,92,276);
+  ctx.fillStyle = 'rgba(246,225,186,0.88)'; ctx.font = `700 22px ${sans}`;
+  ctx.fillText(`STORY ATLAS  ·  东方梦华录 NO.${p.no}` + (sig ? `  ·  ${sig}` : ''), 92, 122);
+  ctx.fillStyle = '#ffffff'; ctx.font = `800 78px ${serif}`;
+  ctx.fillText(p.name, 90, 224);
+  ctx.fillStyle = '#f2cf8c'; ctx.font = `600 26px ${sans}`;
+  ctx.fillText(`${p.motif}  ·  命格契合 ${ranked[0].fit}%`, 92, 284);
 
-  // Stamp badge top right
-  const stamp=p.stamp||`NO.${p.no}`;
-  ctx.save();ctx.translate(925,112);ctx.rotate(0.06);
-  ctx.strokeStyle='rgba(255,255,255,0.75)';ctx.lineWidth=2;strokeRound(ctx,-92,-24,184,48,10);
-  ctx.fillStyle='#ffffff';ctx.font=`700 22px ${serif}`;ctx.textAlign='center';
-  ctx.fillText(stamp,0,8);ctx.restore();ctx.textAlign='left';
+  // Vermilion Square Chop Seal
+  ctx.save(); ctx.translate(928, 146); ctx.rotate(0.05);
+  ctx.fillStyle = '#a82a1e'; fillRound(ctx, -40, -40, 80, 80, 8);
+  ctx.strokeStyle = '#f2cf8c'; ctx.lineWidth = 2.5; strokeRound(ctx, -35, -35, 70, 70, 5);
+  ctx.fillStyle = '#fff5e0'; ctx.textAlign = 'center'; ctx.font = `900 24px ${serif}`;
+  const st = (p.stamp || '入梦').replace(/[^\u4e00-\u9fa5]/g, '').slice(0, 4) || '入梦山河';
+  ctx.fillText(st.slice(0, 2), 0, -6); ctx.fillText(st.slice(2, 4) || '剧本', 0, 24);
+  ctx.restore(); ctx.textAlign = 'left';
 
-  // Tag pills inside header bottom
-  let tx=92;
-  p.tags.forEach(t=>{
-    const label='# '+t;
-    ctx.font=`600 22px ${sans}`;
-    const w=ctx.measureText(label).width+34;
-    ctx.fillStyle='rgba(255,255,255,0.18)';fillRound(ctx,tx,306,w,40,20);
-    ctx.fillStyle='#fff';ctx.fillText(label,tx+17,333);
-    tx+=w+14;
+  let tx = 92;
+  p.tags.forEach(t => {
+    const lbl = '# ' + t; ctx.font = `600 21px ${sans}`;
+    const w = ctx.measureText(lbl).width + 32;
+    ctx.fillStyle = 'rgba(255,255,255,0.16)'; fillRound(ctx, tx, 330, w, 40, 20);
+    ctx.fillStyle = '#fff'; ctx.fillText(lbl, tx + 16, 357); tx += w + 12;
   });
 
-  // Quote callout card
-  ctx.fillStyle=P.card;fillRound(ctx,52,394,976,120,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,394,976,120,20);
-  ctx.fillStyle=P.accent2;fillRound(ctx,52,394,10,120,5);
-  ctx.fillStyle=P.accent;ctx.font=`700 34px ${serif}`;
-  const qLines=wrap(ctx,`「${p.quote}」`,900).slice(0,2);
-  const qStart=qLines.length===1?466:444;
-  qLines.forEach((l,i)=>ctx.fillText(l,86,qStart+i*44));
+  // Quote Banner
+  ctx.fillStyle = CARD; fillRound(ctx, 58, 422, 964, 102, 16);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 58, 422, 964, 102, 16);
+  ctx.fillStyle = '#a82a1e'; fillRound(ctx, 58, 422, 10, 102, 4);
+  ctx.fillStyle = ACC; ctx.font = `700 32px ${serif}`;
+  const qLines = wrap(ctx, `「${p.quote}」`, 890).slice(0, 2);
+  qLines.forEach((l, i) => ctx.fillText(l, 92, (qLines.length === 1 ? 484 : 464) + i * 38));
 
-  // Insight paragraph
-  let y=566;
-  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;
-  ctx.fillText('SOUL PORTRAIT  ·  专属解读',70,y);y+=40;
-  ctx.fillStyle=P.ink;ctx.font=`400 27px ${sans}`;
-  const iLines=wrap(ctx,p.insight,936).slice(0,3);
-  iLines.forEach(l=>{ctx.fillText(l,70,y);y+=41;});
+  // Portrait + 6-Axis Hexagonal Radar
+  ctx.fillStyle = CARD; fillRound(ctx, 58, 544, 964, 348, 18);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 58, 544, 964, 348, 18);
+  ctx.fillStyle = GOLD; ctx.font = `800 20px ${sans}`; ctx.fillText('01 / 古代人生剧本 · 命格六维', 88, 588);
+  ctx.fillStyle = INK; ctx.font = `400 23.5px ${sans}`;
+  wrap(ctx, p.insight, 515).slice(0, 5).forEach((l, i) => ctx.fillText(l, 88, 630 + i * 38));
+  ctx.fillStyle = MUTED; ctx.font = `600 20px ${sans}`;
+  ctx.fillText('✦ 人生主线：' + wrap(ctx, p.quest || p.action, 440)[0], 88, 860);
+  drawCanvasRadar(ctx, 816, 728, 100, D.axes.map(a => a[0]), v.map(x => x / 3), ACC, dark ? 'rgba(229,179,99,0.26)' : 'rgba(138,44,34,0.2)', LINE, INK);
 
-  // Axes visualization block
-  y+=16;
-  ctx.fillStyle=P.card;
-  const axisStep=D.axes.length>4?56:72;
-  const axisBoxH=56+D.axes.length*axisStep;
-  fillRound(ctx,52,y,976,axisBoxH,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,y,976,axisBoxH,20);
-  ctx.fillStyle=P.accent;ctx.font=`800 22px ${sans}`;
-  ctx.fillText('偏好维度图谱',82,y+40);
-  let ay=y+78;
-  D.axes.forEach((a,i)=>{
-    ctx.font=`600 21px ${sans}`;ctx.fillStyle=P.ink;ctx.textAlign='left';
-    ctx.fillText(`${a[0]} · ${a[1]}`,82,ay);
-    ctx.textAlign='right';ctx.fillStyle=P.muted;ctx.fillText(a[2],998,ay);
-    ctx.textAlign='left';
-    ctx.fillStyle=P.soft;fillRound(ctx,82,ay+13,916,10,5);
-    const px=82+916*Math.max(0.03,Math.min(0.97,v[i]/3));
-    ctx.fillStyle=P.accent;ctx.beginPath();ctx.arc(px,ay+18,11,0,Math.PI*2);ctx.fill();
-    ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();
-    ay+=axisStep;
-  });
+  // Easter Egg & Contrast Strip
+  ctx.fillStyle = dark ? '#34221d' : '#efe3cd'; fillRound(ctx, 58, 912, 964, 144, 16);
+  ctx.fillStyle = ACC; ctx.font = `800 21px ${sans}`; ctx.fillText(`✦ 隐藏反差 & 专属彩蛋：${p.egg || ''}`, 88, 952);
+  ctx.fillStyle = INK; ctx.font = `400 23.5px ${sans}`;
+  wrap(ctx, p.contrast, 900).slice(0, 2).forEach((l, i) => ctx.fillText(l, 88, 996 + i * 36));
 
-  // Bottom Duo Cards: Soulmate + Strength
-  const duoY=Math.min(1148, y+axisBoxH+22);
-  const duoH=186;
-  // Left card: Soulmate
-  ctx.fillStyle=P.soft;fillRound(ctx,52,duoY,476,duoH,20);
-  ctx.fillStyle=P.accent;ctx.font=`800 21px ${sans}`;ctx.fillText('♥ 天选合拍搭子',80,duoY+40);
-  ctx.fillStyle=P.ink;ctx.font=`800 34px ${serif}`;ctx.fillText(p.match[0],80,duoY+86);
-  ctx.fillStyle=P.muted;ctx.font=`400 21px ${sans}`;
-  wrap(ctx,p.match[1],420).slice(0,2).forEach((l,i)=>ctx.fillText(l,80,duoY+124+i*30));
+  // Duo Match / Clash
+  const dy = 1076, dh = 234;
+  ctx.fillStyle = CARD; fillRound(ctx, 58, dy, 470, dh, 16);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 58, dy, 470, dh, 16);
+  ctx.fillStyle = ACC; ctx.font = `800 21px ${sans}`; ctx.fillText('♥ 前世宿命知己', 86, dy + 42);
+  ctx.fillStyle = INK; ctx.font = `800 36px ${serif}`; ctx.fillText(p.match[0], 86, dy + 96);
+  ctx.fillStyle = MUTED; ctx.font = `400 21px ${sans}`;
+  wrap(ctx, p.match[1], 414).slice(0, 3).forEach((l, i) => ctx.fillText(l, 86, dy + 138 + i * 30));
 
-  // Right card: Hidden contrast or highlight
-  ctx.fillStyle=P.card;fillRound(ctx,552,duoY,476,duoH,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,552,duoY,476,duoH,20);
-  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;ctx.fillText('✦ 你的闪光亮点',580,duoY+40);
-  ctx.fillStyle=P.ink;ctx.font=`600 25px ${serif}`;
-  wrap(ctx,p.strength,420).slice(0,2).forEach((l,i)=>ctx.fillText(l,580,duoY+84+i*34));
-  ctx.fillStyle=P.muted;ctx.font=`400 20px ${sans}`;
-  const eggShort=p.egg||p.vibe||'';
-  wrap(ctx,eggShort,420).slice(0,1).forEach(l=>ctx.fillText('· '+l,580,duoY+158));
+  ctx.fillStyle = CARD; fillRound(ctx, 552, dy, 470, dh, 16);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 552, dy, 470, dh, 16);
+  ctx.fillStyle = GOLD; ctx.font = `800 21px ${sans}`; ctx.fillText('⚡ 朝野反差对手', 580, dy + 42);
+  ctx.fillStyle = INK; ctx.font = `800 36px ${serif}`; ctx.fillText(p.clash[0], 580, dy + 96);
+  ctx.fillStyle = MUTED; ctx.font = `400 21px ${sans}`;
+  wrap(ctx, p.clash[1], 414).slice(0, 3).forEach((l, i) => ctx.fillText(l, 580, dy + 138 + i * 30));
 
-  // Footer strip
-  ctx.fillStyle=P.muted;ctx.font=`500 22px ${sans}`;
-  ctx.fillText(`${D.title}  ·  长按保存分享`,60,1388);
-  ctx.textAlign='right';ctx.fillText('原创趣味探索 · 非专业心理测评',1020,1388);
-  ctx.textAlign='left';
+  ctx.fillStyle = MUTED; ctx.font = `500 21px ${sans}`;
+  ctx.fillText(`${D.title}  ·  长按保存寻前世同僚`, 66, 1372);
+  ctx.textAlign = 'right'; ctx.fillText('STORY ATLAS · 原创趣味探索', 1014, 1372);
+  ctx.textAlign = 'left';
   return c;
 }
 
-function showPoster(){
+function renderPosterCanvas(){
   if(!report) return;
   const status=document.getElementById('posterStatus'),
         area=document.getElementById('posterArea'),
-        download=document.getElementById('downloadPoster');
+        download=document.getElementById('downloadPoster'),
+        sig=(document.getElementById('sigInput')?.value||'').trim().slice(0,12);
   status.textContent='';area.innerHTML='';download.disabled=true;
   try{
     if(posterURL) URL.revokeObjectURL(posterURL);
     posterURL=null;
-    const canvas=makePoster();
+    const canvas=makePoster(posterTheme,sig);
     const img=document.createElement('img');
     img.className='poster';img.alt='可保存的专属结果海报';
     img.src=canvas.toDataURL('image/png');
@@ -643,13 +1183,27 @@ function showPoster(){
       posterURL=blob?URL.createObjectURL(blob):img.src;
       download.disabled=false;
     },'image/png');
-    if(!posterDialog.open) posterDialog.showModal();
   }catch(e){
     status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
-    if(!posterDialog.open) posterDialog.showModal();
   }
 }
 
+function showPoster(){
+  if(!report) return;
+  SFX.click(3);
+  renderPosterCanvas();
+  if(!posterDialog.open) posterDialog.showModal();
+}
+
+document.querySelectorAll('[data-ptheme]').forEach(btn=>{
+  btn.onclick=()=>{
+    SFX.click(1);
+    posterTheme=Number(btn.dataset.ptheme)||0;
+    document.querySelectorAll('[data-ptheme]').forEach(x=>x.classList.toggle('active',x===btn));
+    renderPosterCanvas();
+  };
+});
+document.getElementById('sigApply').onclick=()=>{SFX.click(2);renderPosterCanvas();document.getElementById('posterStatus').textContent='✓ 海报已更新！';};
 document.getElementById('closePoster').onclick=()=>posterDialog.close();
 document.getElementById('downloadPoster').onclick=()=>{
   if(!posterURL||!report) return;
@@ -658,9 +1212,20 @@ document.getElementById('downloadPoster').onclick=()=>{
   document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方图片保存。';
 };
 document.getElementById('closeCopy').onclick=()=>copyDialog.close();
+document.getElementById('closePeek').onclick=()=>peekDialog.close();
+document.getElementById('closeDex').onclick=()=>dexDialog.close();
 document.getElementById('selectCopyBtn').onclick=()=>{
   const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
 };
+document.addEventListener('keydown',e=>{
+  if(screen!=='question'||posterDialog.open||copyDialog.open||peekDialog.open||dexDialog.open) return;
+  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  const map={'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'A':0,'B':1,'C':2,'D':3};
+  if(e.key in map){e.preventDefault();choose(map[e.key]);}
+  else if(e.key==='ArrowLeft'||e.key==='Backspace'){e.preventDefault();back();}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){if(answers[idx]!==null){e.preventDefault();next();}}
+});
+initSoundToggle();
 home();
 </script>
 </body>

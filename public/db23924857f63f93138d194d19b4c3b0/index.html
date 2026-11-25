@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f111c">
-<meta name="description" content="如果生活是一场 RPG，你的隐藏职业与天赋面板 · 24场现实副本遭遇战，解锁16种隐藏职业、四维属性条、神级被动与致命Debuff，含3:4冒险者公会角色卡海报。">
+<meta name="description" content="如果生活是一场 RPG，你的隐藏职业与天赋面板 · 24场现实副本遭遇战，解锁16种隐藏职业、四维属性条、组队胜率预测与3:4冒险者公会角色卡海报。">
 <title>如果生活是一场 RPG，你的隐藏职业与天赋面板 · LIFE RPG GUILD</title>
 <style>
 :root{
   color-scheme:dark;
-  --bg:#0e101b;--panel:#151828;--panel2:#1d2136;--ink:#f4f0e8;--muted:#b2aec4;
+  --bg:#0d0f1a;--panel:#151828;--panel2:#1d2136;--ink:#f4f0e8;--muted:#b2aec4;
   --gold:#f0c46c;--gold-soft:rgba(240,196,108,.15);--violet:#8f7ef2;--cyan:#55c9d6;
-  --crimson:#ef6868;--emerald:#5fd19a;--line:rgba(240,196,108,.26);--line-dim:rgba(255,255,255,.10);
+  --crimson:#ef6868;--emerald:#5fd19a;--line:rgba(240,196,108,.28);--line-dim:rgba(255,255,255,.10);
   --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
   --mono:"SF Mono","Menlo","Monaco","Consolas",monospace;
   --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
@@ -19,83 +19,90 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
-  radial-gradient(ellipse at 50% -12%,rgba(143,126,242,.22),transparent 55%),
-  radial-gradient(ellipse at 92% 100%,rgba(240,196,108,.13),transparent 46%);z-index:-1}
-main{width:min(100%,660px);padding:18px 16px max(34px,env(safe-area-inset-bottom));margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.brand{font-family:var(--mono);font-size:11px;letter-spacing:2.2px;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:7px}
+  radial-gradient(ellipse at 50% -12%,rgba(143,126,242,.24),transparent 55%),
+  radial-gradient(ellipse at 92% 100%,rgba(240,196,108,.14),transparent 46%);z-index:-1}
+main{width:min(100%,660px);padding:14px 14px max(28px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--mono);font-size:11px;letter-spacing:2px;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:6px}
 .brand::before{content:"⚔";font-size:13px;color:var(--gold)}
-.issue{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;letter-spacing:.08em}
-section.panel{border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,var(--panel),#111320);padding:clamp(18px,4.2vw,30px);box-shadow:0 26px 64px rgba(0,0,0,.52);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
+.issue{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;letter-spacing:.05em}
+.sound-btn{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--gold)}
+section.panel{position:relative;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,var(--panel),#10121f);padding:clamp(16px,4vw,28px);box-shadow:0 26px 64px rgba(0,0,0,.54);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
+section.panel::after{content:"";position:absolute;inset:8px;border:1px solid rgba(240,196,108,.12);border-radius:16px;pointer-events:none}
 @keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 h1,h2,h3,p{margin:0}
-h1{font-family:var(--serif);font-size:clamp(27px,7vw,40px);font-weight:800;line-height:1.28;letter-spacing:.02em;color:#fff}
-h2{font-family:var(--serif);font-size:clamp(20px,5vw,25px);line-height:1.5;font-weight:700;color:#fff}
+h1{font-family:var(--serif);font-size:clamp(24px,6.2vw,38px);font-weight:800;line-height:1.28;letter-spacing:.02em;color:#fff;text-wrap:balance}
+h2{font-family:var(--serif);font-size:clamp(20px,5vw,25px);line-height:1.48;font-weight:700;color:#fff}
 h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700;color:#fff}
-.eyebrow{font-family:var(--mono);color:var(--gold);font-size:10.5px;letter-spacing:2px;font-weight:800;margin:16px 0 7px;text-transform:uppercase}
-.lead{font-size:14.5px;line-height:1.86;margin:12px 0 18px;color:var(--muted)}
+.eyebrow{font-family:var(--mono);color:var(--gold);font-size:10.5px;letter-spacing:1.8px;font-weight:800;margin:13px 0 6px;text-transform:uppercase}
+.lead{font-size:14px;line-height:1.78;margin:9px 0 14px;color:var(--muted);text-wrap:pretty}
 .muted{font-size:12px;color:var(--muted)}
-/* RPG Guild Hero */
-.hero{position:relative;isolation:isolate;height:clamp(198px,48vw,252px);background:#101222;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.hero{position:relative;isolation:isolate;height:clamp(168px,42vw,232px);background:#101222;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
 .hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,27,.06) 0%,rgba(14,16,27,.72) 100%);z-index:-1}
-.hero-badge{position:absolute;top:14px;right:14px;padding:4px 11px;border-radius:99px;border:1px solid rgba(240,196,108,.56);background:rgba(15,17,28,.68);backdrop-filter:blur(6px);font-family:var(--mono);font-size:10px;letter-spacing:1.4px;font-weight:800;color:var(--gold)}
-.hero-copy{position:absolute;bottom:16px;left:18px;right:16px}
-.hero-copy small{font-family:var(--mono);font-size:10px;letter-spacing:2.6px;color:var(--gold);display:block;margin-bottom:3px}
-.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,34px);letter-spacing:2.5px;line-height:1.25;color:#fff}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
-.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line-dim);border-radius:99px;background:rgba(255,255,255,.04);color:var(--muted);font-weight:600}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,27,.05) 0%,rgba(14,16,27,.70) 100%);z-index:-1}
+.hero-badge{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:99px;border:1px solid rgba(240,196,108,.56);background:rgba(15,17,28,.7);backdrop-filter:blur(6px);font-family:var(--mono);font-size:10px;letter-spacing:1.2px;font-weight:800;color:var(--gold)}
+.hero-copy{position:absolute;bottom:14px;left:16px;right:16px}
+.hero-copy small{font-family:var(--mono);font-size:9.5px;letter-spacing:2.4px;color:var(--gold);display:block;margin-bottom:2px}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(22px,5.6vw,32px);letter-spacing:2.5px;line-height:1.22;color:#fff}
+.rune-spin{transform-origin:476px 118px;animation:spin 24s linear infinite}
+.rune-spin-rev{transform-origin:476px 118px;animation:spinRev 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinRev{to{transform:rotate(-360deg)}}
+.ember-rise{animation:emberFloat 4.2s ease-in-out infinite alternate}
+@keyframes emberFloat{from{transform:translateY(6px);opacity:.35}to{transform:translateY(-9px);opacity:1}}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 15px}
+.pill{font-size:11.5px;padding:4px 11px;border:1px solid var(--line-dim);border-radius:99px;background:rgba(255,255,255,.04);color:var(--muted);font-weight:600}
 .pill.gold{border-color:rgba(240,196,108,.48);background:var(--gold-soft);color:var(--gold);font-weight:700}
-.teaser-wrap{margin:22px 0 20px;padding-top:16px;border-top:1px dashed var(--line)}
-.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
-.teaser-head span{font-family:var(--mono);font-size:11px;letter-spacing:1.4px;color:var(--gold);font-weight:800}
+.teaser-wrap{margin:15px 0 12px;padding-top:13px;border-top:1px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.teaser-head span{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;color:var(--gold);font-weight:800}
 .teaser-head small{font-size:11px;color:var(--muted)}
-.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.teaser{padding:12px 10px;border-radius:12px;background:var(--panel2);border:1px solid var(--line-dim);display:flex;flex-direction:column;gap:4px}
-.teaser-rank{font-family:var(--mono);font-size:9.5px;font-weight:800;letter-spacing:.06em}
-.teaser b{font-family:var(--serif);font-size:13.5px;color:#fff;line-height:1.35}
-.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-button{font:inherit;color:inherit;cursor:pointer;background:var(--panel2);border:1px solid var(--line-dim);border-radius:13px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
-button:active:not(:disabled){transform:scale(.988)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.teaser{padding:10px 8px;border-radius:12px;background:var(--panel2);border:1px solid var(--line-dim);display:flex;flex-direction:column;gap:3px;text-align:left}
+.teaser:hover{border-color:var(--gold);box-shadow:0 8px 20px rgba(0,0,0,.38)}
+.teaser-rank{font-family:var(--mono);font-size:9px;font-weight:800;letter-spacing:.05em}
+.teaser b{font-family:var(--serif);font-size:12.5px;color:#fff;line-height:1.32}
+.teaser small{font-size:10px;color:var(--muted);line-height:1.38;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--panel2);border:1px solid var(--line-dim);border-radius:13px;padding:12px 15px;min-height:46px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.986)}
 button:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
 button:hover:not(:disabled){border-color:var(--gold)}
 button:disabled{opacity:.36;cursor:not-allowed}
-.primary{background:linear-gradient(135deg,#f5cf7f,#d49c3d);color:#19140d;border-color:transparent;font-weight:850;width:100%;text-align:center;box-shadow:0 8px 24px rgba(240,196,108,.24)}
+.primary{background:linear-gradient(135deg,#f7d386,#d49a38);color:#19140d;border-color:transparent;font-weight:850;width:100%;text-align:center;box-shadow:0 8px 24px rgba(240,196,108,.26)}
 .primary:hover:not(:disabled){filter:brightness(1.06)}
 .secondary{width:100%;text-align:center;background:rgba(255,255,255,.04);border-color:var(--line);font-weight:700}
-.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:7px;min-height:34px}
 .subtle:hover{color:var(--gold)}
-.stack{display:grid;gap:10px}
+.stack{display:grid;gap:9px}
 .actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
-.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:14px}
+.notice{font-size:11.5px;color:var(--muted);line-height:1.66;margin-top:12px}
 /* Quiz */
 .question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--gold);font-weight:800}
 .auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line-dim);background:rgba(255,255,255,.04);color:var(--muted);font-family:var(--sans);font-size:11px;font-weight:700;min-height:28px}
 .auto-toggle.on{border-color:rgba(240,196,108,.55);color:var(--gold);background:var(--gold-soft)}
-.progress{height:6px;background:rgba(255,255,255,.08);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress{height:6px;background:rgba(255,255,255,.08);overflow:hidden;border-radius:12px;margin:9px 0 8px}
 .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--gold));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
-.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:12px;background:rgba(143,126,242,.09);border:1px solid rgba(143,126,242,.26);border-left:3.5px solid var(--gold);margin-bottom:20px}
+.chapter-dots span{background:var(--gold)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:12px;background:rgba(143,126,242,.09);border:1px solid rgba(143,126,242,.26);border-left:3.5px solid var(--gold);margin:10px 0 18px}
 .chapter-bar strong{display:block;font-family:var(--mono);font-size:12.5px;color:var(--gold)}
 .chapter-bar span{display:block;font-size:11.5px;color:var(--muted);line-height:1.45}
-.options{display:grid;gap:10px;margin:20px 0 22px}
-.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--panel2);color:var(--ink)}
+.options{display:grid;gap:10px;margin:18px 0 20px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:58px;width:100%;padding:12px 14px;line-height:1.52;background:var(--panel2);color:var(--ink)}
 .option .letter{display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:8px;background:rgba(255,255,255,.05);color:var(--gold);font-family:var(--mono);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .16s}
-.option.selected{border-color:var(--gold);background:rgba(240,196,108,.14);box-shadow:0 6px 20px rgba(240,196,108,.12)}
+.option.selected{border-color:var(--gold);background:rgba(240,196,108,.15);box-shadow:0 6px 20px rgba(240,196,108,.14);transform:translateX(2px)}
 .option.selected .letter{background:var(--gold);color:#19140d;border-color:var(--gold)}
 .option .check{margin-left:auto;color:var(--gold);font-weight:800;font-size:15px}
 .nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
-/* Magic Circle Awakening Ritual */
+/* Awakening Ritual */
 .calc-box{text-align:center;padding:38px 10px 30px}
 .rune-circle{width:84px;height:84px;margin:0 auto 22px;position:relative;display:grid;place-items:center}
 .rune-outer{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--gold);animation:spin 5s linear infinite}
-.rune-inner{position:absolute;inset:12px;border:2px solid var(--violet);transform:rotate(45deg);animation:spin-rev 2.4s linear infinite;box-shadow:0 0 20px rgba(143,126,242,.35)}
+.rune-inner{position:absolute;inset:12px;border:2px solid var(--violet);transform:rotate(45deg);animation:spinRev 2.4s linear infinite;box-shadow:0 0 20px rgba(143,126,242,.38)}
 .rune-core{color:var(--gold);font-size:22px;z-index:1}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes spin-rev{to{transform:rotate(-315deg)}}
 .calc-step{font-family:var(--serif);font-size:18.5px;color:#fff;margin-bottom:8px;min-height:1.6em}
 .calc-sub{font-size:12px;color:var(--muted)}
-/* Result Character Sheet Header */
-.char-card{border:1.5px solid color-mix(in srgb,var(--cls-color,var(--gold)) 52%,rgba(255,255,255,.15));border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at 20% 0%,color-mix(in srgb,var(--cls-color,var(--violet)) 26%,transparent),transparent 58%),linear-gradient(165deg,var(--cls-deep,#1d2136),#10121e)}
+/* Result Character Sheet */
+.char-card{border:1.5px solid color-mix(in srgb,var(--cls-color,var(--gold)) 55%,rgba(255,255,255,.15));border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at 20% 0%,color-mix(in srgb,var(--cls-color,var(--violet)) 28%,transparent),transparent 58%),linear-gradient(165deg,var(--cls-deep,#1d2136),#10121e)}
 .char-top-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08);font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;color:var(--cls-color,var(--gold))}
 .rank-badge{padding:3px 10px;border-radius:6px;background:color-mix(in srgb,var(--cls-color,var(--gold)) 22%,transparent);border:1px solid var(--cls-color,var(--gold));font-weight:900;color:#fff}
 .char-main{display:grid;grid-template-columns:126px 1fr;gap:16px;padding:18px 18px 14px;align-items:center}
@@ -106,27 +113,25 @@ button:disabled{opacity:.36;cursor:not-allowed}
 .char-meta-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:8px}
 .lv-chip{font-family:var(--mono);font-size:11px;font-weight:800;padding:3px 9px;border-radius:5px;background:var(--cls-color,var(--gold));color:#12131d}
 .fit-chip{font-family:var(--mono);font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px;background:rgba(255,255,255,.08);color:#e9e4db;border:1px solid rgba(255,255,255,.14)}
-/* RPG 4-Stat Bars inside character card */
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;padding:14px 18px 16px;border-top:1px solid rgba(255,255,255,.08);background:rgba(8,10,18,.42)}
 .stat-item-head{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:11.5px;margin-bottom:5px}
 .stat-item-head span{color:#e2deeb;font-weight:700}
 .stat-item-head strong{color:var(--bar-c,var(--gold));font-size:13px;font-weight:900}
 .stat-bar{height:7px;border-radius:99px;background:rgba(255,255,255,.10);overflow:hidden}
-.stat-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,color-mix(in srgb,var(--bar-c,var(--gold)) 65%,#fff),var(--bar-c,var(--gold)))}
+.stat-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,color-mix(in srgb,var(--bar-c,var(--gold)) 65%,#fff),var(--bar-c,var(--gold)));animation:barGrow .8s cubic-bezier(.22,1,.36,1)}
+@keyframes barGrow{from{width:0}}
 .quote-strip{padding:12px 18px 15px;border-top:1px solid rgba(255,255,255,.08);font-family:var(--serif);font-size:15.5px;color:var(--cls-color,var(--gold));line-height:1.65;text-align:center}
-/* Content Blocks */
-.block{padding:21px 0;border-bottom:1px solid var(--line-dim)}
+.block{padding:20px 0;border-bottom:1px solid var(--line-dim)}
 .block:last-of-type{border:0;padding-bottom:10px}
-.block p{font-size:14.5px;line-height:1.88;color:#dcd7e6}
+.block p{font-size:14.5px;line-height:1.86;color:#dcd7e6}
 .kicker{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:800;margin-bottom:5px;text-transform:uppercase}
-/* Passive Skill & Debuff Cards */
 .skill-card{margin-top:12px;padding:14px 15px;border-radius:13px;background:rgba(95,209,154,.10);border:1.5px solid rgba(95,209,154,.38)}
 .skill-card b{display:block;font-family:var(--mono);font-size:12px;color:var(--emerald);margin-bottom:5px;letter-spacing:.04em}
 .skill-card p{font-size:13.5px;line-height:1.78;color:#e6f6ee}
 .debuff-card{margin-top:11px;padding:14px 15px;border-radius:13px;background:rgba(239,104,104,.11);border:1.5px solid rgba(239,104,104,.42)}
 .debuff-card b{display:block;font-family:var(--mono);font-size:12px;color:#ff8a8a;margin-bottom:5px;letter-spacing:.04em}
 .debuff-card p{font-size:13.5px;line-height:1.78;color:#fae4e4}
-/* Axis Meter */
+.radar-wrap{background:rgba(255,255,255,.03);border:1px solid var(--line-dim)}
 .axis{margin:14px 0}
 .axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
 .axis-head strong{font-size:13px;color:#fff}
@@ -140,6 +145,17 @@ button:disabled{opacity:.36;cursor:not-allowed}
 .mini b{display:block;font-family:var(--mono);color:var(--cls-color,var(--gold));font-size:11px;margin-bottom:5px}
 .mini .partner-name{font-family:var(--serif);font-size:15.5px;font-weight:800;color:#fff;margin-bottom:5px;line-height:1.38}
 .mini p{font-size:13px;line-height:1.68;color:var(--muted)}
+.chem-box{background:var(--panel2);border:1px solid var(--line)}
+.chem-select{border:1px solid var(--line);background:#10121e;color:var(--ink)}
+.chem-out{background:#10121e;border:1px solid var(--line-dim)}
+.chem-pct{font-family:var(--mono);color:var(--cls-color,var(--gold))}
+.chem-bar{background:rgba(255,255,255,.1)}
+.chem-bar i{background:linear-gradient(90deg,var(--violet),var(--gold))}
+.chem-copy-btn{background:var(--gold-soft);border-color:var(--line);color:var(--gold)}
+.dex-bar{background:var(--panel2);border:1px dashed var(--line)}
+.dex-open-btn{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+.dex-card{background:var(--panel2);border:1px solid var(--line-dim)}
+.dex-card.unlocked{background:rgba(240,196,108,.1);border-color:var(--line)}
 .rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line-dim);font-size:14px}
 .rank:last-child{border:0}
 .rank-left{display:flex;align-items:center;gap:10px}
@@ -147,20 +163,105 @@ button:disabled{opacity:.36;cursor:not-allowed}
 .rank small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
 .rank .pct{font-family:var(--mono);font-size:11.5px;font-weight:800;color:var(--gold);background:var(--gold-soft);padding:3px 9px;border-radius:99px}
 .status-bar{font-family:var(--mono);font-size:12px;color:var(--gold);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:700}
-.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
+.footer{text-align:center;margin:16px 0 0;font-size:11px;color:var(--muted);line-height:1.75}
 .poster{width:100%;max-width:360px;margin:10px auto;border-radius:12px;display:block;border:1px solid var(--line);box-shadow:0 14px 36px rgba(0,0,0,.55)}
+.theme-chip{background:var(--panel2);border:1px solid var(--line-dim);color:var(--muted)}
+.theme-chip.active{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+.sig-input{border:1px solid var(--line);background:#10121e;color:var(--ink)}
+.sig-apply{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+.quiz-toast{background:#f0c46c;color:#19140d;font-family:var(--mono)}
 dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:1.5px solid var(--line);border-radius:20px;padding:20px;background:var(--panel);color:var(--ink);box-shadow:0 26px 70px rgba(0,0,0,.75)}
 dialog::backdrop{background:rgba(7,8,15,.8);backdrop-filter:blur(4px)}
 .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
 .copy-area{width:100%;min-height:160px;border-radius:10px;border:1px solid var(--line);background:#10121e;color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+
+/* === Header Controls & Sound Button === */
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sound-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:99px;font-size:11px;font-weight:700;min-height:28px;line-height:1;letter-spacing:.04em}
+.sound-btn.muted{opacity:.62}
+/* === CTA Shimmer & Interactive Foil Tilt === */
+.primary{position:relative;overflow:hidden}
+.primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.26),transparent);transform:skewX(-18deg);animation:btnSheen 4.4s ease-in-out infinite;pointer-events:none}
+@keyframes btnSheen{0%,68%{left:-120%}100%{left:165%}}
+.foil-tilt{transition:transform .22s ease-out;position:relative}
+.foil-tilt::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,20%),rgba(255,255,255,.16),transparent 54%);opacity:0;transition:opacity .25s}
+.foil-tilt:hover::after{opacity:1}
+/* === Interactive Teaser Cards === */
+.teaser{cursor:pointer;transition:transform .16s ease,border-color .18s ease,box-shadow .18s ease}
+.teaser:hover{transform:translateY(-2px)}
+.teaser:active{transform:scale(.98)}
+/* === Chapter Dots & Keyboard Hint === */
+.chapter-dots{display:flex;gap:5px;margin:8px 0 4px}
+.chapter-dots span{flex:1;height:4px;border-radius:99px;opacity:.22;transition:opacity .25s,transform .25s}
+.chapter-dots span.done{opacity:.72}
+.chapter-dots span.now{opacity:1;transform:scaleY(1.35)}
+.kbd-hint{display:none;text-align:center;font-size:11px;opacity:.65;margin-top:8px}
+@media(hover:hover) and (pointer:fine){.kbd-hint{display:block}}
+/* === Radar Box === */
+.radar-wrap{display:flex;justify-content:center;align-items:center;margin:10px 0 14px;padding:10px;border-radius:16px}
+.radar-svg{width:min(280px,100%);height:auto;display:block}
+.radar-poly{transform-origin:140px 122px;animation:radarPop .55s cubic-bezier(.22,1,.36,1)}
+@keyframes radarPop{from{opacity:0;transform:scale(.45)}to{opacity:1;transform:scale(1)}}
+/* === Friend Compatibility Checker Widget === */
+.chem-box{margin-top:14px;padding:15px;border-radius:15px}
+.chem-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+.chem-head strong{font-size:13.5px}
+.chem-head span{font-size:11px;opacity:.75}
+.chem-select{width:100%;min-height:44px;padding:9px 12px;border-radius:11px;font:inherit;font-size:13.5px;cursor:pointer}
+.chem-out{margin-top:12px;padding:13px 14px;border-radius:12px;animation:enter .24s ease-out}
+.chem-score-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.chem-verdict{font-weight:800;font-size:14px}
+.chem-pct{font-weight:900;font-size:20px;line-height:1}
+.chem-bar{height:7px;border-radius:99px;overflow:hidden;margin:6px 0 9px}
+.chem-bar i{display:block;height:100%;border-radius:99px;transition:width .4s cubic-bezier(.22,1,.36,1)}
+.chem-copy-btn{margin-top:10px;width:100%;min-height:38px;padding:7px 12px;font-size:12.5px;font-weight:700;border-radius:10px}
+/* === Collection Dex Button & Grid === */
+.dex-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;margin-top:12px}
+.dex-bar-info strong{display:block;font-size:13px}
+.dex-bar-info span{display:block;font-size:11.5px;opacity:.75}
+.dex-open-btn{min-height:36px;padding:6px 14px;font-size:12px;font-weight:700;border-radius:99px;flex-shrink:0}
+.dex-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.dex-card{padding:11px 10px;border-radius:12px;display:flex;flex-direction:column;gap:4px}
+.dex-card.locked{opacity:.58;border-style:dashed!important}
+.dex-card b{font-size:13px;line-height:1.35}
+.dex-card small{font-size:11px;line-height:1.45;opacity:.8}
+/* === Poster Customization Controls === */
+.poster-tools{display:grid;gap:9px;margin:10px 0 8px}
+.poster-themes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.theme-chip{min-height:36px;padding:6px 10px;font-size:12px;font-weight:700;border-radius:10px;text-align:center}
+.sig-row{display:flex;gap:8px;align-items:center}
+.sig-input{flex:1;min-height:38px;padding:6px 11px;border-radius:10px;font:inherit;font-size:13px}
+.sig-apply{min-height:38px;padding:6px 13px;font-size:12px;font-weight:700;border-radius:10px;flex-shrink:0}
+/* === Chapter Toast === */
+.quiz-toast{position:fixed;top:16px;left:50%;transform:translate(-50%,-18px);opacity:0;pointer-events:none;z-index:999;padding:8px 16px;border-radius:99px;font-size:12.5px;font-weight:700;box-shadow:0 10px 28px rgba(0,0,0,.22);transition:opacity .25s,transform .25s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.quiz-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:440px){.dex-grid{grid-template-columns:1fr}}
+
 @media(max-width:480px){
-  main{padding:14px 12px 28px}
+  main{padding:10px 11px 18px}
+  header{margin-bottom:9px;padding-bottom:8px}
+  .brand{letter-spacing:.9px;font-size:10px;white-space:nowrap}
+  .issue{font-size:9.5px}
+  section.panel{padding:14px 14px 16px}
+  .hero{height:138px}
+  .hero-copy small{font-size:8.5px;letter-spacing:1.4px}
+  .eyebrow{margin:10px 0 4px;font-size:10px}
+  h1{font-size:22.5px;line-height:1.26}
+  .lead{font-size:12.5px;line-height:1.58;margin:6px 0 10px}
+  .pills{gap:5px;margin:0 0 11px}
+  .pill{font-size:10.5px;padding:3px 9px}
+  button.primary{min-height:42px;padding:10px 14px;font-size:14.5px}
+  .teaser-wrap{margin:11px 0 6px;padding-top:10px}
+  .teaser-head{margin-bottom:7px}
   .char-main{grid-template-columns:1fr;text-align:center}
   .crest-frame{margin:0 auto}
   .char-meta-row,.char-main .pills{justify-content:center}
-  .teasers,.duo,.actions-row,.stat-grid{grid-template-columns:1fr}
+  .duo,.actions-row,.stat-grid{grid-template-columns:1fr}
   .option{font-size:14px}
+  .teaser{padding:8px 6px}
+  .teaser b{font-size:11px;line-height:1.26}
+  .teaser small{display:none}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -169,7 +270,10 @@ dialog::backdrop{background:rgba(7,8,15,.8);backdrop-filter:blur(4px)}
 <main>
   <header>
     <span class="brand">LIFE RPG GUILD</span>
-    <span class="issue">QUEST 05 · 隐藏职业觉醒</span>
+    <div class="header-right">
+      <span class="issue">QUEST 05 · 隐藏职业觉醒</span>
+      <button type="button" id="soundBtn" class="sound-btn" aria-label="切换音效">🔊 音效</button>
+    </div>
   </header>
   <div id="app"></div>
   <footer class="footer">LIFE RPG GUILD · 原创游戏化趣味人格测试，非专业心理测评<br>无需登录 · 所有冒险数据仅保存在你的本地浏览器</footer>
@@ -180,7 +284,17 @@ dialog::backdrop{background:rgba(7,8,15,.8);backdrop-filter:blur(4px)}
     <h3 id="posterTitle">你的 3:4 RPG 角色属性卡海报</h3>
     <button id="closePoster" type="button">关闭</button>
   </div>
-  <p class="muted">1080 × 1440 冒险者公会限定卡 · 手机长按图片保存，电脑点击下方下载。</p>
+  <p class="muted">1080 × 1440 冒险者公会限定卡 · 可印冒险者 ID 并切换暗影/羊皮卷画风！</p>
+  <div class="poster-tools">
+    <div class="poster-themes" role="group" aria-label="切换角色卡画风">
+      <button type="button" class="theme-chip active" data-ptheme="0">暗影鎏金限定</button>
+      <button type="button" class="theme-chip" data-ptheme="1">秘境羊皮纸卷</button>
+    </div>
+    <div class="sig-row">
+      <input id="sigInput" class="sig-input" type="text" maxlength="10" placeholder="冒险者 ID（选填，如：勇者阿猫）" aria-label="冒险者ID">
+      <button type="button" id="sigApply" class="sig-apply">刻入公会卡</button>
+    </div>
+  </div>
   <div id="posterArea"></div>
   <div class="stack" style="margin-top:12px">
     <button class="primary" id="downloadPoster">下载高清 PNG 角色面板</button>
@@ -198,60 +312,409 @@ dialog::backdrop{background:rgba(7,8,15,.8);backdrop-filter:blur(4px)}
   <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
 </dialog>
 
+<dialog id="peekDialog" aria-labelledby="peekTitle">
+  <div class="dialog-head">
+    <h3 id="peekTitle">隐藏职业档案</h3>
+    <button id="closePeek" type="button">关闭</button>
+  </div>
+  <div id="peekBody"></div>
+</dialog>
+
+<dialog id="dexDialog" aria-labelledby="dexTitle">
+  <div class="dialog-head">
+    <h3 id="dexTitle">冒险者公会 · 16 种隐藏职业图鉴</h3>
+    <button id="closeDex" type="button">关闭</button>
+  </div>
+  <p class="muted" id="dexSub">完成职业觉醒自动点亮纹章，喊上队友测出全服全职业！</p>
+  <div id="dexGrid" class="dex-grid"></div>
+</dialog>
+
 <script>
 const D = {"title":"如果生活是一场 RPG，你的隐藏职业与天赋面板","subtitle":"ADVENTURER GUILD · 现实副本冒险者公会","brand":"LIFE RPG GUILD","vol":"QUEST 05 · 隐藏职业觉醒","heroTitle":"冒险者职业面板","heroSub":"IF LIFE WERE AN RPG ADVENTURE","intro":"早八通勤是每日日常任务，难搞的甲乙双方是守关 Boss，周末躺平是回城补蓝——如果把你的现实日常映射进异世界，你会觉醒什么隐藏职业？完成 24 场副本遭遇战，解锁你的属性面板、神级被动与致命 Debuff。","disclaimer":"本测试为原创游戏化趣味自我探索内容，所有职业、数值面板与技能梗均为娱乐创意，非专业心理测评。","kind":"RPG职业","axes":[["战斗站位","后排蓄力","前排冲锋"],["组队偏好","独行游侠","团队核心"],["天赋流派","理性策略","直觉共情"],["副本信条","佛系摸鱼","死磕通关"]],"chapters":[{"title":"STAGE 01 · 新手村日常","intro":"清晨醒来打开任务栏，看看你在现实副本里的默认出装与习惯。"},{"title":"STAGE 02 · 团队副本遭遇战","intro":"进入多人协作地图，队友配合、分工与突发状况正在考验你的定位。"},{"title":"STAGE 03 · 守关 Boss 与陷阱","intro":"面对高压截止日期、情绪暗箭与意外翻车，你的隐藏技能即将触发。"},{"title":"STAGE 04 · 营地篝火与宝箱","intro":"打完硬仗回到营地，你如何分配战利品、恢复蓝条并迎接下一关？"}],"calcSteps":["正在连接现实副本服务器，读取你的基础四维数值…","鉴定神级被动技能与隐藏致命 Debuff…","职业觉醒完成！正在铸造 3:4 冒险者公会角色卡…"],"teasers":["嘴硬心软·孤勇圣骑士","随时跑路·佛系炼金术士","只喊加油·氛围组圣光奶妈"],"shareTags":"#如果生活是一场RPG #RPG隐藏职业测试 #趣味性格测试 #寻找副本组队搭子","shareHook":"笑死，现实生活要是 RPG，我的隐藏职业竟然是【{name}】⚔️","questions":[{"axis":0,"text":"周一早上刚踏进公司或教室，地图突然刷新了一个没人碰过的棘手新任务，你会？","options":[{"text":"先在后排静静观察半小时，摸清地形和怪物机制再考虑出手","score":0},{"text":"先查查攻略、问问老玩家避坑经验，做好万全准备再上","score":1},{"text":"大致扫一眼任务说明就先试着摸一下，边打边调整走位","score":2},{"text":"不等别人推让，直接拔剑冲到最前面把第一波伤害接下来","score":3}]},{"axis":1,"text":"如果周末要挑战一项高难度生活副本（比如搬家、大扫除或长途旅行），你更喜欢？","options":[{"text":"全程单刷！按自己的节奏戴着耳机搞定，最怕队友在旁边打乱步调","score":0},{"text":"最多带一位默契满分的双排搭子，多一个人我都嫌吵","score":1},{"text":"拉上三四个合拍好友组个小队，分工合作顺便插科打诨","score":2},{"text":"人越多越热闹！建个冒险小群热火朝天一起干，干完直接开庆功宴","score":3}]},{"axis":2,"text":"队友在现实副本里突然心态爆炸、蹲在原地喊“这破关我过不去了”，你的第一技能是？","options":[{"text":"冷静递上一份三步破局攻略，帮对方精准定位卡关原因","score":0},{"text":"先稳住节奏帮着拆解问题，顺手讲句清醒冷笑话帮对方降温","score":1},{"text":"先蹲下来拍拍肩膀认真倾听，陪着吐槽完再一起想办法","score":2},{"text":"立刻释放满级共情光环疯狂夸夸撑腰，把队友血条和士气瞬间奶满","score":3}]},{"axis":3,"text":"进入一个没有强制排名的日常任务副本，你的通关标准通常是？","options":[{"text":"花最少力气混到刚好及格的奖励就立刻回城躺平，多打一秒都算亏","score":0},{"text":"轻松顺手拿个还不错的评价就好，绝不为了全成就熬夜掉头发","score":1},{"text":"只要接了任务就会认真打漂亮，尽量拿到高分和体面战利品","score":2},{"text":"不打出 SSS 满星完美通关、把隐藏宝箱全挖空，我今晚根本睡不着！","score":3}]},{"axis":0,"text":"在商店或网上看中一件很喜欢但有点小贵的新装备，你的出手节奏是？","options":[{"text":"先丢进收藏夹冷静蹲守一周，对比十家测评再决定买不买","score":0},{"text":"盘算一下实用度与预算空间，确认真需要再稳妥下单","score":1},{"text":"稍微纠结两分钟，觉得戴上能加 100 点快乐值就直接拿下","score":2},{"text":"一眼心动直接秒拍！千金难买我此刻开心，装备早买早享受","score":3}]},{"axis":1,"text":"你刚走进冒险者酒馆（陌生人聚会），系统提示需要刷一点社交好感，你会？","options":[{"text":"直接找吧台最暗的角落点杯饮料隐身，祈祷没人注意到我","score":0},{"text":"只跟认识的一两位老队友低声聊天，绝不主动跨桌串门","score":1},{"text":"自然融入旁边聊得来的小圈子，顺手帮冷场的朋友递个话头","score":2},{"text":"端着酒杯满场巡游破冰，十分钟后半间酒馆的人都在叫我大佬","score":3}]},{"axis":2,"text":"面对人生地图上的重大岔路口（比如换工作、换城市），你做决定时更信任哪块面板？","options":[{"text":"打开 Excel 理性列出收益、风险和退路，数据赢了就选哪条","score":0},{"text":"以逻辑和长期可行性为主，顺便参考一下自己的舒适度","score":1},{"text":"虽然也看现实条件，但心里喜不喜欢、有没有悸动感权重极高","score":2},{"text":"全听灵魂直觉与热爱召唤！如果这条路眼里没光，给再多金币也不走","score":3}]},{"axis":3,"text":"距离大型副本截止时间只剩三天，但你手头还有一大半进度没推进，此时你会？","options":[{"text":"先睡个饱觉吃顿好的，看看能不能找机会延期或精简一半需求","score":0},{"text":"不慌不忙把最核心的 60% 搞定保底，其余边角料随缘交差","score":1},{"text":"迅速拉起警戒线排出倒计时，按部就班在截止前稳稳交出高分卷","score":2},{"text":"直接进入狂暴超频状态，不仅要按时交卷，还要顺手做成全场最佳！","score":3}]},{"axis":0,"text":"四人小队在副本门口讨论谁去探路、谁在后面支援，你最顺手抢哪个位置？","options":[{"text":"绝对后排！站在视野最好的高地观察全场、提醒陷阱最适合我","score":0},{"text":"中后排灵活位，能随时给前排补给、必要时也能补两发远程输出","score":1},{"text":"中前排游走位，哪边缺人我就立刻补位顶上去","score":2},{"text":"必须冲锋前排！站在最前面开图扛伤害、带节奏才有冒险的爽感","score":3}]},{"axis":1,"text":"团队副本顺利通关掉落了一大箱金币和荣誉，你最享受哪种领奖画面？","options":[{"text":"领完我那份立刻静音退队回家研究新装备，最怕漫长的社交寒暄","score":0},{"text":"和最铁的一两位队友碰个拳，低调收好战利品心里美滋滋","score":1},{"text":"和全队一起复盘刚才的精彩操作，互相猛夸一番再散场","score":2},{"text":"当场高举奖杯招呼全队去酒馆大吃一顿，把高光时刻燃到顶点！","score":3}]},{"axis":2,"text":"如果可以免费点满一项现实生活里的「神级外挂技能」，你第一秒点哪个？","options":[{"text":"【绝对洞察】：一眼看穿任何复杂系统的底层逻辑与最优解法","score":0},{"text":"【陷阱雷达】：提前预判风险和坑位，永远精准避雷不吃亏","score":1},{"text":"【心灵共振】：瞬间读懂身边人没说出口的委屈与柔软心事","score":2},{"text":"【奇迹幸运】：凭直觉随手一选就能撞见惊喜、贵人与绝美风景","score":3}]},{"axis":3,"text":"遇到一个特别难缠的守关 Boss（比如难搞客户/魔鬼考题），连续失败两次后你会？","options":[{"text":"果断按下撤退键换个简单地图刷怪，绝不跟它死磕消耗好心情","score":0},{"text":"先回营地休息两天吃点甜的，等心情好了再看要不要重来","score":1},{"text":"冷静复盘前两次的失误点，换套配装稳扎稳打再去挑战","score":2},{"text":"胜负欲彻底被点燃！连夜研究打法直到把它按在地上摩擦通关为止","score":3}]},{"axis":1,"text":"在现实世界里，如果队友不小心踩中陷阱导致全队陷入麻烦，你的第一反应？","options":[{"text":"内心默默记一笔“下次还是自己单刷靠谱”，然后静音默默修锅","score":0},{"text":"不指责也不多话，冷静把属于我负责的那一块先稳住","score":1},{"text":"赶紧喊大家别慌，迅速重新分配任务带着队友一起补救","score":2},{"text":"第一个冲过去把队友护在身后大喊“没事有我在”，顺手把气氛稳住","score":3}]},{"axis":0,"text":"你在旅途中发现一条地图上没有标记、但隐约发光的神秘小路，你会？","options":[{"text":"绝不贸然乱闯，先查清楚有没有潜在危险再稳稳走主路","score":0},{"text":"在路口探头张望一会儿，确认安全且时间充裕才小心试探几步","score":1},{"text":"好奇心压过犹豫，笑着迈步走进去看看藏着什么支线彩蛋","score":2},{"text":"眼睛一亮直接加速冲进去！未知支线就是冒险最迷人的意义","score":3}]},{"axis":3,"text":"平时没有 Boss 追杀的自由闲暇日，你通常会怎么分配体力值？","options":[{"text":"100% 挂机回蓝！睡大觉、刷剧、发呆，谁敢提“自我提升”我跟谁急","score":0},{"text":"70% 躺平享乐，30% 顺手做点好玩无压力的小爱好","score":1},{"text":"劳逸结合，上午充电放松，下午推进一两项自己的成长主线","score":2},{"text":"趁大家都在休息偷偷刷经验升级！学新技能、搞副业、练装备停不下来","score":3}]},{"axis":2,"text":"逛 RPG 城镇里的神秘商人摊位，四件装备属性相同，你会带走哪一件？","options":[{"text":"结构精密、刻满几何符文的「冷静思维怀表」","score":0},{"text":"功能齐全、关键时刻能保命的「多功能战术披风」","score":1},{"text":"握在手里暖融融、能安抚情绪的「星光治愈提灯」","score":2},{"text":"造型华丽绝美、自带浪漫传说故事的「绯红誓约羽翼」","score":3}]},{"axis":0,"text":"有人当众对你放出冷箭（阴阳怪气或无理甩锅），你的反击速度有多快？","options":[{"text":"当下懒得硬碰硬，默默退后一步避开锋芒，事后用更聪明的方式化解","score":0},{"text":"先冷静收集证据留好底牌，抓准破绽一招精准反制","score":1},{"text":"几秒钟反应过来就用不卑不亢的话术当场把锅优雅推回去","score":2},{"text":"0.1 秒原地反手暴击！绝不内耗自己，有仇当场就报完","score":3}]},{"axis":1,"text":"下面哪一种「队伍评价」，最接近朋友们平时对你的真实印象？","options":[{"text":"“行踪成谜的独行大佬，平时找不到人，关键时刻战力惊人”","score":0},{"text":"“安静靠谱的宝藏搭档，话不多但只要在场就特别安心”","score":1},{"text":"“团队黏合剂与开心果，有你在整个副本都变得轻松好玩”","score":2},{"text":"“天生团长兼气氛发动机，跟着你冲就完事了！”","score":3}]},{"axis":3,"text":"如果系统突然弹出一个“高风险但超高回报的隐藏终极副本”邀请函，你会？","options":[{"text":"毫不犹豫点「拒绝」：我就想在新手村晒太阳摸鱼，拯救世界交给卷王吧","score":0},{"text":"观望一下别人打得累不累，太消耗生命值的话还是算了","score":1},{"text":"认真评估一下胜算和收益，只要装备够格就乐意去搏一把","score":2},{"text":"秒点「接受挑战」！人生难得遇上大副本，不拼一次全服首通怎么行","score":3}]},{"axis":2,"text":"营地篝火旁，大家聊起“什么才是冒险路上最珍贵的战利品”，你的答案是？","options":[{"text":"看透世界规律的智慧、硬核技能和实打实的底气金币","score":0},{"text":"一路积累下来、不管去哪都能游刃有余的生存经验","score":1},{"text":"那些一起看过的晚霞、笑到肚子痛的回忆和真心相待的伙伴","score":2},{"text":"从未熄灭的浪漫赤诚，以及为所爱之人/之事勇敢奔赴的瞬间","score":3}]},{"axis":1,"text":"当你状态不佳、血条和蓝条都快见底时，你最希望得到怎样的支援？","options":[{"text":"千万别来找我聊天！给我一间上锁的小木屋独处 24 小时自动满血","score":0},{"text":"给我留杯热茶和安静空间，等我自己缓过来再出山","score":1},{"text":"叫一两个信得过的好友来营地坐坐，边吃宵夜边吐吐槽","score":2},{"text":"立刻呼叫全队集结，用大家的拥抱、笑声和热闹把我一键满血复活","score":3}]},{"axis":0,"text":"如果把你的现实人生写成一部 RPG 攻略，你的核心通关风格更像？","options":[{"text":"谋定后动流：先蓄力发育、算准时机，绝不打无准备之仗","score":0},{"text":"稳健控场流：步步为营、游刃有余，把一切风险控在安全距离外","score":1},{"text":"敏捷游击流：反应快、爱探索，边打怪边解锁隐藏趣味路线","score":2},{"text":"热血强攻流：遇山开路、遇水架桥，用满格行动力直接平推过去","score":3}]},{"axis":2,"text":"你正在编写自己的「冒险者个人简介」，下面哪句标签最让你觉得“这简直是我本人”？","options":[{"text":"“冷静理智的策略大脑，专治各种混乱与不服”","score":0},{"text":"“清醒通透的实用派，外冷内稳绝不轻易上头”","score":1},{"text":"“自带温度的治愈灵魂，敏锐接住每一份细微善意”","score":2},{"text":"“热烈浪漫的理想冒险家，永远为心动与情义亮剑”","score":3}]},{"axis":3,"text":"最终章落幕，系统准备为你颁发一枚「终身成就勋章」，你最想戴上哪一枚？","options":[{"text":"《全服最爽摸鱼王》：没受一点委屈，轻松快乐躺赢整个人生","score":0},{"text":"《自在风行者》：不内卷不焦虑，按自己的步调看遍沿途风景","score":1},{"text":"《实力破局官》：既活得体面松弛，又稳稳拿下了想要的高光成就","score":2},{"text":"《传奇登顶者》：打破所有上限，在自己的主线里留下响亮传说","score":3}]}],"profiles":[{"no":"01","rank":"SSR · 摸鱼贤者","name":"随时跑路·佛系炼金术士","role":"后排摸鱼 / 极简生存流","crest":"flask","color":"#5ec4a8","deep":"#173332","vector":[0.2,0.2,0.2,0.2],"tags":["绝不内耗","反画饼大师","极限省蓝"],"quote":"勇者负责拼命拯救世界，我负责在后排炼完保底药水准点下班。","insight":"你是现实副本里最通透的「极简生存大师」。你从不被无意义的排名和画大饼绑架，极擅长用最少蓝条撬动最舒服的日常——别人卷生卷死掉血条，你早已算好最优路线，准点传送回城躺平。","passive":["【自动闪避内卷】","每当周围出现高压画饼或无效团建时，自动触发 95% 精神伤害免疫，并瞬间锁定最近摸鱼出口。"],"debuff":["【超长开机前摇】","在没有绝对死线或高额金币诱惑的情况下，行动力自动锁定在节能 20%，极易陷入“明天再说”循环。"],"match":["速通带飞·铁血团长战神","团长在前排把大局和重活全包了，你在后排冷静递药水补巧思，爽翻天。"],"clash":["满血冲锋·炽焰烈阳狂战士","对方喊“兄弟们燃烧生命冲啊”，你淡定回一句“我蓝条珍贵，你先上”。"]},{"no":"02","rank":"SSR · 幕后智囊","name":"暗中观察·毒舌预言家","role":"后排控场 / 洞察预判流","crest":"book","color":"#8f7ef2","deep":"#241d47","vector":[0.2,0.2,0.2,2.8],"tags":["人间清醒","全图透视眼","静音大佬"],"quote":"我早就预言了这波要翻车，只是在等你们自己撞完南墙来求攻略。","insight":"你是躲在阴影里把整张地图机制算得明明白白的顶级智囊。你不爱在公共频道刷存在感，但你对细节、趋势和人性的洞察准得吓人——平时静音发育，一出手就是直接改写战局的神级预判。","passive":["【Boss机制透视】","开战前 10 秒即可看穿复杂局面的核心漏洞与避坑点，自带冷幽默神补刀暴击效果。"],"debuff":["【过度冷静隔阂】","因为总比别人早三步看穿结局，偶尔懒得解释直接开启“算了爱咋咋地”高冷静音模式。"],"match":["嘴硬心软·孤勇圣骑士","你看穿全部弱点给坐标，圣骑士二话不说冲锋执行，零废话顶级双排。"],"clash":["全图开怪·整活狂欢海盗","你刚算出唯一安全路线，海盗已经一脚踹开红名 Boss 大门并朝你挥手。"]},{"no":"03","rank":"SR+ · 自然隐者","name":"隐身采药·森林治愈德鲁伊","role":"后排治愈 / 慢享自然流","crest":"leaf","color":"#74cf8e","deep":"#1b3626","vector":[0.2,0.2,2.8,0.2],"tags":["零压治愈系","独处回蓝","小动物之友"],"quote":"别拉我打排位赛了，我只想在副本角落采采草药、撸撸史莱姆。","insight":"你是现实世界里最稀缺的「低耗能温柔治愈者」。你讨厌杀气腾腾的竞争与喧嚣社交，更喜欢守着自己的小森林，用细腻感知力和不着痕迹的善意，悄悄把路过身边的疲惫旅人治愈回血。","passive":["【森林静谧结界】","只要进入独处或自然环境，生命值与情绪值每秒 +15%，且靠近你的朋友会自动卸下焦虑。"],"debuff":["【社恐蓝条告急】","被强行拉入超过 5 人的陌生副本时，每隔 30 分钟强制掉电 40%，急需回城钻进被窝。"],"match":["随性流浪·追风游侠射手","都不爱卷主线，一个看风景开图，一个采草药治愈，神仙度假双人组。"],"clash":["速通带飞·铁血团长战神","团长拿秒表催全队三分钟清完怪，你还在蹲路边给受伤小怪包扎。"]},{"no":"04","rank":"SSR · 秘术星师","name":"熬夜画符·高敏星象魔导师","role":"后排蓄力 / 深夜爆发流","crest":"staff","color":"#c68cf7","deep":"#311d4a","vector":[0.2,0.2,2.8,2.8],"tags":["深夜大招王","极致审美魂","外柔内韧"],"quote":"白天安静省电，午夜十二点后，整片星空的魔力全归我调遣。","insight":"你是自带宿命氛围感的「高敏大招流法师」。白天在人群里看似安静脆皮、不争不抢，一旦回到独处结界且点燃热爱，你能用惊人的专注力和细腻想象力，悄悄憋出令全服惊艳的绝美大招。","passive":["【午夜灵感暴击】","晚上 22:00 后创作力、共情力与专注度暴涨 200%，经常在深夜交出神级作品。"],"debuff":["【情绪天气联动】","心细如发导致容易被一句冷漠语音戳掉半格血，需要充足睡眠与温柔肯定来回蓝。"],"match":["热情开路·美食家驯兽师","对方用热气腾腾的美食和满格阳光接住你的深夜小情绪，极度治愈。"],"clash":["拿完宝箱就撤·赏金刺客","你还在酝酿完美施法仪式感，刺客已经一刀结束战斗准备领钱走人。"]},{"no":"05","rank":"SR+ · 嘴强辅助","name":"划水指挥·军师级吟游诗人","role":"后排辅助 / 欢乐吐槽流","crest":"lute","color":"#58bce8","deep":"#193347","vector":[0.2,2.8,0.2,0.2],"tags":["松弛气氛组","清醒段子手","脑力划水王"],"quote":"我虽然不扛伤害，但我能用三个段子把 Boss 聊笑、把全队士气拉满。","insight":"你是每个副本小队都抢着要的「灵魂吐槽军师」！你头脑清醒、极有幽默感，从不跟现实硬碰硬，而是用举重若轻的玩笑和机智点子化解僵局——有你在的队伍，就算团灭大家也能笑出眼泪。","passive":["【全队降压乐章】","开口说话即可驱散队友 80% 紧张与尴尬情绪，自带“化干戈为表情包”神奇效果。"],"debuff":["【手速跟不上嘴速】","规划和吐槽天下第一，真轮到自己亲自搬砖跑腿时，会瞬间触发“要不先点杯奶茶”拖延症。"],"match":["静音单刷·冷面暗影剑客","剑客负责静音把怪全秒了，你负责在旁边鼓掌配音写战报，黄金搭档。"],"clash":["熬夜画符·高敏星象魔导师","你讲冷笑话试图活跃气氛，对方正沉浸在悲伤文艺的星象推演里。"]},{"no":"06","rank":"SP · 最强大脑","name":"全局控场·幕后大魔导军师","role":"团队指挥 / 精密布局流","crest":"staff","color":"#52a8f2","deep":"#16294a","vector":[0.2,2.8,0.2,2.8],"tags":["团队主心骨","全局算力MAX","控场天花板"],"quote":"别乱冲，听我倒数三秒交技能——这局早在我算好的剧本里了。","insight":"你是把混乱野队带成全服首通团的「顶级战略大魔导」。你既懂人心沟通，又具备极强逻辑和统筹力；不爱亲自蛮干，却能在后排把每个队友的优势发挥到极致，优雅高效地拿下高难度胜利。","passive":["【多线程全局统筹】","同时处理五个突发状况依然条理分明，能瞬间把一团乱麻理成清晰通关时间表。"],"debuff":["【操心CPU过热】","看到队友不按最优攻略乱走位时，血压自动上升 30%，忍不住亲自下场接管指挥权。"],"match":["满血冲锋·炽焰烈阳狂战士","你指哪、狂战士就满血冲哪，顶级大脑配顶级战力，直接平推全服！"],"clash":["随时跑路·佛系炼金术士","你刚写完十页团战排班表，炼金术士已经悄悄申请了病假回城。"]},{"no":"07","rank":"SSR · 团宠奶妈","name":"只喊加油·氛围组圣光奶妈","role":"后排治疗 / 情绪价值流","crest":"lute","color":"#f598b5","deep":"#472133","vector":[0.2,2.8,2.8,0.2],"tags":["夸夸永动机","情绪价值王","全队白月光"],"quote":"打架我不会，但谁敢欺负我队友，我就用满格圣光把队友奶到无敌！","insight":"你是全服抢着发组队邀请的「顶级情绪价值奶妈」！输出卷度全看心情，但只要你在队里，大家就永远不缺夸奖、拥抱和热气腾腾的鼓励。你用柔软与甜意，把枯燥的日常副本变成了快乐冒险。","passive":["【满级夸夸圣光】","只要真诚夸队友一句“你好厉害”，目标攻击力与自信值瞬间 +50%，并清除全部内耗。"],"debuff":["【拒绝按钮卡死】","心太软导致别人一撒娇求助就忍不住帮忙加血，偶尔会把自己蓝条奶空。"],"match":["静音单刷·冷面暗影剑客","高冷剑客默默带你躺赢拿宝箱，你负责全程眼里放光猛夸，甜度爆表。"],"clash":["暗中观察·毒舌预言家","你用彩虹屁把队友夸上天，预言家在旁边冷冷补了一句“其实他刚才空大了”。"]},{"no":"08","rank":"SSR · 圣殿守护","name":"操碎心·全能保姆大祭司","role":"团队守护 / 完美辅助流","crest":"book","color":"#ebb865","deep":"#42301b","vector":[0.2,2.8,2.8,2.8],"tags":["靠谱天花板","外柔内刚","细节守护神"],"quote":"药水带够了吗？防具修好了吗？别怕，有我在后排兜底，大胆往前冲。","insight":"你是团队里最不可或缺的「全能守护大祭司」。你既有极高的共情温度，又有着强烈的责任感与高标准——从前期物资筹备到关键时刻救场驱散，有你在的后方永远坚不可摧。","passive":["【全天候危机预警】","提前三步察觉团队里的情绪裂缝与行程隐患，不动声色把所有烂摊子悄悄补平。"],"debuff":["【隐形过载疲劳】","习惯把所有人的安危和开心扛在自己肩上，明明自己血条见底了嘴上还说“我没事”。"],"match":["全图开怪·整活狂欢海盗","海盗负责制造惊喜和笑声帮你解压，你负责兜底不翻车，互补到绝配。"],"clash":["随时跑路·佛系炼金术士","你在认真操心全队补给，对方已经在草丛里躺平准备下线了。"]},{"no":"09","rank":"SSR · 独行游刃","name":"拿完宝箱就撤·赏金刺客","role":"前排速通 / 高效独行流","crest":"dagger","color":"#4dc2cc","deep":"#15343b","vector":[2.8,0.2,0.2,0.2],"tags":["精准高效","绝不加班","酷飒独行"],"quote":"任务目标已达成，奖励已入账，多余的庆功宴我就不参加了，告辞。","insight":"你是现实世界里最飒的「高性价比赏金刺客」。你不爱拖泥带水，更拒绝无效内耗——盯准目标、快速出招、干脆利落搞定一切，然后潇洒收工去享受属于自己的自由人生！","passive":["【一击直切重点】","自动过滤 90% 废话与形式主义，用最短时间精准砍中问题核心并丝滑撤场。"],"debuff":["【社交电量极短】","办正事雷厉风行，一进入无意义的茶话会或寒暄环节，3 分钟内自动触发隐身逃跑。"],"match":["划水指挥·军师级吟游诗人","对方负责应付所有社交寒暄，你负责两分钟秒完任务分金币，双赢！"],"clash":["操碎心·全能保姆大祭司","你主张拿完保底立刻下班，大祭司拉着你再检查三遍行李和攻略。"]},{"no":"10","rank":"SP · 剑道孤狼","name":"静音单刷·冷面暗影剑客","role":"前排主C / 极限单刷流","crest":"sword","color":"#7b8ef5","deep":"#1b2147","vector":[2.8,0.2,0.2,2.8],"tags":["硬核实力派","狠人话不多","单刷之王"],"quote":"与其花一小时开会分配任务，不如我静音十分钟把 Boss 单杀了。","insight":"你是全服排行榜上赫赫有名的「静音单刷战神」！逻辑锋利、执行力爆表、极其讨厌低效沟通与推诿扯皮。只要给你清晰目标和独立空间，你一个人就能打出千军万马的恐怖伤害。","passive":["【孤狼心流增伤】","戴上降噪耳机独自作战时，暴击率与推进速度直接翻倍，专治一切疑难大 Boss。"],"debuff":["【嘴笨面冷误解】","表情常年保持冷静酷盖模式，其实只是懒得寒暄，熟了之后才发现你极讲义气。"],"match":["只喊加油·氛围组圣光奶妈","你在前排酷炫单刷，奶妈在后排欢呼加血递奶茶，全服最甜双排组合。"],"clash":["热情开路·美食家驯兽师","你冲进来三秒拔剑准备速杀，驯兽师正在给 Boss 投喂烤肉交朋友。"]},{"no":"11","rank":"SR+ · 旷野行者","name":"随性流浪·追风游侠射手","role":"自由游击 / 支线探索流","crest":"bow","color":"#5ad19a","deep":"#173b2c","vector":[2.8,0.2,2.8,0.2],"tags":["旷野自由魂","幸运E转SSS","直觉开图"],"quote":"主线任务爱谁打谁打，我去看看地图边缘那座发光的山顶长啥样。","insight":"你是拒绝被固定剧本框住的「旷野追风游侠」。你行动轻盈果断，跟着好奇心和直觉满世界跑，别人按部就班刷主线，你偏偏在乱逛中频频触发神级隐藏彩蛋与奇妙偶遇。","passive":["【隐藏彩蛋雷达】","天生自带超高探索幸运值，随心拐进一条小路也能撞见绝美落日、宝藏小店或贵人。"],"debuff":["【主线失忆症】","一旦被路边新奇支线吸引，极易把原本要交的主线任务彻底抛到九霄云外。"],"match":["隐身采药·森林治愈德鲁伊","两个拒绝内卷的自由灵魂并肩漫游地图，把打怪游戏玩成治愈旅行。"],"clash":["全局控场·幕后大魔导军师","军师在精细复盘每秒钟最优路线，你已经骑着坐骑跑出小地图边界了。"]},{"no":"12","rank":"SSR · 誓约守护","name":"嘴硬心软·孤勇圣骑士","role":"前排坦克 / 赤诚坚守流","crest":"shield","color":"#f0c46c","deep":"#423115","vector":[2.8,0.2,2.8,2.8],"tags":["嘴硬心软","孤勇担当","原则守护者"],"quote":"嘴上说着少来烦我，真出事时，我永远是第一个替你举盾的人。","insight":"你是现实世界里最让人动容的「孤勇圣骑士」。你习惯独来独往、从不把柔软挂在嘴边，但骨子里藏着极其滚烫的道义与执着——遇到不公绝不低头，对真心认定的人拼尽全力守护到底。","passive":["【绝境不屈护盾】","保护在意之人或坚守内心信念时，防御力与意志力瞬间拉满，绝不后退半步。"],"debuff":["【傲娇独扛伤害】","明明受了委屈血条只剩一丝，被关心时还是会嘴硬回一句“小伤，不用管我”。"],"match":["暗中观察·毒舌预言家","同样独立克制却彼此秒懂，预言家看穿你嘴硬下的温柔，并帮你避开暗箭。"],"clash":["划水指挥·军师级吟游诗人","你一脸严肃准备为信念决一死战，对方在旁边嗑瓜子喊“别认真啊”。"]},{"no":"13","rank":"SR+ · 混乱善良","name":"全图开怪·整活狂欢海盗","role":"前排游击 / 整活爆笑流","crest":"dagger","color":"#f29d4b","deep":"#452914","vector":[2.8,2.8,0.2,0.2],"tags":["快乐整活王","胆大心细","破冰天花板"],"quote":"规则就是用来找彩蛋的！兄弟们跟紧点，前面有宝箱也有大怪！","insight":"你是整个服务器最欢乐、最能整活的「混乱善良大冒险家」！你脑子转得飞快、行动力奇高，绝不愿过一成不变的无聊日子——跟着你组队虽然全程心跳加速、状况百出，但永远快乐到炸裂！","passive":["【歪打正着暴击】","用极其离谱的脑洞和不按套路的操作，往往能神奇地跳过繁琐前置直接开出大奖。"],"debuff":["【三分钟热度诅咒】","开新坑和拉群组局热情 1000%，三天后大概率已经奔向下一个更酷的新地图。"],"match":["操碎心·全能保姆大祭司","你负责带队整活找乐子，大祭司负责在后面稳稳保命兜底，堪称神仙喜剧队。"],"clash":["暗中观察·毒舌预言家","预言家费劲心血算好的隐秘潜行计划，被你一脚踹门直接变成了全图大乱斗。"]},{"no":"14","rank":"SP · 传奇团长","name":"速通带飞·铁血团长战神","role":"前排指挥 / 绝对主力流","crest":"crown","color":"#eb5e55","deep":"#471819","vector":[2.8,2.8,0.2,2.8],"tags":["天生领袖","带飞全队","高效破局王"],"quote":"别磨蹭，跟着我的标记走——今天这把全服首通，我带你们躺赢！","insight":"你是全服玩家梦寐以求的「王牌团长战神」！你兼具清醒的战略逻辑、超强抗压魄力与一呼百应的号召力。面对最难啃的硬骨头，你不抱怨不内耗，直接定好战术带着全队高效通关！","passive":["【全队效率光环】","只要由你担任队长，全队摸鱼率骤降 70%，输出、执行力与通关速度直接拉满。"],"debuff":["【休眠按钮失灵】","连周末去海边度假都忍不住给队友排出一份精准到分钟的高效行程攻略。"],"match":["随时跑路·佛系炼金术士","你强势带飞冲业绩，炼金术士用神来之笔提醒你省力技巧并督促你按时下班。"],"clash":["隐身采药·森林治愈德鲁伊","你想 10 分钟速通拿首杀，德鲁伊说“先别急，你看这棵树长得多治愈”。"]},{"no":"15","rank":"SSR · 幸运团宠","name":"热情开路·美食家驯兽师","role":"前排探险 / 羁绊治愈流","crest":"bow","color":"#f5b851","deep":"#453014","vector":[2.8,2.8,2.8,0.2],"tags":["社交万磁王","营地美食家","好运满格"],"quote":"打什么打，先坐下来吃顿热乎烤肉，说不定守关 Boss 还能变成咱们坐骑呢！","insight":"你是把硬核打怪游戏硬生生玩成《合家欢种田美食番》的天选幸运儿！你热情坦荡、行动派且极富生活情趣，走到哪都能跟陌生人、小动物甚至冷面大佬打成一片，用美食和真诚赢走全场偏爱。","passive":["【万物亲和力 MAX】","天生自带零攻击性的阳光气场，连最难搞的红名 Boss 和高冷路人见了你都会自动软化。"],"debuff":["【路边美食减速】","赶路途中只要闻到香气或看见可爱小店，全队移动速度强制降为 0，必须先吃为敬。"],"match":["熬夜画符·高敏星象魔导师","你用烤肉、笑声和好天气把高敏法师从深夜内耗里一把拽进阳光里。"],"clash":["静音单刷·冷面暗影剑客","剑客一心只想刷伤害破纪录，你拉着对方非要拍完九宫格野餐照再开打。"]},{"no":"16","rank":"SP · 燃魂主角","name":"满血冲锋·炽焰烈阳狂战士","role":"前排爆发 / 热血主角流","crest":"crown","color":"#ff6b52","deep":"#4d1a16","vector":[2.8,2.8,2.8,2.8],"tags":["热血漫主角","永不言弃","全队燃火机"],"quote":"管他什么地狱级难度，只要伙伴在身后、眼里还有光，我就敢正面硬刚到底！","insight":"你拿的是最滚烫耀眼的「少年漫热血主角剧本」！行动力、热情、义气与通关执念全线拉满！你不怕吃苦也不怕摔跤，哪怕全队陷入绝境，只要你一声怒吼冲在最前面，就能把所有人的斗志瞬间点燃！","passive":["【绝境逆袭燃魂】","血条越低、难度越高时，战斗力与气场反而触发指数级暴涨，自带奇迹翻盘光环。"],"debuff":["【冲太快忘看蓝条】","一上头就容易燃尽全部体力值，打完一场热血大仗后回家直接秒睡十二小时。"],"match":["全局控场·幕后大魔导军师","全服最燃先锋遇上全服最稳军师，指哪打哪、横扫一切高难副本！"],"clash":["随时跑路·佛系炼金术士","你高喊“燃起来吧命运”，对方已经熟练搓好炉石准备下线点外卖。"]}]};
 const app = document.getElementById('app'),
       posterDialog = document.getElementById('posterDialog'),
-      copyDialog = document.getElementById('copyDialog');
+      copyDialog = document.getElementById('copyDialog'),
+      peekDialog = document.getElementById('peekDialog'),
+      dexDialog = document.getElementById('dexDialog');
 const N = D.questions.length, STORAGE = 'life-rpg-guild-v1';
-let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null;
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const byName = Object.fromEntries(D.profiles.map(p => [p.name, p]));
+let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null, lastChapter = -1, posterTheme = 0;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* === Thematic Web Audio Sound Engine (Pure Offline Synth) === */
+const SFX = (() => {
+  let ctx = null, muted = false;
+  try { muted = localStorage.getItem(STORAGE + ':mute') === '1'; } catch {}
+  function ac() {
+    if (muted) return null;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      if (!ctx) ctx = new AC();
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+      return ctx;
+    } catch { return null; }
+  }
+  function tone(freq, dur, type = 'sine', gainVal = 0.055, delay = 0, endFreq = null) {
+    const c = ac(); if (!c) return;
+    try {
+      const t = c.currentTime + delay;
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = type;
+      o.frequency.setValueAtTime(freq, t);
+      if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, t + dur);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(gainVal, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + dur + 0.02);
+    } catch {}
+  }
+  const PRESETS = {
+    city:    { notes: [523.25, 587.33, 659.25, 783.99], wave: 'triangle', gain: 0.05 },
+    love:    { notes: [587.33, 659.25, 739.99, 880.00], wave: 'sine',     gain: 0.048 },
+    ancient: { notes: [440.00, 493.88, 587.33, 659.25], wave: 'triangle', gain: 0.052 },
+    scent:   { notes: [659.25, 739.99, 880.00, 987.77], wave: 'sine',     gain: 0.042 },
+    qc:      { notes: [620, 740, 860, 980],             wave: 'square',   gain: 0.024 },
+    shop:    { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.046 },
+    museum:  { notes: [392.00, 440.00, 523.25, 587.33], wave: 'sine',     gain: 0.052 },
+    rpg:     { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.045 },
+    cosmos:  { notes: [587.33, 739.99, 880.00, 1174.6], wave: 'sine',     gain: 0.042 }
+  };
+  const P = PRESETS["rpg"] || PRESETS.city;
+  return {
+    isMuted: () => muted,
+    toggle() {
+      muted = !muted;
+      try { localStorage.setItem(STORAGE + ':mute', muted ? '1' : '0'); } catch {}
+      if (!muted) this.click(1);
+      return muted;
+    },
+    click(i = 0) {
+      const f = P.notes[Math.abs(i) % P.notes.length];
+      tone(f, 0.16, P.wave, P.gain);
+      if (false) {
+        tone(f * 2, 0.22, 'sine', P.gain * 0.35, 0.015);
+      }
+    },
+    start() {
+      tone(P.notes[0], 0.14, P.wave, P.gain, 0);
+      tone(P.notes[2], 0.22, 'sine', P.gain * 0.9, 0.07);
+    },
+    back() {
+      tone(P.notes[0] * 0.85, 0.11, 'sine', P.gain * 0.7);
+    },
+    chapter() {
+      tone(P.notes[1], 0.16, 'sine', P.gain * 0.8, 0);
+      tone(P.notes[3], 0.28, 'sine', P.gain * 0.75, 0.09);
+    },
+    reveal() {
+      P.notes.forEach((f, k) => tone(f, 0.32, k === 3 ? 'sine' : P.wave, P.gain * 0.9, k * 0.08));
+    }
+  };
+})();
+
+function renderSoundBtn() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  const m = SFX.isMuted();
+  btn.textContent = m ? '🔇 静音' : '🔊 音效';
+  btn.setAttribute('aria-pressed', String(!m));
+  btn.classList.toggle('muted', m);
+}
+function initSoundToggle() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  renderSoundBtn();
+  btn.onclick = () => { SFX.toggle(); renderSoundBtn(); };
+}
+
+/* === Celebratory Particle Burst (Respects Reduced Motion) === */
+function celebrateBurst(colors, style = 'spark') {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    const cv = document.createElement('canvas');
+    cv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999';
+    cv.width = window.innerWidth; cv.height = window.innerHeight;
+    document.body.append(cv);
+    const ctx = cv.getContext('2d');
+    const parts = [];
+    const cx = cv.width / 2, cy = Math.min(cv.height * 0.36, 280);
+    for (let i = 0; i < 42; i++) {
+      const ang = (Math.PI * 2 * i) / 42 + (Math.random() - 0.5) * 0.35;
+      const spd = 2.6 + Math.random() * 5.8;
+      parts.push({
+        x: cx + (Math.random() - 0.5) * 40,
+        y: cy + (Math.random() - 0.5) * 20,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 2.4,
+        r: 3 + Math.random() * 4.5,
+        rot: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.2,
+        color: colors[i % colors.length],
+        life: 1,
+        decay: 0.015 + Math.random() * 0.012
+      });
+    }
+    let raf;
+    function tick() {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      let alive = 0;
+      for (const p of parts) {
+        if (p.life <= 0) continue;
+        alive++;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.13; p.vx *= 0.985; p.rot += p.vr; p.life -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        if (style === 'petal') {
+          ctx.beginPath(); ctx.ellipse(0, 0, p.r * 1.4, p.r * 0.72, 0, 0, Math.PI * 2); ctx.fill();
+        } else if (style === 'star') {
+          ctx.beginPath();
+          for (let s = 0; s < 4; s++) {
+            const a = s * Math.PI / 2;
+            ctx.lineTo(Math.cos(a) * p.r * 1.5, Math.sin(a) * p.r * 1.5);
+            ctx.lineTo(Math.cos(a + Math.PI / 4) * p.r * 0.45, Math.sin(a + Math.PI / 4) * p.r * 0.45);
+          }
+          ctx.closePath(); ctx.fill();
+        } else if (style === 'bubble') {
+          ctx.strokeStyle = p.color; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.arc(0, 0, p.r * 1.15, 0, Math.PI * 2); ctx.stroke();
+        } else {
+          ctx.fillRect(-p.r, -p.r * 0.55, p.r * 2, p.r * 1.1);
+        }
+        ctx.restore();
+      }
+      if (alive > 0) raf = requestAnimationFrame(tick);
+      else cv.remove();
+    }
+    raf = requestAnimationFrame(tick);
+    setTimeout(() => { cancelAnimationFrame(raf); cv.remove(); }, 2200);
+  } catch {}
+}
+
+/* === Subtle 3D Foil Tilt on Result Hero Card === */
+function bindCardTilt(el) {
+  if (!el || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  el.classList.add('foil-tilt');
+  const onMove = e => {
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - py) * 5.5, ry = (px - 0.5) * 6.5;
+    el.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+    el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+  };
+  const onLeave = () => {
+    el.style.transform = '';
+    el.style.setProperty('--mx', '50%');
+    el.style.setProperty('--my', '20%');
+  };
+  el.addEventListener('pointermove', onMove);
+  el.addEventListener('pointerleave', onLeave);
+}
+
+/* === Dynamic Multi-Axis SVG Radar Chart (4 or 6 Axes) === */
+function buildRadarSVG(labels, ratios, opts = {}) {
+  const n = labels.length, cx = 140, cy = 122, R = 74;
+  const stroke = opts.stroke || 'var(--accent)';
+  const fill = opts.fill || 'var(--accent)';
+  const grid = opts.grid || 'rgba(128,128,128,0.22)';
+  const labelColor = opts.labelColor || 'currentColor';
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  let rings = '';
+  [0.34, 0.67, 1].forEach(f => {
+    const pts = Array.from({ length: n }, (_, i) => pt(i, R * f).map(x => x.toFixed(1)).join(',')).join(' ');
+    rings += `<polygon points="${pts}" fill="none" stroke="${grid}" stroke-width="1"/>`;
+  });
+  let spokes = '';
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${grid}" stroke-width="1"/>`;
+  }
+  const clamped = ratios.map(r => Math.max(0.18, Math.min(1, r)));
+  const polyPts = clamped.map((r, i) => pt(i, R * r).map(x => x.toFixed(1)).join(',')).join(' ');
+  const dots = clamped.map((r, i) => {
+    const [x, y] = pt(i, R * r);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.2" fill="${stroke}" stroke="${opts.dotRing || '#fff'}" stroke-width="1.8"/>`;
+  }).join('');
+  const texts = labels.map((lb, i) => {
+    const [x, y] = pt(i, R + 22);
+    const anchor = Math.abs(x - cx) < 10 ? 'middle' : x < cx ? 'end' : 'start';
+    const dy = y < cy - 30 ? -2 : y > cy + 30 ? 8 : 4;
+    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="700" fill="${labelColor}">${esc(lb)}</text>`;
+  }).join('');
+  return `<svg class="radar-svg" viewBox="0 0 280 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多维人格雷达图">
+    ${rings}${spokes}
+    <polygon class="radar-poly" points="${polyPts}" fill="${fill}" fill-opacity="0.24" stroke="${stroke}" stroke-width="2.2" stroke-linejoin="round"/>
+    ${dots}${texts}
+  </svg>`;
+}
+
+/* === Canvas Mini Radar Drawing Helper (for 3:4 Posters) === */
+function drawCanvasRadar(ctx, cx, cy, R, labels, ratios, stroke, fill, grid, textCol) {
+  const n = labels.length;
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  ctx.save();
+  [0.35, 0.68, 1].forEach(f => {
+    ctx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const [x, y] = pt(i, R * f);
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.closePath(); ctx.strokeStyle = grid; ctx.lineWidth = 1.4; ctx.stroke();
+  });
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.strokeStyle = grid; ctx.lineWidth = 1.2; ctx.stroke();
+  }
+  ctx.beginPath();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = fill; ctx.fill();
+  ctx.strokeStyle = stroke; ctx.lineWidth = 3; ctx.stroke();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    ctx.beginPath(); ctx.arc(x, y, 5.5, 0, Math.PI * 2); ctx.fillStyle = stroke; ctx.fill();
+  });
+  ctx.fillStyle = textCol; ctx.font = '700 18px "PingFang SC","Microsoft YaHei",sans-serif';
+  labels.forEach((lb, i) => {
+    const [x, y] = pt(i, R + 24);
+    ctx.textAlign = Math.abs(x - cx) < 12 ? 'center' : x < cx ? 'right' : 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(lb, x, y);
+  });
+  ctx.restore();
+}
+
+/* === Isolated Local Collection Dex Helpers === */
+function getUnlocked() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORAGE + ':dex') || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch { return []; }
+}
+function recordUnlock(name) {
+  try {
+    const list = getUnlocked();
+    if (!list.includes(name)) { list.push(name); localStorage.setItem(STORAGE + ':dex', JSON.stringify(list)); }
+    return list;
+  } catch { return [name]; }
+}
+
+/* === Vector Pair Compatibility Calculator === */
+function calcVectorChem(pA, pB, axes, labelsCfg = {}) {
+  if (pA.name === pB.name) {
+    return {
+      score: 94,
+      verdict: labelsCfg.same || '✦ 镜像双生 · 灵魂复刻',
+      desc: `两个「${pA.name}」相遇就像照镜子——不用多余解释就能一秒接住彼此的梗与节奏，连沉默的频率都惊人一致！`
+    };
+  }
+  if (pA.match && pA.match[0] === pB.name) {
+    return { score: 99, verdict: labelsCfg.match || '♥ 天选官配 · 满分同频', desc: pA.match[1] };
+  }
+  if (pB.match && pB.match[0] === pA.name) {
+    return { score: 97, verdict: labelsCfg.match || '♥ 双向奔赴 · 绝佳搭子', desc: pB.match[1] };
+  }
+  if (pA.clash && pA.clash[0] === pB.name) {
+    return { score: 54, verdict: labelsCfg.clash || '⚡ 宿命反差 · 欢喜冤家', desc: pA.clash[1] };
+  }
+  if (pB.clash && pB.clash[0] === pA.name) {
+    return { score: 56, verdict: labelsCfg.clash || '⚡ 高能反差 · 奇妙碰撞', desc: pB.clash[1] };
+  }
+  const vecA = pA.vector, vecB = pB.vector;
+  const diffs = vecA.map((x, i) => ({ i, d: Math.abs(x - vecB[i]) }));
+  const avgDiff = diffs.reduce((s, x) => s + x.d, 0) / diffs.length;
+  const sim = Math.max(0, 1 - avgDiff / 3);
+  const hashSeed = [...(pA.name + pB.name)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 997, 7);
+  const score = Math.round(Math.max(62, Math.min(95, 65 + sim * 27 + (hashSeed % 5))));
+  const closest = diffs.slice().sort((a, b) => a.d - b.d)[0];
+  const farthest = diffs.slice().sort((a, b) => b.d - a.d)[0];
+  let verdict = '🌿 舒服同频 · 轻松相处';
+  if (score >= 88) verdict = '✦ 默契神搭 · 能量共振';
+  else if (score >= 78) verdict = '♥ 互补合拍 · 越处越甜';
+  else if (score < 70) verdict = '🔥 跨频火花 · 新鲜感拉满';
+  const desc = `你们在「${axes[closest.i][0]}」维度上天然同频，很容易快速聊到一块；而在「${axes[farthest.i][0]}」上的不同视角，正好能给彼此带来意想不到的新鲜灵感。`;
+  return { score, verdict, desc };
+}
+
+/* === Toast Notification === */
+let toastTimer = null;
+function showToast(msg) {
+  let el = document.getElementById('quizToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'quizToast';
+    el.className = 'quiz-toast';
+    el.setAttribute('role', 'status');
+    document.body.append(el);
+  }
+  el.textContent = msg;
+  el.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2100);
+}
+
 
 const HERO_ART = `<svg viewBox="0 0 640 260" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="rpgBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111326"/><stop offset=".55" stop-color="#221d42"/><stop offset="1" stop-color="#3c264a"/></linearGradient>
-    <radialGradient id="runeGlow" cx="74%" cy="46%" r="48%"><stop stop-color="#f0c46c" stop-opacity=".35"/><stop offset="1" stop-color="#8f7ef2" stop-opacity="0"/></radialGradient>
+    <linearGradient id="rpgBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f1124"/><stop offset=".52" stop-color="#221c44"/><stop offset="1" stop-color="#3e264c"/></linearGradient>
+    <radialGradient id="runeGlow" cx="74%" cy="46%" r="50%"><stop stop-color="#f0c46c" stop-opacity=".42"/><stop offset=".55" stop-color="#8f7ef2" stop-opacity=".18"/><stop offset="1" stop-color="#8f7ef2" stop-opacity="0"/></radialGradient>
   </defs>
   <rect width="640" height="260" fill="url(#rpgBg)"/>
-  <circle cx="476" cy="118" r="158" fill="url(#runeGlow)"/>
-  <!-- Arcane guild magic circle -->
-  <g transform="translate(476,118)" stroke="#f0c46c" fill="none">
-    <circle r="86" stroke-opacity=".35" stroke-width="1.5"/>
-    <circle r="74" stroke-opacity=".28" stroke-width="1" stroke-dasharray="5 5"/>
-    <polygon points="0,-70 60,35 -60,35" stroke-opacity=".32" stroke-width="1.2"/>
-    <polygon points="0,70 60,-35 -60,-35" stroke-opacity=".32" stroke-width="1.2"/>
-    <!-- Central Sword & Shield Crest -->
-    <path d="M0 -48 L8 -30 V22 L0 36 L-8 22 V-30 Z" fill="#f0c46c" fill-opacity=".88" stroke="#fff4d6" stroke-width="1"/>
-    <rect x="-24" y="16" width="48" height="7" rx="3" fill="#d49c3d"/>
+  <circle cx="476" cy="118" r="168" fill="url(#runeGlow)"/>
+  <!-- Rotating Dual-Ring Arcane Magic Circle -->
+  <g class="rune-spin" stroke="#f0c46c" fill="none">
+    <circle cx="476" cy="118" r="90" stroke-opacity=".4" stroke-width="1.5"/>
+    <circle cx="476" cy="118" r="78" stroke-opacity=".3" stroke-width="1.2" stroke-dasharray="5 5"/>
+    <polygon points="476,46 538,154 414,154" stroke-opacity=".36" stroke-width="1.2"/>
+  </g>
+  <g class="rune-spin-rev" stroke="#9e8ef7" fill="none">
+    <polygon points="476,190 538,82 414,82" stroke-opacity=".38" stroke-width="1.2"/>
+    <circle cx="476" cy="118" r="56" stroke-opacity=".3" stroke-dasharray="3 6"/>
+  </g>
+  <!-- Central Runic Sword Crest -->
+  <g transform="translate(476,118)">
+    <path d="M0 -50 L9 -30 V22 L0 36 L-9 22 V-30 Z" fill="#f0c46c" fill-opacity=".92" stroke="#fff6de" stroke-width="1.2"/>
+    <line x1="0" y1="-40" x2="0" y2="24" stroke="#fff6de" stroke-opacity=".65" stroke-width="1.5"/>
+    <rect x="-26" y="16" width="52" height="7" rx="3" fill="#d49c3d"/>
     <rect x="-4" y="23" width="8" height="22" rx="2" fill="#8f7ef2"/>
-    <circle cx="0" cy="48" r="6" fill="#f0c46c"/>
+    <circle cx="0" cy="49" r="6" fill="#f0c46c"/>
   </g>
-  <!-- Stars & RPG HUD grid ticks -->
-  <g fill="#f5d89a" opacity=".75">
-    <circle cx="342" cy="44" r="2"/><circle cx="584" cy="54" r="2.2"/><circle cx="370" cy="186" r="1.6"/><circle cx="566" cy="196" r="1.8"/><circle cx="412" cy="36" r="1.4"/>
+  <!-- Rising Mana Embers -->
+  <g class="ember-rise" fill="#f7dca2">
+    <circle cx="342" cy="52" r="2.2"/><circle cx="586" cy="56" r="2.4"/><circle cx="372" cy="184" r="1.8"/><circle cx="566" cy="192" r="2"/><circle cx="412" cy="36" r="1.6"/>
   </g>
-  <path d="M0 226 H640" stroke="#f0c46c" stroke-opacity=".24"/>
+  <path d="M0 226 H640" stroke="#f0c46c" stroke-opacity=".26"/>
 </svg>`;
 
 function crestSVG(p){
   const c = p.color;
   const shapes = {
-    flask: `<path d="M38 18 H62 M44 18 V36 L26 70 Q22 78 32 82 H68 Q78 78 74 70 L56 36 V18" fill="none" stroke="${c}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 60 H67 L73 72 Q75 78 67 80 H33 Q25 78 27 72 Z" fill="${c}" opacity=".35"/><circle cx="44" cy="68" r="3" fill="${c}"/><circle cx="56" cy="54" r="2.5" fill="${c}"/><circle cx="50" cy="42" r="2" fill="#fff"/>`,
+    flask: `<path d="M38 18 H62 M44 18 V36 L26 70 Q22 78 32 82 H68 Q78 78 74 70 L56 36 V18" fill="none" stroke="${c}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 60 H67 L73 72 Q75 78 67 80 H33 Q25 78 27 72 Z" fill="${c}" opacity=".35"/><circle cx="44" cy="68" r="3" fill="${c}"/><circle cx="56" cy="54" r="2.5" fill="${c}"/>`,
     book: `<path d="M22 26 Q38 20 50 28 Q62 20 78 26 V76 Q62 70 50 78 Q38 70 22 76 Z" fill="${c}" fill-opacity=".18" stroke="${c}" stroke-width="3.2" stroke-linejoin="round"/><line x1="50" y1="28" x2="50" y2="78" stroke="${c}" stroke-width="2.6"/><circle cx="50" cy="50" r="11" fill="#141726" stroke="${c}" stroke-width="2.4"/><circle cx="50" cy="50" r="4" fill="${c}"/>`,
-    leaf: `<path d="M26 78 Q30 30 76 22 Q70 68 26 78 Z" fill="${c}" fill-opacity=".24" stroke="${c}" stroke-width="3.2" stroke-linejoin="round"/><path d="M26 78 Q48 54 72 26" stroke="${c}" stroke-width="2.4" fill="none"/><path d="M40 62 L38 46 M54 48 L66 48" stroke="${c}" stroke-width="2" stroke-linecap="round"/><circle cx="76" cy="22" r="3.5" fill="#fff"/>`,
-    staff: `<line x1="26" y1="80" x2="66" y2="34" stroke="${c}" stroke-width="4" stroke-linecap="round"/><polygon points="68,14 73,27 86,32 73,37 68,50 63,37 50,32 63,27" fill="${c}" stroke="#fff" stroke-width="1.4"/><circle cx="38" cy="30" r="2.5" fill="#fff"/><circle cx="76" cy="64" r="2" fill="${c}"/>`,
-    lute: `<ellipse cx="42" cy="62" rx="20" ry="22" transform="rotate(-35 42 62)" fill="${c}" fill-opacity=".22" stroke="${c}" stroke-width="3.2"/><line x1="54" y1="48" x2="78" y2="22" stroke="${c}" stroke-width="4.2" stroke-linecap="round"/><circle cx="42" cy="62" r="6" fill="#151828" stroke="${c}" stroke-width="2.2"/><path d="M72 18 L82 28" stroke="${c}" stroke-width="3" stroke-linecap="round"/><circle cx="28" cy="32" r="3" fill="${c}"/><path d="M31 32 V20 L40 18 V28" fill="none" stroke="${c}" stroke-width="2"/>`,
-    dagger: `<path d="M74 20 L66 44 L44 64 L36 56 L56 34 Z" fill="${c}" fill-opacity=".35" stroke="${c}" stroke-width="3" stroke-linejoin="round"/><line x1="30" y1="48" x2="52" y2="70" stroke="${c}" stroke-width="4" stroke-linecap="round"/><line x1="38" y1="62" x2="24" y2="76" stroke="${c}" stroke-width="4.5" stroke-linecap="round"/><circle cx="22" cy="78" r="4" fill="${c}"/>`,
-    sword: `<path d="M50 14 L58 28 V60 H42 V28 Z" fill="${c}" fill-opacity=".32" stroke="${c}" stroke-width="3" stroke-linejoin="round"/><line x1="50" y1="18" x2="50" y2="60" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/><rect x="30" y="60" width="40" height="7" rx="3" fill="${c}"/><rect x="46" y="67" width="8" height="15" rx="2" fill="${c}" opacity=".75"/><circle cx="50" cy="85" r="4.5" fill="${c}"/>`,
+    leaf: `<path d="M26 78 Q30 30 76 22 Q70 68 26 78 Z" fill="${c}" fill-opacity=".24" stroke="${c}" stroke-width="3.2" stroke-linejoin="round"/><path d="M26 78 Q48 54 72 26" stroke="${c}" stroke-width="2.4" fill="none"/><circle cx="76" cy="22" r="3.5" fill="#fff"/>`,
+    staff: `<line x1="26" y1="80" x2="66" y2="34" stroke="${c}" stroke-width="4" stroke-linecap="round"/><polygon points="68,14 73,27 86,32 73,37 68,50 63,37 50,32 63,27" fill="${c}" stroke="#fff" stroke-width="1.4"/>`,
+    lute: `<ellipse cx="42" cy="62" rx="20" ry="22" transform="rotate(-35 42 62)" fill="${c}" fill-opacity=".22" stroke="${c}" stroke-width="3.2"/><line x1="54" y1="48" x2="78" y2="22" stroke="${c}" stroke-width="4.2" stroke-linecap="round"/><circle cx="42" cy="62" r="6" fill="#151828" stroke="${c}" stroke-width="2.2"/>`,
+    dagger: `<path d="M74 20 L66 44 L44 64 L36 56 L56 34 Z" fill="${c}" fill-opacity=".35" stroke="${c}" stroke-width="3" stroke-linejoin="round"/><line x1="30" y1="48" x2="52" y2="70" stroke="${c}" stroke-width="4" stroke-linecap="round"/><line x1="38" y1="62" x2="24" y2="76" stroke="${c}" stroke-width="4.5" stroke-linecap="round"/>`,
+    sword: `<path d="M50 14 L58 28 V60 H42 V28 Z" fill="${c}" fill-opacity=".32" stroke="${c}" stroke-width="3" stroke-linejoin="round"/><rect x="30" y="60" width="40" height="7" rx="3" fill="${c}"/><rect x="46" y="67" width="8" height="15" rx="2" fill="${c}" opacity=".75"/><circle cx="50" cy="85" r="4.5" fill="${c}"/>`,
     bow: `<path d="M34 20 Q74 50 34 80" fill="none" stroke="${c}" stroke-width="3.8" stroke-linecap="round"/><line x1="34" y1="22" x2="34" y2="78" stroke="#fff" stroke-opacity=".5" stroke-width="1.6"/><line x1="20" y1="50" x2="78" y2="50" stroke="${c}" stroke-width="3" stroke-linecap="round"/><polygon points="82,50 71,43 71,57" fill="${c}"/>`,
     shield: `<path d="M50 16 L78 26 V50 C78 68 64 78 50 86 C36 78 22 68 22 50 V26 Z" fill="${c}" fill-opacity=".22" stroke="${c}" stroke-width="3.4" stroke-linejoin="round"/><path d="M50 28 V74 M34 46 H66" stroke="${c}" stroke-width="3" stroke-linecap="round"/><circle cx="50" cy="46" r="5" fill="#fff"/>`,
-    crown: `<path d="M20 70 L24 34 L40 50 L50 24 L60 50 L76 34 L80 70 Z" fill="${c}" fill-opacity=".28" stroke="${c}" stroke-width="3.2" stroke-linejoin="round"/><rect x="20" y="70" width="60" height="9" rx="3" fill="${c}"/><circle cx="50" cy="22" r="4" fill="#fff"/><circle cx="24" cy="32" r="3" fill="${c}"/><circle cx="76" cy="32" r="3" fill="${c}"/>`
+    crown: `<path d="M20 70 L24 34 L40 50 L50 24 L60 50 L76 34 L80 70 Z" fill="${c}" fill-opacity=".28" stroke="${c}" stroke-width="3.2" stroke-linejoin="round"/><rect x="20" y="70" width="60" height="9" rx="3" fill="${c}"/><circle cx="50" cy="22" r="4" fill="#fff"/>`
   };
-  return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(p.name)}职业纹章">
-    <circle cx="50" cy="50" r="44" fill="none" stroke="${c}" stroke-opacity=".28" stroke-width="1.2" stroke-dasharray="4 4"/>
-    ${shapes[p.crest] || shapes.sword}
-  </svg>`;
+  return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(p.name)}职业纹章"><circle cx="50" cy="50" r="44" fill="none" stroke="${c}" stroke-opacity=".28" stroke-width="1.2" stroke-dasharray="4 4"/>${shapes[p.crest] || shapes.sword}</svg>`;
 }
 
 function stash(){try{localStorage.setItem(STORAGE,JSON.stringify({idx,answers,autoNext}))}catch{}}
@@ -269,20 +732,49 @@ function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
 function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
 function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
 
+function peekProfile(name){
+  const p=byName[name]; if(!p) return;
+  SFX.click(2);
+  document.getElementById('peekTitle').textContent=`${p.rank}`;
+  document.getElementById('peekBody').innerHTML=`
+    <div style="display:flex;align-items:center;gap:14px;margin:8px 0 12px">
+      <div class="crest-frame" style="width:84px;height:84px;flex:none;--cls-color:${p.color}">${crestSVG(p)}</div>
+      <div><h2 style="margin-bottom:4px">${esc(p.name)}</h2><div class="muted">${esc(p.role)}</div></div>
+    </div>
+    <div class="skill-card"><b>✦ 神级被动 · ${esc(p.passive[0])}</b><p>${esc(p.passive[1])}</p></div>
+    <div class="debuff-card"><b>⚠ 致命 Debuff · ${esc(p.debuff[0])}</b><p>${esc(p.debuff[1])}</p></div>
+    <button type="button" class="primary" style="margin-top:14px" onclick="peekDialog.close();start()">进入新手村，觉醒我的隐藏职业 →</button>`;
+  if(!peekDialog.open) peekDialog.showModal();
+}
+
+function openDex(){
+  SFX.click(1);
+  const unlocked=getUnlocked();
+  document.getElementById('dexSub').textContent=`已觉醒 ${unlocked.length} / ${D.profiles.length} 种隐藏职业 · 本地离线存档`;
+  document.getElementById('dexGrid').innerHTML=D.profiles.map(p=>{
+    const ok=unlocked.includes(p.name);
+    return ok
+      ? `<div class="dex-card unlocked"><div style="display:flex;align-items:center;gap:6px"><span class="swatch" style="background:${p.color}"></span><span class="teaser-rank" style="color:${p.color}">${esc(p.rank)}</span></div><b>${esc(p.name)}</b><small>${esc(p.passive[0])}</small></div>`
+      : `<div class="dex-card locked"><div style="display:flex;align-items:center;gap:6px"><span class="swatch" style="background:${p.color};opacity:.4"></span><span class="muted">NO.${p.no} · 未觉醒</span></div><b>[ 神秘隐藏职业 ]</b><small>定位线索：${esc(p.role)}</small></div>`;
+  }).join('');
+  if(!dexDialog.open) dexDialog.showModal();
+}
+
 function home(){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
-  screen='home';
+  screen='home'; lastChapter=-1;
   const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const unlocked=getUnlocked();
   const teaserCards=D.teasers.map(name=>byName[name]).filter(Boolean);
   app.innerHTML=`<section class="panel">
     <div class="hero" aria-hidden="true">${HERO_ART}<span class="hero-badge">16 种隐藏职业</span><div class="hero-copy"><small>${esc(D.heroSub)}</small><strong>${esc(D.heroTitle)}</strong></div></div>
     <p class="eyebrow">${esc(D.subtitle)}</p>
-    <h1>${esc(D.title)}</h1>
+    <h1>如果生活是一场 RPG，<br>你的隐藏职业与天赋面板</h1>
     <p class="lead">${esc(D.intro)}</p>
     <div class="pills">
       <span class="pill gold">${N} 场现实副本遭遇战</span>
       <span class="pill">16 种隐藏职业</span>
-      <span class="pill">含四维属性条 &amp; 3:4 角色卡</span>
+      <span class="pill">含双排胜率测算 &amp; 3:4 角色卡</span>
     </div>
     <div class="stack">
       ${count===N
@@ -292,9 +784,9 @@ function home(){
         : `<button class="primary" onclick="start()">进入新手村，觉醒职业　→</button>`}
     </div>
     <div class="teaser-wrap">
-      <div class="teaser-head"><span>GUILD CLASSES / 热门隐藏职业预览</span><small>共收录 16 种</small></div>
+      <div class="teaser-head"><span>GUILD CLASSES · 点击查看技能</span><small>共 16 种${unlocked.length?' · 已觉醒 '+unlocked.length:''}</small></div>
       <div class="teasers">
-        ${teaserCards.map(p=>`<div class="teaser"><span class="teaser-rank" style="color:${p.color}">${esc(p.rank)}</span><b>${esc(p.name)}</b><small>${esc(p.passive[0])} · ${esc(p.debuff[0])}</small></div>`).join('')}
+        ${teaserCards.map(p=>`<button type="button" class="teaser" onclick="peekProfile('${esc(p.name)}')"><span class="teaser-rank" style="color:${p.color}">${esc(p.rank)}</span><b>${esc(p.name)}</b><small>${esc(p.passive[0])}</small></button>`).join('')}
       </div>
     </div>
     <p class="notice">不用玩过游戏也能轻松测，所有选项都是现实日常映射。${esc(D.disclaimer)}</p>
@@ -304,29 +796,31 @@ function home(){
 
 function start(){
   if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('重新转职将清除上次冒险进度，继续吗？')) return;
-  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+  SFX.start();
+  idx=0;answers=Array(N).fill(null);report=null;lastChapter=0;stash();question(true);
 }
-
 function resume(){
+  SFX.start();
   const saved=restore();if(!saved)return start();
   idx=saved.idx;answers=saved.answers;
-  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.every(v=>v!==null)){result(false);return;}
   if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  lastChapter=getChapter(idx).ci;
   question(true);
 }
-
-function toggleAuto(){autoNext=!autoNext;stash();question(false);}
-
+function toggleAuto(){SFX.click(0);autoNext=!autoNext;stash();question(false);}
 function getChapter(qIdx){
   const chs=D.chapters, per=Math.ceil(N/chs.length);
   const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
-  return chs[ci];
+  return {ci,...chs[ci]};
 }
 
 function question(move=false){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
   screen='question';
   const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  if(lastChapter>=0 && ch.ci>lastChapter){SFX.chapter();showToast(`⚔ EXP+120 · ${ch.title}`);}
+  lastChapter=ch.ci;
   const pct=Math.round((count/N)*100);
   app.innerHTML=`<section class="panel">
     <div class="question-top">
@@ -335,6 +829,9 @@ function question(move=false){
     </div>
     <div class="progress" role="progressbar" aria-label="冒险进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
       <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-dots" aria-hidden="true">
+      ${D.chapters.map((_,k)=>`<span class="${k<ch.ci?'done':k===ch.ci?'now':''}"></span>`).join('')}
     </div>
     <div class="chapter-bar">
       <div><strong>${esc(ch.title)}</strong><span>${esc(ch.intro)}</span></div>
@@ -347,7 +844,8 @@ function question(move=false){
       <button type="button" class="secondary" onclick="back()" ${idx===0?'disabled':''}>← 上一关</button>
       <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'觉醒隐藏职业 ✦':'下一关 →'}</button>
     </div>
-    <div style="text-align:center;margin-top:10px">
+    <p class="kbd-hint">快捷键：数字 1-4 / 字母 A-D 选择行动，← 返回上一关</p>
+    <div style="text-align:center;margin-top:8px">
       <button type="button" class="subtle" onclick="home()">暂存存档，返回公会大厅</button>
     </div>
   </section>`;
@@ -356,6 +854,7 @@ function question(move=false){
 
 function choose(i){
   if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  SFX.click(i);
   answers[idx]=i;stash();
   const btns=app.querySelectorAll('.option');
   btns.forEach((b,k)=>{
@@ -379,11 +878,11 @@ function choose(i){
       if(idx<N-1){idx++;stash();question(true);}
       else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
       else calculateRitual();
-    }, 300);
+    }, 280);
   }
 }
 
-function back(){if(idx>0){idx--;stash();question(true);}}
+function back(){if(idx>0){SFX.back();idx--;stash();question(true);}}
 function next(){
   if(answers[idx]===null) return;
   if(idx<N-1){idx++;stash();question(true);}
@@ -397,12 +896,12 @@ function calculateRitual(){
   app.innerHTML=`<section class="panel"><div class="calc-box">
     <div class="rune-circle" aria-hidden="true"><div class="rune-outer"></div><div class="rune-inner"></div><span class="rune-core">⚔</span></div>
     <p class="calc-step" id="calcText">${esc(steps[0])}</p>
-    <p class="calc-sub">正在生成你的四维属性面板与 3:4 冒险者角色卡</p>
+    <p class="calc-sub">正在生成四维属性面板、天赋雷达与 3:4 冒险者角色卡</p>
   </div></section>`;
   scrollTop();
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},470);
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},940);
-  setTimeout(()=>result(),1380);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},440);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},880);
+  setTimeout(()=>result(true),1320);
 }
 
 function compute(input){
@@ -431,7 +930,6 @@ function compute(input){
   for(let k=1;k<Math.min(4,ranked.length);k++){
     if(ranked[k].fit>=ranked[k-1].fit) ranked[k].fit=Math.max(62,ranked[k-1].fit-2);
   }
-  // Personalized RPG 4-Stat Panel (1..99)
   const clamp=(x,lo,hi)=>Math.max(lo,Math.min(hi,Math.round(x)));
   const stats = [
     {key:'INT', name:'理性值', val:clamp(36 + ((3-v[2])*0.72 + (3-v[0])*0.28)/3*63, 36, 99), color:'#55c9d6'},
@@ -442,39 +940,53 @@ function compute(input){
   const lv = clamp(42 + Math.round((stats[0].val+stats[1].val+stats[2].val+stats[3].val)/8), 50, 99);
   return {v,ranked,p:ranked[0].p,stats,lv};
 }
-
 function tendency(a,v){return v<1.18?a[1]:v>1.82?a[2]:'双修全能'}
 
-function result(){
+function runChemCheck(otherName){
+  const out=document.getElementById('chemOut');
+  if(!out||!report) return;
+  if(!otherName){out.innerHTML='';return;}
+  const other=byName[otherName]; if(!other) return;
+  SFX.click(2);
+  const res=calcVectorChem(report.p,other,D.axes,{
+    same:'⚔ 镜像双排 · 技能无缝衔接',
+    match:'♥ 全服首通王炸双排 · 胜率拉满',
+    clash:'⚠ 开局团灭预警 · 建议带足复活币'
+  });
+  out.innerHTML=`<div class="chem-out">
+    <div class="chem-score-row"><span class="chem-verdict">${esc(res.verdict)}</span><span class="chem-pct">${res.score}%</span></div>
+    <div class="chem-bar"><i style="width:${res.score}%"></i></div>
+    <p style="font-size:13px;line-height:1.72">${esc(res.desc)}</p>
+    <button type="button" class="chem-copy-btn" onclick="copyChem('${esc(other.name)}',${res.score},'${esc(res.verdict)}')">复制双排副本战报 ↗</button>
+  </div>`;
+}
+async function copyChem(otherName,score,verdict){
+  if(!report) return;
+  const txt=`【生活 RPG · 双排副本胜率预测】⚔️\n【${report.p.name}】×【${otherName}】\n首通契合率：${score}%（${verdict}）\n快来测测咱俩下副本是王炸还是喜剧队👇 ${D.shareTags}`;
+  try{await navigator.clipboard.writeText(txt);showToast('✓ 双排战报已复制！');}
+  catch{document.getElementById('copyTextarea').value=txt;copyDialog.showModal();}
+}
+
+function result(celebrate=false){
   if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
   report=compute(answers);screen='result';stash();
   const {p,v,ranked,stats,lv}=report;
+  const unlocked=recordUnlock(p.name);
 
   app.innerHTML=`<section class="panel" style="--cls-color:${p.color};--cls-deep:${p.deep}">
-    <div class="char-card">
-      <div class="char-top-bar">
-        <span>GUILD ID · NO.${p.no}</span>
-        <span class="rank-badge">${esc(p.rank)}</span>
-      </div>
+    <div class="char-card" id="heroCard">
+      <div class="char-top-bar"><span>GUILD ID · NO.${p.no}</span><span class="rank-badge">${esc(p.rank)}</span></div>
       <div class="char-main">
         <div class="crest-frame">${crestSVG(p)}</div>
         <div>
           <div class="char-role">${esc(p.role)}</div>
           <h1 class="char-name">${esc(p.name)}</h1>
-          <div class="char-meta-row">
-            <span class="lv-chip">LV.${lv}</span>
-            <span class="fit-chip">✦ 职业契合 ${ranked[0].fit}%</span>
-          </div>
-          <div class="pills" style="margin:4px 0 0">
-            ${p.tags.map(t=>`<span class="pill gold"># ${esc(t)}</span>`).join('')}
-          </div>
+          <div class="char-meta-row"><span class="lv-chip">LV.${lv}</span><span class="fit-chip">✦ 职业契合 ${ranked[0].fit}%</span></div>
+          <div class="pills" style="margin:4px 0 0">${p.tags.map(t=>`<span class="pill gold"># ${esc(t)}</span>`).join('')}</div>
         </div>
       </div>
       <div class="stat-grid">
-        ${stats.map(s=>`<div style="--bar-c:${s.color}">
-          <div class="stat-item-head"><span>${esc(s.name)} ${s.key}</span><strong>${s.val}</strong></div>
-          <div class="stat-bar" role="img" aria-label="${esc(s.name)} ${s.val}"><i style="width:${s.val}%"></i></div>
-        </div>`).join('')}
+        ${stats.map(s=>`<div style="--bar-c:${s.color}"><div class="stat-item-head"><span>${esc(s.name)} ${s.key}</span><strong>${s.val}</strong></div><div class="stat-bar" role="img" aria-label="${esc(s.name)} ${s.val}"><i style="width:${s.val}%"></i></div></div>`).join('')}
       </div>
       <div class="quote-strip">「${esc(p.quote)}」</div>
     </div>
@@ -491,37 +1003,32 @@ function result(){
       <p class="kicker">01 / PASSIVE SKILL &amp; FATAL DEBUFF</p>
       <h3>专属神级被动 &amp; 致命 Debuff</h3>
       <p>${esc(p.insight)}</p>
-      <div class="skill-card">
-        <b>✦ 神级被动技能 · ${esc(p.passive[0])}</b>
-        <p>${esc(p.passive[1])}</p>
-      </div>
-      <div class="debuff-card">
-        <b>⚠ 致命 DEBUFF · ${esc(p.debuff[0])}</b>
-        <p>${esc(p.debuff[1])}</p>
-      </div>
+      <div class="skill-card"><b>✦ 神级被动技能 · ${esc(p.passive[0])}</b><p>${esc(p.passive[1])}</p></div>
+      <div class="debuff-card"><b>⚠ 致命 DEBUFF · ${esc(p.debuff[0])}</b><p>${esc(p.debuff[1])}</p></div>
     </div>
 
     <div class="block">
       <p class="kicker">02 / PARTY MATCHMAKING</p>
-      <h3>天选组队职业 &amp; 同队容易团灭警告</h3>
+      <h3>天选组队职业 &amp; 双排胜率预测器</h3>
       <p class="muted" style="margin-bottom:4px">发给闺蜜、舍友或对象测测，看看你们是全服首通王炸还是开局团灭喜剧队！</p>
       <div class="duo">
-        <div class="mini">
-          <b>♥ 天选组队搭子</b>
-          <div class="partner-name">${esc(p.match[0])}</div>
-          <p>${esc(p.match[1])}</p>
-        </div>
-        <div class="mini">
-          <b>⚡ 同队易团灭警告</b>
-          <div class="partner-name">${esc(p.clash[0])}</div>
-          <p>${esc(p.clash[1])}</p>
-        </div>
+        <div class="mini"><b>♥ 天选组队搭子</b><div class="partner-name">${esc(p.match[0])}</div><p>${esc(p.match[1])}</p></div>
+        <div class="mini"><b>⚡ 同队易团灭警告</b><div class="partner-name">${esc(p.clash[0])}</div><p>${esc(p.clash[1])}</p></div>
+      </div>
+      <div class="chem-box">
+        <div class="chem-head"><strong>⚔️ 副本双排组队胜率预测</strong><span>选队友测出的职业，预测你们的首通率</span></div>
+        <select class="chem-select" aria-label="选择队友职业预测双排胜率" onchange="runChemCheck(this.value)">
+          <option value="">— 选择队友测出的隐藏职业 —</option>
+          ${D.profiles.map(x=>`<option value="${esc(x.name)}">NO.${x.no} · ${esc(x.name)}</option>`).join('')}
+        </select>
+        <div id="chemOut"></div>
       </div>
     </div>
 
     <div class="block">
-      <p class="kicker">03 / TALENT TREE ALIGNMENT</p>
-      <h3>四维冒险倾向分布</h3>
+      <p class="kicker">03 / TALENT RADAR &amp; ALIGNMENT</p>
+      <h3>四维冒险倾向雷达</h3>
+      <div class="radar-wrap">${buildRadarSVG(D.axes.map(a=>a[0]), v.map(x=>x/3), {stroke:p.color,fill:p.color,grid:'rgba(240,196,108,0.22)',labelColor:'#f4f0e8',dotRing:'#151828'})}</div>
       ${D.axes.map((a,i)=>`<div class="axis">
         <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
         <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
@@ -530,15 +1037,16 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">04 / SUB-CLASS OPTIONS</p>
+      <p class="kicker">04 / SUB-CLASS &amp; GUILD DEX</p>
       <h3>你的隐藏副职业转职推荐</h3>
       ${ranked.slice(1,4).map(x=>`<div class="rank">
-        <div class="rank-left">
-          <span class="swatch" style="background:${x.p.color}"></span>
-          <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.rank)} · ${esc(x.p.role)}</small></div>
-        </div>
+        <div class="rank-left"><span class="swatch" style="background:${x.p.color}"></span><div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.rank)} · ${esc(x.p.role)}</small></div></div>
         <span class="pct">${x.fit}% 契合</span>
       </div>`).join('')}
+      <div class="dex-bar">
+        <div class="dex-bar-info"><strong>冒险者公会 16 职业图鉴</strong><span>当前已觉醒 ${unlocked.length} / ${D.profiles.length} 种职业</span></div>
+        <button type="button" class="dex-open-btn" onclick="openDex()">打开职业图鉴</button>
+      </div>
       <p class="notice">${esc(D.disclaimer)}</p>
     </div>
 
@@ -550,277 +1058,167 @@ function result(){
       </div>
     </div>
   </section>`;
+  bindCardTilt(document.getElementById('heroCard'));
   scrollTop();focusTitle();
+  if(celebrate){SFX.reveal();celebrateBurst([p.color,'#f0c46c','#8f7ef2','#5fd19a'],'star');}
 }
 
-function editAnswers(){idx=N-1;question(true);}
+function editAnswers(){SFX.back();idx=N-1;question(true);}
 function restart(){if(confirm('清除当前存档并重新进行职业觉醒？')){clearSaved();start();}}
 
 async function copyShare(){
   if(!report) return;
+  SFX.click(1);
   const {p,ranked,stats,lv}=report;
   const hook=D.shareHook.replace('{name}',p.name);
   const statStr=stats.map(s=>`${s.name}${s.val}`).join(' / ');
   const text=`${hook}\n${p.rank} · LV.${lv} · 契合度 ${ranked[0].fit}%\n面板数值：${statStr}\n✦ 神级被动：${p.passive[0]}\n⚠ 致命Debuff：${p.debuff[0]}\n\n♥ 评论区急招一位【${p.match[0]}】组队带飞！快来测测你是什么隐藏职业👇\n${D.shareTags}`;
   const st=document.getElementById('copyStatus');
-  try{
-    await navigator.clipboard.writeText(text);
-    if(st) st.textContent='✓ 小红书组队文案已复制到剪贴板！';
-  }catch{
-    document.getElementById('copyTextarea').value=text;
-    copyDialog.showModal();
-  }
+  try{await navigator.clipboard.writeText(text);if(st) st.textContent='✓ 小红书组队文案已复制到剪贴板！';}
+  catch{document.getElementById('copyTextarea').value=text;copyDialog.showModal();}
 }
 
-function wrap(ctx,text,max){
-  const out=[];let line='';
-  for(const ch of text){
-    if(line&&ctx.measureText(line+ch).width>max){out.push(line);line=ch;}
-    else line+=ch;
-  }
-  if(line) out.push(line);
-  return out;
-}
-function rPath(ctx,x,y,w,h,r){
-  ctx.beginPath();
-  if(typeof ctx.roundRect==='function') ctx.roundRect(x,y,w,h,r);
-  else{r=Math.min(r,w/2,h/2);ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
-}
+function wrap(ctx,text,max){const out=[];let line='';for(const ch of text){if(line&&ctx.measureText(line+ch).width>max){out.push(line);line=ch;}else line+=ch;}if(line) out.push(line);return out;}
+function rPath(ctx,x,y,w,h,r){ctx.beginPath();if(typeof ctx.roundRect==='function') ctx.roundRect(x,y,w,h,r);else{r=Math.min(r,w/2,h/2);ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}}
 function fillR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.fill();}
 function strokeR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.stroke();}
 
 function drawCanvasCrest(ctx, cx, cy, scale, p){
-  ctx.save();
-  ctx.translate(cx, cy);
-  ctx.scale(scale, scale);
+  ctx.save();ctx.translate(cx, cy);ctx.scale(scale, scale);
   const c = p.color;
-  // Outer arcane ring
-  ctx.save();ctx.setLineDash([5,5]);ctx.strokeStyle=c;ctx.globalAlpha=0.38;ctx.lineWidth=1.8;
-  ctx.beginPath();ctx.arc(0,0,58,0,Math.PI*2);ctx.stroke();ctx.restore();
-
+  ctx.save();ctx.setLineDash([5,5]);ctx.strokeStyle=c;ctx.globalAlpha=0.38;ctx.lineWidth=1.8;ctx.beginPath();ctx.arc(0,0,58,0,Math.PI*2);ctx.stroke();ctx.restore();
   ctx.strokeStyle=c;ctx.fillStyle=c;ctx.lineWidth=3.8;ctx.lineCap='round';ctx.lineJoin='round';
-  if(p.crest==='flask'){
-    ctx.beginPath();ctx.moveTo(-14,-40);ctx.lineTo(14,-40);ctx.moveTo(-7,-40);ctx.lineTo(-7,-18);
-    ctx.lineTo(-30,24);ctx.quadraticCurveTo(-34,36,-20,38);ctx.lineTo(20,38);ctx.quadraticCurveTo(34,36,30,24);
-    ctx.lineTo(7,-18);ctx.lineTo(7,-40);ctx.stroke();
-    ctx.globalAlpha=0.32;ctx.beginPath();ctx.moveTo(-21,10);ctx.lineTo(21,10);ctx.lineTo(28,25);ctx.quadraticCurveTo(30,34,18,36);ctx.lineTo(-18,36);ctx.quadraticCurveTo(-30,34,-28,25);ctx.closePath();ctx.fill();
-    ctx.globalAlpha=1;ctx.beginPath();ctx.arc(-8,22,4,0,Math.PI*2);ctx.arc(9,4,3,0,Math.PI*2);ctx.fill();
-  } else if(p.crest==='book'){
-    ctx.globalAlpha=0.22;ctx.beginPath();ctx.moveTo(-36,-30);ctx.quadraticCurveTo(-18,-38,0,-28);ctx.quadraticCurveTo(18,-38,36,-30);ctx.lineTo(36,30);ctx.quadraticCurveTo(18,22,0,32);ctx.quadraticCurveTo(-18,22,-36,30);ctx.closePath();ctx.fill();
-    ctx.globalAlpha=1;ctx.stroke();
-    ctx.beginPath();ctx.moveTo(0,-28);ctx.lineTo(0,32);ctx.stroke();
-    ctx.fillStyle='#131626';ctx.beginPath();ctx.arc(0,0,14,0,Math.PI*2);ctx.fill();ctx.stroke();
-    ctx.fillStyle=c;ctx.beginPath();ctx.arc(0,0,5,0,Math.PI*2);ctx.fill();
-  } else if(p.crest==='leaf'){
-    ctx.globalAlpha=0.25;ctx.beginPath();ctx.moveTo(-30,34);ctx.quadraticCurveTo(-24,-24,34,-34);ctx.quadraticCurveTo(26,24,-30,34);ctx.closePath();ctx.fill();
-    ctx.globalAlpha=1;ctx.stroke();
-    ctx.beginPath();ctx.moveTo(-30,34);ctx.quadraticCurveTo(-2,4,28,-28);ctx.stroke();
-    ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(34,-34,4.5,0,Math.PI*2);ctx.fill();
-  } else if(p.crest==='staff'){
-    ctx.beginPath();ctx.moveTo(-30,38);ctx.lineTo(20,-20);ctx.stroke();
-    ctx.beginPath();
-    const pts=[[22,-44],[28,-28],[44,-22],[28,-16],[22,0],[16,-16],[0,-22],[16,-28]];
-    pts.forEach((pt,i)=>i?ctx.lineTo(pt[0],pt[1]):ctx.moveTo(pt[0],pt[1]));
-    ctx.closePath();ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1.8;ctx.stroke();
-  } else if(p.crest==='lute'){
-    ctx.save();ctx.translate(-10,14);ctx.rotate(-0.6);ctx.globalAlpha=0.25;ctx.beginPath();ctx.ellipse(0,0,24,27,0,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;ctx.stroke();ctx.restore();
-    ctx.beginPath();ctx.moveTo(6,-4);ctx.lineTo(36,-36);ctx.lineWidth=5;ctx.stroke();
-    ctx.fillStyle='#131626';ctx.lineWidth=2.6;ctx.beginPath();ctx.arc(-10,14,7.5,0,Math.PI*2);ctx.fill();ctx.stroke();
-  } else if(p.crest==='dagger'){
-    ctx.globalAlpha=0.35;ctx.beginPath();ctx.moveTo(32,-38);ctx.lineTo(22,-8);ctx.lineTo(-8,18);ctx.lineTo(-18,8);ctx.lineTo(8,-22);ctx.closePath();ctx.fill();
-    ctx.globalAlpha=1;ctx.stroke();
-    ctx.beginPath();ctx.moveTo(-26,-2);ctx.lineTo(4,26);ctx.moveTo(-14,14);ctx.lineTo(-32,34);ctx.lineWidth=5;ctx.stroke();
-  } else if(p.crest==='sword'){
-    ctx.globalAlpha=0.32;ctx.beginPath();ctx.moveTo(0,-46);ctx.lineTo(10,-28);ctx.lineTo(10,14);ctx.lineTo(-10,14);ctx.lineTo(-10,-28);ctx.closePath();ctx.fill();
-    ctx.globalAlpha=1;ctx.stroke();
-    fillR(ctx,-24,14,48,9,4);fillR(ctx,-5,23,10,19,3);
-    ctx.beginPath();ctx.arc(0,46,6,0,Math.PI*2);ctx.fill();
-  } else if(p.crest==='bow'){
-    ctx.beginPath();ctx.moveTo(-20,-38);ctx.quadraticCurveTo(30,0,-20,38);ctx.stroke();
-    ctx.strokeStyle='rgba(255,255,255,0.5)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-20,-36);ctx.lineTo(-20,36);ctx.stroke();
-    ctx.strokeStyle=c;ctx.lineWidth=3.6;ctx.beginPath();ctx.moveTo(-36,0);ctx.lineTo(34,0);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(40,0);ctx.lineTo(26,-9);ctx.lineTo(26,9);ctx.closePath();ctx.fill();
-  } else if(p.crest==='shield'){
-    ctx.globalAlpha=0.24;ctx.beginPath();ctx.moveTo(0,-42);ctx.lineTo(34,-30);ctx.lineTo(34,0);ctx.bezierCurveTo(34,24,16,36,0,46);ctx.bezierCurveTo(-16,36,-34,24,-34,0);ctx.lineTo(-34,-30);ctx.closePath();ctx.fill();
-    ctx.globalAlpha=1;ctx.stroke();
-    ctx.beginPath();ctx.moveTo(0,-28);ctx.lineTo(0,30);ctx.moveTo(-20,-4);ctx.lineTo(20,-4);ctx.stroke();
-    ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(0,-4,6,0,Math.PI*2);ctx.fill();
-  } else {
-    // crown
-    ctx.globalAlpha=0.28;ctx.beginPath();ctx.moveTo(-36,24);ctx.lineTo(-32,-20);ctx.lineTo(-12,0);ctx.lineTo(0,-32);ctx.lineTo(12,0);ctx.lineTo(32,-20);ctx.lineTo(36,24);ctx.closePath();ctx.fill();
-    ctx.globalAlpha=1;ctx.stroke();
-    fillR(ctx,-36,24,72,11,4);
-    ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(0,-36,5,0,Math.PI*2);ctx.fill();
-  }
+  if(p.crest==='flask'){ctx.beginPath();ctx.moveTo(-14,-40);ctx.lineTo(14,-40);ctx.moveTo(-7,-40);ctx.lineTo(-7,-18);ctx.lineTo(-30,24);ctx.quadraticCurveTo(-34,36,-20,38);ctx.lineTo(20,38);ctx.quadraticCurveTo(34,36,30,24);ctx.lineTo(7,-18);ctx.lineTo(7,-40);ctx.stroke();}
+  else if(p.crest==='book'){ctx.globalAlpha=0.22;ctx.beginPath();ctx.moveTo(-36,-30);ctx.quadraticCurveTo(-18,-38,0,-28);ctx.quadraticCurveTo(18,-38,36,-30);ctx.lineTo(36,30);ctx.quadraticCurveTo(18,22,0,32);ctx.quadraticCurveTo(-18,22,-36,30);ctx.closePath();ctx.fill();ctx.globalAlpha=1;ctx.stroke();ctx.beginPath();ctx.moveTo(0,-28);ctx.lineTo(0,32);ctx.stroke();}
+  else if(p.crest==='leaf'){ctx.globalAlpha=0.25;ctx.beginPath();ctx.moveTo(-30,34);ctx.quadraticCurveTo(-24,-24,34,-34);ctx.quadraticCurveTo(26,24,-30,34);ctx.closePath();ctx.fill();ctx.globalAlpha=1;ctx.stroke();}
+  else if(p.crest==='staff'){ctx.beginPath();ctx.moveTo(-30,38);ctx.lineTo(20,-20);ctx.stroke();ctx.beginPath();[[22,-44],[28,-28],[44,-22],[28,-16],[22,0],[16,-16],[0,-22],[16,-28]].forEach((pt,i)=>i?ctx.lineTo(pt[0],pt[1]):ctx.moveTo(pt[0],pt[1]));ctx.closePath();ctx.fill();}
+  else if(p.crest==='lute'){ctx.save();ctx.translate(-10,14);ctx.rotate(-0.6);ctx.globalAlpha=0.25;ctx.beginPath();ctx.ellipse(0,0,24,27,0,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;ctx.stroke();ctx.restore();ctx.beginPath();ctx.moveTo(6,-4);ctx.lineTo(36,-36);ctx.lineWidth=5;ctx.stroke();}
+  else if(p.crest==='dagger'){ctx.globalAlpha=0.35;ctx.beginPath();ctx.moveTo(32,-38);ctx.lineTo(22,-8);ctx.lineTo(-8,18);ctx.lineTo(-18,8);ctx.lineTo(8,-22);ctx.closePath();ctx.fill();ctx.globalAlpha=1;ctx.stroke();ctx.beginPath();ctx.moveTo(-26,-2);ctx.lineTo(4,26);ctx.moveTo(-14,14);ctx.lineTo(-32,34);ctx.lineWidth=5;ctx.stroke();}
+  else if(p.crest==='sword'){ctx.globalAlpha=0.32;ctx.beginPath();ctx.moveTo(0,-46);ctx.lineTo(10,-28);ctx.lineTo(10,14);ctx.lineTo(-10,14);ctx.lineTo(-10,-28);ctx.closePath();ctx.fill();ctx.globalAlpha=1;ctx.stroke();fillR(ctx,-24,14,48,9,4);fillR(ctx,-5,23,10,19,3);}
+  else if(p.crest==='bow'){ctx.beginPath();ctx.moveTo(-20,-38);ctx.quadraticCurveTo(30,0,-20,38);ctx.stroke();ctx.beginPath();ctx.moveTo(-36,0);ctx.lineTo(34,0);ctx.stroke();}
+  else if(p.crest==='shield'){ctx.globalAlpha=0.24;ctx.beginPath();ctx.moveTo(0,-42);ctx.lineTo(34,-30);ctx.lineTo(34,0);ctx.bezierCurveTo(34,24,16,36,0,46);ctx.bezierCurveTo(-16,36,-34,24,-34,0);ctx.lineTo(-34,-30);ctx.closePath();ctx.fill();ctx.globalAlpha=1;ctx.stroke();}
+  else{ctx.globalAlpha=0.28;ctx.beginPath();ctx.moveTo(-36,24);ctx.lineTo(-32,-20);ctx.lineTo(-12,0);ctx.lineTo(0,-32);ctx.lineTo(12,0);ctx.lineTo(32,-20);ctx.lineTo(36,24);ctx.closePath();ctx.fill();ctx.globalAlpha=1;ctx.stroke();fillR(ctx,-36,24,72,11,4);}
   ctx.restore();
 }
 
-function makePoster(){
+function makePoster(themeIdx = 0, sig = ''){
   const c=document.createElement('canvas');c.width=1080;c.height=1440;
   const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
   const {p,stats,ranked,lv}=report;
   const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif', mono='"SF Mono","Menlo","Consolas",monospace';
+  const parch = themeIdx === 1;
 
-  // Deep arcane dark fantasy backdrop
-  const bg=ctx.createLinearGradient(0,0,1080,1440);
-  bg.addColorStop(0,p.deep);bg.addColorStop(0.42,'#121424');bg.addColorStop(1,'#0b0c16');
-  ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1440);
+  if(parch){
+    ctx.fillStyle='#f3ead6';ctx.fillRect(0,0,1080,1440);
+  }else{
+    const bg=ctx.createLinearGradient(0,0,1080,1440);
+    bg.addColorStop(0,p.deep);bg.addColorStop(0.42,'#121424');bg.addColorStop(1,'#0b0c16');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1440);
+    const glow=ctx.createRadialGradient(210,275,20,210,275,240);
+    glow.addColorStop(0,p.color+'44');glow.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle=glow;ctx.fillRect(0,0,1080,600);
+  }
+  const INK = parch ? '#231b14' : '#ffffff';
+  const MUTED = parch ? '#685947' : '#b2aec4';
+  const CARD = parch ? '#fcf8ed' : '#151828';
+  const ACC = parch ? '#8a5620' : p.color;
 
-  // Subtle decorative glowing rune circle behind header
-  const glow=ctx.createRadialGradient(210,275,20,210,275,240);
-  glow.addColorStop(0,p.color+'44');glow.addColorStop(1,'rgba(0,0,0,0)');
-  ctx.fillStyle=glow;ctx.fillRect(0,0,1080,600);
+  ctx.strokeStyle=parch?'#a67a3e':p.color+'88';ctx.lineWidth=2.5;strokeR(ctx,28,28,1024,1384,26);
+  ctx.strokeStyle=parch?'rgba(138,86,32,0.22)':'rgba(255,255,255,0.12)';ctx.lineWidth=1;strokeR(ctx,40,40,1000,1360,20);
 
-  // Guild Double Gold Frame
-  ctx.strokeStyle=p.color+'88';ctx.lineWidth=2.5;strokeR(ctx,28,28,1024,1384,26);
-  ctx.strokeStyle='rgba(255,255,255,0.12)';ctx.lineWidth=1;strokeR(ctx,40,40,1000,1360,20);
+  ctx.fillStyle=ACC;ctx.font=`800 22px ${mono}`;
+  ctx.fillText(`⚔ LIFE RPG GUILD  ·  NO.${p.no}` + (sig ? `  ·  PLAYER: ${sig}` : ''), 72, 92);
+  ctx.fillStyle=parch?'rgba(138,86,32,0.14)':p.color+'30';fillR(ctx,742,64,266,42,8);
+  ctx.strokeStyle=ACC;ctx.lineWidth=1.5;strokeR(ctx,742,64,266,42,8);
+  ctx.fillStyle=INK;ctx.font=`800 20px ${mono}`;ctx.textAlign='center';ctx.fillText(p.rank, 875, 92);ctx.textAlign='left';
 
-  // Header Guild Bar
-  ctx.fillStyle=p.color;ctx.font=`800 22px ${mono}`;
-  ctx.fillText(`⚔ LIFE RPG GUILD  ·  NO.${p.no}`, 72, 92);
-  ctx.textAlign='right';
-  ctx.fillStyle=p.color+'30';fillR(ctx,742,64,266,42,8);
-  ctx.strokeStyle=p.color;ctx.lineWidth=1.5;strokeR(ctx,742,64,266,42,8);
-  ctx.fillStyle='#ffffff';ctx.font=`800 20px ${mono}`;
-  ctx.textAlign='center';ctx.fillText(p.rank, 875, 92);
-  ctx.textAlign='left';
-
-  // Main Hero Identity Panel
   const hy=126;
-  ctx.fillStyle='rgba(255,255,255,0.03)';fillR(ctx,64,hy,952,324,22);
-  ctx.strokeStyle=p.color+'55';ctx.lineWidth=1.5;strokeR(ctx,64,hy,952,324,22);
+  ctx.fillStyle=parch?'#fcf8ed':'rgba(255,255,255,0.03)';fillR(ctx,64,hy,952,324,22);
+  ctx.strokeStyle=parch?'#cbb896':p.color+'55';ctx.lineWidth=1.5;strokeR(ctx,64,hy,952,324,22);
 
-  // Left Crest Box
-  ctx.fillStyle='rgba(10,12,22,0.72)';fillR(ctx,92,hy+32,236,260,18);
+  ctx.fillStyle=parch?'#221a2d':'rgba(10,12,22,0.72)';fillR(ctx,92,hy+32,236,260,18);
   ctx.strokeStyle=p.color+'88';ctx.lineWidth=2;strokeR(ctx,92,hy+32,236,260,18);
   drawCanvasCrest(ctx, 210, hy+152, 1.48, p);
   ctx.textAlign='center';ctx.fillStyle=p.color;ctx.font=`800 19px ${mono}`;
-  ctx.fillText(`LV.${lv}  ·  ${ranked[0].fit}% MATCH`, 210, hy+268);
-  ctx.textAlign='left';
+  ctx.fillText(`LV.${lv}  ·  ${ranked[0].fit}% MATCH`, 210, hy+268);ctx.textAlign='left';
 
-  // Right Title & Tags
-  const rx=362, rw=620;
-  ctx.fillStyle=p.color;ctx.font=`700 22px ${mono}`;
-  ctx.fillText(p.role, rx, hy+68);
-
+  const rx=362;
+  ctx.fillStyle=ACC;ctx.font=`700 22px ${mono}`;ctx.fillText(p.role, rx, hy+68);
   const nameParts = p.name.includes('·') ? p.name.split('·') : [p.name];
-  ctx.fillStyle='#ffffff';
-  if(nameParts.length===2){
-    ctx.font=`800 50px ${serif}`;
-    ctx.fillText(nameParts[0]+' ·', rx, hy+134);
-    ctx.fillText(nameParts[1], rx, hy+196);
-  }else{
-    ctx.font=`800 52px ${serif}`;
-    ctx.fillText(p.name, rx, hy+156);
-  }
+  ctx.fillStyle=INK;
+  if(nameParts.length===2){ctx.font=`800 50px ${serif}`;ctx.fillText(nameParts[0]+' ·', rx, hy+134);ctx.fillText(nameParts[1], rx, hy+196);}
+  else{ctx.font=`800 52px ${serif}`;ctx.fillText(p.name, rx, hy+156);}
 
-  // Pills
   let tx=rx;
   p.tags.forEach(t=>{
-    const lbl='# '+t;ctx.font=`600 20px ${sans}`;
-    const w=ctx.measureText(lbl).width+28;
-    if(tx+w<995){
-      ctx.fillStyle=p.color+'24';fillR(ctx,tx,hy+232,w,38,19);
-      ctx.strokeStyle=p.color+'77';ctx.lineWidth=1;strokeR(ctx,tx,hy+232,w,38,19);
-      ctx.fillStyle='#ffffff';ctx.fillText(lbl,tx+14,hy+258);
-      tx+=w+10;
-    }
+    const lbl='# '+t;ctx.font=`600 20px ${sans}`;const w=ctx.measureText(lbl).width+28;
+    if(tx+w<995){ctx.fillStyle=parch?'#efe3cc':p.color+'24';fillR(ctx,tx,hy+232,w,38,19);ctx.strokeStyle=parch?'#cbb896':p.color+'77';ctx.lineWidth=1;strokeR(ctx,tx,hy+232,w,38,19);ctx.fillStyle=INK;ctx.fillText(lbl,tx+14,hy+258);tx+=w+10;}
   });
 
-  // Quote Strip
   const qy=470;
-  ctx.fillStyle='rgba(255,255,255,0.04)';fillR(ctx,64,qy,952,86,16);
-  ctx.fillStyle=p.color;fillR(ctx,64,qy,9,86,4);
-  ctx.fillStyle='#f7e7c8';ctx.font=`600 25px ${serif}`;
-  ctx.fillText(wrap(ctx,`「${p.quote}」`,890)[0], 96, qy+52);
+  ctx.fillStyle=parch?'#fcf8ed':'rgba(255,255,255,0.04)';fillR(ctx,64,qy,952,86,16);
+  ctx.fillStyle=ACC;fillR(ctx,64,qy,9,86,4);
+  ctx.fillStyle=parch?'#5e3b18':'#f7e7c8';ctx.font=`600 25px ${serif}`;ctx.fillText(wrap(ctx,`「${p.quote}」`,890)[0], 96, qy+52);
 
-  // 4-Stat RPG Attributes Panel
   const sy=576;
-  ctx.fillStyle='#151828';fillR(ctx,64,sy,952,216,20);
-  ctx.strokeStyle='rgba(255,255,255,0.10)';ctx.lineWidth=1.5;strokeR(ctx,64,sy,952,216,20);
-  ctx.fillStyle='#f0c46c';ctx.font=`800 20px ${mono}`;
-  ctx.fillText('CHARACTER ATTRIBUTES  ·  角色四维天赋面板', 96, sy+40);
-
+  ctx.fillStyle=CARD;fillR(ctx,64,sy,952,216,20);
+  ctx.strokeStyle=parch?'#d6c4a4':'rgba(255,255,255,0.10)';ctx.lineWidth=1.5;strokeR(ctx,64,sy,952,216,20);
+  ctx.fillStyle=parch?'#8a5620':'#f0c46c';ctx.font=`800 20px ${mono}`;ctx.fillText('CHARACTER ATTRIBUTES  ·  角色四维天赋面板', 96, sy+40);
   stats.forEach((s,i)=>{
-    const col=i%2, row=Math.floor(i/2);
-    const sx=96+col*456, ay=sy+88+row*68, sw=416;
-    ctx.fillStyle='#ebe7f5';ctx.font=`700 21px ${sans}`;ctx.textAlign='left';
-    ctx.fillText(`${s.name} ${s.key}`, sx, ay);
-    ctx.textAlign='right';ctx.fillStyle=s.color;ctx.font=`900 25px ${mono}`;
-    ctx.fillText(String(s.val), sx+sw, ay);
-    ctx.textAlign='left';
-    ctx.fillStyle='rgba(255,255,255,0.10)';fillR(ctx,sx,ay+12,sw,12,6);
+    const col=i%2, row=Math.floor(i/2);const sx=96+col*456, ay=sy+88+row*68, sw=416;
+    ctx.fillStyle=INK;ctx.font=`700 21px ${sans}`;ctx.textAlign='left';ctx.fillText(`${s.name} ${s.key}`, sx, ay);
+    ctx.textAlign='right';ctx.fillStyle=parch?'#8a5620':s.color;ctx.font=`900 25px ${mono}`;ctx.fillText(String(s.val), sx+sw, ay);ctx.textAlign='left';
+    ctx.fillStyle=parch?'#e8dcc4':'rgba(255,255,255,0.10)';fillR(ctx,sx,ay+12,sw,12,6);
     ctx.fillStyle=s.color;fillR(ctx,sx,ay+12,Math.max(24,sw*s.val/100),12,6);
   });
 
-  // Passive Skill (Green Glow) + Fatal Debuff (Red Alert)
   const skY=814;
-  ctx.fillStyle='rgba(95,209,154,0.11)';fillR(ctx,64,skY,952,148,18);
-  ctx.strokeStyle='rgba(95,209,154,0.45)';ctx.lineWidth=1.8;strokeR(ctx,64,skY,952,148,18);
-  ctx.fillStyle='#5fd19a';ctx.font=`800 22px ${mono}`;
-  ctx.fillText(`✦ 神级被动技能  ${p.passive[0]}`, 96, skY+42);
-  ctx.fillStyle='#e8f7ef';ctx.font=`400 23px ${sans}`;
-  wrap(ctx,p.passive[1],888).slice(0,2).forEach((l,i)=>ctx.fillText(l, 96, skY+84+i*36));
+  ctx.fillStyle=parch?'#e8f5ee':'rgba(95,209,154,0.11)';fillR(ctx,64,skY,952,148,18);
+  ctx.strokeStyle=parch?'#89c9a8':'rgba(95,209,154,0.45)';ctx.lineWidth=1.8;strokeR(ctx,64,skY,952,148,18);
+  ctx.fillStyle=parch?'#1e6e48':'#5fd19a';ctx.font=`800 22px ${mono}`;ctx.fillText(`✦ 神级被动技能  ${p.passive[0]}`, 96, skY+42);
+  ctx.fillStyle=parch?'#1e362a':'#e8f7ef';ctx.font=`400 23px ${sans}`;wrap(ctx,p.passive[1],888).slice(0,2).forEach((l,i)=>ctx.fillText(l, 96, skY+84+i*36));
 
   const dbY=982;
-  ctx.fillStyle='rgba(239,104,104,0.12)';fillR(ctx,64,dbY,952,148,18);
-  ctx.strokeStyle='rgba(239,104,104,0.48)';ctx.lineWidth=1.8;strokeR(ctx,64,dbY,952,148,18);
-  ctx.fillStyle='#ff8a8a';ctx.font=`800 22px ${mono}`;
-  ctx.fillText(`⚠ 致命 DEBUFF  ${p.debuff[0]}`, 96, dbY+42);
-  ctx.fillStyle='#fae4e4';ctx.font=`400 23px ${sans}`;
-  wrap(ctx,p.debuff[1],888).slice(0,2).forEach((l,i)=>ctx.fillText(l, 96, dbY+84+i*36));
+  ctx.fillStyle=parch?'#fbeceb':'rgba(239,104,104,0.12)';fillR(ctx,64,dbY,952,148,18);
+  ctx.strokeStyle=parch?'#e09a9a':'rgba(239,104,104,0.48)';ctx.lineWidth=1.8;strokeR(ctx,64,dbY,952,148,18);
+  ctx.fillStyle=parch?'#a62e2e':'#ff8a8a';ctx.font=`800 22px ${mono}`;ctx.fillText(`⚠ 致命 DEBUFF  ${p.debuff[0]}`, 96, dbY+42);
+  ctx.fillStyle=parch?'#3d1e1e':'#fae4e4';ctx.font=`400 23px ${sans}`;wrap(ctx,p.debuff[1],888).slice(0,2).forEach((l,i)=>ctx.fillText(l, 96, dbY+84+i*36));
 
-  // Party Matchmaking Duo Cards
   const py=1152, ph=190;
-  ctx.fillStyle='#1b1f33';fillR(ctx,64,py,464,ph,18);
-  ctx.strokeStyle=p.color+'66';ctx.lineWidth=1.5;strokeR(ctx,64,py,464,ph,18);
-  ctx.fillStyle=p.color;ctx.font=`800 19px ${mono}`;ctx.fillText('♥ 天选组队搭子', 92, py+38);
-  ctx.fillStyle='#ffffff';ctx.font=`800 24px ${serif}`;
-  wrap(ctx,p.match[0],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 92, py+78+i*31));
-  ctx.fillStyle='#b2aec4';ctx.font=`400 19px ${sans}`;
-  wrap(ctx,p.match[1],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 92, py+136+i*27));
+  ctx.fillStyle=CARD;fillR(ctx,64,py,464,ph,18);ctx.strokeStyle=parch?'#d6c4a4':p.color+'66';ctx.lineWidth=1.5;strokeR(ctx,64,py,464,ph,18);
+  ctx.fillStyle=ACC;ctx.font=`800 19px ${mono}`;ctx.fillText('♥ 天选组队搭子', 92, py+38);
+  ctx.fillStyle=INK;ctx.font=`800 24px ${serif}`;wrap(ctx,p.match[0],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 92, py+78+i*31));
+  ctx.fillStyle=MUTED;ctx.font=`400 19px ${sans}`;wrap(ctx,p.match[1],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 92, py+136+i*27));
 
-  ctx.fillStyle='#1b1f33';fillR(ctx,552,py,464,ph,18);
-  ctx.strokeStyle='rgba(255,255,255,0.12)';ctx.lineWidth=1.5;strokeR(ctx,552,py,464,ph,18);
-  ctx.fillStyle='#ff8a8a';ctx.font=`800 19px ${mono}`;ctx.fillText('⚡ 同队易团灭警告', 580, py+38);
-  ctx.fillStyle='#ffffff';ctx.font=`800 24px ${serif}`;
-  wrap(ctx,p.clash[0],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 580, py+78+i*31));
-  ctx.fillStyle='#b2aec4';ctx.font=`400 19px ${sans}`;
-  wrap(ctx,p.clash[1],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 580, py+136+i*27));
+  ctx.fillStyle=CARD;fillR(ctx,552,py,464,ph,18);ctx.strokeStyle=parch?'#d6c4a4':'rgba(255,255,255,0.12)';ctx.lineWidth=1.5;strokeR(ctx,552,py,464,ph,18);
+  ctx.fillStyle=parch?'#a62e2e':'#ff8a8a';ctx.font=`800 19px ${mono}`;ctx.fillText('⚡ 同队易团灭警告', 580, py+38);
+  ctx.fillStyle=INK;ctx.font=`800 24px ${serif}`;wrap(ctx,p.clash[0],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 580, py+78+i*31));
+  ctx.fillStyle=MUTED;ctx.font=`400 19px ${sans}`;wrap(ctx,p.clash[1],410).slice(0,2).forEach((l,i)=>ctx.fillText(l, 580, py+136+i*27));
 
-  // Footer
-  ctx.fillStyle='#9e99b0';ctx.font=`500 20px ${sans}`;
-  ctx.fillText('如果生活是一场 RPG，你的隐藏职业与天赋面板  ·  长按保存摇人组队', 66, 1384);
-  ctx.textAlign='right';ctx.fillText('LIFE RPG GUILD', 1014, 1384);
-  ctx.textAlign='left';
+  ctx.fillStyle=MUTED;ctx.font=`500 20px ${sans}`;ctx.fillText('如果生活是一场 RPG，你的隐藏职业与天赋面板  ·  长按保存摇人组队', 66, 1384);
+  ctx.textAlign='right';ctx.fillText('LIFE RPG GUILD', 1014, 1384);ctx.textAlign='left';
   return c;
 }
 
-function showPoster(){
+function renderPosterCanvas(){
   if(!report) return;
-  const status=document.getElementById('posterStatus'),
-        area=document.getElementById('posterArea'),
-        download=document.getElementById('downloadPoster');
+  const status=document.getElementById('posterStatus'),area=document.getElementById('posterArea'),download=document.getElementById('downloadPoster'),sig=(document.getElementById('sigInput')?.value||'').trim().slice(0,10);
   status.textContent='';area.innerHTML='';download.disabled=true;
   try{
     if(posterURL) URL.revokeObjectURL(posterURL);
     posterURL=null;
-    const canvas=makePoster();
-    const img=document.createElement('img');
-    img.className='poster';img.alt='可保存的3:4 RPG角色属性卡海报';
-    img.src=canvas.toDataURL('image/png');
+    const canvas=makePoster(posterTheme,sig);
+    const img=document.createElement('img');img.className='poster';img.alt='可保存的3:4 RPG角色属性卡海报';img.src=canvas.toDataURL('image/png');
     area.append(img);
-    canvas.toBlob(blob=>{
-      posterURL=blob?URL.createObjectURL(blob):img.src;
-      download.disabled=false;
-    },'image/png');
-    if(!posterDialog.open) posterDialog.showModal();
-  }catch(e){
-    status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
-    if(!posterDialog.open) posterDialog.showModal();
-  }
+    canvas.toBlob(blob=>{posterURL=blob?URL.createObjectURL(blob):img.src;download.disabled=false;},'image/png');
+  }catch(e){status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';}
 }
+function showPoster(){if(!report) return;SFX.click(3);renderPosterCanvas();if(!posterDialog.open) posterDialog.showModal();}
 
+document.querySelectorAll('[data-ptheme]').forEach(btn=>{
+  btn.onclick=()=>{SFX.click(1);posterTheme=Number(btn.dataset.ptheme)||0;document.querySelectorAll('[data-ptheme]').forEach(x=>x.classList.toggle('active',x===btn));renderPosterCanvas();};
+});
+document.getElementById('sigApply').onclick=()=>{SFX.click(2);renderPosterCanvas();document.getElementById('posterStatus').textContent='✓ 冒险者 ID 已刻入公会卡！';};
 document.getElementById('closePoster').onclick=()=>posterDialog.close();
 document.getElementById('downloadPoster').onclick=()=>{
   if(!posterURL||!report) return;
@@ -829,9 +1227,18 @@ document.getElementById('downloadPoster').onclick=()=>{
   document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方角色面板保存。';
 };
 document.getElementById('closeCopy').onclick=()=>copyDialog.close();
-document.getElementById('selectCopyBtn').onclick=()=>{
-  const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
-};
+document.getElementById('closePeek').onclick=()=>peekDialog.close();
+document.getElementById('closeDex').onclick=()=>dexDialog.close();
+document.getElementById('selectCopyBtn').onclick=()=>{const ta=document.getElementById('copyTextarea');ta.focus();ta.select();};
+document.addEventListener('keydown',e=>{
+  if(screen!=='question'||posterDialog.open||copyDialog.open||peekDialog.open||dexDialog.open) return;
+  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  const map={'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'A':0,'B':1,'C':2,'D':3};
+  if(e.key in map){e.preventDefault();choose(map[e.key]);}
+  else if(e.key==='ArrowLeft'||e.key==='Backspace'){e.preventDefault();back();}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){if(answers[idx]!==null){e.preventDefault();next();}}
+});
+initSoundToggle();
 home();
 </script>
 </body>

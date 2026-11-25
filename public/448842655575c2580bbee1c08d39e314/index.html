@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#8d5332">
-<meta name="description" content="测测你的灵魂专属香调 · 24道感官情境探索，调制属于你的16款原创高定沙龙香，含3:4小红书收藏级香水瓶海报。">
+<meta name="description" content="测测你的灵魂专属香调 · 24道感官情境探索，调制属于你的16款原创高定沙龙香，含气味雷达图、叠喷实验室与3:4瓶身刻字海报。">
 <title>测测你的灵魂专属香调 · SCENT ATELIER</title>
 <style>
 :root{
@@ -14,78 +14,88 @@
   --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh;
+  background-image:radial-gradient(rgba(141,83,50,.05) 1px,transparent 1px);background-size:24px 24px}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
-  radial-gradient(ellipse at 92% 0%,rgba(193,147,82,.18),transparent 54%),
-  radial-gradient(ellipse at 8% 100%,rgba(141,83,50,.11),transparent 52%);z-index:-1}
-main{width:min(100%,660px);padding:18px 16px max(34px,env(safe-area-inset-bottom));margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.brand{font-size:11px;letter-spacing:2.6px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:7px}
+  radial-gradient(ellipse at 92% 0%,rgba(193,147,82,.20),transparent 54%),
+  radial-gradient(ellipse at 8% 100%,rgba(141,83,50,.12),transparent 52%);z-index:-1}
+main{width:min(100%,660px);padding:14px 14px max(28px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.brand{font-size:11px;letter-spacing:2.4px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
 .brand::before{content:"✦";color:var(--accent2);font-size:13px}
-.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.06em}
-section.panel{border:1px solid var(--line);border-radius:26px;background:var(--card);padding:clamp(18px,4.2vw,30px);box-shadow:0 22px 54px rgba(36,29,25,.08);overflow:hidden;animation:enter .3s cubic-bezier(.22,1,.36,1)}
+.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.05em}
+.sound-btn{background:var(--card);border:1px solid var(--line);color:var(--accent)}
+section.panel{position:relative;border:1px solid var(--line);border-radius:26px;background:var(--card);padding:clamp(16px,4vw,28px);box-shadow:0 22px 54px rgba(36,29,25,.09);overflow:hidden;animation:enter .3s cubic-bezier(.22,1,.36,1)}
+section.panel::after{content:"";position:absolute;inset:8px;border:1px solid rgba(193,147,82,.18);border-radius:19px;pointer-events:none}
 @keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 h1,h2,h3,p{margin:0}
-h1{font-family:var(--serif);font-size:clamp(30px,7.8vw,45px);font-weight:800;line-height:1.25;letter-spacing:.03em}
-h2{font-family:var(--serif);font-size:clamp(21px,5.2vw,27px);line-height:1.48;font-weight:700}
+h1{font-family:var(--serif);font-size:clamp(28px,7.2vw,42px);font-weight:800;line-height:1.24;letter-spacing:.03em;text-wrap:balance}
+h2{font-family:var(--serif);font-size:clamp(20px,5vw,26px);line-height:1.48;font-weight:700}
 h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700}
-.eyebrow{color:var(--accent);font-size:10.5px;letter-spacing:2.4px;font-weight:800;margin:16px 0 7px;text-transform:uppercase}
-.lead{font-size:15px;line-height:1.86;margin:12px 0 18px;color:color-mix(in srgb,var(--ink) 84%,var(--muted))}
+.eyebrow{color:var(--accent);font-size:10.5px;letter-spacing:2.2px;font-weight:800;margin:13px 0 6px;text-transform:uppercase}
+.lead{font-size:14px;line-height:1.78;margin:9px 0 14px;color:color-mix(in srgb,var(--ink) 84%,var(--muted));text-wrap:pretty}
 .muted{font-size:12px;color:var(--muted)}
-.hero{position:relative;isolation:isolate;height:clamp(192px,48vw,246px);background:#261f1b;border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.hero{position:relative;isolation:isolate;height:clamp(166px,42vw,228px);background:#241c18;border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(246,224,188,.18)}
 .hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,18,14,.06) 0%,rgba(24,18,14,.55) 100%);z-index:-1}
-.hero-badge{position:absolute;top:14px;right:14px;padding:4px 11px;border-radius:99px;border:1px solid rgba(246,232,210,.45);background:rgba(28,21,17,.36);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.6px;font-weight:700;color:#f7ebd8}
-.hero-copy{position:absolute;bottom:17px;left:19px;right:16px}
-.hero-copy small{font-size:10px;letter-spacing:3px;opacity:.9;display:block;margin-bottom:3px;color:#ead3b3}
-.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,34px);letter-spacing:3px;line-height:1.25}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
-.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:500}
-.pill.accent{border-color:color-mix(in srgb,var(--accent) 32%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
-.teaser-wrap{margin:22px 0 20px;padding-top:16px;border-top:1px dashed var(--line)}
-.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
-.teaser-head span{font-size:11px;letter-spacing:1.6px;color:var(--accent);font-weight:800}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,18,14,.05) 0%,rgba(24,18,14,.58) 100%);z-index:-1}
+.hero-badge{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:99px;border:1px solid rgba(246,232,210,.48);background:rgba(28,21,17,.45);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.4px;font-weight:700;color:#f7ebd8}
+.hero-copy{position:absolute;bottom:14px;left:16px;right:16px}
+.hero-copy small{font-size:9.5px;letter-spacing:2.8px;opacity:.92;display:block;margin-bottom:2px;color:#ead3b3}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(22px,5.6vw,32px);letter-spacing:3px;line-height:1.22}
+.mist-rise{animation:mistRise 6.5s ease-in-out infinite alternate}
+.mist-rise2{animation:mistRise 8.5s ease-in-out infinite alternate-reverse}
+@keyframes mistRise{from{transform:translateY(6px);opacity:.26}to{transform:translateY(-8px);opacity:.62}}
+.glint{animation:glintPulse 3.6s ease-in-out infinite alternate}
+@keyframes glintPulse{from{opacity:.32}to{opacity:.95}}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 15px}
+.pill{font-size:11.5px;padding:4px 11px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:600}
+.pill.accent{border-color:color-mix(in srgb,var(--accent) 34%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
+.teaser-wrap{margin:15px 0 12px;padding-top:13px;border-top:1px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.teaser-head span{font-size:11px;letter-spacing:1.4px;color:var(--accent);font-weight:800}
 .teaser-head small{font-size:11px;color:var(--muted)}
-.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.teaser{padding:12px 10px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px;position:relative;overflow:hidden}
-.teaser-dot{width:26px;height:6px;border-radius:99px;margin-bottom:4px;border:1px solid rgba(0,0,0,.08)}
-.teaser b{font-family:var(--serif);font-size:14.5px;color:var(--ink)}
-.teaser span{font-size:10.5px;color:var(--accent);font-weight:600}
-.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
-button:active:not(:disabled){transform:scale(.988)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.teaser{padding:10px 9px;border-radius:13px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:3px;text-align:left}
+.teaser:hover{border-color:var(--accent);box-shadow:0 6px 16px rgba(36,29,25,.08)}
+.teaser-dot{width:24px;height:5px;border-radius:99px;margin-bottom:3px;border:1px solid rgba(0,0,0,.08)}
+.teaser b{font-family:var(--serif);font-size:13.5px;color:var(--ink);line-height:1.28}
+.teaser span{font-size:10px;color:var(--accent);font-weight:700}
+.teaser small{font-size:10px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 15px;min-height:46px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.986)}
 button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 button:hover:not(:disabled){border-color:var(--accent)}
 button:disabled{opacity:.4;cursor:not-allowed}
-.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 22px rgba(141,83,50,.24)}
+.primary{background:linear-gradient(135deg,#9b5c37,#774223);color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 22px rgba(141,83,50,.26)}
 .primary:hover:not(:disabled){filter:brightness(1.06)}
-.secondary{width:100%;text-align:center;background:var(--paper)}
-.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.secondary{width:100%;text-align:center;background:var(--paper);font-weight:600}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:7px;min-height:34px}
 .subtle:hover{color:var(--accent)}
-.stack{display:grid;gap:10px}
+.stack{display:grid;gap:9px}
 .actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
-.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:16px}
-/* Quiz screen */
+.notice{font-size:11.5px;color:var(--muted);line-height:1.66;margin-top:12px}
+/* Quiz */
 .question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--accent);font-weight:750;letter-spacing:.06em}
 .auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:11px;font-weight:600;min-height:28px;cursor:pointer}
 .auto-toggle.on{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));color:var(--accent);background:var(--soft)}
-.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:9px 0 8px}
 .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
-.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line);margin-bottom:20px}
+.chapter-dots span{background:var(--accent)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:13px;background:var(--paper);border:1px solid var(--line);margin:10px 0 18px}
 .chapter-num{font-family:var(--serif);font-size:20px;font-weight:800;color:var(--accent2);line-height:1}
 .chapter-bar strong{display:block;font-size:13px;color:var(--ink)}
 .chapter-bar span{display:block;font-size:11px;color:var(--muted);line-height:1.45}
-.options{display:grid;gap:10px;margin:20px 0 22px}
-.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--card)}
+.options{display:grid;gap:10px;margin:18px 0 20px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:58px;width:100%;padding:12px 14px;line-height:1.52;background:var(--card)}
 .option .letter{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:10px;background:var(--paper);color:var(--accent);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .18s}
-.option.selected{border-color:var(--accent);box-shadow:0 4px 14px rgba(141,83,50,.15),inset 0 0 0 1px var(--accent);background:var(--soft)}
+.option.selected{border-color:var(--accent);box-shadow:0 6px 16px rgba(141,83,50,.16),inset 0 0 0 1px var(--accent);background:var(--soft);transform:translateX(2px)}
 .option.selected .letter{background:var(--accent);color:#fff;border-color:var(--accent)}
 .option .check{margin-left:auto;color:var(--accent);font-weight:800;font-size:15px}
 .nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
-/* Calculating ritual */
+/* Ritual */
 .calc-box{text-align:center;padding:38px 10px 30px}
-.calc-ring{width:68px;height:68px;margin:0 auto 20px;border-radius:50%;border:2.5px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite;position:relative}
-.calc-ring::after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;color:var(--accent2);font-size:18px;animation:spin-rev 1s linear infinite}
+.calc-ring{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;border:2.5px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite;position:relative}
+.calc-ring::after{content:"🫧";position:absolute;inset:0;display:grid;place-items:center;font-size:20px;animation:spin-rev 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes spin-rev{to{transform:rotate(-360deg)}}
 .calc-step{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:8px;min-height:1.6em}
@@ -93,7 +103,7 @@ button:disabled{opacity:.4;cursor:not-allowed}
 /* Result Perfume Showcase */
 .flacon-card{border:1px solid var(--line);border-radius:22px;padding:18px 16px 16px;background:linear-gradient(165deg,var(--scent-tint,var(--paper)),var(--card));position:relative;overflow:hidden}
 .flacon-top{display:grid;grid-template-columns:138px 1fr;gap:16px;align-items:center}
-.bottle-stage{display:grid;place-items:center;padding:10px 4px;border-radius:16px;background:rgba(255,255,255,.68);border:1px solid var(--line)}
+.bottle-stage{display:grid;place-items:center;padding:10px 4px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid var(--line)}
 .bottle-stage svg{width:118px;height:178px;display:block;filter:drop-shadow(0 12px 16px rgba(36,29,25,.14))}
 .flacon-meta .eyebrow{margin:0 0 6px}
 .scent-en{font-size:11px;letter-spacing:2px;color:var(--muted);font-weight:600;margin-top:2px;text-transform:uppercase}
@@ -103,7 +113,6 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .conc-pill{font-size:11px;padding:4px 10px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--muted);font-weight:600}
 .quote-box{margin:14px 0 2px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .quote{font-family:var(--serif);font-size:16.5px;color:var(--scent-deep,var(--accent));line-height:1.64;font-weight:600}
-/* Olfactory Pyramid */
 .pyramid{display:grid;gap:10px;margin-top:12px}
 .note-tier{display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:start;padding:13px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
 .tier-badge{text-align:center;padding:6px 4px;border-radius:10px;background:var(--card);border:1px solid var(--line)}
@@ -111,19 +120,20 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .tier-badge span{display:block;font-size:9px;letter-spacing:1.4px;color:var(--accent2);font-weight:800;margin-top:2px}
 .note-body strong{display:block;font-size:14px;color:var(--ink);margin-bottom:3px}
 .note-body p{font-size:13px;line-height:1.68;color:var(--muted)}
-.block{padding:22px 0;border-bottom:1px solid var(--line)}
-.block:last-of-type{border:0;padding-bottom:14px}
-.block p{font-size:14.5px;line-height:1.88;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
+.block{padding:20px 0;border-bottom:1px solid var(--line)}
+.block:last-of-type{border:0;padding-bottom:12px}
+.block p{font-size:14.5px;line-height:1.86;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
 .kicker{font-size:10px;letter-spacing:2.2px;color:var(--accent2);font-weight:800;margin-bottom:5px;text-transform:uppercase}
 .contrast-card{margin-top:13px;padding:13px 15px;border-radius:14px;background:linear-gradient(135deg,var(--soft),var(--paper));border:1px solid var(--line)}
 .contrast-card b{display:block;font-size:12px;color:var(--accent);margin-bottom:4px;letter-spacing:.04em}
 .contrast-card p{font-size:13.5px;line-height:1.75}
-.axis{margin:15px 0}
+.radar-wrap{background:var(--paper);border:1px solid var(--line)}
+.axis{margin:14px 0}
 .axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
 .axis-head strong{font-size:13px}
 .axis-head span{color:var(--accent);font-weight:700}
 .axis-labels{color:var(--muted)}
-.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:8px 0}
+.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:7px 0}
 .track::before{content:"";position:absolute;left:50%;width:1px;height:9px;background:var(--line)}
 .track i{position:absolute;width:16px;height:16px;top:-3.5px;border-radius:50%;background:var(--scent-deep,var(--accent));border:2.5px solid var(--card);box-shadow:0 0 0 1.5px var(--scent-deep,var(--accent));transform:translateX(-50%)}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
@@ -133,6 +143,17 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .swatch{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.15);flex:none}
 .mini .partner-name{font-family:var(--serif);font-size:17px;font-weight:800;color:var(--ink)}
 .mini p{font-size:13px;line-height:1.68}
+.chem-box{background:var(--paper);border:1px solid var(--line)}
+.chem-select{border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.chem-out{background:var(--card);border:1px solid var(--line)}
+.chem-pct{color:var(--scent-deep,var(--accent))}
+.chem-bar{background:var(--soft)}
+.chem-bar i{background:linear-gradient(90deg,var(--scent-deep,var(--accent)),var(--accent2))}
+.chem-copy-btn{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 32%,var(--line));color:var(--accent)}
+.dex-bar{background:var(--paper);border:1px dashed var(--accent2)}
+.dex-open-btn{background:var(--card);border-color:var(--accent);color:var(--accent)}
+.dex-card{background:var(--paper);border:1px solid var(--line)}
+.dex-card.unlocked{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
 .egg-box{padding:14px 16px;border-radius:14px;background:var(--paper);border:1px dashed var(--accent2);margin-top:10px}
 .egg-box b{display:block;font-size:12px;color:var(--accent2);margin-bottom:4px;letter-spacing:.05em}
 .egg-box p{font-size:14px}
@@ -142,21 +163,107 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .rank small{display:block;font-size:11px;color:var(--muted)}
 .rank .pct{font-size:12px;font-weight:700;color:var(--accent);background:var(--soft);padding:3px 9px;border-radius:99px}
 .status-bar{font-size:12px;color:var(--accent);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:600}
-.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
+.footer{text-align:center;margin:16px 0 0;font-size:11px;color:var(--muted);line-height:1.75}
 .poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.theme-chip{background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+.theme-chip.active{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+.sig-input{border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.sig-apply{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+.quiz-toast{background:#8d5332;color:#fffdf9}
 dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:1px solid var(--line);border-radius:22px;padding:20px;background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.25)}
-dialog::backdrop{background:rgba(24,18,14,.62);backdrop-filter:blur(3px)}
+dialog::backdrop{background:rgba(24,18,14,.62);backdrop-filter:blur(4px)}
 .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
 .copy-area{width:100%;min-height:150px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+
+/* === Header Controls & Sound Button === */
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sound-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:99px;font-size:11px;font-weight:700;min-height:28px;line-height:1;letter-spacing:.04em}
+.sound-btn.muted{opacity:.62}
+/* === CTA Shimmer & Interactive Foil Tilt === */
+.primary{position:relative;overflow:hidden}
+.primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.26),transparent);transform:skewX(-18deg);animation:btnSheen 4.4s ease-in-out infinite;pointer-events:none}
+@keyframes btnSheen{0%,68%{left:-120%}100%{left:165%}}
+.foil-tilt{transition:transform .22s ease-out;position:relative}
+.foil-tilt::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,20%),rgba(255,255,255,.16),transparent 54%);opacity:0;transition:opacity .25s}
+.foil-tilt:hover::after{opacity:1}
+/* === Interactive Teaser Cards === */
+.teaser{cursor:pointer;transition:transform .16s ease,border-color .18s ease,box-shadow .18s ease}
+.teaser:hover{transform:translateY(-2px)}
+.teaser:active{transform:scale(.98)}
+/* === Chapter Dots & Keyboard Hint === */
+.chapter-dots{display:flex;gap:5px;margin:8px 0 4px}
+.chapter-dots span{flex:1;height:4px;border-radius:99px;opacity:.22;transition:opacity .25s,transform .25s}
+.chapter-dots span.done{opacity:.72}
+.chapter-dots span.now{opacity:1;transform:scaleY(1.35)}
+.kbd-hint{display:none;text-align:center;font-size:11px;opacity:.65;margin-top:8px}
+@media(hover:hover) and (pointer:fine){.kbd-hint{display:block}}
+/* === Radar Box === */
+.radar-wrap{display:flex;justify-content:center;align-items:center;margin:10px 0 14px;padding:10px;border-radius:16px}
+.radar-svg{width:min(280px,100%);height:auto;display:block}
+.radar-poly{transform-origin:140px 122px;animation:radarPop .55s cubic-bezier(.22,1,.36,1)}
+@keyframes radarPop{from{opacity:0;transform:scale(.45)}to{opacity:1;transform:scale(1)}}
+/* === Friend Compatibility Checker Widget === */
+.chem-box{margin-top:14px;padding:15px;border-radius:15px}
+.chem-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+.chem-head strong{font-size:13.5px}
+.chem-head span{font-size:11px;opacity:.75}
+.chem-select{width:100%;min-height:44px;padding:9px 12px;border-radius:11px;font:inherit;font-size:13.5px;cursor:pointer}
+.chem-out{margin-top:12px;padding:13px 14px;border-radius:12px;animation:enter .24s ease-out}
+.chem-score-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.chem-verdict{font-weight:800;font-size:14px}
+.chem-pct{font-weight:900;font-size:20px;line-height:1}
+.chem-bar{height:7px;border-radius:99px;overflow:hidden;margin:6px 0 9px}
+.chem-bar i{display:block;height:100%;border-radius:99px;transition:width .4s cubic-bezier(.22,1,.36,1)}
+.chem-copy-btn{margin-top:10px;width:100%;min-height:38px;padding:7px 12px;font-size:12.5px;font-weight:700;border-radius:10px}
+/* === Collection Dex Button & Grid === */
+.dex-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;margin-top:12px}
+.dex-bar-info strong{display:block;font-size:13px}
+.dex-bar-info span{display:block;font-size:11.5px;opacity:.75}
+.dex-open-btn{min-height:36px;padding:6px 14px;font-size:12px;font-weight:700;border-radius:99px;flex-shrink:0}
+.dex-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.dex-card{padding:11px 10px;border-radius:12px;display:flex;flex-direction:column;gap:4px}
+.dex-card.locked{opacity:.58;border-style:dashed!important}
+.dex-card b{font-size:13px;line-height:1.35}
+.dex-card small{font-size:11px;line-height:1.45;opacity:.8}
+/* === Poster Customization Controls === */
+.poster-tools{display:grid;gap:9px;margin:10px 0 8px}
+.poster-themes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.theme-chip{min-height:36px;padding:6px 10px;font-size:12px;font-weight:700;border-radius:10px;text-align:center}
+.sig-row{display:flex;gap:8px;align-items:center}
+.sig-input{flex:1;min-height:38px;padding:6px 11px;border-radius:10px;font:inherit;font-size:13px}
+.sig-apply{min-height:38px;padding:6px 13px;font-size:12px;font-weight:700;border-radius:10px;flex-shrink:0}
+/* === Chapter Toast === */
+.quiz-toast{position:fixed;top:16px;left:50%;transform:translate(-50%,-18px);opacity:0;pointer-events:none;z-index:999;padding:8px 16px;border-radius:99px;font-size:12.5px;font-weight:700;box-shadow:0 10px 28px rgba(0,0,0,.22);transition:opacity .25s,transform .25s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.quiz-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:440px){.dex-grid{grid-template-columns:1fr}}
+
 @media(max-width:480px){
-  main{padding:14px 12px 28px}
+  main{padding:10px 11px 18px}
+  header{margin-bottom:9px;padding-bottom:8px}
+  .brand{letter-spacing:1.1px;font-size:10px;white-space:nowrap}
+  .issue{font-size:10px}
+  section.panel{padding:14px 14px 16px}
+  .hero{height:142px}
+  .hero-copy small{font-size:8.5px;letter-spacing:1.4px}
+  .eyebrow{margin:10px 0 4px;font-size:10px}
+  h1{font-size:26px;line-height:1.22}
+  .lead{font-size:13px;line-height:1.62;margin:7px 0 10px}
+  .pills{gap:5px;margin:0 0 11px}
+  .pill{font-size:10.5px;padding:3px 9px}
+  button.primary{min-height:42px;padding:10px 14px;font-size:14.5px}
+  .teaser-wrap{margin:11px 0 6px;padding-top:10px}
+  .teaser-head{margin-bottom:7px}
   .flacon-top{grid-template-columns:1fr;text-align:center}
-  .bottle-stage{max-width:190px;margin:0 auto}
+  .bottle-stage{max-width:186px;margin:0 auto}
   .conc-row,.flacon-meta .pills{justify-content:center}
-  .teasers,.duo,.actions-row{grid-template-columns:1fr}
+  .duo,.actions-row{grid-template-columns:1fr}
   .note-tier{grid-template-columns:66px 1fr;gap:10px}
   .option{font-size:14px}
+  .teaser{padding:8px 7px}
+  .teaser b{font-size:12px}
+  .teaser span{font-size:9.5px}
+  .teaser small{font-size:9.5px;-webkit-line-clamp:1}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -165,7 +272,10 @@ dialog::backdrop{background:rgba(24,18,14,.62);backdrop-filter:blur(3px)}
 <main>
   <header>
     <span class="brand">SCENT ATELIER</span>
-    <span class="issue">VOL. 05 · 沙龙调香室</span>
+    <div class="header-right">
+      <span class="issue">VOL. 05 · 沙龙调香室</span>
+      <button type="button" id="soundBtn" class="sound-btn" aria-label="切换音效">🔊 音效</button>
+    </div>
   </header>
   <div id="app"></div>
   <footer class="footer">原创高定香调趣味测试 · 仅供自我探索与娱乐分享，非专业心理测评<br>无需登录 · 所有答题记录仅保存在你的本地浏览器</footer>
@@ -176,7 +286,17 @@ dialog::backdrop{background:rgba(24,18,14,.62);backdrop-filter:blur(3px)}
     <h3 id="posterTitle">你的沙龙香 3:4 收藏海报</h3>
     <button id="closePoster" type="button">关闭</button>
   </div>
-  <p class="muted">1080 × 1440 高清瓶身卡 · 手机直接长按图片保存，电脑点击下方下载。</p>
+  <p class="muted">1080 × 1440 瓶身刻字卡 · 可将你的名字直接刻在香水瓶签上！</p>
+  <div class="poster-tools">
+    <div class="poster-themes" role="group" aria-label="切换海报画风">
+      <button type="button" class="theme-chip active" data-ptheme="0">法式暖白高定</button>
+      <button type="button" class="theme-chip" data-ptheme="1">午夜沙龙黑金</button>
+    </div>
+    <div class="sig-row">
+      <input id="sigInput" class="sig-input" type="text" maxlength="10" placeholder="瓶签刻字（选填，如：Momo）" aria-label="香水瓶签自定义刻字">
+      <button type="button" id="sigApply" class="sig-apply">瓶签刻字</button>
+    </div>
+  </div>
   <div id="posterArea"></div>
   <div class="stack" style="margin-top:12px">
     <button class="primary" id="downloadPoster">下载高清 PNG 海报</button>
@@ -194,50 +314,408 @@ dialog::backdrop{background:rgba(24,18,14,.62);backdrop-filter:blur(3px)}
   <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
 </dialog>
 
+<dialog id="peekDialog" aria-labelledby="peekTitle">
+  <div class="dialog-head">
+    <h3 id="peekTitle">馆藏香调预览</h3>
+    <button id="closePeek" type="button">关闭</button>
+  </div>
+  <div id="peekBody"></div>
+</dialog>
+
+<dialog id="dexDialog" aria-labelledby="dexTitle">
+  <div class="dialog-head">
+    <h3 id="dexTitle">调香室 16 支沙龙香馆藏架</h3>
+    <button id="closeDex" type="button">关闭</button>
+  </div>
+  <p class="muted" id="dexSub">完成调香即可点亮对应瓶身，快邀请朋友看看彼此是什么香调！</p>
+  <div id="dexGrid" class="dex-grid"></div>
+</dialog>
+
 <script>
 const D = {"title":"测测你的灵魂专属香调","subtitle":"SCENT ATELIER · 气味人格志","brand":"SCENT ATELIER","vol":"VOL. 05 · 沙龙调香室","heroTitle":"灵魂调香室","heroSub":"SIGNATURE SCENT OF YOUR SOUL","intro":"如果把你的性格、情绪温度与相处距离封进一只玻璃瓶，打开瓶盖那一刻，世界会闻到什么气息？走过 24 个感官瞬间，调制属于你的高定沙龙香。","disclaimer":"香调原型与人格解读均为原创趣味内容，仅供自我探索与社交分享，非专业心理测评。","kind":"香调","axes":[["气温底色","冷冽清透","暖意包裹"],["扩散半径","贴肤私密","明媚外放"],["质感偏好","自然草木","都市摩登"],["情绪浓度","轻盈松弛","深邃故事"]],"chapters":[{"title":"第一幕 · 初遇前调","intro":"推开一扇陌生房门，别人最先感受到的是你的温度还是距离？"},{"title":"第二幕 · 空间质感","intro":"光影、织物与空气里的微粒，悄悄暴露你最安心的栖息地。"},{"title":"第三幕 · 心事中调","intro":"当夜色降临或关系走近，你真正柔软或锋利的内核开始浮现。"},{"title":"第四幕 · 绵长后调","intro":"褪去寒暄之后，留在记忆里久久不散的，才是你的灵魂底色。"}],"calcSteps":["正在调配你的前调初遇气息…","萃取中后调情绪浓度与扩散半径…","手工封瓶并印制你的专属沙龙香标签…"],"teasers":["雨后冷杉","微醺白桃乌龙","旧书店雪松木"],"shareTags":"#测测你的灵魂专属香调 #沙龙香人格测试 #氛围感测试 #寻找叠喷搭子","shareHook":"测完才发现，我的灵魂专属香调竟然是「{name}」🫧","questions":[{"axis":0,"text":"下了一整天的雨终于停了，推开窗你最喜欢迎面吹来怎样的空气？","options":[{"text":"带着冰凉湿气的微风，瞬间让人清醒","score":0},{"text":"清清爽爽略带凉意，呼吸很通透","score":1},{"text":"微暖潮润的晚风，空气里有淡淡暖意","score":2},{"text":"被余温烘得暖融融的空气，像披上薄毯","score":3}]},{"axis":1,"text":"走进一个只有一两个熟人的聚会客厅，你通常会自然落座在哪里？","options":[{"text":"靠窗或书架旁的安静角落，慢慢观察","score":0},{"text":"离主聊天区不远的位置，熟人聊起来再接话","score":1},{"text":"客厅中间偏松弛的位置，随时能和旁边人聊两句","score":2},{"text":"最热闹的圆桌中心，很快就能把气氛聊热","score":3}]},{"axis":2,"text":"如果周末可以瞬移去一个地方放空两小时，你更想待在？","options":[{"text":"没有人打扰的森林步道或海边礁石","score":0},{"text":"满是绿植和原木桌椅的山脚茶屋","score":1},{"text":"设计感十足的买手店或美术馆咖啡厅","score":2},{"text":"高空落地窗酒吧或灯火璀璨的艺术展厅","score":3}]},{"axis":3,"text":"选一部今晚一个人窝在沙发里看的电影，你更偏爱哪种气质？","options":[{"text":"节奏轻快治愈、看完嘴角上扬的日常小品","score":0},{"text":"画风清新松弛、带一点温柔留白的文艺片","score":1},{"text":"人物细腻有层次、看完会回味好几天的剧情片","score":2},{"text":"氛围浓郁、宿命感拉满或带有悬疑深度的电影","score":3}]},{"axis":0,"text":"刚认识不久的朋友形容你的第一印象，哪句最接近真实的你？","options":[{"text":"自带清冷边界感，像刚从冰箱拿出的玻璃杯","score":0},{"text":"礼貌克制、清爽利落，不会过分热情","score":1},{"text":"温和舒服、很好说话，相处起来没压力","score":2},{"text":"像一杯热拿铁，很快就能让人感到温暖亲切","score":3}]},{"axis":1,"text":"买了一件特别满意的新衣服或新配饰，你更享受哪种瞬间？","options":[{"text":"只有自己懂它的好质感，不需要别人发现","score":0},{"text":"被审美同频的少数一两个人悄悄夸一句","score":1},{"text":"出门被朋友一眼夸好看，大方分享链接","score":2},{"text":"自带气场和存在感，走过街角就让人忍不住回头","score":3}]},{"axis":2,"text":"如果亲手布置你的理想卧室，床头柜上最可能摆着什么？","options":[{"text":"一束带露水的鲜切枝叶或晒干的草木","score":0},{"text":"手工粗陶杯、纸质书和一块原木香托","score":1},{"text":"线条极简的金属台灯和一本设计杂志","score":2},{"text":"雕塑感玻璃摆件、黑胶音箱或丝绒香薰蜡烛","score":3}]},{"axis":3,"text":"和要好的朋友深夜聊天，话题往往会滑向哪里？","options":[{"text":"今天遇到的搞笑小事、美食和轻松八卦","score":0},{"text":"最近的小确幸、旅行清单和生活灵感","score":1},{"text":"彼此近期隐秘的情绪波动和人际感悟","score":2},{"text":"人生意义、命运转折或藏了很久的心事秘密","score":3}]},{"axis":0,"text":"情绪突然低落疲惫时，哪种场景更能瞬间把你拉回状态？","options":[{"text":"洗一把冷水脸，去空旷处吹一阵凛冽的风","score":0},{"text":"喝一杯冰美式或气泡水，冷静列好思路","score":1},{"text":"泡一杯热茶，裹着软毛毯听一首温柔的歌","score":2},{"text":"吃一顿热气腾腾的好饭，或者被信任的人抱一下","score":3}]},{"axis":1,"text":"在朋友圈或小红书发生活碎片时，你的风格更偏向？","options":[{"text":"极少发动态，更喜欢存在私密相册自己回看","score":0},{"text":"偶尔发几张隐晦的空镜或局部细节，懂的人自然懂","score":1},{"text":"开心就大方分享好看的照片和真实感受","score":2},{"text":"表达欲很鲜活，爱发有感染力的图文并和大家热情互动","score":3}]},{"axis":2,"text":"哪种布料贴在皮肤上的触感，最能给你带来愉悦感？","options":[{"text":"带着阳光和自然肌理的粗织亚麻或纯棉","score":0},{"text":"柔软透气的洗水棉布或天然针织","score":1},{"text":"垂坠利落的真丝、冷感醋酸或挺括风衣料","score":2},{"text":"光泽饱满的丝绒、细腻小羊皮或高定精纺毛呢","score":3}]},{"axis":3,"text":"如果用一种光影来代表你最迷人的时刻，你会选？","options":[{"text":"上午十点透亮干净的晴天日光","score":0},{"text":"午后四点穿过树叶缝隙的温柔光斑","score":1},{"text":"黄昏蓝调时刻将暗未暗的微醺天色","score":2},{"text":"深夜街灯、烛火或月光勾勒出的深邃暗影","score":3}]},{"axis":1,"text":"对一个人产生好感或欣赏时，你释放的信号通常是？","options":[{"text":"藏得很深，只在极其细微的照顾里透出一点","score":0},{"text":"靠得近了才让对方察觉我的特别偏爱","score":1},{"text":"眼神和语气都会变明快，主动创造相处机会","score":2},{"text":"毫不掩饰自己的欣赏，直接夸奖、直接靠近","score":3}]},{"axis":0,"text":"点一杯用来开启心情的饮品，下面哪一杯最先抓住你的视线？","options":[{"text":"加满冰块的青柠苏打水或冷萃绿茶","score":0},{"text":"清冽微苦的冰手冲或白葡萄气泡饮","score":1},{"text":"温热的桂花乌龙或微甜燕麦拿铁","score":2},{"text":"浓郁丝滑的热可可、肉桂红酒或焦糖烤奶","score":3}]},{"axis":3,"text":"面对一段已经结束的关系或往事，你的内在消化方式更像？","options":[{"text":"睡一觉吹吹风就能放下，轻装走向明天","score":0},{"text":"偶尔想起会微微一笑，但不会被过去绊住脚步","score":1},{"text":"会在心里反复整理细节，把它沉淀成成长的纹路","score":2},{"text":"保留深刻而克制的记忆印痕，像一首舍不得删的旧歌","score":3}]},{"axis":2,"text":"挑选一件随身携带多年的小物件，你更容易被哪种设计击中？","options":[{"text":"保留原木、贝壳或矿石纹理的手作孤品","score":0},{"text":"温润耐看、带有一点东方留白感的器物","score":1},{"text":"线条锋利干净、充满现代建筑感的极简设计","score":2},{"text":"精致摩登、自带复古都市格调的奢华质感单品","score":3}]},{"axis":0,"text":"朋友向你倾诉一个两难烦恼，你最本能的安慰方式是？","options":[{"text":"先帮对方跳出情绪，冷静精准地拆解利弊","score":0},{"text":"给出清醒客观的建议，同时留足对方自己决定的空间","score":1},{"text":"先温柔接住对方的委屈，再陪着一起慢慢想办法","score":2},{"text":"坚定站队撑腰，用满格的情绪价值把对方暖回来","score":3}]},{"axis":1,"text":"如果用音乐播放方式比喻你在人群中的状态，你更像？","options":[{"text":"戴着降噪耳机，只在自己世界里单曲循环","score":0},{"text":"小声放着白噪音，凑近了才能听见细腻旋律","score":1},{"text":"客厅里自然流淌的轻快歌单，让空气变舒服","score":2},{"text":"一响起就点亮全场的节奏主旋律，感染力极强","score":3}]},{"axis":3,"text":"你更希望别人记住你身上的哪种魅力？","options":[{"text":"干净、轻盈、毫无压迫感的松弛自在","score":0},{"text":"明朗舒服、像夏日微风一样的治愈感","score":1},{"text":"越相处越耐品、总有新惊喜的丰富层次","score":2},{"text":"神秘、深邃、让人念念不忘的宿命电影感","score":3}]},{"axis":2,"text":"结束忙碌的一周，哪种声音最能让你立刻卸下防备？","options":[{"text":"风吹过松林、海浪拍岸或山间鸟鸣","score":0},{"text":"细雨敲打窗檐与茶叶舒展的轻微声响","score":1},{"text":"咖啡机蒸汽声、冰块撞击玻璃杯的清脆响动","score":2},{"text":"唱片机轻微底噪、低沉爵士乐与城市夜色车流","score":3}]},{"axis":1,"text":"假设你真的拥有一瓶专属香水，你最喜欢它怎样发挥作用？","options":[{"text":"只有自己低头或极亲密拥抱时才隐约闻到","score":0},{"text":"一臂距离内若隐若现，像自带干净伪体香","score":1},{"text":"走过身边留下一阵让人心情变好的明快尾调","score":2},{"text":"一进门就自带辨识度与气场，让人一眼记住你","score":3}]},{"axis":0,"text":"回看自己这一年的生活状态，你的内心底温更接近？","options":[{"text":"清醒独立，习惯用冷静理智保护内心秩序","score":0},{"text":"外冷内清，只在少数热爱的事物上投入热度","score":1},{"text":"温和柔韧，懂得在日常里给自己和他人留暖意","score":2},{"text":"热忱滚烫，依然对爱、美与人间烟火满怀期待","score":3}]},{"axis":2,"text":"如果为你的灵魂气味选一只香水瓶，你第一眼会被哪款吸引？","options":[{"text":"带原木瓶盖、磨砂质感的极简药剂瓶","score":0},{"text":"温润瓷白或淡青色玻璃、线条圆润的东方瓶身","score":1},{"text":"棱角分明、冰透无暇的现代建筑感水晶瓶","score":2},{"text":"深色渐变玻璃配黄铜铭牌的复古高定酒瓶造型","score":3}]},{"axis":3,"text":"最后，如果这瓶香水的标签上只能印一个词，你最想印？","options":[{"text":"BREEZE · 轻风无拘","score":0},{"text":"CLARITY · 清澈留白","score":1},{"text":"AFTERGLOW · 温柔余韵","score":2},{"text":"NOCTURNE · 深邃夜曲","score":3}]}],"profiles":[{"no":"01","name":"雨后冷杉","en":"AFTER RAIN FIR","family":"冷感木质馥奇调","conc":"EDP · 淡香精 16%","vector":[0.2,0.2,0.2,0.2],"liquid":"#cde0d5","deep":"#27473e","tint":"#e9f2ec","tags":["清冷松弛感","森林系氧气","低耗能独处"],"quote":"世界太喧嚣时，我自带一场刚刚停歇的山林小雨。","top":["冷杉松针 · 湿润青叶","初见清爽克制、毫无攻击性，让人瞬间卸下社交紧绷感。"],"heart":["雨后青苔 · 碎裂松果","熟识后才发现你极其通透清醒，从不把精力浪费在内耗上。"],"base":["干净雪松 · 清风麝香","离去后留下淡淡草木余韵，像一次不被打扰的深呼吸。"],"insight":"你的灵魂自带“降噪滤镜”。你不喜欢浓烈刻意的自我证明，更享受把生活维持在干净、留白、空气流通的舒服状态。别人忙着追逐热闹时，你早已在自己的山林里找回内心秩序。","contrast":"表面清冷淡泊像高岭之花，其实看到一只晒太阳的小猫或一场好看的晚霞，内心会悄悄软成一团。","strength":"自带让人安静下来的治愈气场，情绪稳定且边界清晰","caution":"偶尔也可以大方表达期待，不必总把温柔藏得太隐蔽","scene":"清晨七点刚下过雨的林荫道 · 手里握着半杯冰绿茶","match":["晒暖棉麻白茶","冷感松针遇上暖意白茶，一清一暖叠喷出顶级山间民宿氛围。"],"clash":["爵士酒馆烟熏玫瑰","你像晨雾森林，对方像午夜红酒，气场反差大到像两部不同电影。"]},{"no":"02","name":"深山古寺焚香","en":"MISTY TEMPLE INCENSE","family":"禅意冷木焚香调","conc":"EXTRAIT · 浓香精 22%","vector":[0.2,0.2,0.2,2.8],"liquid":"#bfc9cb","deep":"#2d3b42","tint":"#eaefef","tags":["清冷宿命感","精神高地","人间清醒"],"quote":"万事皆有过客感，唯独内心山河长明。","top":["冰裂青柚 · 霜降松叶","初遇安静疏离，眼神里带着超越同龄人的沉静与洞察。"],"heart":["湿润古柏 · 青烟乳香","越靠近越能感受到你丰厚的精神世界，从不随波逐流。"],"base":["沉水乌木 · 矿石苔藓","极耐回味的深邃底色，是少数同频者一辈子难忘的灵魂锚点。"],"insight":"你天生对浅薄的热闹免疫，更迷恋时间沉淀下来的深度与静默。你习惯先向内观看，再对世界作答——看似置身事外，其实比大多数人都更早看透事情的本质。","contrast":"外人觉得你清冷神秘、难以接近，其实只要进入你的信任圈，你会用极其沉稳的方式护短到底。","strength":"极强的独立思辨力与定力，越是混乱越能稳住全场","caution":"别把高标准变成孤岛，偶尔允许自己在尘世烟火里放松一下","scene":"深秋起雾的古刹回廊 · 听见远处一声清越风铃","match":["旧书店雪松木","古寺青烟叠喷旧书雪松，瞬间拉满东方隐士般的书卷高级感。"],"clash":["冰镇青柠薄荷","你偏爱静水流深，对方自带气泡感元气，同框反差萌拉满。"]},{"no":"03","name":"白衬衫与海盐","en":"LINEN & SEA SALT","family":"洁净海洋醛香调","conc":"EDT · 淡香水 12%","vector":[0.2,0.2,2.8,0.2],"liquid":"#d5e3ec","deep":"#2c4659","tint":"#edf3f7","tags":["极简清爽派","体面边界感","高级伪体香"],"quote":"不必浓墨重彩，干净本身就是最稀缺的性感。","top":["清冽醛香 · 冰感海盐","第一印象极度清爽利落，像刚熨烫好的白衬衫配冷风。"],"heart":["洁净棉麻 · 白色铃兰","相处起来毫无黏腻内耗，懂得尊重自己与他人的呼吸空间。"],"base":["贴肤白麝香 · 浅灰浮木","极度克制的高级伪体香，越靠近越让人觉得安心体面。"],"insight":"你是都市极简美学的天然代言人。你讨厌失控的狗血与无效拉扯，偏爱清晰、体面、轻盈的生活秩序。把日常打理得干净清爽，就是你对自己最高级的浪漫。","contrast":"外表看起来一丝不苟像个冷静极简控，私底下其实很爱收集奇奇怪怪的可爱小物或冷笑话。","strength":"清爽果断、审美在线，自带让人如沐清风的体面分寸感","caution":"不必每件事都保持完美体面，偶尔允许情绪有一点凌乱","scene":"落地窗洒满晨光的极简客厅 · 刚洗完澡换上的白衬衫","match":["微醺白桃乌龙","冰感海盐叠喷温柔桃茶，中和出清甜又不腻的绝美千金伪体香。"],"clash":["秋日桂花酿酒","你追求零糖极简，对方浓郁甜润，一个像苏打水一个像桂花酿。"]},{"no":"04","name":"午夜银质墨水","en":"MIDNIGHT SILVER INK","family":"冷感金属木质调","conc":"EXTRAIT · 浓香精 20%","vector":[0.2,0.2,2.8,2.8],"liquid":"#cac5dc","deep":"#2e2845","tint":"#f0eef6","tags":["智性恋天花板","清冷暗涌","精致独行侠"],"quote":"沉默不是没有答案，而是懒得向不值得的人解释。","top":["冷感金属 · 凛冽黑胡椒","自带生人勿近的智性气场，目光敏锐、逻辑极其锋利。"],"heart":["冷雾鸢尾根 · 墨水纸感","外冷内深的反差内核，越聊越会被你藏在细节里的才华折服。"],"base":["烟熏岩兰草 · 黑醋栗木","克制而绵长的神秘尾调，让人忍不住想一再拆解你的心事。"],"insight":"你身上有种极其迷人的“智性清冷感”。你不需要靠合群获取安全感，反而在独处思考与深夜创作里灵感爆棚。你的温柔从不廉价派发，只精准投递给能接住你灵魂厚度的人。","contrast":"平时冷静克制像高冷策展人，一旦遇到真正懂你脑洞的同类，能瞬间切换成深夜话痨。","strength":"洞察力极强、自带高级疏离美感，极少被外界情绪带偏","caution":"给在意的人多留一扇门缝，别让克制被误读成不在乎","scene":"凌晨一点的城市高楼书房 · 金属钢笔划过厚实纸页","match":["丝绒咖啡与琥珀","冷冽银墨叠喷暖意黑咖，碰撞出极度上头的都市深夜智性香。"],"clash":["盛夏橘子海风","一个活在蓝调午夜，一个活在正午海滩，画风碰撞火花四溅。"]},{"no":"05","name":"冰镇青柠薄荷","en":"ICED YUZU & MINT","family":"活力柑橘绿叶调","conc":"EDC · 古龙水 10%","vector":[0.2,2.8,0.2,0.2],"liquid":"#d2ebd0","deep":"#235743","tint":"#ecf7eb","tags":["元气解腻王","直爽通透","自带清风"],"quote":"烦恼别过夜，先喝一口加冰的快乐再说。","top":["爆汁青柚 · 揉碎薄荷叶","一出场就自带清爽笑声，瞬间把沉闷空气一键换气。"],"heart":["青翠罗勒 · 冰萃冷泡茶","坦荡直率不记仇，和你相处就像穿行在盛夏的树荫下。"],"base":["干净青草 · 清澈白木","不拖泥带水的利落尾调，给身边人留下轻盈又敞亮的记忆。"],"insight":"你是朋友圈里最解腻的“氧气制造机”。你讨厌沉重压抑和弯弯绕绕，习惯用清爽直接的态度化解尴尬。你既有向外奔跑的鲜活热情，又保留着干干净净的自我边界。","contrast":"看着没心没肺、永远元气满满，其实内心极其通透，谁是真心谁在演戏一眼看穿。","strength":"自带破冰魔力与超强自愈力，总能把糟糕的一天变轻盈","caution":"开心果也需要休息时间，累了不必强撑着照顾全场气氛","scene":"晴朗夏日午后的露天草坪 · 咬开冰块咔嚓作响的一瞬间","match":["盛夏橘子海风","青柠薄荷遇上甜橙海风，双倍多巴胺叠喷，快乐直接溢出屏幕。"],"clash":["深山古寺焚香","你刚提议出门野餐，对方已经在蒲团上准备闭关看书了。"]},{"no":"06","name":"雪夜黑加仑松林","en":"SNOWY CASSIS PINE","family":"冷冽浆果木质调","conc":"EDP · 淡香精 18%","vector":[0.2,2.8,0.2,2.8],"liquid":"#cfb9d4","deep":"#3f274a","tint":"#f3ecf5","tags":["清冽野性","自带剧情张力","敢爱敢恨"],"quote":"越是凛冽的风雪夜，越衬得我眼里的光滚烫。","top":["酸甜黑加仑 · 凛冽杜松子","初遇就有极强辨识度，酸甜里裹着一丝不好惹的冷冽锋芒。"],"heart":["雪松松针 · 暗夜野生莓果","骨子里藏着不服输的野性与深情，爱憎分明从不敷衍。"],"base":["冷杉树脂 · 深邃橡木苔","后调沉稳又有故事感，像一场大雪中并肩走过的难忘长夜。"],"insight":"你是那种“让人看一眼就忘不掉”的电影主角体质。你不满足于温吞平淡的安全区，偏爱热烈又清醒的生命体验——既敢大步闯入风雪，也敢坦荡展现自己的锋芒与深情。","contrast":"外表飒爽果决像个酷女孩/酷盖，其实内心极重承诺，对认定的朋友掏心掏肺。","strength":"极强的人格张力与行动力，在人群中天生自带主角磁场","caution":"偶尔收起一点防备的刺，柔软示弱并不会削弱你的光芒","scene":"北境初雪飘落的松林木屋 · 手里端着一杯冰镇浆果气泡酒","match":["雨夜霓虹玫瑰","凛冽浆果叠喷冰露玫瑰，清冷又明艳，气场直接封神。"],"clash":["晒暖棉麻白茶","你偏爱浓郁起伏的剧情张力，对方只想在被窝里安安静静喝白茶。"]},{"no":"07","name":"玻璃温室气泡水","en":"SPARKLING CITRUS GLASS","family":"现代柑橘气泡调","conc":"EDT · 淡香水 14%","vector":[0.2,2.8,2.8,0.2],"liquid":"#e4e7cf","deep":"#455232","tint":"#f4f6ec","tags":["时髦轻盈感","鬼马灵感库","摩登清爽"],"quote":"生活不需要那么沉重，加一点气泡就刚刚好。","top":["起泡佛手柑 · 冰镇水晶梨","一开场就是清脆时髦的愉悦感，脑洞鲜活、审美极度在线。"],"heart":["透明小苍兰 · 冰感白茶","聪明灵动又懂得留白，聊天总能精准抛梗却从不让人疲惫。"],"base":["清透龙涎香 · 冰白麝香","干净摩登的现代余韵，像美术馆玻璃幕墙折射出的耀眼日光。"],"insight":"你是天生的“时髦生活玩家”。你对新鲜事物、先锋审美和有趣灵魂有着敏锐嗅觉，既能把日子过得精致漂亮，又拒绝被沉重规则绑架——轻盈、透亮、随时有新点子，就是你的王牌。","contrast":"看起来随性贪玩、像个永远在逛展喝咖啡的乐天派，其实对自己的节奏和目标精明得很。","strength":"极高的审美敏锐度与社交松弛感，总能发现普通日常里的时髦彩蛋","caution":"灵感太多时记得挑一件最心动的落地，别让它们全飘在半空","scene":"周末阳光洒满的玻璃艺术馆 · 冰镇气泡水杯壁凝满水珠","match":["日落香槟栀子","清脆气泡叠喷柔光香槟，都市派对里最亮眼的时髦双子星。"],"clash":["旧书店雪松木","你爱追新潮展览和快闪，对方只想在旧书堆里发呆一整天。"]},{"no":"08","name":"雨夜霓虹玫瑰","en":"NEON RAIN ROSE","family":"冷感辛香玫瑰调","conc":"EDP · 淡香精 19%","vector":[0.2,2.8,2.8,2.8],"liquid":"#dfc0cc","deep":"#59283e","tint":"#f6edf1","tags":["冷艳大女主","带刺浪漫","都市电影感"],"quote":"玫瑰不必讨好阳光，在雨夜霓虹里照样惊艳。","top":["粉红胡椒 · 冰露黑玫瑰","带着微辛与清冷露气的华丽开场，让人瞬间被你的气场吸住。"],"heart":["金属感天竺葵 · 潮湿石板路","外在艳丽果敢，内核却极其清醒独立，绝不依附任何人。"],"base":["冷感广藿香 · 深邃暗木","危险又迷人的高级后调，走过之后连空气都染上电影质感。"],"insight":"你是自带王家卫电影滤镜的都市浪漫家。你既有站在人群中央发光的底气，又守着一份不被轻易驯服的冷冽骄傲。你迷恋极致的美感与势均力敌的灵魂交锋。","contrast":"外人以为你高傲难追、百毒不侵，其实深夜卸下铠甲时，一句真诚的“辛苦了”就能让你破防。","strength":"鲜明的个人风格与强大内核，走到哪里都能定义自己的主场","caution":"偶尔也可以放下完美强者的姿态，让信赖的人分担一点重量","scene":"雨滴滑落车窗的午夜高架 · 霓虹倒映在湿漉漉的街头","match":["雪夜黑加仑松林","暗夜玫瑰遇上雪夜浆果，强强联手叠喷出顶级冷艳气场。"],"clash":["白衬衫与海盐","你自带戏剧张力和浓烈存在感，对方偏爱低调隐形的极简留白。"]},{"no":"09","name":"晒暖棉麻白茶","en":"SUNLIT WHITE TEA","family":"温柔茶香织物调","conc":"EDT · 淡香水 14%","vector":[2.8,0.2,0.2,0.2],"liquid":"#ede2cc","deep":"#6e5539","tint":"#f7f3ea","tags":["被阳光晒暖的温柔","零压治愈系","松弛日常"],"quote":"最好的浪漫，是像晒过太阳的棉被一样让人安心。","top":["清甜白茶 · 晨露梨花","初见温和柔软，说话语气就像把急躁世界按下了慢放键。"],"heart":["阳光棉麻 · 淡雅稻穗","相处越久越觉得妥帖舒服，是朋友疲惫时最想躲进的避风港。"],"base":["浅奶檀香 · 柔和肤感麝香","贴肤绵长的暖白余韵，像一整个不用赶时间的晴朗午后。"],"insight":"你身上有一种极其稀缺的“低密度幸福力”。你不争不抢，也不爱用焦虑证明价值，懂得从一壶热茶、一缕晒在床单上的阳光里汲取温柔，并悄无声息地治愈身边的人。","contrast":"平时软乎乎很好说话、好像没脾气，一旦触及底线却会极其安静而坚定地抽身离开。","strength":"润物细无声的共情力与温柔定力，让人一靠近就卸下防备","caution":"照顾别人情绪前，先确认自己的电量条是不是满格","scene":"周末下午三点的木质阳台 · 晒满太阳味道的亚麻窗帘轻晃","match":["雨后冷杉","暖白茶叠喷冷杉林，像雨过天晴后阳光照进森林的完美瞬间。"],"clash":["雨夜霓虹玫瑰","你偏爱安稳轻柔的慢日常，对方偏爱锋芒毕露的浓烈都市夜。"]},{"no":"10","name":"旧书店雪松木","en":"OLD BOOKSHOP CEDAR","family":"温润书卷木质调","conc":"EDP · 淡香精 18%","vector":[2.8,0.2,0.2,2.8],"liquid":"#dfc49e","deep":"#5e3e27","tint":"#f6efe5","tags":["老灵魂书卷气","慢热深情","时间质感"],"quote":"快节奏的时代里，我依然偏爱值得反复翻阅的慢故事。","top":["泛黄书页 · 干燥无花果","带着温和安静的时间气息，初见便觉得沉稳有底蕴。"],"heart":["烘烤雪松 · 温热红茶","慢热却极度真诚，你的体贴全藏在不声张的长期陪伴里。"],"base":["陈年琥珀 · 暖意愈创木","越到后调越显厚重醇香，像一本每次重读都有新感悟的私藏书。"],"insight":"你的灵魂住着一位温和的老派浪漫家。你不迷恋转瞬即逝的网红爆款，更珍惜经得起岁月打磨的器物、文字与长久关系。你用慢节奏对抗浮躁，把日子过出厚实的质感。","contrast":"看起来文静念旧、像个复古文艺青年，聊起热爱的话题时内心滚烫又幽默。","strength":"极高的精神专注度与长情靠谱，能给重要的人提供长久安全感","caution":"珍藏回忆很美，但也别忘了勇敢推开下一扇未知的新门","scene":"街角亮着暖黄台灯的旧书店 · 窗外飘着微凉秋风","match":["深山古寺焚香","温润书木叠喷禅意焚香，瞬间化身极具质感的高级东方文艺魂。"],"clash":["玻璃温室气泡水","你爱慢火细炖的旧时光，对方爱说换就换的摩登新鲜感。"]},{"no":"11","name":"微醺白桃乌龙","en":"PEACH OOLONG MIST","family":"清甜果茶伪体香","conc":"EDP · 淡香精 16%","vector":[2.8,0.2,2.8,0.2],"liquid":"#f0d3ca","deep":"#7d4540","tint":"#f9f0ed","tags":["纯欲天花板","精致软糯","不动声色迷人"],"quote":"甜而不腻，亲近又保留三分恰到好处的分寸。","top":["熟透水蜜桃 · 清香白茶","自带柔和精致的初见甜意，清爽娇俏却完全不显幼稚。"],"heart":["烘焙乌龙 · 柔粉牡丹","外柔内巧的细腻性格，很懂生活审美也极其擅长照顾情绪。"],"base":["羊绒木 · 贴肤奶感麝香","像被柔软羊绒衫轻轻裹住的私密尾调，近距离杀伤力满分。"],"insight":"你天生懂得如何把“精致感”与“亲和力”调配到黄金比例。你既有都市女孩/男孩对品质与美感的讲究，又保留着温和柔软的相处温度，不争不抢却总能悄无声息赢走偏爱。","contrast":"外表软萌甜美、看似毫无心机，其实内心极有审美主见，绝不会被别人轻易拿捏。","strength":"高情商审美与细腻共情力，总能在不知不觉间拉满好感度","caution":"温柔懂事是天赋，但别因为体谅别人而委屈自己的真实偏好","scene":"午后咖啡馆靠窗的阳光位 · 玻璃杯里晃动的冰桃乌龙","match":["白衬衫与海盐","蜜桃乌龙叠喷海盐白衬衫，又纯又清冷，是让人追着问链接的绝配。"],"clash":["午夜银质墨水","你走的是软糯温柔路线，对方冷峻锋利，凑一起反差感极强。"]},{"no":"12","name":"丝绒咖啡与琥珀","en":"VELVET ESPRESSO AMBER","family":"暖感美食琥珀调","conc":"EXTRAIT · 浓香精 22%","vector":[2.8,0.2,2.8,2.8],"liquid":"#d7b494","deep":"#4f2f21","tint":"#f5ece4","tags":["低饱和贵气","克制深情","深夜氛围感"],"quote":"表面冷静自持，靠近才发现内里烘烤得滚烫醇香。","top":["现磨黑咖啡 · 微辛豆蔻","克制沉稳的成熟开场，带着一点不容轻视的都市神秘感。"],"heart":["烟熏香草 · 丝绒可可","只有真正走进你世界的人，才能尝到你藏在理智下的浓烈深情。"],"base":["零陵香豆 · 暖意树脂琥珀","极度上瘾的贴肤醇厚后调，越夜越迷人，让人彻底戒不掉。"],"insight":"你是典型的“低饱和老钱氛围感”灵魂。你不需要高声喧哗来博取关注，举手投足间的从容、讲究与情绪厚度，本身就是最强的吸引力。你慢热克制，但一旦投入便极其笃定深沉。","contrast":"白天是冷静理智、质感满分的靠谱大人，夜里关上灯却藏着一颗极其浪漫敏感的心。","strength":"克制中的深情与高级品味，越相处越让人觉得踏实上瘾","caution":"别总习惯一个人消化所有心事，分享脆弱也是亲密的一部分","scene":"微雨深夜的爵士黑胶角 · 温热意式浓缩升起的袅袅白雾","match":["午夜银质墨水","暖咖琥珀叠喷冷感银墨，冷暖交织出让人无法抗拒的智性浪漫。"],"clash":["冰镇青柠薄荷","你偏爱浓郁醇厚的慢夜色，对方是正午满格活力的冰汽水。"]},{"no":"13","name":"盛夏橘子海风","en":"SUMMER TANGERINE BREEZE","family":"明媚柑橘阳光调","conc":"EDT · 淡香水 14%","vector":[2.8,2.8,0.2,0.2],"liquid":"#f4d19c","deep":"#8f4e1d","tint":"#fbf3e6","tags":["小太阳体质","赤诚鲜活","快乐永动机"],"quote":"只要风还暖、橘子还甜，今天就是值得奔赴的好日子。","top":["现剥甜橙 · 阳光橘皮","明媚到藏不住的温暖开场，一句话就能把阴天晒出太阳。"],"heart":["橙花日光 · 无花果嫩叶","真诚坦荡、活力满满，愿意把发现的每一份美好分享给世界。"],"base":["暖晒白木 · 淡甜蜂蜜麝香","像夏末海边落日一样的温柔尾调，让人一想起你就心情变好。"],"insight":"你是人群里最珍贵的“情绪小太阳”。你对世界保有鲜活的好奇心与真诚热忱，不吝啬夸奖，也擅长用具体而温暖的行动点亮日常。和你在一起，连最普通的散步都会变成一场度假。","contrast":"看着大大咧咧、永远笑得最灿烂，其实共情力超强，最看不得身边人受委屈。","strength":"极强的正能量感染力与生命力，是朋友圈里最抢手的快乐搭子","caution":"发光发热的同时，也要记得把一部分热情留给自己的独处充电","scene":"海风轻拂的环岛公路 · 傍晚六点满天橘子色晚霞","match":["冰镇青柠薄荷","甜橙配青柠，双倍清新治愈，走到哪都是自带笑声的快乐结界。"],"clash":["午夜银质墨水","你满眼都是日光与热忱，对方习惯在午夜暗处冷静观察，反差极萌。"]},{"no":"14","name":"秋日桂花酿酒","en":"AUTUMN OSMANTHUS WINE","family":"东方花果酒香调","conc":"EDP · 淡香精 18%","vector":[2.8,2.8,0.2,2.8],"liquid":"#ead093","deep":"#784c1c","tint":"#f8f2e4","tags":["人间烟火诗意","重情重义","温暖浓烈"],"quote":"把满城秋风酿成一壶微醺，敬重逢，也敬热烈人间。","top":["金桂花雨 · 蜜渍黄杏","丰沛明朗的东方暖香，让人隔着老远就能感受到你的热忱温度。"],"heart":["桂花米酒 · 暖意红茶","重情重义、极富感染力，喜欢把日子过得有故事、有烟火气。"],"base":["陈年橡木桶 · 温柔桂皮檀香","醇厚绵长的微醺后调，像老友围炉夜话后留在衣领的暖香。"],"insight":"你天生拥有把日子过成一首丰盛散文诗的天赋。你热爱人间烟火、真挚情感和充满仪式感的相聚，既有大方外放的侠气与热情，又藏着细腻怀旧的东方浪漫情怀。","contrast":"平时豪爽热情、总在张罗聚会照顾大家，其实在夜深人静时极其容易被一句老歌词触动。","strength":"极具凝聚力的温暖气场与丰沛情感，总能制造难忘的共同记忆","caution":"真心最珍贵，不必对所有人都倾囊相授，留给懂珍惜的同路人","scene":"十月满街飘香的老城院落 · 微醺桂花酒碰杯的清脆声响","match":["爵士酒馆烟熏玫瑰","桂花醇酒叠喷微醺玫瑰，浓烈浪漫到极致，秋冬氛围感直接封神。"],"clash":["白衬衫与海盐","你像满杯滚烫桂花酒，对方像零度白开水，浓度差拉满。"]},{"no":"15","name":"日落香槟栀子","en":"SUNSET CHAMPAGNE GARDENIA","family":"明媚花香微醺调","conc":"EDP · 淡香精 17%","vector":[2.8,2.8,2.8,0.2],"liquid":"#f2d6c4","deep":"#854638","tint":"#faf1eb","tags":["明媚富家感","社交焦点","浪漫优雅"],"quote":"要像日落时的粉香槟，既闪耀，又自带轻盈甜意。","top":["冰镇粉红香槟 · 蜜柑微泡","明艳轻快的华丽开场，自带聚光灯与好心情，瞬间抓住全场视线。"],"heart":["奶油栀子花 · 粉红牡丹","大方热情又极具审美仪式感，总能把普通约会过成闪耀派对。"],"base":["柔滑蜂蜜麝香 · 暖白雪松","温暖又毫无距离感的优雅余韵，让人心甘情愿向你靠近。"],"insight":"你天生自带明媚、舒展、被好好爱过的“高能量富家感”。你热爱精致美好的都市生活，擅长赞美也擅长发光，不扭捏、不内耗，总能把乐观与美感大方传递出去。","contrast":"看起来像无忧无虑的浪漫享乐派，其实抗压能力和执行力都惊人，关键时刻从不掉链子。","strength":"明艳大方的社交魅力与极佳审美，自带吸引好运的明亮磁场","caution":"偶尔也允许自己素颜宅家放空，不必每时每刻都闪闪发光","scene":"露台夕阳染成粉金色的傍晚 · 高脚杯里不断升腾的细密气泡","match":["玻璃温室气泡水","香槟栀子叠喷柑橘气泡，清新又明艳，妥妥的都市闪耀闺蜜香。"],"clash":["雨后冷杉","一个爱华丽热闹的落日派对，一个爱安静独处的雨后森林。"]},{"no":"16","name":"爵士酒馆烟熏玫瑰","en":"JAZZ LOUNGE SMOKED ROSE","family":"微醺玫瑰皮革调","conc":"EXTRAIT · 浓香精 24%","vector":[2.8,2.8,2.8,2.8],"liquid":"#dfb1aa","deep":"#5c2228","tint":"#f7ecea","tags":["顶级故事感","炽热宿命","全场氛围王"],"quote":"热烈地爱过、燃烧过，才算没白来人间走这一遭。","top":["朗姆酒渍樱桃 · 暖辛藏红花","浓郁醉人的戏剧性开场，一出场就让空气温度骤然升高。"],"heart":["丝绒红玫瑰 · 烟熏乌木","爱恨滚烫、极有主见，你身上藏着让人忍不住沉沦的迷人张力。"],"base":["复古暖皮革 · 醇厚檀香琥珀","留香极久的深邃荷尔蒙尾调，是别人回忆里最浓墨重彩的一笔。"],"insight":"你的灵魂天生为大场面与浓烈体验而生。你拒绝干瘪乏味的按部就班，渴望有温度、有深度、有电光火石般共鸣的人生。你慷慨炙热，一旦决定奔赴某件事或某个人，便会倾注满格诚意。","contrast":"外表气场全开像无所畏惧的红毯主角，私下里却极其渴望一个能接住你全部脆弱的拥抱。","strength":"无法忽视的个人魅力与饱满激情，天生拥有把平淡变传奇的能量","caution":"浓烈的情感很迷人，但也要留意给自己留出冷静沉淀的缓冲带","scene":"午夜丝绒沙发的爵士小酒馆 · 萨克斯低鸣与摇晃的琥珀酒杯","match":["秋日桂花酿酒","烟熏玫瑰叠喷秋日桂花酿，浓烈微醺的双向奔赴，宿命感拉满。"],"clash":["雨后冷杉","你是炽热午夜酒馆，对方是清冷晨雾松林，极致反差拉扯。"]}]};
 const app = document.getElementById('app'),
       posterDialog = document.getElementById('posterDialog'),
-      copyDialog = document.getElementById('copyDialog');
+      copyDialog = document.getElementById('copyDialog'),
+      peekDialog = document.getElementById('peekDialog'),
+      dexDialog = document.getElementById('dexDialog');
 const N = D.questions.length, STORAGE = 'scent-atelier-v1';
-let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null;
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const byName = Object.fromEntries(D.profiles.map(p => [p.name, p]));
+let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null, lastChapter = -1, posterTheme = 0;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* === Thematic Web Audio Sound Engine (Pure Offline Synth) === */
+const SFX = (() => {
+  let ctx = null, muted = false;
+  try { muted = localStorage.getItem(STORAGE + ':mute') === '1'; } catch {}
+  function ac() {
+    if (muted) return null;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      if (!ctx) ctx = new AC();
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+      return ctx;
+    } catch { return null; }
+  }
+  function tone(freq, dur, type = 'sine', gainVal = 0.055, delay = 0, endFreq = null) {
+    const c = ac(); if (!c) return;
+    try {
+      const t = c.currentTime + delay;
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = type;
+      o.frequency.setValueAtTime(freq, t);
+      if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, t + dur);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(gainVal, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + dur + 0.02);
+    } catch {}
+  }
+  const PRESETS = {
+    city:    { notes: [523.25, 587.33, 659.25, 783.99], wave: 'triangle', gain: 0.05 },
+    love:    { notes: [587.33, 659.25, 739.99, 880.00], wave: 'sine',     gain: 0.048 },
+    ancient: { notes: [440.00, 493.88, 587.33, 659.25], wave: 'triangle', gain: 0.052 },
+    scent:   { notes: [659.25, 739.99, 880.00, 987.77], wave: 'sine',     gain: 0.042 },
+    qc:      { notes: [620, 740, 860, 980],             wave: 'square',   gain: 0.024 },
+    shop:    { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.046 },
+    museum:  { notes: [392.00, 440.00, 523.25, 587.33], wave: 'sine',     gain: 0.052 },
+    rpg:     { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.045 },
+    cosmos:  { notes: [587.33, 739.99, 880.00, 1174.6], wave: 'sine',     gain: 0.042 }
+  };
+  const P = PRESETS["scent"] || PRESETS.city;
+  return {
+    isMuted: () => muted,
+    toggle() {
+      muted = !muted;
+      try { localStorage.setItem(STORAGE + ':mute', muted ? '1' : '0'); } catch {}
+      if (!muted) this.click(1);
+      return muted;
+    },
+    click(i = 0) {
+      const f = P.notes[Math.abs(i) % P.notes.length];
+      tone(f, 0.16, P.wave, P.gain);
+      if (false) {
+        tone(f * 2, 0.22, 'sine', P.gain * 0.35, 0.015);
+      }
+    },
+    start() {
+      tone(P.notes[0], 0.14, P.wave, P.gain, 0);
+      tone(P.notes[2], 0.22, 'sine', P.gain * 0.9, 0.07);
+    },
+    back() {
+      tone(P.notes[0] * 0.85, 0.11, 'sine', P.gain * 0.7);
+    },
+    chapter() {
+      tone(P.notes[1], 0.16, 'sine', P.gain * 0.8, 0);
+      tone(P.notes[3], 0.28, 'sine', P.gain * 0.75, 0.09);
+    },
+    reveal() {
+      P.notes.forEach((f, k) => tone(f, 0.32, k === 3 ? 'sine' : P.wave, P.gain * 0.9, k * 0.08));
+    }
+  };
+})();
+
+function renderSoundBtn() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  const m = SFX.isMuted();
+  btn.textContent = m ? '🔇 静音' : '🔊 音效';
+  btn.setAttribute('aria-pressed', String(!m));
+  btn.classList.toggle('muted', m);
+}
+function initSoundToggle() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  renderSoundBtn();
+  btn.onclick = () => { SFX.toggle(); renderSoundBtn(); };
+}
+
+/* === Celebratory Particle Burst (Respects Reduced Motion) === */
+function celebrateBurst(colors, style = 'spark') {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    const cv = document.createElement('canvas');
+    cv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999';
+    cv.width = window.innerWidth; cv.height = window.innerHeight;
+    document.body.append(cv);
+    const ctx = cv.getContext('2d');
+    const parts = [];
+    const cx = cv.width / 2, cy = Math.min(cv.height * 0.36, 280);
+    for (let i = 0; i < 42; i++) {
+      const ang = (Math.PI * 2 * i) / 42 + (Math.random() - 0.5) * 0.35;
+      const spd = 2.6 + Math.random() * 5.8;
+      parts.push({
+        x: cx + (Math.random() - 0.5) * 40,
+        y: cy + (Math.random() - 0.5) * 20,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 2.4,
+        r: 3 + Math.random() * 4.5,
+        rot: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.2,
+        color: colors[i % colors.length],
+        life: 1,
+        decay: 0.015 + Math.random() * 0.012
+      });
+    }
+    let raf;
+    function tick() {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      let alive = 0;
+      for (const p of parts) {
+        if (p.life <= 0) continue;
+        alive++;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.13; p.vx *= 0.985; p.rot += p.vr; p.life -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        if (style === 'petal') {
+          ctx.beginPath(); ctx.ellipse(0, 0, p.r * 1.4, p.r * 0.72, 0, 0, Math.PI * 2); ctx.fill();
+        } else if (style === 'star') {
+          ctx.beginPath();
+          for (let s = 0; s < 4; s++) {
+            const a = s * Math.PI / 2;
+            ctx.lineTo(Math.cos(a) * p.r * 1.5, Math.sin(a) * p.r * 1.5);
+            ctx.lineTo(Math.cos(a + Math.PI / 4) * p.r * 0.45, Math.sin(a + Math.PI / 4) * p.r * 0.45);
+          }
+          ctx.closePath(); ctx.fill();
+        } else if (style === 'bubble') {
+          ctx.strokeStyle = p.color; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.arc(0, 0, p.r * 1.15, 0, Math.PI * 2); ctx.stroke();
+        } else {
+          ctx.fillRect(-p.r, -p.r * 0.55, p.r * 2, p.r * 1.1);
+        }
+        ctx.restore();
+      }
+      if (alive > 0) raf = requestAnimationFrame(tick);
+      else cv.remove();
+    }
+    raf = requestAnimationFrame(tick);
+    setTimeout(() => { cancelAnimationFrame(raf); cv.remove(); }, 2200);
+  } catch {}
+}
+
+/* === Subtle 3D Foil Tilt on Result Hero Card === */
+function bindCardTilt(el) {
+  if (!el || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  el.classList.add('foil-tilt');
+  const onMove = e => {
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - py) * 5.5, ry = (px - 0.5) * 6.5;
+    el.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+    el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+  };
+  const onLeave = () => {
+    el.style.transform = '';
+    el.style.setProperty('--mx', '50%');
+    el.style.setProperty('--my', '20%');
+  };
+  el.addEventListener('pointermove', onMove);
+  el.addEventListener('pointerleave', onLeave);
+}
+
+/* === Dynamic Multi-Axis SVG Radar Chart (4 or 6 Axes) === */
+function buildRadarSVG(labels, ratios, opts = {}) {
+  const n = labels.length, cx = 140, cy = 122, R = 74;
+  const stroke = opts.stroke || 'var(--accent)';
+  const fill = opts.fill || 'var(--accent)';
+  const grid = opts.grid || 'rgba(128,128,128,0.22)';
+  const labelColor = opts.labelColor || 'currentColor';
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  let rings = '';
+  [0.34, 0.67, 1].forEach(f => {
+    const pts = Array.from({ length: n }, (_, i) => pt(i, R * f).map(x => x.toFixed(1)).join(',')).join(' ');
+    rings += `<polygon points="${pts}" fill="none" stroke="${grid}" stroke-width="1"/>`;
+  });
+  let spokes = '';
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${grid}" stroke-width="1"/>`;
+  }
+  const clamped = ratios.map(r => Math.max(0.18, Math.min(1, r)));
+  const polyPts = clamped.map((r, i) => pt(i, R * r).map(x => x.toFixed(1)).join(',')).join(' ');
+  const dots = clamped.map((r, i) => {
+    const [x, y] = pt(i, R * r);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.2" fill="${stroke}" stroke="${opts.dotRing || '#fff'}" stroke-width="1.8"/>`;
+  }).join('');
+  const texts = labels.map((lb, i) => {
+    const [x, y] = pt(i, R + 22);
+    const anchor = Math.abs(x - cx) < 10 ? 'middle' : x < cx ? 'end' : 'start';
+    const dy = y < cy - 30 ? -2 : y > cy + 30 ? 8 : 4;
+    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="700" fill="${labelColor}">${esc(lb)}</text>`;
+  }).join('');
+  return `<svg class="radar-svg" viewBox="0 0 280 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多维人格雷达图">
+    ${rings}${spokes}
+    <polygon class="radar-poly" points="${polyPts}" fill="${fill}" fill-opacity="0.24" stroke="${stroke}" stroke-width="2.2" stroke-linejoin="round"/>
+    ${dots}${texts}
+  </svg>`;
+}
+
+/* === Canvas Mini Radar Drawing Helper (for 3:4 Posters) === */
+function drawCanvasRadar(ctx, cx, cy, R, labels, ratios, stroke, fill, grid, textCol) {
+  const n = labels.length;
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  ctx.save();
+  [0.35, 0.68, 1].forEach(f => {
+    ctx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const [x, y] = pt(i, R * f);
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.closePath(); ctx.strokeStyle = grid; ctx.lineWidth = 1.4; ctx.stroke();
+  });
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.strokeStyle = grid; ctx.lineWidth = 1.2; ctx.stroke();
+  }
+  ctx.beginPath();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = fill; ctx.fill();
+  ctx.strokeStyle = stroke; ctx.lineWidth = 3; ctx.stroke();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    ctx.beginPath(); ctx.arc(x, y, 5.5, 0, Math.PI * 2); ctx.fillStyle = stroke; ctx.fill();
+  });
+  ctx.fillStyle = textCol; ctx.font = '700 18px "PingFang SC","Microsoft YaHei",sans-serif';
+  labels.forEach((lb, i) => {
+    const [x, y] = pt(i, R + 24);
+    ctx.textAlign = Math.abs(x - cx) < 12 ? 'center' : x < cx ? 'right' : 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(lb, x, y);
+  });
+  ctx.restore();
+}
+
+/* === Isolated Local Collection Dex Helpers === */
+function getUnlocked() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORAGE + ':dex') || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch { return []; }
+}
+function recordUnlock(name) {
+  try {
+    const list = getUnlocked();
+    if (!list.includes(name)) { list.push(name); localStorage.setItem(STORAGE + ':dex', JSON.stringify(list)); }
+    return list;
+  } catch { return [name]; }
+}
+
+/* === Vector Pair Compatibility Calculator === */
+function calcVectorChem(pA, pB, axes, labelsCfg = {}) {
+  if (pA.name === pB.name) {
+    return {
+      score: 94,
+      verdict: labelsCfg.same || '✦ 镜像双生 · 灵魂复刻',
+      desc: `两个「${pA.name}」相遇就像照镜子——不用多余解释就能一秒接住彼此的梗与节奏，连沉默的频率都惊人一致！`
+    };
+  }
+  if (pA.match && pA.match[0] === pB.name) {
+    return { score: 99, verdict: labelsCfg.match || '♥ 天选官配 · 满分同频', desc: pA.match[1] };
+  }
+  if (pB.match && pB.match[0] === pA.name) {
+    return { score: 97, verdict: labelsCfg.match || '♥ 双向奔赴 · 绝佳搭子', desc: pB.match[1] };
+  }
+  if (pA.clash && pA.clash[0] === pB.name) {
+    return { score: 54, verdict: labelsCfg.clash || '⚡ 宿命反差 · 欢喜冤家', desc: pA.clash[1] };
+  }
+  if (pB.clash && pB.clash[0] === pA.name) {
+    return { score: 56, verdict: labelsCfg.clash || '⚡ 高能反差 · 奇妙碰撞', desc: pB.clash[1] };
+  }
+  const vecA = pA.vector, vecB = pB.vector;
+  const diffs = vecA.map((x, i) => ({ i, d: Math.abs(x - vecB[i]) }));
+  const avgDiff = diffs.reduce((s, x) => s + x.d, 0) / diffs.length;
+  const sim = Math.max(0, 1 - avgDiff / 3);
+  const hashSeed = [...(pA.name + pB.name)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 997, 7);
+  const score = Math.round(Math.max(62, Math.min(95, 65 + sim * 27 + (hashSeed % 5))));
+  const closest = diffs.slice().sort((a, b) => a.d - b.d)[0];
+  const farthest = diffs.slice().sort((a, b) => b.d - a.d)[0];
+  let verdict = '🌿 舒服同频 · 轻松相处';
+  if (score >= 88) verdict = '✦ 默契神搭 · 能量共振';
+  else if (score >= 78) verdict = '♥ 互补合拍 · 越处越甜';
+  else if (score < 70) verdict = '🔥 跨频火花 · 新鲜感拉满';
+  const desc = `你们在「${axes[closest.i][0]}」维度上天然同频，很容易快速聊到一块；而在「${axes[farthest.i][0]}」上的不同视角，正好能给彼此带来意想不到的新鲜灵感。`;
+  return { score, verdict, desc };
+}
+
+/* === Toast Notification === */
+let toastTimer = null;
+function showToast(msg) {
+  let el = document.getElementById('quizToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'quizToast';
+    el.className = 'quiz-toast';
+    el.setAttribute('role', 'status');
+    document.body.append(el);
+  }
+  el.textContent = msg;
+  el.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2100);
+}
+
 
 const HERO_ART = `<svg viewBox="0 0 640 260" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#221b17"/><stop offset=".6" stop-color="#473227"/><stop offset="1" stop-color="#7c5239"/></linearGradient>
-    <radialGradient id="halo" cx="72%" cy="42%" r="48%"><stop stop-color="#f4d5a7" stop-opacity=".42"/><stop offset="1" stop-color="#f4d5a7" stop-opacity="0"/></radialGradient>
-    <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ebd0a7" stop-opacity=".9"/><stop offset="1" stop-color="#b97d4b" stop-opacity=".95"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#221914"/><stop offset=".55" stop-color="#482c1d"/><stop offset="1" stop-color="#6b4128"/></linearGradient>
+    <radialGradient id="halo" cx="72%" cy="44%" r="50%"><stop stop-color="#f7d7a2" stop-opacity=".48"/><stop offset="1" stop-color="#f7d7a2" stop-opacity="0"/></radialGradient>
+    <linearGradient id="liq" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#f2d6ab" stop-opacity=".92"/><stop offset="1" stop-color="#b57743" stop-opacity=".95"/></linearGradient>
   </defs>
   <rect width="640" height="260" fill="url(#bg)"/>
-  <circle cx="465" cy="112" r="170" fill="url(#halo)"/>
+  <circle cx="468" cy="116" r="175" fill="url(#halo)"/>
   <g stroke="#f0d9b5" stroke-opacity=".22" fill="none">
-    <circle cx="468" cy="116" r="108"/><circle cx="468" cy="116" r="82"/>
-    <path d="M0 218 H640" stroke-opacity=".3"/>
+    <circle cx="468" cy="118" r="114"/><circle cx="468" cy="118" r="88" stroke-dasharray="4 5"/>
+    <path d="M0 220 H640" stroke-opacity=".32"/>
   </g>
-  <!-- Botanical sprig -->
-  <g stroke="#e7cca0" stroke-opacity=".5" fill="none" stroke-width="1.3">
-    <path d="M350 216 Q388 158 370 86"/>
-    <ellipse cx="364" cy="136" rx="14" ry="5" transform="rotate(-38 364 136)"/>
-    <ellipse cx="384" cy="156" rx="13" ry="5" transform="rotate(28 384 156)"/>
-    <ellipse cx="360" cy="108" rx="11" ry="4" transform="rotate(-25 360 108)"/>
+  <!-- Animated Golden Scent Mist Wisps -->
+  <g class="mist-rise" fill="none" stroke="#f7dfc0" stroke-width="1.6" stroke-linecap="round" opacity=".5">
+    <path d="M468 42 Q454 24 472 10"/>
+    <path d="M454 50 Q432 30 448 8" stroke-opacity=".7"/>
   </g>
-  <!-- Hero perfume flacon -->
+  <g class="mist-rise2" fill="none" stroke="#f7dfc0" stroke-width="1.3" stroke-linecap="round" opacity=".42">
+    <path d="M484 48 Q506 28 492 6"/>
+    <circle cx="442" cy="24" r="2.2" fill="#f7e2be" stroke="none"/>
+    <circle cx="496" cy="20" r="1.8" fill="#f7e2be" stroke="none"/>
+  </g>
+  <!-- Botanical Jasmine & Cedar Sprig -->
+  <g stroke="#e7cca0" stroke-opacity=".55" fill="none" stroke-width="1.3">
+    <path d="M344 220 Q384 156 364 80"/>
+    <ellipse cx="358" cy="134" rx="15" ry="5" transform="rotate(-38 358 134)"/>
+    <ellipse cx="380" cy="156" rx="14" ry="5" transform="rotate(28 380 156)"/>
+    <ellipse cx="354" cy="106" rx="12" ry="4.2" transform="rotate(-24 354 106)"/>
+    <circle cx="364" cy="78" r="4" fill="#f7e2be" stroke="none" opacity=".75"/>
+  </g>
+  <!-- Sculpted Crystal Perfume Flacon -->
   <g transform="translate(422,42)">
     <rect x="33" y="0" width="28" height="24" rx="4" fill="#181310" stroke="#e4c79c" stroke-width="1"/>
     <rect x="38" y="24" width="18" height="10" fill="#c9a063"/>
-    <rect x="6" y="34" width="82" height="132" rx="14" fill="rgba(255,252,245,.15)" stroke="#f3dfbf" stroke-width="1.4"/>
-    <rect x="11" y="64" width="72" height="96" rx="9" fill="url(#liq)"/>
+    <rect x="6" y="34" width="82" height="134" rx="14" fill="rgba(255,252,245,.16)" stroke="#f5e2c4" stroke-width="1.5"/>
+    <rect x="11" y="64" width="72" height="98" rx="9" fill="url(#liq)"/>
+    <ellipse cx="47" cy="64" rx="35" ry="3.2" fill="#fff8ec" opacity=".46"/>
     <rect x="17" y="76" width="60" height="62" rx="3" fill="#faf5eb" stroke="#cbb89c" stroke-width=".9"/>
     <text x="47" y="95" text-anchor="middle" font-size="6.5" letter-spacing="1.4" fill="#8d5332" font-weight="700">ATELIER</text>
     <line x1="25" y1="102" x2="69" y2="102" stroke="#d8c8b1" stroke-width=".8"/>
     <text x="47" y="117" text-anchor="middle" font-size="11" fill="#241d19" font-family="serif" font-weight="700">灵魂香调</text>
     <text x="47" y="129" text-anchor="middle" font-size="5.5" letter-spacing="1" fill="#7a685b">NO.01 — 16</text>
-    <path d="M14 44 V154" stroke="#ffffff" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14 44 V156" stroke="#ffffff" stroke-opacity=".44" stroke-width="3.2" stroke-linecap="round"/>
   </g>
-  <g fill="#f6e0bc" opacity=".65">
-    <circle cx="548" cy="58" r="2.2"/><circle cx="332" cy="70" r="1.8"/><circle cx="578" cy="144" r="1.6"/><circle cx="386" cy="48" r="1.4"/>
+  <g fill="#f6e0bc" class="glint">
+    <circle cx="552" cy="56" r="2.4"/><circle cx="328" cy="68" r="1.9"/><circle cx="584" cy="144" r="1.8"/><circle cx="386" cy="46" r="1.5"/><circle cx="292" cy="112" r="1.4"/>
   </g>
 </svg>`;
 
@@ -247,24 +725,18 @@ function bottleSVG(p){
     <defs>
       <linearGradient id="bliq_${p.no}" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="${p.liquid}"/>
-        <stop offset="100%" stop-color="${p.deep}" stop-opacity=".42"/>
+        <stop offset="100%" stop-color="${p.deep}" stop-opacity=".46"/>
       </linearGradient>
     </defs>
-    <!-- Weighted cap -->
     <rect x="52" y="8" width="46" height="34" rx="5" fill="${p.deep}"/>
-    <rect x="56" y="12" width="7" height="26" rx="3" fill="#ffffff" opacity=".16"/>
-    <!-- Metallic atomizer collar -->
+    <rect x="56" y="12" width="7" height="26" rx="3" fill="#ffffff" opacity=".18"/>
     <rect x="61" y="42" width="28" height="12" rx="2" fill="#c9a063"/>
     <line x1="61" y1="48" x2="89" y2="48" stroke="#fff6e6" stroke-opacity=".55" stroke-width="1"/>
-    <!-- Glass bottle shoulders & body -->
     <path d="M58 54 H92 L116 66 Q128 72 128 86 V198 Q128 214 112 214 H38 Q22 214 22 198 V86 Q22 72 34 66 Z" fill="#fffdf9" stroke="#cfc2b0" stroke-width="2"/>
-    <!-- Liquid inside -->
     <path d="M29 94 H121 V195 Q121 206 110 206 H40 Q29 206 29 195 Z" fill="url(#bliq_${p.no})"/>
-    <ellipse cx="75" cy="94" rx="46" ry="3.5" fill="#ffffff" opacity=".45"/>
-    <!-- Glass reflections -->
-    <path d="M35 80 V196" stroke="#ffffff" stroke-opacity=".68" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="75" cy="94" rx="46" ry="3.5" fill="#ffffff" opacity=".48"/>
+    <path d="M35 80 V196" stroke="#ffffff" stroke-opacity=".72" stroke-width="4" stroke-linecap="round"/>
     <path d="M117 88 V192" stroke="${p.deep}" stroke-opacity=".12" stroke-width="3" stroke-linecap="round"/>
-    <!-- Minimalist Parisian apothecary label -->
     <rect x="37" y="102" width="76" height="84" rx="3" fill="#fffdf8" stroke="#d9ccb9" stroke-width="1"/>
     <rect x="41" y="106" width="68" height="76" rx="1.5" fill="none" stroke="#e9dfd0" stroke-width=".8"/>
     <text x="75" y="119" text-anchor="middle" font-size="6.5" letter-spacing="1.6" fill="${p.deep}" font-weight="800">SCENT ATELIER</text>
@@ -291,10 +763,42 @@ function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
 function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
 function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
 
+function peekProfile(name){
+  const p=byName[name]; if(!p) return;
+  SFX.click(2);
+  document.getElementById('peekTitle').textContent=`NO.${p.no} · 《${p.name}》`;
+  document.getElementById('peekBody').innerHTML=`
+    <div style="display:flex;align-items:center;gap:14px;margin:8px 0 12px">
+      <div style="width:74px;flex:none">${bottleSVG(p)}</div>
+      <div>
+        <div class="muted" style="font-weight:700;color:var(--accent)">${esc(p.family)} · ${esc(p.conc)}</div>
+        <div class="pills" style="margin:6px 0">${p.tags.map(t=>`<span class="pill accent"># ${esc(t)}</span>`).join('')}</div>
+        <div class="muted">前调：${esc(p.top[0])}</div>
+      </div>
+    </div>
+    <div class="quote-box"><p class="quote">「${esc(p.quote)}」</p></div>
+    <button type="button" class="primary" style="margin-top:14px" onclick="peekDialog.close();start()">推开调香室，调制我的专属香调 →</button>`;
+  if(!peekDialog.open) peekDialog.showModal();
+}
+
+function openDex(){
+  SFX.click(1);
+  const unlocked=getUnlocked();
+  document.getElementById('dexSub').textContent=`已收藏 ${unlocked.length} / ${D.profiles.length} 支原创沙龙香 · 仅保存在本地浏览器`;
+  document.getElementById('dexGrid').innerHTML=D.profiles.map(p=>{
+    const ok=unlocked.includes(p.name);
+    return ok
+      ? `<div class="dex-card unlocked"><div style="display:flex;align-items:center;gap:6px"><span class="swatch" style="background:${p.liquid}"></span><span class="muted">NO.${p.no} · 已点亮</span></div><b>《${esc(p.name)}》</b><small>${esc(p.family)} · ${esc(p.top[0])}</small></div>`
+      : `<div class="dex-card locked"><div style="display:flex;align-items:center;gap:6px"><span class="swatch" style="background:${p.liquid};opacity:.45"></span><span class="muted">NO.${p.no} · 未解锁</span></div><b>《？？？》</b><small>香调线索：${esc(p.family)}</small></div>`;
+  }).join('');
+  if(!dexDialog.open) dexDialog.showModal();
+}
+
 function home(){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
-  screen='home';
+  screen='home'; lastChapter=-1;
   const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const unlocked=getUnlocked();
   const teaserCards=D.teasers.map(name=>byName[name]).filter(Boolean);
   app.innerHTML=`<section class="panel">
     <div class="hero" aria-hidden="true">${HERO_ART}<span class="hero-badge">16 款高定沙龙香</span><div class="hero-copy"><small>${esc(D.heroSub)}</small><strong>${esc(D.heroTitle)}</strong></div></div>
@@ -304,7 +808,7 @@ function home(){
     <div class="pills">
       <span class="pill accent">${N} 道感官情境</span>
       <span class="pill">16 款原创沙龙香</span>
-      <span class="pill">约 3 分钟 · 含 3:4 瓶身海报</span>
+      <span class="pill">含叠喷实验室 &amp; 刻字海报</span>
     </div>
     <div class="stack">
       ${count===N
@@ -314,9 +818,9 @@ function home(){
         : `<button class="primary" onclick="start()">推开调香室的门　→</button>`}
     </div>
     <div class="teaser-wrap">
-      <div class="teaser-head"><span>馆藏香调抢先看</span><small>共收录 16 支沙龙香</small></div>
+      <div class="teaser-head"><span>馆藏香调抢先看 · 点击闻香</span><small>共 16 支${unlocked.length?' · 已收 '+unlocked.length:''}</small></div>
       <div class="teasers">
-        ${teaserCards.map(p=>`<div class="teaser"><span class="teaser-dot" style="background:${p.liquid}"></span><b>《${esc(p.name)}》</b><span>${esc(p.family)}</span><small>${esc(p.top[0])}</small></div>`).join('')}
+        ${teaserCards.map(p=>`<button type="button" class="teaser" onclick="peekProfile('${esc(p.name)}')"><span class="teaser-dot" style="background:${p.liquid}"></span><b>《${esc(p.name)}》</b><span>${esc(p.family)}</span><small>${esc(p.top[0])}</small></button>`).join('')}
       </div>
     </div>
     <p class="notice">不用懂香水知识，跟随你的直觉与氛围偏好选择即可。${esc(D.disclaimer)}</p>
@@ -326,29 +830,31 @@ function home(){
 
 function start(){
   if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('开始新测试将清除上次进度，继续吗？')) return;
-  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+  SFX.start();
+  idx=0;answers=Array(N).fill(null);report=null;lastChapter=0;stash();question(true);
 }
-
 function resume(){
+  SFX.start();
   const saved=restore();if(!saved)return start();
   idx=saved.idx;answers=saved.answers;
-  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.every(v=>v!==null)){result(false);return;}
   if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  lastChapter=getChapter(idx).ci;
   question(true);
 }
-
-function toggleAuto(){autoNext=!autoNext;stash();question(false);}
-
+function toggleAuto(){SFX.click(0);autoNext=!autoNext;stash();question(false);}
 function getChapter(qIdx){
   const chs=D.chapters, per=Math.ceil(N/chs.length);
   const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
-  return {num:String(ci+1).padStart(2,'0'),...chs[ci]};
+  return {ci,num:String(ci+1).padStart(2,'0'),...chs[ci]};
 }
 
 function question(move=false){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
   screen='question';
   const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  if(lastChapter>=0 && ch.ci>lastChapter){SFX.chapter();showToast(`🫧 ${ch.title}`);}
+  lastChapter=ch.ci;
   const pct=Math.round((count/N)*100);
   app.innerHTML=`<section class="panel">
     <div class="question-top">
@@ -357,6 +863,9 @@ function question(move=false){
     </div>
     <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
       <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-dots" aria-hidden="true">
+      ${D.chapters.map((_,k)=>`<span class="${k<ch.ci?'done':k===ch.ci?'now':''}"></span>`).join('')}
     </div>
     <div class="chapter-bar">
       <span class="chapter-num">${ch.num}</span>
@@ -370,7 +879,8 @@ function question(move=false){
       <button type="button" onclick="back()" ${idx===0?'disabled':''}>← 上一题</button>
       <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'封瓶揭晓香调 ✦':'下一题 →'}</button>
     </div>
-    <div style="text-align:center;margin-top:10px">
+    <p class="kbd-hint">快捷键：数字 1-4 / 字母 A-D 作答，← 返回上一题</p>
+    <div style="text-align:center;margin-top:8px">
       <button type="button" class="subtle" onclick="home()">保存进度，返回首页</button>
     </div>
   </section>`;
@@ -379,6 +889,7 @@ function question(move=false){
 
 function choose(i){
   if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  SFX.click(i);
   answers[idx]=i;stash();
   const btns=app.querySelectorAll('.option');
   btns.forEach((b,k)=>{
@@ -402,11 +913,11 @@ function choose(i){
       if(idx<N-1){idx++;stash();question(true);}
       else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
       else calculateRitual();
-    }, 300);
+    }, 280);
   }
 }
 
-function back(){if(idx>0){idx--;stash();question(true);}}
+function back(){if(idx>0){SFX.back();idx--;stash();question(true);}}
 function next(){
   if(answers[idx]===null) return;
   if(idx<N-1){idx++;stash();question(true);}
@@ -420,12 +931,12 @@ function calculateRitual(){
   app.innerHTML=`<section class="panel"><div class="calc-box">
     <div class="calc-ring" aria-hidden="true"></div>
     <p class="calc-step" id="calcText">${esc(steps[0])}</p>
-    <p class="calc-sub">正在为你定制三调香评与 3:4 瓶身收藏卡</p>
+    <p class="calc-sub">正在为你定制三调香评、气味雷达与 3:4 瓶身收藏卡</p>
   </div></section>`;
   scrollTop();
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},470);
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},940);
-  setTimeout(()=>result(),1380);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},440);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},880);
+  setTimeout(()=>result(true),1320);
 }
 
 function compute(input){
@@ -435,7 +946,6 @@ function compute(input){
   D.questions.forEach((q,i)=>{
     const sc=q.options[input[i]].score;
     sums[q.axis]+=sc; cnts[q.axis]++;
-    // Gentle progressive weight so exact midpoint ties naturally reflect the final chapter's distilled instinct
     const w=1+i*0.012;
     wSums[q.axis]+=sc*w; wCnts[q.axis]+=w;
   });
@@ -457,13 +967,38 @@ function compute(input){
   }
   return {v,ranked,p:ranked[0].p};
 }
-
 function tendency(a,v){return v<1.18?a[1]:v>1.82?a[2]:'微妙平衡'}
 
-function result(){
+function runChemCheck(otherName){
+  const out=document.getElementById('chemOut');
+  if(!out||!report) return;
+  if(!otherName){out.innerHTML='';return;}
+  const other=byName[otherName]; if(!other) return;
+  SFX.click(2);
+  const res=calcVectorChem(report.p,other,D.axes,{
+    same:'🫧 同香加乘 · 高级伪体香翻倍',
+    match:'♥ 沙龙级绝配叠喷公式',
+    clash:'⚡ 冰火撞香 · 极具戏剧张力'
+  });
+  out.innerHTML=`<div class="chem-out">
+    <div class="chem-score-row"><span class="chem-verdict">${esc(res.verdict)}</span><span class="chem-pct">${res.score}%</span></div>
+    <div class="chem-bar"><i style="width:${res.score}%"></i></div>
+    <p style="font-size:13px;line-height:1.72">《${esc(report.p.name)}》×《${esc(other.name)}》：${esc(res.desc)}</p>
+    <button type="button" class="chem-copy-btn" onclick="copyChem('${esc(other.name)}',${res.score},'${esc(res.verdict)}')">复制叠喷测评战报 ↗</button>
+  </div>`;
+}
+async function copyChem(otherName,score,verdict){
+  if(!report) return;
+  const txt=`【灵魂香调叠喷实验室】🫧\n《${report.p.name}》×《${otherName}》\n叠喷契合度：${score}%（${verdict}）\n评论区晒出你的香调，来试叠喷👇 ${D.shareTags}`;
+  try{await navigator.clipboard.writeText(txt);showToast('✓ 叠喷战报已复制！');}
+  catch{document.getElementById('copyTextarea').value=txt;copyDialog.showModal();}
+}
+
+function result(celebrate=false){
   if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
   report=compute(answers);screen='result';stash();
   const {p,v,ranked}=report;
+  const unlocked=recordUnlock(p.name);
   const matchP=byName[p.match[0]], clashP=byName[p.clash[0]];
   const cues=D.axes.map((a,i)=>({a,val:v[i],gap:Math.abs(v[i]-1.5)})).sort((x,y)=>y.gap-x.gap).slice(0,2);
   const why=cues.every(x=>x.gap<0.25)
@@ -471,7 +1006,7 @@ function result(){
     : `从你的感官直觉来看，你的「${cues[0].a[0]}」明显偏向${tendency(cues[0].a,cues[0].val)}，「${cues[1].a[0]}」偏向${tendency(cues[1].a,cues[1].val)}，精准指向这支「${p.name}」。`;
 
   app.innerHTML=`<section class="panel" style="--scent-deep:${p.deep};--scent-tint:${p.tint}">
-    <div class="flacon-card">
+    <div class="flacon-card" id="heroCard">
       <div class="flacon-top">
         <div class="bottle-stage">${bottleSVG(p)}</div>
         <div class="flacon-meta">
@@ -492,7 +1027,7 @@ function result(){
 
     <div class="stack" style="margin-top:16px">
       <div class="actions-row">
-        <button type="button" class="primary" onclick="showPoster()">生成 3:4 瓶身海报 ↗</button>
+        <button type="button" class="primary" onclick="showPoster()">定制 3:4 刻字瓶身海报 ↗</button>
         <button type="button" class="secondary" onclick="copyShare()">复制小红书文案</button>
       </div>
       <div id="copyStatus" class="status-bar" role="status"></div>
@@ -502,18 +1037,9 @@ function result(){
       <p class="kicker">01 / OLFACTORY PYRAMID</p>
       <h3>你的灵魂三调拆解</h3>
       <div class="pyramid">
-        <div class="note-tier">
-          <div class="tier-badge"><strong>前调</strong><span>TOP</span></div>
-          <div class="note-body"><strong>初见印象 · ${esc(p.top[0])}</strong><p>${esc(p.top[1])}</p></div>
-        </div>
-        <div class="note-tier">
-          <div class="tier-badge"><strong>中调</strong><span>HEART</span></div>
-          <div class="note-body"><strong>熟识内核 · ${esc(p.heart[0])}</strong><p>${esc(p.heart[1])}</p></div>
-        </div>
-        <div class="note-tier">
-          <div class="tier-badge"><strong>后调</strong><span>BASE</span></div>
-          <div class="note-body"><strong>灵魂底色 · ${esc(p.base[0])}</strong><p>${esc(p.base[1])}</p></div>
-        </div>
+        <div class="note-tier"><div class="tier-badge"><strong>前调</strong><span>TOP</span></div><div class="note-body"><strong>初见印象 · ${esc(p.top[0])}</strong><p>${esc(p.top[1])}</p></div></div>
+        <div class="note-tier"><div class="tier-badge"><strong>中调</strong><span>HEART</span></div><div class="note-body"><strong>熟识内核 · ${esc(p.heart[0])}</strong><p>${esc(p.heart[1])}</p></div></div>
+        <div class="note-tier"><div class="tier-badge"><strong>后调</strong><span>BASE</span></div><div class="note-body"><strong>灵魂底色 · ${esc(p.base[0])}</strong><p>${esc(p.base[1])}</p></div></div>
       </div>
     </div>
 
@@ -532,8 +1058,9 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">03 / SCENT SPECTRUM</p>
-      <h3>四维气味光谱</h3>
+      <p class="kicker">03 / SCENT RADAR &amp; SPECTRUM</p>
+      <h3>四维气味雷达光谱</h3>
+      <div class="radar-wrap">${buildRadarSVG(D.axes.map(a=>a[0]), v.map(x=>x/3), {stroke:p.deep,fill:p.deep,grid:'var(--line)',labelColor:'var(--ink)',dotRing:'var(--card)'})}</div>
       ${D.axes.map((a,i)=>`<div class="axis">
         <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
         <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
@@ -543,8 +1070,8 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">04 / LAYERING CHEMISTRY</p>
-      <h3>叠喷最绝的灵魂搭子香 &amp; 奇妙反差</h3>
+      <p class="kicker">04 / LAYERING LAB</p>
+      <h3>叠喷最绝的灵魂搭子香 &amp; 叠喷实验室</h3>
       <p class="muted" style="margin-bottom:6px">把测试发给闺蜜或对象，看看你们是不是天选叠喷绝配！</p>
       <div class="duo">
         <div class="mini">
@@ -558,6 +1085,14 @@ function result(){
           <p>${esc(p.clash[1])}</p>
         </div>
       </div>
+      <div class="chem-box">
+        <div class="chem-head"><strong>🫧 叠喷香调实验室</strong><span>选 TA 的香调，即刻测算叠喷化学反应</span></div>
+        <select class="chem-select" aria-label="选择朋友的香调测试叠喷效果" onchange="runChemCheck(this.value)">
+          <option value="">— 选择朋友测出的沙龙香 —</option>
+          ${D.profiles.map(x=>`<option value="${esc(x.name)}">NO.${x.no} · 《${esc(x.name)}》（${esc(x.family)}）</option>`).join('')}
+        </select>
+        <div id="chemOut"></div>
+      </div>
     </div>
 
     <div class="block">
@@ -570,7 +1105,7 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">06 / NEARBY SCENTS</p>
+      <p class="kicker">06 / NEARBY SCENTS &amp; ARCHIVE</p>
       <h3>与你同频的备选沙龙香</h3>
       ${ranked.slice(1,4).map(x=>`<div class="rank">
         <div class="rank-left">
@@ -579,25 +1114,32 @@ function result(){
         </div>
         <span class="pct">${x.fit}% 契合</span>
       </div>`).join('')}
+      <div class="dex-bar">
+        <div class="dex-bar-info"><strong>调香室 16 支沙龙香馆藏架</strong><span>当前已收藏 ${unlocked.length} / ${D.profiles.length} 支</span></div>
+        <button type="button" class="dex-open-btn" onclick="openDex()">打开馆藏架</button>
+      </div>
       <p class="notice">${esc(D.disclaimer)}</p>
     </div>
 
     <div class="stack">
-      <button type="button" class="primary" onclick="showPoster()">保存 3:4 专属沙龙香海报 ↗</button>
+      <button type="button" class="primary" onclick="showPoster()">保存 3:4 专属刻字海报 ↗</button>
       <div class="actions-row">
         <button type="button" class="secondary" onclick="editAnswers()">修改部分答案</button>
         <button type="button" class="secondary" onclick="restart()">重新调香</button>
       </div>
     </div>
   </section>`;
+  bindCardTilt(document.getElementById('heroCard'));
   scrollTop();focusTitle();
+  if(celebrate){SFX.reveal();celebrateBurst([p.liquid,p.deep,'#c19352','#f7ebd8'],'bubble');}
 }
 
-function editAnswers(){idx=N-1;question(true);}
+function editAnswers(){SFX.back();idx=N-1;question(true);}
 function restart(){if(confirm('清除当前答案并重新调配专属香调？')){clearSaved();start();}}
 
 async function copyShare(){
   if(!report) return;
+  SFX.click(1);
   const {p,ranked}=report;
   const hook=D.shareHook.replace('{name}',p.name);
   const text=`${hook}\n${p.family} | 灵魂契合度 ${ranked[0].fit}%\n前调：${p.top[0]}\n中调：${p.heart[0]}\n后调：${p.base[0]}\n「${p.quote}」\n\n♥ 叠喷最绝的灵魂搭子香是《${p.match[0]}》，评论区晒出你的香调找叠喷搭子👇\n${D.shareTags}`;
@@ -628,225 +1170,167 @@ function rPath(ctx,x,y,w,h,r){
 function fillR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.fill();}
 function strokeR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.stroke();}
 
-function drawCanvasBottle(ctx, ox, oy, p, serif, sans){
-  ctx.save();
-  ctx.translate(ox, oy);
-  // Subtle pedestal glow
+function drawCanvasBottle(ctx, ox, oy, p, serif, sans, sig){
+  ctx.save(); ctx.translate(ox, oy);
   const glow=ctx.createRadialGradient(115,175,20,115,175,140);
   glow.addColorStop(0,'rgba(255,255,255,0.28)');glow.addColorStop(1,'rgba(255,255,255,0)');
   ctx.fillStyle=glow;ctx.fillRect(-20,0,270,350);
-
-  // Heavy matte cap
   ctx.fillStyle='#1a1411';fillR(ctx,78,12,74,52,8);
   ctx.fillStyle='rgba(255,255,255,0.14)';fillR(ctx,85,18,10,40,4);
-  // Gold atomizer collar
   ctx.fillStyle='#cfa464';fillR(ctx,92,64,46,18,3);
-  ctx.strokeStyle='rgba(255,248,232,0.55)';ctx.lineWidth=1.5;
-  ctx.beginPath();ctx.moveTo(92,73);ctx.lineTo(138,73);ctx.stroke();
-
-  // Glass bottle body
-  ctx.fillStyle='rgba(255,253,249,0.92)';
-  ctx.strokeStyle='rgba(255,255,255,0.72)';ctx.lineWidth=3;
+  ctx.fillStyle='rgba(255,253,249,0.92)';ctx.strokeStyle='rgba(255,255,255,0.72)';ctx.lineWidth=3;
   fillR(ctx,26,82,178,244,24);strokeR(ctx,26,82,178,244,24);
-
-  // Tinted perfume liquid inside
   const lg=ctx.createLinearGradient(36,126,194,316);
   lg.addColorStop(0,p.liquid);lg.addColorStop(1,p.deep);
   ctx.save();ctx.globalAlpha=0.88;ctx.fillStyle=lg;fillR(ctx,36,132,158,184,16);ctx.restore();
-  // Liquid top sheen
   ctx.fillStyle='rgba(255,255,255,0.42)';ctx.beginPath();ctx.ellipse(115,132,78,6,0,0,Math.PI*2);ctx.fill();
-
-  // Left specular reflection on glass
   ctx.strokeStyle='rgba(255,255,255,0.62)';ctx.lineWidth=6;ctx.lineCap='round';
   ctx.beginPath();ctx.moveTo(43,104);ctx.lineTo(43,300);ctx.stroke();
-
-  // Minimalist Le-Labo style apothecary label
   ctx.fillStyle='#fffdf8';fillR(ctx,50,152,130,136,5);
   ctx.strokeStyle='#d6c8b4';ctx.lineWidth=1.5;strokeR(ctx,50,152,130,136,5);
   ctx.strokeStyle='#ebe1d2';ctx.lineWidth=1;strokeR(ctx,56,158,118,124,2);
-
   ctx.textAlign='center';
   ctx.fillStyle=p.deep;ctx.font=`800 11px ${sans}`;ctx.fillText('SCENT ATELIER',115,176);
   ctx.strokeStyle='#dfd3c2';ctx.beginPath();ctx.moveTo(68,185);ctx.lineTo(162,185);ctx.stroke();
-
   ctx.fillStyle='#241d19';
-  if(p.name.length<=5){
-    ctx.font=`800 22px ${serif}`;ctx.fillText(p.name,115,217);
-  }else{
-    ctx.font=`800 18px ${serif}`;
-    const mid=Math.ceil(p.name.length/2);
-    ctx.fillText(p.name.slice(0,mid),115,210);
-    ctx.fillText(p.name.slice(mid),115,233);
-  }
+  if(p.name.length<=5){ctx.font=`800 22px ${serif}`;ctx.fillText(p.name,115,217);}
+  else{ctx.font=`800 18px ${serif}`;const mid=Math.ceil(p.name.length/2);ctx.fillText(p.name.slice(0,mid),115,210);ctx.fillText(p.name.slice(mid),115,233);}
   ctx.fillStyle='#78675b';ctx.font=`600 10px ${sans}`;
   ctx.fillText(`NO.${p.no} · ${p.conc.split('·')[0].trim()}`,115,256);
-  ctx.fillStyle='#b88c4e';ctx.font=`600 9.5px ${sans}`;
-  ctx.fillText('50 ML / 1.7 FL.OZ',115,273);
-  ctx.textAlign='left';
-  ctx.restore();
+  ctx.fillStyle='#b88c4e';ctx.font=`700 10px ${sans}`;
+  ctx.fillText(sig ? `FOR: ${sig}` : '50 ML / 1.7 FL.OZ',115,273);
+  ctx.textAlign='left'; ctx.restore();
 }
 
-function makePoster(){
+function makePoster(themeIdx = 0, sig = ''){
   const c=document.createElement('canvas');c.width=1080;c.height=1440;
   const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
   const {p,v,ranked}=report;
   const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif';
+  const dark = themeIdx === 1;
+  const BG = dark ? '#161210' : '#f8f4ec';
+  const CARD = dark ? '#211b18' : '#fffdf9';
+  const INK = dark ? '#f6eee4' : '#241d19';
+  const MUTED = dark ? '#bcaea0' : '#6c5d52';
+  const LINE = dark ? 'rgba(207,164,100,0.32)' : '#dfd3c2';
 
-  // Warm alabaster editorial backdrop & double border
-  ctx.fillStyle='#f8f4ec';ctx.fillRect(0,0,1080,1440);
-  ctx.strokeStyle='#dfd3c2';ctx.lineWidth=2;strokeR(ctx,26,26,1028,1388,30);
+  ctx.fillStyle=BG;ctx.fillRect(0,0,1080,1440);
+  ctx.strokeStyle=LINE;ctx.lineWidth=2;strokeR(ctx,26,26,1028,1388,30);
 
-  // Top Luxury Salon Showcase Card
   const hg=ctx.createLinearGradient(52,52,1028,452);
-  hg.addColorStop(0,p.deep);hg.addColorStop(1,'#241d19');
+  hg.addColorStop(0,p.deep);hg.addColorStop(1,'#1f1814');
   ctx.fillStyle=hg;fillR(ctx,52,52,976,396,26);
   ctx.save();rPath(ctx,52,52,976,396,26);ctx.clip();
   ctx.strokeStyle='rgba(255,255,255,0.12)';ctx.lineWidth=2;
   for(let i=0;i<6;i++){ctx.beginPath();ctx.ellipse(940,120,90+i*42,58+i*24,-0.35,0,Math.PI*2);ctx.stroke();}
   ctx.restore();
 
-  // Draw bespoke bottle on left of hero card
-  drawCanvasBottle(ctx, 84, 82, p, serif, sans);
+  drawCanvasBottle(ctx, 84, 82, p, serif, sans, sig);
 
-  // Right typography block inside hero card
   const rx=352;
   ctx.fillStyle='rgba(255,244,228,0.85)';ctx.font=`700 21px ${sans}`;
   ctx.fillText(`SCENT ATELIER  ·  NO.${p.no}  ·  ${p.family}`, rx, 118);
-
-  // Fragrance Name (auto-fit font size for 4-8 chars)
   const titleSize=p.name.length>6?54:62;
   ctx.fillStyle='#ffffff';ctx.font=`800 ${titleSize}px ${serif}`;
   ctx.fillText(`《${p.name}》`, rx-10, 200);
-
   ctx.fillStyle='rgba(240,224,200,0.88)';ctx.font=`600 21px ${sans}`;
-  ctx.fillText(p.en, rx, 244);
+  ctx.fillText(sig ? `${p.en}  ·  FOR ${sig}` : p.en, rx, 244);
 
-  // Affinity + Conc badges
   ctx.fillStyle=p.liquid;fillR(ctx,rx,272,216,42,21);
-  ctx.fillStyle='#1f1916';ctx.font=`800 21px ${sans}`;
-  ctx.fillText(`✦ 灵魂契合 ${ranked[0].fit}%`, rx+20, 300);
-
+  ctx.fillStyle='#1f1916';ctx.font=`800 21px ${sans}`;ctx.fillText(`✦ 灵魂契合 ${ranked[0].fit}%`, rx+20, 300);
   ctx.fillStyle='rgba(255,255,255,0.14)';fillR(ctx,rx+228,272,240,42,21);
-  ctx.fillStyle='#fff6ea';ctx.font=`600 19px ${sans}`;
-  ctx.fillText(p.conc, rx+248, 299);
+  ctx.fillStyle='#fff6ea';ctx.font=`600 19px ${sans}`;ctx.fillText(p.conc, rx+248, 299);
 
-  // 3 hashtag pills
   let tx=rx;
   p.tags.forEach(t=>{
-    const lbl='# '+t;
-    ctx.font=`600 20px ${sans}`;
+    const lbl='# '+t;ctx.font=`600 20px ${sans}`;
     const w=ctx.measureText(lbl).width+30;
-    if(tx+w<1005){
-      ctx.fillStyle='rgba(255,255,255,0.12)';fillR(ctx,tx,340,w,38,19);
-      ctx.strokeStyle='rgba(255,255,255,0.24)';ctx.lineWidth=1;strokeR(ctx,tx,340,w,38,19);
-      ctx.fillStyle='#fff';ctx.fillText(lbl,tx+15,365);
-      tx+=w+12;
-    }
+    if(tx+w<1005){ctx.fillStyle='rgba(255,255,255,0.12)';fillR(ctx,tx,340,w,38,19);ctx.strokeStyle='rgba(255,255,255,0.24)';ctx.lineWidth=1;strokeR(ctx,tx,340,w,38,19);ctx.fillStyle='#fff';ctx.fillText(lbl,tx+15,365);tx+=w+12;}
   });
 
-  // Quote callout card
-  ctx.fillStyle='#fffdf9';fillR(ctx,52,472,976,104,20);
-  ctx.strokeStyle='#dfd3c2';ctx.lineWidth=1.5;strokeR(ctx,52,472,976,104,20);
+  // Quote
+  ctx.fillStyle=CARD;fillR(ctx,52,472,976,104,20);
+  ctx.strokeStyle=LINE;ctx.lineWidth=1.5;strokeR(ctx,52,472,976,104,20);
   ctx.fillStyle='#c19352';fillR(ctx,52,472,10,104,5);
-  ctx.fillStyle=p.deep;ctx.font=`700 30px ${serif}`;
+  ctx.fillStyle=dark?'#f0d6ac':p.deep;ctx.font=`700 30px ${serif}`;
   const qLines=wrap(ctx,`「${p.quote}」`,905).slice(0,2);
-  const qStart=qLines.length===1?534:515;
-  qLines.forEach((l,i)=>ctx.fillText(l,84,qStart+i*40));
+  qLines.forEach((l,i)=>ctx.fillText(l,84,(qLines.length===1?534:515)+i*40));
 
-  // Fragrance Pyramid Card (Top / Heart / Base)
+  // Pyramid Card
   const py=600;
-  ctx.fillStyle='#fffdf9';fillR(ctx,52,py,976,302,22);
-  ctx.strokeStyle='#dfd3c2';ctx.lineWidth=1.5;strokeR(ctx,52,py,976,302,22);
-  ctx.fillStyle='#c19352';ctx.font=`800 20px ${sans}`;
-  ctx.fillText('OLFACTORY PYRAMID  ·  灵魂三调配方', 82, py+40);
-
-  const tiers=[
-    {cn:'前调',en:'TOP',data:p.top},
-    {cn:'中调',en:'HEART',data:p.heart},
-    {cn:'后调',en:'BASE',data:p.base}
-  ];
-  tiers.forEach((t,k)=>{
+  ctx.fillStyle=CARD;fillR(ctx,52,py,976,302,22);
+  ctx.strokeStyle=LINE;ctx.lineWidth=1.5;strokeR(ctx,52,py,976,302,22);
+  ctx.fillStyle='#c19352';ctx.font=`800 20px ${sans}`;ctx.fillText('OLFACTORY PYRAMID  ·  灵魂三调配方', 82, py+40);
+  [{cn:'前调',en:'TOP',data:p.top},{cn:'中调',en:'HEART',data:p.heart},{cn:'后调',en:'BASE',data:p.base}].forEach((t,k)=>{
     const ty=py+64+k*76;
-    ctx.fillStyle='#f4ede1';fillR(ctx,82,ty,116,58,12);
-    ctx.fillStyle=p.deep;ctx.font=`800 23px ${serif}`;ctx.textAlign='center';
-    ctx.fillText(t.cn,140,ty+29);
-    ctx.fillStyle='#b88948';ctx.font=`800 13px ${sans}`;
-    ctx.fillText(t.en,140,ty+49);
-    ctx.textAlign='left';
-    ctx.fillStyle='#241d19';ctx.font=`700 23px ${sans}`;
-    ctx.fillText(t.data[0], 218, ty+24);
-    ctx.fillStyle='#6c5d52';ctx.font=`400 20px ${sans}`;
-    const descLine=wrap(ctx,t.data[1],780)[0];
-    ctx.fillText(descLine, 218, ty+52);
+    ctx.fillStyle=dark?'#2e2621':'#f4ede1';fillR(ctx,82,ty,116,58,12);
+    ctx.fillStyle=dark?'#f0d6ac':p.deep;ctx.font=`800 23px ${serif}`;ctx.textAlign='center';ctx.fillText(t.cn,140,ty+29);
+    ctx.fillStyle='#c19352';ctx.font=`800 13px ${sans}`;ctx.fillText(t.en,140,ty+49);
+    ctx.textAlign='left';ctx.fillStyle=INK;ctx.font=`700 23px ${sans}`;ctx.fillText(t.data[0], 218, ty+24);
+    ctx.fillStyle=MUTED;ctx.font=`400 20px ${sans}`;ctx.fillText(wrap(ctx,t.data[1],780)[0], 218, ty+52);
   });
 
-  // 4-Axis Scent Spectrum Card
+  // Spectrum + Radar Card
   const sy=924;
-  ctx.fillStyle='#fffdf9';fillR(ctx,52,sy,976,220,22);
-  ctx.strokeStyle='#dfd3c2';ctx.lineWidth=1.5;strokeR(ctx,52,sy,976,220,22);
-  ctx.fillStyle=p.deep;ctx.font=`800 20px ${sans}`;
-  ctx.fillText('SCENT SPECTRUM  ·  四维气味光谱', 82, sy+38);
+  ctx.fillStyle=CARD;fillR(ctx,52,sy,976,220,22);
+  ctx.strokeStyle=LINE;ctx.lineWidth=1.5;strokeR(ctx,52,sy,976,220,22);
+  ctx.fillStyle=dark?'#f0d6ac':p.deep;ctx.font=`800 20px ${sans}`;ctx.fillText('SCENT SPECTRUM  ·  四维气味光谱', 82, sy+38);
   D.axes.forEach((a,i)=>{
-    const col=i%2, row=Math.floor(i/2);
-    const ax=82+col*470, ay=sy+84+row*72, aw=420;
-    ctx.font=`600 19px ${sans}`;ctx.fillStyle='#241d19';ctx.textAlign='left';
-    ctx.fillText(`${a[0]} · ${a[1]}`,ax,ay);
-    ctx.textAlign='right';ctx.fillStyle='#746458';ctx.fillText(a[2],ax+aw,ay);
-    ctx.textAlign='left';
-    ctx.fillStyle='#efe6d8';fillR(ctx,ax,ay+13,aw,9,4.5);
+    const ax=82, ay=sy+78+i*36, aw=530;
+    ctx.font=`600 18px ${sans}`;ctx.fillStyle=INK;ctx.textAlign='left';ctx.fillText(`${a[0]} · ${a[1]}`,ax,ay);
+    ctx.textAlign='right';ctx.fillStyle=MUTED;ctx.fillText(a[2],ax+aw,ay);ctx.textAlign='left';
+    ctx.fillStyle=dark?'rgba(255,255,255,0.12)':'#efe6d8';fillR(ctx,ax,ay+8,aw,8,4);
     const px=ax+aw*Math.max(0.05,Math.min(0.95,v[i]/3));
-    ctx.fillStyle=p.deep;ctx.beginPath();ctx.arc(px,ay+17.5,10,0,Math.PI*2);ctx.fill();
-    ctx.strokeStyle='#fff';ctx.lineWidth=2.5;ctx.stroke();
+    ctx.fillStyle=dark?'#e8c284':p.deep;ctx.beginPath();ctx.arc(px,ay+12,8.5,0,Math.PI*2);ctx.fill();
   });
+  drawCanvasRadar(ctx, 825, sy+116, 72, D.axes.map(a=>a[0]), v.map(x=>x/3), dark?'#e8c284':p.deep, dark?'rgba(232,194,132,0.24)':'rgba(141,83,50,0.2)', LINE, INK);
 
-  // Bottom Duo Cards: Layering Soulmate + Hidden Contrast
+  // Bottom Duo
   const by=1166, bh=176;
-  ctx.fillStyle=p.tint;fillR(ctx,52,by,476,bh,20);
-  ctx.strokeStyle='#dfd3c2';ctx.lineWidth=1.5;strokeR(ctx,52,by,476,bh,20);
-  ctx.fillStyle=p.deep;ctx.font=`800 20px ${sans}`;ctx.fillText('♥ 叠喷最绝灵魂搭子香',80,by+38);
-  ctx.fillStyle='#241d19';ctx.font=`800 30px ${serif}`;ctx.fillText(`《${p.match[0]}》`,74,by+84);
-  ctx.fillStyle='#6c5d52';ctx.font=`400 20px ${sans}`;
+  ctx.fillStyle=dark?'#2a221d':p.tint;fillR(ctx,52,by,476,bh,20);
+  ctx.strokeStyle=LINE;ctx.lineWidth=1.5;strokeR(ctx,52,by,476,bh,20);
+  ctx.fillStyle=dark?'#e8c284':p.deep;ctx.font=`800 20px ${sans}`;ctx.fillText('♥ 叠喷最绝灵魂搭子香',80,by+38);
+  ctx.fillStyle=INK;ctx.font=`800 30px ${serif}`;ctx.fillText(`《${p.match[0]}》`,74,by+84);
+  ctx.fillStyle=MUTED;ctx.font=`400 20px ${sans}`;
   wrap(ctx,p.match[1],420).slice(0,2).forEach((l,i)=>ctx.fillText(l,80,by+122+i*29));
 
-  ctx.fillStyle='#fffdf9';fillR(ctx,552,by,476,bh,20);
-  ctx.strokeStyle='#dfd3c2';ctx.lineWidth=1.5;strokeR(ctx,552,by,476,bh,20);
+  ctx.fillStyle=CARD;fillR(ctx,552,by,476,bh,20);
+  ctx.strokeStyle=LINE;ctx.lineWidth=1.5;strokeR(ctx,552,by,476,bh,20);
   ctx.fillStyle='#c19352';ctx.font=`800 20px ${sans}`;ctx.fillText('✦ 隐藏后调反差面',580,by+38);
-  ctx.fillStyle='#241d19';ctx.font=`400 21px ${sans}`;
+  ctx.fillStyle=INK;ctx.font=`400 21px ${sans}`;
   wrap(ctx,p.contrast,420).slice(0,3).forEach((l,i)=>ctx.fillText(l,580,by+78+i*32));
 
-  // Footer
-  ctx.fillStyle='#746458';ctx.font=`500 21px ${sans}`;
+  ctx.fillStyle=MUTED;ctx.font=`500 21px ${sans}`;
   ctx.fillText('测测你的灵魂专属香调  ·  长按保存分享', 60, 1388);
   ctx.textAlign='right';ctx.fillText('SCENT ATELIER · 原创趣味探索', 1020, 1388);
   ctx.textAlign='left';
   return c;
 }
 
-function showPoster(){
+function renderPosterCanvas(){
   if(!report) return;
   const status=document.getElementById('posterStatus'),
         area=document.getElementById('posterArea'),
-        download=document.getElementById('downloadPoster');
+        download=document.getElementById('downloadPoster'),
+        sig=(document.getElementById('sigInput')?.value||'').trim().slice(0,10);
   status.textContent='';area.innerHTML='';download.disabled=true;
   try{
     if(posterURL) URL.revokeObjectURL(posterURL);
     posterURL=null;
-    const canvas=makePoster();
+    const canvas=makePoster(posterTheme,sig);
     const img=document.createElement('img');
     img.className='poster';img.alt='可保存的专属沙龙香3:4海报';
     img.src=canvas.toDataURL('image/png');
     area.append(img);
-    canvas.toBlob(blob=>{
-      posterURL=blob?URL.createObjectURL(blob):img.src;
-      download.disabled=false;
-    },'image/png');
-    if(!posterDialog.open) posterDialog.showModal();
-  }catch(e){
-    status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
-    if(!posterDialog.open) posterDialog.showModal();
-  }
+    canvas.toBlob(blob=>{posterURL=blob?URL.createObjectURL(blob):img.src;download.disabled=false;},'image/png');
+  }catch(e){status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';}
 }
+function showPoster(){if(!report) return;SFX.click(3);renderPosterCanvas();if(!posterDialog.open) posterDialog.showModal();}
 
+document.querySelectorAll('[data-ptheme]').forEach(btn=>{
+  btn.onclick=()=>{SFX.click(1);posterTheme=Number(btn.dataset.ptheme)||0;document.querySelectorAll('[data-ptheme]').forEach(x=>x.classList.toggle('active',x===btn));renderPosterCanvas();};
+});
+document.getElementById('sigApply').onclick=()=>{SFX.click(2);renderPosterCanvas();document.getElementById('posterStatus').textContent='✓ 专属刻字已印上瓶签！';};
 document.getElementById('closePoster').onclick=()=>posterDialog.close();
 document.getElementById('downloadPoster').onclick=()=>{
   if(!posterURL||!report) return;
@@ -855,9 +1339,18 @@ document.getElementById('downloadPoster').onclick=()=>{
   document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方海报保存。';
 };
 document.getElementById('closeCopy').onclick=()=>copyDialog.close();
-document.getElementById('selectCopyBtn').onclick=()=>{
-  const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
-};
+document.getElementById('closePeek').onclick=()=>peekDialog.close();
+document.getElementById('closeDex').onclick=()=>dexDialog.close();
+document.getElementById('selectCopyBtn').onclick=()=>{const ta=document.getElementById('copyTextarea');ta.focus();ta.select();};
+document.addEventListener('keydown',e=>{
+  if(screen!=='question'||posterDialog.open||copyDialog.open||peekDialog.open||dexDialog.open) return;
+  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  const map={'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'A':0,'B':1,'C':2,'D':3};
+  if(e.key in map){e.preventDefault();choose(map[e.key]);}
+  else if(e.key==='ArrowLeft'||e.key==='Backspace'){e.preventDefault();back();}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){if(answers[idx]!==null){e.preventDefault();next();}}
+});
+initSoundToggle();
 home();
 </script>
 </body>

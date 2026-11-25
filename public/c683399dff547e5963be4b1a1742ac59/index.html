@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#165b55">
+<meta name="theme-color" content="#124e4a">
 <meta name="description" content="你的灵魂老家在哪座城市 · 原创高质感趣味探索测试，无需登录，数据仅在本地浏览器处理。">
 <title>你的灵魂老家在哪座城市</title>
 <style>
 :root{
-  --ink:#1b3532;--accent:#165b55;--accent2:#c79248;--paper:#f5f3ea;
-  --soft:#e1ece3;--line:#cdd9ce;--card:#fffdf8;--muted:#566b65;
+  
+      --ink:#173230;--accent:#12544f;--accent2:#c88a3b;--paper:#f5f1e6;
+      --soft:#deede6;--line:#c9d8cf;--card:#fffdf7;--muted:#526b66;
   --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
   --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
 }
@@ -17,98 +18,105 @@
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
   radial-gradient(ellipse at 92% 0%,var(--soft),transparent 58%),
-  radial-gradient(ellipse at 8% 100%,color-mix(in srgb,var(--accent2) 13%,transparent),transparent 52%);z-index:-1}
-main{width:min(100%,660px);padding:18px 16px max(32px,env(safe-area-inset-bottom));margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.brand{font-size:11px;letter-spacing:2.4px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
+  radial-gradient(ellipse at 8% 100%,color-mix(in srgb,var(--accent2) 15%,transparent),transparent 54%);z-index:-1}
+main{width:min(100%,660px);padding:14px 14px max(28px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.brand{font-size:11px;letter-spacing:2.2px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
 .brand::before{content:"✦";color:var(--accent2);font-size:13px}
-.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.05em}
-section.panel{border:1px solid var(--line);border-radius:26px;background:var(--card);padding:clamp(18px,4.2vw,30px);box-shadow:0 22px 54px rgba(32,24,20,.08);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
+.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.04em}
+.sound-btn{background:var(--card);border:1px solid var(--line);color:var(--accent)}
+section.panel{border:1px solid var(--line);border-radius:24px;background:var(--card);padding:clamp(16px,4vw,28px);box-shadow:0 22px 54px rgba(32,24,20,.09);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
 @keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 h1,h2,h3,p{margin:0}
-h1{font-family:var(--serif);font-size:clamp(30px,7.8vw,46px);font-weight:800;line-height:1.26;letter-spacing:.03em}
-h2{font-family:var(--serif);font-size:clamp(21px,5.2vw,27px);line-height:1.48;font-weight:700}
+h1{font-family:var(--serif);font-size:clamp(28px,7.2vw,42px);font-weight:800;line-height:1.24;letter-spacing:.03em;text-wrap:balance}
+h2{font-family:var(--serif);font-size:clamp(20px,5vw,26px);line-height:1.46;font-weight:700}
 h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700}
-.eyebrow{color:var(--accent);font-size:11px;letter-spacing:2.2px;font-weight:800;margin:16px 0 8px;text-transform:uppercase}
-.lead{font-size:15px;line-height:1.85;margin:12px 0 18px;color:color-mix(in srgb,var(--ink) 86%,var(--muted))}
+.eyebrow{color:var(--accent);font-size:10.5px;letter-spacing:2.2px;font-weight:800;margin:13px 0 6px;text-transform:uppercase}
+.lead{font-size:14px;line-height:1.78;margin:9px 0 14px;color:color-mix(in srgb,var(--ink) 86%,var(--muted));text-wrap:pretty}
 .muted{font-size:12px;color:var(--muted)}
-.hero{position:relative;isolation:isolate;height:clamp(176px,46vw,230px);background:var(--accent);border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.hero{position:relative;isolation:isolate;height:clamp(164px,42vw,224px);background:var(--accent);border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
 .hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.42) 100%);z-index:-1}
-.hero-badge{position:absolute;top:14px;right:14px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.22);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.6px;font-weight:700;color:#fff}
-.hero-copy{position:absolute;bottom:16px;left:18px;right:16px}
-.hero-copy small{font-size:10px;letter-spacing:3px;opacity:.92;display:block;margin-bottom:2px}
-.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,34px);letter-spacing:3px;line-height:1.25}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
-.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:500}
-.pill.accent{border-color:color-mix(in srgb,var(--accent) 32%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
-.teaser-wrap{margin:20px 0 22px;padding-top:16px;border-top:1px dashed var(--line)}
-.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.46) 100%);z-index:-1}
+.hero-badge{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.26);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.4px;font-weight:700;color:#fff}
+.hero-copy{position:absolute;bottom:14px;left:16px;right:16px}
+.hero-copy small{font-size:9.5px;letter-spacing:2.8px;opacity:.9;display:block;margin-bottom:2px}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(22px,5.6vw,32px);letter-spacing:3px;line-height:1.22}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 15px}
+.pill{font-size:11.5px;padding:4px 11px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:600}
+.pill.accent{border-color:color-mix(in srgb,var(--accent) 34%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
+.teaser-wrap{margin:15px 0 12px;padding-top:13px;border-top:1px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
 .teaser-head span{font-size:11px;letter-spacing:1.4px;color:var(--accent);font-weight:800}
 .teaser-head small{font-size:11px;color:var(--muted)}
-.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.teaser{padding:12px 10px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
-.teaser b{font-family:var(--serif);font-size:15px;color:var(--ink)}
-.teaser span{font-size:11px;color:var(--accent);font-weight:600}
-.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
-button:active:not(:disabled){transform:scale(.988)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.teaser{padding:10px 9px;border-radius:13px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:3px;text-align:left}
+.teaser:hover{border-color:var(--accent);box-shadow:0 6px 16px rgba(32,24,20,.07)}
+.teaser b{font-family:var(--serif);font-size:14px;color:var(--ink);line-height:1.28}
+.teaser span{font-size:10.5px;color:var(--accent);font-weight:700}
+.teaser small{font-size:10.5px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 15px;min-height:46px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.985)}
 button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 button:hover:not(:disabled){border-color:var(--accent)}
 button:disabled{opacity:.4;cursor:not-allowed}
-.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 26%,transparent)}
+.primary{background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 82%,#000));color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 28%,transparent)}
 .primary:hover:not(:disabled){filter:brightness(1.06)}
-.secondary{width:100%;text-align:center;background:var(--paper)}
-.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.secondary{width:100%;text-align:center;background:var(--paper);font-weight:600}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:7px;min-height:34px}
 .subtle:hover{color:var(--accent)}
-.stack{display:grid;gap:10px}
+.stack{display:grid;gap:9px}
 .actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
-.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:16px}
+.notice{font-size:11.5px;color:var(--muted);line-height:1.66;margin-top:12px}
+/* Quiz screen */
 .question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--accent);font-weight:750;letter-spacing:.06em}
 .auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:11px;font-weight:600;min-height:28px;cursor:pointer}
 .auto-toggle.on{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));color:var(--accent);background:var(--soft)}
-.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:9px 0 8px}
 .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
-.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line);margin-bottom:20px}
+.chapter-dots span{background:var(--accent)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:13px;background:var(--paper);border:1px solid var(--line);margin:10px 0 18px}
 .chapter-num{font-family:var(--serif);font-size:20px;font-weight:800;color:var(--accent2);line-height:1}
 .chapter-bar strong{display:block;font-size:13px;color:var(--ink)}
 .chapter-bar span{display:block;font-size:11px;color:var(--muted);line-height:1.45}
-.options{display:grid;gap:10px;margin:20px 0 22px}
-.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--card)}
+.options{display:grid;gap:10px;margin:18px 0 20px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:58px;width:100%;padding:12px 14px;line-height:1.52;background:var(--card)}
 .option .letter{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:10px;background:var(--paper);color:var(--accent);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .18s}
-.option.selected{border-color:var(--accent);box-shadow:0 4px 14px color-mix(in srgb,var(--accent) 16%,transparent),inset 0 0 0 1px var(--accent);background:var(--soft)}
+.option.selected{border-color:var(--accent);box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 18%,transparent),inset 0 0 0 1px var(--accent);background:var(--soft);transform:translateX(2px)}
 .option.selected .letter{background:var(--accent);color:#fff;border-color:var(--accent)}
 .option .check{margin-left:auto;color:var(--accent);font-weight:800;font-size:15px}
 .nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
 /* Calculating ritual screen */
-.calc-box{text-align:center;padding:34px 10px 26px}
-.calc-ring{width:66px;height:66px;margin:0 auto 20px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite}
+.calc-box{text-align:center;padding:38px 10px 30px}
+.calc-ring{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite;position:relative}
+.calc-ring::after{content:"🧭";position:absolute;inset:0;display:grid;place-items:center;font-size:22px;animation:spinRev 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinRev{to{transform:rotate(-360deg)}}
 .calc-step{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:8px;min-height:1.6em}
 .calc-sub{font-size:12px;color:var(--muted)}
 /* Result Cover */
 .result-cover{border:1px solid var(--line);border-radius:20px;padding:14px;background:var(--paper);position:relative}
-.result-cover .hero{height:168px}
-.result-stamp{position:absolute;top:24px;right:24px;padding:5px 11px;border:1.5px solid rgba(255,255,255,.78);border-radius:8px;font-family:var(--serif);font-size:11px;letter-spacing:2px;color:#fff;background:rgba(0,0,0,.22);backdrop-filter:blur(4px);transform:rotate(3deg)}
+.result-cover .hero{height:164px}
+.result-stamp{position:absolute;top:24px;right:24px;padding:5px 11px;border:1.5px solid rgba(255,255,255,.78);border-radius:8px;font-family:var(--serif);font-size:11px;letter-spacing:2px;color:#fff;background:rgba(0,0,0,.28);backdrop-filter:blur(4px);transform:rotate(3deg)}
 .result-name-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:6px 0 8px}
-.result-name{font-family:var(--serif);font-size:clamp(34px,8.8vw,50px);line-height:1.22;letter-spacing:.03em}
+.result-name{font-family:var(--serif);font-size:clamp(32px,8.2vw,48px);line-height:1.2;letter-spacing:.03em}
 .fit-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:99px;background:var(--accent);color:#fff;font-size:12px;font-weight:750;white-space:nowrap}
-.quote-box{position:relative;margin:12px 0 8px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0}
-.quote{font-family:var(--serif);font-size:17px;color:var(--accent);line-height:1.62;font-weight:600}
-.result-cover .intro{padding:8px 6px 6px}
-.block{padding:22px 0;border-bottom:1px solid var(--line)}
-.block:last-of-type{border:0;padding-bottom:14px}
-.block p{font-size:14.5px;line-height:1.88;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
+.quote-box{position:relative;margin:12px 0 6px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0}
+.quote{font-family:var(--serif);font-size:16.5px;color:var(--accent);line-height:1.62;font-weight:600}
+.result-cover .intro{padding:8px 6px 4px}
+.block{padding:20px 0;border-bottom:1px solid var(--line)}
+.block:last-of-type{border:0;padding-bottom:12px}
+.block p{font-size:14.5px;line-height:1.86;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
 .kicker{font-size:10px;letter-spacing:2.2px;color:var(--accent2);font-weight:800;margin-bottom:5px;text-transform:uppercase}
 .contrast-card{margin-top:13px;padding:13px 15px;border-radius:14px;background:linear-gradient(135deg,var(--soft),var(--paper));border:1px solid var(--line)}
 .contrast-card b{display:block;font-size:12px;color:var(--accent);margin-bottom:4px;letter-spacing:.04em}
 .contrast-card p{font-size:13.5px;line-height:1.75}
-.axis{margin:15px 0}
+.radar-wrap{background:var(--paper);border:1px solid var(--line)}
+.axis{margin:14px 0}
 .axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
 .axis-head strong{font-size:13px}
 .axis-head span{color:var(--accent);font-weight:700}
 .axis-labels{color:var(--muted)}
-.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:8px 0}
+.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:7px 0}
 .track::before{content:"";position:absolute;left:50%;width:1px;height:9px;background:var(--line)}
 .track i{position:absolute;width:16px;height:16px;top:-3.5px;border-radius:50%;background:var(--accent);border:2.5px solid var(--card);box-shadow:0 0 0 1.5px var(--accent);transform:translateX(-50%)}
 .rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -120,23 +128,133 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .mini b{display:block;color:var(--accent);font-size:12px;margin-bottom:5px}
 .mini .partner-name{font-family:var(--serif);font-size:18px;font-weight:800;color:var(--ink);margin-bottom:4px}
 .mini p{font-size:13px;line-height:1.68}
+.chem-box{background:var(--paper);border:1px solid var(--line)}
+.chem-select{border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.chem-out{background:var(--card);border:1px solid var(--line)}
+.chem-pct{color:var(--accent)}
+.chem-bar{background:var(--soft)}
+.chem-bar i{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.chem-copy-btn{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 32%,var(--line));color:var(--accent)}
+.dex-bar{background:var(--paper);border:1px dashed var(--accent2)}
+.dex-open-btn{background:var(--card);border-color:var(--accent);color:var(--accent)}
+.dex-card{background:var(--paper);border:1px solid var(--line)}
+.dex-card.unlocked{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
 .egg-box{padding:14px 16px;border-radius:14px;background:var(--paper);border:1px dashed var(--accent2);margin-top:10px}
 .egg-box b{display:block;font-size:12px;color:var(--accent2);margin-bottom:4px;letter-spacing:.05em}
 .egg-box p{font-size:14px}
 .status-bar{font-size:12px;color:var(--accent);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:600}
-.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
-.poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.footer{text-align:center;margin:16px 0 0;font-size:11px;color:var(--muted);line-height:1.75}
+.poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.theme-chip{background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+.theme-chip.active{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+.sig-input{border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.sig-apply{background:var(--soft);border-color:var(--accent);color:var(--accent)}
 dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:1px solid var(--line);border-radius:22px;padding:20px;background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.25)}
-dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
+dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(4px)}
 .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
 .copy-area{width:100%;min-height:150px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+
+/* === Header Controls & Sound Button === */
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sound-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:99px;font-size:11px;font-weight:700;min-height:28px;line-height:1;letter-spacing:.04em}
+.sound-btn.muted{opacity:.62}
+/* === CTA Shimmer & Interactive Foil Tilt === */
+.primary{position:relative;overflow:hidden}
+.primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.26),transparent);transform:skewX(-18deg);animation:btnSheen 4.4s ease-in-out infinite;pointer-events:none}
+@keyframes btnSheen{0%,68%{left:-120%}100%{left:165%}}
+.foil-tilt{transition:transform .22s ease-out;position:relative}
+.foil-tilt::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,20%),rgba(255,255,255,.16),transparent 54%);opacity:0;transition:opacity .25s}
+.foil-tilt:hover::after{opacity:1}
+/* === Interactive Teaser Cards === */
+.teaser{cursor:pointer;transition:transform .16s ease,border-color .18s ease,box-shadow .18s ease}
+.teaser:hover{transform:translateY(-2px)}
+.teaser:active{transform:scale(.98)}
+/* === Chapter Dots & Keyboard Hint === */
+.chapter-dots{display:flex;gap:5px;margin:8px 0 4px}
+.chapter-dots span{flex:1;height:4px;border-radius:99px;opacity:.22;transition:opacity .25s,transform .25s}
+.chapter-dots span.done{opacity:.72}
+.chapter-dots span.now{opacity:1;transform:scaleY(1.35)}
+.kbd-hint{display:none;text-align:center;font-size:11px;opacity:.65;margin-top:8px}
+@media(hover:hover) and (pointer:fine){.kbd-hint{display:block}}
+/* === Radar Box === */
+.radar-wrap{display:flex;justify-content:center;align-items:center;margin:10px 0 14px;padding:10px;border-radius:16px}
+.radar-svg{width:min(280px,100%);height:auto;display:block}
+.radar-poly{transform-origin:140px 122px;animation:radarPop .55s cubic-bezier(.22,1,.36,1)}
+@keyframes radarPop{from{opacity:0;transform:scale(.45)}to{opacity:1;transform:scale(1)}}
+/* === Friend Compatibility Checker Widget === */
+.chem-box{margin-top:14px;padding:15px;border-radius:15px}
+.chem-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+.chem-head strong{font-size:13.5px}
+.chem-head span{font-size:11px;opacity:.75}
+.chem-select{width:100%;min-height:44px;padding:9px 12px;border-radius:11px;font:inherit;font-size:13.5px;cursor:pointer}
+.chem-out{margin-top:12px;padding:13px 14px;border-radius:12px;animation:enter .24s ease-out}
+.chem-score-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.chem-verdict{font-weight:800;font-size:14px}
+.chem-pct{font-weight:900;font-size:20px;line-height:1}
+.chem-bar{height:7px;border-radius:99px;overflow:hidden;margin:6px 0 9px}
+.chem-bar i{display:block;height:100%;border-radius:99px;transition:width .4s cubic-bezier(.22,1,.36,1)}
+.chem-copy-btn{margin-top:10px;width:100%;min-height:38px;padding:7px 12px;font-size:12.5px;font-weight:700;border-radius:10px}
+/* === Collection Dex Button & Grid === */
+.dex-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;margin-top:12px}
+.dex-bar-info strong{display:block;font-size:13px}
+.dex-bar-info span{display:block;font-size:11.5px;opacity:.75}
+.dex-open-btn{min-height:36px;padding:6px 14px;font-size:12px;font-weight:700;border-radius:99px;flex-shrink:0}
+.dex-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.dex-card{padding:11px 10px;border-radius:12px;display:flex;flex-direction:column;gap:4px}
+.dex-card.locked{opacity:.58;border-style:dashed!important}
+.dex-card b{font-size:13px;line-height:1.35}
+.dex-card small{font-size:11px;line-height:1.45;opacity:.8}
+/* === Poster Customization Controls === */
+.poster-tools{display:grid;gap:9px;margin:10px 0 8px}
+.poster-themes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.theme-chip{min-height:36px;padding:6px 10px;font-size:12px;font-weight:700;border-radius:10px;text-align:center}
+.sig-row{display:flex;gap:8px;align-items:center}
+.sig-input{flex:1;min-height:38px;padding:6px 11px;border-radius:10px;font:inherit;font-size:13px}
+.sig-apply{min-height:38px;padding:6px 13px;font-size:12px;font-weight:700;border-radius:10px;flex-shrink:0}
+/* === Chapter Toast === */
+.quiz-toast{position:fixed;top:16px;left:50%;transform:translate(-50%,-18px);opacity:0;pointer-events:none;z-index:999;padding:8px 16px;border-radius:99px;font-size:12.5px;font-weight:700;box-shadow:0 10px 28px rgba(0,0,0,.22);transition:opacity .25s,transform .25s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.quiz-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:440px){.dex-grid{grid-template-columns:1fr}}
+
+
+      body{background-image:radial-gradient(rgba(18,84,79,.065) 1px,transparent 1px);background-size:22px 22px}
+      section.panel{position:relative;border-top:0;border-radius:22px}
+      section.panel::before{content:"";position:absolute;top:0;left:0;right:0;height:7px;background:repeating-linear-gradient(-45deg,#12544f 0 14px,#fffdf7 14px 22px,#c88a3b 22px 36px,#fffdf7 36px 44px);z-index:2}
+      .hero{border-radius:16px;background:linear-gradient(160deg,#0f3539,#1d5c58 58%,#3e847b)}
+      .hero-postmark{position:absolute;top:12px;left:14px;width:54px;height:54px;border-radius:50%;border:1.5px dashed rgba(246,225,180,.78);display:grid;place-items:center;text-align:center;font-size:9px;font-weight:800;line-height:1.18;letter-spacing:.8px;color:#f6e1b4;transform:rotate(-12deg);background:rgba(15,53,57,.32);backdrop-filter:blur(4px)}
+      .cloud-drift{animation:cloudMove 16s ease-in-out infinite alternate}
+      .cloud-drift2{animation:cloudMove 22s ease-in-out infinite alternate-reverse}
+      @keyframes cloudMove{from{transform:translateX(-14px)}to{transform:translateX(18px)}}
+      .twinkle{animation:twinkle 3.2s ease-in-out infinite alternate}
+      @keyframes twinkle{from{opacity:.35}to{opacity:1}}
+      .result-cover{border:1.5px dashed color-mix(in srgb,var(--accent) 40%,var(--line));background:linear-gradient(180deg,var(--card),var(--paper))}
+      .ticket-notch{position:relative;border-top:1.5px dashed var(--line);margin:14px -14px 10px;padding:12px 14px 0}
+      .ticket-notch::before,.ticket-notch::after{content:"";position:absolute;top:-9px;width:18px;height:18px;border-radius:50%;background:var(--card);border:1px solid var(--line)}
+      .ticket-notch::before{left:-10px}.ticket-notch::after{right:-10px}
+      .quiz-toast{background:#12544f;color:#fffdf7}
+    
 @media(max-width:440px){
-  main{padding:14px 12px 28px}
-  .teasers{grid-template-columns:1fr}
+  main{padding:10px 11px 18px}
+  header{margin-bottom:9px;padding-bottom:8px}
+  .brand{letter-spacing:1.1px;font-size:10px;white-space:nowrap}
+  .issue{font-size:10px}
+  section.panel{padding:14px 14px 16px}
+  .hero{height:142px}
+  .eyebrow{margin:10px 0 4px;font-size:10px}
+  h1{font-size:26px;line-height:1.2}
+  .lead{font-size:13px;line-height:1.62;margin:7px 0 10px}
+  .pills{gap:5px;margin:0 0 11px}
+  .pill{font-size:10.5px;padding:3px 9px}
+  button.primary{min-height:42px;padding:10px 14px;font-size:14.5px}
+  .teaser-wrap{margin:11px 0 6px;padding-top:10px}
+  .teaser-head{margin-bottom:7px}
   .duo,.actions-row{grid-template-columns:1fr}
   .option{font-size:14px}
-  .brand{letter-spacing:1.4px}
+  .teaser{padding:8px 7px}
+  .teaser b{font-size:12.5px}
+  .teaser span{font-size:9.5px}
+  .teaser small{font-size:9.5px;-webkit-line-clamp:1}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -145,7 +263,10 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
 <main>
   <header>
     <span class="brand">CITY ATLAS</span>
-    <span class="issue">VOL. 01 · 城市漫游志</span>
+    <div class="header-right">
+      <span class="issue">VOL. 01 · 城市漫游志</span>
+      <button type="button" id="soundBtn" class="sound-btn" aria-label="切换音效">🔊 音效</button>
+    </div>
   </header>
   <div id="app"></div>
   <footer class="footer">原创趣味自我探索 · 仅供娱乐参考，非专业心理测评<br>无需登录 · 所有答题记录仅保存在你的本地浏览器</footer>
@@ -153,10 +274,20 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
 
 <dialog id="posterDialog" aria-labelledby="posterTitle">
   <div class="dialog-head">
-    <h3 id="posterTitle">你的小红书专属海报</h3>
+    <h3 id="posterTitle">你的 3:4 城市旅行明信片海报</h3>
     <button id="closePoster" type="button">关闭</button>
   </div>
-  <p class="muted">3:4 高清收藏卡 · 手机直接长按图片保存，或点击下方下载。</p>
+  <p class="muted">1080 × 1440 收藏卡 · 可切换画风与自定义署名，手机长按保存。</p>
+  <div class="poster-tools">
+    <div class="poster-themes" role="group" aria-label="切换海报风格">
+      <button type="button" class="theme-chip active" data-ptheme="0">复古邮戳明信片</button>
+      <button type="button" class="theme-chip" data-ptheme="1">夜航蓝调登机牌</button>
+    </div>
+    <div class="sig-row">
+      <input id="sigInput" class="sig-input" type="text" maxlength="12" placeholder="选填署名（如：旅人小林）" aria-label="海报自定义署名">
+      <button type="button" id="sigApply" class="sig-apply">印上署名</button>
+    </div>
+  </div>
   <div id="posterArea"></div>
   <div class="stack" style="margin-top:12px">
     <button class="primary" id="downloadPoster">下载高清 PNG 海报</button>
@@ -174,14 +305,360 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
   <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
 </dialog>
 
+<dialog id="peekDialog" aria-labelledby="peekTitle">
+  <div class="dialog-head">
+    <h3 id="peekTitle">档案预览</h3>
+    <button id="closePeek" type="button">关闭</button>
+  </div>
+  <div id="peekBody"></div>
+</dialog>
+
+<dialog id="dexDialog" aria-labelledby="dexTitle">
+  <div class="dialog-head">
+    <h3 id="dexTitle">灵魂城市邮戳收集册</h3>
+    <button id="closeDex" type="button">关闭</button>
+  </div>
+  <p class="muted" id="dexSub">完成测试自动点亮档案，发给朋友一起集齐全部隐藏结果！</p>
+  <div id="dexGrid" class="dex-grid"></div>
+</dialog>
+
 <script>
-const D={"title":"你的灵魂老家在哪座城市","subtitle":"城市人格 · 旅行明信片","kind":"城市","axes":[["生活节奏","慢享","高效"],["社交方式","独处","热闹"],["环境偏好","自然","都市"],["文化偏好","传统","新潮"]],"questions":[{"axis":0,"text":"周末醒来，没有任何安排，你最想怎么度过？","options":[{"text":"睡到自然醒，慢慢吃早饭","score":0},{"text":"按计划打卡，充分利用一天","score":3},{"text":"安排两三件想做的事","score":2},{"text":"出门喝咖啡，随心逛逛","score":1}]},{"axis":1,"text":"朋友带你去一个陌生聚会，你会？","options":[{"text":"跟熟悉的人聊几句","score":1},{"text":"认识几位有趣的新朋友","score":2},{"text":"找个安静角落待着","score":0},{"text":"主动加入人群，和大家聊起来","score":3}]},{"axis":2,"text":"每天拉开窗帘，你最希望看见？","options":[{"text":"绿地与楼宇交织的街景","score":2},{"text":"灯光璀璨的现代天际线","score":3},{"text":"树木环绕的低层街区","score":1},{"text":"山林、湖泊或海岸","score":0}]},{"axis":3,"text":"逛一座陌生城市，你先找哪里？","options":[{"text":"保留老建筑的生活街巷","score":1},{"text":"老街、古迹和传统手艺","score":0},{"text":"旧建筑改造的创意空间","score":2},{"text":"新潮商圈和前沿设计店","score":3}]},{"axis":1,"text":"辛苦一天之后，你更愿意？","options":[{"text":"和一两个熟人吃晚饭","score":1},{"text":"约朋友出来聊天","score":2},{"text":"参加一场热闹的夜间活动","score":3},{"text":"关掉消息，一个人休息","score":0}]},{"axis":2,"text":"散步时，哪条路线最吸引你？","options":[{"text":"走一条绿树成荫的小路","score":1},{"text":"经过街区、公园与咖啡店","score":2},{"text":"穿过树林或沿着湖岸","score":0},{"text":"沿繁华主街看城市灯光","score":3}]},{"axis":3,"text":"周末只能看一种展览，你选？","options":[{"text":"地方民俗与老照片","score":1},{"text":"当代艺术与传统融合展","score":2},{"text":"未来科技与先锋设计展","score":3},{"text":"传统器物与历史文献","score":0}]},{"axis":0,"text":"假设通勤时间相同，你喜欢哪种路上状态？","options":[{"text":"找最快的路线，少等一会","score":2},{"text":"边听歌边从容出发","score":1},{"text":"留足时间，慢慢走","score":0},{"text":"精确规划路线与时间","score":3}]},{"axis":3,"text":"给朋友挑一份城市礼物，你会选？","options":[{"text":"有地方故事的特色物件","score":1},{"text":"独立品牌的先锋小物","score":3},{"text":"当地传统手作","score":0},{"text":"传统元素的新设计","score":2}]},{"axis":2,"text":"房租相同，你想住在哪里？","options":[{"text":"生活设施齐全的混合街区","score":2},{"text":"交通便利的城市核心区","score":3},{"text":"临近公园的安静社区","score":1},{"text":"靠近自然，远离商业区","score":0}]},{"axis":1,"text":"搬到新地方的第一个月，你会？","options":[{"text":"主动加入社群，扩大朋友圈","score":3},{"text":"先熟悉自己的生活半径","score":0},{"text":"和邻居点头打招呼","score":1},{"text":"通过兴趣活动结识几个人","score":2}]},{"axis":0,"text":"三天假期，你更喜欢？","options":[{"text":"不做攻略，到了再决定","score":0},{"text":"规划好几个想去的地点","score":2},{"text":"排出高效率的行程表","score":3},{"text":"每天留一个主要目的地","score":1}]},{"axis":1,"text":"朋友临时邀请你参加多人聚餐，你会？","options":[{"text":"有兴趣就去认识大家","score":2},{"text":"有熟悉的人才去","score":1},{"text":"婉拒，享受独处时间","score":0},{"text":"欣然赴约，喜欢新鲜热闹","score":3}]},{"axis":2,"text":"旅行时最想拍下什么？","options":[{"text":"山海与自然光影","score":0},{"text":"高楼、夜景与繁华灯牌","score":3},{"text":"花草、院落和静谧小巷","score":1},{"text":"有烟火气的建筑与街景","score":2}]},{"axis":3,"text":"旅行结束想带走什么记忆？","options":[{"text":"传统与新生活碰撞的瞬间","score":2},{"text":"新鲜展览、潮流与城市创新","score":3},{"text":"历史遗迹和老城故事","score":0},{"text":"当地人的传统日常","score":1}]},{"axis":0,"text":"下午突然多出两小时，你会？","options":[{"text":"悠闲处理一件小事","score":1},{"text":"让自己彻底放松","score":0},{"text":"完成积攒的几个待办","score":2},{"text":"马上排满高优先级任务","score":3}]},{"axis":0,"text":"理想的一天结束时，你希望？","options":[{"text":"身心完全放松","score":0},{"text":"做了喜欢的事也有空休息","score":1},{"text":"完成许多有成就感的任务","score":3},{"text":"顺利完成几个目标","score":2}]},{"axis":1,"text":"生日这天，你倾向于？","options":[{"text":"办一场热闹的聚会","score":3},{"text":"独自享受一顿好饭","score":0},{"text":"和最亲近的人简单庆祝","score":1},{"text":"邀请几位朋友一起玩","score":2}]},{"axis":2,"text":"天气晴好时，你最想去哪儿？","options":[{"text":"露天市集与城市公园","score":2},{"text":"植物园、河边步道","score":1},{"text":"徒步山野或坐在海边","score":0},{"text":"商圈、展馆和观景高楼","score":3}]},{"axis":3,"text":"哪类建筑最吸引你驻足？","options":[{"text":"历史悠久的古宅","score":0},{"text":"传统院落与老街","score":1},{"text":"线条大胆的现代建筑","score":3},{"text":"旧建筑与现代设计的融合","score":2}]},{"axis":0,"text":"假设收入一样，你偏好怎样的工作日？","options":[{"text":"节奏舒缓，有充足休息","score":0},{"text":"快节奏、高密度的任务","score":3},{"text":"有明确目标和适度挑战","score":2},{"text":"任务适中，能自己安排","score":1}]},{"axis":3,"text":"你更期待参加哪种城市活动？","options":[{"text":"地方文化与手工活动","score":1},{"text":"跨界艺术与创意市集","score":2},{"text":"传统节庆和民俗体验","score":0},{"text":"新兴科技和潮流发布活动","score":3}]},{"axis":2,"text":"最吸引你的生活街区是？","options":[{"text":"绿荫与小店围绕的社区","score":1},{"text":"商业便利又有自然空间","score":2},{"text":"全天充满活力的中心街区","score":3},{"text":"靠近山水、安静少车","score":0}]},{"axis":1,"text":"理想的旅行搭伴是？","options":[{"text":"自己出发最自在","score":0},{"text":"一个默契的朋友","score":1},{"text":"一群人共同制造热闹回忆","score":3},{"text":"三四人一起探索","score":2}]}],"profiles":[{"name":"成都","vector":[0,2,1,1],"tag":"烟火慢生活","quote":"慢一点，也有自己的远方。","insight":"你骨子里拒绝被焦虑推着走，比起把每一小时榨出产出，你更在意今天有没有吃到热乎的饭、吹到舒服的风。你向往有余裕、有邻里温度的日常，能在慢节奏里把普通日子过得热气腾腾。","strength":"能从寻常小事找到乐趣","caution":"别让舒适感拖住真正想做的事","action":"找一家茶馆坐坐，再沿公园散步","motif":"茶香与烟火","no":"01","tags":["松弛感天花板","人间烟火气","内在丰盈"],"contrast":"表面佛系随和、好像什么都无所谓，其实心里门儿清，对真正想守护的人和生活底线格外坚定。","match":["杭州","一个懂生活烟火，一个带诗意灵感，在一起松弛又高级。"],"clash":["深圳","一个想喝茶发呆，一个想搞钱加速，凑一起像慢镜头遇上二倍速。"],"vibe":"下午四点的公园长椅 · 一杯盖碗茶与微风","stamp":"安逸 · 慢城"},{"name":"杭州","vector":[1.3,0.7,0.4,2.2],"tag":"山水与创意","quote":"山水之间，留一页新的故事。","insight":"你的理想生活需要“半城烟火半城诗”——既渴望自然山水带来的松弛呼吸，又离不开创意、书店与新鲜灵感。你不喜欢过度喧嚣，却总能在安静观察里生长出漂亮的新想法。","strength":"在自然与新想法间切换","caution":"别因追求理想环境忽略现实便利","action":"湖边散步后逛一间设计书店","motif":"湖光与灵感","no":"02","tags":["山水治愈系","审美控","温和进取"],"contrast":"看起来温润克制、很有分寸感，私底下其实藏着不少天马行空的浪漫执念。","match":["厦门","都偏爱自然微风与审美质感，连沉默都不会觉得尴尬。"],"clash":["重庆","你偏爱留白与清淡，对方热辣直接，偶尔会觉得节奏太满。"],"vibe":"雨后西湖边的桂花香 · 独立书店的暖黄台灯","stamp":"湖光 · 灵感"},{"name":"重庆","vector":[2,3,2,1],"tag":"热烈山城","quote":"翻过一道坡，就是新的热闹。","insight":"你天生自带饱满的生命力和好奇心，喜欢充满起伏、人情味与未知拐角的生活。平淡按部就班会让你觉得闷，反而是热气腾腾的街头、鲜活的人群和意料之外的惊喜，最能点燃你。","strength":"对新环境适应快","caution":"热闹之后记得留出休息时间","action":"沿坡道探街巷，再看一场夜景","motif":"山城与灯火","no":"03","tags":["热辣生命力","江湖义气","立体多面"],"contrast":"在人群里总是最能带热气氛的那个，回到家关上门却偶尔会突然静音，需要自己消化情绪。","match":["长沙","两大快乐发动机强强联手，半夜两点还能相约吃宵夜聊人生。"],"clash":["苏州","一个爱热烈翻涌，一个爱细雨无声，生活音量差了好几个度。"],"vibe":"夜幕下的过江索道 · 巷口飘来的火锅香气","stamp":"山城 · 热烈"},{"name":"苏州","vector":[0,0,1,0],"tag":"细腻江南","quote":"把日常过成一幅细笔画。","insight":"你对安静、秩序与传统质感有着天然偏爱，不追逐转瞬即逝的热闹，更愿意在小尺度的精致空间里慢慢打磨生活。一盏茶、一扇花窗、一场恰到好处的雨，都能让你内心安定。","strength":"细致、善于发现生活质感","caution":"偶尔试试陌生的生活方式","action":"选一处园林和一条安静小巷","motif":"园林与细雨","no":"04","tags":["细节控","东方审美","静水流深"],"contrast":"外表柔和细腻、不争不抢，骨子里其实极有审美洁癖，对敷衍和粗糙零容忍。","match":["大理","同样珍惜安静与自由呼吸，在一起像共赏一幅水墨长卷。"],"clash":["上海","你喜欢细水长流，对方偏爱全速更新，容易感到精神耗电。"],"vibe":"评弹声里的青石板巷 · 细雨打在芭蕉叶上","stamp":"江南 · 细笔"},{"name":"上海","vector":[3,2,3,3],"tag":"都市探索","quote":"在无数可能里，找到自己的坐标。","insight":"你迷恋丰富的选择权与持续更新的世界——前沿展览、小众咖啡馆、多元的人群与高效的规则，都能给你带来安全感与兴奋感。你愿意投入精力去探索，在无数可能里精准定位自己的坐标。","strength":"能从多样选择中发现机会","caution":"别把忙碌等同于充实","action":"逛展览，再沿街寻找有趣建筑","motif":"街区与都会","no":"05","tags":["摩登探索家","边界清晰","高密度好奇"],"contrast":"看起来精致独立、很有都会距离感，其实只要遇到同频的人，能从凌晨聊到天亮。","match":["深圳","同样尊重边界与效率，彼此独立又互相欣赏，毫无精神内耗。"],"clash":["昆明","你习惯把日子过得有质感有节奏，面对完全随性的慢节奏会有点坐不住。"],"vibe":"梧桐树影下的街角咖啡 · 陆家嘴傍晚的蓝调时刻","stamp":"摩登 · 坐标"},{"name":"北京","vector":[3,2,3,0],"tag":"文化探索","quote":"每一步，都可以通向更大的世界。","insight":"你既有清晰的目标感，又对历史厚度、文化脉络和更大的世界抱有持续热情。你不满足于浅尝辄止的小确幸，更渴望在有深度的对话、厚重的历史与开阔的格局里找到归属。","strength":"善于持续探索有深度的主题","caution":"高密度安排也需要留白","action":"给自己一个博物馆漫游日","motif":"城门与书卷","no":"06","tags":["精神厚重感","宏大视野","真诚热忱"],"contrast":"外表看起来理性沉稳、甚至有点严肃，聊起真正热爱的领域瞬间眼里发光、滔滔不绝。","match":["南京","都有文化底蕴与清醒风骨，聊天永远不缺深度和共鸣。"],"clash":["珠海","你偏爱厚重故事与大舞台，太轻盈平淡的度假感待久了会想找事做。"],"vibe":"秋日胡同里的银杏落叶 · 博物馆闭馆前的余晖","stamp":"古都 · 视野"},{"name":"深圳","vector":[3,1,3,3],"tag":"创新行动","quote":"让想法走在昨天的前面。","insight":"你偏爱清晰、高效、少人情羁绊的环境，相信行动比空想更有力量。你不需要密集的无效社交，反而需要一块能让自己专注打磨想法、快速试错并看见正向反馈的舞台。","strength":"行动果断、容易拥抱新事物","caution":"别因效率忽视身体与关系","action":"探索创意街区，留时间做自己的项目","motif":"新城与海风","no":"07","tags":["长期主义者","清爽高效","未来感"],"contrast":"平时像一台冷静高效的推进器，其实在海边吹吹风、看场日落就能瞬间变回柔软小孩。","match":["宁波","都是安静做事、不爱虚头巴脑的实力派，合作与相处都极度省心。"],"clash":["成都","你看见机会想立刻启动，对方先泡壶茶说“莫慌”，急死彼此。"],"vibe":"海湾公园的晚风 · 深夜落地窗前的灵感笔记","stamp":"先锋 · 破局"},{"name":"广州","vector":[2,3,2,0],"tag":"烟火交往","quote":"好好吃饭，也好好相遇。","insight":"你身上有种极其难得的“务实松弛感”——既能把现实生活打理得井井有条，又保留着对一顿好饭、一场真诚相聚的热爱。不端着、不装腔，在人间烟火里把关系处得长久舒服。","strength":"容易通过共同体验建立联系","caution":"避免把社交排得太满","action":"从一顿早茶开始探索老街","motif":"早茶与老街","no":"08","tags":["务实烟火气","人情通透","松弛实干"],"contrast":"平时随和接地气、很好说话，但一涉及核心原则和账目逻辑，清醒得让人佩服。","match":["武汉","都是鲜活热忱、讲实在不虚伪的性格，一顿饭就能处成老友。"],"clash":["宁波","一个爱热热闹闹约早茶，一个偏爱独来独往静悄悄，社交电量不同频。"],"vibe":"清晨茶楼的一盅两件 · 骑楼老街的晚风","stamp":"老广 · 烟火"},{"name":"厦门","vector":[0.3,1.2,0.2,2.5],"tag":"海边漫游","quote":"把烦恼交给海风。","insight":"你的灵魂天生需要留白和海风。比起奔跑在拥挤的赛道上，你更喜欢不紧不慢地穿过有绿植和小店的街角，在自然与创意的交界处，给情绪留出一个随时可以深呼吸的角落。","strength":"懂得给自己安排恢复时间","caution":"必要的目标也值得认真规划","action":"沿海散步，找一间小书店","motif":"海岸与小店","no":"09","tags":["海风文艺魂","温柔治愈","轻盈浪漫"],"contrast":"看起来软萌好相处、充满文艺气息，其实内心主意很大，不喜欢被任何人催促或定义。","match":["青岛","海风系灵魂双向奔赴，一起看海发呆就能充饱一整周的电。"],"clash":["北京","你喜欢轻盈松弛的日常，面对高密度宏大叙事偶尔会觉得压力山大。"],"vibe":"环岛路傍晚的橘子海 · 巷子里飘出音乐的小书店","stamp":"海屿 · 漫游"},{"name":"昆明","vector":[0.2,1.4,0.2,1.0],"tag":"四季闲游","quote":"把四季的颜色装进口袋。","insight":"你拥有极强的幸福感知力，不需要惊天动地的刺激，一束刚买的新鲜花、一片晴朗的云、一阵恰到好处的微风就能让你心情变好。你偏爱温和无压的环境，把平凡日子过成永不落幕的春天。","strength":"善于感受微小变化","caution":"别把所有未知都留到明天","action":"逛花市，再找一块绿地休息","motif":"花市与晴光","no":"10","tags":["四季如春心","感知力拉满","治愈日常"],"contrast":"看着随遇而安、没太大胜负欲，其实非常清楚自己不要什么，绝不委屈自己内耗。","match":["成都","都是懂享受当下、绝不拿焦虑折磨自己的生活家。"],"clash":["上海","你爱自然晴光与松弛，对方偏爱高密都会节奏，容易互相拉扯。"],"vibe":"斗南花市抱满怀的鲜花 · 午后洒满阳台的晴光","stamp":"春城 · 晴光"},{"name":"西安","vector":[1.0,2.2,1.8,0.0],"tag":"历史漫步","quote":"时间很长，故事还在继续。","insight":"你对时间沉淀下来的故事格外着迷，总能把沿途见闻串联成有温度的记忆。你既享受适度的人声鼎沸与江湖豪气，也需要脚下有根、心中有底的厚重文化底色。","strength":"擅长把见闻串联成故事","caution":"旅行时别只按清单打卡","action":"选一段古城路线慢慢走","motif":"古城与长风","no":"11","tags":["叙事感人格","古今共振","厚积薄发"],"contrast":"看似念旧慢热、带点古风书卷气，其实心里藏着一股侠气和说走就走的爽快。","match":["北京","同样对历史人文有共鸣，一起逛展压马路能聊出一部纪录片。"],"clash":["珠海","你迷恋岁月痕迹与烟火故事，过于簇新安静的环境会让你觉得少点味道。"],"vibe":"城墙根下的落日与民谣 · 碳水香气弥漫的傍晚","stamp":"长安 · 故事"},{"name":"南京","vector":[1,1,2,0],"tag":"古今交融","quote":"旧城墙下，也有新的日子。","insight":"你是古今交融的温柔代表——骨子里带着文人般的克制与深情，同时又能从容接住现代生活的便利与变化。你珍惜熟悉的安全感，也不拒绝在梧桐树影下邂逅一点恰到好处的新意。","strength":"能在变化中保留稳定感","caution":"避免对选择反复犹豫","action":"走城墙、逛书店、喝一杯咖啡","motif":"城墙与梧桐","no":"12","tags":["温柔风骨","怀旧浪漫","静中有力"],"contrast":"表面淡定温和、情绪稳定，其实共情力极强，看一场老电影或一场秋雨就能悄悄动容。","match":["苏州","江南审美同频共振，一起散步喝茶就是最高级的浪漫。"],"clash":["长沙","你偏爱含蓄微醺的氛围，对方全天高能蹦迪模式会让你有点招架不住。"],"vibe":"颐和路飘落的梧桐叶 · 玄武湖畔的晚风","stamp":"金陵 · 梧桐"},{"name":"青岛","vector":[1.4,1.5,0.3,1.0],"tag":"海风生活","quote":"海风吹来，日子便有了方向。","insight":"你擅长在理想与现实、自然与人文之间找到最舒服的黄金平衡点。你不爱极端内卷，也不甘完全躺平；吹吹海风、看看老建筑、把工作和休息划分清楚，就是你眼里的好日子。","strength":"容易找到活动与休息的平衡","caution":"留心季节和现实生活成本","action":"沿海边步道走走，再看看老建筑","motif":"海风与红瓦","no":"13","tags":["清爽平衡派","山海皆爱","自在通透"],"contrast":"平时看着随性洒脱、大大咧咧，做决定时其实极其务实理智，很少被情绪冲昏头。","match":["厦门","同样自带海风滤镜，生活步调和审美几乎完美咬合。"],"clash":["重庆","你喜欢开阔清爽的秩序感，对方火辣魔幻的折叠节奏偶尔让你晕头转向。"],"vibe":"红瓦绿树间的斜坡海景 · 夏夜微凉的晚风","stamp":"琴岛 · 海风"},{"name":"长沙","vector":[2,3,3,2],"tag":"热闹玩家","quote":"把今天过得热烈一点。","insight":"你是天生懂得把今天过得滚烫的人！新鲜的市集、沸腾的夜市、有趣的灵魂与毫无保留的大笑，都是你的能量来源。你不想把青春留给观望，更想立刻去体验、去分享、去尽兴。","strength":"能主动创造有趣的共同回忆","caution":"保持自己的休息节奏","action":"约朋友体验市集和美食","motif":"夜市与星火","no":"14","tags":["快乐制造机","鲜活炙热","夜行玩家"],"contrast":"看着是永动机般的社交达人，其实对真心认可的朋友极度仗义且敏感护短。","match":["重庆","热辣双子星，永远有下一顿好吃的和下一个好玩的地方。"],"clash":["大理","你怕冷清无聊，对方怕喧嚣打扰，两种快乐完全不在同一频道。"],"vibe":"凌晨一点依然发光的街巷 · 湘江边的晚风与烟火","stamp":"星城 · 炙热"},{"name":"武汉","vector":[2,3,2,2],"tag":"江城活力","quote":"沿着江水，去找新的故事。","insight":"你像奔涌的江水一样包容又有生命力——既接得住市井清晨的一碗热干面，也玩得转摩登街区的新鲜潮流。你坦荡直接、适应力极强，不管身处什么场景，都能很快活出自己的主场感。","strength":"在不同场景中都能找到乐趣","caution":"别为了体验而忽略长期目标","action":"走江岸，再探索一处生活街区","motif":"江水与街巷","no":"15","tags":["江河生命力","坦荡鲜活","多面兼容"],"contrast":"说话做事爽快利落像个硬核玩家，其实内心特别看重长情与被真诚对待。","match":["广州","同样接地气又重情义，一起探索城市永远充满惊喜。"],"clash":["苏州","你习惯直来直去大开大合，遇到过于含蓄细腻的表达容易抓耳挠腮。"],"vibe":"轮渡甲板上的江风落日 · 樱花季的林荫大道","stamp":"江城 · 鲜活"},{"name":"大理","vector":[0.0,0.0,0.0,1.2],"tag":"自由漫游","quote":"人生不赶路，也可以抵达。","insight":"你的灵魂住在旷野而不是轨道里。比起外界世俗的打卡清单，你更在意内心的风向与属于自己的时间感。山风、云影、独处阅读和不被打扰的创作，能让你获得源源不断的自愈力。","strength":"擅长独立感受和自我恢复","caution":"也给重要承诺留下确定时间","action":"安排一次山野漫步或安静阅读","motif":"山风与云影","no":"16","tags":["精神自由派","旷野灵魂","自我丰沛"],"contrast":"看起来像遗世独立的酷盖/隐士，其实只要聊到精神共鸣，内心比谁都赤诚滚烫。","match":["苏州","都尊重彼此的独处结界，安静待在一起也能感受到踏实陪伴。"],"clash":["上海","你追求去KPI化的自由呼吸，高强度都市节奏会让你想连夜逃跑。"],"vibe":"苍山脚下的云影流动 · 洱海边不被打扰的清晨","stamp":"风花 · 旷野"},{"name":"福州","vector":[1,1,1,0],"tag":"温润日常","quote":"日子不必盛大，温暖就好。","insight":"你不迷恋浮夸的虚名，更钟情于有树荫、有老厝、有熟悉味道的安稳日常。你的温柔藏在日复一日的靠谱与体贴里，像四季常青的榕树一样，总能给身边人带来踏实妥帖的安心感。","strength":"善于珍惜熟悉的生活细节","caution":"主动给生活增加一点新鲜感","action":"在古厝街巷慢慢走，找特色小吃","motif":"古厝与绿荫","no":"17","tags":["温润治愈系","人间踏实感","细水长流"],"contrast":"外表温和低调、不爱抢风头，但真正扛事的时候比谁都稳重有韧性。","match":["南京","都是温润有底蕴的慢性子，把寻常日子过出安心的质感。"],"clash":["深圳","你偏好安稳绵长的生活温度，太激进求变的节奏会让你觉得没着落。"],"vibe":"三坊七巷的古厝树影 · 傍晚飘着茉莉茶香的微风","stamp":"榕城 · 温润"},{"name":"天津","vector":[1,3,2,0],"tag":"自在交谈","quote":"聊几句，日子就有了笑意。","insight":"你天生自带“把严肃生活解构出笑意”的魔法。比起紧绷着演大人，你更喜欢自在交谈、相视一笑的松弛氛围。老街的烟火与朋友间的互相接梗，就是你抵御一切疲惫的解药。","strength":"善于通过对话拉近距离","caution":"也留意独处的真实需求","action":"沿老建筑街区走走，和朋友吃饭","motif":"老街与笑语","no":"18","tags":["松弛幽默感","聊天天花板","通透乐天"],"contrast":"嘴上总爱开玩笑、看似大大咧咧，其实极其通透善良，最懂怎么不露痕迹地给人台阶下。","match":["成都","幽默松弛遇上安逸烟火，凑一块每天笑声不断、毫无内耗。"],"clash":["宁波","你爱随时抛梗互动，遇到极度安静内敛的类型会忍不住想逗对方说话。"],"vibe":"海河边的落日晚风 · 老友相聚笑声不断的餐桌","stamp":"津门 · 乐活"},{"name":"宁波","vector":[2.2,0.0,1.5,2.0],"tag":"安静进取","quote":"安静地走，坚定地向前。","insight":"你是典型的“悄悄拔尖、不爱张扬”型灵魂。你看重独立的私人空间与实打实的效率，讨厌无意义的社交表演；既能安安静静推进自己的目标，也懂得用精致的小众审美犒劳自己。","strength":"能在安静中持续推进目标","caution":"别忘了邀请他人分享成果","action":"探访海港街区和设计空间","motif":"海港与微光","no":"19","tags":["清醒实干派","安静进阶","低耗能生活"],"contrast":"表面冷静克制、自带高冷气场，熟了之后才发现你不仅靠谱，还藏着冷幽默。","match":["深圳","高效独立又不互相消耗，是彼此最省心的神仙搭子。"],"clash":["天津","一个偏爱安静专注，一个偏爱热闹唠嗑，需要提前商量社交时间。"],"vibe":"静谧海港的晨光 · 一个人高效专注的书桌与咖啡","stamp":"港城 · 笃行"},{"name":"珠海","vector":[1,0,0,3],"tag":"清爽新生活","quote":"给生活留一片开阔的蓝。","insight":"你既想要山海的开阔清澈，又割舍不下现代生活的清爽便捷。你不喜欢拥挤嘈杂，也不想退回原始闭塞——一条干净的海岸骑行道、一片蓝得发亮的天空和不被打扰的独处半径，就是你的乌托邦。","strength":"懂得为自己选择舒适的生活半径","caution":"注意理想场景之外的实际需求","action":"沿海骑行或散步，再去现代公共空间","motif":"海岸与蓝天","no":"20","tags":["清澈留白控","轻盈现代派","低密度幸福"],"contrast":"看着清冷随性、像个极简主义者，其实对生活品质和细节体验有着极高的隐形标准。","match":["深圳","同属海风现代系，一个提供能量一个提供治愈，切换自如。"],"clash":["西安","你偏爱清爽留白的新世界，太密集厚重的市井历史感偶尔会觉得太满。"],"vibe":"情侣路的单车晚风 · 落地窗外开阔清澈的蓝天","stamp":"海湾 · 留白"}],"brand":"CITY ATLAS","heroTitle":"城市漫游","heroSub":"WHERE YOUR SOUL BELONGS","intro":"如果不考虑出生地，你心里真正向往的生活是什么样？从日常选择出发，找到与你偏好相近的城市灵感。","disclaimer":"城市标签是原创生活场景原型，不代表当地居民性格，也不构成定居建议。","labels":["你的城市灵魂画像","专属城市漫游提案","宿命城市搭子 & 反差碰撞"],"art":"<svg viewBox=\"0 0 600 240\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"sky\" x2=\"1\" y2=\"1\"><stop stop-color=\"#183f46\"/><stop offset=\"1\" stop-color=\"#4f9a93\"/></linearGradient></defs><rect width=\"600\" height=\"240\" fill=\"url(#sky)\"/><circle cx=\"465\" cy=\"65\" r=\"35\" fill=\"#e7c58d\"/><path d=\"M0 160 100 70 180 150 255 90 365 172 440 108 600 155V240H0Z\" fill=\"#a1c6b1\" opacity=\".7\"/><path d=\"M0 173Q90 127 172 176T330 166T600 178V240H0Z\" fill=\"#28746f\"/><path d=\"M0 198Q170 166 320 210T600 194V240H0Z\" fill=\"#194e50\"/><g fill=\"#e7c58d\" opacity=\".9\"><rect x=\"410\" y=\"145\" width=\"24\" height=\"34\"/><rect x=\"439\" y=\"125\" width=\"26\" height=\"54\"/><rect x=\"470\" y=\"139\" width=\"18\" height=\"40\"/><rect x=\"492\" y=\"105\" width=\"28\" height=\"74\"/><rect x=\"525\" y=\"130\" width=\"23\" height=\"49\"/></g><path d=\"M0 220Q200 200 600 225\" stroke=\"#e6d6ab\" opacity=\".6\" fill=\"none\"/></svg>","palette":{"ink":"#1b3532","accent":"#165b55","accent2":"#c79248","paper":"#f5f3ea","soft":"#e1ece3","line":"#cdd9ce","card":"#fffdf8","muted":"#566b65"},"vol":"VOL. 01 · 城市漫游志","teasers":["成都","上海","大理"],"chapters":[{"title":"晨光与日常","intro":"从醒来的第一小时，看你心里真正舒服的生活节奏。"},{"title":"街角与人潮","intro":"关于热闹与留白，你和世界保持着怎样的距离？"},{"title":"风景与审美","intro":"推开窗、拐过街角，什么样的光影最先留住你的目光？"},{"title":"理想生活半径","intro":"把日子拉长到四季，哪座城市的频率与你悄然同频？"}],"calcSteps":["正在测绘你的灵魂经纬度…","校准四维生活节奏与审美坐标…","冲印你的专属城市明信片…"],"eggLabel":"你的灵魂时刻","shareTags":"#你的灵魂老家在哪座城市 #城市人格测试 #灵魂归属地","shareHook":"原来我的灵魂老家是「{name}」✨"};
+const D={"title":"你的灵魂老家在哪座城市","subtitle":"城市人格 · 旅行明信片","kind":"城市","axes":[["生活节奏","慢享","高效"],["社交方式","独处","热闹"],["环境偏好","自然","都市"],["文化偏好","传统","新潮"]],"questions":[{"axis":0,"text":"周末醒来，没有任何安排，你最想怎么度过？","options":[{"text":"睡到自然醒，慢慢吃早饭","score":0},{"text":"按计划打卡，充分利用一天","score":3},{"text":"安排两三件想做的事","score":2},{"text":"出门喝咖啡，随心逛逛","score":1}]},{"axis":1,"text":"朋友带你去一个陌生聚会，你会？","options":[{"text":"跟熟悉的人聊几句","score":1},{"text":"认识几位有趣的新朋友","score":2},{"text":"找个安静角落待着","score":0},{"text":"主动加入人群，和大家聊起来","score":3}]},{"axis":2,"text":"每天拉开窗帘，你最希望看见？","options":[{"text":"绿地与楼宇交织的街景","score":2},{"text":"灯光璀璨的现代天际线","score":3},{"text":"树木环绕的低层街区","score":1},{"text":"山林、湖泊或海岸","score":0}]},{"axis":3,"text":"逛一座陌生城市，你先找哪里？","options":[{"text":"保留老建筑的生活街巷","score":1},{"text":"老街、古迹和传统手艺","score":0},{"text":"旧建筑改造的创意空间","score":2},{"text":"新潮商圈和前沿设计店","score":3}]},{"axis":1,"text":"辛苦一天之后，你更愿意？","options":[{"text":"和一两个熟人吃晚饭","score":1},{"text":"约朋友出来聊天","score":2},{"text":"参加一场热闹的夜间活动","score":3},{"text":"关掉消息，一个人休息","score":0}]},{"axis":2,"text":"散步时，哪条路线最吸引你？","options":[{"text":"走一条绿树成荫的小路","score":1},{"text":"经过街区、公园与咖啡店","score":2},{"text":"穿过树林或沿着湖岸","score":0},{"text":"沿繁华主街看城市灯光","score":3}]},{"axis":3,"text":"周末只能看一种展览，你选？","options":[{"text":"地方民俗与老照片","score":1},{"text":"当代艺术与传统融合展","score":2},{"text":"未来科技与先锋设计展","score":3},{"text":"传统器物与历史文献","score":0}]},{"axis":0,"text":"假设通勤时间相同，你喜欢哪种路上状态？","options":[{"text":"找最快的路线，少等一会","score":2},{"text":"边听歌边从容出发","score":1},{"text":"留足时间，慢慢走","score":0},{"text":"精确规划路线与时间","score":3}]},{"axis":3,"text":"给朋友挑一份城市礼物，你会选？","options":[{"text":"有地方故事的特色物件","score":1},{"text":"独立品牌的先锋小物","score":3},{"text":"当地传统手作","score":0},{"text":"传统元素的新设计","score":2}]},{"axis":2,"text":"房租相同，你想住在哪里？","options":[{"text":"生活设施齐全的混合街区","score":2},{"text":"交通便利的城市核心区","score":3},{"text":"临近公园的安静社区","score":1},{"text":"靠近自然，远离商业区","score":0}]},{"axis":1,"text":"搬到新地方的第一个月，你会？","options":[{"text":"主动加入社群，扩大朋友圈","score":3},{"text":"先熟悉自己的生活半径","score":0},{"text":"和邻居点头打招呼","score":1},{"text":"通过兴趣活动结识几个人","score":2}]},{"axis":0,"text":"三天假期，你更喜欢？","options":[{"text":"不做攻略，到了再决定","score":0},{"text":"规划好几个想去的地点","score":2},{"text":"排出高效率的行程表","score":3},{"text":"每天留一个主要目的地","score":1}]},{"axis":1,"text":"朋友临时邀请你参加多人聚餐，你会？","options":[{"text":"有兴趣就去认识大家","score":2},{"text":"有熟悉的人才去","score":1},{"text":"婉拒，享受独处时间","score":0},{"text":"欣然赴约，喜欢新鲜热闹","score":3}]},{"axis":2,"text":"旅行时最想拍下什么？","options":[{"text":"山海与自然光影","score":0},{"text":"高楼、夜景与繁华灯牌","score":3},{"text":"花草、院落和静谧小巷","score":1},{"text":"有烟火气的建筑与街景","score":2}]},{"axis":3,"text":"旅行结束想带走什么记忆？","options":[{"text":"传统与新生活碰撞的瞬间","score":2},{"text":"新鲜展览、潮流与城市创新","score":3},{"text":"历史遗迹和老城故事","score":0},{"text":"当地人的传统日常","score":1}]},{"axis":0,"text":"下午突然多出两小时，你会？","options":[{"text":"悠闲处理一件小事","score":1},{"text":"让自己彻底放松","score":0},{"text":"完成积攒的几个待办","score":2},{"text":"马上排满高优先级任务","score":3}]},{"axis":0,"text":"理想的一天结束时，你希望？","options":[{"text":"身心完全放松","score":0},{"text":"做了喜欢的事也有空休息","score":1},{"text":"完成许多有成就感的任务","score":3},{"text":"顺利完成几个目标","score":2}]},{"axis":1,"text":"生日这天，你倾向于？","options":[{"text":"办一场热闹的聚会","score":3},{"text":"独自享受一顿好饭","score":0},{"text":"和最亲近的人简单庆祝","score":1},{"text":"邀请几位朋友一起玩","score":2}]},{"axis":2,"text":"天气晴好时，你最想去哪儿？","options":[{"text":"露天市集与城市公园","score":2},{"text":"植物园、河边步道","score":1},{"text":"徒步山野或坐在海边","score":0},{"text":"商圈、展馆和观景高楼","score":3}]},{"axis":3,"text":"哪类建筑最吸引你驻足？","options":[{"text":"历史悠久的古宅","score":0},{"text":"传统院落与老街","score":1},{"text":"线条大胆的现代建筑","score":3},{"text":"旧建筑与现代设计的融合","score":2}]},{"axis":0,"text":"假设收入一样，你偏好怎样的工作日？","options":[{"text":"节奏舒缓，有充足休息","score":0},{"text":"快节奏、高密度的任务","score":3},{"text":"有明确目标和适度挑战","score":2},{"text":"任务适中，能自己安排","score":1}]},{"axis":3,"text":"你更期待参加哪种城市活动？","options":[{"text":"地方文化与手工活动","score":1},{"text":"跨界艺术与创意市集","score":2},{"text":"传统节庆和民俗体验","score":0},{"text":"新兴科技和潮流发布活动","score":3}]},{"axis":2,"text":"最吸引你的生活街区是？","options":[{"text":"绿荫与小店围绕的社区","score":1},{"text":"商业便利又有自然空间","score":2},{"text":"全天充满活力的中心街区","score":3},{"text":"靠近山水、安静少车","score":0}]},{"axis":1,"text":"理想的旅行搭伴是？","options":[{"text":"自己出发最自在","score":0},{"text":"一个默契的朋友","score":1},{"text":"一群人共同制造热闹回忆","score":3},{"text":"三四人一起探索","score":2}]}],"profiles":[{"name":"成都","vector":[0,2,1,1],"tag":"烟火慢生活","quote":"慢一点，也有自己的远方。","insight":"你骨子里拒绝被焦虑推着走，比起把每一小时榨出产出，你更在意今天有没有吃到热乎的饭、吹到舒服的风。你向往有余裕、有邻里温度的日常，能在慢节奏里把普通日子过得热气腾腾。","strength":"能从寻常小事找到乐趣","caution":"别让舒适感拖住真正想做的事","action":"找一家茶馆坐坐，再沿公园散步","motif":"茶香与烟火","no":"01","tags":["松弛感天花板","人间烟火气","内在丰盈"],"contrast":"表面佛系随和、好像什么都无所谓，其实心里门儿清，对真正想守护的人和生活底线格外坚定。","match":["杭州","一个懂生活烟火，一个带诗意灵感，在一起松弛又高级。"],"clash":["深圳","一个想喝茶发呆，一个想搞钱加速，凑一起像慢镜头遇上二倍速。"],"vibe":"下午四点的公园长椅 · 一杯盖碗茶与微风","stamp":"安逸 · 慢城"},{"name":"杭州","vector":[1.3,0.7,0.4,2.2],"tag":"山水与创意","quote":"山水之间，留一页新的故事。","insight":"你的理想生活需要“半城烟火半城诗”——既渴望自然山水带来的松弛呼吸，又离不开创意、书店与新鲜灵感。你不喜欢过度喧嚣，却总能在安静观察里生长出漂亮的新想法。","strength":"在自然与新想法间切换","caution":"别因追求理想环境忽略现实便利","action":"湖边散步后逛一间设计书店","motif":"湖光与灵感","no":"02","tags":["山水治愈系","审美控","温和进取"],"contrast":"看起来温润克制、很有分寸感，私底下其实藏着不少天马行空的浪漫执念。","match":["厦门","都偏爱自然微风与审美质感，连沉默都不会觉得尴尬。"],"clash":["重庆","你偏爱留白与清淡，对方热辣直接，偶尔会觉得节奏太满。"],"vibe":"雨后西湖边的桂花香 · 独立书店的暖黄台灯","stamp":"湖光 · 灵感"},{"name":"重庆","vector":[2,3,2,1],"tag":"热烈山城","quote":"翻过一道坡，就是新的热闹。","insight":"你天生自带饱满的生命力和好奇心，喜欢充满起伏、人情味与未知拐角的生活。平淡按部就班会让你觉得闷，反而是热气腾腾的街头、鲜活的人群和意料之外的惊喜，最能点燃你。","strength":"对新环境适应快","caution":"热闹之后记得留出休息时间","action":"沿坡道探街巷，再看一场夜景","motif":"山城与灯火","no":"03","tags":["热辣生命力","江湖义气","立体多面"],"contrast":"在人群里总是最能带热气氛的那个，回到家关上门却偶尔会突然静音，需要自己消化情绪。","match":["长沙","两大快乐发动机强强联手，半夜两点还能相约吃宵夜聊人生。"],"clash":["苏州","一个爱热烈翻涌，一个爱细雨无声，生活音量差了好几个度。"],"vibe":"夜幕下的过江索道 · 巷口飘来的火锅香气","stamp":"山城 · 热烈"},{"name":"苏州","vector":[0,0,1,0],"tag":"细腻江南","quote":"把日常过成一幅细笔画。","insight":"你对安静、秩序与传统质感有着天然偏爱，不追逐转瞬即逝的热闹，更愿意在小尺度的精致空间里慢慢打磨生活。一盏茶、一扇花窗、一场恰到好处的雨，都能让你内心安定。","strength":"细致、善于发现生活质感","caution":"偶尔试试陌生的生活方式","action":"选一处园林和一条安静小巷","motif":"园林与细雨","no":"04","tags":["细节控","东方审美","静水流深"],"contrast":"外表柔和细腻、不争不抢，骨子里其实极有审美洁癖，对敷衍和粗糙零容忍。","match":["大理","同样珍惜安静与自由呼吸，在一起像共赏一幅水墨长卷。"],"clash":["上海","你喜欢细水长流，对方偏爱全速更新，容易感到精神耗电。"],"vibe":"评弹声里的青石板巷 · 细雨打在芭蕉叶上","stamp":"江南 · 细笔"},{"name":"上海","vector":[3,2,3,3],"tag":"都市探索","quote":"在无数可能里，找到自己的坐标。","insight":"你迷恋丰富的选择权与持续更新的世界——前沿展览、小众咖啡馆、多元的人群与高效的规则，都能给你带来安全感与兴奋感。你愿意投入精力去探索，在无数可能里精准定位自己的坐标。","strength":"能从多样选择中发现机会","caution":"别把忙碌等同于充实","action":"逛展览，再沿街寻找有趣建筑","motif":"街区与都会","no":"05","tags":["摩登探索家","边界清晰","高密度好奇"],"contrast":"看起来精致独立、很有都会距离感，其实只要遇到同频的人，能从凌晨聊到天亮。","match":["深圳","同样尊重边界与效率，彼此独立又互相欣赏，毫无精神内耗。"],"clash":["昆明","你习惯把日子过得有质感有节奏，面对完全随性的慢节奏会有点坐不住。"],"vibe":"梧桐树影下的街角咖啡 · 陆家嘴傍晚的蓝调时刻","stamp":"摩登 · 坐标"},{"name":"北京","vector":[3,2,3,0],"tag":"文化探索","quote":"每一步，都可以通向更大的世界。","insight":"你既有清晰的目标感，又对历史厚度、文化脉络和更大的世界抱有持续热情。你不满足于浅尝辄止的小确幸，更渴望在有深度的对话、厚重的历史与开阔的格局里找到归属。","strength":"善于持续探索有深度的主题","caution":"高密度安排也需要留白","action":"给自己一个博物馆漫游日","motif":"城门与书卷","no":"06","tags":["精神厚重感","宏大视野","真诚热忱"],"contrast":"外表看起来理性沉稳、甚至有点严肃，聊起真正热爱的领域瞬间眼里发光、滔滔不绝。","match":["南京","都有文化底蕴与清醒风骨，聊天永远不缺深度和共鸣。"],"clash":["珠海","你偏爱厚重故事与大舞台，太轻盈平淡的度假感待久了会想找事做。"],"vibe":"秋日胡同里的银杏落叶 · 博物馆闭馆前的余晖","stamp":"古都 · 视野"},{"name":"深圳","vector":[3,1,3,3],"tag":"创新行动","quote":"让想法走在昨天的前面。","insight":"你偏爱清晰、高效、少人情羁绊的环境，相信行动比空想更有力量。你不需要密集的无效社交，反而需要一块能让自己专注打磨想法、快速试错并看见正向反馈的舞台。","strength":"行动果断、容易拥抱新事物","caution":"别因效率忽视身体与关系","action":"探索创意街区，留时间做自己的项目","motif":"新城与海风","no":"07","tags":["长期主义者","清爽高效","未来感"],"contrast":"平时像一台冷静高效的推进器，其实在海边吹吹风、看场日落就能瞬间变回柔软小孩。","match":["宁波","都是安静做事、不爱虚头巴脑的实力派，合作与相处都极度省心。"],"clash":["成都","你看见机会想立刻启动，对方先泡壶茶说“莫慌”，急死彼此。"],"vibe":"海湾公园的晚风 · 深夜落地窗前的灵感笔记","stamp":"先锋 · 破局"},{"name":"广州","vector":[2,3,2,0],"tag":"烟火交往","quote":"好好吃饭，也好好相遇。","insight":"你身上有种极其难得的“务实松弛感”——既能把现实生活打理得井井有条，又保留着对一顿好饭、一场真诚相聚的热爱。不端着、不装腔，在人间烟火里把关系处得长久舒服。","strength":"容易通过共同体验建立联系","caution":"避免把社交排得太满","action":"从一顿早茶开始探索老街","motif":"早茶与老街","no":"08","tags":["务实烟火气","人情通透","松弛实干"],"contrast":"平时随和接地气、很好说话，但一涉及核心原则和账目逻辑，清醒得让人佩服。","match":["武汉","都是鲜活热忱、讲实在不虚伪的性格，一顿饭就能处成老友。"],"clash":["宁波","一个爱热热闹闹约早茶，一个偏爱独来独往静悄悄，社交电量不同频。"],"vibe":"清晨茶楼的一盅两件 · 骑楼老街的晚风","stamp":"老广 · 烟火"},{"name":"厦门","vector":[0.3,1.2,0.2,2.5],"tag":"海边漫游","quote":"把烦恼交给海风。","insight":"你的灵魂天生需要留白和海风。比起奔跑在拥挤的赛道上，你更喜欢不紧不慢地穿过有绿植和小店的街角，在自然与创意的交界处，给情绪留出一个随时可以深呼吸的角落。","strength":"懂得给自己安排恢复时间","caution":"必要的目标也值得认真规划","action":"沿海散步，找一间小书店","motif":"海岸与小店","no":"09","tags":["海风文艺魂","温柔治愈","轻盈浪漫"],"contrast":"看起来软萌好相处、充满文艺气息，其实内心主意很大，不喜欢被任何人催促或定义。","match":["青岛","海风系灵魂双向奔赴，一起看海发呆就能充饱一整周的电。"],"clash":["北京","你喜欢轻盈松弛的日常，面对高密度宏大叙事偶尔会觉得压力山大。"],"vibe":"环岛路傍晚的橘子海 · 巷子里飘出音乐的小书店","stamp":"海屿 · 漫游"},{"name":"昆明","vector":[0.2,1.4,0.2,1],"tag":"四季闲游","quote":"把四季的颜色装进口袋。","insight":"你拥有极强的幸福感知力，不需要惊天动地的刺激，一束刚买的新鲜花、一片晴朗的云、一阵恰到好处的微风就能让你心情变好。你偏爱温和无压的环境，把平凡日子过成永不落幕的春天。","strength":"善于感受微小变化","caution":"别把所有未知都留到明天","action":"逛花市，再找一块绿地休息","motif":"花市与晴光","no":"10","tags":["四季如春心","感知力拉满","治愈日常"],"contrast":"看着随遇而安、没太大胜负欲，其实非常清楚自己不要什么，绝不委屈自己内耗。","match":["成都","都是懂享受当下、绝不拿焦虑折磨自己的生活家。"],"clash":["上海","你爱自然晴光与松弛，对方偏爱高密都会节奏，容易互相拉扯。"],"vibe":"斗南花市抱满怀的鲜花 · 午后洒满阳台的晴光","stamp":"春城 · 晴光"},{"name":"西安","vector":[1,2.2,1.8,0],"tag":"历史漫步","quote":"时间很长，故事还在继续。","insight":"你对时间沉淀下来的故事格外着迷，总能把沿途见闻串联成有温度的记忆。你既享受适度的人声鼎沸与江湖豪气，也需要脚下有根、心中有底的厚重文化底色。","strength":"擅长把见闻串联成故事","caution":"旅行时别只按清单打卡","action":"选一段古城路线慢慢走","motif":"古城与长风","no":"11","tags":["叙事感人格","古今共振","厚积薄发"],"contrast":"看似念旧慢热、带点古风书卷气，其实心里藏着一股侠气和说走就走的爽快。","match":["北京","同样对历史人文有共鸣，一起逛展压马路能聊出一部纪录片。"],"clash":["珠海","你迷恋岁月痕迹与烟火故事，过于簇新安静的环境会让你觉得少点味道。"],"vibe":"城墙根下的落日与民谣 · 碳水香气弥漫的傍晚","stamp":"长安 · 故事"},{"name":"南京","vector":[1,1,2,0],"tag":"古今交融","quote":"旧城墙下，也有新的日子。","insight":"你是古今交融的温柔代表——骨子里带着文人般的克制与深情，同时又能从容接住现代生活的便利与变化。你珍惜熟悉的安全感，也不拒绝在梧桐树影下邂逅一点恰到好处的新意。","strength":"能在变化中保留稳定感","caution":"避免对选择反复犹豫","action":"走城墙、逛书店、喝一杯咖啡","motif":"城墙与梧桐","no":"12","tags":["温柔风骨","怀旧浪漫","静中有力"],"contrast":"表面淡定温和、情绪稳定，其实共情力极强，看一场老电影或一场秋雨就能悄悄动容。","match":["苏州","江南审美同频共振，一起散步喝茶就是最高级的浪漫。"],"clash":["长沙","你偏爱含蓄微醺的氛围，对方全天高能蹦迪模式会让你有点招架不住。"],"vibe":"颐和路飘落的梧桐叶 · 玄武湖畔的晚风","stamp":"金陵 · 梧桐"},{"name":"青岛","vector":[1.4,1.5,0.3,1],"tag":"海风生活","quote":"海风吹来，日子便有了方向。","insight":"你擅长在理想与现实、自然与人文之间找到最舒服的黄金平衡点。你不爱极端内卷，也不甘完全躺平；吹吹海风、看看老建筑、把工作和休息划分清楚，就是你眼里的好日子。","strength":"容易找到活动与休息的平衡","caution":"留心季节和现实生活成本","action":"沿海边步道走走，再看看老建筑","motif":"海风与红瓦","no":"13","tags":["清爽平衡派","山海皆爱","自在通透"],"contrast":"平时看着随性洒脱、大大咧咧，做决定时其实极其务实理智，很少被情绪冲昏头。","match":["厦门","同样自带海风滤镜，生活步调和审美几乎完美咬合。"],"clash":["重庆","你喜欢开阔清爽的秩序感，对方火辣魔幻的折叠节奏偶尔让你晕头转向。"],"vibe":"红瓦绿树间的斜坡海景 · 夏夜微凉的晚风","stamp":"琴岛 · 海风"},{"name":"长沙","vector":[2,3,3,2],"tag":"热闹玩家","quote":"把今天过得热烈一点。","insight":"你是天生懂得把今天过得滚烫的人！新鲜的市集、沸腾的夜市、有趣的灵魂与毫无保留的大笑，都是你的能量来源。你不想把青春留给观望，更想立刻去体验、去分享、去尽兴。","strength":"能主动创造有趣的共同回忆","caution":"保持自己的休息节奏","action":"约朋友体验市集和美食","motif":"夜市与星火","no":"14","tags":["快乐制造机","鲜活炙热","夜行玩家"],"contrast":"看着是永动机般的社交达人，其实对真心认可的朋友极度仗义且敏感护短。","match":["重庆","热辣双子星，永远有下一顿好吃的和下一个好玩的地方。"],"clash":["大理","你怕冷清无聊，对方怕喧嚣打扰，两种快乐完全不在同一频道。"],"vibe":"凌晨一点依然发光的街巷 · 湘江边的晚风与烟火","stamp":"星城 · 炙热"},{"name":"武汉","vector":[2,3,2,2],"tag":"江城活力","quote":"沿着江水，去找新的故事。","insight":"你像奔涌的江水一样包容又有生命力——既接得住市井清晨的一碗热干面，也玩得转摩登街区的新鲜潮流。你坦荡直接、适应力极强，不管身处什么场景，都能很快活出自己的主场感。","strength":"在不同场景中都能找到乐趣","caution":"别为了体验而忽略长期目标","action":"走江岸，再探索一处生活街区","motif":"江水与街巷","no":"15","tags":["江河生命力","坦荡鲜活","多面兼容"],"contrast":"说话做事爽快利落像个硬核玩家，其实内心特别看重长情与被真诚对待。","match":["广州","同样接地气又重情义，一起探索城市永远充满惊喜。"],"clash":["苏州","你习惯直来直去大开大合，遇到过于含蓄细腻的表达容易抓耳挠腮。"],"vibe":"轮渡甲板上的江风落日 · 樱花季的林荫大道","stamp":"江城 · 鲜活"},{"name":"大理","vector":[0,0,0,1.2],"tag":"自由漫游","quote":"人生不赶路，也可以抵达。","insight":"你的灵魂住在旷野而不是轨道里。比起外界世俗的打卡清单，你更在意内心的风向与属于自己的时间感。山风、云影、独处阅读和不被打扰的创作，能让你获得源源不断的自愈力。","strength":"擅长独立感受和自我恢复","caution":"也给重要承诺留下确定时间","action":"安排一次山野漫步或安静阅读","motif":"山风与云影","no":"16","tags":["精神自由派","旷野灵魂","自我丰沛"],"contrast":"看起来像遗世独立的酷盖/隐士，其实只要聊到精神共鸣，内心比谁都赤诚滚烫。","match":["苏州","都尊重彼此的独处结界，安静待在一起也能感受到踏实陪伴。"],"clash":["上海","你追求去KPI化的自由呼吸，高强度都市节奏会让你想连夜逃跑。"],"vibe":"苍山脚下的云影流动 · 洱海边不被打扰的清晨","stamp":"风花 · 旷野"},{"name":"福州","vector":[1,1,1,0],"tag":"温润日常","quote":"日子不必盛大，温暖就好。","insight":"你不迷恋浮夸的虚名，更钟情于有树荫、有老厝、有熟悉味道的安稳日常。你的温柔藏在日复一日的靠谱与体贴里，像四季常青的榕树一样，总能给身边人带来踏实妥帖的安心感。","strength":"善于珍惜熟悉的生活细节","caution":"主动给生活增加一点新鲜感","action":"在古厝街巷慢慢走，找特色小吃","motif":"古厝与绿荫","no":"17","tags":["温润治愈系","人间踏实感","细水长流"],"contrast":"外表温和低调、不爱抢风头，但真正扛事的时候比谁都稳重有韧性。","match":["南京","都是温润有底蕴的慢性子，把寻常日子过出安心的质感。"],"clash":["深圳","你偏好安稳绵长的生活温度，太激进求变的节奏会让你觉得没着落。"],"vibe":"三坊七巷的古厝树影 · 傍晚飘着茉莉茶香的微风","stamp":"榕城 · 温润"},{"name":"天津","vector":[1,3,2,0],"tag":"自在交谈","quote":"聊几句，日子就有了笑意。","insight":"你天生自带“把严肃生活解构出笑意”的魔法。比起紧绷着演大人，你更喜欢自在交谈、相视一笑的松弛氛围。老街的烟火与朋友间的互相接梗，就是你抵御一切疲惫的解药。","strength":"善于通过对话拉近距离","caution":"也留意独处的真实需求","action":"沿老建筑街区走走，和朋友吃饭","motif":"老街与笑语","no":"18","tags":["松弛幽默感","聊天天花板","通透乐天"],"contrast":"嘴上总爱开玩笑、看似大大咧咧，其实极其通透善良，最懂怎么不露痕迹地给人台阶下。","match":["成都","幽默松弛遇上安逸烟火，凑一块每天笑声不断、毫无内耗。"],"clash":["宁波","你爱随时抛梗互动，遇到极度安静内敛的类型会忍不住想逗对方说话。"],"vibe":"海河边的落日晚风 · 老友相聚笑声不断的餐桌","stamp":"津门 · 乐活"},{"name":"宁波","vector":[2.2,0,1.5,2],"tag":"安静进取","quote":"安静地走，坚定地向前。","insight":"你是典型的“悄悄拔尖、不爱张扬”型灵魂。你看重独立的私人空间与实打实的效率，讨厌无意义的社交表演；既能安安静静推进自己的目标，也懂得用精致的小众审美犒劳自己。","strength":"能在安静中持续推进目标","caution":"别忘了邀请他人分享成果","action":"探访海港街区和设计空间","motif":"海港与微光","no":"19","tags":["清醒实干派","安静进阶","低耗能生活"],"contrast":"表面冷静克制、自带高冷气场，熟了之后才发现你不仅靠谱，还藏着冷幽默。","match":["深圳","高效独立又不互相消耗，是彼此最省心的神仙搭子。"],"clash":["天津","一个偏爱安静专注，一个偏爱热闹唠嗑，需要提前商量社交时间。"],"vibe":"静谧海港的晨光 · 一个人高效专注的书桌与咖啡","stamp":"港城 · 笃行"},{"name":"珠海","vector":[1,0,0,3],"tag":"清爽新生活","quote":"给生活留一片开阔的蓝。","insight":"你既想要山海的开阔清澈，又割舍不下现代生活的清爽便捷。你不喜欢拥挤嘈杂，也不想退回原始闭塞——一条干净的海岸骑行道、一片蓝得发亮的天空和不被打扰的独处半径，就是你的乌托邦。","strength":"懂得为自己选择舒适的生活半径","caution":"注意理想场景之外的实际需求","action":"沿海骑行或散步，再去现代公共空间","motif":"海岸与蓝天","no":"20","tags":["清澈留白控","轻盈现代派","低密度幸福"],"contrast":"看着清冷随性、像个极简主义者，其实对生活品质和细节体验有着极高的隐形标准。","match":["深圳","同属海风现代系，一个提供能量一个提供治愈，切换自如。"],"clash":["西安","你偏爱清爽留白的新世界，太密集厚重的市井历史感偶尔会觉得太满。"],"vibe":"情侣路的单车晚风 · 落地窗外开阔清澈的蓝天","stamp":"海湾 · 留白"}],"brand":"CITY ATLAS","heroTitle":"城市漫游","heroSub":"WHERE YOUR SOUL BELONGS","intro":"如果不考虑出生地，你心里真正向往的生活是什么样？从日常选择出发，找到与你偏好相近的城市灵感。","disclaimer":"城市标签是原创生活场景原型，不代表当地居民性格，也不构成定居建议。","labels":["你的城市灵魂画像","专属城市漫游提案","宿命城市搭子 & 反差碰撞"],"art":"<svg viewBox=\"0 0 640 260\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n      <defs>\n        <linearGradient id=\"cSky\" x1=\"0\" y1=\"0\" x2=\".8\" y2=\"1\"><stop stop-color=\"#0e2f36\"/><stop offset=\".52\" stop-color=\"#1b5958\"/><stop offset=\"1\" stop-color=\"#539388\"/></linearGradient>\n        <radialGradient id=\"cMoon\" cx=\"76%\" cy=\"28%\" r=\"44%\"><stop stop-color=\"#f8dc9e\" stop-opacity=\".46\"/><stop offset=\"1\" stop-color=\"#f8dc9e\" stop-opacity=\"0\"/></radialGradient>\n        <linearGradient id=\"cWater\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop stop-color=\"#144446\"/><stop offset=\"1\" stop-color=\"#0a2429\"/></linearGradient>\n      </defs>\n      <rect width=\"640\" height=\"260\" fill=\"url(#cSky)\"/>\n      <circle cx=\"386\" cy=\"68\" r=\"142\" fill=\"url(#cMoon)\"/>\n      <circle cx=\"386\" cy=\"66\" r=\"28\" fill=\"#f5d596\"/>\n      <circle cx=\"386\" cy=\"66\" r=\"38\" fill=\"none\" stroke=\"#f5d596\" stroke-opacity=\".3\" stroke-dasharray=\"3 4\"/>\n      <g fill=\"#fdf2d6\" class=\"twinkle\">\n        <circle cx=\"118\" cy=\"40\" r=\"1.8\"/><circle cx=\"204\" cy=\"28\" r=\"1.4\"/><circle cx=\"312\" cy=\"46\" r=\"1.6\"/>\n        <circle cx=\"390\" cy=\"30\" r=\"1.3\"/><circle cx=\"574\" cy=\"44\" r=\"1.7\"/>\n      </g>\n      <g class=\"cloud-drift\" opacity=\".26\" fill=\"#e6f2ea\">\n        <path d=\"M55 96 Q84 82 114 94 Q138 86 164 98 Q132 106 86 104 Z\"/>\n        <path d=\"M270 76 Q304 62 342 74 Q366 68 392 78 Q352 86 300 84 Z\"/>\n      </g>\n      <path d=\"M0 176 L88 94 L168 156 L252 84 L356 166 L446 110 L548 164 L640 124 V260 H0 Z\" fill=\"#6da192\" opacity=\".42\"/>\n      <path d=\"M0 192 Q110 132 215 180 T430 168 T640 184 V260 H0 Z\" fill=\"#1e615d\"/>\n      <!-- Pagoda silhouette on left ridge -->\n      <g fill=\"#123f40\" transform=\"translate(154,116)\">\n        <path d=\"M18 0 L24 14 H12 Z\"/><path d=\"M8 14 H28 L33 22 H3 Z\"/><rect x=\"11\" y=\"22\" width=\"14\" height=\"10\"/>\n        <path d=\"M5 32 H31 L37 41 H-1 Z\"/><rect x=\"8\" y=\"41\" width=\"20\" height=\"16\"/>\n      </g>\n      <!-- Modern warm-lit skyline on right -->\n      <g transform=\"translate(404,98)\">\n        <rect x=\"0\" y=\"44\" width=\"22\" height=\"58\" fill=\"#133d42\"/>\n        <rect x=\"28\" y=\"26\" width=\"28\" height=\"76\" fill=\"#174a4f\"/>\n        <rect x=\"62\" y=\"38\" width=\"20\" height=\"64\" fill=\"#12393e\"/>\n        <rect x=\"88\" y=\"8\" width=\"30\" height=\"94\" fill=\"#184e52\"/>\n        <rect x=\"124\" y=\"32\" width=\"26\" height=\"70\" fill=\"#133f44\"/>\n        <g fill=\"#f5d596\" opacity=\".88\">\n          <rect x=\"34\" y=\"36\" width=\"5\" height=\"6\"/><rect x=\"44\" y=\"36\" width=\"5\" height=\"6\"/><rect x=\"34\" y=\"50\" width=\"5\" height=\"6\"/><rect x=\"44\" y=\"64\" width=\"5\" height=\"6\"/>\n          <rect x=\"94\" y=\"20\" width=\"6\" height=\"6\"/><rect x=\"106\" y=\"20\" width=\"6\" height=\"6\"/><rect x=\"94\" y=\"36\" width=\"6\" height=\"6\"/><rect x=\"106\" y=\"52\" width=\"6\" height=\"6\"/><rect x=\"94\" y=\"68\" width=\"6\" height=\"6\"/>\n          <rect x=\"131\" y=\"44\" width=\"5\" height=\"6\"/><rect x=\"140\" y=\"58\" width=\"5\" height=\"6\"/>\n        </g>\n      </g>\n      <!-- Shimmering river & arched bridge -->\n      <rect x=\"0\" y=\"196\" width=\"640\" height=\"64\" fill=\"url(#cWater)\"/>\n      <path d=\"M220 198 Q286 168 352 198\" fill=\"none\" stroke=\"#e9cb8c\" stroke-width=\"2\" opacity=\".7\"/>\n      <g stroke=\"#f5d596\" stroke-opacity=\".35\" stroke-linecap=\"round\">\n        <line x1=\"464\" y1=\"212\" x2=\"520\" y2=\"212\" stroke-width=\"2\"/><line x1=\"476\" y1=\"224\" x2=\"512\" y2=\"224\" stroke-width=\"1.5\"/>\n        <line x1=\"258\" y1=\"216\" x2=\"314\" y2=\"216\" stroke-width=\"1.3\"/><line x1=\"484\" y1=\"236\" x2=\"504\" y2=\"236\" stroke-width=\"1.2\"/>\n      </g>\n      <g class=\"cloud-drift2\" opacity=\".2\" stroke=\"#f5d596\" fill=\"none\">\n        <circle cx=\"492\" cy=\"64\" r=\"64\"/>\n      </g>\n    </svg>","palette":{"ink":"#1b3532","accent":"#165b55","accent2":"#c79248","paper":"#f5f3ea","soft":"#e1ece3","line":"#cdd9ce","card":"#fffdf8","muted":"#566b65"},"vol":"VOL. 01 · 城市漫游志","teasers":["成都","上海","大理"],"chapters":[{"title":"晨光与日常","intro":"从醒来的第一小时，看你心里真正舒服的生活节奏。"},{"title":"街角与人潮","intro":"关于热闹与留白，你和世界保持着怎样的距离？"},{"title":"风景与审美","intro":"推开窗、拐过街角，什么样的光影最先留住你的目光？"},{"title":"理想生活半径","intro":"把日子拉长到四季，哪座城市的频率与你悄然同频？"}],"calcSteps":["正在测绘你的灵魂经纬度…","校准四维生活节奏与审美坐标…","冲印你的专属城市明信片…"],"eggLabel":"你的灵魂时刻","shareTags":"#你的灵魂老家在哪座城市 #城市人格测试 #灵魂归属地","shareHook":"原来我的灵魂老家是「{name}」✨"};
 const app=document.getElementById('app'),
       posterDialog=document.getElementById('posterDialog'),
-      copyDialog=document.getElementById('copyDialog');
+      copyDialog=document.getElementById('copyDialog'),
+      peekDialog=document.getElementById('peekDialog'),
+      dexDialog=document.getElementById('dexDialog');
 const N=D.questions.length, STORAGE='personal-atlas-v3:'+D.kind;
-let idx=0, answers=Array(N).fill(null), report=null, posterURL=null, screen='home', autoNext=true, autoTimer=null;
+let idx=0, answers=Array(N).fill(null), report=null, posterURL=null, screen='home', autoNext=true, autoTimer=null, lastChapter=-1, posterTheme=0;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* === Thematic Web Audio Sound Engine (Pure Offline Synth) === */
+const SFX = (() => {
+  let ctx = null, muted = false;
+  try { muted = localStorage.getItem(STORAGE + ':mute') === '1'; } catch {}
+  function ac() {
+    if (muted) return null;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      if (!ctx) ctx = new AC();
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+      return ctx;
+    } catch { return null; }
+  }
+  function tone(freq, dur, type = 'sine', gainVal = 0.055, delay = 0, endFreq = null) {
+    const c = ac(); if (!c) return;
+    try {
+      const t = c.currentTime + delay;
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = type;
+      o.frequency.setValueAtTime(freq, t);
+      if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, t + dur);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(gainVal, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + dur + 0.02);
+    } catch {}
+  }
+  const PRESETS = {
+    city:    { notes: [523.25, 587.33, 659.25, 783.99], wave: 'triangle', gain: 0.05 },
+    love:    { notes: [587.33, 659.25, 739.99, 880.00], wave: 'sine',     gain: 0.048 },
+    ancient: { notes: [440.00, 493.88, 587.33, 659.25], wave: 'triangle', gain: 0.052 },
+    scent:   { notes: [659.25, 739.99, 880.00, 987.77], wave: 'sine',     gain: 0.042 },
+    qc:      { notes: [620, 740, 860, 980],             wave: 'square',   gain: 0.024 },
+    shop:    { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.046 },
+    museum:  { notes: [392.00, 440.00, 523.25, 587.33], wave: 'sine',     gain: 0.052 },
+    rpg:     { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.045 },
+    cosmos:  { notes: [587.33, 739.99, 880.00, 1174.6], wave: 'sine',     gain: 0.042 }
+  };
+  const P = PRESETS["city"] || PRESETS.city;
+  return {
+    isMuted: () => muted,
+    toggle() {
+      muted = !muted;
+      try { localStorage.setItem(STORAGE + ':mute', muted ? '1' : '0'); } catch {}
+      if (!muted) this.click(1);
+      return muted;
+    },
+    click(i = 0) {
+      const f = P.notes[Math.abs(i) % P.notes.length];
+      tone(f, 0.16, P.wave, P.gain);
+      if (false) {
+        tone(f * 2, 0.22, 'sine', P.gain * 0.35, 0.015);
+      }
+    },
+    start() {
+      tone(P.notes[0], 0.14, P.wave, P.gain, 0);
+      tone(P.notes[2], 0.22, 'sine', P.gain * 0.9, 0.07);
+    },
+    back() {
+      tone(P.notes[0] * 0.85, 0.11, 'sine', P.gain * 0.7);
+    },
+    chapter() {
+      tone(P.notes[1], 0.16, 'sine', P.gain * 0.8, 0);
+      tone(P.notes[3], 0.28, 'sine', P.gain * 0.75, 0.09);
+    },
+    reveal() {
+      P.notes.forEach((f, k) => tone(f, 0.32, k === 3 ? 'sine' : P.wave, P.gain * 0.9, k * 0.08));
+    }
+  };
+})();
+
+function renderSoundBtn() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  const m = SFX.isMuted();
+  btn.textContent = m ? '🔇 静音' : '🔊 音效';
+  btn.setAttribute('aria-pressed', String(!m));
+  btn.classList.toggle('muted', m);
+}
+function initSoundToggle() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  renderSoundBtn();
+  btn.onclick = () => { SFX.toggle(); renderSoundBtn(); };
+}
+
+/* === Celebratory Particle Burst (Respects Reduced Motion) === */
+function celebrateBurst(colors, style = 'spark') {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    const cv = document.createElement('canvas');
+    cv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999';
+    cv.width = window.innerWidth; cv.height = window.innerHeight;
+    document.body.append(cv);
+    const ctx = cv.getContext('2d');
+    const parts = [];
+    const cx = cv.width / 2, cy = Math.min(cv.height * 0.36, 280);
+    for (let i = 0; i < 42; i++) {
+      const ang = (Math.PI * 2 * i) / 42 + (Math.random() - 0.5) * 0.35;
+      const spd = 2.6 + Math.random() * 5.8;
+      parts.push({
+        x: cx + (Math.random() - 0.5) * 40,
+        y: cy + (Math.random() - 0.5) * 20,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 2.4,
+        r: 3 + Math.random() * 4.5,
+        rot: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.2,
+        color: colors[i % colors.length],
+        life: 1,
+        decay: 0.015 + Math.random() * 0.012
+      });
+    }
+    let raf;
+    function tick() {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      let alive = 0;
+      for (const p of parts) {
+        if (p.life <= 0) continue;
+        alive++;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.13; p.vx *= 0.985; p.rot += p.vr; p.life -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        if (style === 'petal') {
+          ctx.beginPath(); ctx.ellipse(0, 0, p.r * 1.4, p.r * 0.72, 0, 0, Math.PI * 2); ctx.fill();
+        } else if (style === 'star') {
+          ctx.beginPath();
+          for (let s = 0; s < 4; s++) {
+            const a = s * Math.PI / 2;
+            ctx.lineTo(Math.cos(a) * p.r * 1.5, Math.sin(a) * p.r * 1.5);
+            ctx.lineTo(Math.cos(a + Math.PI / 4) * p.r * 0.45, Math.sin(a + Math.PI / 4) * p.r * 0.45);
+          }
+          ctx.closePath(); ctx.fill();
+        } else if (style === 'bubble') {
+          ctx.strokeStyle = p.color; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.arc(0, 0, p.r * 1.15, 0, Math.PI * 2); ctx.stroke();
+        } else {
+          ctx.fillRect(-p.r, -p.r * 0.55, p.r * 2, p.r * 1.1);
+        }
+        ctx.restore();
+      }
+      if (alive > 0) raf = requestAnimationFrame(tick);
+      else cv.remove();
+    }
+    raf = requestAnimationFrame(tick);
+    setTimeout(() => { cancelAnimationFrame(raf); cv.remove(); }, 2200);
+  } catch {}
+}
+
+/* === Subtle 3D Foil Tilt on Result Hero Card === */
+function bindCardTilt(el) {
+  if (!el || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  el.classList.add('foil-tilt');
+  const onMove = e => {
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - py) * 5.5, ry = (px - 0.5) * 6.5;
+    el.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+    el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+  };
+  const onLeave = () => {
+    el.style.transform = '';
+    el.style.setProperty('--mx', '50%');
+    el.style.setProperty('--my', '20%');
+  };
+  el.addEventListener('pointermove', onMove);
+  el.addEventListener('pointerleave', onLeave);
+}
+
+/* === Dynamic Multi-Axis SVG Radar Chart (4 or 6 Axes) === */
+function buildRadarSVG(labels, ratios, opts = {}) {
+  const n = labels.length, cx = 140, cy = 122, R = 74;
+  const stroke = opts.stroke || 'var(--accent)';
+  const fill = opts.fill || 'var(--accent)';
+  const grid = opts.grid || 'rgba(128,128,128,0.22)';
+  const labelColor = opts.labelColor || 'currentColor';
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  let rings = '';
+  [0.34, 0.67, 1].forEach(f => {
+    const pts = Array.from({ length: n }, (_, i) => pt(i, R * f).map(x => x.toFixed(1)).join(',')).join(' ');
+    rings += `<polygon points="${pts}" fill="none" stroke="${grid}" stroke-width="1"/>`;
+  });
+  let spokes = '';
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${grid}" stroke-width="1"/>`;
+  }
+  const clamped = ratios.map(r => Math.max(0.18, Math.min(1, r)));
+  const polyPts = clamped.map((r, i) => pt(i, R * r).map(x => x.toFixed(1)).join(',')).join(' ');
+  const dots = clamped.map((r, i) => {
+    const [x, y] = pt(i, R * r);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.2" fill="${stroke}" stroke="${opts.dotRing || '#fff'}" stroke-width="1.8"/>`;
+  }).join('');
+  const texts = labels.map((lb, i) => {
+    const [x, y] = pt(i, R + 22);
+    const anchor = Math.abs(x - cx) < 10 ? 'middle' : x < cx ? 'end' : 'start';
+    const dy = y < cy - 30 ? -2 : y > cy + 30 ? 8 : 4;
+    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="700" fill="${labelColor}">${esc(lb)}</text>`;
+  }).join('');
+  return `<svg class="radar-svg" viewBox="0 0 280 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多维人格雷达图">
+    ${rings}${spokes}
+    <polygon class="radar-poly" points="${polyPts}" fill="${fill}" fill-opacity="0.24" stroke="${stroke}" stroke-width="2.2" stroke-linejoin="round"/>
+    ${dots}${texts}
+  </svg>`;
+}
+
+/* === Canvas Mini Radar Drawing Helper (for 3:4 Posters) === */
+function drawCanvasRadar(ctx, cx, cy, R, labels, ratios, stroke, fill, grid, textCol) {
+  const n = labels.length;
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  ctx.save();
+  [0.35, 0.68, 1].forEach(f => {
+    ctx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const [x, y] = pt(i, R * f);
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.closePath(); ctx.strokeStyle = grid; ctx.lineWidth = 1.4; ctx.stroke();
+  });
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.strokeStyle = grid; ctx.lineWidth = 1.2; ctx.stroke();
+  }
+  ctx.beginPath();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = fill; ctx.fill();
+  ctx.strokeStyle = stroke; ctx.lineWidth = 3; ctx.stroke();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    ctx.beginPath(); ctx.arc(x, y, 5.5, 0, Math.PI * 2); ctx.fillStyle = stroke; ctx.fill();
+  });
+  ctx.fillStyle = textCol; ctx.font = '700 18px "PingFang SC","Microsoft YaHei",sans-serif';
+  labels.forEach((lb, i) => {
+    const [x, y] = pt(i, R + 24);
+    ctx.textAlign = Math.abs(x - cx) < 12 ? 'center' : x < cx ? 'right' : 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(lb, x, y);
+  });
+  ctx.restore();
+}
+
+/* === Isolated Local Collection Dex Helpers === */
+function getUnlocked() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORAGE + ':dex') || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch { return []; }
+}
+function recordUnlock(name) {
+  try {
+    const list = getUnlocked();
+    if (!list.includes(name)) { list.push(name); localStorage.setItem(STORAGE + ':dex', JSON.stringify(list)); }
+    return list;
+  } catch { return [name]; }
+}
+
+/* === Vector Pair Compatibility Calculator === */
+function calcVectorChem(pA, pB, axes, labelsCfg = {}) {
+  if (pA.name === pB.name) {
+    return {
+      score: 94,
+      verdict: labelsCfg.same || '✦ 镜像双生 · 灵魂复刻',
+      desc: `两个「${pA.name}」相遇就像照镜子——不用多余解释就能一秒接住彼此的梗与节奏，连沉默的频率都惊人一致！`
+    };
+  }
+  if (pA.match && pA.match[0] === pB.name) {
+    return { score: 99, verdict: labelsCfg.match || '♥ 天选官配 · 满分同频', desc: pA.match[1] };
+  }
+  if (pB.match && pB.match[0] === pA.name) {
+    return { score: 97, verdict: labelsCfg.match || '♥ 双向奔赴 · 绝佳搭子', desc: pB.match[1] };
+  }
+  if (pA.clash && pA.clash[0] === pB.name) {
+    return { score: 54, verdict: labelsCfg.clash || '⚡ 宿命反差 · 欢喜冤家', desc: pA.clash[1] };
+  }
+  if (pB.clash && pB.clash[0] === pA.name) {
+    return { score: 56, verdict: labelsCfg.clash || '⚡ 高能反差 · 奇妙碰撞', desc: pB.clash[1] };
+  }
+  const vecA = pA.vector, vecB = pB.vector;
+  const diffs = vecA.map((x, i) => ({ i, d: Math.abs(x - vecB[i]) }));
+  const avgDiff = diffs.reduce((s, x) => s + x.d, 0) / diffs.length;
+  const sim = Math.max(0, 1 - avgDiff / 3);
+  const hashSeed = [...(pA.name + pB.name)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 997, 7);
+  const score = Math.round(Math.max(62, Math.min(95, 65 + sim * 27 + (hashSeed % 5))));
+  const closest = diffs.slice().sort((a, b) => a.d - b.d)[0];
+  const farthest = diffs.slice().sort((a, b) => b.d - a.d)[0];
+  let verdict = '🌿 舒服同频 · 轻松相处';
+  if (score >= 88) verdict = '✦ 默契神搭 · 能量共振';
+  else if (score >= 78) verdict = '♥ 互补合拍 · 越处越甜';
+  else if (score < 70) verdict = '🔥 跨频火花 · 新鲜感拉满';
+  const desc = `你们在「${axes[closest.i][0]}」维度上天然同频，很容易快速聊到一块；而在「${axes[farthest.i][0]}」上的不同视角，正好能给彼此带来意想不到的新鲜灵感。`;
+  return { score, verdict, desc };
+}
+
+/* === Toast Notification === */
+let toastTimer = null;
+function showToast(msg) {
+  let el = document.getElementById('quizToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'quizToast';
+    el.className = 'quiz-toast';
+    el.setAttribute('role', 'status');
+    document.body.append(el);
+  }
+  el.textContent = msg;
+  el.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2100);
+}
+
 
 function stash(){try{localStorage.setItem(STORAGE,JSON.stringify({idx,answers,autoNext}))}catch{}}
 function restore(){
@@ -198,35 +675,61 @@ function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
 function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
 function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
 function hero(text,sub=D.heroSub,badge=''){
-  return `<div class="hero" aria-hidden="true">${D.art}${badge?`<span class="hero-badge">${esc(badge)}</span>`:''}<div class="hero-copy"><small>${esc(sub)}</small><strong>${esc(text)}</strong></div></div>`;
+  return `<div class="hero" aria-hidden="true">${D.art}<span class="hero-postmark" aria-hidden="true">灵魂邮戳<br>CITY<br>2026</span>${badge?`<span class="hero-badge">${esc(badge)}</span>`:''}<div class="hero-copy"><small>${esc(sub)}</small><strong>${esc(text)}</strong></div></div>`;
+}
+
+function peekProfile(name){
+  const p=D.profiles.find(x=>x.name===name); if(!p) return;
+  SFX.click(2);
+  document.getElementById('peekTitle').textContent=`ARCHIVE NO.${p.no} · ${p.name}`;
+  document.getElementById('peekBody').innerHTML=`
+    <div class="pills" style="margin:6px 0 12px">${p.tags.map(t=>`<span class="pill accent"># ${esc(t)}</span>`).join('')}</div>
+    <div class="quote-box"><p class="quote">「${esc(p.quote)}」</p></div>
+    <p class="lead" style="margin:12px 0">✦ 专属亮点：${esc(p.strength)}。想知道这是不是你的本命结果，还是藏着另一份惊喜档案？</p>
+    <button type="button" class="primary" onclick="peekDialog.close();start()">立刻开测，揭晓我的专属结果 →</button>`;
+  if(!peekDialog.open) peekDialog.showModal();
+}
+
+function openDex(){
+  SFX.click(1);
+  const unlocked=getUnlocked();
+  document.getElementById('dexSub').textContent=`已点亮 ${unlocked.length} / ${D.profiles.length} 种档案 · 仅保存在当前浏览器，快邀请朋友测出更多图鉴！`;
+  document.getElementById('dexGrid').innerHTML=D.profiles.map(p=>{
+    const ok=unlocked.includes(p.name);
+    return ok
+      ? `<div class="dex-card unlocked"><span class="muted">NO.${p.no} · 已点亮 ✦</span><b>${esc(p.name)}</b><small># ${esc(p.tags[0])} · 「${esc(p.quote)}」</small></div>`
+      : `<div class="dex-card locked"><span class="muted">NO.${p.no} · 尚未解锁</span><b>？？？</b><small>线索：${esc(p.motif)} · ${esc(p.tags[0])}</small></div>`;
+  }).join('');
+  if(!dexDialog.open) dexDialog.showModal();
 }
 
 function home(){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
-  screen='home';
+  screen='home'; lastChapter=-1;
   const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const unlocked=getUnlocked();
   const teaserCards=D.teasers.map(name=>D.profiles.find(p=>p.name===name)).filter(Boolean);
   app.innerHTML=`<section class="panel">
     ${hero(D.heroTitle,D.heroSub,D.profiles.length+' 种档案')}
     <p class="eyebrow">${esc(D.subtitle)}</p>
-    <h1>${esc(D.title)}</h1>
+    <h1>你的灵魂老家<br>在哪座城市</h1>
     <p class="lead">${esc(D.intro)}</p>
     <div class="pills">
       <span class="pill accent">${N} 道情境探索</span>
       <span class="pill">${D.profiles.length} 种专属档案</span>
-      <span class="pill">约 ${Math.max(2,Math.ceil(N/8))} 分钟 · 含3:4海报</span>
+      <span class="pill">含雷达图 &amp; 3:4 双画风海报</span>
     </div>
     <div class="stack">
       ${count===N
         ? `<button class="primary" onclick="resume()">查看我已生成的专属档案　✦</button><button class="secondary" onclick="start()">重新测一次</button>`
         : count
         ? `<button class="primary" onclick="resume()">继续上次探索（${count}/${N}）　→</button><button class="secondary" onclick="start()">重新开始测试</button>`
-        : `<button class="primary" onclick="start()">开启我的探索　→</button>`}
+        : `<button class="primary" onclick="start()">领取灵魂车票，开启漫游　→</button>`}
     </div>
     <div class="teaser-wrap">
-      <div class="teaser-head"><span>档案抢先看</span><small>共收录 ${D.profiles.length} 种结果</small></div>
+      <div class="teaser-head"><span>档案抢先看 · 点击偷看线索</span><small>收录 ${D.profiles.length} 种${unlocked.length?' · 已点亮 '+unlocked.length:''}</small></div>
       <div class="teasers">
-        ${teaserCards.map(p=>`<div class="teaser"><b>${esc(p.name)}</b><span>${esc(p.tags[0])}</span><small>「${esc(p.quote)}」</small></div>`).join('')}
+        ${teaserCards.map(p=>`<button type="button" class="teaser" onclick="peekProfile('${esc(p.name)}')"><b>${esc(p.name)}</b><span>${esc(p.tags[0])}</span><small>「${esc(p.quote)}」</small></button>`).join('')}
       </div>
     </div>
     <p class="notice">跟随第一直觉选择即可，没有标准答案。${esc(D.disclaimer)}</p>
@@ -236,32 +739,38 @@ function home(){
 
 function start(){
   if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('开始新测试将清除上次进度，继续吗？')) return;
-  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+  SFX.start();
+  idx=0;answers=Array(N).fill(null);report=null;lastChapter=0;stash();question(true);
 }
 
 function resume(){
+  SFX.start();
   const saved=restore();if(!saved)return start();
   idx=saved.idx;answers=saved.answers;
-  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.every(v=>v!==null)){result(false);return;}
   if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  lastChapter=getChapter(idx).ci;
   question(true);
 }
 
-function toggleAuto(){
-  autoNext=!autoNext;stash();question(false);
-}
+function toggleAuto(){SFX.click(0);autoNext=!autoNext;stash();question(false);}
 
 function getChapter(qIdx){
   const chs=D.chapters;
   const per=Math.ceil(N/chs.length);
   const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
-  return {num:String(ci+1).padStart(2,'0'),...chs[ci]};
+  return {ci,num:String(ci+1).padStart(2,'0'),...chs[ci]};
 }
 
 function question(move=false){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
   screen='question';
   const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  if(lastChapter>=0 && ch.ci>lastChapter){
+    SFX.chapter();
+    showToast(`✦ 进入第 ${ch.ci+1} 章 · ${ch.title}`);
+  }
+  lastChapter=ch.ci;
   const pct=Math.round((count/N)*100);
   app.innerHTML=`<section class="panel">
     <div class="question-top">
@@ -270,6 +779,9 @@ function question(move=false){
     </div>
     <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
       <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-dots" aria-hidden="true">
+      ${D.chapters.map((_,k)=>`<span class="${k<ch.ci?'done':k===ch.ci?'now':''}"></span>`).join('')}
     </div>
     <div class="chapter-bar">
       <span class="chapter-num">${ch.num}</span>
@@ -281,9 +793,10 @@ function question(move=false){
     </div>
     <div class="nav">
       <button type="button" onclick="back()" ${idx===0?'disabled':''}>← 上一题</button>
-      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'生成专属档案 ✦':'下一题 →'}</button>
+      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'冲印我的城市明信片 ✦':'下一题 →'}</button>
     </div>
-    <div style="text-align:center;margin-top:10px">
+    <p class="kbd-hint">快捷键：数字 1-4 / 字母 A-D 作答，← 返回上一题</p>
+    <div style="text-align:center;margin-top:8px">
       <button type="button" class="subtle" onclick="home()">保存进度，返回首页</button>
     </div>
   </section>`;
@@ -292,8 +805,8 @@ function question(move=false){
 
 function choose(i){
   if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  SFX.click(i);
   answers[idx]=i;stash();
-  // Immediate visual feedback without losing smooth flow
   const btns=app.querySelectorAll('.option');
   btns.forEach((b,k)=>{
     const sel=k===i;
@@ -316,11 +829,11 @@ function choose(i){
       if(idx<N-1){idx++;stash();question(true);}
       else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
       else calculateRitual();
-    }, 300);
+    }, 280);
   }
 }
 
-function back(){if(idx>0){idx--;stash();question(true);}}
+function back(){if(idx>0){SFX.back();idx--;stash();question(true);}}
 function next(){
   if(answers[idx]===null) return;
   if(idx<N-1){idx++;stash();question(true);}
@@ -334,12 +847,12 @@ function calculateRitual(){
   app.innerHTML=`<section class="panel"><div class="calc-box">
     <div class="calc-ring" aria-hidden="true"></div>
     <p class="calc-step" id="calcText">${esc(steps[0])}</p>
-    <p class="calc-sub">正在为你生成完整画像与 3:4 收藏海报</p>
+    <p class="calc-sub">正在绘制多维雷达图与 3:4 收藏级双画风海报</p>
   </div></section>`;
   scrollTop();
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},460);
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},920);
-  setTimeout(()=>result(),1360);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},440);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},880);
+  setTimeout(()=>result(true),1320);
 }
 
 function compute(input){
@@ -353,13 +866,11 @@ function compute(input){
     const radius=Math.sqrt(v.length)*0.5+0.15*(norm-Math.sqrt(v.length));
     const calibrated=center.map(x=>1.5+x*radius/norm);
     const d=calibrated.reduce((s,x,j)=>s+(x-v[j])**2,0);
-    // Smooth intuitive affinity score (high contrast & realistic 72%~98% range for top matches)
     const rawSim=Math.max(0,1-Math.sqrt(d/(4.2*v.length)));
     const fit=Math.round(Math.max(62,Math.min(98,66+rawSim*32)));
     return {p,i,d,fit};
   });
   ranked.sort((a,b)=>a.d-b.d||a.i-b.i);
-  // Ensure strict monotonic visual display for top 4
   for(let k=1;k<Math.min(4,ranked.length);k++){
     if(ranked[k].fit>=ranked[k-1].fit) ranked[k].fit=Math.max(60,ranked[k-1].fit-2);
   }
@@ -368,10 +879,33 @@ function compute(input){
 
 function tendency(a,v){return v<1.15?a[1]:v>1.85?a[2]:'两者兼顾'}
 
-function result(){
+function runChemCheck(otherName){
+  const out=document.getElementById('chemOut');
+  if(!out||!report) return;
+  if(!otherName){out.innerHTML='';return;}
+  const other=D.profiles.find(x=>x.name===otherName); if(!other) return;
+  SFX.click(2);
+  const res=calcVectorChem(report.p,other,D.axes);
+  out.innerHTML=`<div class="chem-out">
+    <div class="chem-score-row"><span class="chem-verdict">${esc(res.verdict)}</span><span class="chem-pct">${res.score}%</span></div>
+    <div class="chem-bar"><i style="width:${res.score}%"></i></div>
+    <p style="font-size:13px;line-height:1.72">${esc(res.desc)}</p>
+    <button type="button" class="chem-copy-btn" onclick="copyChem('${esc(other.name)}',${res.score},'${esc(res.verdict)}')">复制双人契合战报，发去评论区晒分 ↗</button>
+  </div>`;
+}
+
+async function copyChem(otherName,score,verdict){
+  if(!report) return;
+  const txt=`【${D.title} · 双人契合度】\n我是「${report.p.name}」× TA是「${otherName}」\n化学反应指数：${score}%（${verdict}）\n快来测测咱俩合不合拍👇 ${D.shareTags}`;
+  try{await navigator.clipboard.writeText(txt);showToast('✓ 双人契合战报已复制！');}
+  catch{document.getElementById('copyTextarea').value=txt;copyDialog.showModal();}
+}
+
+function result(celebrate=false){
   if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
   report=compute(answers);screen='result';stash();
   const {p,v,ranked}=report;
+  const unlocked=recordUnlock(p.name);
   const cues=D.axes.map((a,i)=>({a,val:v[i],gap:Math.abs(v[i]-1.5)})).sort((x,y)=>y.gap-x.gap).slice(0,2);
   const why=cues.every(x=>x.gap<0.28)
     ? '你在多个维度上都保持着难得的松弛与平衡，既不被单一标签框住，又能自由切换状态。'
@@ -379,7 +913,7 @@ function result(){
   const stampText=p.stamp||`NO.${p.no} · 专属档案`;
 
   app.innerHTML=`<section class="panel">
-    <div class="result-cover">
+    <div class="result-cover" id="heroCard">
       ${hero(p.motif,D.heroSub)}
       <span class="result-stamp" aria-hidden="true">${esc(stampText)}</span>
       <div class="intro">
@@ -418,8 +952,9 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">02 / DIMENSION MAP</p>
-      <h3>你的专属偏好图谱</h3>
+      <p class="kicker">02 / DIMENSION RADAR &amp; SPECTRUM</p>
+      <h3>你的专属多维雷达图谱</h3>
+      <div class="radar-wrap">${buildRadarSVG(D.axes.map(a=>a[0]), v.map(x=>x/3), {stroke:'var(--accent)',fill:'var(--accent)',grid:'var(--line)',labelColor:'var(--ink)',dotRing:'var(--card)'})}</div>
       ${D.axes.map((a,i)=>`<div class="axis">
         <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
         <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
@@ -429,7 +964,7 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">03 / CHEMISTRY &amp; CONTRAST</p>
+      <p class="kicker">03 / CHEMISTRY &amp; MATCH CHECKER</p>
       <h3>${esc(D.labels[2])}</h3>
       <p class="muted" style="margin-bottom:6px">发给你的朋友或另一半测测，看看你们是不是天选同频！</p>
       <div class="duo">
@@ -444,6 +979,14 @@ function result(){
           <p>${esc(p.clash[1])}</p>
         </div>
       </div>
+      <div class="chem-box">
+        <div class="chem-head"><strong>✦ 双城旅伴契合度速测</strong><span>选朋友测出的城市，算算你们一起去旅行有多搭</span></div>
+        <select class="chem-select" id="chemSelect" aria-label="选择朋友的结果测算契合度" onchange="runChemCheck(this.value)">
+          <option value="">— 选择朋友/对象测出的结果 —</option>
+          ${D.profiles.map(x=>`<option value="${esc(x.name)}">NO.${x.no} · ${esc(x.name)}（${esc(x.tags[0])}）</option>`).join('')}
+        </select>
+        <div id="chemOut"></div>
+      </div>
     </div>
 
     <div class="block">
@@ -457,12 +1000,16 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">05 / NEARBY ARCHIVES</p>
+      <p class="kicker">05 / NEARBY ARCHIVES &amp; COLLECTION</p>
       <h3>与你气场相近的备选档案</h3>
       ${ranked.slice(1,4).map(x=>`<div class="rank">
         <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.tags.slice(0,2).join(' · '))}</small></div>
         <span class="pct">${x.fit}% 契合</span>
       </div>`).join('')}
+      <div class="dex-bar">
+        <div class="dex-bar-info"><strong>灵魂城市邮戳收集册</strong><span>当前已点亮 ${unlocked.length} / ${D.profiles.length} 种本地收藏</span></div>
+        <button type="button" class="dex-open-btn" onclick="openDex()">查看全图鉴</button>
+      </div>
       <p class="notice">${esc(D.disclaimer)}</p>
     </div>
 
@@ -474,14 +1021,17 @@ function result(){
       </div>
     </div>
   </section>`;
+  bindCardTilt(document.getElementById('heroCard'));
   scrollTop();focusTitle();
+  if(celebrate){SFX.reveal();celebrateBurst(["#165b55","#c79248","#5fa89c","#f2d399","#fffdf8"],'spark');}
 }
 
-function editAnswers(){idx=N-1;question(true);}
+function editAnswers(){SFX.back();idx=N-1;question(true);}
 function restart(){if(confirm('清除当前答案并重新开始探索？')){clearSaved();start();}}
 
 async function copyShare(){
   if(!report) return;
+  SFX.click(1);
   const {p,ranked}=report;
   const hook=D.shareHook.replace('{name}',p.name);
   const text=`${hook}\n契合度 ${ranked[0].fit}% | ${p.tags.map(t=>'#'+t).join(' ')}\n「${p.quote}」\n\n♥ 我的天选合拍搭子是【${p.match[0]}】，快来测测你是什么结果，评论区找搭子👇\n${D.shareTags}`;
@@ -512,129 +1062,140 @@ function roundedPath(ctx,x,y,w,h,r){
 function fillRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.fill();}
 function strokeRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.stroke();}
 
-function makePoster(){
-  const c=document.createElement('canvas');c.width=1080;c.height=1440;
-  const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
-  const {p,v,ranked}=report, P=D.palette;
-  const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif';
 
-  // Paper backdrop & elegant outer double frame
-  ctx.fillStyle=P.paper;ctx.fillRect(0,0,1080,1440);
-  ctx.strokeStyle=P.line;ctx.lineWidth=2;strokeRound(ctx,26,26,1028,1388,30);
+function makePoster(themeIdx = 0, sig = '') {
+  const c = document.createElement('canvas'); c.width = 1080; c.height = 1440;
+  const ctx = c.getContext('2d'); if (!ctx) throw Error('Canvas unavailable');
+  const { p, v, ranked } = report;
+  const sans = '"PingFang SC","Microsoft YaHei",sans-serif', serif = '"Noto Serif SC","Songti SC","SimSun",serif';
+  const dark = themeIdx === 1;
+  const BG = dark ? '#0d2226' : '#f5f1e6';
+  const CARD = dark ? '#142f34' : '#fffdf7';
+  const INK = dark ? '#f3efe6' : '#173230';
+  const MUTED = dark ? '#9fc0ba' : '#526b66';
+  const ACC = dark ? '#5cc2b4' : '#12544f';
+  const GOLD = '#d79b4b';
+  const LINE = dark ? 'rgba(215,155,75,.3)' : '#c9d8cf';
 
-  // Header card (editorial rich banner)
-  const grad=ctx.createLinearGradient(52,52,1028,372);
-  grad.addColorStop(0,P.accent);grad.addColorStop(1,P.ink);
-  ctx.fillStyle=grad;fillRound(ctx,52,52,976,316,26);
-  ctx.save();roundedPath(ctx,52,52,976,316,26);ctx.clip();
-  ctx.strokeStyle='rgba(255,255,255,0.16)';ctx.lineWidth=2;
-  for(let i=0;i<7;i++){ctx.beginPath();ctx.ellipse(905,120,85+i*38,52+i*22,-0.35,0,Math.PI*2);ctx.stroke();}
-  ctx.fillStyle=P.accent2;ctx.globalAlpha=0.22;ctx.beginPath();ctx.arc(920,310,130,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle = BG; ctx.fillRect(0, 0, 1080, 1440);
+  // Vintage airmail striped ribbon across very top & bottom
+  for (let x = -40; x < 1120; x += 56) {
+    ctx.fillStyle = '#12544f'; ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x+22,0); ctx.lineTo(x+8,16); ctx.lineTo(x-14,16); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#c88a3b'; ctx.beginPath(); ctx.moveTo(x+28,0); ctx.lineTo(x+50,0); ctx.lineTo(x+36,16); ctx.lineTo(x+14,16); ctx.closePath(); ctx.fill();
+  }
+  ctx.strokeStyle = LINE; ctx.lineWidth = 2; strokeRound(ctx, 28, 34, 1024, 1374, 28);
+
+  // Scenic Postcard Header Banner
+  const bx = 56, by = 60, bw = 968, bh = 342;
+  ctx.save(); roundedPath(ctx, bx, by, bw, bh, 24); ctx.clip();
+  const sky = ctx.createLinearGradient(bx, by, bx + bw, by + bh);
+  sky.addColorStop(0, dark ? '#091b20' : '#10383b');
+  sky.addColorStop(0.58, dark ? '#16474a' : '#1c635d');
+  sky.addColorStop(1, dark ? '#2a655f' : '#4a8e82');
+  ctx.fillStyle = sky; ctx.fillRect(bx, by, bw, bh);
+  // Glowing moon + mountain layers + skyline
+  const mg = ctx.createRadialGradient(840, 140, 16, 840, 140, 180);
+  mg.addColorStop(0, 'rgba(248,220,158,0.45)'); mg.addColorStop(1, 'rgba(248,220,158,0)');
+  ctx.fillStyle = mg; ctx.fillRect(bx, by, bw, bh);
+  ctx.fillStyle = '#f5d596'; ctx.beginPath(); ctx.arc(856, 138, 44, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = 'rgba(130,178,164,0.36)';
+  ctx.beginPath(); ctx.moveTo(bx, by+270); ctx.lineTo(bx+180, by+150); ctx.lineTo(bx+340, by+246); ctx.lineTo(bx+520, by+138); ctx.lineTo(bx+720, by+250); ctx.lineTo(bx+bw, by+180); ctx.lineTo(bx+bw, by+bh); ctx.lineTo(bx, by+bh); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = '#0f3638';
+  ctx.beginPath(); ctx.moveTo(bx, by+292); ctx.quadraticCurveTo(bx+260, by+224, bx+520, by+286); ctx.quadraticCurveTo(bx+760, by+238, bx+bw, by+278); ctx.lineTo(bx+bw, by+bh); ctx.lineTo(bx, by+bh); ctx.closePath(); ctx.fill();
+  // Golden skyline blocks
+  ctx.fillStyle = 'rgba(245,213,150,0.85)';
+  [[740,224,26,64],[772,196,30,92],[808,214,22,74],[836,166,34,122],[876,204,28,84]].forEach(([x,y,w,h]) => ctx.fillRect(x, by+y, w, h));
   ctx.restore();
+  ctx.strokeStyle = 'rgba(245,213,150,0.35)'; ctx.lineWidth = 1.6; strokeRound(ctx, bx, by, bw, bh, 24);
 
-  // Header typography + collectible stamp
-  ctx.fillStyle='rgba(255,255,255,0.85)';ctx.font=`700 22px ${sans}`;
-  ctx.fillText(`${D.brand}  ·  ARCHIVE NO.${p.no}`,92,108);
-  ctx.fillStyle='#ffffff';ctx.font=`800 72px ${serif}`;
-  ctx.fillText(p.name,90,214);
-  ctx.fillStyle='rgba(255,255,255,0.92)';ctx.font=`500 28px ${sans}`;
-  ctx.fillText(`${p.motif}  ·  灵魂契合度 ${ranked[0].fit}%`,92,276);
+  // Header Typography & Circular Postmark
+  ctx.fillStyle = 'rgba(246,232,202,0.88)'; ctx.font = `700 22px ${sans}`;
+  ctx.fillText(`CITY ATLAS  ·  SOUL POSTCARD NO.${p.no}` + (sig ? `  ·  FOR ${sig}` : ''), 92, 118);
+  ctx.fillStyle = '#ffffff'; ctx.font = `800 84px ${serif}`;
+  ctx.fillText(p.name, 90, 224);
+  ctx.fillStyle = '#f5d596'; ctx.font = `600 27px ${sans}`;
+  ctx.fillText(`${p.motif}  ·  灵魂契合度 ${ranked[0].fit}%`, 92, 286);
 
-  // Stamp badge top right
-  const stamp=p.stamp||`NO.${p.no}`;
-  ctx.save();ctx.translate(925,112);ctx.rotate(0.06);
-  ctx.strokeStyle='rgba(255,255,255,0.75)';ctx.lineWidth=2;strokeRound(ctx,-92,-24,184,48,10);
-  ctx.fillStyle='#ffffff';ctx.font=`700 22px ${serif}`;ctx.textAlign='center';
-  ctx.fillText(stamp,0,8);ctx.restore();ctx.textAlign='left';
+  // Circular Postmark Stamp
+  ctx.save(); ctx.translate(906, 134); ctx.rotate(0.12);
+  ctx.strokeStyle = 'rgba(245,213,150,0.85)'; ctx.lineWidth = 2.6;
+  ctx.beginPath(); ctx.arc(0, 0, 62, 0, Math.PI * 2); ctx.stroke();
+  ctx.setLineDash([4, 4]); ctx.lineWidth = 1.4;
+  ctx.beginPath(); ctx.arc(0, 0, 50, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle = '#fff5dc'; ctx.textAlign = 'center'; ctx.font = `800 20px ${serif}`;
+  ctx.fillText(p.stamp || p.tag, 0, 7);
+  ctx.font = `700 13px ${sans}`; ctx.fillText('SOUL POST', 0, -24); ctx.fillText('2026', 0, 32);
+  ctx.restore(); ctx.textAlign = 'left';
 
-  // Tag pills inside header bottom
-  let tx=92;
-  p.tags.forEach(t=>{
-    const label='# '+t;
-    ctx.font=`600 22px ${sans}`;
-    const w=ctx.measureText(label).width+34;
-    ctx.fillStyle='rgba(255,255,255,0.18)';fillRound(ctx,tx,306,w,40,20);
-    ctx.fillStyle='#fff';ctx.fillText(label,tx+17,333);
-    tx+=w+14;
+  // Tag pills
+  let tx = 92;
+  p.tags.forEach(t => {
+    const lbl = '# ' + t; ctx.font = `600 21px ${sans}`;
+    const w = ctx.measureText(lbl).width + 32;
+    ctx.fillStyle = 'rgba(255,255,255,0.17)'; fillRound(ctx, tx, 330, w, 40, 20);
+    ctx.fillStyle = '#ffffff'; ctx.fillText(lbl, tx + 16, 357); tx += w + 12;
   });
 
-  // Quote callout card
-  ctx.fillStyle=P.card;fillRound(ctx,52,394,976,120,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,394,976,120,20);
-  ctx.fillStyle=P.accent2;fillRound(ctx,52,394,10,120,5);
-  ctx.fillStyle=P.accent;ctx.font=`700 34px ${serif}`;
-  const qLines=wrap(ctx,`「${p.quote}」`,900).slice(0,2);
-  const qStart=qLines.length===1?466:444;
-  qLines.forEach((l,i)=>ctx.fillText(l,86,qStart+i*44));
+  // Quote Banner
+  ctx.fillStyle = CARD; fillRound(ctx, 56, 424, 968, 106, 20);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 56, 424, 968, 106, 20);
+  ctx.fillStyle = GOLD; fillRound(ctx, 56, 424, 10, 106, 5);
+  ctx.fillStyle = ACC; ctx.font = `700 32px ${serif}`;
+  const qLines = wrap(ctx, `「${p.quote}」`, 895).slice(0, 2);
+  qLines.forEach((l, i) => ctx.fillText(l, 90, (qLines.length === 1 ? 488 : 468) + i * 40));
 
-  // Insight paragraph
-  let y=566;
-  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;
-  ctx.fillText('SOUL PORTRAIT  ·  专属解读',70,y);y+=40;
-  ctx.fillStyle=P.ink;ctx.font=`400 27px ${sans}`;
-  const iLines=wrap(ctx,p.insight,936).slice(0,3);
-  iLines.forEach(l=>{ctx.fillText(l,70,y);y+=41;});
+  // Insight + Radar Split Card
+  ctx.fillStyle = CARD; fillRound(ctx, 56, 550, 968, 344, 22);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 56, 550, 968, 344, 22);
+  ctx.fillStyle = GOLD; ctx.font = `800 20px ${sans}`;
+  ctx.fillText('01 / 你的城市灵魂画像', 88, 594);
+  ctx.fillStyle = INK; ctx.font = `400 24px ${sans}`;
+  wrap(ctx, p.insight, 530).slice(0, 5).forEach((l, i) => ctx.fillText(l, 88, 636 + i * 38));
+  ctx.fillStyle = MUTED; ctx.font = `600 20px ${sans}`;
+  ctx.fillText('✦ ' + wrap(ctx, p.vibe || p.action, 520)[0], 88, 862);
+  drawCanvasRadar(ctx, 822, 728, 102, D.axes.map(a => a[0]), v.map(x => x / 3), ACC, dark ? 'rgba(92,194,180,0.28)' : 'rgba(18,84,79,0.2)', LINE, INK);
 
-  // Axes visualization block
-  y+=16;
-  ctx.fillStyle=P.card;
-  const axisStep=D.axes.length>4?56:72;
-  const axisBoxH=56+D.axes.length*axisStep;
-  fillRound(ctx,52,y,976,axisBoxH,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,y,976,axisBoxH,20);
-  ctx.fillStyle=P.accent;ctx.font=`800 22px ${sans}`;
-  ctx.fillText('偏好维度图谱',82,y+40);
-  let ay=y+78;
-  D.axes.forEach((a,i)=>{
-    ctx.font=`600 21px ${sans}`;ctx.fillStyle=P.ink;ctx.textAlign='left';
-    ctx.fillText(`${a[0]} · ${a[1]}`,82,ay);
-    ctx.textAlign='right';ctx.fillStyle=P.muted;ctx.fillText(a[2],998,ay);
-    ctx.textAlign='left';
-    ctx.fillStyle=P.soft;fillRound(ctx,82,ay+13,916,10,5);
-    const px=82+916*Math.max(0.03,Math.min(0.97,v[i]/3));
-    ctx.fillStyle=P.accent;ctx.beginPath();ctx.arc(px,ay+18,11,0,Math.PI*2);ctx.fill();
-    ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();
-    ay+=axisStep;
-  });
+  // Hidden Contrast Strip
+  ctx.fillStyle = dark ? '#183a40' : '#e5f0ea'; fillRound(ctx, 56, 916, 968, 140, 20);
+  ctx.fillStyle = ACC; ctx.font = `800 21px ${sans}`; ctx.fillText('✦ 别人没发现的隐藏反差面', 88, 956);
+  ctx.fillStyle = INK; ctx.font = `400 24px ${sans}`;
+  wrap(ctx, p.contrast, 900).slice(0, 2).forEach((l, i) => ctx.fillText(l, 88, 998 + i * 36));
 
-  // Bottom Duo Cards: Soulmate + Strength
-  const duoY=Math.min(1148, y+axisBoxH+22);
-  const duoH=186;
-  // Left card: Soulmate
-  ctx.fillStyle=P.soft;fillRound(ctx,52,duoY,476,duoH,20);
-  ctx.fillStyle=P.accent;ctx.font=`800 21px ${sans}`;ctx.fillText('♥ 天选合拍搭子',80,duoY+40);
-  ctx.fillStyle=P.ink;ctx.font=`800 34px ${serif}`;ctx.fillText(p.match[0],80,duoY+86);
-  ctx.fillStyle=P.muted;ctx.font=`400 21px ${sans}`;
-  wrap(ctx,p.match[1],420).slice(0,2).forEach((l,i)=>ctx.fillText(l,80,duoY+124+i*30));
+  // Bottom Duo Cards
+  const dy = 1078, dh = 232;
+  ctx.fillStyle = CARD; fillRound(ctx, 56, dy, 472, dh, 20);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 56, dy, 472, dh, 20);
+  ctx.fillStyle = ACC; ctx.font = `800 21px ${sans}`; ctx.fillText('♥ 天选城市搭子', 84, dy + 42);
+  ctx.fillStyle = INK; ctx.font = `800 38px ${serif}`; ctx.fillText(p.match[0], 84, dy + 98);
+  ctx.fillStyle = MUTED; ctx.font = `400 21px ${sans}`;
+  wrap(ctx, p.match[1], 416).slice(0, 3).forEach((l, i) => ctx.fillText(l, 84, dy + 140 + i * 30));
 
-  // Right card: Hidden contrast or highlight
-  ctx.fillStyle=P.card;fillRound(ctx,552,duoY,476,duoH,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,552,duoY,476,duoH,20);
-  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;ctx.fillText('✦ 你的闪光亮点',580,duoY+40);
-  ctx.fillStyle=P.ink;ctx.font=`600 25px ${serif}`;
-  wrap(ctx,p.strength,420).slice(0,2).forEach((l,i)=>ctx.fillText(l,580,duoY+84+i*34));
-  ctx.fillStyle=P.muted;ctx.font=`400 20px ${sans}`;
-  const eggShort=p.egg||p.vibe||'';
-  wrap(ctx,eggShort,420).slice(0,1).forEach(l=>ctx.fillText('· '+l,580,duoY+158));
+  ctx.fillStyle = CARD; fillRound(ctx, 552, dy, 472, dh, 20);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 552, dy, 472, dh, 20);
+  ctx.fillStyle = GOLD; ctx.font = `800 21px ${sans}`; ctx.fillText('⚡ 奇妙反差碰撞', 580, dy + 42);
+  ctx.fillStyle = INK; ctx.font = `800 38px ${serif}`; ctx.fillText(p.clash[0], 580, dy + 98);
+  ctx.fillStyle = MUTED; ctx.font = `400 21px ${sans}`;
+  wrap(ctx, p.clash[1], 416).slice(0, 3).forEach((l, i) => ctx.fillText(l, 580, dy + 140 + i * 30));
 
-  // Footer strip
-  ctx.fillStyle=P.muted;ctx.font=`500 22px ${sans}`;
-  ctx.fillText(`${D.title}  ·  长按保存分享`,60,1388);
-  ctx.textAlign='right';ctx.fillText('原创趣味探索 · 非专业心理测评',1020,1388);
-  ctx.textAlign='left';
+  // Footer
+  ctx.fillStyle = MUTED; ctx.font = `500 21px ${sans}`;
+  ctx.fillText(`${D.title}  ·  长按保存找同频旅伴`, 64, 1372);
+  ctx.textAlign = 'right'; ctx.fillText('CITY ATLAS · 原创趣味探索', 1016, 1372);
+  ctx.textAlign = 'left';
   return c;
 }
 
-function showPoster(){
+function renderPosterCanvas(){
   if(!report) return;
   const status=document.getElementById('posterStatus'),
         area=document.getElementById('posterArea'),
-        download=document.getElementById('downloadPoster');
+        download=document.getElementById('downloadPoster'),
+        sig=(document.getElementById('sigInput')?.value||'').trim().slice(0,12);
   status.textContent='';area.innerHTML='';download.disabled=true;
   try{
     if(posterURL) URL.revokeObjectURL(posterURL);
     posterURL=null;
-    const canvas=makePoster();
+    const canvas=makePoster(posterTheme,sig);
     const img=document.createElement('img');
     img.className='poster';img.alt='可保存的专属结果海报';
     img.src=canvas.toDataURL('image/png');
@@ -643,13 +1204,27 @@ function showPoster(){
       posterURL=blob?URL.createObjectURL(blob):img.src;
       download.disabled=false;
     },'image/png');
-    if(!posterDialog.open) posterDialog.showModal();
   }catch(e){
     status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
-    if(!posterDialog.open) posterDialog.showModal();
   }
 }
 
+function showPoster(){
+  if(!report) return;
+  SFX.click(3);
+  renderPosterCanvas();
+  if(!posterDialog.open) posterDialog.showModal();
+}
+
+document.querySelectorAll('[data-ptheme]').forEach(btn=>{
+  btn.onclick=()=>{
+    SFX.click(1);
+    posterTheme=Number(btn.dataset.ptheme)||0;
+    document.querySelectorAll('[data-ptheme]').forEach(x=>x.classList.toggle('active',x===btn));
+    renderPosterCanvas();
+  };
+});
+document.getElementById('sigApply').onclick=()=>{SFX.click(2);renderPosterCanvas();document.getElementById('posterStatus').textContent='✓ 海报已更新！';};
 document.getElementById('closePoster').onclick=()=>posterDialog.close();
 document.getElementById('downloadPoster').onclick=()=>{
   if(!posterURL||!report) return;
@@ -658,9 +1233,20 @@ document.getElementById('downloadPoster').onclick=()=>{
   document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方图片保存。';
 };
 document.getElementById('closeCopy').onclick=()=>copyDialog.close();
+document.getElementById('closePeek').onclick=()=>peekDialog.close();
+document.getElementById('closeDex').onclick=()=>dexDialog.close();
 document.getElementById('selectCopyBtn').onclick=()=>{
   const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
 };
+document.addEventListener('keydown',e=>{
+  if(screen!=='question'||posterDialog.open||copyDialog.open||peekDialog.open||dexDialog.open) return;
+  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  const map={'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'A':0,'B':1,'C':2,'D':3};
+  if(e.key in map){e.preventDefault();choose(map[e.key]);}
+  else if(e.key==='ArrowLeft'||e.key==='Backspace'){e.preventDefault();back();}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){if(answers[idx]!==null){e.preventDefault();next();}}
+});
+initSoundToggle();
 home();
 </script>
 </body>

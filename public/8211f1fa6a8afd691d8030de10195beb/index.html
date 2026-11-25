@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#8e3e5e">
+<meta name="theme-color" content="#7b2c4b">
 <meta name="description" content="你的隐藏恋爱人格 · 原创高质感趣味探索测试，无需登录，数据仅在本地浏览器处理。">
 <title>你的隐藏恋爱人格</title>
 <style>
 :root{
-  --ink:#3f2532;--accent:#8e3e5e;--accent2:#c9876b;--paper:#faf0f2;
-  --soft:#f3dde6;--line:#e6ced9;--card:#fffbfd;--muted:#785a68;
+  
+      --ink:#391f2b;--accent:#842e50;--accent2:#c7875e;--paper:#fbf2f4;
+      --soft:#f5dfe7;--line:#e7cbd6;--card:#fffcfd;--muted:#7b5b6a;
   --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
   --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
 }
@@ -17,98 +18,105 @@
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
   radial-gradient(ellipse at 92% 0%,var(--soft),transparent 58%),
-  radial-gradient(ellipse at 8% 100%,color-mix(in srgb,var(--accent2) 13%,transparent),transparent 52%);z-index:-1}
-main{width:min(100%,660px);padding:18px 16px max(32px,env(safe-area-inset-bottom));margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.brand{font-size:11px;letter-spacing:2.4px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
+  radial-gradient(ellipse at 8% 100%,color-mix(in srgb,var(--accent2) 15%,transparent),transparent 54%);z-index:-1}
+main{width:min(100%,660px);padding:14px 14px max(28px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.brand{font-size:11px;letter-spacing:2.2px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:6px}
 .brand::before{content:"✦";color:var(--accent2);font-size:13px}
-.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.05em}
-section.panel{border:1px solid var(--line);border-radius:26px;background:var(--card);padding:clamp(18px,4.2vw,30px);box-shadow:0 22px 54px rgba(32,24,20,.08);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
+.issue{font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.04em}
+.sound-btn{background:var(--card);border:1px solid var(--line);color:var(--accent)}
+section.panel{border:1px solid var(--line);border-radius:24px;background:var(--card);padding:clamp(16px,4vw,28px);box-shadow:0 22px 54px rgba(32,24,20,.09);overflow:hidden;animation:enter .28s cubic-bezier(.22,1,.36,1)}
 @keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 h1,h2,h3,p{margin:0}
-h1{font-family:var(--serif);font-size:clamp(30px,7.8vw,46px);font-weight:800;line-height:1.26;letter-spacing:.03em}
-h2{font-family:var(--serif);font-size:clamp(21px,5.2vw,27px);line-height:1.48;font-weight:700}
+h1{font-family:var(--serif);font-size:clamp(28px,7.2vw,42px);font-weight:800;line-height:1.24;letter-spacing:.03em;text-wrap:balance}
+h2{font-family:var(--serif);font-size:clamp(20px,5vw,26px);line-height:1.46;font-weight:700}
 h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700}
-.eyebrow{color:var(--accent);font-size:11px;letter-spacing:2.2px;font-weight:800;margin:16px 0 8px;text-transform:uppercase}
-.lead{font-size:15px;line-height:1.85;margin:12px 0 18px;color:color-mix(in srgb,var(--ink) 86%,var(--muted))}
+.eyebrow{color:var(--accent);font-size:10.5px;letter-spacing:2.2px;font-weight:800;margin:13px 0 6px;text-transform:uppercase}
+.lead{font-size:14px;line-height:1.78;margin:9px 0 14px;color:color-mix(in srgb,var(--ink) 86%,var(--muted));text-wrap:pretty}
 .muted{font-size:12px;color:var(--muted)}
-.hero{position:relative;isolation:isolate;height:clamp(176px,46vw,230px);background:var(--accent);border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.hero{position:relative;isolation:isolate;height:clamp(164px,42vw,224px);background:var(--accent);border-radius:18px;overflow:hidden;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
 .hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.42) 100%);z-index:-1}
-.hero-badge{position:absolute;top:14px;right:14px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.22);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.6px;font-weight:700;color:#fff}
-.hero-copy{position:absolute;bottom:16px;left:18px;right:16px}
-.hero-copy small{font-size:10px;letter-spacing:3px;opacity:.92;display:block;margin-bottom:2px}
-.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,34px);letter-spacing:3px;line-height:1.25}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
-.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:500}
-.pill.accent{border-color:color-mix(in srgb,var(--accent) 32%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
-.teaser-wrap{margin:20px 0 22px;padding-top:16px;border-top:1px dashed var(--line)}
-.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.46) 100%);z-index:-1}
+.hero-badge{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.26);backdrop-filter:blur(6px);font-size:10px;letter-spacing:1.4px;font-weight:700;color:#fff}
+.hero-copy{position:absolute;bottom:14px;left:16px;right:16px}
+.hero-copy small{font-size:9.5px;letter-spacing:2.8px;opacity:.9;display:block;margin-bottom:2px}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(22px,5.6vw,32px);letter-spacing:3px;line-height:1.22}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 15px}
+.pill{font-size:11.5px;padding:4px 11px;border:1px solid var(--line);border-radius:100px;background:var(--paper);color:var(--ink);font-weight:600}
+.pill.accent{border-color:color-mix(in srgb,var(--accent) 34%,var(--line));background:var(--soft);color:var(--accent);font-weight:700}
+.teaser-wrap{margin:15px 0 12px;padding-top:13px;border-top:1px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
 .teaser-head span{font-size:11px;letter-spacing:1.4px;color:var(--accent);font-weight:800}
 .teaser-head small{font-size:11px;color:var(--muted)}
-.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.teaser{padding:12px 10px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
-.teaser b{font-family:var(--serif);font-size:15px;color:var(--ink)}
-.teaser span{font-size:11px;color:var(--accent);font-weight:600}
-.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
-button:active:not(:disabled){transform:scale(.988)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.teaser{padding:10px 9px;border-radius:13px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;gap:3px;text-align:left}
+.teaser:hover{border-color:var(--accent);box-shadow:0 6px 16px rgba(32,24,20,.07)}
+.teaser b{font-family:var(--serif);font-size:14px;color:var(--ink);line-height:1.28}
+.teaser span{font-size:10.5px;color:var(--accent);font-weight:700}
+.teaser small{font-size:10.5px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 15px;min-height:46px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.985)}
 button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 button:hover:not(:disabled){border-color:var(--accent)}
 button:disabled{opacity:.4;cursor:not-allowed}
-.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 26%,transparent)}
+.primary{background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 82%,#000));color:#fff;border-color:var(--accent);font-weight:750;width:100%;text-align:center;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 28%,transparent)}
 .primary:hover:not(:disabled){filter:brightness(1.06)}
-.secondary{width:100%;text-align:center;background:var(--paper)}
-.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.secondary{width:100%;text-align:center;background:var(--paper);font-weight:600}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:7px;min-height:34px}
 .subtle:hover{color:var(--accent)}
-.stack{display:grid;gap:10px}
+.stack{display:grid;gap:9px}
 .actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
-.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:16px}
+.notice{font-size:11.5px;color:var(--muted);line-height:1.66;margin-top:12px}
+/* Quiz screen */
 .question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--accent);font-weight:750;letter-spacing:.06em}
 .auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:11px;font-weight:600;min-height:28px;cursor:pointer}
 .auto-toggle.on{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));color:var(--accent);background:var(--soft)}
-.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:9px 0 8px}
 .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
-.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line);margin-bottom:20px}
+.chapter-dots span{background:var(--accent)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:13px;background:var(--paper);border:1px solid var(--line);margin:10px 0 18px}
 .chapter-num{font-family:var(--serif);font-size:20px;font-weight:800;color:var(--accent2);line-height:1}
 .chapter-bar strong{display:block;font-size:13px;color:var(--ink)}
 .chapter-bar span{display:block;font-size:11px;color:var(--muted);line-height:1.45}
-.options{display:grid;gap:10px;margin:20px 0 22px}
-.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--card)}
+.options{display:grid;gap:10px;margin:18px 0 20px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:58px;width:100%;padding:12px 14px;line-height:1.52;background:var(--card)}
 .option .letter{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:10px;background:var(--paper);color:var(--accent);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .18s}
-.option.selected{border-color:var(--accent);box-shadow:0 4px 14px color-mix(in srgb,var(--accent) 16%,transparent),inset 0 0 0 1px var(--accent);background:var(--soft)}
+.option.selected{border-color:var(--accent);box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 18%,transparent),inset 0 0 0 1px var(--accent);background:var(--soft);transform:translateX(2px)}
 .option.selected .letter{background:var(--accent);color:#fff;border-color:var(--accent)}
 .option .check{margin-left:auto;color:var(--accent);font-weight:800;font-size:15px}
 .nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
 /* Calculating ritual screen */
-.calc-box{text-align:center;padding:34px 10px 26px}
-.calc-ring{width:66px;height:66px;margin:0 auto 20px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite}
+.calc-box{text-align:center;padding:38px 10px 30px}
+.calc-ring{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--accent);border-right-color:var(--accent2);animation:spin 1s linear infinite;position:relative}
+.calc-ring::after{content:"💌";position:absolute;inset:0;display:grid;place-items:center;font-size:22px;animation:spinRev 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinRev{to{transform:rotate(-360deg)}}
 .calc-step{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:8px;min-height:1.6em}
 .calc-sub{font-size:12px;color:var(--muted)}
 /* Result Cover */
 .result-cover{border:1px solid var(--line);border-radius:20px;padding:14px;background:var(--paper);position:relative}
-.result-cover .hero{height:168px}
-.result-stamp{position:absolute;top:24px;right:24px;padding:5px 11px;border:1.5px solid rgba(255,255,255,.78);border-radius:8px;font-family:var(--serif);font-size:11px;letter-spacing:2px;color:#fff;background:rgba(0,0,0,.22);backdrop-filter:blur(4px);transform:rotate(3deg)}
+.result-cover .hero{height:164px}
+.result-stamp{position:absolute;top:24px;right:24px;padding:5px 11px;border:1.5px solid rgba(255,255,255,.78);border-radius:8px;font-family:var(--serif);font-size:11px;letter-spacing:2px;color:#fff;background:rgba(0,0,0,.28);backdrop-filter:blur(4px);transform:rotate(3deg)}
 .result-name-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:6px 0 8px}
-.result-name{font-family:var(--serif);font-size:clamp(34px,8.8vw,50px);line-height:1.22;letter-spacing:.03em}
+.result-name{font-family:var(--serif);font-size:clamp(32px,8.2vw,48px);line-height:1.2;letter-spacing:.03em}
 .fit-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:99px;background:var(--accent);color:#fff;font-size:12px;font-weight:750;white-space:nowrap}
-.quote-box{position:relative;margin:12px 0 8px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0}
-.quote{font-family:var(--serif);font-size:17px;color:var(--accent);line-height:1.62;font-weight:600}
-.result-cover .intro{padding:8px 6px 6px}
-.block{padding:22px 0;border-bottom:1px solid var(--line)}
-.block:last-of-type{border:0;padding-bottom:14px}
-.block p{font-size:14.5px;line-height:1.88;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
+.quote-box{position:relative;margin:12px 0 6px;padding:12px 14px;border-left:3px solid var(--accent2);background:var(--card);border-radius:0 12px 12px 0}
+.quote{font-family:var(--serif);font-size:16.5px;color:var(--accent);line-height:1.62;font-weight:600}
+.result-cover .intro{padding:8px 6px 4px}
+.block{padding:20px 0;border-bottom:1px solid var(--line)}
+.block:last-of-type{border:0;padding-bottom:12px}
+.block p{font-size:14.5px;line-height:1.86;color:color-mix(in srgb,var(--ink) 92%,var(--muted))}
 .kicker{font-size:10px;letter-spacing:2.2px;color:var(--accent2);font-weight:800;margin-bottom:5px;text-transform:uppercase}
 .contrast-card{margin-top:13px;padding:13px 15px;border-radius:14px;background:linear-gradient(135deg,var(--soft),var(--paper));border:1px solid var(--line)}
 .contrast-card b{display:block;font-size:12px;color:var(--accent);margin-bottom:4px;letter-spacing:.04em}
 .contrast-card p{font-size:13.5px;line-height:1.75}
-.axis{margin:15px 0}
+.radar-wrap{background:var(--paper);border:1px solid var(--line)}
+.axis{margin:14px 0}
 .axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
 .axis-head strong{font-size:13px}
 .axis-head span{color:var(--accent);font-weight:700}
 .axis-labels{color:var(--muted)}
-.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:8px 0}
+.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:7px 0}
 .track::before{content:"";position:absolute;left:50%;width:1px;height:9px;background:var(--line)}
 .track i{position:absolute;width:16px;height:16px;top:-3.5px;border-radius:50%;background:var(--accent);border:2.5px solid var(--card);box-shadow:0 0 0 1.5px var(--accent);transform:translateX(-50%)}
 .rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -120,23 +128,130 @@ button:disabled{opacity:.4;cursor:not-allowed}
 .mini b{display:block;color:var(--accent);font-size:12px;margin-bottom:5px}
 .mini .partner-name{font-family:var(--serif);font-size:18px;font-weight:800;color:var(--ink);margin-bottom:4px}
 .mini p{font-size:13px;line-height:1.68}
+.chem-box{background:var(--paper);border:1px solid var(--line)}
+.chem-select{border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.chem-out{background:var(--card);border:1px solid var(--line)}
+.chem-pct{color:var(--accent)}
+.chem-bar{background:var(--soft)}
+.chem-bar i{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.chem-copy-btn{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 32%,var(--line));color:var(--accent)}
+.dex-bar{background:var(--paper);border:1px dashed var(--accent2)}
+.dex-open-btn{background:var(--card);border-color:var(--accent);color:var(--accent)}
+.dex-card{background:var(--paper);border:1px solid var(--line)}
+.dex-card.unlocked{background:var(--soft);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
 .egg-box{padding:14px 16px;border-radius:14px;background:var(--paper);border:1px dashed var(--accent2);margin-top:10px}
 .egg-box b{display:block;font-size:12px;color:var(--accent2);margin-bottom:4px;letter-spacing:.05em}
 .egg-box p{font-size:14px}
 .status-bar{font-size:12px;color:var(--accent);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:600}
-.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
-.poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.footer{text-align:center;margin:16px 0 0;font-size:11px;color:var(--muted);line-height:1.75}
+.poster{width:100%;max-width:360px;margin:10px auto;border-radius:14px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.theme-chip{background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+.theme-chip.active{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+.sig-input{border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.sig-apply{background:var(--soft);border-color:var(--accent);color:var(--accent)}
 dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:1px solid var(--line);border-radius:22px;padding:20px;background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.25)}
-dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
+dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(4px)}
 .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
 .copy-area{width:100%;min-height:150px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+
+/* === Header Controls & Sound Button === */
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sound-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:99px;font-size:11px;font-weight:700;min-height:28px;line-height:1;letter-spacing:.04em}
+.sound-btn.muted{opacity:.62}
+/* === CTA Shimmer & Interactive Foil Tilt === */
+.primary{position:relative;overflow:hidden}
+.primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.26),transparent);transform:skewX(-18deg);animation:btnSheen 4.4s ease-in-out infinite;pointer-events:none}
+@keyframes btnSheen{0%,68%{left:-120%}100%{left:165%}}
+.foil-tilt{transition:transform .22s ease-out;position:relative}
+.foil-tilt::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,20%),rgba(255,255,255,.16),transparent 54%);opacity:0;transition:opacity .25s}
+.foil-tilt:hover::after{opacity:1}
+/* === Interactive Teaser Cards === */
+.teaser{cursor:pointer;transition:transform .16s ease,border-color .18s ease,box-shadow .18s ease}
+.teaser:hover{transform:translateY(-2px)}
+.teaser:active{transform:scale(.98)}
+/* === Chapter Dots & Keyboard Hint === */
+.chapter-dots{display:flex;gap:5px;margin:8px 0 4px}
+.chapter-dots span{flex:1;height:4px;border-radius:99px;opacity:.22;transition:opacity .25s,transform .25s}
+.chapter-dots span.done{opacity:.72}
+.chapter-dots span.now{opacity:1;transform:scaleY(1.35)}
+.kbd-hint{display:none;text-align:center;font-size:11px;opacity:.65;margin-top:8px}
+@media(hover:hover) and (pointer:fine){.kbd-hint{display:block}}
+/* === Radar Box === */
+.radar-wrap{display:flex;justify-content:center;align-items:center;margin:10px 0 14px;padding:10px;border-radius:16px}
+.radar-svg{width:min(280px,100%);height:auto;display:block}
+.radar-poly{transform-origin:140px 122px;animation:radarPop .55s cubic-bezier(.22,1,.36,1)}
+@keyframes radarPop{from{opacity:0;transform:scale(.45)}to{opacity:1;transform:scale(1)}}
+/* === Friend Compatibility Checker Widget === */
+.chem-box{margin-top:14px;padding:15px;border-radius:15px}
+.chem-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+.chem-head strong{font-size:13.5px}
+.chem-head span{font-size:11px;opacity:.75}
+.chem-select{width:100%;min-height:44px;padding:9px 12px;border-radius:11px;font:inherit;font-size:13.5px;cursor:pointer}
+.chem-out{margin-top:12px;padding:13px 14px;border-radius:12px;animation:enter .24s ease-out}
+.chem-score-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.chem-verdict{font-weight:800;font-size:14px}
+.chem-pct{font-weight:900;font-size:20px;line-height:1}
+.chem-bar{height:7px;border-radius:99px;overflow:hidden;margin:6px 0 9px}
+.chem-bar i{display:block;height:100%;border-radius:99px;transition:width .4s cubic-bezier(.22,1,.36,1)}
+.chem-copy-btn{margin-top:10px;width:100%;min-height:38px;padding:7px 12px;font-size:12.5px;font-weight:700;border-radius:10px}
+/* === Collection Dex Button & Grid === */
+.dex-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;margin-top:12px}
+.dex-bar-info strong{display:block;font-size:13px}
+.dex-bar-info span{display:block;font-size:11.5px;opacity:.75}
+.dex-open-btn{min-height:36px;padding:6px 14px;font-size:12px;font-weight:700;border-radius:99px;flex-shrink:0}
+.dex-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.dex-card{padding:11px 10px;border-radius:12px;display:flex;flex-direction:column;gap:4px}
+.dex-card.locked{opacity:.58;border-style:dashed!important}
+.dex-card b{font-size:13px;line-height:1.35}
+.dex-card small{font-size:11px;line-height:1.45;opacity:.8}
+/* === Poster Customization Controls === */
+.poster-tools{display:grid;gap:9px;margin:10px 0 8px}
+.poster-themes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.theme-chip{min-height:36px;padding:6px 10px;font-size:12px;font-weight:700;border-radius:10px;text-align:center}
+.sig-row{display:flex;gap:8px;align-items:center}
+.sig-input{flex:1;min-height:38px;padding:6px 11px;border-radius:10px;font:inherit;font-size:13px}
+.sig-apply{min-height:38px;padding:6px 13px;font-size:12px;font-weight:700;border-radius:10px;flex-shrink:0}
+/* === Chapter Toast === */
+.quiz-toast{position:fixed;top:16px;left:50%;transform:translate(-50%,-18px);opacity:0;pointer-events:none;z-index:999;padding:8px 16px;border-radius:99px;font-size:12.5px;font-weight:700;box-shadow:0 10px 28px rgba(0,0,0,.22);transition:opacity .25s,transform .25s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.quiz-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:440px){.dex-grid{grid-template-columns:1fr}}
+
+
+      body{background-image:radial-gradient(circle at 20% 20%,rgba(202,126,154,.12) 0,transparent 42%),radial-gradient(circle at 82% 88%,rgba(199,135,94,.12) 0,transparent 45%)}
+      section.panel{position:relative;border:1.5px solid var(--line);border-radius:26px;box-shadow:0 24px 60px rgba(132,46,80,.10)}
+      section.panel::after{content:"";position:absolute;inset:8px;border:1px solid rgba(199,135,94,.22);border-radius:20px;pointer-events:none}
+      .hero{border-radius:18px;background:linear-gradient(150deg,#4c172c,#7a2b4b 55%,#a65269)}
+      .wax-seal{position:absolute;top:12px;left:14px;width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#c84b68,#7c1d38);border:2px solid rgba(255,224,205,.65);display:grid;place-items:center;color:#fde7d4;font-size:18px;box-shadow:0 6px 16px rgba(48,10,24,.45);transform:rotate(-8deg)}
+      .petal-float{animation:petalDrift 7s ease-in-out infinite alternate}
+      .petal-float2{animation:petalDrift 9.5s ease-in-out infinite alternate-reverse}
+      @keyframes petalDrift{from{transform:translate(0,0) rotate(-6deg)}to{transform:translate(10px,12px) rotate(10deg)}}
+      .orbit-spin{transform-origin:478px 118px;animation:slowOrbit 26s linear infinite}
+      @keyframes slowOrbit{to{transform:rotate(360deg)}}
+      .result-cover{border:1.5px solid color-mix(in srgb,var(--accent2) 45%,var(--line));background:linear-gradient(170deg,#fff9fb,var(--paper))}
+      .quiz-toast{background:#842e50;color:#fff8fa}
+    
 @media(max-width:440px){
-  main{padding:14px 12px 28px}
-  .teasers{grid-template-columns:1fr}
+  main{padding:10px 11px 18px}
+  header{margin-bottom:9px;padding-bottom:8px}
+  .brand{letter-spacing:1.1px;font-size:10px;white-space:nowrap}
+  .issue{font-size:10px}
+  section.panel{padding:14px 14px 16px}
+  .hero{height:142px}
+  .eyebrow{margin:10px 0 4px;font-size:10px}
+  h1{font-size:26px;line-height:1.2}
+  .lead{font-size:13px;line-height:1.62;margin:7px 0 10px}
+  .pills{gap:5px;margin:0 0 11px}
+  .pill{font-size:10.5px;padding:3px 9px}
+  button.primary{min-height:42px;padding:10px 14px;font-size:14.5px}
+  .teaser-wrap{margin:11px 0 6px;padding-top:10px}
+  .teaser-head{margin-bottom:7px}
   .duo,.actions-row{grid-template-columns:1fr}
   .option{font-size:14px}
-  .brand{letter-spacing:1.4px}
+  .teaser{padding:8px 7px}
+  .teaser b{font-size:12.5px}
+  .teaser span{font-size:9.5px}
+  .teaser small{font-size:9.5px;-webkit-line-clamp:1}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -145,7 +260,10 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
 <main>
   <header>
     <span class="brand">LOVE ATLAS</span>
-    <span class="issue">VOL. 02 · 心动档案室</span>
+    <div class="header-right">
+      <span class="issue">VOL. 02 · 心动档案室</span>
+      <button type="button" id="soundBtn" class="sound-btn" aria-label="切换音效">🔊 音效</button>
+    </div>
   </header>
   <div id="app"></div>
   <footer class="footer">原创趣味自我探索 · 仅供娱乐参考，非专业心理测评<br>无需登录 · 所有答题记录仅保存在你的本地浏览器</footer>
@@ -153,10 +271,20 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
 
 <dialog id="posterDialog" aria-labelledby="posterTitle">
   <div class="dialog-head">
-    <h3 id="posterTitle">你的小红书专属海报</h3>
+    <h3 id="posterTitle">你的 3:4 绯红情书塔罗海报</h3>
     <button id="closePoster" type="button">关闭</button>
   </div>
-  <p class="muted">3:4 高清收藏卡 · 手机直接长按图片保存，或点击下方下载。</p>
+  <p class="muted">1080 × 1440 收藏卡 · 可切换画风与自定义署名，手机长按保存。</p>
+  <div class="poster-tools">
+    <div class="poster-themes" role="group" aria-label="切换海报风格">
+      <button type="button" class="theme-chip active" data-ptheme="0">绯红火漆情书</button>
+      <button type="button" class="theme-chip" data-ptheme="1">午夜玫瑰塔罗</button>
+    </div>
+    <div class="sig-row">
+      <input id="sigInput" class="sig-input" type="text" maxlength="12" placeholder="选填署名（如：致特别的你）" aria-label="海报自定义署名">
+      <button type="button" id="sigApply" class="sig-apply">印上署名</button>
+    </div>
+  </div>
   <div id="posterArea"></div>
   <div class="stack" style="margin-top:12px">
     <button class="primary" id="downloadPoster">下载高清 PNG 海报</button>
@@ -174,14 +302,360 @@ dialog::backdrop{background:rgba(20,16,22,.62);backdrop-filter:blur(3px)}
   <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
 </dialog>
 
+<dialog id="peekDialog" aria-labelledby="peekTitle">
+  <div class="dialog-head">
+    <h3 id="peekTitle">档案预览</h3>
+    <button id="closePeek" type="button">关闭</button>
+  </div>
+  <div id="peekBody"></div>
+</dialog>
+
+<dialog id="dexDialog" aria-labelledby="dexTitle">
+  <div class="dialog-head">
+    <h3 id="dexTitle">12 种恋爱人格心动图鉴</h3>
+    <button id="closeDex" type="button">关闭</button>
+  </div>
+  <p class="muted" id="dexSub">完成测试自动点亮档案，发给朋友一起集齐全部隐藏结果！</p>
+  <div id="dexGrid" class="dex-grid"></div>
+</dialog>
+
 <script>
-const D={"title":"你的隐藏恋爱人格","subtitle":"情感探索 · 关系偏好","kind":"恋爱","axes":[["亲密需求","空间","陪伴"],["表达方式","含蓄","直接"],["关系节奏","谨慎","主动"],["冲突处理","冷静","沟通"]],"questions":[{"axis":0,"text":"忙完一天，你更期待怎样的相处？","options":[{"text":"先享受自己的安静时间","score":0},{"text":"希望大部分空闲时间一起度过","score":3},{"text":"和对方一起做些轻松的事","score":2},{"text":"独处充电后再联系","score":1}]},{"axis":1,"text":"收到喜欢的礼物，你通常如何回应？","options":[{"text":"轻声道谢，慢慢表达","score":1},{"text":"明确说出喜欢哪里","score":2},{"text":"记在心里，用行动回馈","score":0},{"text":"直接分享自己的惊喜和感动","score":3}]},{"axis":2,"text":"第一次见到心动的人，你倾向于？","options":[{"text":"主动邀请下一次见面","score":3},{"text":"等合适时机再认识","score":1},{"text":"先观察，不急着联系","score":0},{"text":"主动找一个自然的话题","score":2}]},{"axis":3,"text":"两个人意见不合时，你希望？","options":[{"text":"先各自冷静，之后再谈","score":0},{"text":"在双方愿意时尽快说开","score":3},{"text":"简短缓和情绪后交流","score":2},{"text":"留一点时间整理思路再谈","score":1}]},{"axis":1,"text":"突然很想念对方，你会？","options":[{"text":"说今天有些想念","score":2},{"text":"发一条日常消息","score":1},{"text":"直接告诉对方此刻的感受","score":3},{"text":"默默想念，等见面再说","score":0}]},{"axis":2,"text":"刚认识的人发来约会邀请，你会？","options":[{"text":"有好感就约见面","score":2},{"text":"先聊聊再约一个简单场合","score":1},{"text":"了解一段时间再决定","score":0},{"text":"积极提出自己也想去的活动","score":3}]},{"axis":3,"text":"共同计划突然取消，你更希望？","options":[{"text":"自己平复失落后再交流","score":0},{"text":"先说明感受再找替代安排","score":2},{"text":"过一会儿再聊发生了什么","score":1},{"text":"马上一起讨论原因与新计划","score":3}]},{"axis":0,"text":"周末没有安排，你最喜欢？","options":[{"text":"大部分时间一起安排","score":2},{"text":"一天独处、一天相聚","score":1},{"text":"一起度过整个周末","score":3},{"text":"各自享受自己的爱好","score":0}]},{"axis":3,"text":"对方迟到导致计划受影响，你会？","options":[{"text":"及时说明影响并共同调整安排","score":3},{"text":"询问原因并适时说出感受","score":2},{"text":"先调整情绪，晚点谈","score":0},{"text":"等见面后找平静时机交流","score":1}]},{"axis":2,"text":"关系逐渐升温，你更想？","options":[{"text":"主动聊彼此是否愿意进一步发展","score":3},{"text":"慢慢相处，不急着定义","score":0},{"text":"确认彼此了解后再推进","score":1},{"text":"主动创造更多相处机会","score":2}]},{"axis":1,"text":"对方误解了你的好意，你会？","options":[{"text":"直接说清感受与期待","score":3},{"text":"先用行动慢慢化解","score":0},{"text":"明确说明本意","score":2},{"text":"找合适的时机含蓄解释","score":1}]},{"axis":0,"text":"异地时，你理想的联系频率是？","options":[{"text":"希望在方便时频繁分享日常","score":3},{"text":"各自生活，偶尔认真通话","score":0},{"text":"每天分享几件重要小事","score":2},{"text":"固定时间联系，平时自由","score":1}]},{"axis":1,"text":"纪念日，你最自然的表达方式是？","options":[{"text":"认真表达感情并准备惊喜","score":3},{"text":"做一件对方喜欢的小事","score":0},{"text":"写简短的卡片","score":1},{"text":"说出值得纪念的回忆","score":2}]},{"axis":2,"text":"讨论关系未来，你更喜欢？","options":[{"text":"相处足够久再提","score":0},{"text":"尽早确认彼此的想法和期待","score":3},{"text":"主动找合适机会讨论","score":2},{"text":"等条件成熟后认真聊","score":1}]},{"axis":3,"text":"生活习惯发生分歧，你会？","options":[{"text":"及时共同制定双方都能接受的办法","score":3},{"text":"先自己想清楚可接受范围","score":0},{"text":"在平静时一起商量","score":2},{"text":"稍后找时机谈清边界","score":1}]},{"axis":0,"text":"你有机会独自去向往的地方旅行，你会？","options":[{"text":"倾向自己去，也愿意分享经历","score":1},{"text":"希望对方能一起去，不能也接受","score":2},{"text":"很享受独自旅行","score":0},{"text":"优先协商安排一次共同旅行","score":3}]},{"axis":0,"text":"忙碌的一周里，你希望彼此？","options":[{"text":"各自专注，忙完再相聚","score":0},{"text":"有空就一起吃饭或通话","score":2},{"text":"保留独立时间，定期联系","score":1},{"text":"尽量共享空闲和日常片段","score":3}]},{"axis":1,"text":"对方为你做了件贴心的事，你会？","options":[{"text":"主动表达感激和爱意","score":3},{"text":"记住并用类似的行动回报","score":0},{"text":"说清楚自己为什么感动","score":2},{"text":"微笑道谢","score":1}]},{"axis":2,"text":"喜欢的人也表现出好感，你会？","options":[{"text":"主动多约几次","score":2},{"text":"再观察一阵，确认感觉","score":0},{"text":"直接表达想进一步了解","score":3},{"text":"回应一些信号，慢慢熟悉","score":1}]},{"axis":3,"text":"一条消息迟迟没有回复，你会？","options":[{"text":"若影响约定，及时沟通并了解情况","score":3},{"text":"有实际需要时发消息确认","score":2},{"text":"等一会再考虑是否询问","score":1},{"text":"先去做自己的事","score":0}]},{"axis":0,"text":"理想的日常联系是？","options":[{"text":"有自己的生活，不必常报备","score":0},{"text":"有空就愿意保持丰富互动","score":3},{"text":"每天有一段固定交流","score":1},{"text":"随时分享有趣片段","score":2}]},{"axis":3,"text":"争执结束后，你希望？","options":[{"text":"约定稍后复盘","score":1},{"text":"休息一下后聊清关键问题","score":2},{"text":"先安静恢复情绪","score":0},{"text":"尽快一起澄清并约定改进方式","score":3}]},{"axis":2,"text":"想把喜欢的人介绍给朋友，你会？","options":[{"text":"等关系稳定很久再介绍","score":0},{"text":"在熟悉彼此后自然安排","score":1},{"text":"在双方舒适的前提下早些分享社交圈","score":3},{"text":"关系明朗时主动安排","score":2}]},{"axis":1,"text":"感到委屈时，你更自然的反应是？","options":[{"text":"用简短提示让对方知道","score":1},{"text":"明确表达感受与需要","score":3},{"text":"先写日记或独自消化","score":0},{"text":"说明让自己难过的事情","score":2}]},{"axis":0,"text":"理想约会结束后的空余时间，你希望？","options":[{"text":"希望剩余时间也能一起度过","score":3},{"text":"再一起散步或聊一会儿","score":2},{"text":"一起休息片刻再各自安排","score":1},{"text":"回到自己的兴趣里","score":0}]},{"axis":1,"text":"发现对方一个很棒的优点，你会？","options":[{"text":"用小行动表示认可","score":1},{"text":"当面夸赞这个优点","score":2},{"text":"默默欣赏并记住","score":0},{"text":"具体说出自己为何欣赏对方","score":3}]},{"axis":2,"text":"确认关系之前，你偏好？","options":[{"text":"经过长期观察再决定","score":0},{"text":"在足够了解后水到渠成","score":1},{"text":"有明确好感便提出讨论","score":2},{"text":"主动开启双方都愿意的确认对话","score":3}]},{"axis":3,"text":"压力很大且影响相处时，你希望？","options":[{"text":"先独处整理，再说明情况","score":0},{"text":"及时说出状态和需要，共同协调","score":3},{"text":"缓过来后告诉对方","score":1},{"text":"简短说明压力，约时间聊","score":2}]}],"profiles":[{"name":"慢热守护者","vector":[2.0,0.2,0.2,1.0],"tag":"恋爱人格","quote":"爱藏在每一个没有忘记的细节里。","insight":"你的爱从来不是烟花式的刹那喧哗，而是记在备忘录里的喜好、下雨天多带的一把伞。你慢热是因为太认真，一旦认定一个人，就会用极其稳定的细节和长久陪伴把对方稳稳接住。","strength":"可靠、愿意长期投入","caution":"对方可能读不出你没有说出口的心意","action":"试着把一件贴心行动背后的感受说出来","motif":"慢热与长情","no":"01","tags":["日久生情","行动派深情","长情靠谱"],"contrast":"嘴上说不出肉麻情话，甚至看起来有点木讷，其实早就把对方放进了未来十年的规划里。","match":["温柔陪伴者","一个用细节守护，一个懂珍惜日常，越处越甜的安全感顶配。"],"clash":["直球行动派","对方刚心动就百米冲刺，你还在慢慢确认心意，容易错拍。"],"vibe":"心动开关：被记住无意间提过的小习惯，且从不被催促进度"},{"name":"自由旅人","vector":[0,1,2,0],"tag":"恋爱人格","quote":"相爱不是失去自己的地图。","insight":"对你而言，最好的爱情是两棵各自生长、又在风里轻触枝叶的树。你珍惜独立空间与自我世界，但这绝不代表不够爱——恰恰相反，保持彼此的自由，才能让你长久保持心动。","strength":"尊重边界、保持自我","caution":"过多独处可能让期待不同的伴侣感到距离","action":"提前说明需要独处的时间，并约定重聚时刻","motif":"自由与同行","no":"02","tags":["并肩同行","边界感美学","清爽不黏腻"],"contrast":"看似潇洒洒脱、好像一个人也能过得很好，其实内心极渴望一个“不用解释就能懂你留白”的灵魂。","match":["独立探索者","势均力敌、各有光芒，在一起玩得尽兴，分开也能各自精彩。"],"clash":["温柔陪伴者","你需要空气感，对方需要高浓度陪伴，不沟通容易互相委屈。"],"vibe":"心动开关：各自专注喜欢的事后，默契抬头分享同一片晚霞"},{"name":"温柔陪伴者","vector":[3,1,1,2],"tag":"恋爱人格","quote":"最动人的浪漫，是有人一起过日常。","insight":"你相信最顶级的浪漫藏在“一起吃很多顿饭、聊很多句废话”里。你擅长营造温暖妥帖的相处氛围，愿意把耐心与温柔倾注在日常点滴中，是伴侣疲惫时最想奔赴的港湾。","strength":"持续关心、善于陪伴","caution":"别将陪伴频率自动等同于爱意","action":"与对方商量各自喜欢的独处及共处比例","motif":"温柔与日常","no":"03","tags":["烟火浪漫","情绪港湾","细水长流"],"contrast":"平时总在迁就和照顾别人，其实自己心里也住着一个渴望被偏爱、被主动抱紧的小孩。","match":["慢热守护者","同样追求细水长流的踏实爱意，互相滋养不内耗。"],"clash":["理性观察者","你渴望温暖回应，对方习惯先冷静分析，偶尔会让你觉得有点冷。"],"vibe":"心动开关：下班后一起逛超市买菜，并肩散步不用看手机"},{"name":"直球行动派","vector":[2.0,3.0,3.0,3.0],"tag":"恋爱人格","quote":"喜欢就说，想见就约。","insight":"喜欢就要大声说，想见就立刻出发，有误会绝不留过夜！你在感情里坦荡滚烫，讨厌弯弯绕绕的猜忌游戏。和你谈恋爱几乎没有内耗，因为你的偏爱永远光明正大、有迹可循。","strength":"坦率、行动力强","caution":"给对方时间和选择空间","action":"发出邀请后留出对方自主回答的余地","motif":"热烈与坦率","no":"04","tags":["明目张胆偏爱","高能直球","绝不冷战"],"contrast":"外表勇敢热烈、好像永远充满能量，其实最怕一片真心砸出去只收到模棱两可的敷衍。","match":["热情分享家","双向直球、热烈明媚，每天都像在演高甜偶像剧。"],"clash":["细腻理想家","你想立刻说开解决，对方需要安静消化情绪，节奏容易撞车。"],"vibe":"心动开关：对方同样坦荡接住你的热情，从不玩欲擒故纵"},{"name":"理性观察者","vector":[0,0,0,0],"tag":"恋爱人格","quote":"先读懂彼此，再写下一页。","insight":"你不会轻易被荷尔蒙冲昏头脑，习惯先静静观察彼此的三观、人品与相处舒适度。不是你冷漠，而是你对感情极其慎重——经过理性筛选后依然选择的人，往往能得到你最深沉笃定的信任。","strength":"审慎、尊重自己的节奏","caution":"过久的观察可能让心意显得不明确","action":"用一句具体的话告诉对方你正在认真了解这段关系","motif":"理性与留白","no":"05","tags":["清醒深情","慢火甄别","极低内耗"],"contrast":"前期冷静克制像在做尽职调查，一旦真正交付真心，反而比谁都专一护短。","match":["坦诚沟通者","同样重逻辑与边界，有话直说不翻旧账，相处极度舒服。"],"clash":["浪漫幻想家","你重现实契合，对方重情绪浓度，偶尔会觉得彼此不在一个频道。"],"vibe":"心动开关：情绪稳定、逻辑清晰，且能进行深度灵魂对话"},{"name":"浪漫幻想家","vector":[3,2,2,1],"tag":"恋爱人格","quote":"把普通的一天，也过成值得记住的故事。","insight":"你天生拥有把普通周二过成纪念日的能力。你看重眼神里的星光、藏在细节里的仪式感，以及两个人心照不宣的独家记忆。和你相爱，世界会自动蒙上一层温柔的电影滤镜。","strength":"善于制造共同回忆","caution":"别让理想化期待遮住真实差异","action":"一起选择一个双方都喜欢的简单仪式","motif":"浪漫与星光","no":"06","tags":["仪式感天花板","情绪浓度高","故事感恋人"],"contrast":"外表浪漫感性、像个理想主义诗人，其实对对方是不是真心投入，直觉敏锐得可怕。","match":["热情分享家","一个擅长制造浪漫，一个擅长给出满格回应，情绪价值拉满。"],"clash":["理性观察者","你期待惊喜与共振，对方习惯务实冷静，容易让你觉得少点火花。"],"vibe":"心动开关：突然递来的一支花、手写卡片和记得你的每句梦话"},{"name":"安静倾听者","vector":[2,0,1,2],"tag":"恋爱人格","quote":"有些爱，不必喧哗也能听见。","insight":"你是感情里最稀缺的“情绪承托者”。你不一定说最多的话，但总能敏锐察觉伴侣没说出口的委屈与疲惫。在你身边，对方不需要伪装坚强，可以放心卸下所有防备。","strength":"耐心、体察细节","caution":"不要只听对方而忽略自己的需要","action":"在倾听后也分享自己的感受和想法","motif":"倾听与柔光","no":"07","tags":["共情力满格","温柔接住","静默深情"],"contrast":"总能把别人的心事听得明明白白，轮到自己受委屈时却习惯悄悄咽下，怕给对方添麻烦。","match":["坦诚沟通者","对方会主动问你的感受，引导你把心事说出来，双向治愈。"],"clash":["自由旅人","你习惯默默守候，对方习惯各自精彩，容易让你悄悄积攒失落。"],"vibe":"心动开关：对方突然停下来认真问你“那你今天开心吗”"},{"name":"热情分享家","vector":[3.0,2.8,2.8,1.8],"tag":"恋爱人格","quote":"我想把今天的每一点快乐，都分享给你。","insight":"路上看见一只可爱的猫、中午吃到一碗好吃的面，你第一反应就是拍给喜欢的人。对你来说，分享欲就是最高级的浪漫——你渴望把鲜活的日常一点点织进两个人的共同世界里。","strength":"热情、善于创造互动","caution":"双方不一定总有同样的社交能量","action":"先询问对方什么时候有空，再分享一件趣事","motif":"分享与晴天","no":"08","tags":["分享欲=爱意","小太阳体质","高频互动"],"contrast":"看起来元气满满、永远秒回，其实内心特别在意“碎碎念有没有被认真接住”。","match":["直球行动派","分享欲遇上行动力，句句有回应、件件有着落。"],"clash":["理性观察者","你兴致勃勃发十条消息，对方回一个“嗯不错”，瞬间浇灭热情。"],"vibe":"心动开关：每一条奇奇怪怪的废话，都能收到认真的接梗和回应"},{"name":"稳健同行者","vector":[2,2,1,1],"tag":"恋爱人格","quote":"不必跑得太快，只要一起走得稳。","insight":"你在亲密与空间、感性与理性之间有着难得的成熟平衡。你不追求大起大落的虐恋，更相信细水长流的协作与共同成长——把爱落到柴米油盐和共同目标里，走得稳比跑得快更重要。","strength":"平衡承诺和日常协作","caution":"别因追求稳定而推迟必要的谈话","action":"每隔一段时间交流双方近期的相处感受","motif":"稳定与同行","no":"09","tags":["长期伴侣顶配","情绪稳压器","双向奔赴"],"contrast":"看似淡定务实、像个情绪稳定的大人，其实在信任的人面前也会露出柔软撒娇的一面。","match":["温柔陪伴者","步调一致、三观契合，是能把日子越过越踏实的模范搭档。"],"clash":["独立探索者","你偏爱安稳确定的规划，对方热爱随时出发的新鲜感，需要磨合。"],"vibe":"心动开关：遇到分歧时不逃避不指责，而是说“我们一起想办法”"},{"name":"独立探索者","vector":[0,2,3,1],"tag":"恋爱人格","quote":"我有自己的远方，也愿与你相遇。","insight":"你需要一个能一起看世界、而不是把彼此困在原地的人。你有自己的热爱与野心，在心动时也会大方主动出击；最好的关系不是彼此捆绑，而是牵着手去解锁更辽阔的人生副本。","strength":"独立、探索力强","caution":"新鲜感和长期投入需要兼顾","action":"在个人计划之外安排可持续的共同活动","motif":"独立与探索","no":"10","tags":["鲜活有趣","成长型恋爱","灵魂共振"],"contrast":"平时独立飒爽、看起来百毒不侵，其实只要遇到真正欣赏你野心的人，瞬间变得温柔。","match":["自由旅人","同样热爱探索与独立，既是恋人也是最默契的冒险搭子。"],"clash":["细腻理想家","你向前奔跑看风景，对方渴望停下来深情凝视，容易产生落差。"],"vibe":"心动开关：支持你的奇思妙想，并愿意一起尝试人生新体验"},{"name":"坦诚沟通者","vector":[1,3,2,3],"tag":"恋爱人格","quote":"真正的靠近，从说清楚开始。","insight":"你坚信“猜来猜去消耗爱，说清楚才能真正靠近”。你愿意坦率表达需求，也尊重对方的底线；发生矛盾时不冷暴力、不翻旧账，只对事不对人地一起找到让两个人都舒服的解法。","strength":"善于提出需求、共同解决问题","caution":"避免把沟通变成急于得出结论","action":"讨论前确认双方是否有精力进行对话","motif":"坦诚与边界","no":"11","tags":["反内耗专家","清晰边界","高质量亲密"],"contrast":"表面理性通透、像个情感导师，其实内心极其柔软，只是习惯用清晰表达来保护关系。","match":["理性观察者","沟通零障碍、尊重彼此节奏，把亲密关系处得清澈又长久。"],"clash":["慢热守护者","你希望有问题当面摊开聊，对方需要躲起来慢慢消化，容易着急。"],"vibe":"心动开关：吵架也能好好说话，把“我需要什么”坦诚摆在桌面上"},{"name":"细腻理想家","vector":[3,0,0,0],"tag":"恋爱人格","quote":"温柔不是猜中所有心事，而是愿意认真感受。","insight":"你对情感的纯度与精神契合有着极高的向往。你不会轻易敞开心扉，但一旦确认眼前人值得托付，你会释放出如月光般温柔绵长的深情，连空气里最细微的情绪波动都能温柔接住。","strength":"细腻、珍惜连接","caution":"不要期待对方自动察觉所有感受","action":"把一个尚未说出口的期待转成具体请求","motif":"细腻与月光","no":"12","tags":["灵魂共鸣控","月光般深情","极度敏感温柔"],"contrast":"外壳安静清冷、自带一层保护色，内心却藏着一片只为懂你的人开放的星空。","match":["安静倾听者","无须多言就能读懂你的细腻心事，给你最深层的精神安抚。"],"clash":["直球行动派","对方节奏太快太直白，偶尔会让你来不及做好心理准备。"],"vibe":"心动开关：在人群里悄悄递来的一个懂你的眼神"}],"brand":"LOVE ATLAS","heroTitle":"心动档案","heroSub":"THE WAY YOU LOVE","intro":"你习惯如何靠近一个人，又怎样守护自己的空间？从日常相处的选择中，发现自己的关系偏好。单身也可以按理想情境作答。","disclaimer":"结果不诊断依恋类型、心理状态或关系质量，不决定你适合谁。","labels":["你的隐藏恋爱人格画像","一个可以尝试的相处小练习","宿命恋人匹配 & 反差CP"],"art":"<svg viewBox=\"0 0 600 240\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"rose\" x2=\"1\" y2=\"1\"><stop stop-color=\"#73374f\"/><stop offset=\"1\" stop-color=\"#c87691\"/></linearGradient></defs><rect width=\"600\" height=\"240\" fill=\"url(#rose)\"/><g fill=\"none\" stroke=\"#fff1e5\" opacity=\".35\"><circle cx=\"460\" cy=\"104\" r=\"91\"/><circle cx=\"460\" cy=\"104\" r=\"75\"/><ellipse cx=\"460\" cy=\"104\" rx=\"120\" ry=\"53\" transform=\"rotate(-25 460 104)\"/></g><path d=\"M460 151C424 124 392 104 409 77 425 52 452 69 460 85 468 69 496 52 511 77 529 104 496 124 460 151Z\" fill=\"#f8d9cd\"/><g fill=\"#ffe9cd\"><circle cx=\"345\" cy=\"40\" r=\"3\"/><circle cx=\"543\" cy=\"45\" r=\"4\"/><circle cx=\"565\" cy=\"172\" r=\"3\"/><circle cx=\"337\" cy=\"174\" r=\"2\"/></g><path d=\"M0 210Q150 130 310 210T600 195V240H0Z\" fill=\"#602e45\" opacity=\".38\"/></svg>","palette":{"ink":"#3f2532","accent":"#8e3e5e","accent2":"#c9876b","paper":"#faf0f2","soft":"#f3dde6","line":"#e6ced9","card":"#fffbfd","muted":"#785a68"},"vol":"VOL. 02 · 心动档案室","teasers":["慢热守护者","直球行动派","自由旅人"],"chapters":[{"title":"心动初遇","intro":"当好感悄悄降临，你是先迈出一步，还是静静观察？"},{"title":"亲密距离","intro":"相爱的两个人，需要多少黏在一起的时光与各自呼吸的空间？"},{"title":"爱意表达","intro":"藏在心里还是大声说出来？看看你最自然的浪漫语言。"},{"title":"情绪与磨合","intro":"当分歧和疲惫出现，你习惯怎样守护一段关系的温度？"}],"calcSteps":["正在读取你的心动频率…","解析亲密边界与情绪表达偏好…","封缄你的专属恋爱人格档案…"],"eggLabel":"你的隐藏心动开关","shareTags":"#你的隐藏恋爱人格 #恋爱人格测试 #情侣必测","shareHook":"测完才发现，我的隐藏恋爱人格竟然是「{name}」💗"};
+const D={"title":"你的隐藏恋爱人格","subtitle":"情感探索 · 关系偏好","kind":"恋爱","axes":[["亲密需求","空间","陪伴"],["表达方式","含蓄","直接"],["关系节奏","谨慎","主动"],["冲突处理","冷静","沟通"]],"questions":[{"axis":0,"text":"忙完一天，你更期待怎样的相处？","options":[{"text":"先享受自己的安静时间","score":0},{"text":"希望大部分空闲时间一起度过","score":3},{"text":"和对方一起做些轻松的事","score":2},{"text":"独处充电后再联系","score":1}]},{"axis":1,"text":"收到喜欢的礼物，你通常如何回应？","options":[{"text":"轻声道谢，慢慢表达","score":1},{"text":"明确说出喜欢哪里","score":2},{"text":"记在心里，用行动回馈","score":0},{"text":"直接分享自己的惊喜和感动","score":3}]},{"axis":2,"text":"第一次见到心动的人，你倾向于？","options":[{"text":"主动邀请下一次见面","score":3},{"text":"等合适时机再认识","score":1},{"text":"先观察，不急着联系","score":0},{"text":"主动找一个自然的话题","score":2}]},{"axis":3,"text":"两个人意见不合时，你希望？","options":[{"text":"先各自冷静，之后再谈","score":0},{"text":"在双方愿意时尽快说开","score":3},{"text":"简短缓和情绪后交流","score":2},{"text":"留一点时间整理思路再谈","score":1}]},{"axis":1,"text":"突然很想念对方，你会？","options":[{"text":"说今天有些想念","score":2},{"text":"发一条日常消息","score":1},{"text":"直接告诉对方此刻的感受","score":3},{"text":"默默想念，等见面再说","score":0}]},{"axis":2,"text":"刚认识的人发来约会邀请，你会？","options":[{"text":"有好感就约见面","score":2},{"text":"先聊聊再约一个简单场合","score":1},{"text":"了解一段时间再决定","score":0},{"text":"积极提出自己也想去的活动","score":3}]},{"axis":3,"text":"共同计划突然取消，你更希望？","options":[{"text":"自己平复失落后再交流","score":0},{"text":"先说明感受再找替代安排","score":2},{"text":"过一会儿再聊发生了什么","score":1},{"text":"马上一起讨论原因与新计划","score":3}]},{"axis":0,"text":"周末没有安排，你最喜欢？","options":[{"text":"大部分时间一起安排","score":2},{"text":"一天独处、一天相聚","score":1},{"text":"一起度过整个周末","score":3},{"text":"各自享受自己的爱好","score":0}]},{"axis":3,"text":"对方迟到导致计划受影响，你会？","options":[{"text":"及时说明影响并共同调整安排","score":3},{"text":"询问原因并适时说出感受","score":2},{"text":"先调整情绪，晚点谈","score":0},{"text":"等见面后找平静时机交流","score":1}]},{"axis":2,"text":"关系逐渐升温，你更想？","options":[{"text":"主动聊彼此是否愿意进一步发展","score":3},{"text":"慢慢相处，不急着定义","score":0},{"text":"确认彼此了解后再推进","score":1},{"text":"主动创造更多相处机会","score":2}]},{"axis":1,"text":"对方误解了你的好意，你会？","options":[{"text":"直接说清感受与期待","score":3},{"text":"先用行动慢慢化解","score":0},{"text":"明确说明本意","score":2},{"text":"找合适的时机含蓄解释","score":1}]},{"axis":0,"text":"异地时，你理想的联系频率是？","options":[{"text":"希望在方便时频繁分享日常","score":3},{"text":"各自生活，偶尔认真通话","score":0},{"text":"每天分享几件重要小事","score":2},{"text":"固定时间联系，平时自由","score":1}]},{"axis":1,"text":"纪念日，你最自然的表达方式是？","options":[{"text":"认真表达感情并准备惊喜","score":3},{"text":"做一件对方喜欢的小事","score":0},{"text":"写简短的卡片","score":1},{"text":"说出值得纪念的回忆","score":2}]},{"axis":2,"text":"讨论关系未来，你更喜欢？","options":[{"text":"相处足够久再提","score":0},{"text":"尽早确认彼此的想法和期待","score":3},{"text":"主动找合适机会讨论","score":2},{"text":"等条件成熟后认真聊","score":1}]},{"axis":3,"text":"生活习惯发生分歧，你会？","options":[{"text":"及时共同制定双方都能接受的办法","score":3},{"text":"先自己想清楚可接受范围","score":0},{"text":"在平静时一起商量","score":2},{"text":"稍后找时机谈清边界","score":1}]},{"axis":0,"text":"你有机会独自去向往的地方旅行，你会？","options":[{"text":"倾向自己去，也愿意分享经历","score":1},{"text":"希望对方能一起去，不能也接受","score":2},{"text":"很享受独自旅行","score":0},{"text":"优先协商安排一次共同旅行","score":3}]},{"axis":0,"text":"忙碌的一周里，你希望彼此？","options":[{"text":"各自专注，忙完再相聚","score":0},{"text":"有空就一起吃饭或通话","score":2},{"text":"保留独立时间，定期联系","score":1},{"text":"尽量共享空闲和日常片段","score":3}]},{"axis":1,"text":"对方为你做了件贴心的事，你会？","options":[{"text":"主动表达感激和爱意","score":3},{"text":"记住并用类似的行动回报","score":0},{"text":"说清楚自己为什么感动","score":2},{"text":"微笑道谢","score":1}]},{"axis":2,"text":"喜欢的人也表现出好感，你会？","options":[{"text":"主动多约几次","score":2},{"text":"再观察一阵，确认感觉","score":0},{"text":"直接表达想进一步了解","score":3},{"text":"回应一些信号，慢慢熟悉","score":1}]},{"axis":3,"text":"一条消息迟迟没有回复，你会？","options":[{"text":"若影响约定，及时沟通并了解情况","score":3},{"text":"有实际需要时发消息确认","score":2},{"text":"等一会再考虑是否询问","score":1},{"text":"先去做自己的事","score":0}]},{"axis":0,"text":"理想的日常联系是？","options":[{"text":"有自己的生活，不必常报备","score":0},{"text":"有空就愿意保持丰富互动","score":3},{"text":"每天有一段固定交流","score":1},{"text":"随时分享有趣片段","score":2}]},{"axis":3,"text":"争执结束后，你希望？","options":[{"text":"约定稍后复盘","score":1},{"text":"休息一下后聊清关键问题","score":2},{"text":"先安静恢复情绪","score":0},{"text":"尽快一起澄清并约定改进方式","score":3}]},{"axis":2,"text":"想把喜欢的人介绍给朋友，你会？","options":[{"text":"等关系稳定很久再介绍","score":0},{"text":"在熟悉彼此后自然安排","score":1},{"text":"在双方舒适的前提下早些分享社交圈","score":3},{"text":"关系明朗时主动安排","score":2}]},{"axis":1,"text":"感到委屈时，你更自然的反应是？","options":[{"text":"用简短提示让对方知道","score":1},{"text":"明确表达感受与需要","score":3},{"text":"先写日记或独自消化","score":0},{"text":"说明让自己难过的事情","score":2}]},{"axis":0,"text":"理想约会结束后的空余时间，你希望？","options":[{"text":"希望剩余时间也能一起度过","score":3},{"text":"再一起散步或聊一会儿","score":2},{"text":"一起休息片刻再各自安排","score":1},{"text":"回到自己的兴趣里","score":0}]},{"axis":1,"text":"发现对方一个很棒的优点，你会？","options":[{"text":"用小行动表示认可","score":1},{"text":"当面夸赞这个优点","score":2},{"text":"默默欣赏并记住","score":0},{"text":"具体说出自己为何欣赏对方","score":3}]},{"axis":2,"text":"确认关系之前，你偏好？","options":[{"text":"经过长期观察再决定","score":0},{"text":"在足够了解后水到渠成","score":1},{"text":"有明确好感便提出讨论","score":2},{"text":"主动开启双方都愿意的确认对话","score":3}]},{"axis":3,"text":"压力很大且影响相处时，你希望？","options":[{"text":"先独处整理，再说明情况","score":0},{"text":"及时说出状态和需要，共同协调","score":3},{"text":"缓过来后告诉对方","score":1},{"text":"简短说明压力，约时间聊","score":2}]}],"profiles":[{"name":"慢热守护者","vector":[2,0.2,0.2,1],"tag":"恋爱人格","quote":"爱藏在每一个没有忘记的细节里。","insight":"你的爱从来不是烟花式的刹那喧哗，而是记在备忘录里的喜好、下雨天多带的一把伞。你慢热是因为太认真，一旦认定一个人，就会用极其稳定的细节和长久陪伴把对方稳稳接住。","strength":"可靠、愿意长期投入","caution":"对方可能读不出你没有说出口的心意","action":"试着把一件贴心行动背后的感受说出来","motif":"慢热与长情","no":"01","tags":["日久生情","行动派深情","长情靠谱"],"contrast":"嘴上说不出肉麻情话，甚至看起来有点木讷，其实早就把对方放进了未来十年的规划里。","match":["温柔陪伴者","一个用细节守护，一个懂珍惜日常，越处越甜的安全感顶配。"],"clash":["直球行动派","对方刚心动就百米冲刺，你还在慢慢确认心意，容易错拍。"],"vibe":"心动开关：被记住无意间提过的小习惯，且从不被催促进度"},{"name":"自由旅人","vector":[0,1,2,0],"tag":"恋爱人格","quote":"相爱不是失去自己的地图。","insight":"对你而言，最好的爱情是两棵各自生长、又在风里轻触枝叶的树。你珍惜独立空间与自我世界，但这绝不代表不够爱——恰恰相反，保持彼此的自由，才能让你长久保持心动。","strength":"尊重边界、保持自我","caution":"过多独处可能让期待不同的伴侣感到距离","action":"提前说明需要独处的时间，并约定重聚时刻","motif":"自由与同行","no":"02","tags":["并肩同行","边界感美学","清爽不黏腻"],"contrast":"看似潇洒洒脱、好像一个人也能过得很好，其实内心极渴望一个“不用解释就能懂你留白”的灵魂。","match":["独立探索者","势均力敌、各有光芒，在一起玩得尽兴，分开也能各自精彩。"],"clash":["温柔陪伴者","你需要空气感，对方需要高浓度陪伴，不沟通容易互相委屈。"],"vibe":"心动开关：各自专注喜欢的事后，默契抬头分享同一片晚霞"},{"name":"温柔陪伴者","vector":[3,1,1,2],"tag":"恋爱人格","quote":"最动人的浪漫，是有人一起过日常。","insight":"你相信最顶级的浪漫藏在“一起吃很多顿饭、聊很多句废话”里。你擅长营造温暖妥帖的相处氛围，愿意把耐心与温柔倾注在日常点滴中，是伴侣疲惫时最想奔赴的港湾。","strength":"持续关心、善于陪伴","caution":"别将陪伴频率自动等同于爱意","action":"与对方商量各自喜欢的独处及共处比例","motif":"温柔与日常","no":"03","tags":["烟火浪漫","情绪港湾","细水长流"],"contrast":"平时总在迁就和照顾别人，其实自己心里也住着一个渴望被偏爱、被主动抱紧的小孩。","match":["慢热守护者","同样追求细水长流的踏实爱意，互相滋养不内耗。"],"clash":["理性观察者","你渴望温暖回应，对方习惯先冷静分析，偶尔会让你觉得有点冷。"],"vibe":"心动开关：下班后一起逛超市买菜，并肩散步不用看手机"},{"name":"直球行动派","vector":[2,3,3,3],"tag":"恋爱人格","quote":"喜欢就说，想见就约。","insight":"喜欢就要大声说，想见就立刻出发，有误会绝不留过夜！你在感情里坦荡滚烫，讨厌弯弯绕绕的猜忌游戏。和你谈恋爱几乎没有内耗，因为你的偏爱永远光明正大、有迹可循。","strength":"坦率、行动力强","caution":"给对方时间和选择空间","action":"发出邀请后留出对方自主回答的余地","motif":"热烈与坦率","no":"04","tags":["明目张胆偏爱","高能直球","绝不冷战"],"contrast":"外表勇敢热烈、好像永远充满能量，其实最怕一片真心砸出去只收到模棱两可的敷衍。","match":["热情分享家","双向直球、热烈明媚，每天都像在演高甜偶像剧。"],"clash":["细腻理想家","你想立刻说开解决，对方需要安静消化情绪，节奏容易撞车。"],"vibe":"心动开关：对方同样坦荡接住你的热情，从不玩欲擒故纵"},{"name":"理性观察者","vector":[0,0,0,0],"tag":"恋爱人格","quote":"先读懂彼此，再写下一页。","insight":"你不会轻易被荷尔蒙冲昏头脑，习惯先静静观察彼此的三观、人品与相处舒适度。不是你冷漠，而是你对感情极其慎重——经过理性筛选后依然选择的人，往往能得到你最深沉笃定的信任。","strength":"审慎、尊重自己的节奏","caution":"过久的观察可能让心意显得不明确","action":"用一句具体的话告诉对方你正在认真了解这段关系","motif":"理性与留白","no":"05","tags":["清醒深情","慢火甄别","极低内耗"],"contrast":"前期冷静克制像在做尽职调查，一旦真正交付真心，反而比谁都专一护短。","match":["坦诚沟通者","同样重逻辑与边界，有话直说不翻旧账，相处极度舒服。"],"clash":["浪漫幻想家","你重现实契合，对方重情绪浓度，偶尔会觉得彼此不在一个频道。"],"vibe":"心动开关：情绪稳定、逻辑清晰，且能进行深度灵魂对话"},{"name":"浪漫幻想家","vector":[3,2,2,1],"tag":"恋爱人格","quote":"把普通的一天，也过成值得记住的故事。","insight":"你天生拥有把普通周二过成纪念日的能力。你看重眼神里的星光、藏在细节里的仪式感，以及两个人心照不宣的独家记忆。和你相爱，世界会自动蒙上一层温柔的电影滤镜。","strength":"善于制造共同回忆","caution":"别让理想化期待遮住真实差异","action":"一起选择一个双方都喜欢的简单仪式","motif":"浪漫与星光","no":"06","tags":["仪式感天花板","情绪浓度高","故事感恋人"],"contrast":"外表浪漫感性、像个理想主义诗人，其实对对方是不是真心投入，直觉敏锐得可怕。","match":["热情分享家","一个擅长制造浪漫，一个擅长给出满格回应，情绪价值拉满。"],"clash":["理性观察者","你期待惊喜与共振，对方习惯务实冷静，容易让你觉得少点火花。"],"vibe":"心动开关：突然递来的一支花、手写卡片和记得你的每句梦话"},{"name":"安静倾听者","vector":[2,0,1,2],"tag":"恋爱人格","quote":"有些爱，不必喧哗也能听见。","insight":"你是感情里最稀缺的“情绪承托者”。你不一定说最多的话，但总能敏锐察觉伴侣没说出口的委屈与疲惫。在你身边，对方不需要伪装坚强，可以放心卸下所有防备。","strength":"耐心、体察细节","caution":"不要只听对方而忽略自己的需要","action":"在倾听后也分享自己的感受和想法","motif":"倾听与柔光","no":"07","tags":["共情力满格","温柔接住","静默深情"],"contrast":"总能把别人的心事听得明明白白，轮到自己受委屈时却习惯悄悄咽下，怕给对方添麻烦。","match":["坦诚沟通者","对方会主动问你的感受，引导你把心事说出来，双向治愈。"],"clash":["自由旅人","你习惯默默守候，对方习惯各自精彩，容易让你悄悄积攒失落。"],"vibe":"心动开关：对方突然停下来认真问你“那你今天开心吗”"},{"name":"热情分享家","vector":[3,2.8,2.8,1.8],"tag":"恋爱人格","quote":"我想把今天的每一点快乐，都分享给你。","insight":"路上看见一只可爱的猫、中午吃到一碗好吃的面，你第一反应就是拍给喜欢的人。对你来说，分享欲就是最高级的浪漫——你渴望把鲜活的日常一点点织进两个人的共同世界里。","strength":"热情、善于创造互动","caution":"双方不一定总有同样的社交能量","action":"先询问对方什么时候有空，再分享一件趣事","motif":"分享与晴天","no":"08","tags":["分享欲=爱意","小太阳体质","高频互动"],"contrast":"看起来元气满满、永远秒回，其实内心特别在意“碎碎念有没有被认真接住”。","match":["直球行动派","分享欲遇上行动力，句句有回应、件件有着落。"],"clash":["理性观察者","你兴致勃勃发十条消息，对方回一个“嗯不错”，瞬间浇灭热情。"],"vibe":"心动开关：每一条奇奇怪怪的废话，都能收到认真的接梗和回应"},{"name":"稳健同行者","vector":[2,2,1,1],"tag":"恋爱人格","quote":"不必跑得太快，只要一起走得稳。","insight":"你在亲密与空间、感性与理性之间有着难得的成熟平衡。你不追求大起大落的虐恋，更相信细水长流的协作与共同成长——把爱落到柴米油盐和共同目标里，走得稳比跑得快更重要。","strength":"平衡承诺和日常协作","caution":"别因追求稳定而推迟必要的谈话","action":"每隔一段时间交流双方近期的相处感受","motif":"稳定与同行","no":"09","tags":["长期伴侣顶配","情绪稳压器","双向奔赴"],"contrast":"看似淡定务实、像个情绪稳定的大人，其实在信任的人面前也会露出柔软撒娇的一面。","match":["温柔陪伴者","步调一致、三观契合，是能把日子越过越踏实的模范搭档。"],"clash":["独立探索者","你偏爱安稳确定的规划，对方热爱随时出发的新鲜感，需要磨合。"],"vibe":"心动开关：遇到分歧时不逃避不指责，而是说“我们一起想办法”"},{"name":"独立探索者","vector":[0,2,3,1],"tag":"恋爱人格","quote":"我有自己的远方，也愿与你相遇。","insight":"你需要一个能一起看世界、而不是把彼此困在原地的人。你有自己的热爱与野心，在心动时也会大方主动出击；最好的关系不是彼此捆绑，而是牵着手去解锁更辽阔的人生副本。","strength":"独立、探索力强","caution":"新鲜感和长期投入需要兼顾","action":"在个人计划之外安排可持续的共同活动","motif":"独立与探索","no":"10","tags":["鲜活有趣","成长型恋爱","灵魂共振"],"contrast":"平时独立飒爽、看起来百毒不侵，其实只要遇到真正欣赏你野心的人，瞬间变得温柔。","match":["自由旅人","同样热爱探索与独立，既是恋人也是最默契的冒险搭子。"],"clash":["细腻理想家","你向前奔跑看风景，对方渴望停下来深情凝视，容易产生落差。"],"vibe":"心动开关：支持你的奇思妙想，并愿意一起尝试人生新体验"},{"name":"坦诚沟通者","vector":[1,3,2,3],"tag":"恋爱人格","quote":"真正的靠近，从说清楚开始。","insight":"你坚信“猜来猜去消耗爱，说清楚才能真正靠近”。你愿意坦率表达需求，也尊重对方的底线；发生矛盾时不冷暴力、不翻旧账，只对事不对人地一起找到让两个人都舒服的解法。","strength":"善于提出需求、共同解决问题","caution":"避免把沟通变成急于得出结论","action":"讨论前确认双方是否有精力进行对话","motif":"坦诚与边界","no":"11","tags":["反内耗专家","清晰边界","高质量亲密"],"contrast":"表面理性通透、像个情感导师，其实内心极其柔软，只是习惯用清晰表达来保护关系。","match":["理性观察者","沟通零障碍、尊重彼此节奏，把亲密关系处得清澈又长久。"],"clash":["慢热守护者","你希望有问题当面摊开聊，对方需要躲起来慢慢消化，容易着急。"],"vibe":"心动开关：吵架也能好好说话，把“我需要什么”坦诚摆在桌面上"},{"name":"细腻理想家","vector":[3,0,0,0],"tag":"恋爱人格","quote":"温柔不是猜中所有心事，而是愿意认真感受。","insight":"你对情感的纯度与精神契合有着极高的向往。你不会轻易敞开心扉，但一旦确认眼前人值得托付，你会释放出如月光般温柔绵长的深情，连空气里最细微的情绪波动都能温柔接住。","strength":"细腻、珍惜连接","caution":"不要期待对方自动察觉所有感受","action":"把一个尚未说出口的期待转成具体请求","motif":"细腻与月光","no":"12","tags":["灵魂共鸣控","月光般深情","极度敏感温柔"],"contrast":"外壳安静清冷、自带一层保护色，内心却藏着一片只为懂你的人开放的星空。","match":["安静倾听者","无须多言就能读懂你的细腻心事，给你最深层的精神安抚。"],"clash":["直球行动派","对方节奏太快太直白，偶尔会让你来不及做好心理准备。"],"vibe":"心动开关：在人群里悄悄递来的一个懂你的眼神"}],"brand":"LOVE ATLAS","heroTitle":"心动档案","heroSub":"THE WAY YOU LOVE","intro":"你习惯如何靠近一个人，又怎样守护自己的空间？从日常相处的选择中，发现自己的关系偏好。单身也可以按理想情境作答。","disclaimer":"结果不诊断依恋类型、心理状态或关系质量，不决定你适合谁。","labels":["你的隐藏恋爱人格画像","一个可以尝试的相处小练习","宿命恋人匹配 & 反差CP"],"art":"<svg viewBox=\"0 0 640 260\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n      <defs>\n        <linearGradient id=\"lSky\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#3c1324\"/><stop offset=\".52\" stop-color=\"#6d2644\"/><stop offset=\"1\" stop-color=\"#a85a6f\"/></linearGradient>\n        <radialGradient id=\"lGlow\" cx=\"75%\" cy=\"46%\" r=\"50%\"><stop stop-color=\"#f7c8ae\" stop-opacity=\".46\"/><stop offset=\"1\" stop-color=\"#f7c8ae\" stop-opacity=\"0\"/></radialGradient>\n        <linearGradient id=\"lHeart\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#fce0cc\"/><stop offset=\"1\" stop-color=\"#d6917d\"/></linearGradient>\n      </defs>\n      <rect width=\"640\" height=\"260\" fill=\"url(#lSky)\"/>\n      <circle cx=\"478\" cy=\"118\" r=\"165\" fill=\"url(#lGlow)\"/>\n      <!-- Celestial Heart Constellation Orbits -->\n      <g class=\"orbit-spin\" fill=\"none\" stroke=\"#f5d2be\" stroke-opacity=\".35\">\n        <ellipse cx=\"478\" cy=\"118\" rx=\"112\" ry=\"62\" transform=\"rotate(-18 478 118)\" stroke-width=\"1.2\"/>\n        <ellipse cx=\"478\" cy=\"118\" rx=\"92\" ry=\"50\" transform=\"rotate(24 478 118)\" stroke-dasharray=\"4 5\" stroke-width=\"1.2\"/>\n        <circle cx=\"578\" cy=\"86\" r=\"4\" fill=\"#fbe0c4\" stroke=\"none\"/>\n        <circle cx=\"386\" cy=\"154\" r=\"3\" fill=\"#f2b8c6\" stroke=\"none\"/>\n      </g>\n      <!-- Sculpted Heart Emblem -->\n      <path d=\"M478 164 C478 164 422 128 422 92 C422 72 438 58 456 58 C467 58 474 64 478 72 C482 64 489 58 500 58 C518 58 534 72 534 92 C534 128 478 164 478 164 Z\" fill=\"url(#lHeart)\" opacity=\".92\"/>\n      <path d=\"M478 152 C478 152 434 122 434 94 C434 80 444 70 457 70 C466 70 473 75 478 83 C483 75 490 70 499 70 C512 70 522 80 522 94 C522 122 478 152 478 152 Z\" fill=\"none\" stroke=\"#fff5ec\" stroke-opacity=\".55\" stroke-width=\"1.4\"/>\n      <!-- Delicate Botanical Rose Stem -->\n      <g stroke=\"#f4ceb8\" stroke-opacity=\".46\" fill=\"none\" stroke-width=\"1.3\">\n        <path d=\"M342 246 Q372 184 364 118\"/>\n        <ellipse cx=\"354\" cy=\"166\" rx=\"14\" ry=\"5\" transform=\"rotate(-35 354 166)\"/>\n        <ellipse cx=\"378\" cy=\"186\" rx=\"13\" ry=\"5\" transform=\"rotate(28 378 186)\"/>\n      </g>\n      <!-- Floating Rose Petals & Stars -->\n      <g class=\"petal-float\" fill=\"#f7c8d6\" opacity=\".68\">\n        <ellipse cx=\"322\" cy=\"64\" rx=\"8\" ry=\"4\" transform=\"rotate(-25 322 64)\"/>\n        <ellipse cx=\"576\" cy=\"176\" rx=\"7\" ry=\"3.5\" transform=\"rotate(30 576 176)\"/>\n      </g>\n      <g class=\"petal-float2\" fill=\"#fce4c8\" opacity=\".75\">\n        <circle cx=\"290\" cy=\"48\" r=\"2\"/><circle cx=\"384\" cy=\"44\" r=\"1.6\"/><circle cx=\"592\" cy=\"62\" r=\"2.2\"/><circle cx=\"192\" cy=\"70\" r=\"1.5\"/>\n      </g>\n      <path d=\"M0 206 Q190 170 390 218 T640 198 V260 H0 Z\" fill=\"#2e0e1b\" opacity=\".55\"/>\n    </svg>","palette":{"ink":"#3f2532","accent":"#8e3e5e","accent2":"#c9876b","paper":"#faf0f2","soft":"#f3dde6","line":"#e6ced9","card":"#fffbfd","muted":"#785a68"},"vol":"VOL. 02 · 心动档案室","teasers":["慢热守护者","直球行动派","自由旅人"],"chapters":[{"title":"心动初遇","intro":"当好感悄悄降临，你是先迈出一步，还是静静观察？"},{"title":"亲密距离","intro":"相爱的两个人，需要多少黏在一起的时光与各自呼吸的空间？"},{"title":"爱意表达","intro":"藏在心里还是大声说出来？看看你最自然的浪漫语言。"},{"title":"情绪与磨合","intro":"当分歧和疲惫出现，你习惯怎样守护一段关系的温度？"}],"calcSteps":["正在读取你的心动频率…","解析亲密边界与情绪表达偏好…","封缄你的专属恋爱人格档案…"],"eggLabel":"你的隐藏心动开关","shareTags":"#你的隐藏恋爱人格 #恋爱人格测试 #情侣必测","shareHook":"测完才发现，我的隐藏恋爱人格竟然是「{name}」💗"};
 const app=document.getElementById('app'),
       posterDialog=document.getElementById('posterDialog'),
-      copyDialog=document.getElementById('copyDialog');
+      copyDialog=document.getElementById('copyDialog'),
+      peekDialog=document.getElementById('peekDialog'),
+      dexDialog=document.getElementById('dexDialog');
 const N=D.questions.length, STORAGE='personal-atlas-v3:'+D.kind;
-let idx=0, answers=Array(N).fill(null), report=null, posterURL=null, screen='home', autoNext=true, autoTimer=null;
+let idx=0, answers=Array(N).fill(null), report=null, posterURL=null, screen='home', autoNext=true, autoTimer=null, lastChapter=-1, posterTheme=0;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* === Thematic Web Audio Sound Engine (Pure Offline Synth) === */
+const SFX = (() => {
+  let ctx = null, muted = false;
+  try { muted = localStorage.getItem(STORAGE + ':mute') === '1'; } catch {}
+  function ac() {
+    if (muted) return null;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      if (!ctx) ctx = new AC();
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+      return ctx;
+    } catch { return null; }
+  }
+  function tone(freq, dur, type = 'sine', gainVal = 0.055, delay = 0, endFreq = null) {
+    const c = ac(); if (!c) return;
+    try {
+      const t = c.currentTime + delay;
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = type;
+      o.frequency.setValueAtTime(freq, t);
+      if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, t + dur);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(gainVal, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + dur + 0.02);
+    } catch {}
+  }
+  const PRESETS = {
+    city:    { notes: [523.25, 587.33, 659.25, 783.99], wave: 'triangle', gain: 0.05 },
+    love:    { notes: [587.33, 659.25, 739.99, 880.00], wave: 'sine',     gain: 0.048 },
+    ancient: { notes: [440.00, 493.88, 587.33, 659.25], wave: 'triangle', gain: 0.052 },
+    scent:   { notes: [659.25, 739.99, 880.00, 987.77], wave: 'sine',     gain: 0.042 },
+    qc:      { notes: [620, 740, 860, 980],             wave: 'square',   gain: 0.024 },
+    shop:    { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.046 },
+    museum:  { notes: [392.00, 440.00, 523.25, 587.33], wave: 'sine',     gain: 0.052 },
+    rpg:     { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.045 },
+    cosmos:  { notes: [587.33, 739.99, 880.00, 1174.6], wave: 'sine',     gain: 0.042 }
+  };
+  const P = PRESETS["love"] || PRESETS.city;
+  return {
+    isMuted: () => muted,
+    toggle() {
+      muted = !muted;
+      try { localStorage.setItem(STORAGE + ':mute', muted ? '1' : '0'); } catch {}
+      if (!muted) this.click(1);
+      return muted;
+    },
+    click(i = 0) {
+      const f = P.notes[Math.abs(i) % P.notes.length];
+      tone(f, 0.16, P.wave, P.gain);
+      if (false) {
+        tone(f * 2, 0.22, 'sine', P.gain * 0.35, 0.015);
+      }
+    },
+    start() {
+      tone(P.notes[0], 0.14, P.wave, P.gain, 0);
+      tone(P.notes[2], 0.22, 'sine', P.gain * 0.9, 0.07);
+    },
+    back() {
+      tone(P.notes[0] * 0.85, 0.11, 'sine', P.gain * 0.7);
+    },
+    chapter() {
+      tone(P.notes[1], 0.16, 'sine', P.gain * 0.8, 0);
+      tone(P.notes[3], 0.28, 'sine', P.gain * 0.75, 0.09);
+    },
+    reveal() {
+      P.notes.forEach((f, k) => tone(f, 0.32, k === 3 ? 'sine' : P.wave, P.gain * 0.9, k * 0.08));
+    }
+  };
+})();
+
+function renderSoundBtn() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  const m = SFX.isMuted();
+  btn.textContent = m ? '🔇 静音' : '🔊 音效';
+  btn.setAttribute('aria-pressed', String(!m));
+  btn.classList.toggle('muted', m);
+}
+function initSoundToggle() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  renderSoundBtn();
+  btn.onclick = () => { SFX.toggle(); renderSoundBtn(); };
+}
+
+/* === Celebratory Particle Burst (Respects Reduced Motion) === */
+function celebrateBurst(colors, style = 'spark') {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    const cv = document.createElement('canvas');
+    cv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999';
+    cv.width = window.innerWidth; cv.height = window.innerHeight;
+    document.body.append(cv);
+    const ctx = cv.getContext('2d');
+    const parts = [];
+    const cx = cv.width / 2, cy = Math.min(cv.height * 0.36, 280);
+    for (let i = 0; i < 42; i++) {
+      const ang = (Math.PI * 2 * i) / 42 + (Math.random() - 0.5) * 0.35;
+      const spd = 2.6 + Math.random() * 5.8;
+      parts.push({
+        x: cx + (Math.random() - 0.5) * 40,
+        y: cy + (Math.random() - 0.5) * 20,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 2.4,
+        r: 3 + Math.random() * 4.5,
+        rot: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.2,
+        color: colors[i % colors.length],
+        life: 1,
+        decay: 0.015 + Math.random() * 0.012
+      });
+    }
+    let raf;
+    function tick() {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      let alive = 0;
+      for (const p of parts) {
+        if (p.life <= 0) continue;
+        alive++;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.13; p.vx *= 0.985; p.rot += p.vr; p.life -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        if (style === 'petal') {
+          ctx.beginPath(); ctx.ellipse(0, 0, p.r * 1.4, p.r * 0.72, 0, 0, Math.PI * 2); ctx.fill();
+        } else if (style === 'star') {
+          ctx.beginPath();
+          for (let s = 0; s < 4; s++) {
+            const a = s * Math.PI / 2;
+            ctx.lineTo(Math.cos(a) * p.r * 1.5, Math.sin(a) * p.r * 1.5);
+            ctx.lineTo(Math.cos(a + Math.PI / 4) * p.r * 0.45, Math.sin(a + Math.PI / 4) * p.r * 0.45);
+          }
+          ctx.closePath(); ctx.fill();
+        } else if (style === 'bubble') {
+          ctx.strokeStyle = p.color; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.arc(0, 0, p.r * 1.15, 0, Math.PI * 2); ctx.stroke();
+        } else {
+          ctx.fillRect(-p.r, -p.r * 0.55, p.r * 2, p.r * 1.1);
+        }
+        ctx.restore();
+      }
+      if (alive > 0) raf = requestAnimationFrame(tick);
+      else cv.remove();
+    }
+    raf = requestAnimationFrame(tick);
+    setTimeout(() => { cancelAnimationFrame(raf); cv.remove(); }, 2200);
+  } catch {}
+}
+
+/* === Subtle 3D Foil Tilt on Result Hero Card === */
+function bindCardTilt(el) {
+  if (!el || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  el.classList.add('foil-tilt');
+  const onMove = e => {
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - py) * 5.5, ry = (px - 0.5) * 6.5;
+    el.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+    el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+  };
+  const onLeave = () => {
+    el.style.transform = '';
+    el.style.setProperty('--mx', '50%');
+    el.style.setProperty('--my', '20%');
+  };
+  el.addEventListener('pointermove', onMove);
+  el.addEventListener('pointerleave', onLeave);
+}
+
+/* === Dynamic Multi-Axis SVG Radar Chart (4 or 6 Axes) === */
+function buildRadarSVG(labels, ratios, opts = {}) {
+  const n = labels.length, cx = 140, cy = 122, R = 74;
+  const stroke = opts.stroke || 'var(--accent)';
+  const fill = opts.fill || 'var(--accent)';
+  const grid = opts.grid || 'rgba(128,128,128,0.22)';
+  const labelColor = opts.labelColor || 'currentColor';
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  let rings = '';
+  [0.34, 0.67, 1].forEach(f => {
+    const pts = Array.from({ length: n }, (_, i) => pt(i, R * f).map(x => x.toFixed(1)).join(',')).join(' ');
+    rings += `<polygon points="${pts}" fill="none" stroke="${grid}" stroke-width="1"/>`;
+  });
+  let spokes = '';
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${grid}" stroke-width="1"/>`;
+  }
+  const clamped = ratios.map(r => Math.max(0.18, Math.min(1, r)));
+  const polyPts = clamped.map((r, i) => pt(i, R * r).map(x => x.toFixed(1)).join(',')).join(' ');
+  const dots = clamped.map((r, i) => {
+    const [x, y] = pt(i, R * r);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.2" fill="${stroke}" stroke="${opts.dotRing || '#fff'}" stroke-width="1.8"/>`;
+  }).join('');
+  const texts = labels.map((lb, i) => {
+    const [x, y] = pt(i, R + 22);
+    const anchor = Math.abs(x - cx) < 10 ? 'middle' : x < cx ? 'end' : 'start';
+    const dy = y < cy - 30 ? -2 : y > cy + 30 ? 8 : 4;
+    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="700" fill="${labelColor}">${esc(lb)}</text>`;
+  }).join('');
+  return `<svg class="radar-svg" viewBox="0 0 280 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多维人格雷达图">
+    ${rings}${spokes}
+    <polygon class="radar-poly" points="${polyPts}" fill="${fill}" fill-opacity="0.24" stroke="${stroke}" stroke-width="2.2" stroke-linejoin="round"/>
+    ${dots}${texts}
+  </svg>`;
+}
+
+/* === Canvas Mini Radar Drawing Helper (for 3:4 Posters) === */
+function drawCanvasRadar(ctx, cx, cy, R, labels, ratios, stroke, fill, grid, textCol) {
+  const n = labels.length;
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  ctx.save();
+  [0.35, 0.68, 1].forEach(f => {
+    ctx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const [x, y] = pt(i, R * f);
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.closePath(); ctx.strokeStyle = grid; ctx.lineWidth = 1.4; ctx.stroke();
+  });
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.strokeStyle = grid; ctx.lineWidth = 1.2; ctx.stroke();
+  }
+  ctx.beginPath();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = fill; ctx.fill();
+  ctx.strokeStyle = stroke; ctx.lineWidth = 3; ctx.stroke();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    ctx.beginPath(); ctx.arc(x, y, 5.5, 0, Math.PI * 2); ctx.fillStyle = stroke; ctx.fill();
+  });
+  ctx.fillStyle = textCol; ctx.font = '700 18px "PingFang SC","Microsoft YaHei",sans-serif';
+  labels.forEach((lb, i) => {
+    const [x, y] = pt(i, R + 24);
+    ctx.textAlign = Math.abs(x - cx) < 12 ? 'center' : x < cx ? 'right' : 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(lb, x, y);
+  });
+  ctx.restore();
+}
+
+/* === Isolated Local Collection Dex Helpers === */
+function getUnlocked() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORAGE + ':dex') || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch { return []; }
+}
+function recordUnlock(name) {
+  try {
+    const list = getUnlocked();
+    if (!list.includes(name)) { list.push(name); localStorage.setItem(STORAGE + ':dex', JSON.stringify(list)); }
+    return list;
+  } catch { return [name]; }
+}
+
+/* === Vector Pair Compatibility Calculator === */
+function calcVectorChem(pA, pB, axes, labelsCfg = {}) {
+  if (pA.name === pB.name) {
+    return {
+      score: 94,
+      verdict: labelsCfg.same || '✦ 镜像双生 · 灵魂复刻',
+      desc: `两个「${pA.name}」相遇就像照镜子——不用多余解释就能一秒接住彼此的梗与节奏，连沉默的频率都惊人一致！`
+    };
+  }
+  if (pA.match && pA.match[0] === pB.name) {
+    return { score: 99, verdict: labelsCfg.match || '♥ 天选官配 · 满分同频', desc: pA.match[1] };
+  }
+  if (pB.match && pB.match[0] === pA.name) {
+    return { score: 97, verdict: labelsCfg.match || '♥ 双向奔赴 · 绝佳搭子', desc: pB.match[1] };
+  }
+  if (pA.clash && pA.clash[0] === pB.name) {
+    return { score: 54, verdict: labelsCfg.clash || '⚡ 宿命反差 · 欢喜冤家', desc: pA.clash[1] };
+  }
+  if (pB.clash && pB.clash[0] === pA.name) {
+    return { score: 56, verdict: labelsCfg.clash || '⚡ 高能反差 · 奇妙碰撞', desc: pB.clash[1] };
+  }
+  const vecA = pA.vector, vecB = pB.vector;
+  const diffs = vecA.map((x, i) => ({ i, d: Math.abs(x - vecB[i]) }));
+  const avgDiff = diffs.reduce((s, x) => s + x.d, 0) / diffs.length;
+  const sim = Math.max(0, 1 - avgDiff / 3);
+  const hashSeed = [...(pA.name + pB.name)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 997, 7);
+  const score = Math.round(Math.max(62, Math.min(95, 65 + sim * 27 + (hashSeed % 5))));
+  const closest = diffs.slice().sort((a, b) => a.d - b.d)[0];
+  const farthest = diffs.slice().sort((a, b) => b.d - a.d)[0];
+  let verdict = '🌿 舒服同频 · 轻松相处';
+  if (score >= 88) verdict = '✦ 默契神搭 · 能量共振';
+  else if (score >= 78) verdict = '♥ 互补合拍 · 越处越甜';
+  else if (score < 70) verdict = '🔥 跨频火花 · 新鲜感拉满';
+  const desc = `你们在「${axes[closest.i][0]}」维度上天然同频，很容易快速聊到一块；而在「${axes[farthest.i][0]}」上的不同视角，正好能给彼此带来意想不到的新鲜灵感。`;
+  return { score, verdict, desc };
+}
+
+/* === Toast Notification === */
+let toastTimer = null;
+function showToast(msg) {
+  let el = document.getElementById('quizToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'quizToast';
+    el.className = 'quiz-toast';
+    el.setAttribute('role', 'status');
+    document.body.append(el);
+  }
+  el.textContent = msg;
+  el.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2100);
+}
+
 
 function stash(){try{localStorage.setItem(STORAGE,JSON.stringify({idx,answers,autoNext}))}catch{}}
 function restore(){
@@ -198,35 +672,61 @@ function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
 function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
 function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
 function hero(text,sub=D.heroSub,badge=''){
-  return `<div class="hero" aria-hidden="true">${D.art}${badge?`<span class="hero-badge">${esc(badge)}</span>`:''}<div class="hero-copy"><small>${esc(sub)}</small><strong>${esc(text)}</strong></div></div>`;
+  return `<div class="hero" aria-hidden="true">${D.art}<span class="wax-seal" aria-hidden="true">♥</span>${badge?`<span class="hero-badge">${esc(badge)}</span>`:''}<div class="hero-copy"><small>${esc(sub)}</small><strong>${esc(text)}</strong></div></div>`;
+}
+
+function peekProfile(name){
+  const p=D.profiles.find(x=>x.name===name); if(!p) return;
+  SFX.click(2);
+  document.getElementById('peekTitle').textContent=`ARCHIVE NO.${p.no} · ${p.name}`;
+  document.getElementById('peekBody').innerHTML=`
+    <div class="pills" style="margin:6px 0 12px">${p.tags.map(t=>`<span class="pill accent"># ${esc(t)}</span>`).join('')}</div>
+    <div class="quote-box"><p class="quote">「${esc(p.quote)}」</p></div>
+    <p class="lead" style="margin:12px 0">✦ 专属亮点：${esc(p.strength)}。想知道这是不是你的本命结果，还是藏着另一份惊喜档案？</p>
+    <button type="button" class="primary" onclick="peekDialog.close();start()">立刻开测，揭晓我的专属结果 →</button>`;
+  if(!peekDialog.open) peekDialog.showModal();
+}
+
+function openDex(){
+  SFX.click(1);
+  const unlocked=getUnlocked();
+  document.getElementById('dexSub').textContent=`已点亮 ${unlocked.length} / ${D.profiles.length} 种档案 · 仅保存在当前浏览器，快邀请朋友测出更多图鉴！`;
+  document.getElementById('dexGrid').innerHTML=D.profiles.map(p=>{
+    const ok=unlocked.includes(p.name);
+    return ok
+      ? `<div class="dex-card unlocked"><span class="muted">NO.${p.no} · 已点亮 ✦</span><b>${esc(p.name)}</b><small># ${esc(p.tags[0])} · 「${esc(p.quote)}」</small></div>`
+      : `<div class="dex-card locked"><span class="muted">NO.${p.no} · 尚未解锁</span><b>？？？</b><small>线索：${esc(p.motif)} · ${esc(p.tags[0])}</small></div>`;
+  }).join('');
+  if(!dexDialog.open) dexDialog.showModal();
 }
 
 function home(){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
-  screen='home';
+  screen='home'; lastChapter=-1;
   const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const unlocked=getUnlocked();
   const teaserCards=D.teasers.map(name=>D.profiles.find(p=>p.name===name)).filter(Boolean);
   app.innerHTML=`<section class="panel">
     ${hero(D.heroTitle,D.heroSub,D.profiles.length+' 种档案')}
     <p class="eyebrow">${esc(D.subtitle)}</p>
-    <h1>${esc(D.title)}</h1>
+    <h1>你的隐藏恋爱人格</h1>
     <p class="lead">${esc(D.intro)}</p>
     <div class="pills">
       <span class="pill accent">${N} 道情境探索</span>
       <span class="pill">${D.profiles.length} 种专属档案</span>
-      <span class="pill">约 ${Math.max(2,Math.ceil(N/8))} 分钟 · 含3:4海报</span>
+      <span class="pill">含雷达图 &amp; 3:4 双画风海报</span>
     </div>
     <div class="stack">
       ${count===N
         ? `<button class="primary" onclick="resume()">查看我已生成的专属档案　✦</button><button class="secondary" onclick="start()">重新测一次</button>`
         : count
         ? `<button class="primary" onclick="resume()">继续上次探索（${count}/${N}）　→</button><button class="secondary" onclick="start()">重新开始测试</button>`
-        : `<button class="primary" onclick="start()">开启我的探索　→</button>`}
+        : `<button class="primary" onclick="start()">拆开火漆信封，探索心动　→</button>`}
     </div>
     <div class="teaser-wrap">
-      <div class="teaser-head"><span>档案抢先看</span><small>共收录 ${D.profiles.length} 种结果</small></div>
+      <div class="teaser-head"><span>档案抢先看 · 点击偷看线索</span><small>收录 ${D.profiles.length} 种${unlocked.length?' · 已点亮 '+unlocked.length:''}</small></div>
       <div class="teasers">
-        ${teaserCards.map(p=>`<div class="teaser"><b>${esc(p.name)}</b><span>${esc(p.tags[0])}</span><small>「${esc(p.quote)}」</small></div>`).join('')}
+        ${teaserCards.map(p=>`<button type="button" class="teaser" onclick="peekProfile('${esc(p.name)}')"><b>${esc(p.name)}</b><span>${esc(p.tags[0])}</span><small>「${esc(p.quote)}」</small></button>`).join('')}
       </div>
     </div>
     <p class="notice">跟随第一直觉选择即可，没有标准答案。${esc(D.disclaimer)}</p>
@@ -236,32 +736,38 @@ function home(){
 
 function start(){
   if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('开始新测试将清除上次进度，继续吗？')) return;
-  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+  SFX.start();
+  idx=0;answers=Array(N).fill(null);report=null;lastChapter=0;stash();question(true);
 }
 
 function resume(){
+  SFX.start();
   const saved=restore();if(!saved)return start();
   idx=saved.idx;answers=saved.answers;
-  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.every(v=>v!==null)){result(false);return;}
   if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  lastChapter=getChapter(idx).ci;
   question(true);
 }
 
-function toggleAuto(){
-  autoNext=!autoNext;stash();question(false);
-}
+function toggleAuto(){SFX.click(0);autoNext=!autoNext;stash();question(false);}
 
 function getChapter(qIdx){
   const chs=D.chapters;
   const per=Math.ceil(N/chs.length);
   const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
-  return {num:String(ci+1).padStart(2,'0'),...chs[ci]};
+  return {ci,num:String(ci+1).padStart(2,'0'),...chs[ci]};
 }
 
 function question(move=false){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
   screen='question';
   const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  if(lastChapter>=0 && ch.ci>lastChapter){
+    SFX.chapter();
+    showToast(`✦ 进入第 ${ch.ci+1} 章 · ${ch.title}`);
+  }
+  lastChapter=ch.ci;
   const pct=Math.round((count/N)*100);
   app.innerHTML=`<section class="panel">
     <div class="question-top">
@@ -270,6 +776,9 @@ function question(move=false){
     </div>
     <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
       <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-dots" aria-hidden="true">
+      ${D.chapters.map((_,k)=>`<span class="${k<ch.ci?'done':k===ch.ci?'now':''}"></span>`).join('')}
     </div>
     <div class="chapter-bar">
       <span class="chapter-num">${ch.num}</span>
@@ -281,9 +790,10 @@ function question(move=false){
     </div>
     <div class="nav">
       <button type="button" onclick="back()" ${idx===0?'disabled':''}>← 上一题</button>
-      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'生成专属档案 ✦':'下一题 →'}</button>
+      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'封存我的心动情书 ✦':'下一题 →'}</button>
     </div>
-    <div style="text-align:center;margin-top:10px">
+    <p class="kbd-hint">快捷键：数字 1-4 / 字母 A-D 作答，← 返回上一题</p>
+    <div style="text-align:center;margin-top:8px">
       <button type="button" class="subtle" onclick="home()">保存进度，返回首页</button>
     </div>
   </section>`;
@@ -292,8 +802,8 @@ function question(move=false){
 
 function choose(i){
   if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  SFX.click(i);
   answers[idx]=i;stash();
-  // Immediate visual feedback without losing smooth flow
   const btns=app.querySelectorAll('.option');
   btns.forEach((b,k)=>{
     const sel=k===i;
@@ -316,11 +826,11 @@ function choose(i){
       if(idx<N-1){idx++;stash();question(true);}
       else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
       else calculateRitual();
-    }, 300);
+    }, 280);
   }
 }
 
-function back(){if(idx>0){idx--;stash();question(true);}}
+function back(){if(idx>0){SFX.back();idx--;stash();question(true);}}
 function next(){
   if(answers[idx]===null) return;
   if(idx<N-1){idx++;stash();question(true);}
@@ -334,12 +844,12 @@ function calculateRitual(){
   app.innerHTML=`<section class="panel"><div class="calc-box">
     <div class="calc-ring" aria-hidden="true"></div>
     <p class="calc-step" id="calcText">${esc(steps[0])}</p>
-    <p class="calc-sub">正在为你生成完整画像与 3:4 收藏海报</p>
+    <p class="calc-sub">正在绘制多维雷达图与 3:4 收藏级双画风海报</p>
   </div></section>`;
   scrollTop();
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},460);
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},920);
-  setTimeout(()=>result(),1360);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},440);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},880);
+  setTimeout(()=>result(true),1320);
 }
 
 function compute(input){
@@ -353,13 +863,11 @@ function compute(input){
     const radius=Math.sqrt(v.length)*0.5+0.15*(norm-Math.sqrt(v.length));
     const calibrated=center.map(x=>1.5+x*radius/norm);
     const d=calibrated.reduce((s,x,j)=>s+(x-v[j])**2,0);
-    // Smooth intuitive affinity score (high contrast & realistic 72%~98% range for top matches)
     const rawSim=Math.max(0,1-Math.sqrt(d/(4.2*v.length)));
     const fit=Math.round(Math.max(62,Math.min(98,66+rawSim*32)));
     return {p,i,d,fit};
   });
   ranked.sort((a,b)=>a.d-b.d||a.i-b.i);
-  // Ensure strict monotonic visual display for top 4
   for(let k=1;k<Math.min(4,ranked.length);k++){
     if(ranked[k].fit>=ranked[k-1].fit) ranked[k].fit=Math.max(60,ranked[k-1].fit-2);
   }
@@ -368,10 +876,33 @@ function compute(input){
 
 function tendency(a,v){return v<1.15?a[1]:v>1.85?a[2]:'两者兼顾'}
 
-function result(){
+function runChemCheck(otherName){
+  const out=document.getElementById('chemOut');
+  if(!out||!report) return;
+  if(!otherName){out.innerHTML='';return;}
+  const other=D.profiles.find(x=>x.name===otherName); if(!other) return;
+  SFX.click(2);
+  const res=calcVectorChem(report.p,other,D.axes);
+  out.innerHTML=`<div class="chem-out">
+    <div class="chem-score-row"><span class="chem-verdict">${esc(res.verdict)}</span><span class="chem-pct">${res.score}%</span></div>
+    <div class="chem-bar"><i style="width:${res.score}%"></i></div>
+    <p style="font-size:13px;line-height:1.72">${esc(res.desc)}</p>
+    <button type="button" class="chem-copy-btn" onclick="copyChem('${esc(other.name)}',${res.score},'${esc(res.verdict)}')">复制双人契合战报，发去评论区晒分 ↗</button>
+  </div>`;
+}
+
+async function copyChem(otherName,score,verdict){
+  if(!report) return;
+  const txt=`【${D.title} · 双人契合度】\n我是「${report.p.name}」× TA是「${otherName}」\n化学反应指数：${score}%（${verdict}）\n快来测测咱俩合不合拍👇 ${D.shareTags}`;
+  try{await navigator.clipboard.writeText(txt);showToast('✓ 双人契合战报已复制！');}
+  catch{document.getElementById('copyTextarea').value=txt;copyDialog.showModal();}
+}
+
+function result(celebrate=false){
   if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
   report=compute(answers);screen='result';stash();
   const {p,v,ranked}=report;
+  const unlocked=recordUnlock(p.name);
   const cues=D.axes.map((a,i)=>({a,val:v[i],gap:Math.abs(v[i]-1.5)})).sort((x,y)=>y.gap-x.gap).slice(0,2);
   const why=cues.every(x=>x.gap<0.28)
     ? '你在多个维度上都保持着难得的松弛与平衡，既不被单一标签框住，又能自由切换状态。'
@@ -379,7 +910,7 @@ function result(){
   const stampText=p.stamp||`NO.${p.no} · 专属档案`;
 
   app.innerHTML=`<section class="panel">
-    <div class="result-cover">
+    <div class="result-cover" id="heroCard">
       ${hero(p.motif,D.heroSub)}
       <span class="result-stamp" aria-hidden="true">${esc(stampText)}</span>
       <div class="intro">
@@ -418,8 +949,9 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">02 / DIMENSION MAP</p>
-      <h3>你的专属偏好图谱</h3>
+      <p class="kicker">02 / DIMENSION RADAR &amp; SPECTRUM</p>
+      <h3>你的专属多维雷达图谱</h3>
+      <div class="radar-wrap">${buildRadarSVG(D.axes.map(a=>a[0]), v.map(x=>x/3), {stroke:'var(--accent)',fill:'var(--accent)',grid:'var(--line)',labelColor:'var(--ink)',dotRing:'var(--card)'})}</div>
       ${D.axes.map((a,i)=>`<div class="axis">
         <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
         <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
@@ -429,7 +961,7 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">03 / CHEMISTRY &amp; CONTRAST</p>
+      <p class="kicker">03 / CHEMISTRY &amp; MATCH CHECKER</p>
       <h3>${esc(D.labels[2])}</h3>
       <p class="muted" style="margin-bottom:6px">发给你的朋友或另一半测测，看看你们是不是天选同频！</p>
       <div class="duo">
@@ -444,6 +976,14 @@ function result(){
           <p>${esc(p.clash[1])}</p>
         </div>
       </div>
+      <div class="chem-box">
+        <div class="chem-head"><strong>✦ 情侣 / 暧昧对象契合度速测</strong><span>选 TA 测出的恋爱人格，秒算你们的心动共振率</span></div>
+        <select class="chem-select" id="chemSelect" aria-label="选择朋友的结果测算契合度" onchange="runChemCheck(this.value)">
+          <option value="">— 选择朋友/对象测出的结果 —</option>
+          ${D.profiles.map(x=>`<option value="${esc(x.name)}">NO.${x.no} · ${esc(x.name)}（${esc(x.tags[0])}）</option>`).join('')}
+        </select>
+        <div id="chemOut"></div>
+      </div>
     </div>
 
     <div class="block">
@@ -457,12 +997,16 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">05 / NEARBY ARCHIVES</p>
+      <p class="kicker">05 / NEARBY ARCHIVES &amp; COLLECTION</p>
       <h3>与你气场相近的备选档案</h3>
       ${ranked.slice(1,4).map(x=>`<div class="rank">
         <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.tags.slice(0,2).join(' · '))}</small></div>
         <span class="pct">${x.fit}% 契合</span>
       </div>`).join('')}
+      <div class="dex-bar">
+        <div class="dex-bar-info"><strong>12 种恋爱人格心动图鉴</strong><span>当前已点亮 ${unlocked.length} / ${D.profiles.length} 种本地收藏</span></div>
+        <button type="button" class="dex-open-btn" onclick="openDex()">查看全图鉴</button>
+      </div>
       <p class="notice">${esc(D.disclaimer)}</p>
     </div>
 
@@ -474,14 +1018,17 @@ function result(){
       </div>
     </div>
   </section>`;
+  bindCardTilt(document.getElementById('heroCard'));
   scrollTop();focusTitle();
+  if(celebrate){SFX.reveal();celebrateBurst(["#c85a7c","#e6a6b8","#d99b6c","#f7d5df","#8a2f52"],'petal');}
 }
 
-function editAnswers(){idx=N-1;question(true);}
+function editAnswers(){SFX.back();idx=N-1;question(true);}
 function restart(){if(confirm('清除当前答案并重新开始探索？')){clearSaved();start();}}
 
 async function copyShare(){
   if(!report) return;
+  SFX.click(1);
   const {p,ranked}=report;
   const hook=D.shareHook.replace('{name}',p.name);
   const text=`${hook}\n契合度 ${ranked[0].fit}% | ${p.tags.map(t=>'#'+t).join(' ')}\n「${p.quote}」\n\n♥ 我的天选合拍搭子是【${p.match[0]}】，快来测测你是什么结果，评论区找搭子👇\n${D.shareTags}`;
@@ -512,129 +1059,125 @@ function roundedPath(ctx,x,y,w,h,r){
 function fillRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.fill();}
 function strokeRound(ctx,x,y,w,h,r){roundedPath(ctx,x,y,w,h,r);ctx.stroke();}
 
-function makePoster(){
-  const c=document.createElement('canvas');c.width=1080;c.height=1440;
-  const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
-  const {p,v,ranked}=report, P=D.palette;
-  const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif';
 
-  // Paper backdrop & elegant outer double frame
-  ctx.fillStyle=P.paper;ctx.fillRect(0,0,1080,1440);
-  ctx.strokeStyle=P.line;ctx.lineWidth=2;strokeRound(ctx,26,26,1028,1388,30);
+function makePoster(themeIdx = 0, sig = '') {
+  const c = document.createElement('canvas'); c.width = 1080; c.height = 1440;
+  const ctx = c.getContext('2d'); if (!ctx) throw Error('Canvas unavailable');
+  const { p, v, ranked } = report;
+  const sans = '"PingFang SC","Microsoft YaHei",sans-serif', serif = '"Noto Serif SC","Songti SC","SimSun",serif';
+  const dark = themeIdx === 1;
+  const BG = dark ? '#1d0d16' : '#fbf2f4';
+  const CARD = dark ? '#2a1320' : '#fffcfd';
+  const INK = dark ? '#fceef2' : '#391f2b';
+  const MUTED = dark ? '#d2aebc' : '#7b5b6a';
+  const ACC = dark ? '#f2a4bc' : '#842e50';
+  const GOLD = '#d49a6a';
+  const LINE = dark ? 'rgba(212,154,106,0.34)' : '#e7cbd6';
 
-  // Header card (editorial rich banner)
-  const grad=ctx.createLinearGradient(52,52,1028,372);
-  grad.addColorStop(0,P.accent);grad.addColorStop(1,P.ink);
-  ctx.fillStyle=grad;fillRound(ctx,52,52,976,316,26);
-  ctx.save();roundedPath(ctx,52,52,976,316,26);ctx.clip();
-  ctx.strokeStyle='rgba(255,255,255,0.16)';ctx.lineWidth=2;
-  for(let i=0;i<7;i++){ctx.beginPath();ctx.ellipse(905,120,85+i*38,52+i*22,-0.35,0,Math.PI*2);ctx.stroke();}
-  ctx.fillStyle=P.accent2;ctx.globalAlpha=0.22;ctx.beginPath();ctx.arc(920,310,130,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle = BG; ctx.fillRect(0, 0, 1080, 1440);
+  // Double Romantic Stationery Border
+  ctx.strokeStyle = LINE; ctx.lineWidth = 2; strokeRound(ctx, 26, 26, 1028, 1388, 30);
+  ctx.strokeStyle = dark ? 'rgba(242,164,188,0.18)' : 'rgba(199,135,94,0.28)'; ctx.lineWidth = 1.2; strokeRound(ctx, 38, 38, 1004, 1364, 24);
+
+  // Rose Velvet Tarot Hero Banner
+  const bx = 56, by = 56, bw = 968, bh = 342;
+  ctx.save(); roundedPath(ctx, bx, by, bw, bh, 26); ctx.clip();
+  const hg = ctx.createLinearGradient(bx, by, bx + bw, by + bh);
+  hg.addColorStop(0, '#3e1325'); hg.addColorStop(0.55, '#782849'); hg.addColorStop(1, '#a8566b');
+  ctx.fillStyle = hg; ctx.fillRect(bx, by, bw, bh);
+  const glow = ctx.createRadialGradient(860, 195, 16, 860, 195, 220);
+  glow.addColorStop(0, 'rgba(252,216,192,0.36)'); glow.addColorStop(1, 'rgba(252,216,192,0)');
+  ctx.fillStyle = glow; ctx.fillRect(bx, by, bw, bh);
+  ctx.strokeStyle = 'rgba(252,216,192,0.28)'; ctx.lineWidth = 1.6;
+  ctx.beginPath(); ctx.ellipse(865, 200, 138, 72, -0.32, 0, Math.PI * 2); ctx.stroke();
+  ctx.beginPath(); ctx.ellipse(865, 200, 112, 58, 0.42, 0, Math.PI * 2); ctx.stroke();
+  // Drawn Heart Silhouette
+  ctx.save(); ctx.translate(865, 206);
+  ctx.fillStyle = 'rgba(252,224,204,0.85)';
+  ctx.beginPath(); ctx.moveTo(0, 52); ctx.bezierCurveTo(-68, 8, -72, -48, -32, -52); ctx.bezierCurveTo(-10, -54, 0, -34, 0, -24); ctx.bezierCurveTo(0, -34, 10, -54, 32, -52); ctx.bezierCurveTo(72, -48, 68, 8, 0, 52); ctx.fill();
+  ctx.restore();
   ctx.restore();
 
-  // Header typography + collectible stamp
-  ctx.fillStyle='rgba(255,255,255,0.85)';ctx.font=`700 22px ${sans}`;
-  ctx.fillText(`${D.brand}  ·  ARCHIVE NO.${p.no}`,92,108);
-  ctx.fillStyle='#ffffff';ctx.font=`800 72px ${serif}`;
-  ctx.fillText(p.name,90,214);
-  ctx.fillStyle='rgba(255,255,255,0.92)';ctx.font=`500 28px ${sans}`;
-  ctx.fillText(`${p.motif}  ·  灵魂契合度 ${ranked[0].fit}%`,92,276);
+  ctx.fillStyle = 'rgba(255,234,224,0.88)'; ctx.font = `700 22px ${sans}`;
+  ctx.fillText(`LOVE ATLAS  ·  LOVE LETTER NO.${p.no}` + (sig ? `  ·  ${sig}` : ''), 92, 114);
+  ctx.fillStyle = '#ffffff'; ctx.font = `800 72px ${serif}`;
+  ctx.fillText(p.name, 90, 214);
+  ctx.fillStyle = '#fce0cc'; ctx.font = `600 26px ${sans}`;
+  ctx.fillText(`${p.motif}  ·  心动契合度 ${ranked[0].fit}%`, 92, 276);
 
-  // Stamp badge top right
-  const stamp=p.stamp||`NO.${p.no}`;
-  ctx.save();ctx.translate(925,112);ctx.rotate(0.06);
-  ctx.strokeStyle='rgba(255,255,255,0.75)';ctx.lineWidth=2;strokeRound(ctx,-92,-24,184,48,10);
-  ctx.fillStyle='#ffffff';ctx.font=`700 22px ${serif}`;ctx.textAlign='center';
-  ctx.fillText(stamp,0,8);ctx.restore();ctx.textAlign='left';
+  // Wax Seal Stamp Top Right
+  ctx.save(); ctx.translate(932, 116);
+  ctx.fillStyle = '#9c2848'; ctx.beginPath(); ctx.arc(0, 0, 42, 0, Math.PI * 2); ctx.fill();
+  ctx.strokeStyle = 'rgba(255,228,208,0.8)'; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(0, 0, 34, 0, Math.PI * 2); ctx.stroke();
+  ctx.fillStyle = '#fff0e4'; ctx.textAlign = 'center'; ctx.font = `700 28px ${serif}`; ctx.fillText('♥', 0, 10);
+  ctx.restore(); ctx.textAlign = 'left';
 
-  // Tag pills inside header bottom
-  let tx=92;
-  p.tags.forEach(t=>{
-    const label='# '+t;
-    ctx.font=`600 22px ${sans}`;
-    const w=ctx.measureText(label).width+34;
-    ctx.fillStyle='rgba(255,255,255,0.18)';fillRound(ctx,tx,306,w,40,20);
-    ctx.fillStyle='#fff';ctx.fillText(label,tx+17,333);
-    tx+=w+14;
+  let tx = 92;
+  p.tags.forEach(t => {
+    const lbl = '# ' + t; ctx.font = `600 21px ${sans}`;
+    const w = ctx.measureText(lbl).width + 32;
+    ctx.fillStyle = 'rgba(255,255,255,0.18)'; fillRound(ctx, tx, 324, w, 40, 20);
+    ctx.fillStyle = '#fff'; ctx.fillText(lbl, tx + 16, 351); tx += w + 12;
   });
 
-  // Quote callout card
-  ctx.fillStyle=P.card;fillRound(ctx,52,394,976,120,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,394,976,120,20);
-  ctx.fillStyle=P.accent2;fillRound(ctx,52,394,10,120,5);
-  ctx.fillStyle=P.accent;ctx.font=`700 34px ${serif}`;
-  const qLines=wrap(ctx,`「${p.quote}」`,900).slice(0,2);
-  const qStart=qLines.length===1?466:444;
-  qLines.forEach((l,i)=>ctx.fillText(l,86,qStart+i*44));
+  // Quote Banner
+  ctx.fillStyle = CARD; fillRound(ctx, 56, 422, 968, 106, 20);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 56, 422, 968, 106, 20);
+  ctx.fillStyle = GOLD; fillRound(ctx, 56, 422, 10, 106, 5);
+  ctx.fillStyle = ACC; ctx.font = `700 31px ${serif}`;
+  const qLines = wrap(ctx, `「${p.quote}」`, 895).slice(0, 2);
+  qLines.forEach((l, i) => ctx.fillText(l, 90, (qLines.length === 1 ? 486 : 466) + i * 40));
 
-  // Insight paragraph
-  let y=566;
-  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;
-  ctx.fillText('SOUL PORTRAIT  ·  专属解读',70,y);y+=40;
-  ctx.fillStyle=P.ink;ctx.font=`400 27px ${sans}`;
-  const iLines=wrap(ctx,p.insight,936).slice(0,3);
-  iLines.forEach(l=>{ctx.fillText(l,70,y);y+=41;});
+  // Portrait + Radar Split Card
+  ctx.fillStyle = CARD; fillRound(ctx, 56, 548, 968, 346, 22);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 56, 548, 968, 346, 22);
+  ctx.fillStyle = GOLD; ctx.font = `800 20px ${sans}`; ctx.fillText('01 / 你的隐藏恋爱画像', 88, 592);
+  ctx.fillStyle = INK; ctx.font = `400 24px ${sans}`;
+  wrap(ctx, p.insight, 530).slice(0, 5).forEach((l, i) => ctx.fillText(l, 88, 634 + i * 38));
+  ctx.fillStyle = MUTED; ctx.font = `600 20px ${sans}`;
+  ctx.fillText('♥ ' + wrap(ctx, p.vibe || p.action, 520)[0], 88, 862);
+  drawCanvasRadar(ctx, 822, 728, 102, D.axes.map(a => a[0]), v.map(x => x / 3), ACC, dark ? 'rgba(242,164,188,0.28)' : 'rgba(132,46,80,0.2)', LINE, INK);
 
-  // Axes visualization block
-  y+=16;
-  ctx.fillStyle=P.card;
-  const axisStep=D.axes.length>4?56:72;
-  const axisBoxH=56+D.axes.length*axisStep;
-  fillRound(ctx,52,y,976,axisBoxH,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,52,y,976,axisBoxH,20);
-  ctx.fillStyle=P.accent;ctx.font=`800 22px ${sans}`;
-  ctx.fillText('偏好维度图谱',82,y+40);
-  let ay=y+78;
-  D.axes.forEach((a,i)=>{
-    ctx.font=`600 21px ${sans}`;ctx.fillStyle=P.ink;ctx.textAlign='left';
-    ctx.fillText(`${a[0]} · ${a[1]}`,82,ay);
-    ctx.textAlign='right';ctx.fillStyle=P.muted;ctx.fillText(a[2],998,ay);
-    ctx.textAlign='left';
-    ctx.fillStyle=P.soft;fillRound(ctx,82,ay+13,916,10,5);
-    const px=82+916*Math.max(0.03,Math.min(0.97,v[i]/3));
-    ctx.fillStyle=P.accent;ctx.beginPath();ctx.arc(px,ay+18,11,0,Math.PI*2);ctx.fill();
-    ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();
-    ay+=axisStep;
-  });
+  // Hidden Contrast
+  ctx.fillStyle = dark ? '#3a1a2b' : '#f7e5ec'; fillRound(ctx, 56, 916, 968, 140, 20);
+  ctx.fillStyle = ACC; ctx.font = `800 21px ${sans}`; ctx.fillText('✦ 恋爱里藏得最深的反差面', 88, 956);
+  ctx.fillStyle = INK; ctx.font = `400 24px ${sans}`;
+  wrap(ctx, p.contrast, 900).slice(0, 2).forEach((l, i) => ctx.fillText(l, 88, 998 + i * 36));
 
-  // Bottom Duo Cards: Soulmate + Strength
-  const duoY=Math.min(1148, y+axisBoxH+22);
-  const duoH=186;
-  // Left card: Soulmate
-  ctx.fillStyle=P.soft;fillRound(ctx,52,duoY,476,duoH,20);
-  ctx.fillStyle=P.accent;ctx.font=`800 21px ${sans}`;ctx.fillText('♥ 天选合拍搭子',80,duoY+40);
-  ctx.fillStyle=P.ink;ctx.font=`800 34px ${serif}`;ctx.fillText(p.match[0],80,duoY+86);
-  ctx.fillStyle=P.muted;ctx.font=`400 21px ${sans}`;
-  wrap(ctx,p.match[1],420).slice(0,2).forEach((l,i)=>ctx.fillText(l,80,duoY+124+i*30));
+  // Duo Match / Clash
+  const dy = 1078, dh = 232;
+  ctx.fillStyle = CARD; fillRound(ctx, 56, dy, 472, dh, 20);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 56, dy, 472, dh, 20);
+  ctx.fillStyle = ACC; ctx.font = `800 21px ${sans}`; ctx.fillText('♥ 宿命甜度搭子', 84, dy + 42);
+  ctx.fillStyle = INK; ctx.font = `800 34px ${serif}`; ctx.fillText(p.match[0], 84, dy + 94);
+  ctx.fillStyle = MUTED; ctx.font = `400 21px ${sans}`;
+  wrap(ctx, p.match[1], 416).slice(0, 3).forEach((l, i) => ctx.fillText(l, 84, dy + 138 + i * 30));
 
-  // Right card: Hidden contrast or highlight
-  ctx.fillStyle=P.card;fillRound(ctx,552,duoY,476,duoH,20);
-  ctx.strokeStyle=P.line;ctx.lineWidth=1.5;strokeRound(ctx,552,duoY,476,duoH,20);
-  ctx.fillStyle=P.accent2;ctx.font=`800 21px ${sans}`;ctx.fillText('✦ 你的闪光亮点',580,duoY+40);
-  ctx.fillStyle=P.ink;ctx.font=`600 25px ${serif}`;
-  wrap(ctx,p.strength,420).slice(0,2).forEach((l,i)=>ctx.fillText(l,580,duoY+84+i*34));
-  ctx.fillStyle=P.muted;ctx.font=`400 20px ${sans}`;
-  const eggShort=p.egg||p.vibe||'';
-  wrap(ctx,eggShort,420).slice(0,1).forEach(l=>ctx.fillText('· '+l,580,duoY+158));
+  ctx.fillStyle = CARD; fillRound(ctx, 552, dy, 472, dh, 20);
+  ctx.strokeStyle = LINE; ctx.lineWidth = 1.5; strokeRound(ctx, 552, dy, 472, dh, 20);
+  ctx.fillStyle = GOLD; ctx.font = `800 21px ${sans}`; ctx.fillText('⚡ 容易错拍的碰撞型', 580, dy + 42);
+  ctx.fillStyle = INK; ctx.font = `800 34px ${serif}`; ctx.fillText(p.clash[0], 580, dy + 94);
+  ctx.fillStyle = MUTED; ctx.font = `400 21px ${sans}`;
+  wrap(ctx, p.clash[1], 416).slice(0, 3).forEach((l, i) => ctx.fillText(l, 580, dy + 138 + i * 30));
 
-  // Footer strip
-  ctx.fillStyle=P.muted;ctx.font=`500 22px ${sans}`;
-  ctx.fillText(`${D.title}  ·  长按保存分享`,60,1388);
-  ctx.textAlign='right';ctx.fillText('原创趣味探索 · 非专业心理测评',1020,1388);
-  ctx.textAlign='left';
+  ctx.fillStyle = MUTED; ctx.font = `500 21px ${sans}`;
+  ctx.fillText(`${D.title}  ·  长按保存发给在意的人`, 64, 1372);
+  ctx.textAlign = 'right'; ctx.fillText('LOVE ATLAS · 原创趣味探索', 1016, 1372);
+  ctx.textAlign = 'left';
   return c;
 }
 
-function showPoster(){
+function renderPosterCanvas(){
   if(!report) return;
   const status=document.getElementById('posterStatus'),
         area=document.getElementById('posterArea'),
-        download=document.getElementById('downloadPoster');
+        download=document.getElementById('downloadPoster'),
+        sig=(document.getElementById('sigInput')?.value||'').trim().slice(0,12);
   status.textContent='';area.innerHTML='';download.disabled=true;
   try{
     if(posterURL) URL.revokeObjectURL(posterURL);
     posterURL=null;
-    const canvas=makePoster();
+    const canvas=makePoster(posterTheme,sig);
     const img=document.createElement('img');
     img.className='poster';img.alt='可保存的专属结果海报';
     img.src=canvas.toDataURL('image/png');
@@ -643,13 +1186,27 @@ function showPoster(){
       posterURL=blob?URL.createObjectURL(blob):img.src;
       download.disabled=false;
     },'image/png');
-    if(!posterDialog.open) posterDialog.showModal();
   }catch(e){
     status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
-    if(!posterDialog.open) posterDialog.showModal();
   }
 }
 
+function showPoster(){
+  if(!report) return;
+  SFX.click(3);
+  renderPosterCanvas();
+  if(!posterDialog.open) posterDialog.showModal();
+}
+
+document.querySelectorAll('[data-ptheme]').forEach(btn=>{
+  btn.onclick=()=>{
+    SFX.click(1);
+    posterTheme=Number(btn.dataset.ptheme)||0;
+    document.querySelectorAll('[data-ptheme]').forEach(x=>x.classList.toggle('active',x===btn));
+    renderPosterCanvas();
+  };
+});
+document.getElementById('sigApply').onclick=()=>{SFX.click(2);renderPosterCanvas();document.getElementById('posterStatus').textContent='✓ 海报已更新！';};
 document.getElementById('closePoster').onclick=()=>posterDialog.close();
 document.getElementById('downloadPoster').onclick=()=>{
   if(!posterURL||!report) return;
@@ -658,9 +1215,20 @@ document.getElementById('downloadPoster').onclick=()=>{
   document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方图片保存。';
 };
 document.getElementById('closeCopy').onclick=()=>copyDialog.close();
+document.getElementById('closePeek').onclick=()=>peekDialog.close();
+document.getElementById('closeDex').onclick=()=>dexDialog.close();
 document.getElementById('selectCopyBtn').onclick=()=>{
   const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
 };
+document.addEventListener('keydown',e=>{
+  if(screen!=='question'||posterDialog.open||copyDialog.open||peekDialog.open||dexDialog.open) return;
+  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  const map={'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'A':0,'B':1,'C':2,'D':3};
+  if(e.key in map){e.preventDefault();choose(map[e.key]);}
+  else if(e.key==='ArrowLeft'||e.key==='Backspace'){e.preventDefault();back();}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){if(answers[idx]!==null){e.preventDefault();next();}}
+});
+initSoundToggle();
 home();
 </script>
 </body>

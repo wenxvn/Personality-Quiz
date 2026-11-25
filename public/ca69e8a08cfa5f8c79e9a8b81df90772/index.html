@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1e1e1c">
-<meta name="description" content="你的灵魂「出厂质检单」 · 20项日常负载检测，打印你的专属人类使用说明书、已知无害小Bug与3:4热敏纸质检海报。">
+<meta name="description" content="你的灵魂「出厂质检单」 · 20项日常负载检测，打印你的专属人类使用说明书、已知无害小Bug、硬件跑分雷达与3:4热敏纸质检海报。">
 <title>你的灵魂「出厂质检单」 · SOUL QC LAB</title>
 <style>
 :root{
-  --desk:#e9e4d9;--paper:#fffef9;--ink:#1d1d1b;--muted:#68645c;--line:#d8d2c5;
+  --desk:#e7e1d5;--paper:#fffef9;--ink:#1d1d1b;--muted:#68645c;--line:#d8d2c5;
   --accent:#c9362b;--cobalt:#1d4e89;--ochre:#c77d1f;--soft:#f3efe6;
   --mono:"SF Mono","Menlo","Monaco","Consolas","Liberation Mono",monospace;
   --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
@@ -16,50 +16,54 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background-color:var(--desk);color:var(--ink);font-family:var(--sans);line-height:1.66;-webkit-tap-highlight-color:transparent;min-height:100vh;
-  background-image:radial-gradient(rgba(30,30,28,.11) 1px,transparent 1px);background-size:20px 20px}
-main{width:min(100%,640px);padding:16px 14px max(34px,env(safe-area-inset-bottom));margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 14px;padding:0 4px}
+  background-image:radial-gradient(rgba(30,30,28,.12) 1px,transparent 1px);background-size:20px 20px}
+main{width:min(100%,640px);padding:13px 13px max(28px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 10px;padding:0 4px}
 .brand{font-family:var(--mono);font-size:11px;letter-spacing:2px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:7px}
-.brand-dot{width:8px;height:8px;border-radius:2px;background:var(--accent);display:inline-block}
-.issue{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;letter-spacing:.06em}
-/* Thermal Receipt Ticket Container */
+.brand-dot{width:8px;height:8px;border-radius:2px;background:var(--accent);display:inline-block;animation:ledBlink 1.8s ease-in-out infinite}
+@keyframes ledBlink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(201,54,43,.45)}50%{opacity:.55;box-shadow:0 0 0 5px rgba(201,54,43,0)}}
+.issue{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;letter-spacing:.05em}
+.sound-btn{background:var(--paper);border:1px solid var(--ink);color:var(--ink);font-family:var(--mono)}
 .ticket{position:relative;background:var(--paper);border-left:1px solid var(--line);border-right:1px solid var(--line);
-  padding:clamp(22px,4.5vw,32px) clamp(18px,4.2vw,28px);
-  box-shadow:0 18px 46px rgba(29,29,27,.10);animation:printIn .32s cubic-bezier(.22,1,.36,1)}
+  padding:clamp(18px,4vw,28px) clamp(16px,4vw,26px);
+  box-shadow:0 18px 46px rgba(29,29,27,.11);animation:printIn .32s cubic-bezier(.22,1,.36,1)}
 @keyframes printIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
 .zig-top,.zig-bot{height:10px;width:100%;display:block;overflow:hidden;line-height:0}
 .zig-top svg,.zig-bot svg{width:100%;height:10px;display:block}
 h1,h2,h3,p{margin:0}
-h1{font-family:var(--sans);font-size:clamp(28px,7.2vw,40px);font-weight:900;line-height:1.22;letter-spacing:-.01em}
-h2{font-size:clamp(20px,5vw,25px);line-height:1.48;font-weight:800}
+h1{font-family:var(--sans);font-size:clamp(26px,6.8vw,38px);font-weight:900;line-height:1.22;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(19px,4.8vw,24px);line-height:1.48;font-weight:800}
 h3{font-size:15.5px;margin-bottom:9px;font-weight:800;letter-spacing:.02em}
 .mono{font-family:var(--mono)}
-.eyebrow{font-family:var(--mono);color:var(--accent);font-size:10.5px;letter-spacing:2px;font-weight:800;margin:14px 0 6px;text-transform:uppercase}
-.lead{font-size:14.5px;line-height:1.84;margin:12px 0 18px;color:#3d3b36}
+.eyebrow{font-family:var(--mono);color:var(--accent);font-size:10.5px;letter-spacing:1.8px;font-weight:800;margin:13px 0 5px;text-transform:uppercase}
+.lead{font-size:14px;line-height:1.78;margin:9px 0 14px;color:#3d3b36;text-wrap:pretty}
 .muted{font-size:12px;color:var(--muted)}
-.dash{border:0;border-top:1.5px dashed #cbc4b6;margin:20px 0}
-.solid-rule{border:0;border-top:2px solid var(--ink);margin:14px 0}
-/* Hero Receipt Header */
-.qc-banner{position:relative;border:2px solid var(--ink);border-radius:10px;padding:18px 16px;background:var(--soft);overflow:hidden}
-.qc-banner-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-bottom:10px;border-bottom:1px dashed #bfb7a7;margin-bottom:14px}
+/* Hero Receipt Banner + Live Laser QC Scanner */
+.qc-banner{position:relative;border:2px solid var(--ink);border-radius:10px;padding:15px 15px;background:var(--soft);overflow:hidden}
+.qc-laser{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(201,54,43,.85),transparent);box-shadow:0 0 12px rgba(201,54,43,.55);animation:laserScan 3.4s ease-in-out infinite;pointer-events:none;z-index:2}
+@keyframes laserScan{0%,100%{top:10%;opacity:.18}50%{top:88%;opacity:.85}}
+.qc-banner-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-bottom:9px;border-bottom:1px dashed #bfb7a7;margin-bottom:11px}
+.live-tag{color:var(--accent);font-weight:800}
 .qc-banner-main{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.qc-banner-copy small{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--accent);font-weight:800;display:block;margin-bottom:3px}
-.qc-banner-copy strong{font-size:clamp(22px,5.6vw,30px);font-weight:900;line-height:1.2;display:block;letter-spacing:.02em}
-.qc-stamp-svg{width:84px;height:84px;flex:none;transform:rotate(10deg)}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
-.pill{font-family:var(--mono);font-size:11.5px;padding:5px 11px;border:1px solid var(--ink);border-radius:6px;background:var(--paper);color:var(--ink);font-weight:700}
+.qc-banner-copy small{font-family:var(--mono);font-size:9.5px;letter-spacing:1.8px;color:var(--accent);font-weight:800;display:block;margin-bottom:3px}
+.qc-banner-copy strong{font-size:clamp(22px,5.6vw,30px);font-weight:900;line-height:1.18;display:block;letter-spacing:.02em}
+.qc-spec-mini{display:flex;gap:8px;margin-top:8px;font-family:var(--mono);font-size:9.5px;color:var(--muted)}
+.qc-stamp-svg{width:80px;height:80px;flex:none;transform:rotate(10deg)}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 15px}
+.pill{font-family:var(--mono);font-size:11px;padding:4px 10px;border:1px solid var(--ink);border-radius:6px;background:var(--paper);color:var(--ink);font-weight:700}
 .pill.red{background:var(--accent);border-color:var(--accent);color:#fff}
 .pill.soft{background:var(--soft);border-color:var(--line);color:#3f3c36;font-family:var(--sans);font-weight:600}
-.teaser-wrap{margin:20px 0 18px;padding-top:16px;border-top:1.5px dashed #cbc4b6}
-.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
-.teaser-head span{font-family:var(--mono);font-size:11px;letter-spacing:1.2px;color:var(--ink);font-weight:800}
+.teaser-wrap{margin:15px 0 12px;padding-top:13px;border-top:1.5px dashed #cbc4b6}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.teaser-head span{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--ink);font-weight:800}
 .teaser-head small{font-size:11px;color:var(--muted)}
 .teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.teaser{padding:11px 10px;border-radius:8px;background:var(--soft);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
-.teaser-code{font-family:var(--mono);font-size:9.5px;color:var(--accent);font-weight:800}
-.teaser b{font-size:13px;line-height:1.35;color:var(--ink)}
-.teaser small{font-size:11px;color:var(--muted);line-height:1.4}
-button{font:inherit;color:inherit;cursor:pointer;background:var(--paper);border:1.5px solid var(--ink);border-radius:10px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .1s,background .16s,box-shadow .16s}
+.teaser{padding:10px 8px;border-radius:8px;background:var(--soft);border:1px solid var(--line);display:flex;flex-direction:column;gap:3px;text-align:left}
+.teaser:hover{border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.teaser-code{font-family:var(--mono);font-size:9px;color:var(--accent);font-weight:800}
+.teaser b{font-size:12.5px;line-height:1.32;color:var(--ink)}
+.teaser small{font-size:10px;color:var(--muted);line-height:1.38}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--paper);border:1.5px solid var(--ink);border-radius:10px;padding:12px 15px;min-height:46px;touch-action:manipulation;transition:transform .1s,background .16s,box-shadow .16s}
 button:active:not(:disabled){transform:translateY(1px)}
 button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 button:disabled{opacity:.38;cursor:not-allowed}
@@ -68,22 +72,23 @@ button:disabled{opacity:.38;cursor:not-allowed}
 .primary.red{background:var(--accent);border-color:var(--accent);box-shadow:0 4px 0 rgba(160,34,24,.28)}
 .secondary{width:100%;text-align:center;background:var(--soft);border-color:var(--line);font-weight:700}
 .secondary:hover:not(:disabled){border-color:var(--ink)}
-.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:7px;min-height:34px}
 .subtle:hover{color:var(--ink)}
-.stack{display:grid;gap:10px}
+.stack{display:grid;gap:9px}
 .actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
-.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:14px}
-/* Quiz Screen */
+.notice{font-size:11.5px;color:var(--muted);line-height:1.66;margin-top:12px}
+/* Quiz */
 .question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--ink);font-weight:800}
 .auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;border:1px solid var(--line);background:var(--soft);color:var(--muted);font-family:var(--sans);font-size:11px;font-weight:700;min-height:28px}
 .auto-toggle.on{border-color:var(--ink);color:var(--ink);background:#fff}
-.progress{height:7px;background:var(--soft);border:1px solid var(--line);overflow:hidden;border-radius:4px;margin:11px 0 18px}
+.progress{height:7px;background:var(--soft);border:1px solid var(--line);overflow:hidden;border-radius:4px;margin:9px 0 8px}
 .progress i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--ink),var(--ink) 8px,#3b3b37 8px,#3b3b37 16px);transition:width .26s cubic-bezier(.22,1,.36,1)}
-.chapter-bar{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:8px;background:var(--soft);border-left:4px solid var(--accent);margin-bottom:20px}
+.chapter-dots span{background:var(--accent)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:8px;background:var(--soft);border-left:4px solid var(--accent);margin:10px 0 18px}
 .chapter-bar strong{display:block;font-family:var(--mono);font-size:12.5px;color:var(--ink)}
 .chapter-bar span{display:block;font-size:11.5px;color:var(--muted);line-height:1.45}
-.options{display:grid;gap:10px;margin:20px 0 22px}
-.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.54;background:var(--paper);border:1.5px solid var(--line)}
+.options{display:grid;gap:10px;margin:18px 0 20px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:58px;width:100%;padding:12px 14px;line-height:1.52;background:var(--paper);border:1.5px solid var(--line)}
 .option:hover{border-color:var(--ink)}
 .option .letter{display:grid;place-items:center;flex:0 0 28px;height:28px;border-radius:6px;background:var(--soft);color:var(--ink);font-family:var(--mono);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .15s}
 .option.selected{border-color:var(--ink);background:var(--soft);box-shadow:3px 3px 0 var(--ink)}
@@ -92,7 +97,7 @@ button:disabled{opacity:.38;cursor:not-allowed}
 .nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
 /* Thermal Printing Ritual */
 .calc-box{text-align:center;padding:34px 10px 26px}
-.printer-slot{width:176px;height:12px;margin:0 auto;background:var(--ink);border-radius:99px;position:relative}
+.printer-slot{width:176px;height:12px;margin:0 auto;background:var(--ink);border-radius:99px}
 .printer-paper{width:136px;height:82px;margin:-4px auto 22px;background:var(--soft);border:1.5px solid var(--ink);border-top:0;border-radius:0 0 6px 6px;padding:12px 14px;display:flex;flex-direction:column;gap:7px;animation:feed .9s ease-in-out infinite alternate}
 .printer-paper i{display:block;height:5px;background:#bdb6a7;border-radius:2px}
 .printer-paper i:nth-child(2){width:72%;background:var(--accent);opacity:.75}
@@ -101,12 +106,12 @@ button:disabled{opacity:.38;cursor:not-allowed}
 @keyframes feed{from{transform:translateY(-4px)}to{transform:translateY(5px)}}
 .calc-step{font-family:var(--mono);font-size:15.5px;font-weight:800;color:var(--ink);margin-bottom:8px;min-height:1.6em}
 .calc-sub{font-size:12px;color:var(--muted)}
-/* Result Receipt Header */
+/* Result Receipt */
 .receipt-head{position:relative;border:2px solid var(--ink);border-radius:10px;padding:16px 16px 14px;background:var(--paper)}
 .receipt-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-bottom:10px;border-bottom:1.5px dashed #cbc4b6}
 .receipt-stamp{position:absolute;top:40px;right:14px;padding:5px 10px;border:2px solid var(--model-accent,var(--accent));border-radius:6px;color:var(--model-accent,var(--accent));font-family:var(--mono);font-size:11px;font-weight:900;letter-spacing:1.4px;transform:rotate(7deg);background:rgba(255,254,249,.92);box-shadow:0 0 0 2px #fffef9}
 .model-code{font-family:var(--mono);font-size:11.5px;font-weight:800;color:var(--model-accent,var(--accent));margin-top:12px;letter-spacing:.06em}
-.model-name{font-size:clamp(25px,6.8vw,36px);font-weight:900;line-height:1.25;margin:5px 0 8px;padding-right:86px;letter-spacing:-.01em}
+.model-name{font-size:clamp(24px,6.5vw,35px);font-weight:900;line-height:1.25;margin:5px 0 8px;padding-right:86px;letter-spacing:-.01em}
 .fit-strip{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
 .fit-chip{font-family:var(--mono);font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:5px;background:var(--model-accent,var(--ink));color:#fff}
 .bat-chip{font-family:var(--mono);font-size:11px;font-weight:700;padding:4px 9px;border-radius:5px;background:var(--soft);border:1px solid var(--line);color:var(--ink)}
@@ -115,7 +120,6 @@ button:disabled{opacity:.38;cursor:not-allowed}
 .spec-row span{color:var(--muted)}
 .spec-row strong{color:var(--ink);font-weight:800;text-align:right}
 .quote-box{margin-top:14px;padding:11px 13px;background:var(--soft);border-left:4px solid var(--model-accent,var(--accent));border-radius:0 8px 8px 0;font-size:14.5px;font-weight:700;line-height:1.65;color:var(--ink)}
-/* Content Blocks */
 .block{padding:20px 0;border-bottom:1.5px dashed #cbc4b6}
 .block:last-of-type{border:0;padding-bottom:8px}
 .block p{font-size:14px;line-height:1.86;color:#2e2d29}
@@ -123,14 +127,13 @@ button:disabled{opacity:.38;cursor:not-allowed}
 .bug-card{margin-top:12px;padding:14px 15px;border-radius:10px;background:#fdf4f2;border:1.5px solid #e9b9b4}
 .bug-card b{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;color:#b82e24;margin-bottom:5px;letter-spacing:.04em}
 .bug-card p{font-size:13.5px;line-height:1.78;color:#3d2422}
-/* Garment Care Label Box */
 .care-label{margin-top:10px;border:2px solid var(--ink);border-radius:10px;padding:14px 15px;background:var(--paper)}
 .care-icons{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
 .care-icon{flex:1;text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px}
 .care-icon svg{width:28px;height:28px;stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .care-icon span{font-size:10.5px;font-weight:700;color:var(--ink)}
 .warn-strip{margin-top:10px;padding:9px 12px;border-radius:6px;background:repeating-linear-gradient(-45deg,#fef7e4,#fef7e4 10px,#fbf0d4 10px,#fbf0d4 20px);border:1px solid #dfb96a;font-size:12.5px;font-weight:700;color:#6e470b;line-height:1.6}
-/* Axis Meter */
+.radar-wrap{background:var(--soft);border:1px solid var(--line)}
 .axis{margin:14px 0}
 .axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
 .axis-head strong{font-size:13px}
@@ -144,6 +147,17 @@ button:disabled{opacity:.38;cursor:not-allowed}
 .mini b{display:block;font-family:var(--mono);color:var(--model-accent,var(--accent));font-size:11px;margin-bottom:5px}
 .mini .partner-name{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:4px;line-height:1.35}
 .mini p{font-size:12.5px;line-height:1.68;color:#3d3b36}
+.chem-box{background:var(--soft);border:1.5px solid var(--ink)}
+.chem-select{border:1.5px solid var(--ink);background:var(--paper);color:var(--ink)}
+.chem-out{background:var(--paper);border:1px solid var(--line)}
+.chem-pct{font-family:var(--mono);color:var(--model-accent,var(--accent))}
+.chem-bar{background:var(--soft);border:1px solid var(--line)}
+.chem-bar i{background:var(--model-accent,var(--accent))}
+.chem-copy-btn{background:var(--soft);border-color:var(--ink);color:var(--ink)}
+.dex-bar{background:var(--soft);border:1.5px dashed var(--ink)}
+.dex-open-btn{background:var(--paper);border-color:var(--ink);color:var(--ink)}
+.dex-card{background:var(--soft);border:1px solid var(--line)}
+.dex-card.unlocked{background:#fff;border:1.5px solid var(--ink)}
 .rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
 .rank:last-child{border:0}
 .rank small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
@@ -152,20 +166,106 @@ button:disabled{opacity:.38;cursor:not-allowed}
 .barcode-box svg{width:min(260px,84%);height:42px;display:block;margin:0 auto 5px}
 .barcode-box span{font-family:var(--mono);font-size:10.5px;letter-spacing:2.4px;color:var(--muted)}
 .status-bar{font-family:var(--mono);font-size:12px;color:var(--accent);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:700}
-.footer{text-align:center;margin:18px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
+.footer{text-align:center;margin:16px 0 0;font-size:11px;color:var(--muted);line-height:1.75}
 .poster{width:100%;max-width:360px;margin:10px auto;border-radius:12px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.theme-chip{background:var(--soft);border:1.5px solid var(--line);color:var(--muted)}
+.theme-chip.active{background:var(--ink);border-color:var(--ink);color:#fffef9}
+.sig-input{border:1.5px solid var(--ink);background:var(--paper);color:var(--ink)}
+.sig-apply{background:var(--soft);border-color:var(--ink);color:var(--ink)}
+.quiz-toast{background:#1d1d1b;color:#fffef9;font-family:var(--mono)}
 dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:2px solid var(--ink);border-radius:16px;padding:20px;background:var(--paper);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.28)}
-dialog::backdrop{background:rgba(24,23,20,.65);backdrop-filter:blur(3px)}
+dialog::backdrop{background:rgba(24,23,20,.65);backdrop-filter:blur(4px)}
 .dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
 .copy-area{width:100%;min-height:150px;border-radius:8px;border:1.5px solid var(--ink);background:var(--soft);color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+
+/* === Header Controls & Sound Button === */
+.header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sound-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:99px;font-size:11px;font-weight:700;min-height:28px;line-height:1;letter-spacing:.04em}
+.sound-btn.muted{opacity:.62}
+/* === CTA Shimmer & Interactive Foil Tilt === */
+.primary{position:relative;overflow:hidden}
+.primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.26),transparent);transform:skewX(-18deg);animation:btnSheen 4.4s ease-in-out infinite;pointer-events:none}
+@keyframes btnSheen{0%,68%{left:-120%}100%{left:165%}}
+.foil-tilt{transition:transform .22s ease-out;position:relative}
+.foil-tilt::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,20%),rgba(255,255,255,.16),transparent 54%);opacity:0;transition:opacity .25s}
+.foil-tilt:hover::after{opacity:1}
+/* === Interactive Teaser Cards === */
+.teaser{cursor:pointer;transition:transform .16s ease,border-color .18s ease,box-shadow .18s ease}
+.teaser:hover{transform:translateY(-2px)}
+.teaser:active{transform:scale(.98)}
+/* === Chapter Dots & Keyboard Hint === */
+.chapter-dots{display:flex;gap:5px;margin:8px 0 4px}
+.chapter-dots span{flex:1;height:4px;border-radius:99px;opacity:.22;transition:opacity .25s,transform .25s}
+.chapter-dots span.done{opacity:.72}
+.chapter-dots span.now{opacity:1;transform:scaleY(1.35)}
+.kbd-hint{display:none;text-align:center;font-size:11px;opacity:.65;margin-top:8px}
+@media(hover:hover) and (pointer:fine){.kbd-hint{display:block}}
+/* === Radar Box === */
+.radar-wrap{display:flex;justify-content:center;align-items:center;margin:10px 0 14px;padding:10px;border-radius:16px}
+.radar-svg{width:min(280px,100%);height:auto;display:block}
+.radar-poly{transform-origin:140px 122px;animation:radarPop .55s cubic-bezier(.22,1,.36,1)}
+@keyframes radarPop{from{opacity:0;transform:scale(.45)}to{opacity:1;transform:scale(1)}}
+/* === Friend Compatibility Checker Widget === */
+.chem-box{margin-top:14px;padding:15px;border-radius:15px}
+.chem-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+.chem-head strong{font-size:13.5px}
+.chem-head span{font-size:11px;opacity:.75}
+.chem-select{width:100%;min-height:44px;padding:9px 12px;border-radius:11px;font:inherit;font-size:13.5px;cursor:pointer}
+.chem-out{margin-top:12px;padding:13px 14px;border-radius:12px;animation:enter .24s ease-out}
+.chem-score-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.chem-verdict{font-weight:800;font-size:14px}
+.chem-pct{font-weight:900;font-size:20px;line-height:1}
+.chem-bar{height:7px;border-radius:99px;overflow:hidden;margin:6px 0 9px}
+.chem-bar i{display:block;height:100%;border-radius:99px;transition:width .4s cubic-bezier(.22,1,.36,1)}
+.chem-copy-btn{margin-top:10px;width:100%;min-height:38px;padding:7px 12px;font-size:12.5px;font-weight:700;border-radius:10px}
+/* === Collection Dex Button & Grid === */
+.dex-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;margin-top:12px}
+.dex-bar-info strong{display:block;font-size:13px}
+.dex-bar-info span{display:block;font-size:11.5px;opacity:.75}
+.dex-open-btn{min-height:36px;padding:6px 14px;font-size:12px;font-weight:700;border-radius:99px;flex-shrink:0}
+.dex-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.dex-card{padding:11px 10px;border-radius:12px;display:flex;flex-direction:column;gap:4px}
+.dex-card.locked{opacity:.58;border-style:dashed!important}
+.dex-card b{font-size:13px;line-height:1.35}
+.dex-card small{font-size:11px;line-height:1.45;opacity:.8}
+/* === Poster Customization Controls === */
+.poster-tools{display:grid;gap:9px;margin:10px 0 8px}
+.poster-themes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.theme-chip{min-height:36px;padding:6px 10px;font-size:12px;font-weight:700;border-radius:10px;text-align:center}
+.sig-row{display:flex;gap:8px;align-items:center}
+.sig-input{flex:1;min-height:38px;padding:6px 11px;border-radius:10px;font:inherit;font-size:13px}
+.sig-apply{min-height:38px;padding:6px 13px;font-size:12px;font-weight:700;border-radius:10px;flex-shrink:0}
+/* === Chapter Toast === */
+.quiz-toast{position:fixed;top:16px;left:50%;transform:translate(-50%,-18px);opacity:0;pointer-events:none;z-index:999;padding:8px 16px;border-radius:99px;font-size:12.5px;font-weight:700;box-shadow:0 10px 28px rgba(0,0,0,.22);transition:opacity .25s,transform .25s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.quiz-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:440px){.dex-grid{grid-template-columns:1fr}}
+
 @media(max-width:460px){
-  main{padding:12px 10px 28px}
-  .teasers,.duo,.actions-row{grid-template-columns:1fr}
-  .qc-stamp-svg{width:68px;height:68px}
+  main{padding:9px 10px 18px}
+  header{margin-bottom:8px}
+  .brand{letter-spacing:1px;font-size:10px;white-space:nowrap}
+  .issue{font-size:9.5px}
+  .ticket{padding:14px 13px 16px}
+  .qc-banner{padding:11px 12px}
+  .qc-banner-top{padding-bottom:7px;margin-bottom:8px;font-size:9.5px}
+  .qc-banner-copy strong{font-size:20px}
+  .qc-stamp-svg{width:58px;height:58px}
+  .eyebrow{margin:10px 0 4px;font-size:10px}
+  h1{font-size:25px;line-height:1.2}
+  .lead{font-size:13px;line-height:1.6;margin:6px 0 10px}
+  .pills{gap:5px;margin:0 0 11px}
+  .pill{font-size:10.5px;padding:3px 9px}
+  button.primary{min-height:42px;padding:10px 14px;font-size:14.5px}
+  .teaser-wrap{margin:11px 0 6px;padding-top:10px}
+  .teaser-head{margin-bottom:7px}
+  .duo,.actions-row{grid-template-columns:1fr}
   .model-name{padding-right:0}
   .receipt-stamp{position:static;display:inline-block;margin-top:8px;transform:rotate(-2deg)}
   .option{font-size:14px}
+  .teaser{padding:8px 6px}
+  .teaser b{font-size:11px;line-height:1.28}
+  .teaser small{font-size:9.5px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -174,7 +274,10 @@ dialog::backdrop{background:rgba(24,23,20,.65);backdrop-filter:blur(3px)}
 <main>
   <header>
     <span class="brand"><i class="brand-dot"></i>SOUL QC LAB</span>
-    <span class="issue">NO.02 · 人类质检局</span>
+    <div class="header-right">
+      <span class="issue">NO.02 · 人类质检局</span>
+      <button type="button" id="soundBtn" class="sound-btn" aria-label="切换音效">🔊 音效</button>
+    </div>
   </header>
   <div id="app"></div>
   <footer class="footer">SOUL FACTORY QC · 原创娱乐趣味测试，非专业心理测评<br>无需登录 · 所有质检数据仅在本地浏览器处理</footer>
@@ -185,7 +288,17 @@ dialog::backdrop{background:rgba(24,23,20,.65);backdrop-filter:blur(3px)}
     <h3 id="posterTitle">你的 3:4 热敏纸质检海报</h3>
     <button id="closePoster" type="button">关闭</button>
   </div>
-  <p class="muted">1080 × 1440 小红书专用比例 · 手机长按图片保存，电脑点击下方下载。</p>
+  <p class="muted">1080 × 1440 小红书专用比例 · 可切换版式并打印受检人署名！</p>
+  <div class="poster-tools">
+    <div class="poster-themes" role="group" aria-label="切换质检单风格">
+      <button type="button" class="theme-chip active" data-ptheme="0">经典热敏白纸</button>
+      <button type="button" class="theme-chip" data-ptheme="1">实验室工程蓝图</button>
+    </div>
+    <div class="sig-row">
+      <input id="sigInput" class="sig-input" type="text" maxlength="12" placeholder="受检人署名（选填，如：打工人A）" aria-label="受检人自定义署名">
+      <button type="button" id="sigApply" class="sig-apply">打印署名</button>
+    </div>
+  </div>
   <div id="posterArea"></div>
   <div class="stack" style="margin-top:12px">
     <button class="primary red" id="downloadPoster">下载高清 PNG 质检单</button>
@@ -203,19 +316,364 @@ dialog::backdrop{background:rgba(24,23,20,.65);backdrop-filter:blur(3px)}
   <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
 </dialog>
 
+<dialog id="peekDialog" aria-labelledby="peekTitle">
+  <div class="dialog-head">
+    <h3 id="peekTitle">样本型号档案</h3>
+    <button id="closePeek" type="button">关闭</button>
+  </div>
+  <div id="peekBody"></div>
+</dialog>
+
+<dialog id="dexDialog" aria-labelledby="dexTitle">
+  <div class="dialog-head">
+    <h3 id="dexTitle">人类质检局 · 16 种出厂型号库</h3>
+    <button id="closeDex" type="button">关闭</button>
+  </div>
+  <p class="muted" id="dexSub">完成检测自动登记型号，发给朋友测测看你们是不是同批次！</p>
+  <div id="dexGrid" class="dex-grid"></div>
+</dialog>
+
 <script>
 const D = {"title":"你的灵魂「出厂质检单」","subtitle":"SOUL FACTORY QC · 人类出厂检验局","brand":"SOUL QC LAB","vol":"NO.02 · 人类质检报告","heroTitle":"灵魂出厂质检单","heroSub":"FACTORY QUALITY INSPECTION REPORT","intro":"为什么别人精力无限而你出门两小时就想关机？也许不是你不够努力，只是你的「出厂配置」和别人不一样。完成 20 项日常负载测试，打印你的专属灵魂质检单与保养水洗标。","disclaimer":"本检测单为原创趣味自我探索内容，所有型号、参数与“无害小 Bug”均为娱乐创意，非专业心理测评。","kind":"质检单","axes":[["社交电池","极速掉电","超长续航"],["情绪芯片","防弹冷静","高敏雷达"],["运行模式","佛系节能","硬核超频"],["表达接口","静音观察","直球外放"]],"chapters":[{"title":"01 / 开机自检","intro":"检测你的日常唤醒速度、待机习惯与默认精神状态。"},{"title":"02 / 社交耗电测试","intro":"模拟多人聚会、微信红点与突发寒暄，测算电池健康度。"},{"title":"03 / 抗压与 Bug 排查","intro":"测试面对截止日期、委屈和计划打乱时的系统容错率。"},{"title":"04 / 充电与水洗标检测","intro":"定位你的隐藏回血开关与严禁触碰的出厂禁忌。"}],"calcSteps":["正在读取出厂序列号与电池健康度…","排查已知无害小 Bug 与隐藏高配功能…","热敏打印机预热完成，正在出纸…"],"teasers":["低电量慢充·高敏艺术家型","表面稳定·内心弹幕满屏型","平时待机·死线狂飙超频型"],"shareTags":"#你的灵魂出厂质检单 #人类使用说明书 #趣味心理测试 #我的出厂设置","shareHook":"笑死，测完我的灵魂「出厂质检单」，原来我是【{name}】🧾","questions":[{"axis":2,"text":"周末没有任何强制安排，早上醒来后你的默认开机流程是？","options":[{"text":"先躺在床上发呆刷手机一小时，电量慢充到 60% 再起","score":0},{"text":"随心情起床，慢悠悠吃顿早饭再看今天想干嘛","score":1},{"text":"脑子里有两三件想完成的小事，按舒服的节奏推进","score":2},{"text":"睁眼自动加载今日待办清单，不干点正事浑身不得劲","score":3}]},{"axis":0,"text":"周五下班/放学前，同事或同学突然喊你晚上去参加 8 人局，你的第一反应？","options":[{"text":"立刻盘算今天有哪些人、去哪吃，兴致勃勃准备出发","score":3},{"text":"内心警报拉响，飞速编造一个体面又合理的婉拒理由","score":0},{"text":"看熟人多不多，有好朋友在就去待一会儿","score":2},{"text":"礼貌笑笑说最近太累，火速回家切换飞行模式","score":1}]},{"axis":1,"text":"给在意的人发完一条消息，对方隔了三小时只回了一个“嗯”，你的芯片运行状态？","options":[{"text":"完全没多想，大概率是在忙，自己继续干别的","score":0},{"text":"一秒脑补出八集连续剧，开始逐字复盘自己刚才是不是说错了话","score":3},{"text":"稍微留意了一下语气，但很快说服自己别内耗","score":1},{"text":"心里咯噔一下有点小失落，忍不住来回看聊天记录","score":2}]},{"axis":3,"text":"和不太熟的人一起等电梯，空气突然安静 10 秒，你会？","options":[{"text":"自然而然抛出一个轻松话题，把尴尬瞬间聊没","score":3},{"text":"低头专注看楼层数字或手机，祈祷电梯快点到","score":0},{"text":"微微点头礼貌一笑，不强行找话也不显得冷漠","score":1},{"text":"顺着天气或手里的咖啡随便聊两句，轻松破冰","score":2}]},{"axis":2,"text":"面对一个一周后才截止的任务，你最真实的进度曲线是？","options":[{"text":"先收集点灵感躺两天，离截止越近大脑越清醒","score":1},{"text":"当天就拆解步骤开工，提前做完才能安心睡觉","score":3},{"text":"前期彻底佛系待机，不到最后关头绝不启动超频模式","score":0},{"text":"大致排个节点，每天推进一点稳稳交卷","score":2}]},{"axis":0,"text":"参加一场气氛还不错的聚会，大概过多久你的「想回家进度条」会拉满？","options":[{"text":"不到一小时就开始眼神放空，灵魂先一步回家躺平了","score":0},{"text":"两小时左右电量见底，开始悄悄看表准备撤退","score":1},{"text":"只要聊得来可以待满全场，散场前还有点意犹未尽","score":2},{"text":"越晚越精神，甚至已经开始张罗下一场夜宵局了","score":3}]},{"axis":3,"text":"买到一份超级难吃的外卖或踩雷商品，你通常会怎么处理？","options":[{"text":"默默咽下去自认倒霉，连差评都懒得写","score":0},{"text":"当场拍照发给朋友吐槽十条语音，顺手写条有梗评价","score":3},{"text":"在心里拉黑这家店，下次绝对不买了","score":1},{"text":"客观指出问题申请售后，不委屈自己也不吵架","score":2}]},{"axis":1,"text":"刷到一条戳中泪点的短视频或看到路边一只淋雨小狗，你的系统反应？","options":[{"text":"眼眶一秒湿润，情绪后劲能持续好几个小时","score":3},{"text":"心里微微动容，但几秒后就恢复平静继续往下刷","score":0},{"text":"会停下来多看一会儿，默默点个赞希望它被温柔对待","score":2},{"text":"觉得有点可怜，理性感叹一句生活不易","score":1}]},{"axis":0,"text":"手机微信突然弹出 99+ 未读群消息，你点开时的心情更接近？","options":[{"text":"兴致勃勃从头爬楼吃瓜，顺手甩出几个表情包加入战局","score":3},{"text":"头皮发麻，直接一键标记已读或拖到最底看有没有 @ 我","score":0},{"text":"先放着，等晚上电量恢复了再慢慢挑重点看","score":1},{"text":"快速扫一眼热闹话题，看到好玩的就插一句嘴","score":2}]},{"axis":3,"text":"如果你特别喜欢或欣赏一个人的某一点，你会怎样让对方知道？","options":[{"text":"当面直接夸爆，眼睛亮晶晶地把优点说得明明白白","score":3},{"text":"全憋在心里默默点赞，嘴上可能还故意开个小玩笑掩饰","score":0},{"text":"顺着聊天顺嘴夸一句，点到为止不让对方尴尬","score":2},{"text":"不太好意思直说，更多是用行动或分享小东西表达好感","score":1}]},{"axis":1,"text":"在公共场合不小心出了一点小糗（比如喊错名字、推错玻璃门），你会？","options":[{"text":"当场脚趾抠出三室一厅，半年后深夜想起来还想重启人生","score":3},{"text":"大大方方笑出声化解，过五分钟就忘得一干二净","score":0},{"text":"脸稍微热了一下，但知道没人真在意，很快翻篇","score":1},{"text":"表面假装镇定自若，内心弹幕疯狂刷屏“快逃”","score":2}]},{"axis":2,"text":"当别人给你画大饼或用高压语气催你“快点搞定”时，你的反应是？","options":[{"text":"瞬间触发反骨节能模式，越催越不想动，甚至想当场关机","score":0},{"text":"表面答应好，实际依然按自己舒服的步调慢慢来","score":1},{"text":"虽然不爽，但为了早点甩掉麻烦会迅速高效解决","score":2},{"text":"直接拆解目标核对边界，干脆利落把事搞定并反手甩出结果","score":3}]},{"axis":3,"text":"朋友聚会时聊到一个你很有见解的话题，你通常是？","options":[{"text":"全程安静听大家说，内心疯狂吐槽但就是懒得开口","score":0},{"text":"等大家问到我，才淡淡抛出几句直击要害的金句","score":1},{"text":"主动接过话头分享观点，顺便带动大家一起讨论","score":2},{"text":"立刻进入输出模式，表情手势全开，金句和段子齐飞","score":3}]},{"axis":2,"text":"如果突然多出一整周带薪假期，你的大脑第一秒会生成什么方案？","options":[{"text":"彻底躺平睡到自然醒，外卖+追剧+发呆，绝不写攻略","score":0},{"text":"挑一两个想去的地方随心逛逛，走到哪算哪","score":1},{"text":"一半时间休息充电，一半时间把攒了很久的计划推进完","score":2},{"text":"立刻做出高能旅行/成长路线表，把每一天都玩出超高性价比","score":3}]},{"axis":1,"text":"走进一个刚吵完架、气氛极其微妙的房间，你的感知雷达有多灵敏？","options":[{"text":"基本没察觉，别人不说我根本不知道发生了啥","score":0},{"text":"进门 0.5 秒就嗅到气压不对，自己也跟着瞬间绷紧耗电","score":3},{"text":"能看出来气氛怪怪的，但能把情绪隔绝在外不受影响","score":1},{"text":"很快察觉到微妙氛围，下意识想小心翼翼照顾大家情绪","score":2}]},{"axis":0,"text":"经历了一整周高强度忙碌后，下面哪种「充电桩」回血最快？","options":[{"text":"关掉通知独处一整天，谁也别找我说话","score":0},{"text":"一个人逛街看展喝咖啡，安静享受属于自己的节奏","score":1},{"text":"约一两个铁瓷吃顿火锅散步吐槽，互相回血","score":2},{"text":"去热闹市集、Livehouse 或呼朋引伴大玩一场","score":3}]},{"axis":1,"text":"半夜躺在床上准备睡觉时，你的大脑后台通常是？","options":[{"text":"沾枕头就一键关机，很少胡思乱想","score":0},{"text":"偶尔闪过几个明天的安排，很快就能入睡","score":1},{"text":"自动开启情绪回放和灵感弹幕，越夜越清醒","score":2},{"text":"宇宙哲学、人生遗憾、明天早饭全在脑内开演唱会","score":3}]},{"axis":2,"text":"关于「把生活过好」这件事，你潜意识里更认同哪句出厂设定？","options":[{"text":"别卷了，能舒舒服服享受今天就是顶配人生","score":0},{"text":"松弛为主、偶尔努力，开心和底气都要留一点","score":1},{"text":"既要稳步升级打怪，也要记得给自己留喘息空间","score":2},{"text":"把想法落地、看见自己不断变强，才是最爽的快乐","score":3}]},{"axis":3,"text":"当别人突然很认真地夸你“你好厉害”时，你的默认响应代码是？","options":[{"text":"嘴上立刻谦虚“哪有哪有”，心里其实已经放烟花了","score":1},{"text":"有点社恐不知道手往哪放，干巴巴回一句“谢谢”赶紧转移话题","score":0},{"text":"大方笑纳“我也觉得这次挺不错”，顺手回夸对方一句","score":3},{"text":"开心道谢，顺便自然聊聊背后有趣的小细节","score":2}]},{"axis":0,"text":"如果给你的灵魂贴一张最醒目的「防伪水洗标」，你想贴哪一句？","options":[{"text":"独处自动满电 · 严禁强行拉群寒暄","score":0},{"text":"仅支持熟人模式 · 陌生局耗电加倍","score":1},{"text":"冷热双控 · 独处能玩，聚会也能扛","score":2},{"text":"人间小太阳 · 缺乏互动会触发无聊警报","score":3}]}],"profiles":[{"no":"01","code":"SL-01 · 极简省电版","name":"低能耗防弹·佛系隐士型","vector":[0.2,0.2,0.2,0.2],"accent":"#2d5a4c","stamp":"禁止无效寒暄","battery":"社交 1.5h / 独处 ∞","specs":["精神内耗：几乎为 0%","抗画饼能力：MAX","最佳状态：无人打扰"],"tags":["绝不内耗","省电冠军","人间清醒"],"quote":"别人忙着焦虑内卷，我忙着给自己开启长期飞行模式。","features":"自带工业级防内耗涂层，情绪稳如老狗，极难被外界噪音和画大饼洗脑，一个人就能把日子过得极其舒适。","bug":"电量虽稳但启动阈值极高——非必要不社交，非截止不干活，收到微信消息常在脑内意念回复后彻底忘记打字。","care":"放进安静整洁的空间，配一杯冰饮和 Wi-Fi 即可自动回血；偶尔给自己设一个小目标，能防止待机太久生锈。","warning":"严禁强行拉入陌生人破冰团建，否则 10 分钟内触发灵魂离线。","match":["松弛乐天·暖阳快乐机型","对方负责热闹制造笑声，你负责安静兜底接梗，相处零压力。"],"clash":["全自动卷王·永动推进器型","对方早上六点发日程表，你中午十二点刚把手机调回响铃。"]},{"no":"02","code":"SL-02 · 冷静吐槽版","name":"反矫情·嘴硬幽默观察型","vector":[0.2,0.2,0.2,2.8],"accent":"#1d4e89","stamp":"严禁强行煽情","battery":"社交 2h / 吐槽满电","specs":["看透套路：0.3 秒","冷笑话库存：999+","松弛指数：96%"],"tags":["反矫情达人","松弛有梗","清醒毒舌"],"quote":"天塌下来先别慌，让我先截个图发条带梗锐评。","features":"大脑内置高清去滤镜芯片，一眼识破各种形式主义和尴尬场面，总能用一句云淡风轻的幽默把严肃危机解构掉。","bug":"虽然嘴上段子不断、看似社牛，但实际上社交电池极小，High 完两小时必须立刻逃回家静音独处。","care":"适合与同样不装、不玻璃心的朋友偶尔约顿好吃的；别忘了在幽默自嘲之余，也允许自己偶尔认真矫情一次。","warning":"严禁对其进行长篇大论说教或情绪绑架，会直接触发冷幽默反杀。","match":["低电量慢充·高敏艺术家型","你能用清醒幽默瞬间帮对方驱散内耗，对方总能接住你藏在玩笑里的温柔。"],"clash":["热血直球·人间小太阳型","对方满屏感叹号激情输出，你淡定回一句“冷静点，喝口水”。"]},{"no":"03","code":"SL-03 · 静音旗舰版","name":"高冷防弹·暗中搞大事型","vector":[0.2,0.2,2.8,0.2],"accent":"#2b3a4a","stamp":"请勿打断心流","battery":"社交 1h / 专注 12h","specs":["独处战斗力：S+","情绪波动：极低","执行精度：99.2%"],"tags":["悄悄拔尖","硬核独行","反内耗天花板"],"quote":"少废话，少寒暄，等我闷声把成品甩到桌面上。","features":"罕见的静音高性能处理器——不爱在群里刷存在感，但独自作战时逻辑极清、效率恐怖，是关键时刻最稳的定海神针。","bug":"面部表情常年处于默认省电模式，导致陌生人误以为你不好惹；其实你只是大脑在后台全速跑项目，懒得演客套。","care":"给足独立空间、清晰边界和正向反馈就能持续输出高光；记得设个喝水与抬头看窗外的闹钟，别把自己当纯机器用。","warning":"严禁在其进入专注心流时反复打断问“吃了吗”，极易触发低气压。","match":["情绪稳压·高配统筹管家型","同样高效清醒不废话，一个攻核心难题，一个理全局配合，省心到哭。"],"clash":["全场弹幕·戏精气氛组型","你需要静音单人舱，对方自带立体环绕音响，同处一室互相耗电。"]},{"no":"04","code":"SL-04 · 锋利直球版","name":"清醒直球·硬核破局玩家型","vector":[0.2,0.2,2.8,2.8],"accent":"#8c2d2d","stamp":"禁止画饼敷衍","battery":"废话 0h / 干货 10h","specs":["决策速度：极速","反PUA抗性：100%","直球命中率：98%"],"tags":["有话直说","硬核高效","自带爽文感"],"quote":"与其猜来猜去内耗三天，不如三句话把规则拍桌定死。","features":"逻辑锋利、表达干脆、行动力极强，绝不在无意义的人情拉扯里浪费生命。只要你决定出手的事，推进速度堪称推土机。","bug":"偶尔因为思路太快、说话太直，在自己看来是高效解决问题，在玻璃心眼里却像放了大招；其实你只是真性情不藏坏心。","care":"独处复盘+定期运动是最好的散热方式；面对特别在乎的人，发完直球后顺手加一个柔软表情包，体验立刻翻倍。","warning":"严禁对其使用模糊需求、反复改稿或阴阳怪气，会立刻触发当场拆台。","match":["表面稳定·内心弹幕满屏型","你果断帮对方拍板挡风雨，对方细腻替你打圆场，绝佳互补组合。"],"clash":["脆皮敏感·深夜哲思诗体型","你想三分钟给方案，对方想先安静消化三小时情绪，节奏容易撞车。"]},{"no":"05","code":"SL-05 · 温柔慢充版","name":"低电量慢充·高敏艺术家型","vector":[0.2,2.8,0.2,0.2],"accent":"#6a4c7a","stamp":"轻拿轻放 · 慢充","battery":"社交 1h / 灵感 ∞","specs":["共情精度：微米级","审美雷达：顶配","睡眠需求：高"],"tags":["温柔高敏","细腻浪漫","灵魂富翁"],"quote":"不是我太懒太慢，是我的传感器比别人多接收了十倍信号。","features":"出厂搭载超高精度审美与共情芯片，能捕捉到风声、晚霞与别人没说出口的温柔。你安静柔软，却拥有极其丰盈的内在宇宙。","bug":"极易因为一句冷淡语气或嘈杂环境瞬间掉电到 5%，必须立刻缩回被窝、戴上耳机断网慢充才能恢复出厂微笑。","care":"请务必远离消耗型人群与高压催促；定期散步、看展、写日记或撸猫，能把你的高敏感直接转化成惊艳他人的创造力。","warning":"严禁连续熬夜、高压催促或冷暴力对待，否则触发自动闭关保护。","match":["反矫情·嘴硬幽默观察型","对方情绪稳定又懂接梗，能轻轻接住你的小敏感，完全不让你内耗。"],"clash":["全自动卷王·永动推进器型","对方一开口就是 KPI 和加速，听完你直接电量清零。"]},{"no":"06","code":"SL-06 · 深夜脑洞版","name":"脆皮敏感·深夜哲思诗体型","vector":[0.2,2.8,0.2,2.8],"accent":"#9e425e","stamp":"夜间灵感暴走","battery":"白天节能 / 深夜超频","specs":["共情浓度：99%","金句产出：午夜高峰","玻璃心外壳：软萌"],"tags":["深夜文艺魂","碎碎念治愈","嘴甜心软"],"quote":"白天在人间假装省电，凌晨两点在脑海里给世界写情书。","features":"拥有极高的感受力与鲜活的表达欲，遇到同频好友能聊出一部文艺电影。你真诚热烈、从不吝啬夸奖，总能精准戳中别人的软肋并温柔安抚。","bug":"白天电量常常飘忽不定，情绪容易随天气和他人态度坐过山车；嘴上说着“摆烂了”，半夜又忍不住认真思考人生意义。","care":"给表达欲找一个舒服的出口（发小红书、写手账或和铁瓷吐槽）；睡前一小时远离致郁信息，早睡就是最好的系统升级。","warning":"严禁对其敷衍回复“哦/嗯/随便”，会立刻在后台触发 108 条心理弹幕。","match":["松弛乐天·暖阳快乐机型","对方永远给你满格回应和明媚笑声，是专治深夜胡思乱想的特效药。"],"clash":["清醒直球·硬核破局玩家型","你想聊聊今天的委屈和晚霞，对方先问你“核心诉求是什么”。"]},{"no":"07","code":"SL-07 · 表面淡定版","name":"表面稳定·内心弹幕满屏型","vector":[0.2,2.8,2.8,0.2],"accent":"#3e5478","stamp":"内耗静音运行","battery":"靠谱度 100% / 易过热","specs":["表面情绪：波澜不惊","内心弹幕：60帧满屏","靠谱指数：S+"],"tags":["外稳内敏","责任感爆棚","细节完美控"],"quote":"外表稳如老干部，其实内心已经把所有最坏情况预演了三遍。","features":"极其靠谱的隐形高配机型——你既对细节和他人感受高度敏锐，又具备极强执行力与体面自觉，把事情交给你永远让人放心。","bug":"CPU 经常因为“怕做得不够好”和“怕让别人失望”悄悄过热，明明心里弹幕刷满屏，嘴上却依然礼貌微笑说“没事我来吧”。","care":"学会把“80 分先交付”写进系统默认设置；定期找一个绝对安全的树洞把委屈倒出来，别总把所有压力自己扛。","warning":"严禁对其说“你这么靠谱肯定没问题吧”进行道德加码，谨防过载死机。","match":["清醒直球·硬核破局玩家型","对方简单直接不藏心思，跟你相处不用猜来猜去，能帮你大幅减负。"],"clash":["随性躺赢·气氛整活大师型","你已经做好三套应急预案，对方问“啊？今天就要出发吗”。"]},{"no":"08","code":"SL-08 · 完美爆发版","name":"死线超频·细节狂魔输出型","vector":[0.2,2.8,2.8,2.8],"accent":"#b53f35","stamp":"严禁敷衍半成品","battery":"热爱即满电 / 社交快耗","specs":["审美洁癖：99%","输出烈度：高能","独处回血：必选"],"tags":["高敏实干家","嘴硬心热","极致主义"],"quote":"要么不干，要干就得干到连自己都忍不住鼓掌的程度。","features":"兼具细腻感知、锋利表达与惊人推进力的稀缺高配版。你对敷衍和将就零容忍，只要点燃热情，就能交出极具感染力与细节质感的神级作品。","bug":"容易陷入“又想吐槽又忍不住亲手把它改到完美”的循环；高强度输出完毕后必须立刻独处关机，否则会触发暴躁警报。","care":"每次打完硬仗，请务必给自己安排一场彻底断联的美食+睡眠大保养；允许世界存在一点不完美，你的电量会耐用三倍。","warning":"严禁把粗糙敷衍的半成品丢给其收尾，极易触发当场吐槽+熬夜重写。","match":["温柔托底·人间充电宝型","对方能稳稳接住你的紧绷与完美主义，提醒你停下来好好吃饭休息。"],"clash":["低能耗防弹·佛系隐士型","你急着把细节打磨到极致，对方说“差不多得了，先喝口茶”。"]},{"no":"09","code":"SL-09 · 治愈陪伴版","name":"松弛乐天·暖阳快乐机型","vector":[2.8,0.2,0.2,0.2],"accent":"#b8762c","stamp":"自带降压光环","battery":"全天候柔和续航","specs":["情绪稳压：98%","好相处度：MAX","焦虑免疫：95%"],"tags":["人间松弛感","情绪稳压器","舒服耐处"],"quote":"慢慢来没关系，太阳明天照常升起，饭也要好好吃。","features":"极度稀缺的“低侵略性高续航”机型——不抢风头、不制造压力，却能在人群里自然散发出令人安心的松弛暖意，和你待在一起连呼吸都会变慢。","bug":"因为太好说话且很少发脾气，偶尔会被当作默认配合的“好好先生/小姐”；面对重要选择时也容易犯轻微选择困难症。","care":"保持晒太阳、散步和跟老友慢慢吃饭的节奏；遇到真正想要的东西，偶尔也可以小小的自私和任性一次。","warning":"严禁将其塞进勾心斗角的宫斗局，会因觉得太无聊而悄无声息退场。","match":["低能耗防弹·佛系隐士型","两大反内耗王者同框，哪怕各自刷手机不说话也能感受到高级松弛。"],"clash":["死线超频·细节狂魔输出型","你觉得开心就好，对方觉得每个像素都得对齐，画风反差极大。"]},{"no":"10","code":"SL-10 · 社交整活版","name":"随性躺赢·气氛整活大师型","vector":[2.8,0.2,0.2,2.8],"accent":"#c95b2b","stamp":"缺你聚会冷场","battery":"聚会永动 / 早起困难","specs":["破冰速度：3 秒","抽象整活：满级","抗尴尬值：100%"],"tags":["社交天花板","快乐永动机","抽象有梗"],"quote":"人生是一场大型游乐场，先玩尽兴，攻略明天再说。","features":"出厂预装顶级幽默引擎与无限社交电池，再冷的场子只要你一开口就能瞬间升温。你不玻璃心、不记仇，自带把平淡日子过成喜剧综艺的魔力。","bug":"三分钟热度高发体质——今天兴致勃勃买齐一整套新装备，后天已经被下一个更好玩的局拐跑了。","care":"找一个靠谱的搭子帮你记重要日期和截止时间，你只管继续发挥天生的快乐感染力，把好运和笑声带给世界。","warning":"严禁将其关在寂静无声的工位连续枯坐 8 小时，会触发严重摸鱼症状。","match":["高冷防弹·暗中搞大事型","你负责对外破冰整活拉资源，对方负责幕后稳稳落地，天作之合。"],"clash":["表面稳定·内心弹幕满屏型","你主打一个随遇而安，对方主打一个步步精密，凑一块笑料不断。"]},{"no":"11","code":"SL-11 · 靠谱主心骨版","name":"情绪稳压·高配统筹管家型","vector":[2.8,0.2,2.8,0.2],"accent":"#225750","stamp":"团队定海神针","battery":"长效稳定输出","specs":["扛事能力：S+","情绪耐压：99%","统筹逻辑：顶配"],"tags":["大局观拉满","靠谱天花板","低调强悍"],"quote":"不用慌，把混乱交给我，五分钟后还你一套清楚方案。","features":"高续航、低发热、强执行的顶级全能机型。你善于倾听和连接不同的人，又能在关键时刻稳住心态、条理清晰地把复杂局面梳理得服服帖帖。","bug":"习惯性照顾全局，常常默默替大家把烂摊子兜底，导致身边人误以为你永远不累，其实你偶尔也想当一回甩手掌柜。","care":"学会把一部分小事放心派发出去；周末给自己批半天“什么都不管”的特权，你的内核会更从容强大。","warning":"严禁把团队里所有人的杂事都默认推给其兜底，请注意合理散热。","match":["高冷防弹·暗中搞大事型","双向靠谱、沟通零废话，在一起搞事业或旅行都是顶级神仙配置。"],"clash":["脆皮敏感·深夜哲思诗体型","你想先稳住节奏解决问题，对方想先抱头痛哭一场再谈下一步。"]},{"no":"12","code":"SL-12 · 核动力旗舰版","name":"全自动卷王·永动推进器型","vector":[2.8,0.2,2.8,2.8],"accent":"#b8332a","stamp":"高能核动力","battery":"双核快充 · 停不下来","specs":["行动响应：0.1 秒","气场覆盖：全场","目标达成率：98%"],"tags":["行动力爆表","天生领袖","爽文主角"],"quote":"想一百遍不如先干一遍，路都是边跑边踩出来的。","features":"自带双核涡轮增压的顶级行动派——精力充沛、表达有感染力、眼里永远盯着目标和解法。有你在的局从不拖泥带水，天生自带破局气场。","bug":"休息按钮疑似出厂漏装：一旦空下来没事干反而浑身发痒，甚至连放假旅游都要排出军事化高效打卡表。","care":"请把“高质量发呆和睡觉”也当成一项重要 KPI 来完成；偶尔放慢半拍，你会看到高速奔跑时错过的风景与人情。","warning":"严禁与其一起在低效拖拉的流程里空耗，会直接接管方向盘加速。","match":["温柔托底·人间充电宝型","你在前面冲锋开疆，对方温柔帮你稳住后方与情绪温度，完美闭环。"],"clash":["低能耗防弹·佛系隐士型","你是二倍速快进人生，对方是 0.5 倍速品茶人生，很难同频。"]},{"no":"13","code":"SL-13 · 暖心治愈版","name":"温柔托底·人间充电宝型","vector":[2.8,2.8,0.2,0.2],"accent":"#9e5c42","stamp":"温柔能量补给站","battery":"对外满格 / 需被偏爱","specs":["共情温度：37.5°C","治愈指数：MAX","记仇程度：极低"],"tags":["温柔充电宝","极佳倾听者","细腻暖心"],"quote":"不必急着成为完美大人，在我这里你可以放心做个小孩。","features":"你是朋友眼里最舍不得弄丢的人间充电宝。既有持久的陪伴耐心，又有极度细腻的共情雷达，总能不动声色地照顾到角落里被忽略的人。","bug":"过度体贴导致“拒绝对话框”经常卡死，明明自己电量只剩 15% 了，只要朋友一声求助，还是会下意识挤出电量去哄人。","care":"请把你的温柔留出 30% 给自己——学会先问“我今天舒不舒服”，再决定要不要帮别人；真正爱你的人会主动来给你充电。","warning":"严禁将其当作单向情绪垃圾桶长期倾倒负能量，请记得双向回充。","match":["全自动卷王·永动推进器型","对方帮你挡掉外界麻烦、给你撑腰，你给对方最安心的柔软港湾。"],"clash":["反矫情·嘴硬幽默观察型","你认真共情安慰，对方用冷笑话一键跳过煽情，偶尔让你接不住。"]},{"no":"14","code":"SL-14 · 高甜弹幕版","name":"全场弹幕·戏精气氛组型","vector":[2.8,2.8,0.2,2.8],"accent":"#b83b6e","stamp":"情绪价值顶配","battery":"互动快充 200%","specs":["表情包库：10GB+","夸夸火力：全开","共情笑点：双高"],"tags":["人间甜豆","分享欲爆棚","情绪价值王"],"quote":"路边看见一朵像小狗的云，不发给十个人分享我能憋一整天。","features":"集细腻共情、鲜活表达和超高社交能量于一身的快乐发光体！和你在一起绝不会冷场，你既能陪人疯玩大笑，也能在别人难过时给出满格拥抱和夸夸。","bug":"分享欲就是生命线——兴致勃勃发完十条语音和照片，如果只收到一个冷冰冰的句号，电量会在三秒内暴跌 80%。","care":"把宝贵的热情投喂给同样会认真接梗、秒回你碎碎念的人；情绪上头时先吃顿甜品睡一觉，天亮又是一条满血好汉。","warning":"严禁冷场已读不回，否则触发委屈嘀咕并迅速撤回全部热情。","match":["热血直球·人间小太阳型","双倍热情加双倍直球，每天互相夸夸整活，快乐直接突破天际。"],"clash":["高冷防弹·暗中搞大事型","你发了 18 张表情包，对方三小时后回了一个“收到”。"]},{"no":"15","code":"SL-15 · 平时待机版","name":"平时待机·死线狂飙超频型","vector":[2.8,2.8,2.8,0.2],"accent":"#4d417d","stamp":"绝境超频爆发","battery":"外柔内刚 · 潜力惊人","specs":["团队粘合度：95%","细节敏感度：高","死线爆发力：300%"],"tags":["藏锋实力派","温柔扛事","隐藏大Boss"],"quote":"别看我平时安安静静笑眯眯，真到了紧要关头，我比谁都能扛。","features":"外在温润合群、极其懂分寸，骨子里却藏着惊人的韧性与执行力。你既能敏锐察觉团队里每个人的情绪，又能在关键节点悄悄超频把事做到惊艳。","bug":"习惯把焦虑和压力全消化在沉默里，表面风轻云淡配合所有人，背后默默熬夜把细节抠到极致，容易悄悄累到自己。","care":"你的付出值得被光明正大地看见！以后完成漂亮成果时，别再习惯性谦虚躲在角落，大方站出来接受掌声和奖励吧。","warning":"严禁低估其温和外表下的爆发力，也请勿长期透支其耐心额度。","match":["随性躺赢·气氛整活大师型","对方能把你从紧绷和隐形压力里拉出来大笑，帮你彻底松绑。"],"clash":["低能耗防弹·佛系隐士型","你暗中焦虑进度条，对方云淡风轻说“实在不行就延期吧”。"]},{"no":"16","code":"SL-16 · 满血耀眼版","name":"热血直球·人间小太阳型","vector":[2.8,2.8,2.8,2.8],"accent":"#c9362b","stamp":"高能热忱 · 限量款","battery":"全维满格 · 光热双爆","specs":["热情温度：100°C","感染力：核级","真诚浓度：纯度 99.9%"],"tags":["赤诚大女主/主","热忱行动派","自带高光"],"quote":"喜欢就大声说，想做就立刻冲，人生就是要活得滚烫热烈！","features":"罕见的四维全开热血旗舰款！你既有炽热的共情心，又有说干就干的魄力与极富感染力的直球表达，走到哪里都是照亮全场、带大家一起冲的灵魂核心。","bug":"因为电量太足、情感太真挚，偶尔会用力过猛导致瞬间燃尽；最受不了满腔热血换来冷漠敷衍，委屈来得快去得也快。","care":"超级英雄也需要定期回基地维护——学会分辨哪些人和事值得你全功率输出，把滚烫真心留给同样赤诚回应你的人。","warning":"严禁泼冷水、冷暴力或画大饼，会直接触发正义直球反击。","match":["全场弹幕·戏精气氛组型","热烈遇上热烈、赤诚接住赤诚，在一起每天都是高能喜剧现场。"],"clash":["反矫情·嘴硬幽默观察型","你高喊“冲鸭为了梦想”，对方幽幽飘来一句“先算算投入产出比”。"]}]};
 const app = document.getElementById('app'),
       posterDialog = document.getElementById('posterDialog'),
-      copyDialog = document.getElementById('copyDialog');
+      copyDialog = document.getElementById('copyDialog'),
+      peekDialog = document.getElementById('peekDialog'),
+      dexDialog = document.getElementById('dexDialog');
 const N = D.questions.length, STORAGE = 'soul-qc-lab-v1';
-let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null;
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const byName = Object.fromEntries(D.profiles.map(p => [p.name, p]));
+let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null, lastChapter = -1, posterTheme = 0;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* === Thematic Web Audio Sound Engine (Pure Offline Synth) === */
+const SFX = (() => {
+  let ctx = null, muted = false;
+  try { muted = localStorage.getItem(STORAGE + ':mute') === '1'; } catch {}
+  function ac() {
+    if (muted) return null;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      if (!ctx) ctx = new AC();
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+      return ctx;
+    } catch { return null; }
+  }
+  function tone(freq, dur, type = 'sine', gainVal = 0.055, delay = 0, endFreq = null) {
+    const c = ac(); if (!c) return;
+    try {
+      const t = c.currentTime + delay;
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = type;
+      o.frequency.setValueAtTime(freq, t);
+      if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, t + dur);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(gainVal, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + dur + 0.02);
+    } catch {}
+  }
+  const PRESETS = {
+    city:    { notes: [523.25, 587.33, 659.25, 783.99], wave: 'triangle', gain: 0.05 },
+    love:    { notes: [587.33, 659.25, 739.99, 880.00], wave: 'sine',     gain: 0.048 },
+    ancient: { notes: [440.00, 493.88, 587.33, 659.25], wave: 'triangle', gain: 0.052 },
+    scent:   { notes: [659.25, 739.99, 880.00, 987.77], wave: 'sine',     gain: 0.042 },
+    qc:      { notes: [620, 740, 860, 980],             wave: 'square',   gain: 0.024 },
+    shop:    { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.046 },
+    museum:  { notes: [392.00, 440.00, 523.25, 587.33], wave: 'sine',     gain: 0.052 },
+    rpg:     { notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', gain: 0.045 },
+    cosmos:  { notes: [587.33, 739.99, 880.00, 1174.6], wave: 'sine',     gain: 0.042 }
+  };
+  const P = PRESETS["qc"] || PRESETS.city;
+  return {
+    isMuted: () => muted,
+    toggle() {
+      muted = !muted;
+      try { localStorage.setItem(STORAGE + ':mute', muted ? '1' : '0'); } catch {}
+      if (!muted) this.click(1);
+      return muted;
+    },
+    click(i = 0) {
+      const f = P.notes[Math.abs(i) % P.notes.length];
+      tone(f, 0.065, P.wave, P.gain);
+      if (false) {
+        tone(f * 2, 0.22, 'sine', P.gain * 0.35, 0.015);
+      }
+    },
+    start() {
+      tone(P.notes[0], 0.14, P.wave, P.gain, 0);
+      tone(P.notes[2], 0.22, 'sine', P.gain * 0.9, 0.07);
+    },
+    back() {
+      tone(P.notes[0] * 0.85, 0.11, 'sine', P.gain * 0.7);
+    },
+    chapter() {
+      tone(P.notes[1], 0.16, 'sine', P.gain * 0.8, 0);
+      tone(P.notes[3], 0.28, 'sine', P.gain * 0.75, 0.09);
+    },
+    reveal() {
+      P.notes.forEach((f, k) => tone(f, 0.32, k === 3 ? 'sine' : P.wave, P.gain * 0.9, k * 0.08));
+    }
+  };
+})();
+
+function renderSoundBtn() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  const m = SFX.isMuted();
+  btn.textContent = m ? '🔇 静音' : '🔊 音效';
+  btn.setAttribute('aria-pressed', String(!m));
+  btn.classList.toggle('muted', m);
+}
+function initSoundToggle() {
+  const btn = document.getElementById('soundBtn');
+  if (!btn) return;
+  renderSoundBtn();
+  btn.onclick = () => { SFX.toggle(); renderSoundBtn(); };
+}
+
+/* === Celebratory Particle Burst (Respects Reduced Motion) === */
+function celebrateBurst(colors, style = 'spark') {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    const cv = document.createElement('canvas');
+    cv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999';
+    cv.width = window.innerWidth; cv.height = window.innerHeight;
+    document.body.append(cv);
+    const ctx = cv.getContext('2d');
+    const parts = [];
+    const cx = cv.width / 2, cy = Math.min(cv.height * 0.36, 280);
+    for (let i = 0; i < 42; i++) {
+      const ang = (Math.PI * 2 * i) / 42 + (Math.random() - 0.5) * 0.35;
+      const spd = 2.6 + Math.random() * 5.8;
+      parts.push({
+        x: cx + (Math.random() - 0.5) * 40,
+        y: cy + (Math.random() - 0.5) * 20,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 2.4,
+        r: 3 + Math.random() * 4.5,
+        rot: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.2,
+        color: colors[i % colors.length],
+        life: 1,
+        decay: 0.015 + Math.random() * 0.012
+      });
+    }
+    let raf;
+    function tick() {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      let alive = 0;
+      for (const p of parts) {
+        if (p.life <= 0) continue;
+        alive++;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.13; p.vx *= 0.985; p.rot += p.vr; p.life -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        if (style === 'petal') {
+          ctx.beginPath(); ctx.ellipse(0, 0, p.r * 1.4, p.r * 0.72, 0, 0, Math.PI * 2); ctx.fill();
+        } else if (style === 'star') {
+          ctx.beginPath();
+          for (let s = 0; s < 4; s++) {
+            const a = s * Math.PI / 2;
+            ctx.lineTo(Math.cos(a) * p.r * 1.5, Math.sin(a) * p.r * 1.5);
+            ctx.lineTo(Math.cos(a + Math.PI / 4) * p.r * 0.45, Math.sin(a + Math.PI / 4) * p.r * 0.45);
+          }
+          ctx.closePath(); ctx.fill();
+        } else if (style === 'bubble') {
+          ctx.strokeStyle = p.color; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.arc(0, 0, p.r * 1.15, 0, Math.PI * 2); ctx.stroke();
+        } else {
+          ctx.fillRect(-p.r, -p.r * 0.55, p.r * 2, p.r * 1.1);
+        }
+        ctx.restore();
+      }
+      if (alive > 0) raf = requestAnimationFrame(tick);
+      else cv.remove();
+    }
+    raf = requestAnimationFrame(tick);
+    setTimeout(() => { cancelAnimationFrame(raf); cv.remove(); }, 2200);
+  } catch {}
+}
+
+/* === Subtle 3D Foil Tilt on Result Hero Card === */
+function bindCardTilt(el) {
+  if (!el || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  el.classList.add('foil-tilt');
+  const onMove = e => {
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - py) * 5.5, ry = (px - 0.5) * 6.5;
+    el.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+    el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+  };
+  const onLeave = () => {
+    el.style.transform = '';
+    el.style.setProperty('--mx', '50%');
+    el.style.setProperty('--my', '20%');
+  };
+  el.addEventListener('pointermove', onMove);
+  el.addEventListener('pointerleave', onLeave);
+}
+
+/* === Dynamic Multi-Axis SVG Radar Chart (4 or 6 Axes) === */
+function buildRadarSVG(labels, ratios, opts = {}) {
+  const n = labels.length, cx = 140, cy = 122, R = 74;
+  const stroke = opts.stroke || 'var(--accent)';
+  const fill = opts.fill || 'var(--accent)';
+  const grid = opts.grid || 'rgba(128,128,128,0.22)';
+  const labelColor = opts.labelColor || 'currentColor';
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  let rings = '';
+  [0.34, 0.67, 1].forEach(f => {
+    const pts = Array.from({ length: n }, (_, i) => pt(i, R * f).map(x => x.toFixed(1)).join(',')).join(' ');
+    rings += `<polygon points="${pts}" fill="none" stroke="${grid}" stroke-width="1"/>`;
+  });
+  let spokes = '';
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${grid}" stroke-width="1"/>`;
+  }
+  const clamped = ratios.map(r => Math.max(0.18, Math.min(1, r)));
+  const polyPts = clamped.map((r, i) => pt(i, R * r).map(x => x.toFixed(1)).join(',')).join(' ');
+  const dots = clamped.map((r, i) => {
+    const [x, y] = pt(i, R * r);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.2" fill="${stroke}" stroke="${opts.dotRing || '#fff'}" stroke-width="1.8"/>`;
+  }).join('');
+  const texts = labels.map((lb, i) => {
+    const [x, y] = pt(i, R + 22);
+    const anchor = Math.abs(x - cx) < 10 ? 'middle' : x < cx ? 'end' : 'start';
+    const dy = y < cy - 30 ? -2 : y > cy + 30 ? 8 : 4;
+    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="700" fill="${labelColor}">${esc(lb)}</text>`;
+  }).join('');
+  return `<svg class="radar-svg" viewBox="0 0 280 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多维人格雷达图">
+    ${rings}${spokes}
+    <polygon class="radar-poly" points="${polyPts}" fill="${fill}" fill-opacity="0.24" stroke="${stroke}" stroke-width="2.2" stroke-linejoin="round"/>
+    ${dots}${texts}
+  </svg>`;
+}
+
+/* === Canvas Mini Radar Drawing Helper (for 3:4 Posters) === */
+function drawCanvasRadar(ctx, cx, cy, R, labels, ratios, stroke, fill, grid, textCol) {
+  const n = labels.length;
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + (Math.PI * 2 * i) / n;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  ctx.save();
+  [0.35, 0.68, 1].forEach(f => {
+    ctx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const [x, y] = pt(i, R * f);
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.closePath(); ctx.strokeStyle = grid; ctx.lineWidth = 1.4; ctx.stroke();
+  });
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pt(i, R);
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.strokeStyle = grid; ctx.lineWidth = 1.2; ctx.stroke();
+  }
+  ctx.beginPath();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = fill; ctx.fill();
+  ctx.strokeStyle = stroke; ctx.lineWidth = 3; ctx.stroke();
+  ratios.forEach((r, i) => {
+    const [x, y] = pt(i, R * Math.max(0.2, Math.min(1, r)));
+    ctx.beginPath(); ctx.arc(x, y, 5.5, 0, Math.PI * 2); ctx.fillStyle = stroke; ctx.fill();
+  });
+  ctx.fillStyle = textCol; ctx.font = '700 18px "PingFang SC","Microsoft YaHei",sans-serif';
+  labels.forEach((lb, i) => {
+    const [x, y] = pt(i, R + 24);
+    ctx.textAlign = Math.abs(x - cx) < 12 ? 'center' : x < cx ? 'right' : 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(lb, x, y);
+  });
+  ctx.restore();
+}
+
+/* === Isolated Local Collection Dex Helpers === */
+function getUnlocked() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORAGE + ':dex') || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch { return []; }
+}
+function recordUnlock(name) {
+  try {
+    const list = getUnlocked();
+    if (!list.includes(name)) { list.push(name); localStorage.setItem(STORAGE + ':dex', JSON.stringify(list)); }
+    return list;
+  } catch { return [name]; }
+}
+
+/* === Vector Pair Compatibility Calculator === */
+function calcVectorChem(pA, pB, axes, labelsCfg = {}) {
+  if (pA.name === pB.name) {
+    return {
+      score: 94,
+      verdict: labelsCfg.same || '✦ 镜像双生 · 灵魂复刻',
+      desc: `两个「${pA.name}」相遇就像照镜子——不用多余解释就能一秒接住彼此的梗与节奏，连沉默的频率都惊人一致！`
+    };
+  }
+  if (pA.match && pA.match[0] === pB.name) {
+    return { score: 99, verdict: labelsCfg.match || '♥ 天选官配 · 满分同频', desc: pA.match[1] };
+  }
+  if (pB.match && pB.match[0] === pA.name) {
+    return { score: 97, verdict: labelsCfg.match || '♥ 双向奔赴 · 绝佳搭子', desc: pB.match[1] };
+  }
+  if (pA.clash && pA.clash[0] === pB.name) {
+    return { score: 54, verdict: labelsCfg.clash || '⚡ 宿命反差 · 欢喜冤家', desc: pA.clash[1] };
+  }
+  if (pB.clash && pB.clash[0] === pA.name) {
+    return { score: 56, verdict: labelsCfg.clash || '⚡ 高能反差 · 奇妙碰撞', desc: pB.clash[1] };
+  }
+  const vecA = pA.vector, vecB = pB.vector;
+  const diffs = vecA.map((x, i) => ({ i, d: Math.abs(x - vecB[i]) }));
+  const avgDiff = diffs.reduce((s, x) => s + x.d, 0) / diffs.length;
+  const sim = Math.max(0, 1 - avgDiff / 3);
+  const hashSeed = [...(pA.name + pB.name)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 997, 7);
+  const score = Math.round(Math.max(62, Math.min(95, 65 + sim * 27 + (hashSeed % 5))));
+  const closest = diffs.slice().sort((a, b) => a.d - b.d)[0];
+  const farthest = diffs.slice().sort((a, b) => b.d - a.d)[0];
+  let verdict = '🌿 舒服同频 · 轻松相处';
+  if (score >= 88) verdict = '✦ 默契神搭 · 能量共振';
+  else if (score >= 78) verdict = '♥ 互补合拍 · 越处越甜';
+  else if (score < 70) verdict = '🔥 跨频火花 · 新鲜感拉满';
+  const desc = `你们在「${axes[closest.i][0]}」维度上天然同频，很容易快速聊到一块；而在「${axes[farthest.i][0]}」上的不同视角，正好能给彼此带来意想不到的新鲜灵感。`;
+  return { score, verdict, desc };
+}
+
+/* === Toast Notification === */
+let toastTimer = null;
+function showToast(msg) {
+  let el = document.getElementById('quizToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'quizToast';
+    el.className = 'quiz-toast';
+    el.setAttribute('role', 'status');
+    document.body.append(el);
+  }
+  el.textContent = msg;
+  el.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2100);
+}
+
 
 const ZIG_TOP = `<span class="zig-top" aria-hidden="true"><svg viewBox="0 0 600 10" preserveAspectRatio="none"><polygon fill="#fffef9" points="0,10 10,0 20,10 30,0 40,10 50,0 60,10 70,0 80,10 90,0 100,10 110,0 120,10 130,0 140,10 150,0 160,10 170,0 180,10 190,0 200,10 210,0 220,10 230,0 240,10 250,0 260,10 270,0 280,10 290,0 300,10 310,0 320,10 330,0 340,10 350,0 360,10 370,0 380,10 390,0 400,10 410,0 420,10 430,0 440,10 450,0 460,10 470,0 480,10 490,0 500,10 510,0 520,10 530,0 540,10 550,0 560,10 570,0 580,10 590,0 600,10"/></svg></span>`;
 const ZIG_BOT = `<span class="zig-bot" aria-hidden="true"><svg viewBox="0 0 600 10" preserveAspectRatio="none"><polygon fill="#fffef9" points="0,0 10,10 20,0 30,10 40,0 50,10 60,0 70,10 80,0 90,10 100,0 110,10 120,0 130,10 140,0 150,10 160,0 170,10 180,0 190,10 200,0 210,10 220,0 230,10 240,0 250,10 260,0 270,10 280,0 290,10 300,0 310,10 320,0 330,10 340,0 350,10 360,0 370,10 380,0 390,10 400,0 410,10 420,0 430,10 440,0 450,10 460,0 470,10 480,0 490,10 500,0 510,10 520,0 530,10 540,0 550,10 560,0 570,10 580,0 590,10 600,0"/></svg></span>`;
-
 const HERO_STAMP = `<svg class="qc-stamp-svg" viewBox="0 0 100 100" aria-hidden="true">
   <circle cx="50" cy="50" r="44" fill="none" stroke="#c9362b" stroke-width="3.2"/>
   <circle cx="50" cy="50" r="37" fill="none" stroke="#c9362b" stroke-width="1.2" stroke-dasharray="3 2"/>
@@ -255,21 +713,50 @@ function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
 function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
 function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
 
+function peekProfile(name){
+  const p=byName[name]; if(!p) return;
+  SFX.click(2);
+  document.getElementById('peekTitle').textContent=`${p.code}`;
+  document.getElementById('peekBody').innerHTML=`
+    <h2 style="margin:6px 0 8px">${esc(p.name)}</h2>
+    <div class="fit-strip"><span class="bat-chip">⚡ ${esc(p.battery)}</span><span class="pill red">${esc(p.stamp)}</span></div>
+    <div class="quote-box">「${esc(p.quote)}」</div>
+    <div class="bug-card"><b>⚠ 无害小 Bug 线索</b><p>${esc(p.bug)}</p></div>
+    <button type="button" class="primary red" style="margin-top:14px" onclick="peekDialog.close();start()">启动质检，测出我的出厂型号 →</button>`;
+  if(!peekDialog.open) peekDialog.showModal();
+}
+
+function openDex(){
+  SFX.click(1);
+  const unlocked=getUnlocked();
+  document.getElementById('dexSub').textContent=`已登记 ${unlocked.length} / ${D.profiles.length} 种出厂型号 · 本地离线保存`;
+  document.getElementById('dexGrid').innerHTML=D.profiles.map(p=>{
+    const ok=unlocked.includes(p.name);
+    return ok
+      ? `<div class="dex-card unlocked"><span class="teaser-code">${esc(p.code)} · 已检出</span><b>${esc(p.name)}</b><small>⚡ ${esc(p.battery)} · ${esc(p.stamp)}</small></div>`
+      : `<div class="dex-card locked"><span class="teaser-code">SL-${p.no} · 未检出</span><b>[ 未知出厂型号 ]</b><small>防伪标签：${esc(p.stamp)}</small></div>`;
+  }).join('');
+  if(!dexDialog.open) dexDialog.showModal();
+}
+
 function home(){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
-  screen='home';
+  screen='home'; lastChapter=-1;
   const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const unlocked=getUnlocked();
   const teaserCards=D.teasers.map(name=>byName[name]).filter(Boolean);
   app.innerHTML=wrapTicket(`
     <div class="qc-banner">
+      <div class="qc-laser" aria-hidden="true"></div>
       <div class="qc-banner-top">
         <span>FORM NO. QC-2026-SOUL</span>
-        <span>STATUS: READY</span>
+        <span class="live-tag">● LIVE SCAN READY</span>
       </div>
       <div class="qc-banner-main">
         <div class="qc-banner-copy">
           <small>${esc(D.heroSub)}</small>
           <strong>${esc(D.heroTitle)}</strong>
+          <div class="qc-spec-mini"><span>CPU: 100%</span><span>BUGS: HARMLESS</span></div>
         </div>
         ${HERO_STAMP}
       </div>
@@ -280,7 +767,7 @@ function home(){
     <div class="pills">
       <span class="pill red">${N} 项负载测试</span>
       <span class="pill">16 种出厂型号</span>
-      <span class="pill soft">约 2 分钟 · 含 3:4 热敏纸海报</span>
+      <span class="pill soft">含硬件雷达 &amp; 3:4 热敏纸海报</span>
     </div>
     <div class="stack">
       ${count===N
@@ -290,9 +777,9 @@ function home(){
         : `<button class="primary red" onclick="start()">启动出厂质检　→</button>`}
     </div>
     <div class="teaser-wrap">
-      <div class="teaser-head"><span>SAMPLE MODELS / 热门出厂型号预览</span><small>共 16 种</small></div>
+      <div class="teaser-head"><span>SAMPLE MODELS · 点击查看样本</span><small>共 16 种${unlocked.length?' · 已检 '+unlocked.length:''}</small></div>
       <div class="teasers">
-        ${teaserCards.map(p=>`<div class="teaser"><span class="teaser-code">${esc(p.code.split('·')[0].trim())} · ${esc(p.stamp)}</span><b>${esc(p.name)}</b><small>${esc(p.specs[0])}</small></div>`).join('')}
+        ${teaserCards.map(p=>`<button type="button" class="teaser" onclick="peekProfile('${esc(p.name)}')"><span class="teaser-code">${esc(p.code.split('·')[0].trim())}</span><b>${esc(p.name)}</b><small>${esc(p.specs[0])}</small></button>`).join('')}
       </div>
     </div>
     <p class="notice">没有对错好坏，请按平时最真实的省电/耗电反应作答。${esc(D.disclaimer)}</p>
@@ -302,29 +789,31 @@ function home(){
 
 function start(){
   if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('开始新检测将清除上次进度，继续吗？')) return;
-  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+  SFX.start();
+  idx=0;answers=Array(N).fill(null);report=null;lastChapter=0;stash();question(true);
 }
-
 function resume(){
+  SFX.start();
   const saved=restore();if(!saved)return start();
   idx=saved.idx;answers=saved.answers;
-  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.every(v=>v!==null)){result(false);return;}
   if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  lastChapter=getChapter(idx).ci;
   question(true);
 }
-
-function toggleAuto(){autoNext=!autoNext;stash();question(false);}
-
+function toggleAuto(){SFX.click(0);autoNext=!autoNext;stash();question(false);}
 function getChapter(qIdx){
   const chs=D.chapters, per=Math.ceil(N/chs.length);
   const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
-  return chs[ci];
+  return {ci,...chs[ci]};
 }
 
 function question(move=false){
   if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
   screen='question';
   const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  if(lastChapter>=0 && ch.ci>lastChapter){SFX.chapter();showToast(`CHECKPOINT · ${ch.title}`);}
+  lastChapter=ch.ci;
   const pct=Math.round((count/N)*100);
   app.innerHTML=wrapTicket(`
     <div class="question-top">
@@ -333,6 +822,9 @@ function question(move=false){
     </div>
     <div class="progress" role="progressbar" aria-label="质检进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
       <i style="width:${Math.max(5,pct)}%"></i>
+    </div>
+    <div class="chapter-dots" aria-hidden="true">
+      ${D.chapters.map((_,k)=>`<span class="${k<ch.ci?'done':k===ch.ci?'now':''}"></span>`).join('')}
     </div>
     <div class="chapter-bar">
       <div><strong>${esc(ch.title)}</strong><span>${esc(ch.intro)}</span></div>
@@ -345,7 +837,8 @@ function question(move=false){
       <button type="button" class="secondary" onclick="back()" ${idx===0?'disabled':''}>← 上一项</button>
       <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'打印质检单 ✦':'下一项 →'}</button>
     </div>
-    <div style="text-align:center;margin-top:10px">
+    <p class="kbd-hint">快捷键：数字 1-4 / 字母 A-D 作答，← 返回上一项</p>
+    <div style="text-align:center;margin-top:8px">
       <button type="button" class="subtle" onclick="home()">暂存进度，返回检验台</button>
     </div>
   `);
@@ -354,6 +847,7 @@ function question(move=false){
 
 function choose(i){
   if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  SFX.click(i);
   answers[idx]=i;stash();
   const btns=app.querySelectorAll('.option');
   btns.forEach((b,k)=>{
@@ -377,11 +871,11 @@ function choose(i){
       if(idx<N-1){idx++;stash();question(true);}
       else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
       else calculateRitual();
-    }, 300);
+    }, 280);
   }
 }
 
-function back(){if(idx>0){idx--;stash();question(true);}}
+function back(){if(idx>0){SFX.back();idx--;stash();question(true);}}
 function next(){
   if(answers[idx]===null) return;
   if(idx<N-1){idx++;stash();question(true);}
@@ -396,12 +890,12 @@ function calculateRitual(){
     <div class="printer-slot" aria-hidden="true"></div>
     <div class="printer-paper" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <p class="calc-step" id="calcText">${esc(steps[0])}</p>
-    <p class="calc-sub">正在打印 3:4 热敏质检单与保养水洗标</p>
+    <p class="calc-sub">正在打印硬件跑分雷达、保养水洗标与 3:4 热敏质检单</p>
   </div>`);
   scrollTop();
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},460);
-  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},920);
-  setTimeout(()=>result(),1360);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},440);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},880);
+  setTimeout(()=>result(true),1320);
 }
 
 function compute(input){
@@ -436,18 +930,41 @@ function compute(input){
 function maxClamp(x,lo,hi){return Math.max(lo,Math.min(hi,x));}
 function tendency(a,v){return v<1.18?a[1]:v>1.82?a[2]:'自适应平衡'}
 
-function result(){
+function runChemCheck(otherName){
+  const out=document.getElementById('chemOut');
+  if(!out||!report) return;
+  if(!otherName){out.innerHTML='';return;}
+  const other=byName[otherName]; if(!other) return;
+  SFX.click(2);
+  const res=calcVectorChem(report.p,other,D.axes,{
+    same:'🔌 同型直连 · 零延迟无缝同步',
+    match:'♥ 官方认证天选外设 · 永不蓝屏',
+    clash:'⚠ 电压冲突警告 · 建议错峰开机'
+  });
+  out.innerHTML=`<div class="chem-out">
+    <div class="chem-score-row"><span class="chem-verdict">${esc(res.verdict)}</span><span class="chem-pct">${res.score}%</span></div>
+    <div class="chem-bar"><i style="width:${res.score}%"></i></div>
+    <p style="font-size:13px;line-height:1.72">${esc(res.desc)}</p>
+    <button type="button" class="chem-copy-btn" onclick="copyChem('${esc(other.name)}',${res.score},'${esc(res.verdict)}')">复制双机互联质检报告 ↗</button>
+  </div>`;
+}
+async function copyChem(otherName,score,verdict){
+  if(!report) return;
+  const txt=`【灵魂出厂质检单 · 双机互联测试】🧾\n【${report.p.name}】×【${otherName}】\n系统兼容率：${score}%（${verdict}）\n快来测测咱俩接一起会不会蓝屏👇 ${D.shareTags}`;
+  try{await navigator.clipboard.writeText(txt);showToast('✓ 双机互联报告已复制！');}
+  catch{document.getElementById('copyTextarea').value=txt;copyDialog.showModal();}
+}
+
+function result(celebrate=false){
   if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
   report=compute(answers);screen='result';stash();
   const {p,v,ranked,sn}=report;
+  const unlocked=recordUnlock(p.name);
   const today=new Date().toISOString().slice(0,10);
 
   app.innerHTML=wrapTicket(`<div style="--model-accent:${p.accent}">
-    <div class="receipt-head">
-      <div class="receipt-meta">
-        <span>SN: ${esc(sn)}</span>
-        <span>DATE: ${today}</span>
-      </div>
+    <div class="receipt-head" id="heroCard">
+      <div class="receipt-meta"><span>SN: ${esc(sn)}</span><span>DATE: ${today}</span></div>
       <span class="receipt-stamp" aria-hidden="true">QC PASS · ${esc(p.stamp)}</span>
       <div class="model-code">${esc(p.code)}</div>
       <h1 class="model-name">${esc(p.name)}</h1>
@@ -459,10 +976,7 @@ function result(){
         ${p.tags.map(t=>`<span class="pill soft"># ${esc(t)}</span>`).join('')}
       </div>
       <div class="spec-table">
-        ${p.specs.map(line=>{
-          const parts=line.split('：');
-          return `<div class="spec-row"><span>${esc(parts[0])}</span><strong>${esc(parts[1]||'OK')}</strong></div>`;
-        }).join('')}
+        ${p.specs.map(line=>{const parts=line.split('：');return `<div class="spec-row"><span>${esc(parts[0])}</span><strong>${esc(parts[1]||'OK')}</strong></div>`;}).join('')}
       </div>
       <div class="quote-box">「${esc(p.quote)}」</div>
     </div>
@@ -479,10 +993,7 @@ function result(){
       <p class="kicker">01 / HARDWARE &amp; HARMLESS BUG</p>
       <h3>核心高配功能 &amp; 已知无害小 Bug</h3>
       <p>${esc(p.features)}</p>
-      <div class="bug-card">
-        <b>⚠ KNOWN HARMLESS BUG · 已知无害小 Bug</b>
-        <p>${esc(p.bug)}</p>
-      </div>
+      <div class="bug-card"><b>⚠ KNOWN HARMLESS BUG · 已知无害小 Bug</b><p>${esc(p.bug)}</p></div>
     </div>
 
     <div class="block">
@@ -490,22 +1001,10 @@ function result(){
       <h3>官方维护与充电指南</h3>
       <div class="care-label">
         <div class="care-icons" aria-hidden="true">
-          <div class="care-icon">
-            <svg viewBox="0 0 32 32"><rect x="6" y="10" width="18" height="12" rx="2"/><path d="M24 14h2v4h-2"/><path d="M10 14v4M14 14v4"/></svg>
-            <span>定期慢充</span>
-          </div>
-          <div class="care-icon">
-            <svg viewBox="0 0 32 32"><polygon points="16,5 28,26 4,26"/><line x1="8" y1="8" x2="24" y2="24"/><line x1="24" y1="8" x2="8" y2="24"/></svg>
-            <span>禁止高压</span>
-          </div>
-          <div class="care-icon">
-            <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M12 16c1.5-2 6.5-2 8 0"/><circle cx="13" cy="13" r=".8" fill="#1d1d1b"/><circle cx="19" cy="13" r=".8" fill="#1d1d1b"/></svg>
-            <span>顺毛安抚</span>
-          </div>
-          <div class="care-icon">
-            <svg viewBox="0 0 32 32"><path d="M5 12l2.5 13h17L27 12"/><path d="M7 16c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg>
-            <span>温柔对待</span>
-          </div>
+          <div class="care-icon"><svg viewBox="0 0 32 32"><rect x="6" y="10" width="18" height="12" rx="2"/><path d="M24 14h2v4h-2"/><path d="M10 14v4M14 14v4"/></svg><span>定期慢充</span></div>
+          <div class="care-icon"><svg viewBox="0 0 32 32"><polygon points="16,5 28,26 4,26"/><line x1="8" y1="8" x2="24" y2="24"/><line x1="24" y1="8" x2="8" y2="24"/></svg><span>禁止高压</span></div>
+          <div class="care-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M12 16c1.5-2 6.5-2 8 0"/><circle cx="13" cy="13" r=".8" fill="#1d1d1b"/><circle cx="19" cy="13" r=".8" fill="#1d1d1b"/></svg><span>顺毛安抚</span></div>
+          <div class="care-icon"><svg viewBox="0 0 32 32"><path d="M5 12l2.5 13h17L27 12"/><path d="M7 16c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg><span>温柔对待</span></div>
         </div>
         <p>${esc(p.care)}</p>
         <div class="warn-strip">⚡ 禁用警告：${esc(p.warning)}</div>
@@ -513,8 +1012,9 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">03 / DIAGNOSTIC METERS</p>
-      <h3>四维出厂硬件跑分</h3>
+      <p class="kicker">03 / DIAGNOSTIC RADAR &amp; METERS</p>
+      <h3>四维出厂硬件跑分雷达</h3>
+      <div class="radar-wrap">${buildRadarSVG(D.axes.map(a=>a[0]), v.map(x=>x/3), {stroke:p.accent,fill:p.accent,grid:'#cdc6b8',labelColor:'#1d1d1b',dotRing:'#fffef9'})}</div>
       ${D.axes.map((a,i)=>`<div class="axis">
         <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
         <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(5,Math.min(95,v[i]/3*100))}%"></i></div>
@@ -523,30 +1023,34 @@ function result(){
     </div>
 
     <div class="block">
-      <p class="kicker">04 / COMPATIBILITY REPORT</p>
-      <h3>天选兼容外设 &amp; 系统冲突提醒</h3>
+      <p class="kicker">04 / COMPATIBILITY DIAGNOSTICS</p>
+      <h3>天选兼容外设 &amp; 双机互联检测</h3>
       <p class="muted" style="margin-bottom:4px">发给朋友或对象测一测，看你们接入同一个局会不会蓝屏！</p>
       <div class="duo">
-        <div class="mini">
-          <b>♥ 天选兼容型号</b>
-          <div class="partner-name">${esc(p.match[0])}</div>
-          <p>${esc(p.match[1])}</p>
-        </div>
-        <div class="mini">
-          <b>⚡ 系统冲突警告</b>
-          <div class="partner-name">${esc(p.clash[0])}</div>
-          <p>${esc(p.clash[1])}</p>
-        </div>
+        <div class="mini"><b>♥ 天选兼容型号</b><div class="partner-name">${esc(p.match[0])}</div><p>${esc(p.match[1])}</p></div>
+        <div class="mini"><b>⚡ 系统冲突警告</b><div class="partner-name">${esc(p.clash[0])}</div><p>${esc(p.clash[1])}</p></div>
+      </div>
+      <div class="chem-box">
+        <div class="chem-head"><strong>🔌 双机互联兼容性速测</strong><span>选 TA 的出厂型号，测算是否蓝屏</span></div>
+        <select class="chem-select" aria-label="选择朋友的出厂型号测算兼容性" onchange="runChemCheck(this.value)">
+          <option value="">— 选择朋友测出的出厂型号 —</option>
+          ${D.profiles.map(x=>`<option value="${esc(x.name)}">${esc(x.code.split('·')[0].trim())} · ${esc(x.name)}</option>`).join('')}
+        </select>
+        <div id="chemOut"></div>
       </div>
     </div>
 
     <div class="block">
-      <p class="kicker">05 / NEARBY BATCHES</p>
+      <p class="kicker">05 / NEARBY BATCHES &amp; ARCHIVE</p>
       <h3>同批次相近型号参考</h3>
       ${ranked.slice(1,4).map(x=>`<div class="rank">
         <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.code)} · ${esc(x.p.stamp)}</small></div>
         <span class="pct">${x.fit}%</span>
       </div>`).join('')}
+      <div class="dex-bar">
+        <div class="dex-bar-info"><strong>出厂型号档案库</strong><span>已检出 ${unlocked.length} / ${D.profiles.length} 种人类型号</span></div>
+        <button type="button" class="dex-open-btn" onclick="openDex()">查看型号库</button>
+      </div>
       <p class="notice">${esc(D.disclaimer)}</p>
     </div>
 
@@ -563,250 +1067,174 @@ function result(){
       <span>* ${esc(sn)} · CERTIFIED HUMAN *</span>
     </div>
   </div>`);
+  bindCardTilt(document.getElementById('heroCard'));
   scrollTop();focusTitle();
+  if(celebrate){SFX.reveal();celebrateBurst([p.accent,'#c9362b','#1d1d1b','#c77d1f'],'spark');}
 }
 
-function editAnswers(){idx=N-1;question(true);}
+function editAnswers(){SFX.back();idx=N-1;question(true);}
 function restart(){if(confirm('清除当前检测记录并重新质检？')){clearSaved();start();}}
 
 async function copyShare(){
   if(!report) return;
+  SFX.click(1);
   const {p,ranked,sn}=report;
   const hook=D.shareHook.replace('{name}',p.name);
   const text=`${hook}\n出厂编号：${sn} | 匹配度 ${ranked[0].fit}%\n电池规格：${p.battery}\n水洗标禁忌：${p.stamp}\n已知无害小Bug：${p.bug}\n\n♥ 我的天选兼容型号是【${p.match[0]}】，快来打印你的灵魂质检单，评论区认领同款👇\n${D.shareTags}`;
   const st=document.getElementById('copyStatus');
-  try{
-    await navigator.clipboard.writeText(text);
-    if(st) st.textContent='✓ 小红书分享文案已复制到剪贴板！';
-  }catch{
-    document.getElementById('copyTextarea').value=text;
-    copyDialog.showModal();
-  }
+  try{await navigator.clipboard.writeText(text);if(st) st.textContent='✓ 小红书分享文案已复制到剪贴板！';}
+  catch{document.getElementById('copyTextarea').value=text;copyDialog.showModal();}
 }
 
-function wrap(ctx,text,max){
-  const out=[];let line='';
-  for(const ch of text){
-    if(line&&ctx.measureText(line+ch).width>max){out.push(line);line=ch;}
-    else line+=ch;
-  }
-  if(line) out.push(line);
-  return out;
-}
-function rPath(ctx,x,y,w,h,r){
-  ctx.beginPath();
-  if(typeof ctx.roundRect==='function') ctx.roundRect(x,y,w,h,r);
-  else{r=Math.min(r,w/2,h/2);ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
-}
+function wrap(ctx,text,max){const out=[];let line='';for(const ch of text){if(line&&ctx.measureText(line+ch).width>max){out.push(line);line=ch;}else line+=ch;}if(line) out.push(line);return out;}
+function rPath(ctx,x,y,w,h,r){ctx.beginPath();if(typeof ctx.roundRect==='function') ctx.roundRect(x,y,w,h,r);else{r=Math.min(r,w/2,h/2);ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}}
 function fillR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.fill();}
 function strokeR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.stroke();}
-
 function drawZigzagReceipt(ctx, x, y, w, h, teeth){
-  const step = w / teeth;
-  const toothH = 14;
-  ctx.beginPath();
-  ctx.moveTo(x, y + toothH);
-  for(let i=0;i<teeth;i++){
-    ctx.lineTo(x + (i+0.5)*step, y);
-    ctx.lineTo(x + (i+1)*step, y + toothH);
-  }
+  const step = w / teeth, toothH = 14;
+  ctx.beginPath();ctx.moveTo(x, y + toothH);
+  for(let i=0;i<teeth;i++){ctx.lineTo(x + (i+0.5)*step, y);ctx.lineTo(x + (i+1)*step, y + toothH);}
   ctx.lineTo(x + w, y + h - toothH);
-  for(let i=teeth;i>0;i--){
-    ctx.lineTo(x + (i-0.5)*step, y + h);
-    ctx.lineTo(x + (i-1)*step, y + h - toothH);
-  }
+  for(let i=teeth;i>0;i--){ctx.lineTo(x + (i-0.5)*step, y + h);ctx.lineTo(x + (i-1)*step, y + h - toothH);}
   ctx.closePath();
 }
+function drawDashed(ctx, x1, x2, y, col='#c9c2b4'){ctx.save();ctx.strokeStyle=col;ctx.lineWidth=2;ctx.setLineDash([8,7]);ctx.beginPath();ctx.moveTo(x1,y);ctx.lineTo(x2,y);ctx.stroke();ctx.restore();}
 
-function drawDashed(ctx, x1, x2, y){
-  ctx.save();ctx.strokeStyle='#c9c2b4';ctx.lineWidth=2;ctx.setLineDash([8,7]);
-  ctx.beginPath();ctx.moveTo(x1,y);ctx.lineTo(x2,y);ctx.stroke();
-  ctx.restore();
-}
-
-function makePoster(){
+function makePoster(themeIdx = 0, sig = ''){
   const c=document.createElement('canvas');c.width=1080;c.height=1440;
   const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
   const {p,v,ranked,sn}=report;
   const sans='"PingFang SC","Microsoft YaHei",sans-serif', mono='"SF Mono","Menlo","Consolas",monospace';
   const today=new Date().toISOString().slice(0,10);
+  const bp = themeIdx === 1; // Blueprint technical mode!
+  const DESK = bp ? '#10243d' : '#e5dfd2';
+  const PAPER = bp ? '#163254' : '#fffef9';
+  const SOFT = bp ? '#1e4068' : '#f3efe6';
+  const INK = bp ? '#f2f7ff' : '#1d1d1b';
+  const MUTED = bp ? '#9ec0e6' : '#68645c';
+  const ACC = bp ? '#ff7d6b' : p.accent;
+  const LINE = bp ? 'rgba(158,192,230,0.35)' : '#d4cdc0';
 
-  // Tactile drafting desk backdrop with dot grid
-  ctx.fillStyle='#e5dfd2';ctx.fillRect(0,0,1080,1440);
-  ctx.fillStyle='rgba(29,29,27,0.08)';
+  ctx.fillStyle=DESK;ctx.fillRect(0,0,1080,1440);
+  ctx.fillStyle=bp?'rgba(255,255,255,0.08)':'rgba(29,29,27,0.08)';
   for(let gx=24;gx<1080;gx+=28){for(let gy=24;gy<1440;gy+=28){ctx.fillRect(gx,gy,2.2,2.2);}}
 
-  // Thermal Receipt Card with serrated zigzag top/bottom & subtle desk shadow
-  ctx.save();
-  ctx.shadowColor='rgba(29,29,27,0.16)';ctx.shadowBlur=38;ctx.shadowOffsetY=14;
-  ctx.fillStyle='#fffef9';
-  drawZigzagReceipt(ctx, 64, 42, 952, 1356, 34);
-  ctx.fill();
-  ctx.restore();
-  ctx.strokeStyle='#d4cdc0';ctx.lineWidth=1.5;
-  drawZigzagReceipt(ctx, 64, 42, 952, 1356, 34);ctx.stroke();
+  ctx.save();ctx.shadowColor='rgba(0,0,0,0.2)';ctx.shadowBlur=38;ctx.shadowOffsetY=14;
+  ctx.fillStyle=PAPER;drawZigzagReceipt(ctx, 64, 42, 952, 1356, 34);ctx.fill();ctx.restore();
+  ctx.strokeStyle=LINE;ctx.lineWidth=1.5;drawZigzagReceipt(ctx, 64, 42, 952, 1356, 34);ctx.stroke();
 
-  // Header metadata bar
-  ctx.fillStyle='#1d1d1b';ctx.font=`800 22px ${mono}`;
+  ctx.fillStyle=INK;ctx.font=`800 22px ${mono}`;
   ctx.fillText('■ SOUL FACTORY QC / 灵魂出厂质检单', 112, 108);
-  ctx.textAlign='right';ctx.fillStyle='#68645c';ctx.font=`700 20px ${mono}`;
-  ctx.fillText(`SN: ${sn}  |  ${today}`, 968, 108);
+  ctx.textAlign='right';ctx.fillStyle=MUTED;ctx.font=`700 20px ${mono}`;
+  ctx.fillText(sig ? `OWNER: ${sig} | ${today}` : `SN: ${sn}  |  ${today}`, 968, 108);
   ctx.textAlign='left';
+  ctx.fillStyle=INK;ctx.fillRect(112, 128, 856, 4);
 
-  ctx.fillStyle='#1d1d1b';ctx.fillRect(112, 128, 856, 4);
-
-  // Model Code & Name
-  ctx.fillStyle=p.accent;ctx.font=`800 23px ${mono}`;
+  ctx.fillStyle=ACC;ctx.font=`800 23px ${mono}`;
   ctx.fillText(`${p.code}   ·   MATCH ${ranked[0].fit}%`, 112, 174);
-
-  // Smart two-line display on '·' for big punchy poster typography
   const nameParts = p.name.includes('·') ? p.name.split('·') : [p.name];
-  ctx.fillStyle='#1d1d1b';
-  if(nameParts.length===2){
-    ctx.font=`900 54px ${sans}`;
-    ctx.fillText(nameParts[0]+' ·', 112, 240);
-    ctx.fillText(nameParts[1], 112, 304);
-  }else{
-    ctx.font=`900 56px ${sans}`;
-    ctx.fillText(p.name, 112, 268);
-  }
+  ctx.fillStyle=INK;
+  if(nameParts.length===2){ctx.font=`900 54px ${sans}`;ctx.fillText(nameParts[0]+' ·', 112, 240);ctx.fillText(nameParts[1], 112, 304);}
+  else{ctx.font=`900 56px ${sans}`;ctx.fillText(p.name, 112, 268);}
 
-  // Tilted QC PASS Circular Stamp on top right
   ctx.save();ctx.translate(855, 240);ctx.rotate(0.14);
-  ctx.strokeStyle=p.accent;ctx.lineWidth=4;ctx.beginPath();ctx.arc(0,0,76,0,Math.PI*2);ctx.stroke();
+  ctx.strokeStyle=ACC;ctx.lineWidth=4;ctx.beginPath();ctx.arc(0,0,76,0,Math.PI*2);ctx.stroke();
   ctx.lineWidth=1.5;ctx.setLineDash([5,4]);ctx.beginPath();ctx.arc(0,0,65,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
-  ctx.fillStyle='#fffef9';fillR(ctx,-84,-20,168,40,5);
-  ctx.strokeStyle=p.accent;ctx.lineWidth=3;strokeR(ctx,-84,-20,168,40,5);
-  ctx.fillStyle=p.accent;ctx.textAlign='center';
-  ctx.font=`900 20px ${sans}`;ctx.fillText(p.stamp, 0, 7);
-  ctx.font=`800 14px ${mono}`;ctx.fillText('QC PASS', 0, -34);
-  ctx.fillText('CERTIFIED', 0, 46);
+  ctx.fillStyle=PAPER;fillR(ctx,-84,-20,168,40,5);
+  ctx.strokeStyle=ACC;ctx.lineWidth=3;strokeR(ctx,-84,-20,168,40,5);
+  ctx.fillStyle=ACC;ctx.textAlign='center';ctx.font=`900 20px ${sans}`;ctx.fillText(p.stamp, 0, 7);
+  ctx.font=`800 14px ${mono}`;ctx.fillText('QC PASS', 0, -34);ctx.fillText('CERTIFIED', 0, 46);
   ctx.restore();ctx.textAlign='left';
 
-  // Battery & Hashtag pills
-  ctx.fillStyle='#1d1d1b';fillR(ctx, 112, 336, 360, 40, 6);
-  ctx.fillStyle='#fffef9';ctx.font=`700 20px ${mono}`;
-  ctx.fillText(`⚡ ${p.battery}`, 128, 363);
-
+  ctx.fillStyle=bp?'#ff7d6b':'#1d1d1b';fillR(ctx, 112, 336, 360, 40, 6);
+  ctx.fillStyle=bp?'#10243d':'#fffef9';ctx.font=`700 20px ${mono}`;ctx.fillText(`⚡ ${p.battery}`, 128, 363);
   let tx = 486;
   p.tags.slice(0,2).forEach(t=>{
     const lbl='# '+t;ctx.font=`700 19px ${sans}`;
     const w=ctx.measureText(lbl).width+28;
-    if(tx+w<970){
-      ctx.fillStyle='#f3efe6';fillR(ctx,tx,336,w,40,6);
-      ctx.strokeStyle='#d4cdc0';ctx.lineWidth=1.5;strokeR(ctx,tx,336,w,40,6);
-      ctx.fillStyle='#1d1d1b';ctx.fillText(lbl,tx+14,363);
-      tx+=w+10;
-    }
+    if(tx+w<970){ctx.fillStyle=SOFT;fillR(ctx,tx,336,w,40,6);ctx.strokeStyle=LINE;ctx.lineWidth=1.5;strokeR(ctx,tx,336,w,40,6);ctx.fillStyle=INK;ctx.fillText(lbl,tx+14,363);tx+=w+10;}
   });
 
-  // Quote Strip
-  ctx.fillStyle='#f3efe6';fillR(ctx, 112, 396, 856, 78, 8);
-  ctx.fillStyle=p.accent;fillR(ctx, 112, 396, 9, 78, 4);
-  ctx.fillStyle='#1d1d1b';ctx.font=`700 25px ${sans}`;
-  const qLine=wrap(ctx,`「${p.quote}」`,805)[0];
-  ctx.fillText(qLine, 140, 444);
+  ctx.fillStyle=SOFT;fillR(ctx, 112, 396, 856, 78, 8);
+  ctx.fillStyle=ACC;fillR(ctx, 112, 396, 9, 78, 4);
+  ctx.fillStyle=INK;ctx.font=`700 25px ${sans}`;
+  ctx.fillText(wrap(ctx,`「${p.quote}」`,805)[0], 140, 444);
+  drawDashed(ctx, 112, 968, 498, LINE);
 
-  drawDashed(ctx, 112, 968, 498);
-
-  // Spec Receipt Table (3 rows + 4 diagnostic meters side-by-side)
-  ctx.fillStyle='#68645c';ctx.font=`800 19px ${mono}`;
-  ctx.fillText('01 / DIAGNOSTIC SPECS · 硬件检测参数', 112, 534);
-
-  // Left: 3 spec key-values
+  ctx.fillStyle=MUTED;ctx.font=`800 19px ${mono}`;ctx.fillText('01 / DIAGNOSTIC SPECS · 硬件检测参数', 112, 534);
   p.specs.forEach((line, k)=>{
-    const pts=line.split('：');
-    const ry=578+k*46;
-    ctx.fillStyle='#68645c';ctx.font=`600 21px ${sans}`;ctx.fillText(pts[0], 112, ry);
-    ctx.textAlign='right';ctx.fillStyle='#1d1d1b';ctx.font=`800 21px ${mono}`;ctx.fillText(pts[1]||'', 500, ry);
-    ctx.textAlign='left';
+    const pts=line.split('：');const ry=578+k*46;
+    ctx.fillStyle=MUTED;ctx.font=`600 21px ${sans}`;ctx.fillText(pts[0], 112, ry);
+    ctx.textAlign='right';ctx.fillStyle=INK;ctx.font=`800 21px ${mono}`;ctx.fillText(pts[1]||'', 500, ry);ctx.textAlign='left';
   });
-
-  // Right: 4 compact axis meters
   D.axes.forEach((a, i)=>{
     const ay=564+i*38;
-    ctx.fillStyle='#1d1d1b';ctx.font=`700 18px ${sans}`;ctx.fillText(a[0], 546, ay);
-    ctx.fillStyle='#ebe6dc';fillR(ctx, 640, ay-13, 328, 12, 3);
+    ctx.fillStyle=INK;ctx.font=`700 18px ${sans}`;ctx.fillText(a[0], 546, ay);
+    ctx.fillStyle=SOFT;fillR(ctx, 640, ay-13, 328, 12, 3);
     const px=640+328*Math.max(0.06,Math.min(0.94,v[i]/3));
-    ctx.fillStyle=p.accent;fillR(ctx, px-7, ay-17, 14, 20, 3);
-    ctx.strokeStyle='#1d1d1b';ctx.lineWidth=1.5;strokeR(ctx, px-7, ay-17, 14, 20, 3);
+    ctx.fillStyle=ACC;fillR(ctx, px-7, ay-17, 14, 20, 3);
+    ctx.strokeStyle=INK;ctx.lineWidth=1.5;strokeR(ctx, px-7, ay-17, 14, 20, 3);
   });
+  drawDashed(ctx, 112, 968, 728, LINE);
 
-  drawDashed(ctx, 112, 968, 728);
-
-  // Known Harmless Bug Callout (Red Alert Style)
-  ctx.fillStyle='#fdf4f2';fillR(ctx, 112, 750, 856, 174, 12);
-  ctx.strokeStyle='#e4aba4';ctx.lineWidth=2;strokeR(ctx, 112, 750, 856, 174, 12);
-  ctx.fillStyle='#b82e24';ctx.font=`800 21px ${mono}`;
-  ctx.fillText('⚠ KNOWN HARMLESS BUG · 已知无害小 BUG', 140, 790);
-  ctx.fillStyle='#2e1c1a';ctx.font=`500 24px ${sans}`;
+  ctx.fillStyle=bp?'rgba(255,125,107,0.14)':'#fdf4f2';fillR(ctx, 112, 750, 856, 174, 12);
+  ctx.strokeStyle=bp?'rgba(255,125,107,0.5)':'#e4aba4';ctx.lineWidth=2;strokeR(ctx, 112, 750, 856, 174, 12);
+  ctx.fillStyle=bp?'#ff988a':'#b82e24';ctx.font=`800 21px ${mono}`;ctx.fillText('⚠ KNOWN HARMLESS BUG · 已知无害小 BUG', 140, 790);
+  ctx.fillStyle=bp?'#f7e6e4':'#2e1c1a';ctx.font=`500 24px ${sans}`;
   wrap(ctx, p.bug, 800).slice(0,3).forEach((l,i)=>ctx.fillText(l, 140, 832+i*36));
 
-  // Care Label & Warning Box
-  ctx.fillStyle='#fffef9';fillR(ctx, 112, 944, 856, 166, 12);
-  ctx.strokeStyle='#1d1d1b';ctx.lineWidth=2.5;strokeR(ctx, 112, 944, 856, 166, 12);
-  ctx.fillStyle='#1d1d1b';ctx.font=`800 20px ${mono}`;
-  ctx.fillText('CARE LABEL · 保养与禁用警告', 140, 982);
-  ctx.fillStyle='#2e2d29';ctx.font=`500 22px ${sans}`;
+  ctx.fillStyle=PAPER;fillR(ctx, 112, 944, 856, 166, 12);
+  ctx.strokeStyle=INK;ctx.lineWidth=2.5;strokeR(ctx, 112, 944, 856, 166, 12);
+  ctx.fillStyle=INK;ctx.font=`800 20px ${mono}`;ctx.fillText('CARE LABEL · 保养与禁用警告', 140, 982);
+  ctx.fillStyle=bp?'#d9e8fa':'#2e2d29';ctx.font=`500 22px ${sans}`;
   wrap(ctx, p.care, 800).slice(0,2).forEach((l,i)=>ctx.fillText(l, 140, 1020+i*32));
-  ctx.fillStyle='#fdf3d8';fillR(ctx, 138, 1062, 804, 34, 5);
-  ctx.fillStyle='#784b08';ctx.font=`700 20px ${sans}`;
+  ctx.fillStyle=bp?'rgba(240,196,108,0.2)':'#fdf3d8';fillR(ctx, 138, 1062, 804, 34, 5);
+  ctx.fillStyle=bp?'#ffd98a':'#784b08';ctx.font=`700 20px ${sans}`;
   ctx.fillText('⚡ '+wrap(ctx, p.warning, 770)[0], 150, 1086);
 
-  // Compatibility Duo Row
-  ctx.fillStyle='#f3efe6';fillR(ctx, 112, 1130, 418, 124, 10);
-  ctx.fillStyle=p.accent;ctx.font=`800 18px ${mono}`;ctx.fillText('♥ 天选兼容外设', 134, 1164);
-  ctx.fillStyle='#1d1d1b';ctx.font=`900 24px ${sans}`;ctx.fillText(p.match[0], 134, 1200);
-  ctx.fillStyle='#5c5851';ctx.font=`400 18px ${sans}`;ctx.fillText(wrap(ctx, p.match[1], 374)[0], 134, 1234);
+  ctx.fillStyle=SOFT;fillR(ctx, 112, 1130, 418, 124, 10);
+  ctx.fillStyle=ACC;ctx.font=`800 18px ${mono}`;ctx.fillText('♥ 天选兼容外设', 134, 1164);
+  ctx.fillStyle=INK;ctx.font=`900 24px ${sans}`;ctx.fillText(p.match[0], 134, 1200);
+  ctx.fillStyle=MUTED;ctx.font=`400 18px ${sans}`;ctx.fillText(wrap(ctx, p.match[1], 374)[0], 134, 1234);
 
-  ctx.fillStyle='#f3efe6';fillR(ctx, 550, 1130, 418, 124, 10);
-  ctx.fillStyle='#68645c';ctx.font=`800 18px ${mono}`;ctx.fillText('⚡ 系统冲突型号', 572, 1164);
-  ctx.fillStyle='#1d1d1b';ctx.font=`900 24px ${sans}`;ctx.fillText(p.clash[0], 572, 1200);
-  ctx.fillStyle='#5c5851';ctx.font=`400 18px ${sans}`;ctx.fillText(wrap(ctx, p.clash[1], 374)[0], 572, 1234);
+  ctx.fillStyle=SOFT;fillR(ctx, 550, 1130, 418, 124, 10);
+  ctx.fillStyle=MUTED;ctx.font=`800 18px ${mono}`;ctx.fillText('⚡ 系统冲突型号', 572, 1164);
+  ctx.fillStyle=INK;ctx.font=`900 24px ${sans}`;ctx.fillText(p.clash[0], 572, 1200);
+  ctx.fillStyle=MUTED;ctx.font=`400 18px ${sans}`;ctx.fillText(wrap(ctx, p.clash[1], 374)[0], 572, 1234);
 
-  // Realistic Thermal Barcode at Bottom
   let h=2166136261;
   for(const ch of (sn+p.name)){ h^=ch.charCodeAt(0); h=Math.imul(h,16777619); }
-  let bx=310;
-  ctx.fillStyle='#1d1d1b';
+  let bx=310; ctx.fillStyle=INK;
   for(let i=0;i<68&&bx<770;i++){
     h=Math.imul(h^(h>>>15),2246822507);
-    const bw=[2.5,4,6.5,2.5,5][Math.abs(h)%5];
-    const bg=[2.5,3.5,5.5][Math.abs(h>>4)%3];
-    ctx.fillRect(bx, 1278, bw, 56);
-    bx+=bw+bg;
+    const bw=[2.5,4,6.5,2.5,5][Math.abs(h)%5], bg=[2.5,3.5,5.5][Math.abs(h>>4)%3];
+    ctx.fillRect(bx, 1278, bw, 56); bx+=bw+bg;
   }
-  ctx.textAlign='center';ctx.fillStyle='#68645c';ctx.font=`700 18px ${mono}`;
+  ctx.textAlign='center';ctx.fillStyle=MUTED;ctx.font=`700 18px ${mono}`;
   ctx.fillText(`* ${sn} · 你的灵魂「出厂质检单」 · 仅供娱乐 *`, 540, 1362);
   ctx.textAlign='left';
   return c;
 }
 
-function showPoster(){
+function renderPosterCanvas(){
   if(!report) return;
-  const status=document.getElementById('posterStatus'),
-        area=document.getElementById('posterArea'),
-        download=document.getElementById('downloadPoster');
+  const status=document.getElementById('posterStatus'),area=document.getElementById('posterArea'),download=document.getElementById('downloadPoster'),sig=(document.getElementById('sigInput')?.value||'').trim().slice(0,12);
   status.textContent='';area.innerHTML='';download.disabled=true;
   try{
     if(posterURL) URL.revokeObjectURL(posterURL);
     posterURL=null;
-    const canvas=makePoster();
-    const img=document.createElement('img');
-    img.className='poster';img.alt='可保存的3:4热敏纸质检海报';
-    img.src=canvas.toDataURL('image/png');
+    const canvas=makePoster(posterTheme,sig);
+    const img=document.createElement('img');img.className='poster';img.alt='可保存的3:4热敏纸质检海报';img.src=canvas.toDataURL('image/png');
     area.append(img);
-    canvas.toBlob(blob=>{
-      posterURL=blob?URL.createObjectURL(blob):img.src;
-      download.disabled=false;
-    },'image/png');
-    if(!posterDialog.open) posterDialog.showModal();
-  }catch(e){
-    status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
-    if(!posterDialog.open) posterDialog.showModal();
-  }
+    canvas.toBlob(blob=>{posterURL=blob?URL.createObjectURL(blob):img.src;download.disabled=false;},'image/png');
+  }catch(e){status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';}
 }
+function showPoster(){if(!report) return;SFX.click(3);renderPosterCanvas();if(!posterDialog.open) posterDialog.showModal();}
 
+document.querySelectorAll('[data-ptheme]').forEach(btn=>{
+  btn.onclick=()=>{SFX.click(1);posterTheme=Number(btn.dataset.ptheme)||0;document.querySelectorAll('[data-ptheme]').forEach(x=>x.classList.toggle('active',x===btn));renderPosterCanvas();};
+});
+document.getElementById('sigApply').onclick=()=>{SFX.click(2);renderPosterCanvas();document.getElementById('posterStatus').textContent='✓ 受检人署名已打印！';};
 document.getElementById('closePoster').onclick=()=>posterDialog.close();
 document.getElementById('downloadPoster').onclick=()=>{
   if(!posterURL||!report) return;
@@ -815,9 +1243,18 @@ document.getElementById('downloadPoster').onclick=()=>{
   document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方热敏小票保存。';
 };
 document.getElementById('closeCopy').onclick=()=>copyDialog.close();
-document.getElementById('selectCopyBtn').onclick=()=>{
-  const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
-};
+document.getElementById('closePeek').onclick=()=>peekDialog.close();
+document.getElementById('closeDex').onclick=()=>dexDialog.close();
+document.getElementById('selectCopyBtn').onclick=()=>{const ta=document.getElementById('copyTextarea');ta.focus();ta.select();};
+document.addEventListener('keydown',e=>{
+  if(screen!=='question'||posterDialog.open||copyDialog.open||peekDialog.open||dexDialog.open) return;
+  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  const map={'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'A':0,'B':1,'C':2,'D':3};
+  if(e.key in map){e.preventDefault();choose(map[e.key]);}
+  else if(e.key==='ArrowLeft'||e.key==='Backspace'){e.preventDefault();back();}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){if(answers[idx]!==null){e.preventDefault();next();}}
+});
+initSoundToggle();
 home();
 </script>
 </body>
