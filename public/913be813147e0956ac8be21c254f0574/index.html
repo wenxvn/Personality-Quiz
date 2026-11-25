@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#b85437">
+<meta name="description" content="如果不用上班，你天生适合开一家什么小店 · 24道理想生活选择，领取你的专属复古个体营业执照与3:4街角小店海报。">
+<title>如果不用上班，你天生适合开一家什么小店 · DREAM SHOP LAB</title>
+<style>
+:root{
+  --bg:#efe8da;--paper:#faf5eb;--card:#fffdf7;--ink:#2b211b;--muted:#756558;
+  --accent:#b85437;--sage:#2d5e4e;--mustard:#d49735;--line:#ded2be;--soft:#f2eadb;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --mono:"SF Mono","Menlo","Monaco","Consolas",monospace;
+  --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-tap-highlight-color:transparent;min-height:100vh;
+  background-image:linear-gradient(90deg,rgba(184,84,55,.04) 1px,transparent 1px),linear-gradient(rgba(184,84,55,.04) 1px,transparent 1px);background-size:28px 28px}
+main{width:min(100%,660px);padding:18px 16px max(34px,env(safe-area-inset-bottom));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:2px 0 16px;padding-bottom:12px;border-bottom:1.5px solid var(--line)}
+.brand{font-family:var(--mono);font-size:11px;letter-spacing:2.2px;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:7px}
+.brand::before{content:"☀";font-size:14px;color:var(--mustard)}
+.issue{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;letter-spacing:.06em}
+section.panel{border:1.5px solid var(--line);border-radius:24px;background:var(--card);padding:clamp(18px,4.2vw,30px);box-shadow:0 20px 52px rgba(43,33,27,.09);overflow:hidden;animation:enter .3s cubic-bezier(.22,1,.36,1)}
+@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1,h2,h3,p{margin:0}
+h1{font-family:var(--serif);font-size:clamp(28px,7.4vw,42px);font-weight:800;line-height:1.26;letter-spacing:.02em;color:var(--ink)}
+h2{font-family:var(--serif);font-size:clamp(20px,5vw,26px);line-height:1.48;font-weight:700}
+h3{font-family:var(--serif);font-size:17px;margin-bottom:9px;font-weight:700}
+.eyebrow{font-family:var(--mono);color:var(--accent);font-size:10.5px;letter-spacing:2px;font-weight:800;margin:16px 0 7px;text-transform:uppercase}
+.lead{font-size:14.5px;line-height:1.86;margin:12px 0 18px;color:#4a3c33}
+.muted{font-size:12px;color:var(--muted)}
+/* Street Corner Shop Hero */
+.hero{position:relative;isolation:isolate;height:clamp(198px,48vw,250px);background:#2d5e4e;border-radius:18px;overflow:hidden;color:#fff;border:1.5px solid rgba(43,33,27,.14)}
+.hero svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,18,14,.04) 0%,rgba(24,18,14,.58) 100%);z-index:-1}
+.hero-badge{position:absolute;top:14px;right:14px;padding:4px 11px;border-radius:99px;border:1px solid rgba(255,244,224,.55);background:rgba(43,33,27,.45);backdrop-filter:blur(6px);font-family:var(--mono);font-size:10px;letter-spacing:1.4px;font-weight:700;color:#fff7e8}
+.hero-copy{position:absolute;bottom:16px;left:18px;right:16px}
+.hero-copy small{font-family:var(--mono);font-size:10px;letter-spacing:2.4px;color:#f6dca8;display:block;margin-bottom:3px}
+.hero-copy strong{display:block;font-family:var(--serif);font-size:clamp(24px,6vw,34px);letter-spacing:2.5px;line-height:1.25}
+.pills{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+.pill{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:99px;background:var(--paper);color:var(--ink);font-weight:600}
+.pill.accent{border-color:rgba(184,84,55,.35);background:#faebe5;color:var(--accent);font-weight:700}
+.teaser-wrap{margin:22px 0 20px;padding-top:16px;border-top:1.5px dashed var(--line)}
+.teaser-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.teaser-head span{font-family:var(--mono);font-size:11px;letter-spacing:1.3px;color:var(--sage);font-weight:800}
+.teaser-head small{font-size:11px;color:var(--muted)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.teaser{padding:0 0 11px;border-radius:12px;background:var(--paper);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.teaser-awning{height:10px;width:100%}
+.teaser-in{padding:9px 10px 0;display:flex;flex-direction:column;gap:4px}
+.teaser b{font-family:var(--serif);font-size:13.5px;color:var(--ink);line-height:1.35}
+.teaser span{font-family:var(--mono);font-size:10px;color:var(--accent);font-weight:700}
+.teaser small{font-size:11px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:13px 16px;min-height:48px;touch-action:manipulation;transition:transform .12s,border-color .18s,background .18s,box-shadow .18s}
+button:active:not(:disabled){transform:scale(.988)}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+button:hover:not(:disabled){border-color:var(--accent)}
+button:disabled{opacity:.38;cursor:not-allowed}
+.primary{background:var(--accent);color:#fffdf8;border-color:var(--accent);font-weight:800;width:100%;text-align:center;box-shadow:0 8px 20px rgba(184,84,55,.24)}
+.primary:hover:not(:disabled){filter:brightness(1.06)}
+.secondary{width:100%;text-align:center;background:var(--paper);font-weight:700}
+.subtle{background:transparent;border:0;text-align:center;color:var(--muted);font-size:12px;padding:8px;min-height:36px}
+.subtle:hover{color:var(--accent)}
+.stack{display:grid;gap:10px}
+.actions-row{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
+.notice{font-size:12px;color:var(--muted);line-height:1.72;margin-top:14px}
+/* Quiz */
+.question-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--sage);font-weight:800}
+.auto-toggle{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--muted);font-family:var(--sans);font-size:11px;font-weight:700;min-height:28px}
+.auto-toggle.on{border-color:var(--sage);color:var(--sage);background:#e7f2ed}
+.progress{height:6px;background:var(--soft);overflow:hidden;border-radius:12px;margin:11px 0 18px}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--sage),var(--mustard));border-radius:12px;transition:width .28s cubic-bezier(.22,1,.36,1)}
+.chapter-bar{display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:12px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--mustard);margin-bottom:20px}
+.chapter-num{font-family:var(--serif);font-size:20px;font-weight:800;color:var(--accent);line-height:1}
+.chapter-bar strong{display:block;font-size:13px;color:var(--ink)}
+.chapter-bar span{display:block;font-size:11.5px;color:var(--muted);line-height:1.45}
+.options{display:grid;gap:10px;margin:20px 0 22px}
+.option{display:flex;text-align:left;align-items:center;gap:12px;min-height:60px;width:100%;padding:13px 14px;line-height:1.55;background:var(--card)}
+.option .letter{display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:9px;background:var(--paper);color:var(--accent);font-family:var(--mono);font-weight:800;font-size:12px;border:1px solid var(--line);transition:all .16s}
+.option.selected{border-color:var(--accent);background:#fcf0ea;box-shadow:0 4px 14px rgba(184,84,55,.14),inset 0 0 0 1px var(--accent)}
+.option.selected .letter{background:var(--accent);color:#fff;border-color:var(--accent)}
+.option .check{margin-left:auto;color:var(--accent);font-weight:800;font-size:15px}
+.nav{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
+/* Opening Sign Swinging Ritual */
+.calc-box{text-align:center;padding:34px 10px 26px}
+.sign-hang{width:130px;margin:0 auto 20px;transform-origin:top center;animation:swing 1.15s ease-in-out infinite alternate}
+.sign-rope{width:64px;height:22px;margin:0 auto;border-left:2px solid var(--ink);border-right:2px solid var(--ink);transform:perspective(40px) rotateX(35deg)}
+.sign-board{background:var(--sage);color:#fff8eb;border:2.5px solid var(--ink);border-radius:10px;padding:10px 8px;font-family:var(--mono);font-weight:900;font-size:18px;letter-spacing:3px;box-shadow:0 8px 18px rgba(43,33,27,.16)}
+.sign-board small{display:block;font-size:9px;letter-spacing:1.4px;color:#f6dca8;margin-top:2px;font-weight:700}
+@keyframes swing{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.calc-step{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:8px;min-height:1.6em}
+.calc-sub{font-size:12px;color:var(--muted)}
+/* Result Shopfront & Vintage Business License */
+.license-card{border:2px solid var(--ink);border-radius:18px;overflow:hidden;background:var(--paper);position:relative;box-shadow:0 10px 28px rgba(43,33,27,.09)}
+.shopfront-visual{width:100%;display:block;background:#261e19;border-bottom:2px solid var(--ink)}
+.shopfront-visual svg{width:100%;height:auto;display:block}
+.license-body{padding:18px 18px 16px;position:relative}
+.lic-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.fit-badge{padding:3px 10px;border-radius:99px;background:var(--shop-accent,var(--accent));color:#fff;font-weight:800;font-size:11px}
+.shop-name{font-family:var(--serif);font-size:clamp(25px,6.8vw,36px);font-weight:800;line-height:1.28;color:var(--ink);margin:10px 0 8px;padding-right:74px}
+.official-stamp{position:absolute;top:46px;right:14px;width:72px;height:72px;border-radius:50%;border:2.5px solid #c63b2d;color:#c63b2d;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:11px;font-weight:900;line-height:1.2;transform:rotate(11deg);background:rgba(250,245,235,.88);box-shadow:inset 0 0 0 2px rgba(198,59,45,.25)}
+.lic-grid{display:grid;gap:7px;margin:12px 0;padding:12px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+.lic-row{display:grid;grid-template-columns:76px 1fr;gap:8px;font-size:13px;line-height:1.55}
+.lic-row span{font-family:var(--mono);font-size:11px;font-weight:800;color:var(--shop-accent,var(--accent));padding-top:2px}
+.lic-row strong{color:var(--ink);font-weight:700}
+.quote-box{margin-top:12px;padding:11px 14px;border-left:4px solid var(--mustard);background:var(--card);border-radius:0 10px 10px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quote{font-family:var(--serif);font-size:16px;color:var(--shop-accent,var(--accent));line-height:1.65;font-weight:700}
+/* Content Blocks */
+.block{padding:21px 0;border-bottom:1.5px dashed var(--line)}
+.block:last-of-type{border:0;padding-bottom:10px}
+.block p{font-size:14.5px;line-height:1.88;color:#3d3028}
+.kicker{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--mustard);font-weight:800;margin-bottom:4px;text-transform:uppercase}
+.talent-card{margin-top:13px;padding:14px 15px;border-radius:13px;background:#eef6f1;border:1.5px solid #bdd9cb}
+.talent-card b{display:block;font-family:var(--mono);font-size:11.5px;color:#225944;margin-bottom:4px;letter-spacing:.05em}
+.talent-card p{font-size:13.5px;line-height:1.78;color:#203a30}
+.guest-card{margin-top:12px;padding:14px 15px;border-radius:13px;background:var(--paper);border:1.5px dashed var(--mustard)}
+.guest-card b{display:block;font-family:var(--mono);font-size:11.5px;color:#996515;margin-bottom:5px}
+.guest-card p{font-size:13.5px;line-height:1.78;color:#47382b}
+.axis{margin:15px 0}
+.axis-head,.axis-labels{display:flex;justify-content:space-between;gap:10px;font-size:12px}
+.axis-head strong{font-size:13px}
+.axis-head span{font-family:var(--mono);color:var(--shop-accent,var(--accent));font-weight:800}
+.axis-labels{color:var(--muted);font-size:11.5px}
+.track{position:relative;height:9px;border-radius:9px;background:var(--soft);margin:8px 0;border:1px solid var(--line)}
+.track::before{content:"";position:absolute;left:50%;width:1px;height:9px;background:#cbbda7}
+.track i{position:absolute;width:16px;height:16px;top:-4px;border-radius:50%;background:var(--shop-accent,var(--accent));border:2.5px solid var(--card);box-shadow:0 0 0 1.5px var(--shop-accent,var(--accent));transform:translateX(-50%)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.mini{padding:14px;border-radius:13px;background:var(--paper);border:1px solid var(--line)}
+.mini b{display:block;font-family:var(--mono);color:var(--shop-accent,var(--accent));font-size:11px;margin-bottom:5px}
+.mini .partner-name{font-family:var(--serif);font-size:15.5px;font-weight:800;color:var(--ink);margin-bottom:4px;line-height:1.38}
+.mini p{font-size:13px;line-height:1.68;color:#4a3c33}
+.rank{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.rank:last-child{border:0}
+.rank-left{display:flex;align-items:center;gap:10px}
+.swatch{width:13px;height:13px;border-radius:4px;border:1px solid rgba(0,0,0,.18);flex:none}
+.rank small{display:block;font-size:11px;color:var(--muted)}
+.rank .pct{font-family:var(--mono);font-size:11.5px;font-weight:800;color:var(--accent);background:#faebe5;padding:3px 9px;border-radius:99px}
+.status-bar{font-family:var(--mono);font-size:12px;color:var(--sage);text-align:center;min-height:1.4em;margin:4px 0 6px;font-weight:700}
+.footer{text-align:center;margin:20px 0 0;font-size:11px;color:var(--muted);line-height:1.8}
+.poster{width:100%;max-width:360px;margin:10px auto;border-radius:12px;display:block;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.16)}
+dialog{width:min(calc(100% - 26px),460px);max-height:90dvh;overflow:auto;border:2px solid var(--ink);border-radius:20px;padding:20px;background:var(--card);color:var(--ink);box-shadow:0 24px 60px rgba(43,33,27,.28)}
+dialog::backdrop{background:rgba(32,24,18,.64);backdrop-filter:blur(3px)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.dialog-head button{min-height:36px;padding:4px 13px;font-size:13px}
+.copy-area{width:100%;min-height:155px;border-radius:10px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);padding:12px;font:inherit;font-size:13px;line-height:1.7;margin:10px 0}
+@media(max-width:460px){
+  main{padding:14px 12px 28px}
+  .teasers,.duo,.actions-row{grid-template-columns:1fr}
+  .shop-name{padding-right:0}
+  .official-stamp{position:static;margin:8px 0 4px;width:auto;height:auto;border-radius:6px;padding:4px 10px;display:inline-block;transform:rotate(-2deg)}
+  .option{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="brand">DREAM SHOP LAB</span>
+    <span class="issue">VOL. 04 · 理想小店营业执照</span>
+  </header>
+  <div id="app"></div>
+  <footer class="footer">DREAM SHOP BUREAU · 原创趣味理想生活测试，非专业心理或创业建议<br>无需登录 · 所有答题记录仅保存在你的本地浏览器</footer>
+</main>
+
+<dialog id="posterDialog" aria-labelledby="posterTitle">
+  <div class="dialog-head">
+    <h3 id="posterTitle">你的 3:4 理想小店营业执照海报</h3>
+    <button id="closePoster" type="button">关闭</button>
+  </div>
+  <p class="muted">1080 × 1440 复古街角门头卡 · 手机直接长按图片保存，电脑点击下方下载。</p>
+  <div id="posterArea"></div>
+  <div class="stack" style="margin-top:12px">
+    <button class="primary" id="downloadPoster">下载高清 PNG 营业执照</button>
+  </div>
+  <p class="status-bar" id="posterStatus" role="status"></p>
+</dialog>
+
+<dialog id="copyDialog" aria-labelledby="copyTitle">
+  <div class="dialog-head">
+    <h3 id="copyTitle">复制小红书分享文案</h3>
+    <button id="closeCopy" type="button">关闭</button>
+  </div>
+  <p class="muted">长按或全选下方文案复制，搭配小店营业执照发笔记超容易引起打工人共鸣。</p>
+  <textarea id="copyTextarea" class="copy-area" readonly></textarea>
+  <button class="primary" id="selectCopyBtn" type="button">全选文案</button>
+</dialog>
+
+<script>
+const D = {"title":"如果不用上班，你天生适合开一家什么小店","subtitle":"DREAM SHOP BUREAU · 逃离工位开店局","brand":"DREAM SHOP LAB","vol":"VOL. 04 · 理想小店营业执照","heroTitle":"理想小店开店局","heroSub":"IF YOU NEVER HAD TO WORK 9 TO 5","intro":"假如明天彻底告别早八、周报与打卡机，给你一间街角临街小铺和免租启动金——你会几点拉开卷帘门？卖什么东西？吸引怎样的怪咖常客？走过 24 道理想生活选择，领取你的专属「个体营业执照」。","disclaimer":"本测试为原创娱乐与自我探索内容，店铺定位与天赋分析仅供灵感参考，不构成实际创业或投资建议。","kind":"理想小店","axes":[["作息灯光","早安晨光","深夜霓虹"],["客流氛围","安静慢享","烟火满座"],["核心天赋","手作治愈","选品操盘"],["经营理念","随缘开心","爆款搞钱"]],"chapters":[{"title":"第一幕 · 选址与开门","intro":"拿到了街角小店的钥匙，你打算几点醒来、把灯光调成什么温度？"},{"title":"第二幕 · 柜台与客流","intro":"门铃清脆响起，你更期待熟客静静坐着，还是整条街的热闹涌进来？"},{"title":"第三幕 · 镇店拿手活","intro":"是亲手打磨一件有温度的作品，还是慧眼挑出让全城排队的尖货？"},{"title":"第四幕 · 账本与野心","intro":"做一家“赚够房租就关门去玩”的快乐小店，还是悄悄把它做成城市地标？"}],"calcSteps":["正在为你勘测街角采光与理想营业时间…","匹配你的隐藏搞钱天赋与怪咖常客画像…","加盖「告别早八 · 核准开业」专属公章…"],"teasers":["只开下午的社区手作烘焙屋","深夜失眠黑胶微醺酒馆","帮人代写信件的旧物杂货铺"],"shareTags":"#如果不用上班你适合开什么小店 #不想上班测试 #理想小店 #打工人避难所","shareHook":"不想上班了！测了一下，原来我天生适合开一家【{name}】🏡","questions":[{"axis":0,"text":"彻底不用设早八闹钟之后，你最自然的「拉起卷帘门营业时间」是？","options":[{"text":"清晨 7:30，趁着阳光刚洒满街道，迎接第一波早起的人","score":0},{"text":"上午 10:00，不慌不忙吃过早饭、浇完花再悠闲开门","score":1},{"text":"下午 15:00，睡到自然醒，刚好赶上慵懒下午茶和日落","score":2},{"text":"晚上 19:30，等城市亮起霓虹，一直营业到凌晨两点","score":3}]},{"axis":1,"text":"你理想中小店里同时待着多少位客人，会让你觉得状态最舒服？","options":[{"text":"一两位最好，大家互不打扰，甚至能听见风吹过树叶的声音","score":0},{"text":"三五位熟客散坐角落，偶尔聊两句，空气里带着松弛留白","score":1},{"text":"七八成满座，有轻轻的交谈声和笑声，看着就很有生机","score":2},{"text":"越热闹越来劲，门外排着小队、店里热气腾腾才叫过瘾","score":3}]},{"axis":2,"text":"筹备开业的前一周，下面哪件事最让你两眼放光、甘愿通宵？","options":[{"text":"反复调试独家配方、亲手捏器物或一针一线打磨原创作品","score":0},{"text":"仔细挑选店里的植物、摆件和手写菜单，把氛围捏得温柔妥帖","score":1},{"text":"跑遍各地市集和买手展，搜罗全城独一份的宝藏好物回来上架","score":2},{"text":"研究动线布局、视觉包装、定价梯度和小红书开业引流策划","score":3}]},{"axis":3,"text":"如果今天下午三点刚赚够了本月的房租和水电，你心里冒出的第一个念头？","options":[{"text":"立刻挂上“今日已满足，去吹风了”的木牌，提前打烊享受人生","score":0},{"text":"放慢节奏，只接待顺路的熟客，剩下的时间窝在柜台看书喝茶","score":1},{"text":"开心记账，顺便想想怎么把今天的爆款体验做成明天的固定招牌","score":2},{"text":"乘胜追击！立刻复盘今天的转化数据，盘算什么时候开二店","score":3}]},{"axis":0,"text":"一天 24 小时里，你觉得自己大脑灵感最活跃、心情最舒展的黄金时段是？","options":[{"text":"清晨微凉的七八点，世界刚醒来、空气透亮干净","score":0},{"text":"阳光饱满的上午到午后，晒着太阳干什么都充满干劲","score":1},{"text":"傍晚蓝调时刻到夜幕初降，白天的疲惫终于散开","score":2},{"text":"深夜十一点以后，万物静音，只剩一盏暖灯和满脑子奇思","score":3}]},{"axis":1,"text":"门口的黄铜风铃响了，走进来一位满脸好奇的新客人，你的本能姿态是？","options":[{"text":"轻轻点头微笑说声“随便看”，绝不贴身推销，给足自由空间","score":0},{"text":"递上一杯温水，如果对方眼神有疑问再温和聊两句","score":1},{"text":"自然大方地打招呼聊天，很快就能顺着喜好帮对方挑到心头好","score":2},{"text":"三句话就能熟成老友，顺手拉进小店福利群，欢声笑语不停歇","score":3}]},{"axis":2,"text":"客人临走前发自内心夸了你一句，哪句夸奖最让你开心到想原地转圈？","options":[{"text":"“天哪，这竟然是你亲手做出来的？细节也太绝了吧！”","score":0},{"text":"“待在你这间小店里太治愈了，感觉一天的班味全没了！”","score":1},{"text":"“你的选品眼光太毒了，怎么每样东西都长在我的审美点上！”","score":2},{"text":"“这家店的概念和体验太高级了，简直是整座城市的必打卡地标！”","score":3}]},{"axis":3,"text":"突然有一位大网红路过你的小店，主动问能不能免费拍一条探店视频，你会？","options":[{"text":"委婉谢绝，我怕突然涌来太多打卡人群，把小店的清净氛围吵坏了","score":0},{"text":"可以拍但希望别过度摆拍，顺其自然吸引真正同频的客人就好","score":1},{"text":"开心配合！认真介绍镇店招牌，趁机让更多喜欢这类风格的人看到","score":2},{"text":"立刻拿出准备好的招牌套餐和联名周边，顺手把引流活动一波拉满","score":3}]},{"axis":0,"text":"如果为你的小店挑选一盏灵魂主灯，你会按下哪个开关？","options":[{"text":"大面积落地玻璃窗引来的自然日光，几乎不用开灯","score":0},{"text":"温暖明亮的奶油白吊灯，照得整个空间清爽又明朗","score":1},{"text":"柔和的焦糖琥珀色壁灯，越到黄昏越有电影氛围","score":2},{"text":"复古霓虹灯牌配局部聚光台灯，深夜亮起像城市的秘密灯塔","score":3}]},{"axis":1,"text":"如果小店要办一场周末限定活动，你最想在门口贴出哪张海报？","options":[{"text":"《静音一小时》：不说话、不社交，各自看书发呆享受留白","score":0},{"text":"《四人私享小沙龙》：限额四位，慢悠悠喝茶聊一件小众热爱","score":1},{"text":"《邻里交换市集》：带一件闲置好物来交换，顺便认识有趣新朋友","score":2},{"text":"《整条街的狂欢派对》：音乐、美食、打卡抽奖，把周末气氛点爆","score":3}]},{"axis":2,"text":"假如给你一笔意外预算升级小店，你第一秒会花在哪里？","options":[{"text":"购入一台顶级专业工具/窑炉/烘焙设备，把出品品质再拔高一档","score":0},{"text":"定制一批手感绝佳的天然材质包装和手绘小卡片，拉满细节温度","score":1},{"text":"飞去外地甚至海外淘一批全网难觅的稀缺孤品和设计品牌货源","score":2},{"text":"升级门店视觉招牌、上线小程序会员体系，把复购和私域做起来","score":3}]},{"axis":3,"text":"一款你个人超爱、但连着两周都没人买的冷门产品，你会怎么处理？","options":[{"text":"继续摆在C位！卖不出去正好留着自己欣赏，懂它的人总会来","score":0},{"text":"移到角落做展示品，偶尔遇到气场契合的客人再顺嘴安利一下","score":1},{"text":"调整一下陈列方式、拍几张好看故事图再测试两周看市场反馈","score":2},{"text":"果断下架换上高转化新品，珍贵的货架坪效绝不浪费在滞销款上","score":3}]},{"axis":1,"text":"一位熟客失恋了，红着眼眶推门进来坐下，你最自然的应对方式是？","options":[{"text":"不追问不打扰，默默多递上一包纸巾和一份热乎小点心就退回柜台","score":0},{"text":"轻声问一句“想安静待会儿还是聊聊”，完全按对方的节奏来","score":1},{"text":"泡两杯热饮坐到对面认真听对方倾诉，顺便用幽默把人逗笑","score":2},{"text":"立刻开启满格安慰模式，招呼店里熟客一起碰杯撑腰，把坏情绪赶跑","score":3}]},{"axis":0,"text":"下面哪一种「关门打烊后的独享瞬间」，最能戳中你的心巴？","options":[{"text":"傍晚五点半准时锁门，迎着夕阳慢悠悠去菜市场买菜回家做饭","score":0},{"text":"晚饭前收拾好整洁的桌面，趁天还没全黑去公园散步吹风","score":1},{"text":"晚上十点关掉招牌灯，放一张舒缓黑胶唱片慢慢盘点今日账本","score":2},{"text":"凌晨两点送走最后一位客人，在空荡荡的夜风里喝一口微醺冰饮","score":3}]},{"axis":3,"text":"面对「定价」这件有点微妙的事情，你的真实心理活动是？","options":[{"text":"够覆盖成本和房租、大家买得轻松开心就好，赚多赚少随缘","score":0},{"text":"定一个温和实在的良心价，熟客来了偶尔还忍不住多送点小赠品","score":1},{"text":"按品质和审美溢价合理定价，既有体面利润也让客人觉得物超所值","score":2},{"text":"清晰规划引流款、利润款和限量高客单礼盒，绝不羞于谈钱赚钱","score":3}]},{"axis":2,"text":"如果小店需要招一位兼职帮手，你最看重对方身上哪项技能？","options":[{"text":"心灵手巧、有耐心，能帮我一起把出品细节打磨得无可挑剔","score":0},{"text":"审美干净、有眼力见，懂得把小店收拾得像画报一样舒服","score":1},{"text":"紧跟潮流、审美极毒，能帮我一起发掘爆款灵感和联名好物","score":2},{"text":"执行力强、懂运营，能把小红书笔记、团购和排班打理得井井有条","score":3}]},{"axis":0,"text":"推开店门，你最希望空气里飘着哪一种招牌味道？","options":[{"text":"清晨刚出炉的面包黄油香、新鲜剪枝的草木露水味","score":0},{"text":"现磨手冲咖啡豆、晒过太阳的旧书纸张和淡淡茶香","score":1},{"text":"黄昏微醺的肉桂红酒、木质线香与暖烘烘的炭火香气","score":2},{"text":"深夜热气腾腾的汤面高汤、冰镇精酿啤酒或复古烟熏黑胶味","score":3}]},{"axis":1,"text":"如果要在柜台显眼处立一块手写小黑板，你会写上哪句话？","options":[{"text":"“欢迎发呆，本店不提供尬聊服务，社恐请放心进门”","score":0},{"text":"“慢慢看，喜欢就带走，累了就坐下喝口茶”","score":1},{"text":"“今日老板心情极佳，进门讲个冷笑话立减五元！”","score":2},{"text":"“来都来了，坐下一起碰一杯，今天不聊工作只聊开心！”","score":3}]},{"axis":3,"text":"开店满一周年那天，哪种结果会让你觉得“这一年真的太值了”？","options":[{"text":"存款没少、睡眠变好、完全没受气，每天都活在自己的节奏里","score":0},{"text":"攒下了一群像老友一样的忠实熟客，小店成了大家的精神避难所","score":1},{"text":"不仅口碑零差评，净收入还稳稳超过了当年打工的年薪","score":2},{"text":"做成了小红书现象级人气品牌，已经收到好几个商业联名和扩店邀约","score":3}]},{"axis":2,"text":"平时刷小红书时，哪一类“开店/副业博主”最容易让你忍不住点进主页翻半天？","options":[{"text":"沉浸式手作、烘焙、花艺或陶艺主理人的治愈日常 Vlog","score":0},{"text":"把老房子爆改成温柔社区书店、咖啡屋的空间美学记录","score":1},{"text":"全球淘货的中古买手、小众香氛集合店或潮流杂货铺主理人","score":2},{"text":"拆解“小店如何月入十万”“低成本精准选品与流量变现”的干货博主","score":3}]},{"axis":1,"text":"如果小店里养一只镇店萌宠，你希望它是什么性格？","options":[{"text":"高冷优雅的布偶或黑猫，只在窗台晒太阳，看心情才让人摸一下","score":0},{"text":"安静乖巧的小柴犬或乌龟，安稳窝在脚边陪着看店","score":1},{"text":"见人就摇尾巴的社交达人金毛/柯基，负责在门口迎宾揽客","score":2},{"text":"会跟客人抢镜互动的显眼包橘猫，全条街的人都专门为它而来","score":3}]},{"axis":0,"text":"假如你的小店要拍一张最具代表性的宣传照，你会选哪个时间段按下快门？","options":[{"text":"早上八点半，斜斜的晨光穿过树影打在木质门头上","score":0},{"text":"下午两点，阳光正好、微风吹动帆布遮阳棚的松弛瞬间","score":1},{"text":"傍晚六点半，天空泛着粉紫色晚霞、店里刚刚点亮第一盏暖灯","score":2},{"text":"晚上十一点，整条街只剩你的橱窗散发着电影般的微醺暖光","score":3}]},{"axis":2,"text":"如果有一位客人想定制一件店里原本没有的特别需求，你的第一反应是？","options":[{"text":"两眼放光！亲手为对方量身打磨一件独一无二的孤品超有成就感","score":0},{"text":"如果契合小店调性且时间充裕，很乐意花点心思帮忙实现","score":1},{"text":"大脑飞速检索人脉和货源库，帮对方精准调货或跨界搭配出来","score":2},{"text":"先评估成本与复购潜力，如果市场需求大干脆开发成标准化新产品","score":3}]},{"axis":3,"text":"最后，在你亲手挂上「营业中 OPEN」木牌的那一刻，你心里最深的愿望是？","options":[{"text":"“从此时间归我所有，做一个不赶路、不被催的自由小店主”","score":0},{"text":"“把日子过得温润踏实，用一家小店接住自己和有缘人的疲惫”","score":1},{"text":"“审美与面包我全都要，优雅自由地把热爱变成源源不断的收益”","score":2},{"text":"“从这间街角小店出发，亲手打造一个响当当的个人传奇品牌！”","score":3}]}],"profiles":[{"no":"01","lic":"LIC-01 · 晨光静巷","name":"只开上午的露水花艺茶室","hours":"08:00 — 13:30（卖完花就去午睡）","spot":"老城区有梧桐树影的安静小巷拐角","awning":"#3d6b59","stripe":"#f2eadc","accent":"#2d5a4c","icon":"plant","vector":[0.2,0.2,0.2,0.2],"tags":["早睡早起派","低耗能治愈","植物系美学"],"quote":"上午修剪带露水的枝叶，下午锁门去公园晒太阳。","signature":"每日限量 12 束「今日风向手捧花」+ 冷泡白毫银针","insight":"你天生适合把日子过成一首清爽干净的晨间诗。你拒绝熬夜透支，也讨厌无效社交，清晨的阳光、修剪花枝的沙沙声与安静翻书的熟客，就能让你获得极高浓度的幸福感。","guest":"每天上班前绕路来买一枝洋桔梗的沉默建筑师，以及刚退休爱喝早茶的时髦老太太。","talent":"拥有极高的“氛围溢价力”——哪怕只卖寻常枝叶，经你手搭配就自带高定画报质感。","caution":"太佛系时容易忘记进货和记账，记得给熟客留个预订微信，躺着也能稳稳回血。","match":["只开下午的社区手作烘焙屋","花香配刚出炉的可颂黄油香，整条街的早晨都被你们承包了。"],"clash":["通宵不打烊的复古霓虹精酿铺","你刚早起开门浇花，对门老板刚拖着啤酒桶准备去睡觉。"]},{"no":"02","lic":"LIC-02 · 匠心工坊","name":"预约制·清晨手工陶艺与手冲屋","hours":"09:00 — 17:00（仅限预约制）","spot":"美术馆旁带独立小院的红砖老洋房一楼","awning":"#a65438","stripe":"#f5ecdf","accent":"#9c482c","icon":"craft","vector":[0.2,0.2,0.2,2.8],"tags":["高客单孤品","手艺变现","清醒慢赚钱"],"quote":"每天只接待六位懂行的客人，但每一件出品都是绝版高定。","signature":"主理人手捏孤品咖啡杯（买杯送一整月免费手冲）","insight":"你是最懂“安静把钱赚了”的稀缺型手艺人！你不需要靠人山人海走量，反而擅长用极致的匠心质感、克制的预约门槛和高级审美，把一门安静的热爱做成高客单、高复购的精品小店。","guest":"愿意驱车一小时专程来淘孤品杯子的设计师，以及悄悄收藏你全套作品的低调富婆/大佬。","talent":"自带“稀缺感定价天赋”——你把作品打磨得足够耐看，客人自然心甘情愿为你买单。","caution":"别因为追求 100% 完美把交付周期拉太长，偶尔推出几款轻量化周边能让现金流更香。","match":["日系原木风·小众设计师买手店","你的手作器物直接放进对方橱窗联名寄卖，双双客单价翻倍。"],"clash":["全城排队的元气吐司早茶铺","你店里讲究静心拉坯听古典乐，隔壁早高峰喇叭循环喊号。"]},{"no":"03","lic":"LIC-03 · 晴日拾光","name":"帮人代写信件的旧物杂货铺","hours":"10:30 — 17:30（雨天延长营业）","spot":"老街石板路尽头有一扇木格窗的小铺","awning":"#4a6478","stripe":"#f4efe5","accent":"#3b566b","icon":"book","vector":[0.2,0.2,2.8,0.2],"tags":["绝佳选品眼","温柔故事库","社恐友好"],"quote":"这里不卖必需品，只收留被快时代遗忘的温柔小物与心事。","signature":"世界各地淘回的绝版明信片 + 定制火漆代写手写信","insight":"你是天生自带故事感的“街角策展人”。你不爱流水线式的喧闹生意，更享受在阳光透亮的白天，安静整理从世界各地淘回的绝版小物、纸品和旧书，等待和有缘人完成一次无声的心灵击掌。","guest":"专门来寄“寄给三年后自己”明信片的大学生，以及总爱在角落翻旧画册的自由插画师。","talent":"拥有极毒的“小众审美选品力”和叙事包装能力，每件普通旧物经你写两句卡片就身价翻倍。","caution":"进货全凭真爱容易越囤越舍不得卖，记得给每件宝贝标上清晰的明码标价呀！","match":["午夜解忧·静音一人食书屋","白天你开旧物铺，晚上对方开静音书屋，共享一间铺子房租直接减半。"],"clash":["自带流量密码的网红美学集合店","你在慢悠悠挑火漆蜡粒，对方已经开始策划全城爆款快闪联名。"]},{"no":"04","lic":"LIC-04 · 格调橱窗","name":"日系原木风·小众设计师买手店","hours":"10:00 — 18:30（每周一闭店选货）","spot":"时髦街区二楼带露台的极简白墙小楼","awning":"#3d4652","stripe":"#f3eee4","accent":"#343d48","icon":"bag","vector":[0.2,0.2,2.8,2.8],"tags":["冷感搞钱王","审美品控","静默高利润"],"quote":"从不拉客吆喝，但穿过这条街最会穿的人都会推门进来。","signature":"全城独一份的小众香氛、独立首饰与极简生活器物","insight":"你是典型的“清醒安静搞钱派”！你不需要靠卖力陪聊换业绩，你极度在线的审美品味、冷静精准的选品眼光与高级克制的空间陈列，本身就是最强印钞机。","guest":"最讨厌被导购追着推销的高冷都市白领，进门扫一眼货架直接爽快刷卡打包三件。","talent":"顶级“审美变现与高客单操盘力”——懂货、懂留白、懂高净值客群真正愿意为什么付费。","caution":"审美门槛太高偶尔会让路人不敢推门，门口摆一小盆鲜花或放一款亲民香片会增加很多新客。","match":["预约制·清晨手工陶艺与手冲屋","同样高质、低噪、高客单，互相导流简直是神仙商业搭子。"],"clash":["烟火气满格的深夜手作糖水铺","你追求冷淡留白零废话，对门老板热情到连路过的小狗都要夸三句。"]},{"no":"05","lic":"LIC-05 · 暖阳街角","name":"只开下午的社区手作烘焙屋","hours":"11:00 — 18:00（烤完三炉就收工）","spot":"居民区公园对面飘满黄油香气的一楼小铺","awning":"#c77d34","stripe":"#fbf4e6","accent":"#b56a24","icon":"bread","vector":[0.2,2.8,0.2,0.2],"tags":["碳水治愈官","邻里人气王","人间烟火气"],"quote":"没有什么烦恼是一只刚出炉、外壳酥到掉渣的盐面包治不好的。","signature":"下午两点准时出炉的「焦糖肉桂卷」+ 手工果酱司康","insight":"你是整条街最受欢迎的“温暖投喂官”！你享受亲手做出好东西被大家大口吃掉的满足感，不追逐疯狂扩张，只想把每天出炉的几盘点心烤得香喷喷，看着熟客带着笑意推门而入。","guest":"每天放学趴在橱窗数可颂的小学生，以及准点来买“续命甜点”的周边打工人。","talent":"超强“口口相传复购魔力”——不用买推广，光是街坊邻里的自来水安利就能让你日日售罄。","caution":"熟客一夸就容易手抖多送小饼干，记得算好黄油和面粉成本，快乐也要细水长流！","match":["只开上午的露水花艺茶室","买完鲜花顺路买块热司康，堪称全城最治愈的周末漫步动线。"],"clash":["午夜解忧·静音一人食书屋","你店里全天笑语盈盈香气四溢，对方要求连翻书声都不能超过 30 分贝。"]},{"no":"06","lic":"LIC-06 · 人气早市","name":"全城排队的元气吐司早茶铺","hours":"07:30 — 15:00（周末爆单预警）","spot":"地铁口与创意园交界的黄金阳光转角","awning":"#c94c38","stripe":"#fdf2e6","accent":"#b83f2c","icon":"bread","vector":[0.2,2.8,0.2,2.8],"tags":["早起搞钱王","排队制造机","热忱手艺人"],"quote":"用全城最酥脆的现烤吐司和元气招呼，叫醒一整座城市的早晨！","signature":"每日限量爆浆厚蛋吐司 + 招牌冰博克生椰拿铁","insight":"你把“手艺热爱”与“商业爆款”完美结合！你精力充沛、极其擅长营造热气腾腾的门店氛围，既有早起死磕出品的硬核执行力，又懂得用高颜值餐品和爽朗笑容把过路客全变成铁粉。","guest":"愿意提前半小时起床专程绕路打卡的美食博主，以及把你当“每日上班动力”的铁杆上班族。","talent":"天生具备“排队爆款打造力”——出餐稳、情绪价值高、极其适合靠单品爆火做出连锁雏形。","caution":"早高峰连轴转极其消耗体力，生意火起来后一定要趁早招靠谱帮手，别把自己累成铁人！","match":["自带流量密码的网红美学集合店","一个用现烤香气吸客，一个用高颜值好物留客，整条街流量全归你们。"],"clash":["凌晨两点才开门的失眠胶片暗房","你早上七点半满血开炉，对方刚拉上遮光帘准备补觉。"]},{"no":"07","lic":"LIC-07 · 快乐集市","name":"邻里寻宝·复古中古杂货铺","hours":"10:30 — 18:30（常有免费咖啡蹭喝）","spot":"烟火老街里挂满彩色招贴画的宽敞临街铺","awning":"#3f7568","stripe":"#f5ebd8","accent":"#2d6356","icon":"camera","vector":[0.2,2.8,2.8,0.2],"tags":["宝藏买手","街区社交中心","快乐至上"],"quote":"与其说我在开店，不如说我给全城有趣灵魂建了个露天客厅。","signature":"千禧年CCD相机、绝版中古杯碟 + 随缘交换的奇趣摆件","insight":"你是自带磁场的“街区快乐枢纽”！你眼光奇特又极懂聊天破冰，别人开店卖商品，你开店顺手卖快乐和奇遇。进你店里的人往往本来只想逛五分钟，结果和老板唠嗑试戴聊掉一下午。","guest":"爱淘古着和老相机的文艺大学生、总带着零食来串门的斜杠自由职业者。","talent":"极强“社群凝聚与故事种草力”——货品经过你的幽默介绍，分分钟让人忍不住下单带走。","caution":"聊开心了千万别把压箱底孤品按成本价甩卖了，赚钱和交朋友完全可以双赢！","match":["深夜失眠黑胶微醺酒馆","白天来你这儿淘复古黑胶，晚上去对方店里边听边喝，完美闭环。"],"clash":["日系原木风·小众设计师买手店","你店里堆满色彩斑斓的快乐宝藏，对方连衣架间距都要拿尺子量。"]},{"no":"08","lic":"LIC-08 · 潮流地标","name":"自带流量密码的网红美学集合店","hours":"10:00 — 19:30（节假日联名快闪）","spot":"城市最时髦潮流街区的独栋转角玻璃房","awning":"#cf5a36","stripe":"#fbf0e4","accent":"#bd4b28","icon":"bag","vector":[0.2,2.8,2.8,2.8],"tags":["爆款主理人","审美品宣满级","天生商业脑"],"quote":"从门头配色到购物袋文案，每一寸都是小红书十万赞爆款封面。","signature":"季度限定联名香薰、时髦帆布包 + 出片率 100% 的街角打卡窗","insight":"你是天生的“现象级品牌主理人”！你敏锐捕捉年轻人的情绪需求，既懂审美策划又懂社交传播，把选品、打卡体验和商业变现揉得丝滑无比，哪怕从一间小铺起步也能火出整座城市。","guest":"拎着相机专程来拍 OOTD 的时髦精、寻找灵感的设计总监，以及自带话题的潮流玩家。","talent":"顶配“流量洞察 + 爆款操盘天赋”，极擅长把一个好点子放大成现象级消费热潮。","caution":"追逐热度和快闪节奏很快，记得留出 20% 空间放真正经得起时间考验的常青好货。","match":["全城排队的元气吐司早茶铺","两大高能早起搞钱王者联手，联名款上线十分钟直接售罄。"],"clash":["帮人代写信件的旧物杂货铺","你刚拍完三条爆款短视频，对方还在慢悠悠磨墨写一封信。"]},{"no":"09","lic":"LIC-09 · 深夜避难所","name":"午夜解忧·静音一人食书屋","hours":"18:00 — 02:00（谢绝喧哗）","spot":"远离主干道的安静老弄堂二楼暖灯窗","awning":"#2d4359","stripe":"#e8dfd0","accent":"#23394f","icon":"book","vector":[2.8,0.2,0.2,0.2],"tags":["夜猫子福音","静音治愈系","精神避难所"],"quote":"白天应付世界辛苦了，推开这扇门，今晚只需安静吃碗热面。","signature":"慢炖八小时番茄牛腩一人食套餐 + 老板私藏冷门书单","insight":"你是属于城市夜色里最温柔的一盏孤灯。你白天容易没电，一到傍晚才真正活过来；你懂成年人不想社交只想安静吃口热饭的疲惫，亲手熬一锅热汤、放低音乐，就能无声接住无数孤独灵魂。","guest":"刚加完班不想回冷清出租屋的程序员、深夜找灵感的小说作者和安静吃宵夜的夜班护士。","talent":"拥有极高的“情绪安全感营造力”——你的存在本身就是一种低耗能的高级治愈。","caution":"长期昼夜颠倒要注意补维生素和晒太阳，照顾好深夜食客前先照顾好自己的胃。","match":["帮人代写信件的旧物杂货铺","白昼与黑夜的温柔接力，你们的审美与留白观简直一模一样。"],"clash":["全城排队的元气吐司早茶铺","一个在凌晨两点享受绝对静音，一个在早上七点半元气拉满。"]},{"no":"10","lic":"LIC-10 · 暗房匠人","name":"凌晨两点才开门的失眠胶片暗房","hours":"19:30 — 03:00（限量定制冲扫）","spot":"创意老厂区藏着红灯招牌的复古地下室","awning":"#6e3447","stripe":"#ede2d4","accent":"#5e283a","icon":"camera","vector":[2.8,0.2,0.2,2.8],"tags":["硬核夜行匠人","极客变现","电影感爆棚"],"quote":"黑夜不是用来熬的，是用来把光影和手艺洗出灵魂的。","signature":"手工定制暗房银盐冲印 + 限量手作深夜微醺特调","insight":"你是骨子里带着一点酷劲的“深夜硬核手艺人”。你不喜欢人挤人的流水线生意，宁可在安静的深夜专注死磕一门稀缺手艺，靠不可替代的专业度与极致电影感吸引死忠高客单拥趸。","guest":"背着胶片机满世界跑的独立摄影师、沉迷复古质感的音乐人，以及愿意为孤品买单的收藏家。","talent":"具备“稀缺技能壁垒 + 高溢价定制天赋”——因为够专够酷，根本不用和别人打价格战。","caution":"专注技术细节的同时，记得定期在小红书发几条暗房显影过程视频，订单会自己找上门！","match":["会员制·深夜黑胶私人选品酒廊","同样是深夜高定美学玩家，你的胶片作品挂满对方酒廊墙面绝配。"],"clash":["邻里寻宝·复古中古杂货铺","你习惯在暗红灯光下静音工作，对方热衷把全条街的人喊进来开茶话会。"]},{"no":"11","lic":"LIC-11 · 暗夜藏宝阁","name":"深夜失眠黑胶与绝版漫画铺","hours":"17:00 — 01:30（欢迎戴耳机试听）","spot":"旧电影院隔壁挂着暖黄霓虹的小窄门","awning":"#4b3b69","stripe":"#ece3d5","accent":"#3f305c","icon":"vinyl","vector":[2.8,0.2,2.8,0.2],"tags":["小众品位神","夜行收藏家","社恐天堂"],"quote":"失眠的时候别刷手机了，来这里听半张黑胶再回家。","signature":"老板私藏CityPop绝版黑胶 + 稀缺复古港日漫画与冷门碟片","insight":"你是夜色里最懂小众文化与精神共鸣的宝藏店主。你讨厌俗套商业推销，只愿意把自己真正爱到骨子里的唱片、漫画和奇趣小物摆满货架，等懂行的人推门进来时相视一笑。","guest":"戴着大耳机能一待三小时的乐迷、满世界找绝版初版漫画的酷盖和失眠创意总监。","talent":"自带“亚文化雷达与顶级品味背书”，只要是你推荐的冷门好物，圈内人闭眼跟着入。","caution":"别因为太喜欢某张绝版唱片就标个“非卖品”全留给自己，适当流转才能淘回更多宝藏！","match":["邻里寻宝·复古中古杂货铺","审美趣味高度同频，经常互相交换奇奇怪怪的冷门好货。"],"clash":["自带流量密码的网红美学集合店","你嫌大众爆款太俗，对方嫌你藏得太深不好做规模扩张。"]},{"no":"12","lic":"LIC-12 · 秘境酒廊","name":"会员制·深夜黑胶私人选品酒廊","hours":"20:00 — 02:30（暗号敲门入内）","spot":"藏在旧书架暗门之后的都市秘密二楼","awning":"#223b3b","stripe":"#e5d5b5","accent":"#1a3030","icon":"wine","vector":[2.8,0.2,2.8,2.8],"tags":["高定神秘感","圈层变现王","质感老钱风"],"quote":"没有显眼招牌，却让整座城市最挑剔的人抢着办会员。","signature":"全球小众风土自然酒 + 主理人严选限量香氛与黑胶私藏","insight":"你是深谙“神秘感 + 高级感 + 圈层经济”的天才操盘手！你不靠大嗓门吆喝，偏偏懂得用暗门设计、克制的服务边界与绝佳选品眼光，把深夜小店做成高客单、高粘性的都市秘密基地。","guest":"极度看重隐私与调性的创业者、审美挑剔的投资人，以及追求电影感约会的质感情侣。","talent":"顶级的“高端圈层运营 + 隐形高利润操盘力”，人少客单高、轻松体面把钱赚。","caution":"把控调性很高级，但偶尔也可以开放一个“每月一次的开放夜”，给小店注入新鲜血液。","match":["凌晨两点才开门的失眠胶片暗房","暗房艺术遇上秘境酒廊，一秒拉满城市顶级地下文化格调。"],"clash":["只开上午的露水花艺茶室","一个在凌晨暗号敲门品自然酒，一个在早上八点剪玫瑰喝白茶。"]},{"no":"13","lic":"LIC-13 · 晚风小院","name":"烟火气满格的深夜手作糖水铺","hours":"16:30 — 00:30（微风露台常开）","spot":"老社区河边挂满暖黄小串灯的露天小院","awning":"#b85c38","stripe":"#f7ecdb","accent":"#a64c28","icon":"bread","vector":[2.8,2.8,0.2,0.2],"tags":["夜间治愈王","热气腾腾","邻里解忧馆"],"quote":"一碗熬出胶质的温热桃胶双皮奶，能把一整天的委屈全部融化。","signature":"现熬陈皮红豆沙 + 桂花酒酿小丸子（附赠老板免费倾听）","insight":"你是夜色里最暖人心的“人间烟火守护者”。你爱在凉爽的傍晚慢火熬煮甜汤，看着下班的年轻人、散步的情侣和街坊三五成群坐满露台，一碗热乎乎的甜品下肚，整条街都跟着温柔起来。","guest":"每天下班来续命的姐妹搭子、散步顺路打包两碗给家人的暖心大叔和爱撒娇的流浪橘猫。","talent":"天生自带“高温度复购与好口碑磁铁”，客人来吃的不仅是甜品，更是你给的安心烟火气。","caution":"大家聊得太开心常拖到凌晨一点才散场，记得定好最后点单时间，给自己留足好睡眠！","match":["深夜失眠黑胶微醺酒馆","喝完小酒拐弯来你这吃碗热糖水醒酒，整条夜宵街的黄金双绝。"],"clash":["日系原木风·小众设计师买手店","你这里热火朝天烟火满院，对方那边一根针掉地上都听得见。"]},{"no":"14","lic":"LIC-14 · 微醺夜市","name":"一座难求的深夜特调微醺酒馆","hours":"18:30 — 02:30（周末需提前占座）","spot":"闹中取静的梧桐街角，自带吧台与微风外摆","awning":"#8c2f3b","stripe":"#f4e5d3","accent":"#7a232f","icon":"wine","vector":[2.8,2.8,0.2,2.8],"tags":["情绪调酒师","爆单人气王","夜色主角"],"quote":"告诉我你今天的心情，三分钟后，我把它摇成一杯全城封神的特调。","signature":"「按此刻心情盲盒定制」东方茶酒特调 + 招牌炙烤下酒小食","insight":"你是天生为夜晚舞台而生的“魅力主理人”！你把精湛的出品手艺、滚烫的情绪共情与敏锐的商业嗅觉融为一体——吧台就是你的主场，既能让客人喝到惊艳作品，也能轻松把人气和营业额双双拉爆。","guest":"组团来庆生的快乐打工人、专程跨城打卡的微醺爱好者，以及一进门就喊“老规矩”的铁粉。","talent":"罕见的“手艺 + 个人 IP 双核变现力”——客人因酒而来，最终全被你的人格魅力牢牢圈粉。","caution":"高能量陪聊加高强度出品容易深夜燃尽，每周务必给自己留一天彻底断联的闭店休假！","match":["通宵不打烊的复古霓虹精酿铺","两大夜场人气霸主隔街呼应，联手把一条普通马路带成城市夜经济地标。"],"clash":["只开上午的露水花艺茶室","生活作息相差整整十二小时，想见一面只能约在黄昏交接班。"]},{"no":"15","lic":"LIC-15 · 唱片乌托邦","name":"深夜失眠黑胶微醺酒馆","hours":"19:00 — 02:00（周末开放点歌）","spot":"老街剧场对面贴满电影海报的复古木门小铺","awning":"#3d355e","stripe":"#f0e3cc","accent":"#322b52","icon":"vinyl","vector":[2.8,2.8,2.8,0.2],"tags":["灵魂策展人","夜间社交场","浪漫有梗"],"quote":"不谈 KPI，不聊焦虑，今晚只负责把好音乐和好酒分享给同频的人。","signature":"世界各地淘回的宝藏爵士黑胶 + 轻松易饮的小众果味精酿","insight":"你是夜色里最懂“松弛好玩”的氛围大师！你不一定非要事必躬亲做苦力，但你极擅长把好音乐、好酒、有趣的人和好玩的主题夜攒在一起，让陌生人坐进同一间小店半小时就能笑成朋友。","guest":"刚散场的乐队乐手、爱聊电影和冷门音乐的浪漫上班族，以及每个周五准时报到的快乐搭子。","talent":"顶级“跨界组局与氛围策划天赋”——你一开口组局，天然就能把全城最有趣的人吸到一起。","caution":"办主题活动容易一上头就狂买稀有唱片和灯光设备，记得给快乐预算设个温柔上限哦！","match":["烟火气满格的深夜手作糖水铺","微醺听完黑胶去隔壁吃碗热红豆沙，把都市夜晚的幸福感拉到 100%。"],"clash":["预约制·清晨手工陶艺与手冲屋","你偏爱微醺碰撞和即兴派对，对方偏爱清晨静音和极简规矩。"]},{"no":"16","lic":"LIC-16 · 传奇夜场","name":"通宵不打烊的复古霓虹精酿铺","hours":"18:00 — 04:00（整条街最亮的招牌）","spot":"城市最火潮流夜生活十字路口的霓虹转角","awning":"#b8362a","stripe":"#f7e2be","accent":"#a62b20","icon":"wine","vector":[2.8,2.8,2.8,2.8],"tags":["夜场商业奇才","跨界爆款王","全城地标"],"quote":"别人卖的是啤酒，我卖的是整座城市逃离平庸的狂欢入场券！","signature":"36 款全球严选先锋精酿 + 联名夜宵餐车 & 限量周边潮品","insight":"你是天生的“商业破局大玩家”！精力充沛、眼光前卫、极其懂得如何用精准选品、高燃社交氛围和跨界联名引爆全城流量。一间街角小店只是你的起点，你的野心和魄力足以打造出一个传奇夜间厂牌！","guest":"潮牌主理人、自媒体大V、爱热闹的都市先锋玩家，以及下班后急需一键释放压力的年轻人。","talent":"核级“商业操盘 + 跨界资源整合力”，最擅长在热闹人潮里精准嗅到高盈利爆款模式。","caution":"高速扩张和高能社交虽然爽，记得把核心品控抓牢，同时留出周末彻底关机充电的时间。","match":["一座难求的深夜特调微醺酒馆","两大夜经济天花板强强联手，直接把整条街做成必打卡潮流夜市。"],"clash":["只开上午的露水花艺茶室","你凌晨四点刚收摊数钱，对门已经提着浇花壶准备迎接朝阳了。"]}]};
+const app = document.getElementById('app'),
+      posterDialog = document.getElementById('posterDialog'),
+      copyDialog = document.getElementById('copyDialog');
+const N = D.questions.length, STORAGE = 'dream-shop-lab-v1';
+let idx = 0, answers = Array(N).fill(null), report = null, posterURL = null, screen = 'home', autoNext = true, autoTimer = null;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const byName = Object.fromEntries(D.profiles.map(p => [p.name, p]));
+
+const HERO_ART = `<svg viewBox="0 0 640 260" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2c4e43"/><stop offset=".6" stop-color="#587b65"/><stop offset="1" stop-color="#d49c57"/></linearGradient>
+    <radialGradient id="winGlow" cx="50%" cy="50%" r="55%"><stop stop-color="#ffe7b0"/><stop offset="1" stop-color="#d99742"/></radialGradient>
+  </defs>
+  <rect width="640" height="260" fill="url(#sky)"/>
+  <circle cx="520" cy="54" r="32" fill="#f7dba0" opacity=".88"/>
+  <!-- Charming street shopfront silhouette -->
+  <g transform="translate(335,48)">
+    <rect x="0" y="28" width="248" height="168" rx="6" fill="#f6efe2" stroke="#2b211b" stroke-width="2.5"/>
+    <!-- Striped awning -->
+    <g>
+      <path d="M-10 30 H258 L248 64 H0 Z" fill="#b85437" stroke="#2b211b" stroke-width="2"/>
+      <rect x="26" y="30" width="28" height="34" fill="#faf4e8"/>
+      <rect x="82" y="30" width="28" height="34" fill="#faf4e8"/>
+      <rect x="138" y="30" width="28" height="34" fill="#faf4e8"/>
+      <rect x="194" y="30" width="28" height="34" fill="#faf4e8"/>
+    </g>
+    <!-- Glowing shop window -->
+    <rect x="18" y="80" width="136" height="86" rx="6" fill="url(#winGlow)" stroke="#2b211b" stroke-width="2.2"/>
+    <line x1="86" y1="80" x2="86" y2="166" stroke="#2b211b" stroke-width="2"/>
+    <line x1="18" y1="126" x2="154" y2="126" stroke="#2b211b" stroke-width="2"/>
+    <!-- Hanging OPEN sign -->
+    <rect x="44" y="92" width="36" height="20" rx="3" fill="#2d5e4e" stroke="#2b211b" stroke-width="1.5"/>
+    <text x="62" y="106" text-anchor="middle" font-size="8.5" font-weight="900" fill="#fff7e6" font-family="monospace">OPEN</text>
+    <!-- Wooden door -->
+    <rect x="172" y="80" width="58" height="114" rx="4" fill="#5e3e2c" stroke="#2b211b" stroke-width="2.2"/>
+    <rect x="182" y="92" width="38" height="44" rx="2" fill="#f7dda3" stroke="#2b211b" stroke-width="1.5"/>
+    <circle cx="218" cy="148" r="3.5" fill="#e6be6c"/>
+    <!-- Potted plant -->
+    <rect x="150" y="172" width="18" height="20" rx="2" fill="#b85437" stroke="#2b211b" stroke-width="1.5"/>
+    <circle cx="159" cy="162" r="13" fill="#3b755d" stroke="#2b211b" stroke-width="1.5"/>
+  </g>
+  <rect x="0" y="242" width="640" height="20" fill="#2b211b" opacity=".82"/>
+</svg>`;
+
+function shopfrontSVG(p){
+  const isNight = p.vector[0] > 1.5;
+  const sky1 = isNight ? '#1b2030' : '#dfebd9';
+  const sky2 = isNight ? '#342c44' : '#f7e5c6';
+  const winFill = isNight ? '#ffd98a' : '#fff7e0';
+  // 8 shop icons drawn inside the hanging signboard
+  const icons = {
+    plant: `<path d="M0 10 V-6 M0 2 Q-10 -2 -8 -10 Q0 -8 0 2 M0 -1 Q10 -5 8 -13 Q0 -11 0 -1" fill="none" stroke="${p.awning}" stroke-width="2.2" stroke-linecap="round"/>`,
+    craft: `<path d="M-8 10 L-6 -4 Q0 -10 6 -4 L8 10 Z M-10 -4 H10" fill="none" stroke="${p.awning}" stroke-width="2.2" stroke-linejoin="round"/>`,
+    book: `<path d="M-11 -7 Q-5 -10 0 -6 Q5 -10 11 -7 V8 Q5 5 0 9 Q-5 5 -11 8 Z M0 -6 V9" fill="none" stroke="${p.awning}" stroke-width="2" stroke-linejoin="round"/>`,
+    bag: `<rect x="-9" y="-4" width="18" height="14" rx="2" fill="none" stroke="${p.awning}" stroke-width="2.2"/><path d="M-5 -4 V-8 A5 5 0 0 1 5 -8 V-4" fill="none" stroke="${p.awning}" stroke-width="2.2"/>`,
+    bread: `<path d="M-11 4 C-11 -8 11 -8 11 4 C11 8 7 9 0 9 C-7 9 -11 8 -11 4 Z M-4 -3 L-2 3 M2 -3 L4 3" fill="none" stroke="${p.awning}" stroke-width="2.2" stroke-linecap="round"/>`,
+    camera: `<rect x="-11" y="-6" width="22" height="15" rx="3" fill="none" stroke="${p.awning}" stroke-width="2"/><circle cx="0" cy="1.5" r="4.5" fill="none" stroke="${p.awning}" stroke-width="2"/><path d="M-5 -6 L-3 -10 H3 L5 -6" fill="none" stroke="${p.awning}" stroke-width="1.8"/>`,
+    vinyl: `<circle cx="0" cy="1" r="10" fill="none" stroke="${p.awning}" stroke-width="2.2"/><circle cx="0" cy="1" r="3.2" fill="${p.awning}"/><path d="M-6 -3 A7 7 0 0 1 4 -5" fill="none" stroke="${p.awning}" stroke-width="1.4"/>`,
+    wine: `<path d="M-7 -9 H7 L5 0 Q0 5 -5 0 Z M0 3 V10 M-5 10 H5" fill="none" stroke="${p.awning}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`
+  };
+  let stripes = '';
+  for(let i=0;i<10;i++){
+    const fill = i%2===0 ? p.awning : p.stripe;
+    const x = 44 + i*47.2;
+    stripes += `<path d="M${x} 46 H${x+47.2} V84 A23.6 11 0 0 1 ${x} 84 Z" fill="${fill}" stroke="#2b211b" stroke-width="1.5"/>`;
+  }
+  return `<svg viewBox="0 0 560 198" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(p.name)}街角门头插画">
+    <defs>
+      <linearGradient id="ssky_${p.no}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${sky1}"/><stop offset="1" stop-color="${sky2}"/></linearGradient>
+    </defs>
+    <rect width="560" height="198" fill="url(#ssky_${p.no})"/>
+    ${isNight ? '<circle cx="88" cy="26" r="14" fill="#f7e1a0" opacity=".88"/><circle cx="485" cy="24" r="2" fill="#fff"/><circle cx="512" cy="40" r="1.5" fill="#fff"/>' : '<circle cx="496" cy="28" r="18" fill="#f5c66c" opacity=".8"/>'}
+    <!-- Facade wall -->
+    <rect x="44" y="44" width="472" height="142" fill="#faf4e8" stroke="#2b211b" stroke-width="2.5"/>
+    <!-- Left Warm Display Window -->
+    <rect x="70" y="96" width="236" height="72" rx="6" fill="${winFill}" stroke="#2b211b" stroke-width="2.2"/>
+    <line x1="148" y1="96" x2="148" y2="168" stroke="#2b211b" stroke-width="1.8"/>
+    <line x1="226" y1="96" x2="226" y2="168" stroke="#2b211b" stroke-width="1.8"/>
+    <rect x="86" y="114" width="46" height="22" rx="4" fill="${p.awning}" stroke="#2b211b" stroke-width="1.5"/>
+    <text x="109" y="129" text-anchor="middle" font-size="10" font-weight="900" fill="#fff" font-family="monospace">OPEN</text>
+    <!-- Hanging Round Signboard -->
+    <line x1="358" y1="88" x2="358" y2="104" stroke="#2b211b" stroke-width="2"/>
+    <circle cx="358" cy="128" r="24" fill="#fffdf7" stroke="#2b211b" stroke-width="2.2"/>
+    <g transform="translate(358,127)">${icons[p.icon] || icons.bread}</g>
+    <!-- Shop Wooden Door -->
+    <rect x="406" y="96" width="84" height="90" rx="5" fill="${p.awning}" stroke="#2b211b" stroke-width="2.2"/>
+    <rect x="418" y="108" width="60" height="42" rx="3" fill="${winFill}" stroke="#2b211b" stroke-width="1.6"/>
+    <circle cx="478" cy="158" r="4" fill="#f0c873" stroke="#2b211b" stroke-width="1.2"/>
+    <!-- Striped Scalloped Awning -->
+    ${stripes}
+    <!-- Sidewalk Ground -->
+    <rect x="0" y="186" width="560" height="12" fill="#2b211b"/>
+  </svg>`;
+}
+
+function stash(){try{localStorage.setItem(STORAGE,JSON.stringify({idx,answers,autoNext}))}catch{}}
+function restore(){
+  try{
+    const s=JSON.parse(localStorage.getItem(STORAGE));
+    if(s&&Array.isArray(s.answers)&&s.answers.length===N&&s.answers.every(x=>x===null||Number.isInteger(x)&&x>=0&&x<=3)&&Number.isInteger(s.idx)&&s.idx>=0&&s.idx<N){
+      if(typeof s.autoNext==='boolean') autoNext=s.autoNext;
+      return s;
+    }
+  }catch{}
+  return null;
+}
+function clearSaved(){try{localStorage.removeItem(STORAGE)}catch{}}
+function scrollTop(){window.scrollTo({top:0,behavior:'instant'})}
+function focusTitle(){let h=app.querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
+
+function home(){
+  if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
+  screen='home';
+  const saved=restore(), count=saved?saved.answers.filter(v=>v!==null).length:0;
+  const teaserCards=D.teasers.map(name=>byName[name]).filter(Boolean);
+  app.innerHTML=`<section class="panel">
+    <div class="hero" aria-hidden="true">${HERO_ART}<span class="hero-badge">16 家理想街角小店</span><div class="hero-copy"><small>${esc(D.heroSub)}</small><strong>${esc(D.heroTitle)}</strong></div></div>
+    <p class="eyebrow">${esc(D.subtitle)}</p>
+    <h1>${esc(D.title)}</h1>
+    <p class="lead">${esc(D.intro)}</p>
+    <div class="pills">
+      <span class="pill accent">${N} 道开店情境</span>
+      <span class="pill">16 家原创小店</span>
+      <span class="pill">约 3 分钟 · 含 3:4 营业执照海报</span>
+    </div>
+    <div class="stack">
+      ${count===N
+        ? `<button class="primary" onclick="resume()">查看我的理想小店营业执照　✦</button><button class="secondary" onclick="start()">重新申领一次</button>`
+        : count
+        ? `<button class="primary" onclick="resume()">继续上次开店筹备（${count}/${N}）　→</button><button class="secondary" onclick="start()">重新开始测试</button>`
+        : `<button class="primary" onclick="start()">告别工位，领取开店钥匙　→</button>`}
+    </div>
+    <div class="teaser-wrap">
+      <div class="teaser-head"><span>FEATURED SHOPS / 热门理想小店预览</span><small>共收录 16 家</small></div>
+      <div class="teasers">
+        ${teaserCards.map(p=>`<div class="teaser"><div class="teaser-awning" style="background:repeating-linear-gradient(90deg,${p.awning},${p.awning} 14px,${p.stripe} 14px,${p.stripe} 28px)"></div><div class="teaser-in"><b>${esc(p.name)}</b><span>${esc(p.hours.split('（')[0])}</span><small>${esc(p.signature)}</small></div></div>`).join('')}
+      </div>
+    </div>
+    <p class="notice">不必考虑现实房租，按你内心最舒服的节奏作答即可。${esc(D.disclaimer)}</p>
+  </section>`;
+  scrollTop();
+}
+
+function start(){
+  if(screen==='home'&&restore()?.answers.some(v=>v!==null)&&!confirm('重新筹备小店将清除上次进度，继续吗？')) return;
+  idx=0;answers=Array(N).fill(null);report=null;stash();question(true);
+}
+
+function resume(){
+  const saved=restore();if(!saved)return start();
+  idx=saved.idx;answers=saved.answers;
+  if(answers.every(v=>v!==null)){result();return;}
+  if(answers.slice(0,idx).some(v=>v===null)) idx=answers.indexOf(null);
+  question(true);
+}
+
+function toggleAuto(){autoNext=!autoNext;stash();question(false);}
+
+function getChapter(qIdx){
+  const chs=D.chapters, per=Math.ceil(N/chs.length);
+  const ci=Math.min(chs.length-1,Math.floor(qIdx/per));
+  return {num:String(ci+1).padStart(2,'0'),...chs[ci]};
+}
+
+function question(move=false){
+  if(autoTimer){clearTimeout(autoTimer);autoTimer=null;}
+  screen='question';
+  const q=D.questions[idx], count=answers.filter(v=>v!==null).length, ch=getChapter(idx);
+  const pct=Math.round((count/N)*100);
+  app.innerHTML=`<section class="panel">
+    <div class="question-top">
+      <span>STEP ${String(idx+1).padStart(2,'0')} / ${N} · ${pct}%</span>
+      <button type="button" class="auto-toggle ${autoNext?'on':''}" onclick="toggleAuto()" aria-pressed="${autoNext}">自动切题：${autoNext?'开':'关'}</button>
+    </div>
+    <div class="progress" role="progressbar" aria-label="筹备进度" aria-valuemin="0" aria-valuemax="${N}" aria-valuenow="${count}">
+      <i style="width:${Math.max(4,pct)}%"></i>
+    </div>
+    <div class="chapter-bar">
+      <span class="chapter-num">${ch.num}</span>
+      <div><strong>${esc(ch.title)}</strong><span>${esc(ch.intro)}</span></div>
+    </div>
+    <h2>${esc(q.text)}</h2>
+    <div class="options" role="group" aria-label="选择答案">
+      ${q.options.map((o,i)=>`<button type="button" class="option ${answers[idx]===i?'selected':''}" aria-pressed="${answers[idx]===i}" onclick="choose(${i})"><span class="letter">${'ABCD'[i]}</span><span>${esc(o.text)}</span>${answers[idx]===i?'<span class="check" aria-hidden="true">✓</span>':''}</button>`).join('')}
+    </div>
+    <div class="nav">
+      <button type="button" class="secondary" onclick="back()" ${idx===0?'disabled':''}>← 上一题</button>
+      <button type="button" class="primary" onclick="next()" ${answers[idx]===null?'disabled':''}>${idx===N-1?'核准开业，领执照 ✦':'下一题 →'}</button>
+    </div>
+    <div style="text-align:center;margin-top:10px">
+      <button type="button" class="subtle" onclick="home()">暂存进度，返回开店局</button>
+    </div>
+  </section>`;
+  if(move){scrollTop();focusTitle();}
+}
+
+function choose(i){
+  if(screen!=='question'||!Number.isInteger(i)||i<0||i>3) return;
+  answers[idx]=i;stash();
+  const btns=app.querySelectorAll('.option');
+  btns.forEach((b,k)=>{
+    const sel=k===i;
+    b.classList.toggle('selected',sel);
+    b.setAttribute('aria-pressed',String(sel));
+    let ck=b.querySelector('.check');
+    if(sel&&!ck){ck=document.createElement('span');ck.className='check';ck.setAttribute('aria-hidden','true');ck.textContent='✓';b.append(ck);}
+    if(!sel&&ck) ck.remove();
+  });
+  const nextBtn=app.querySelector('.nav .primary');
+  if(nextBtn) nextBtn.disabled=false;
+  const count=answers.filter(v=>v!==null).length;
+  const pct=Math.round((count/N)*100);
+  const bar=app.querySelector('.progress i');
+  if(bar) bar.style.width=Math.max(4,pct)+'%';
+  if(autoNext){
+    if(autoTimer) clearTimeout(autoTimer);
+    autoTimer=setTimeout(()=>{
+      autoTimer=null;
+      if(idx<N-1){idx++;stash();question(true);}
+      else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
+      else calculateRitual();
+    }, 300);
+  }
+}
+
+function back(){if(idx>0){idx--;stash();question(true);}}
+function next(){
+  if(answers[idx]===null) return;
+  if(idx<N-1){idx++;stash();question(true);}
+  else if(answers.some(v=>v===null)){idx=answers.indexOf(null);stash();question(true);}
+  else calculateRitual();
+}
+
+function calculateRitual(){
+  screen='calc';
+  const steps=D.calcSteps;
+  app.innerHTML=`<section class="panel"><div class="calc-box">
+    <div class="sign-hang" aria-hidden="true">
+      <div class="sign-rope"></div>
+      <div class="sign-board">OPEN<small>即将开业</small></div>
+    </div>
+    <p class="calc-step" id="calcText">${esc(steps[0])}</p>
+    <p class="calc-sub">正在印制你的 3:4 复古个体营业执照</p>
+  </div></section>`;
+  scrollTop();
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[1];},470);
+  setTimeout(()=>{const el=document.getElementById('calcText');if(el)el.textContent=steps[2];},940);
+  setTimeout(()=>result(),1380);
+}
+
+function compute(input){
+  if(input.length!==N||input.some(v=>!Number.isInteger(v)||v<0||v>3)) throw Error('Incomplete answers');
+  const sums=D.axes.map(()=>0), cnts=D.axes.map(()=>0);
+  const wSums=D.axes.map(()=>0), wCnts=D.axes.map(()=>0);
+  D.questions.forEach((q,i)=>{
+    const sc=q.options[input[i]].score;
+    sums[q.axis]+=sc; cnts[q.axis]++;
+    const w=1+i*0.012;
+    wSums[q.axis]+=sc*w; wCnts[q.axis]+=w;
+  });
+  const v=sums.map((s,i)=>s/cnts[i]);
+  const vw=wSums.map((s,i)=>s/wCnts[i]);
+  const ranked=D.profiles.map((p,i)=>{
+    const center=p.vector.map(x=>x-1.5);
+    const norm=Math.hypot(...center)||1;
+    const radius=Math.sqrt(vw.length)*0.52+0.12*(norm-Math.sqrt(vw.length));
+    const cal=center.map(x=>1.5+x*radius/norm);
+    const d=cal.reduce((s,x,j)=>s+(x-vw[j])**2,0);
+    const rawSim=Math.max(0,1-Math.sqrt(d/(4.2*vw.length)));
+    const fit=Math.round(Math.max(68,Math.min(98,68+rawSim*30)));
+    return {p,i,d,fit};
+  });
+  ranked.sort((a,b)=>a.d-b.d||a.i-b.i);
+  for(let k=1;k<Math.min(4,ranked.length);k++){
+    if(ranked[k].fit>=ranked[k-1].fit) ranked[k].fit=Math.max(62,ranked[k-1].fit-2);
+  }
+  const licNo=`NO.2026-${ranked[0].p.no}${String(Math.round((v[0]*3+v[1]*5+v[2]*7+v[3]*11)*19+100)).slice(-3)}`;
+  return {v,ranked,p:ranked[0].p,licNo};
+}
+
+function tendency(a,v){return v<1.18?a[1]:v>1.82?a[2]:'张弛平衡'}
+
+function result(){
+  if(answers.some(v=>v===null)){idx=answers.indexOf(null);question(true);return;}
+  report=compute(answers);screen='result';stash();
+  const {p,v,ranked,licNo}=report;
+
+  app.innerHTML=`<section class="panel" style="--shop-accent:${p.accent}">
+    <div class="license-card">
+      <div class="shopfront-visual">${shopfrontSVG(p)}</div>
+      <div class="license-body">
+        <div class="lic-top">
+          <span>${esc(p.lic)} · ${esc(licNo)}</span>
+          <span class="fit-badge">✦ 契合度 ${ranked[0].fit}%</span>
+        </div>
+        <div class="official-stamp" aria-hidden="true">告别早八<br>核准开业</div>
+        <h1 class="shop-name">${esc(p.name)}</h1>
+        <div class="pills" style="margin:6px 0 8px">
+          ${p.tags.map(t=>`<span class="pill accent"># ${esc(t)}</span>`).join('')}
+        </div>
+        <div class="lic-grid">
+          <div class="lic-row"><span>营业时间</span><strong>${esc(p.hours)}</strong></div>
+          <div class="lic-row"><span>理想选址</span><strong>${esc(p.spot)}</strong></div>
+          <div class="lic-row"><span>镇店必点</span><strong>${esc(p.signature)}</strong></div>
+        </div>
+        <div class="quote-box"><p class="quote">「${esc(p.quote)}」</p></div>
+      </div>
+    </div>
+
+    <div class="stack" style="margin-top:16px">
+      <div class="actions-row">
+        <button type="button" class="primary" onclick="showPoster()">生成 3:4 营业执照海报 ↗</button>
+        <button type="button" class="secondary" onclick="copyShare()">复制小红书文案</button>
+      </div>
+      <div id="copyStatus" class="status-bar" role="status"></div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">01 / SHOPKEEPER PROFILE</p>
+      <h3>你的理想店主画像</h3>
+      <p>${esc(p.insight)}</p>
+      <div class="talent-card">
+        <b>✦ HIDDEN TALENT · 你的隐藏搞钱天赋</b>
+        <p>${esc(p.talent)}</p>
+      </div>
+      <div class="guest-card">
+        <b>☕ REGULAR CUSTOMERS · 最容易吸引的怪咖常客</b>
+        <p>${esc(p.guest)}</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">02 / SHOPKEEPING DNA</p>
+      <h3>四维店主经营基因</h3>
+      ${D.axes.map((a,i)=>`<div class="axis">
+        <div class="axis-head"><strong>${esc(a[0])}</strong><span>${esc(tendency(a,v[i]))}</span></div>
+        <div class="track" role="img" aria-label="${esc(a[0])}：${esc(tendency(a,v[i]))}"><i style="left:${Math.max(4,Math.min(96,v[i]/3*100))}%"></i></div>
+        <div class="axis-labels"><span>${esc(a[1])}</span><span>${esc(a[2])}</span></div>
+      </div>`).join('')}
+      <div class="mini" style="margin-top:14px">
+        <b>❖ 开店局避坑温柔提醒</b>
+        <p>${esc(p.caution)}</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">03 / STREET NEIGHBORS</p>
+      <h3>最佳合伙人小店 &amp; 严禁开在对门的邻居</h3>
+      <p class="muted" style="margin-bottom:4px">发给想一起辞职开店的闺蜜/搭子，看你们是天选一条街还是相爱相杀！</p>
+      <div class="duo">
+        <div class="mini">
+          <b>♥ 天选一条街合伙人</b>
+          <div class="partner-name">${esc(p.match[0])}</div>
+          <p>${esc(p.match[1])}</p>
+        </div>
+        <div class="mini">
+          <b>⚡ 严禁开在对门的邻居</b>
+          <div class="partner-name">${esc(p.clash[0])}</div>
+          <p>${esc(p.clash[1])}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="kicker">04 / BACKUP SHOPS</p>
+      <h3>你也可以顺手开的备选副业小店</h3>
+      ${ranked.slice(1,4).map(x=>`<div class="rank">
+        <div class="rank-left">
+          <span class="swatch" style="background:${x.p.awning}"></span>
+          <div><strong>${esc(x.p.name)}</strong><small>${esc(x.p.hours.split('（')[0])} · ${esc(x.p.tags[0])}</small></div>
+        </div>
+        <span class="pct">${x.fit}% 契合</span>
+      </div>`).join('')}
+      <p class="notice">${esc(D.disclaimer)}</p>
+    </div>
+
+    <div class="stack">
+      <button type="button" class="primary" onclick="showPoster()">保存 3:4 专属营业执照海报 ↗</button>
+      <div class="actions-row">
+        <button type="button" class="secondary" onclick="editAnswers()">修改部分选择</button>
+        <button type="button" class="secondary" onclick="restart()">重新开一家</button>
+      </div>
+    </div>
+  </section>`;
+  scrollTop();focusTitle();
+}
+
+function editAnswers(){idx=N-1;question(true);}
+function restart(){if(confirm('清除当前筹备记录并重新开一家小店？')){clearSaved();start();}}
+
+async function copyShare(){
+  if(!report) return;
+  const {p,ranked,licNo}=report;
+  const hook=D.shareHook.replace('{name}',p.name);
+  const text=`${hook}\n执照编号：${licNo} | 契合度 ${ranked[0].fit}%\n营业时间：${p.hours}\n镇店必点：${p.signature}\n「${p.quote}」\n\n♥ 我的最佳一条街合伙人是【${p.match[0]}】，不想上班的姐妹快来领你的营业执照，评论区找开店搭子👇\n${D.shareTags}`;
+  const st=document.getElementById('copyStatus');
+  try{
+    await navigator.clipboard.writeText(text);
+    if(st) st.textContent='✓ 小红书分享文案已复制到剪贴板！';
+  }catch{
+    document.getElementById('copyTextarea').value=text;
+    copyDialog.showModal();
+  }
+}
+
+function wrap(ctx,text,max){
+  const out=[];let line='';
+  for(const ch of text){
+    if(line&&ctx.measureText(line+ch).width>max){out.push(line);line=ch;}
+    else line+=ch;
+  }
+  if(line) out.push(line);
+  return out;
+}
+function rPath(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  if(typeof ctx.roundRect==='function') ctx.roundRect(x,y,w,h,r);
+  else{r=Math.min(r,w/2,h/2);ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+}
+function fillR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.fill();}
+function strokeR(ctx,x,y,w,h,r){rPath(ctx,x,y,w,h,r);ctx.stroke();}
+
+function makePoster(){
+  const c=document.createElement('canvas');c.width=1080;c.height=1440;
+  const ctx=c.getContext('2d');if(!ctx) throw Error('Canvas unavailable');
+  const {p,v,ranked,licNo}=report;
+  const sans='"PingFang SC","Microsoft YaHei",sans-serif', serif='"Noto Serif SC","Songti SC","SimSun",serif', mono='"SF Mono","Menlo","Consolas",monospace';
+
+  // Warm kraft vintage backdrop with subtle grid
+  ctx.fillStyle='#efe8da';ctx.fillRect(0,0,1080,1440);
+  ctx.strokeStyle='rgba(184,84,55,0.06)';ctx.lineWidth=1;
+  for(let gx=0;gx<1080;gx+=36){ctx.beginPath();ctx.moveTo(gx,0);ctx.lineTo(gx,1440);ctx.stroke();}
+  for(let gy=0;gy<1440;gy+=36){ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(1080,gy);ctx.stroke();}
+
+  // Outer Vintage Business License Board
+  ctx.save();
+  ctx.shadowColor='rgba(43,33,27,0.16)';ctx.shadowBlur=34;ctx.shadowOffsetY=12;
+  ctx.fillStyle='#fffdf7';fillR(ctx,46,42,988,1356,24);
+  ctx.restore();
+  ctx.strokeStyle='#2b211b';ctx.lineWidth=3.5;strokeR(ctx,46,42,988,1356,24);
+
+  // Scalloped Striped Shop Awning along top of license!
+  const awX=48, awY=44, awW=984, awH=104, cnt=12, sw=awW/cnt;
+  ctx.save();rPath(ctx,46,42,988,1356,24);ctx.clip();
+  for(let i=0;i<cnt;i++){
+    const sx=awX+i*sw;
+    ctx.fillStyle=i%2===0?p.awning:p.stripe;
+    ctx.beginPath();
+    ctx.moveTo(sx,awY);ctx.lineTo(sx+sw,awY);ctx.lineTo(sx+sw,awY+awH-22);
+    ctx.arc(sx+sw/2,awY+awH-22,sw/2,0,Math.PI);ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle='#2b211b';ctx.lineWidth=2;ctx.stroke();
+  }
+  ctx.restore();
+  // Re-stroke top corners cleanly
+  ctx.strokeStyle='#2b211b';ctx.lineWidth=3.5;strokeR(ctx,46,42,988,1356,24);
+
+  // License Header Title Bar
+  ctx.fillStyle=p.accent;ctx.font=`800 22px ${mono}`;
+  ctx.fillText(`☀ 理想小店个体营业执照   ·   ${licNo}`, 88, 198);
+  ctx.textAlign='right';ctx.fillStyle='#2b211b';ctx.font=`800 21px ${mono}`;
+  ctx.fillText(`契合度 ${ranked[0].fit}%`, 992, 198);
+  ctx.textAlign='left';
+
+  ctx.strokeStyle='#ded2be';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(88,216);ctx.lineTo(992,216);ctx.stroke();
+
+  // Shop Name (wrapped safely to avoid colliding with circular stamp)
+  const nameLines=wrap(ctx, p.name, 670);
+  const nameSize=nameLines.length>1?50:56;
+  ctx.fillStyle='#2b211b';ctx.font=`800 ${nameSize}px ${serif}`;
+  nameLines.slice(0,2).forEach((l,i)=>ctx.fillText(l, 88, 286+i*64));
+
+  // Vintage Red Official Stamp on Top Right
+  ctx.save();ctx.translate(888, 304);ctx.rotate(0.16);
+  ctx.strokeStyle='#c63b2d';ctx.lineWidth=4.5;ctx.beginPath();ctx.arc(0,0,82,0,Math.PI*2);ctx.stroke();
+  ctx.lineWidth=1.5;ctx.setLineDash([5,4]);ctx.beginPath();ctx.arc(0,0,70,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle='rgba(255,253,247,0.92)';fillR(ctx,-74,-24,148,48,6);
+  ctx.strokeStyle='#c63b2d';ctx.lineWidth=2.5;strokeR(ctx,-74,-24,148,48,6);
+  ctx.fillStyle='#c63b2d';ctx.textAlign='center';
+  ctx.font=`900 24px ${serif}`;ctx.fillText('核准开业', 0, 9);
+  ctx.font=`800 15px ${sans}`;ctx.fillText('★ 告别早八 ★', 0, -40);
+  ctx.font=`700 13px ${mono}`;ctx.fillText('DREAM SHOP', 0, 50);
+  ctx.restore();ctx.textAlign='left';
+
+  // Hashtag pills below name
+  const pillY = nameLines.length>1 ? 378 : 326;
+  let tx=88;
+  p.tags.forEach(t=>{
+    const lbl='# '+t;ctx.font=`700 20px ${sans}`;
+    const w=ctx.measureText(lbl).width+30;
+    if(tx+w<790){
+      ctx.fillStyle='#faebe5';fillR(ctx,tx,pillY,w,38,19);
+      ctx.strokeStyle='rgba(184,84,55,0.38)';ctx.lineWidth=1.2;strokeR(ctx,tx,pillY,w,38,19);
+      ctx.fillStyle='#b85437';ctx.fillText(lbl,tx+15,pillY+26);
+      tx+=w+10;
+    }
+  });
+
+  // License Key-Value Info Box (Hours / Spot / Signature)
+  const boxY = Math.max(438, pillY + 56);
+  ctx.fillStyle='#faf5eb';fillR(ctx,84,boxY,912,188,16);
+  ctx.strokeStyle='#ded2be';ctx.lineWidth=1.8;strokeR(ctx,84,boxY,912,188,16);
+  const rows=[['营业时间',p.hours],['理想选址',p.spot],['镇店必点',p.signature]];
+  rows.forEach((r,k)=>{
+    const ry=boxY+48+k*56;
+    ctx.fillStyle=p.accent;ctx.font=`800 21px ${mono}`;ctx.fillText(r[0], 112, ry);
+    ctx.fillStyle='#2b211b';ctx.font=`700 23px ${sans}`;
+    ctx.fillText(wrap(ctx,r[1],740)[0], 230, ry);
+  });
+
+  // Hanging Quote Banner
+  const qY = boxY + 206;
+  ctx.fillStyle='#fffdf7';fillR(ctx,84,qY,912,86,14);
+  ctx.strokeStyle='#ded2be';ctx.lineWidth=1.5;strokeR(ctx,84,qY,912,86,14);
+  ctx.fillStyle='#d49735';fillR(ctx,84,qY,10,86,5);
+  ctx.fillStyle=p.accent;ctx.font=`700 26px ${serif}`;
+  ctx.fillText(wrap(ctx,`「${p.quote}」`,850)[0], 116, qY+52);
+
+  // Hidden Money-Making Talent + Regular Customer Card
+  const tY = qY + 106;
+  ctx.fillStyle='#eef6f1';fillR(ctx,84,tY,912,138,16);
+  ctx.strokeStyle='#bdd9cb';ctx.lineWidth=1.8;strokeR(ctx,84,tY,912,138,16);
+  ctx.fillStyle='#225944';ctx.font=`800 20px ${mono}`;ctx.fillText('✦ 你的隐藏搞钱天赋', 112, tY+38);
+  ctx.fillStyle='#203a30';ctx.font=`500 23px ${sans}`;
+  wrap(ctx,p.talent,856).slice(0,2).forEach((l,i)=>ctx.fillText(l, 112, tY+78+i*35));
+
+  const gY = tY + 154;
+  ctx.fillStyle='#faf5eb';fillR(ctx,84,gY,912,132,16);
+  ctx.save();ctx.setLineDash([7,6]);ctx.strokeStyle='#d49735';ctx.lineWidth=1.8;strokeR(ctx,84,gY,912,132,16);ctx.restore();
+  ctx.fillStyle='#996515';ctx.font=`800 20px ${mono}`;ctx.fillText('☕ 最容易吸引的怪咖常客', 112, gY+38);
+  ctx.fillStyle='#47382b';ctx.font=`500 22px ${sans}`;
+  wrap(ctx,p.guest,856).slice(0,2).forEach((l,i)=>ctx.fillText(l, 112, gY+76+i*34));
+
+  // 4-Axis Shopkeeping DNA Compact Strip
+  const aY = gY + 152;
+  D.axes.forEach((a,i)=>{
+    const col=i%2, row=Math.floor(i/2);
+    const ax=88+col*464, ay=aY+26+row*58, aw=440;
+    ctx.font=`700 18px ${sans}`;ctx.fillStyle='#2b211b';ctx.textAlign='left';
+    ctx.fillText(`${a[0]} · ${a[1]}`, ax, ay);
+    ctx.textAlign='right';ctx.fillStyle='#756558';ctx.fillText(a[2], ax+aw, ay);
+    ctx.textAlign='left';
+    ctx.fillStyle='#efe8da';fillR(ctx,ax,ay+10,aw,9,4.5);
+    const px=ax+aw*Math.max(0.05,Math.min(0.95,v[i]/3));
+    ctx.fillStyle=p.accent;ctx.beginPath();ctx.arc(px,ay+14.5,9.5,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#fffdf7';ctx.lineWidth=2.5;ctx.stroke();
+  });
+
+  // Bottom Neighbor Duo
+  const nY = Math.min(1196, aY + 136), nH = 136;
+  ctx.fillStyle='#faf5eb';fillR(ctx,84,nY,444,nH,14);
+  ctx.strokeStyle='#ded2be';ctx.lineWidth=1.5;strokeR(ctx,84,nY,444,nH,14);
+  ctx.fillStyle=p.accent;ctx.font=`800 18px ${mono}`;ctx.fillText('♥ 天选一条街合伙人', 108, nY+34);
+  ctx.fillStyle='#2b211b';ctx.font=`800 23px ${serif}`;ctx.fillText(wrap(ctx,p.match[0],396)[0], 108, nY+72);
+  ctx.fillStyle='#685a4e';ctx.font=`400 18px ${sans}`;ctx.fillText(wrap(ctx,p.match[1],396)[0], 108, nY+108);
+
+  ctx.fillStyle='#faf5eb';fillR(ctx,552,nY,444,nH,14);
+  ctx.strokeStyle='#ded2be';ctx.lineWidth=1.5;strokeR(ctx,552,nY,444,nH,14);
+  ctx.fillStyle='#756558';ctx.font=`800 18px ${mono}`;ctx.fillText('⚡ 严禁开在对门的邻居', 576, nY+34);
+  ctx.fillStyle='#2b211b';ctx.font=`800 23px ${serif}`;ctx.fillText(wrap(ctx,p.clash[0],396)[0], 576, nY+72);
+  ctx.fillStyle='#685a4e';ctx.font=`400 18px ${sans}`;ctx.fillText(wrap(ctx,p.clash[1],396)[0], 576, nY+108);
+
+  // Footer
+  ctx.fillStyle='#756558';ctx.font=`600 19px ${sans}`;
+  ctx.fillText('如果不用上班，你天生适合开一家什么小店  ·  长按保存分享', 86, 1372);
+  ctx.textAlign='right';ctx.fillText('DREAM SHOP LAB', 994, 1372);
+  ctx.textAlign='left';
+  return c;
+}
+
+function showPoster(){
+  if(!report) return;
+  const status=document.getElementById('posterStatus'),
+        area=document.getElementById('posterArea'),
+        download=document.getElementById('downloadPoster');
+  status.textContent='';area.innerHTML='';download.disabled=true;
+  try{
+    if(posterURL) URL.revokeObjectURL(posterURL);
+    posterURL=null;
+    const canvas=makePoster();
+    const img=document.createElement('img');
+    img.className='poster';img.alt='可保存的3:4理想小店营业执照海报';
+    img.src=canvas.toDataURL('image/png');
+    area.append(img);
+    canvas.toBlob(blob=>{
+      posterURL=blob?URL.createObjectURL(blob):img.src;
+      download.disabled=false;
+    },'image/png');
+    if(!posterDialog.open) posterDialog.showModal();
+  }catch(e){
+    status.textContent='当前浏览器不支持生成海报，可直接截图保存结果页。';
+    if(!posterDialog.open) posterDialog.showModal();
+  }
+}
+
+document.getElementById('closePoster').onclick=()=>posterDialog.close();
+document.getElementById('downloadPoster').onclick=()=>{
+  if(!posterURL||!report) return;
+  const a=document.createElement('a');a.href=posterURL;a.download='理想小店-'+report.p.name+'.png';
+  document.body.append(a);a.click();a.remove();
+  document.getElementById('posterStatus').textContent='若微信/小红书内未自动下载，请直接长按上方营业执照保存。';
+};
+document.getElementById('closeCopy').onclick=()=>copyDialog.close();
+document.getElementById('selectCopyBtn').onclick=()=>{
+  const ta=document.getElementById('copyTextarea');ta.focus();ta.select();
+};
+home();
+</script>
+</body>
+</html>
